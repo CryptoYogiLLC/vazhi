@@ -2,8 +2,8 @@
   "pack_name": "vazhi_arasu",
   "pack_name_tamil": "வழி அரசு",
   "description": "Government services pack for navigating Tamil Nadu and Central government schemes",
-  "version": "0.3.0",
-  "total_pairs": 198,
+  "version": "0.4.0",
+  "total_pairs": 288,
   "categories": [
     {
       "category": "ration_card",
@@ -1556,6 +1556,798 @@
           "parallel_id": "CGS037"
         }
       ]
+    },
+    {
+      "category": "agriculture_schemes",
+      "category_tamil": "விவசாய திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "AGR001",
+          "question": "பிரதான் மந்திரி பயிர் பீமா யோஜனா (PMFBY) என்றால் என்ன?",
+          "answer": "விவசாயிகளுக்கான பயிர் காப்பீடு திட்டம். Premium: Kharif 2%, Rabi 1.5%, Commercial crops 5% மட்டுமே - மீதி Government கட்டும். Coverage: இயற்கை சீற்றம், பூச்சி தாக்குதல், நோய் தாக்குதல், அறுவடை பின் 14 நாள் வரை. விண்ணப்பம்: Bank/CSC/Insurance Portal. Documents: Land records, Aadhaar, Bank details. Claim: 72 மணி நேரத்தில் இழப்பை report செய்ய வேண்டும். Crop Cutting Experiments மூலம் இழப்பு கணக்கிடப்படும்.",
+          "topic": "crop_insurance",
+          "language": "pure_tamil",
+          "parallel_id": "AGR002"
+        },
+        {
+          "id": "AGR002",
+          "question": "Pradhan Mantri Fasal Bima Yojana (PMFBY) endraal enna?",
+          "answer": "Crop insurance scheme for farmers. Premium: Kharif 2%, Rabi 1.5%, Commercial crops 5% only - rest paid by Government. Coverage: Natural calamities, pest attack, disease, post-harvest 14 days. Apply: Bank/CSC/Insurance Portal. Documents: Land records, Aadhaar, Bank details. Claim: Report loss within 72 hours. Loss calculated through Crop Cutting Experiments.",
+          "topic": "crop_insurance",
+          "language": "tanglish",
+          "parallel_id": "AGR001"
+        },
+        {
+          "id": "AGR003",
+          "question": "PM-KUSUM திட்டம் என்றால் என்ன? Solar pump எப்படி வாங்குவது?",
+          "answer": "விவசாயிகளுக்கு Solar Energy திட்டம். Component A: Solar power plants (500kW-2MW) நிலத்தில் அமைக்கலாம், Grid-க்கு மின்சாரம் விற்கலாம். Component B: Standalone solar pumps (7.5 HP வரை), 60% subsidy (Central 30% + State 30%), விவசாயி 40% மட்டுமே. Component C: Existing pump-ஐ Solar-ஆக மாற்றலாம். விண்ணப்பம்: mnre.gov.in அல்லது State DISCOM. Benefit: இலவச மின்சாரம், Carbon footprint குறைவு.",
+          "topic": "solar_pump",
+          "language": "pure_tamil",
+          "parallel_id": "AGR004"
+        },
+        {
+          "id": "AGR004",
+          "question": "PM-KUSUM scheme endraal enna? Solar pump eppadi vaanguvadhu?",
+          "answer": "Solar Energy scheme for farmers. Component A: Install solar power plants (500kW-2MW), sell electricity to grid. Component B: Standalone solar pumps (up to 7.5 HP), 60% subsidy (Central 30% + State 30%), farmer pays only 40%. Component C: Convert existing pump to solar. Apply: mnre.gov.in or State DISCOM. Benefit: Free electricity, reduced carbon footprint.",
+          "topic": "solar_pump",
+          "language": "tanglish",
+          "parallel_id": "AGR003"
+        },
+        {
+          "id": "AGR005",
+          "question": "கிசான் கிரெடிட் கார்டு (KCC) எப்படி வாங்குவது? என்ன benefits?",
+          "answer": "விவசாயிகளுக்கு குறைந்த வட்டியில் கடன். வட்டி: 4% (Subvention பிறகு - 7% base, 3% interest subvention for timely repayment). Credit Limit: ₹3 லட்சம் வரை (Land area-க்கு ஏற்ப). Uses: விதை, உரம், பூச்சிக்கொல்லி, equipment, harvest expenses. Repayment: Flexible - crop cycle-க்கு ஏற்ப. Apply: Bank branch with land documents, Aadhaar, passport photo. PM-KISAN beneficiaries-க்கு simplified process. Fishermen, Animal husbandry-க்கும் KCC உண்டு.",
+          "topic": "kisan_credit",
+          "language": "pure_tamil",
+          "parallel_id": "AGR006"
+        },
+        {
+          "id": "AGR006",
+          "question": "Kisan Credit Card (KCC) eppadi vaanguvadhu? Enna benefits?",
+          "answer": "Low-interest loan for farmers. Interest: 4% (after subvention - 7% base, 3% interest subvention for timely repayment). Credit Limit: Up to ₹3 lakh (based on land area). Uses: Seeds, fertilizers, pesticides, equipment, harvest expenses. Repayment: Flexible - based on crop cycle. Apply: Bank with land documents, Aadhaar, passport photo. Simplified for PM-KISAN beneficiaries. KCC available for fishermen, animal husbandry too.",
+          "topic": "kisan_credit",
+          "language": "tanglish",
+          "parallel_id": "AGR005"
+        },
+        {
+          "id": "AGR007",
+          "question": "Soil Health Card என்றால் என்ன? எப்படி பெறுவது?",
+          "answer": "நிலத்தின் சத்து நிலையை அறிய. Card-ல் Info: N, P, K levels, pH value, micro nutrients, organic carbon. பரிசோதனை: 3 வருடத்திற்கு ஒருமுறை (Govt-free). Benefit: சரியான உரம் பயன்படுத்தலாம், செலவு குறையும், yield அதிகரிக்கும். பெற: Village Agriculture Officer/Krishi Vigyan Kendra. soilhealth.dac.gov.in-ல் status check. Sample collection: விவசாய அதிகாரி நிலத்திலிருந்து மண் எடுப்பார்.",
+          "topic": "soil_health",
+          "language": "pure_tamil",
+          "parallel_id": "AGR008"
+        },
+        {
+          "id": "AGR008",
+          "question": "Soil Health Card endraal enna? Eppadi peruvadhu?",
+          "answer": "To know soil nutrient status. Card Info: N, P, K levels, pH value, micro nutrients, organic carbon. Testing: Once in 3 years (Govt-free). Benefit: Use right fertilizers, reduce cost, increase yield. Get it: Village Agriculture Officer/Krishi Vigyan Kendra. Check status: soilhealth.dac.gov.in. Sample collection: Agriculture officer collects soil from field.",
+          "topic": "soil_health",
+          "language": "tanglish",
+          "parallel_id": "AGR007"
+        },
+        {
+          "id": "AGR009",
+          "question": "e-NAM என்றால் என்ன? எப்படி பயனடைவது?",
+          "answer": "Electronic National Agriculture Market. Online trading platform - இந்தியா முழுவதும் விற்கலாம். Benefit: நல்ல விலை கிடைக்கும், middlemen குறையும், transparent bidding. Register: enam.gov.in, அருகிலுள்ள e-NAM mandi. Process: Produce → Quality testing → Online auction → Highest bidder wins → Payment to bank. TN-ல்: UZHAVAR SANDHAIS connected. Quality Parameters: Moisture, foreign matter, damaged grains-க்கு grade.",
+          "topic": "agri_market",
+          "language": "pure_tamil",
+          "parallel_id": "AGR010"
+        },
+        {
+          "id": "AGR010",
+          "question": "e-NAM endraal enna? Eppadi payanadaivadhu?",
+          "answer": "Electronic National Agriculture Market. Online trading platform - sell across India. Benefit: Better prices, fewer middlemen, transparent bidding. Register: enam.gov.in, nearby e-NAM mandi. Process: Produce → Quality testing → Online auction → Highest bidder wins → Payment to bank. In TN: UZHAVAR SANDHAIS connected. Quality Parameters: Grade based on moisture, foreign matter, damaged grains.",
+          "topic": "agri_market",
+          "language": "tanglish",
+          "parallel_id": "AGR009"
+        },
+        {
+          "id": "AGR011",
+          "question": "Paramparagat Krishi Vikas Yojana (PKVY) என்றால் என்ன?",
+          "answer": "Organic Farming ஊக்குவிப்பு திட்டம். Cluster: 50+ விவசாயிகள் சேர்ந்து 50 ஏக்கர். Support: ₹50,000/hectare (3 வருடத்தில்) - Organic inputs, certification, marketing. PGS Certification: Participatory Guarantee System - free organic certification. Benefit: Premium price for organic produce, export opportunity, soil health improvement. Join: Agriculture Department, Krishi Vigyan Kendra. Training: Organic farming techniques, composting, bio-pesticides.",
+          "topic": "organic_farming",
+          "language": "pure_tamil",
+          "parallel_id": "AGR012"
+        },
+        {
+          "id": "AGR012",
+          "question": "Paramparagat Krishi Vikas Yojana (PKVY) endraal enna?",
+          "answer": "Organic Farming promotion scheme. Cluster: 50+ farmers together on 50 acres. Support: ₹50,000/hectare (over 3 years) - Organic inputs, certification, marketing. PGS Certification: Participatory Guarantee System - free organic certification. Benefit: Premium price for organic produce, export opportunity, soil health improvement. Join: Agriculture Department, Krishi Vigyan Kendra. Training: Organic farming techniques, composting, bio-pesticides.",
+          "topic": "organic_farming",
+          "language": "tanglish",
+          "parallel_id": "AGR011"
+        },
+        {
+          "id": "AGR013",
+          "question": "PM Krishi Sinchayee Yojana (PMKSY) என்றால் என்ன?",
+          "answer": "நீர் பாசன விரிவாக்க திட்டம். Components: Har Khet Ko Pani (நீர் கிடைக்கச் செய்ய), Per Drop More Crop (Micro irrigation - Drip/Sprinkler, 55% subsidy), Watershed Development. Benefit: Drip irrigation-க்கு 55% subsidy, நீர் சேமிப்பு 30-50%, yield increase 20-40%. Apply: Agriculture Department/Horticulture Department. Micro Irrigation Fund: ₹5,000 crore for states. Water Sources: Bore well, farm pond, check dam support.",
+          "topic": "irrigation",
+          "language": "pure_tamil",
+          "parallel_id": "AGR014"
+        },
+        {
+          "id": "AGR014",
+          "question": "PM Krishi Sinchayee Yojana (PMKSY) endraal enna?",
+          "answer": "Water irrigation expansion scheme. Components: Har Khet Ko Pani (water availability), Per Drop More Crop (Micro irrigation - Drip/Sprinkler, 55% subsidy), Watershed Development. Benefit: 55% subsidy for drip irrigation, 30-50% water saving, 20-40% yield increase. Apply: Agriculture Department/Horticulture Department. Micro Irrigation Fund: ₹5,000 crore for states. Water Sources: Bore well, farm pond, check dam support.",
+          "topic": "irrigation",
+          "language": "tanglish",
+          "parallel_id": "AGR013"
+        }
+      ]
+    },
+    {
+      "category": "rural_development",
+      "category_tamil": "கிராம வளர்ச்சி",
+      "pairs": [
+        {
+          "id": "RD001",
+          "question": "MGNREGA என்றால் என்ன? வேலை எப்படி பெறுவது?",
+          "answer": "கிராம குடும்பங்களுக்கு 100 நாள் வேலை உத்தரவாதம். தகுதி: கிராமப்புற குடும்பம், 18 வயதுக்கு மேல், உடல் உழைப்பு செய்ய தயார். Job Card: Gram Panchayat-ல் விண்ணப்பிக்க, 15 நாளில் card கிடைக்கும். கூலி: TN-ல் ₹294/day (State-க்கு ஏற்ப மாறும்). Works: நீர் சேமிப்பு, சாலை, வேளாண் பணி, மரம் நடுதல். 15 நாளில் வேலை இல்லை என்றால்: Unemployment allowance உண்டு. Wages: 15 நாளில் bank account-க்கு.",
+          "topic": "employment_guarantee",
+          "language": "pure_tamil",
+          "parallel_id": "RD002"
+        },
+        {
+          "id": "RD002",
+          "question": "MGNREGA endraal enna? Velai eppadi peruvadhu?",
+          "answer": "100-day work guarantee for rural families. Eligibility: Rural household, above 18 years, ready for manual labor. Job Card: Apply at Gram Panchayat, get card in 15 days. Wage: ₹294/day in TN (varies by state). Works: Water conservation, roads, agriculture, tree planting. If no work in 15 days: Unemployment allowance. Wages: To bank account within 15 days.",
+          "topic": "employment_guarantee",
+          "language": "tanglish",
+          "parallel_id": "RD001"
+        },
+        {
+          "id": "RD003",
+          "question": "PMGSY என்றால் என்ன? எந்த கிராமங்களுக்கு சாலை கிடைக்கும்?",
+          "answer": "Pradhan Mantri Gram Sadak Yojana - கிராம சாலை திட்டம். தகுதி கிராமம்: மலைப்பகுதி 250+ மக்கள், சமவெளி 500+ மக்கள் உள்ள கிராமம், சாலை இணைப்பு இல்லாதது. Road Type: All-weather road (Concrete/Bitumen). Request: Gram Panchayat மூலம் Block/District-க்கு. PMGSY-III: Existing roads upgrade. Maintenance: 5 வருடம் contractor responsibility.",
+          "topic": "rural_roads",
+          "language": "pure_tamil",
+          "parallel_id": "RD004"
+        },
+        {
+          "id": "RD004",
+          "question": "PMGSY endraal enna? Endha gramangalukku salai kidaikkum?",
+          "answer": "Pradhan Mantri Gram Sadak Yojana - Rural road scheme. Eligible villages: Hilly areas 250+ population, Plains 500+ population, without road connectivity. Road Type: All-weather road (Concrete/Bitumen). Request: Through Gram Panchayat to Block/District. PMGSY-III: Upgrade existing roads. Maintenance: Contractor responsible for 5 years.",
+          "topic": "rural_roads",
+          "language": "tanglish",
+          "parallel_id": "RD003"
+        },
+        {
+          "id": "RD005",
+          "question": "DDU-GKY (Deen Dayal Upadhyaya Grameen Kaushalya Yojana) என்றால் என்ன?",
+          "answer": "கிராம இளைஞர்களுக்கு Skill Training + Placement. தகுதி: 15-35 வயது (SC/ST-க்கு 45 வரை), BPL/Low income குடும்பம், கிராமப்புற. Training: 576 hours minimum, Residential (உணவு/தங்குமிடம் free). Sectors: IT, Healthcare, Retail, Hospitality, Automotive. Placement: 70% mandatory placement, ₹6,000+ salary. Incentive: Training முடிந்த 3 மாதம் employment-க்கு bonus. Apply: Gram Panchayat, Block office, ddugky.gov.in",
+          "topic": "skill_training",
+          "language": "pure_tamil",
+          "parallel_id": "RD006"
+        },
+        {
+          "id": "RD006",
+          "question": "DDU-GKY (Deen Dayal Upadhyaya Grameen Kaushalya Yojana) endraal enna?",
+          "answer": "Skill Training + Placement for rural youth. Eligibility: 15-35 years (up to 45 for SC/ST), BPL/Low income family, rural. Training: Minimum 576 hours, Residential (food/stay free). Sectors: IT, Healthcare, Retail, Hospitality, Automotive. Placement: 70% mandatory placement, ₹6,000+ salary. Incentive: Bonus for employment within 3 months of training. Apply: Gram Panchayat, Block office, ddugky.gov.in",
+          "topic": "skill_training",
+          "language": "tanglish",
+          "parallel_id": "RD005"
+        },
+        {
+          "id": "RD007",
+          "question": "PM-AJAY கிராம சுகாதார திட்டம் என்றால் என்ன?",
+          "answer": "Pradhan Mantri Ayushman Arogya Yojana - கிராம சுகாதாரம். Components: Health & Wellness Centres (HWC) - Primary healthcare, Teleconsultation facility. Services: 12 essential services - Maternal care, Child health, Communicable diseases, NCD screening (Diabetes, BP), Mental health, Dental, Eye care. Free: All services free at HWC. Location: Sub-centre/PHC within 30 min travel. Access: Aadhaar/ration card போதும், registration required.",
+          "topic": "rural_health",
+          "language": "pure_tamil",
+          "parallel_id": "RD008"
+        },
+        {
+          "id": "RD008",
+          "question": "PM-AJAY grama sugadhara thittam endraal enna?",
+          "answer": "Pradhan Mantri Ayushman Arogya Yojana - Rural healthcare. Components: Health & Wellness Centres (HWC) - Primary healthcare, Teleconsultation. Services: 12 essential services - Maternal care, Child health, Communicable diseases, NCD screening (Diabetes, BP), Mental health, Dental, Eye care. Free: All services free at HWC. Location: Sub-centre/PHC within 30 min travel. Access: Aadhaar/ration card enough, registration required.",
+          "topic": "rural_health",
+          "language": "tanglish",
+          "parallel_id": "RD007"
+        }
+      ]
+    },
+    {
+      "category": "senior_citizens_schemes",
+      "category_tamil": "மூத்த குடிமக்கள் திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "SC001",
+          "question": "IGNOAPS (Indira Gandhi National Old Age Pension Scheme) என்றால் என்ன?",
+          "answer": "BPL மூத்த குடிமக்களுக்கு மாத ஓய்வூதியம். Central: ₹200/month (60-79 வயது), ₹500/month (80+ வயது). TN State: கூடுதலாக ₹1,000/month. Total TN-ல்: ₹1,200-1,500/month. தகுதி: 60+ வயது, BPL குடும்பம். விண்ணப்பம்: Village Panchayat/Taluk office. Documents: Age proof, Aadhaar, BPL card/Income certificate, Bank account. Payment: DBT through bank account.",
+          "topic": "old_age_pension",
+          "language": "pure_tamil",
+          "parallel_id": "SC002"
+        },
+        {
+          "id": "SC002",
+          "question": "IGNOAPS (Indira Gandhi National Old Age Pension Scheme) endraal enna?",
+          "answer": "Monthly pension for BPL senior citizens. Central: ₹200/month (60-79 years), ₹500/month (80+ years). TN State: Additional ₹1,000/month. Total in TN: ₹1,200-1,500/month. Eligibility: 60+ years, BPL family. Apply: Village Panchayat/Taluk office. Documents: Age proof, Aadhaar, BPL card/Income certificate, Bank account. Payment: DBT through bank account.",
+          "topic": "old_age_pension",
+          "language": "tanglish",
+          "parallel_id": "SC001"
+        },
+        {
+          "id": "SC003",
+          "question": "IGNWPS (Indira Gandhi National Widow Pension Scheme) என்றால் என்ன?",
+          "answer": "BPL விதவைகளுக்கு ஓய்வூதியம். Central: ₹300/month. TN State: கூடுதலாக ₹1,000/month. தகுதி: 40-79 வயது விதவை, BPL குடும்பம். 80+ வயது: IGNOAPS-க்கு மாற்றப்படும். விண்ணப்பம்: Taluk/Panchayat office. Documents: Death certificate of husband, Age proof, Aadhaar, Income certificate, Bank account. Remarried: Not eligible.",
+          "topic": "widow_pension",
+          "language": "pure_tamil",
+          "parallel_id": "SC004"
+        },
+        {
+          "id": "SC004",
+          "question": "IGNWPS (Indira Gandhi National Widow Pension Scheme) endraal enna?",
+          "answer": "Pension for BPL widows. Central: ₹300/month. TN State: Additional ₹1,000/month. Eligibility: 40-79 years widow, BPL family. 80+ years: Transferred to IGNOAPS. Apply: Taluk/Panchayat office. Documents: Death certificate of husband, Age proof, Aadhaar, Income certificate, Bank account. Remarried: Not eligible.",
+          "topic": "widow_pension",
+          "language": "tanglish",
+          "parallel_id": "SC003"
+        },
+        {
+          "id": "SC005",
+          "question": "IGNDPS (Indira Gandhi National Disability Pension Scheme) என்றால் என்ன?",
+          "answer": "BPL மாற்றுத்திறனாளிகளுக்கு ஓய்வூதியம். Central: ₹300/month (18-79 வயது), ₹500/month (80+). TN State: கூடுதலாக ₹1,000/month. தகுதி: 80%+ disability, BPL குடும்பம். விண்ணப்பம்: Taluk office/Social Welfare dept. Documents: Disability certificate (Medical Board), Aadhaar, Income proof. Disability Types: Visual, Hearing, Locomotor, Mental illness, Multiple disabilities.",
+          "topic": "disability_pension",
+          "language": "pure_tamil",
+          "parallel_id": "SC006"
+        },
+        {
+          "id": "SC006",
+          "question": "IGNDPS (Indira Gandhi National Disability Pension Scheme) endraal enna?",
+          "answer": "Pension for BPL persons with disabilities. Central: ₹300/month (18-79 years), ₹500/month (80+). TN State: Additional ₹1,000/month. Eligibility: 80%+ disability, BPL family. Apply: Taluk office/Social Welfare dept. Documents: Disability certificate (Medical Board), Aadhaar, Income proof. Disability Types: Visual, Hearing, Locomotor, Mental illness, Multiple disabilities.",
+          "topic": "disability_pension",
+          "language": "tanglish",
+          "parallel_id": "SC005"
+        },
+        {
+          "id": "SC007",
+          "question": "PMVVY (Pradhan Mantri Vaya Vandana Yojana) என்றால் என்ன?",
+          "answer": "60+ வயதினருக்கு LIC Pension திட்டம். Investment: ₹1,62,162 முதல் ₹15 லட்சம் வரை. Pension: 7.4% guaranteed return (மாறும்). Payment: மாதம்/காலாண்டு/அரையாண்டு/ஆண்டு. Term: 10 வருடம். Loan: 3 வருடம் பிறகு 75% loan எடுக்கலாம். Premature Exit: Serious illness-க்கு 98% திரும்பக் கிடைக்கும். Buy: LIC website/branch, Aadhaar, Age proof தேவை.",
+          "topic": "senior_pension_scheme",
+          "language": "pure_tamil",
+          "parallel_id": "SC008"
+        },
+        {
+          "id": "SC008",
+          "question": "PMVVY (Pradhan Mantri Vaya Vandana Yojana) endraal enna?",
+          "answer": "LIC Pension scheme for 60+ years. Investment: ₹1,62,162 to ₹15 lakh. Pension: 7.4% guaranteed return (subject to change). Payment: Monthly/Quarterly/Half-yearly/Yearly. Term: 10 years. Loan: Can take 75% loan after 3 years. Premature Exit: 98% return for serious illness. Buy: LIC website/branch, need Aadhaar, Age proof.",
+          "topic": "senior_pension_scheme",
+          "language": "tanglish",
+          "parallel_id": "SC007"
+        },
+        {
+          "id": "SC009",
+          "question": "Senior Citizen Savings Scheme (SCSS) என்றால் என்ன?",
+          "answer": "60+ வயதினருக்கு சிறந்த சேமிப்பு. வட்டி: 8.2% (2024 - மிக அதிகம்!). Deposit: ₹1,000 முதல் ₹30 லட்சம் வரை. Term: 5 வருடம் (3 வருடம் extend). Tax: Section 80C deduction, Interest taxable but TDS threshold ₹50,000. Open: Post Office/Bank (SBI, ICICI, etc.). Early closure: 1 வருடம் பிறகு possible, penalty உண்டு. Nomination: கட்டாயம்.",
+          "topic": "senior_savings",
+          "language": "pure_tamil",
+          "parallel_id": "SC010"
+        },
+        {
+          "id": "SC010",
+          "question": "Senior Citizen Savings Scheme (SCSS) endraal enna?",
+          "answer": "Best savings for 60+ years. Interest: 8.2% (2024 - very high!). Deposit: ₹1,000 to ₹30 lakh. Term: 5 years (extendable by 3 years). Tax: Section 80C deduction, Interest taxable but TDS threshold ₹50,000. Open: Post Office/Bank (SBI, ICICI, etc.). Early closure: Possible after 1 year, penalty applies. Nomination: Mandatory.",
+          "topic": "senior_savings",
+          "language": "tanglish",
+          "parallel_id": "SC009"
+        },
+        {
+          "id": "SC011",
+          "question": "Rashtriya Vayoshri Yojana (RVY) என்றால் என்ன?",
+          "answer": "BPL மூத்த குடிமக்களுக்கு இலவச உதவி சாதனங்கள். தகுதி: 60+ வயது, BPL, Age-related disability உள்ளவர்கள். Free Items: Walking stick, Elbow crutch, Walker, Tripod, Wheelchair, Hearing aid, Spectacles, Artificial dentures. விண்ணப்பம்: ALIMCO assessment camps (District-ல் announce செய்வார்கள்). Documents: Age proof, BPL card, Aadhaar.",
+          "topic": "assistive_devices",
+          "language": "pure_tamil",
+          "parallel_id": "SC012"
+        },
+        {
+          "id": "SC012",
+          "question": "Rashtriya Vayoshri Yojana (RVY) endraal enna?",
+          "answer": "Free assistive devices for BPL senior citizens. Eligibility: 60+ years, BPL, age-related disability. Free Items: Walking stick, Elbow crutch, Walker, Tripod, Wheelchair, Hearing aid, Spectacles, Artificial dentures. Apply: ALIMCO assessment camps (announced in District). Documents: Age proof, BPL card, Aadhaar.",
+          "topic": "assistive_devices",
+          "language": "tanglish",
+          "parallel_id": "SC011"
+        },
+        {
+          "id": "SC013",
+          "question": "Senior Citizens-க்கு Travel Concession என்ன உள்ளது?",
+          "answer": "Railways: Men 60+ 40% discount, Women 58+ 50% discount, Sleeper/AC classes. Booking: Counters-ல் age proof காட்டவும். Airlines: Some airlines offer 50% discount (varies). State Buses: TN-ல் 50% discount (65+ years) ordinary buses. Metro: Some cities 25-50% discount. Documents: Age proof (Aadhaar/Voter ID) carry பண்ணுங்கள்.",
+          "topic": "travel_concession",
+          "language": "pure_tamil",
+          "parallel_id": "SC014"
+        },
+        {
+          "id": "SC014",
+          "question": "Senior Citizens-ku Travel Concession enna ulladhu?",
+          "answer": "Railways: Men 60+ get 40% discount, Women 58+ get 50% discount, Sleeper/AC classes. Booking: Show age proof at counters. Airlines: Some offer 50% discount (varies). State Buses: TN 50% discount (65+ years) ordinary buses. Metro: Some cities 25-50% discount. Documents: Carry age proof (Aadhaar/Voter ID).",
+          "topic": "travel_concession",
+          "language": "tanglish",
+          "parallel_id": "SC013"
+        },
+        {
+          "id": "SC015",
+          "question": "Maintenance and Welfare of Parents and Senior Citizens Act என்றால் என்ன?",
+          "answer": "பெற்றோர்/மூத்தோர் பராமரிப்பு சட்டம். Children's Duty: பெற்றோரை பராமரிக்க சட்டப்படி கடமை. Maintenance Amount: Tribunal decides (max ₹10,000/month). Tribunal: District-ல் உள்ளது, 90 நாளில் order. Property: பெற்றோர் சொத்தை transfer செய்த பின் neglect செய்தால் transfer void ஆகலாம். Old Age Homes: Government run, At least one per district. Penalty: ₹5,000 fine / 3 months imprisonment. Complaint: Maintenance Tribunal/SDM office.",
+          "topic": "legal_rights",
+          "language": "pure_tamil",
+          "parallel_id": "SC016"
+        },
+        {
+          "id": "SC016",
+          "question": "Maintenance and Welfare of Parents and Senior Citizens Act endraal enna?",
+          "answer": "Law for care of parents/elders. Children's Duty: Legal obligation to maintain parents. Maintenance Amount: Tribunal decides (max ₹10,000/month). Tribunal: In every district, order within 90 days. Property: Transfer to children can be void if neglected after transfer. Old Age Homes: Government run, at least one per district. Penalty: ₹5,000 fine / 3 months imprisonment. Complaint: Maintenance Tribunal/SDM office.",
+          "topic": "legal_rights",
+          "language": "tanglish",
+          "parallel_id": "SC015"
+        }
+      ]
+    },
+    {
+      "category": "tn_women_welfare",
+      "category_tamil": "தமிழ்நாடு பெண்கள் நலத் திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNW001",
+          "question": "கலைஞர் மகளிர் உரிமை திட்டம் (₹1000 திட்டம்) என்றால் என்ன?",
+          "answer": "TN குடும்ப தலைவிகளுக்கு மாதம் ₹1,000. தகுதி: 21-60 வயது பெண், குடும்ப தலைவி, ஆண்டு வருமானம் ₹2.5 லட்சத்திற்கு கீழ், Rice card holder. விலக்கு: Govt job உள்ளவர், Income tax கட்டுபவர், 4-wheeler உடமை, AC உடமை. விண்ணப்பம்: Taluk office/Village panchayat. Documents: Aadhaar, Ration card, Family photo, Bank account. DBT: மாதந்தோறும் bank account-க்கு.",
+          "topic": "women_monthly_assistance",
+          "language": "pure_tamil",
+          "parallel_id": "TNW002"
+        },
+        {
+          "id": "TNW002",
+          "question": "Kalaignar Magalir Urimai Thittam (₹1000 scheme) endraal enna?",
+          "answer": "₹1,000/month for TN women household heads. Eligibility: Women 21-60 years, household head, annual income below ₹2.5 lakh, Rice card holder. Exclusions: Govt job, Income tax payer, 4-wheeler owner, AC owner. Apply: Taluk office/Village panchayat. Documents: Aadhaar, Ration card, Family photo, Bank account. DBT: Monthly to bank account.",
+          "topic": "women_monthly_assistance",
+          "language": "tanglish",
+          "parallel_id": "TNW001"
+        },
+        {
+          "id": "TNW003",
+          "question": "முதலமைச்சர் பெண் குழந்தை பாதுகாப்பு திட்டம் என்றால் என்ன?",
+          "answer": "பெண் குழந்தை பாதுகாப்பு + சேமிப்பு. Amount: ₹50,000 deposit (Govt). Types: Scheme 1 - ஒற்றை பெண் குழந்தை குடும்பம், Scheme 2 - இரண்டு பெண் குழந்தை குடும்பம். தகுதி: ஏழை குடும்பம், பெற்றோர் 35 வயதிற்குள், Family planning operation செய்திருக்க வேண்டும். Benefit: 18 வயதில் ₹1 லட்சம்+ maturity, உயர்கல்வி/திருமணத்திற்கு. விண்ணப்பம்: ICDS/Taluk office.",
+          "topic": "girl_child_protection",
+          "language": "pure_tamil",
+          "parallel_id": "TNW004"
+        },
+        {
+          "id": "TNW004",
+          "question": "Chief Minister's Girl Child Protection Scheme endraal enna?",
+          "answer": "Girl child protection + savings. Amount: ₹50,000 deposit (by Govt). Types: Scheme 1 - Single girl child family, Scheme 2 - Two girl children family. Eligibility: Poor family, parents below 35 years, family planning operation done. Benefit: ₹1 lakh+ maturity at 18, for higher education/marriage. Apply: ICDS/Taluk office.",
+          "topic": "girl_child_protection",
+          "language": "tanglish",
+          "parallel_id": "TNW003"
+        },
+        {
+          "id": "TNW005",
+          "question": "திருமண உதவித் திட்டம் என்றால் என்ன? எவ்வளவு கிடைக்கும்?",
+          "answer": "ஏழை பெண்களின் திருமணத்திற்கு உதவி. Amount: ₹25,000 (BC/MBC) to ₹50,000 (SC/ST) + 1 sovereign (8g) gold. தகுதி: ஆண்டு வருமானம் ₹72,000-க்கு கீழ், மணமகள் 18+ வயது, Degree holders-க்கு extra ₹25,000. விண்ணப்பம்: Taluk/DSW office, திருமணத்திற்கு 40 நாள் முன். Documents: Income certificate, Community certificate, Education certificate, Marriage invitation. Convert: Gold-க்கு பதில் cash option உண்டு.",
+          "topic": "marriage_assistance",
+          "language": "pure_tamil",
+          "parallel_id": "TNW006"
+        },
+        {
+          "id": "TNW006",
+          "question": "Marriage Assistance Scheme endraal enna? Evvalavu kidaikkum?",
+          "answer": "Assistance for marriage of poor women. Amount: ₹25,000 (BC/MBC) to ₹50,000 (SC/ST) + 1 sovereign (8g) gold. Eligibility: Annual income below ₹72,000, bride 18+ years, extra ₹25,000 for degree holders. Apply: Taluk/DSW office, 40 days before marriage. Documents: Income certificate, Community certificate, Education certificate, Marriage invitation. Convert: Cash option instead of gold available.",
+          "topic": "marriage_assistance",
+          "language": "tanglish",
+          "parallel_id": "TNW005"
+        },
+        {
+          "id": "TNW007",
+          "question": "Dr. முத்துலட்சுமி மகப்பேறு உதவித் திட்டம் என்றால் என்ன?",
+          "answer": "கர்ப்பிணி பெண்களுக்கு ₹18,000 உதவி. 3 தவணைகள்: ₹6,000 (12 weeks-ல்), ₹6,000 (delivery போது), ₹6,000 (குழந்தை 9 மாதத்தில் vaccines). தகுதி: TN-ல் 1 வருடம் வசிப்பவர், அரசு/அரசு உதவி பெறும் hospital-ல் delivery. Amma Baby Kit: கூடுதலாக ₹5,000 மதிப்புள்ள baby care items. விண்ணப்பம்: PHC/Govt hospital/ICDS. Documents: Aadhaar, MCP card, Bank account.",
+          "topic": "maternity_benefit",
+          "language": "pure_tamil",
+          "parallel_id": "TNW008"
+        },
+        {
+          "id": "TNW008",
+          "question": "Dr. Muthulakshmi Maternity Benefit Scheme endraal enna?",
+          "answer": "₹18,000 assistance for pregnant women. 3 installments: ₹6,000 (at 12 weeks), ₹6,000 (at delivery), ₹6,000 (baby 9 months vaccines). Eligibility: 1 year TN resident, delivery at govt/govt-aided hospital. Amma Baby Kit: Additional ₹5,000 worth baby care items. Apply: PHC/Govt hospital/ICDS. Documents: Aadhaar, MCP card, Bank account.",
+          "topic": "maternity_benefit",
+          "language": "tanglish",
+          "parallel_id": "TNW007"
+        }
+      ]
+    },
+    {
+      "category": "tn_education_schemes",
+      "category_tamil": "தமிழ்நாடு கல்வி திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNE001",
+          "question": "முதலமைச்சர் உயர்கல்வி உதவித் தொகை என்றால் என்ன?",
+          "answer": "First Graduate-களுக்கு உதவித்தொகை. Amount: ₹12,000/year (UG), ₹18,000/year (PG). தகுதி: குடும்பத்தில் முதல் graduate, Govt/Govt-aided college, Annual income ₹2.5 லட்சத்திற்கு கீழ். Duration: Full course period. Apply: College itself processes, Income certificate, First graduate declaration, Aadhaar. Auto-credited: Semester-wise to bank account.",
+          "topic": "higher_education",
+          "language": "pure_tamil",
+          "parallel_id": "TNE002"
+        },
+        {
+          "id": "TNE002",
+          "question": "Chief Minister's Higher Education Scholarship endraal enna?",
+          "answer": "Scholarship for first-generation graduates. Amount: ₹12,000/year (UG), ₹18,000/year (PG). Eligibility: First graduate in family, Govt/Govt-aided college, Annual income below ₹2.5 lakh. Duration: Full course period. Apply: College processes, Income certificate, First graduate declaration, Aadhaar. Auto-credited: Semester-wise to bank account.",
+          "topic": "higher_education",
+          "language": "tanglish",
+          "parallel_id": "TNE001"
+        },
+        {
+          "id": "TNE003",
+          "question": "SC/ST/BC Scholarship TN-ல் என்ன உள்ளது?",
+          "answer": "Community-வாரி Scholarships. SC Students: Post-matric scholarship (₹550-1,200/month), Free education (all levels), Hostel stipend. ST Students: Similar to SC + extra coaching. BC/MBC/DNC: Post-matric (₹300-700/month), BC-இல் MBC-க்கு higher amount. Apply: bcmbcmw.tn.gov.in (BC), adwb.tn.gov.in (SC/ST). Documents: Community certificate, Income certificate, Institution bonafide, Aadhaar. Hostel: Free accommodation + food in govt hostels.",
+          "topic": "community_scholarship",
+          "language": "pure_tamil",
+          "parallel_id": "TNE004"
+        },
+        {
+          "id": "TNE004",
+          "question": "SC/ST/BC Scholarship TN-la enna ulladhu?",
+          "answer": "Community-wise Scholarships. SC Students: Post-matric scholarship (₹550-1,200/month), Free education (all levels), Hostel stipend. ST Students: Similar to SC + extra coaching. BC/MBC/DNC: Post-matric (₹300-700/month), higher for MBC within BC. Apply: bcmbcmw.tn.gov.in (BC), adwb.tn.gov.in (SC/ST). Documents: Community certificate, Income certificate, Institution bonafide, Aadhaar. Hostel: Free accommodation + food in govt hostels.",
+          "topic": "community_scholarship",
+          "language": "tanglish",
+          "parallel_id": "TNE003"
+        },
+        {
+          "id": "TNE005",
+          "question": "TN இலவச Laptop திட்டம் என்றால் என்ன?",
+          "answer": "Govt school மாணவர்களுக்கு இலவச Laptop. தகுதி: +2 pass (Govt school), UG/Diploma சேர்ந்தவர்கள், Polytechnic students. Distribution: College-ல் கொடுப்பார்கள். Specs: Basic laptop with necessary software. Documents: +2 marksheet, College admission, Aadhaar. Usage: Education purpose, warranty உண்டு.",
+          "topic": "free_laptop",
+          "language": "pure_tamil",
+          "parallel_id": "TNE006"
+        },
+        {
+          "id": "TNE006",
+          "question": "TN Free Laptop Scheme endraal enna?",
+          "answer": "Free Laptop for Govt school students. Eligibility: +2 pass (Govt school), joined UG/Diploma, Polytechnic students. Distribution: Given at college. Specs: Basic laptop with necessary software. Documents: +2 marksheet, College admission, Aadhaar. Usage: Education purpose, warranty included.",
+          "topic": "free_laptop",
+          "language": "tanglish",
+          "parallel_id": "TNE005"
+        },
+        {
+          "id": "TNE007",
+          "question": "TN இலவச Bus Pass திட்டம் மாணவர்களுக்கு என்ன?",
+          "answer": "அனைத்து மாணவர்களுக்கும் இலவச பேருந்து பயணம். Coverage: School students - Govt/Private, College students - UG/PG/Professional. Type: Free travel in ordinary buses. Process: School/College-ல் apply, ID card வாங்க வேண்டும். Documents: Bonafide certificate, Photo, Aadhaar. Validity: Academic year. Not for: AC buses, special buses.",
+          "topic": "free_bus_pass",
+          "language": "pure_tamil",
+          "parallel_id": "TNE008"
+        },
+        {
+          "id": "TNE008",
+          "question": "TN Free Bus Pass for students enna?",
+          "answer": "Free bus travel for all students. Coverage: School students - Govt/Private, College students - UG/PG/Professional. Type: Free travel in ordinary buses. Process: Apply at School/College, get ID card. Documents: Bonafide certificate, Photo, Aadhaar. Validity: Academic year. Not for: AC buses, special buses.",
+          "topic": "free_bus_pass",
+          "language": "tanglish",
+          "parallel_id": "TNE007"
+        }
+      ]
+    },
+    {
+      "category": "tn_health_schemes",
+      "category_tamil": "தமிழ்நாடு சுகாதார திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNH001",
+          "question": "CMCHIS (முதலமைச்சர் மருத்துவ காப்பீடு திட்டம்) என்றால் என்ன?",
+          "answer": "குடும்பத்திற்கு ₹5 லட்சம் மருத்துவ காப்பீடு. Coverage: 1,000+ procedures, All family members. தகுதி: TN ration card holder, Annual income ₹1.2 லட்சத்திற்கு கீழ். Hospitals: Empanelled Govt + Private hospitals. Cashless: Card காட்டினால் cashless treatment. Card: cmchistn.com-ல் check/download. Documents: Ration card, Aadhaar linking. Ayushman Bharat: CMCHIS + PMJAY merged in TN.",
+          "topic": "health_insurance",
+          "language": "pure_tamil",
+          "parallel_id": "TNH002"
+        },
+        {
+          "id": "TNH002",
+          "question": "CMCHIS (Chief Minister's Comprehensive Health Insurance Scheme) endraal enna?",
+          "answer": "₹5 lakh health insurance per family. Coverage: 1,000+ procedures, All family members. Eligibility: TN ration card holder, Annual income below ₹1.2 lakh. Hospitals: Empanelled Govt + Private hospitals. Cashless: Show card for cashless treatment. Card: Check/download at cmchistn.com. Documents: Ration card, Aadhaar linking. Ayushman Bharat: CMCHIS + PMJAY merged in TN.",
+          "topic": "health_insurance",
+          "language": "tanglish",
+          "parallel_id": "TNH001"
+        },
+        {
+          "id": "TNH003",
+          "question": "Amma Baby Care Kit என்றால் என்ன?",
+          "answer": "புதிதாக பிறந்த குழந்தைக்கு இலவச Kit. Value: ₹5,000+. Contents: Baby clothes (6 sets), Mosquito net, Baby bed, Towels, Diapers, Baby oil/soap/powder, Blanket, Toys. தகுதி: Govt hospital delivery, Dr. Muthulakshmi scheme beneficiary. Given: Hospital-லேயே discharge போது கொடுப்பார்கள். Documents: MCP card, Delivery details.",
+          "topic": "baby_kit",
+          "language": "pure_tamil",
+          "parallel_id": "TNH004"
+        },
+        {
+          "id": "TNH004",
+          "question": "Amma Baby Care Kit endraal enna?",
+          "answer": "Free kit for newborn baby. Value: ₹5,000+. Contents: Baby clothes (6 sets), Mosquito net, Baby bed, Towels, Diapers, Baby oil/soap/powder, Blanket, Toys. Eligibility: Govt hospital delivery, Dr. Muthulakshmi scheme beneficiary. Given: At hospital during discharge. Documents: MCP card, Delivery details.",
+          "topic": "baby_kit",
+          "language": "tanglish",
+          "parallel_id": "TNH003"
+        },
+        {
+          "id": "TNH005",
+          "question": "TN-ல் Govt Hospital-ல் என்ன இலவசமாக கிடைக்கும்?",
+          "answer": "TN Govt Hospitals-ல் அனைத்தும் இலவசம். Free Services: OPD consultation, All tests (Blood, X-ray, CT, MRI), Medicines, Surgery, ICU, Dialysis, Cancer treatment. Specialty: Govt Medical College Hospitals-ல் advanced treatment. 108 Ambulance: Emergency-க்கு இலவசம். Referral: PHC → GH → Medical College Hospital chain. CGHS/ESIC: Central employees-க்கு separate.",
+          "topic": "free_healthcare",
+          "language": "pure_tamil",
+          "parallel_id": "TNH006"
+        },
+        {
+          "id": "TNH006",
+          "question": "TN-la Govt Hospital-la enna free kidaikkum?",
+          "answer": "Everything free in TN Govt Hospitals. Free Services: OPD consultation, All tests (Blood, X-ray, CT, MRI), Medicines, Surgery, ICU, Dialysis, Cancer treatment. Specialty: Advanced treatment at Govt Medical College Hospitals. 108 Ambulance: Free for emergency. Referral: PHC → GH → Medical College Hospital chain. CGHS/ESIC: Separate for central employees.",
+          "topic": "free_healthcare",
+          "language": "tanglish",
+          "parallel_id": "TNH005"
+        }
+      ]
+    },
+    {
+      "category": "tn_agriculture",
+      "category_tamil": "தமிழ்நாடு விவசாய திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNA001",
+          "question": "TN-ல் விவசாயிகளுக்கு இலவச மின்சாரம் என்ன?",
+          "answer": "விவசாய pump-sets-க்கு இலவச மின்சாரம். Coverage: All agricultural pump connections. Timing: Designated hours (usually night/off-peak). Types: LT Agricultural service, Free. Limit: Registration-ல் உள்ள HP-க்கு ஏற்ப. New Connection: TANGEDCO online apply, land documents, farmer ID. Solar Alternative: PM-KUSUM மூலம் solar pump-க்கு subsidy.",
+          "topic": "free_electricity",
+          "language": "pure_tamil",
+          "parallel_id": "TNA002"
+        },
+        {
+          "id": "TNA002",
+          "question": "TN-la farmers-ku free electricity enna?",
+          "answer": "Free electricity for agricultural pump-sets. Coverage: All agricultural pump connections. Timing: Designated hours (usually night/off-peak). Types: LT Agricultural service, Free. Limit: Based on HP in registration. New Connection: Apply online at TANGEDCO, land documents, farmer ID. Solar Alternative: Subsidy for solar pump via PM-KUSUM.",
+          "topic": "free_electricity",
+          "language": "tanglish",
+          "parallel_id": "TNA001"
+        },
+        {
+          "id": "TNA003",
+          "question": "UZHAVAN App என்றால் என்ன? என்ன services உள்ளது?",
+          "answer": "TN விவசாயிகளுக்கான ஒரே App. Services: Crop insurance apply, KCC loan status, Subsidy schemes apply, Weather updates, Market prices (UZHAVAR SANDHAI rates), Expert advice. Download: Play Store - UZHAVAN. Registration: Aadhaar + farmer ID. Alerts: SMS/notification for govt schemes, weather warning. Offline: Basic info works offline. Language: Tamil + English.",
+          "topic": "farmer_app",
+          "language": "pure_tamil",
+          "parallel_id": "TNA004"
+        },
+        {
+          "id": "TNA004",
+          "question": "UZHAVAN App endraal enna? Enna services ulladhu?",
+          "answer": "Single app for TN farmers. Services: Crop insurance apply, KCC loan status, Subsidy schemes apply, Weather updates, Market prices (UZHAVAR SANDHAI rates), Expert advice. Download: Play Store - UZHAVAN. Registration: Aadhaar + farmer ID. Alerts: SMS/notification for govt schemes, weather warning. Offline: Basic info works offline. Language: Tamil + English.",
+          "topic": "farmer_app",
+          "language": "tanglish",
+          "parallel_id": "TNA003"
+        },
+        {
+          "id": "TNA005",
+          "question": "TN-ல் விதை/உரம் மானியம் எப்படி பெறுவது?",
+          "answer": "விவசாயிகளுக்கு subsidized விதை/உரம். Seed Subsidy: 50% discount on certified seeds, Agriculture dept office-ல் வாங்கலாம். Fertilizer Subsidy: Urea, DAP, MOP subsidized விலையில். UZHAVAN Card: Subsidy track, eligibility check. Distribution: Co-operative societies, Agri office. Documents: Patta, Farmer ID, Aadhaar. Season: Sowing season-க்கு முன் announce.",
+          "topic": "input_subsidy",
+          "language": "pure_tamil",
+          "parallel_id": "TNA006"
+        },
+        {
+          "id": "TNA006",
+          "question": "TN-la vithai/uram subsidy eppadi peruvadhu?",
+          "answer": "Subsidized seeds/fertilizers for farmers. Seed Subsidy: 50% discount on certified seeds, buy at Agriculture dept office. Fertilizer Subsidy: Urea, DAP, MOP at subsidized prices. UZHAVAN Card: Track subsidy, check eligibility. Distribution: Co-operative societies, Agri office. Documents: Patta, Farmer ID, Aadhaar. Season: Announced before sowing season.",
+          "topic": "input_subsidy",
+          "language": "tanglish",
+          "parallel_id": "TNA005"
+        }
+      ]
+    },
+    {
+      "category": "tn_social_welfare",
+      "category_tamil": "தமிழ்நாடு சமூக நல திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNSW001",
+          "question": "TN முதியோர் ஓய்வூதியம் எவ்வளவு? எப்படி பெறுவது?",
+          "answer": "60+ வயதினருக்கு மாத ஓய்வூதியம். Amount: ₹1,000/month (State) + ₹200-500 (Central IGNOAPS) = ₹1,200-1,500. தகுதி: 60+ வயது, ஆண்டு வருமானம் ₹72,000-க்கு கீழ், BPL preferred. Destitute: ஆதரவற்ற முதியோருக்கு ₹1,500/month. விண்ணப்பம்: Panchayat/Taluk office. Documents: Age proof, Income certificate, Aadhaar, Bank account. Dearness Allowance: Periodic increase announced.",
+          "topic": "old_age_pension_tn",
+          "language": "pure_tamil",
+          "parallel_id": "TNSW002"
+        },
+        {
+          "id": "TNSW002",
+          "question": "TN Old Age Pension evvalavu? Eppadi peruvadhu?",
+          "answer": "Monthly pension for 60+ years. Amount: ₹1,000/month (State) + ₹200-500 (Central IGNOAPS) = ₹1,200-1,500. Eligibility: 60+ years, annual income below ₹72,000, BPL preferred. Destitute: ₹1,500/month for destitute elderly. Apply: Panchayat/Taluk office. Documents: Age proof, Income certificate, Aadhaar, Bank account. Dearness Allowance: Periodic increases announced.",
+          "topic": "old_age_pension_tn",
+          "language": "tanglish",
+          "parallel_id": "TNSW001"
+        },
+        {
+          "id": "TNSW003",
+          "question": "TN மாற்றுத்திறனாளி ஓய்வூதியம்/உதவி என்ன?",
+          "answer": "மாற்றுத்திறனாளிகளுக்கு TN benefits. Pension: ₹1,500/month (40%+ disability). Aids: Free wheelchair, hearing aid, artificial limbs, crutches. Education: Free education + special hostels. Employment: 4% reservation in govt jobs. Bus: Free travel (ordinary buses). Loan: Subsidy loan for self-employment. UDID Card: Unique Disability ID - all benefits-க்கு கட்டாயம். Apply: Social Welfare dept/Taluk office.",
+          "topic": "disability_welfare_tn",
+          "language": "pure_tamil",
+          "parallel_id": "TNSW004"
+        },
+        {
+          "id": "TNSW004",
+          "question": "TN Differently Abled pension/assistance enna?",
+          "answer": "TN benefits for differently abled. Pension: ₹1,500/month (40%+ disability). Aids: Free wheelchair, hearing aid, artificial limbs, crutches. Education: Free education + special hostels. Employment: 4% reservation in govt jobs. Bus: Free travel (ordinary buses). Loan: Subsidy loan for self-employment. UDID Card: Unique Disability ID - mandatory for all benefits. Apply: Social Welfare dept/Taluk office.",
+          "topic": "disability_welfare_tn",
+          "language": "tanglish",
+          "parallel_id": "TNSW003"
+        },
+        {
+          "id": "TNSW005",
+          "question": "TN விதவை ஓய்வூதியம் எவ்வளவு? தகுதி என்ன?",
+          "answer": "விதவைகளுக்கு மாத ஓய்வூதியம். Amount: ₹1,000/month (State) + ₹300 (Central IGNWPS). தகுதி: 18-60 வயது விதவை, ஆண்டு வருமானம் ₹72,000-க்கு கீழ், மறுமணம் ஆகாதவர். Destitute Widow: ₹1,500/month. விண்ணப்பம்: Panchayat/Taluk office. Documents: Husband death certificate, Age proof, Income certificate, Aadhaar. 60+: IGNOAPS-க்கு transfer.",
+          "topic": "widow_pension_tn",
+          "language": "pure_tamil",
+          "parallel_id": "TNSW006"
+        },
+        {
+          "id": "TNSW006",
+          "question": "TN Widow Pension evvalavu? Eligibility enna?",
+          "answer": "Monthly pension for widows. Amount: ₹1,000/month (State) + ₹300 (Central IGNWPS). Eligibility: 18-60 years widow, annual income below ₹72,000, not remarried. Destitute Widow: ₹1,500/month. Apply: Panchayat/Taluk office. Documents: Husband death certificate, Age proof, Income certificate, Aadhaar. 60+: Transferred to IGNOAPS.",
+          "topic": "widow_pension_tn",
+          "language": "tanglish",
+          "parallel_id": "TNSW005"
+        }
+      ]
+    },
+    {
+      "category": "tn_housing",
+      "category_tamil": "தமிழ்நாடு வீட்டு வசதி திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNHO001",
+          "question": "TN-ல் இலவச வீட்டு மனை பட்டா எப்படி பெறுவது?",
+          "answer": "ஏழைகளுக்கு இலவச வீட்டு மனை. தகுதி: Houseless poor families, BPL card holder, No land ownership. Size: 2-3 cents (varies by area). Process: Panchayat/Taluk office-ல் apply, List publish, Selection, Registration. Documents: Income certificate, Family card, Aadhaar, No property certificate. Priority: SC/ST, Widows, Differently abled. PMAY-G: House construction-க்கு ₹1.2 lakh + state share.",
+          "topic": "free_house_site",
+          "language": "pure_tamil",
+          "parallel_id": "TNHO002"
+        },
+        {
+          "id": "TNHO002",
+          "question": "TN-la free house site patta eppadi peruvadhu?",
+          "answer": "Free house site for poor. Eligibility: Houseless poor families, BPL card holder, No land ownership. Size: 2-3 cents (varies by area). Process: Apply at Panchayat/Taluk office, List published, Selection, Registration. Documents: Income certificate, Family card, Aadhaar, No property certificate. Priority: SC/ST, Widows, Differently abled. PMAY-G: ₹1.2 lakh + state share for house construction.",
+          "topic": "free_house_site",
+          "language": "tanglish",
+          "parallel_id": "TNHO001"
+        },
+        {
+          "id": "TNHO003",
+          "question": "TNHB (Tamil Nadu Housing Board) வீடு எப்படி வாங்குவது?",
+          "answer": "TNHB affordable housing. Types: EWS (Economic Weaker Section), LIG, MIG, HIG flats/plots. Apply: tnhb.tn.gov.in-ல் online. Selection: Lottery/First-come-first-serve (scheme-க்கு ஏற்ப). Cost: Market விலையை விட குறைவு. Loan: Banks-உடன் tie-up, easy EMI. Documents: Income proof, Aadhaar, Address proof. Projects: Chennai, Coimbatore, Madurai, other cities. Rental Housing: Low-income-க்கு TNHB rental schemes உண்டு.",
+          "topic": "tnhb_housing",
+          "language": "pure_tamil",
+          "parallel_id": "TNHO004"
+        },
+        {
+          "id": "TNHO004",
+          "question": "TNHB (Tamil Nadu Housing Board) veedu eppadi vaanguvadhu?",
+          "answer": "TNHB affordable housing. Types: EWS (Economic Weaker Section), LIG, MIG, HIG flats/plots. Apply: Online at tnhb.tn.gov.in. Selection: Lottery/First-come-first-serve (based on scheme). Cost: Lower than market price. Loan: Bank tie-ups, easy EMI. Documents: Income proof, Aadhaar, Address proof. Projects: Chennai, Coimbatore, Madurai, other cities. Rental Housing: TNHB rental schemes for low-income.",
+          "topic": "tnhb_housing",
+          "language": "tanglish",
+          "parallel_id": "TNHO003"
+        },
+        {
+          "id": "TNHO005",
+          "question": "TN Slum Clearance Board வீடு எப்படி பெறுவது?",
+          "answer": "Slum-dwellers-க்கு punarvasam. தகுதி: Recognized slum-ல் 10+ years வசிப்பவர், Survey-ல் பெயர் உள்ளவர். Types: In-situ development (அதே இடத்தில்), Resettlement (புதிய இடம்). Cost: Free or subsidized (income-க்கு ஏற்ப). Facilities: Basic amenities - water, electricity, toilet. Apply: TNSCB office/Local body. Documents: Slum survey ID, Aadhaar, Ration card. Projects: Multi-storey tenements in Chennai, other cities.",
+          "topic": "slum_clearance",
+          "language": "pure_tamil",
+          "parallel_id": "TNHO006"
+        },
+        {
+          "id": "TNHO006",
+          "question": "TN Slum Clearance Board veedu eppadi peruvadhu?",
+          "answer": "Rehabilitation for slum-dwellers. Eligibility: 10+ years in recognized slum, Name in survey. Types: In-situ development (same location), Resettlement (new location). Cost: Free or subsidized (based on income). Facilities: Basic amenities - water, electricity, toilet. Apply: TNSCB office/Local body. Documents: Slum survey ID, Aadhaar, Ration card. Projects: Multi-storey tenements in Chennai, other cities.",
+          "topic": "slum_clearance",
+          "language": "tanglish",
+          "parallel_id": "TNHO005"
+        }
+      ]
+    },
+    {
+      "category": "tn_employment",
+      "category_tamil": "தமிழ்நாடு வேலைவாய்ப்பு திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNEM001",
+          "question": "TN Employment Exchange-ல் பதிவு செய்வது எப்படி?",
+          "answer": "Govt job notification-க்கு Registration. Online: tnvelaivaaippu.gov.in-ல் register. Age: 18-40 (reservation-க்கு relaxation உண்டு). தகுதி: Educational qualification-க்கு ஏற்ப. Renewal: ஒவ்வொரு 3 வருடமும் renew. Benefits: Govt job notifications, Interview call, Unemployment assistance (some categories). Documents: Education certificates, Community certificate, Aadhaar. Priority: Seniority + Marks-based. Local Employment: Private companies-க்கும் referral.",
+          "topic": "employment_exchange",
+          "language": "pure_tamil",
+          "parallel_id": "TNEM002"
+        },
+        {
+          "id": "TNEM002",
+          "question": "TN Employment Exchange-la register eppadi seyvadhu?",
+          "answer": "Registration for Govt job notifications. Online: Register at tnvelaivaaippu.gov.in. Age: 18-40 (relaxation for reserved categories). Eligibility: Based on educational qualification. Renewal: Renew every 3 years. Benefits: Govt job notifications, Interview calls, Unemployment assistance (some categories). Documents: Education certificates, Community certificate, Aadhaar. Priority: Seniority + Marks-based. Local Employment: Referral for private companies too.",
+          "topic": "employment_exchange",
+          "language": "tanglish",
+          "parallel_id": "TNEM001"
+        },
+        {
+          "id": "TNEM003",
+          "question": "NEEDS (New Entrepreneur-cum-Enterprise Development Scheme) என்றால் என்ன?",
+          "answer": "இளைஞர்களுக்கு சுய தொழில் loan. Amount: ₹5 லட்சம் வரை (Project cost-ல் 25% subsidy). தகுதி: 21-35 வயது (SC/ST/Women 45 வரை), 8th pass, TN resident. Sectors: Manufacturing, Service, Trading. Subsidy: General 25%, SC/ST/Women 30%. Training: Free EDP training mandatory. Apply: DIC (District Industries Centre). Documents: Project report, Education proof, Community certificate, Bank no-objection. Repayment: 3-7 years.",
+          "topic": "self_employment_loan",
+          "language": "pure_tamil",
+          "parallel_id": "TNEM004"
+        },
+        {
+          "id": "TNEM004",
+          "question": "NEEDS (New Entrepreneur-cum-Enterprise Development Scheme) endraal enna?",
+          "answer": "Self-employment loan for youth. Amount: Up to ₹5 lakh (25% subsidy on project cost). Eligibility: 21-35 years (up to 45 for SC/ST/Women), 8th pass, TN resident. Sectors: Manufacturing, Service, Trading. Subsidy: General 25%, SC/ST/Women 30%. Training: Free mandatory EDP training. Apply: DIC (District Industries Centre). Documents: Project report, Education proof, Community certificate, Bank no-objection. Repayment: 3-7 years.",
+          "topic": "self_employment_loan",
+          "language": "tanglish",
+          "parallel_id": "TNEM003"
+        }
+      ]
+    },
+    {
+      "category": "tn_ration_food",
+      "category_tamil": "தமிழ்நாடு ரேஷன்/உணவு திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "TNR001",
+          "question": "TN ரேஷன் கடையில் என்ன பொருட்கள் கிடைக்கும்?",
+          "answer": "TN PDS items list. Rice Card: 20 kg free rice/family. Sugar Card: 5 kg rice at ₹1/kg. Common: Sugar 1.5 kg (₹13.50), Wheat/Atta 2 kg (₹7), Palm Oil 500ml (₹27), Daal 1 kg (₹28). Specials: Pongal - 1 kg sugar free + cash; Diwali - 1 kg sugar free; Ramzan - dates + cash for Muslims. Eligibility: Ration card type-க்கு ஏற்ப. Shop: Monthly distribution, SMS alert.",
+          "topic": "pds_items",
+          "language": "pure_tamil",
+          "parallel_id": "TNR002"
+        },
+        {
+          "id": "TNR002",
+          "question": "TN Ration Kadai-la enna items kidaikkum?",
+          "answer": "TN PDS items list. Rice Card: 20 kg free rice/family. Sugar Card: 5 kg rice at ₹1/kg. Common: Sugar 1.5 kg (₹13.50), Wheat/Atta 2 kg (₹7), Palm Oil 500ml (₹27), Daal 1 kg (₹28). Specials: Pongal - 1 kg sugar free + cash; Diwali - 1 kg sugar free; Ramzan - dates + cash for Muslims. Eligibility: Based on ration card type. Shop: Monthly distribution, SMS alert.",
+          "topic": "pds_items",
+          "language": "tanglish",
+          "parallel_id": "TNR001"
+        },
+        {
+          "id": "TNR003",
+          "question": "TN மதிய உணவு திட்டம் (Mid-Day Meal) என்றால் என்ன?",
+          "answer": "Govt school மாணவர்களுக்கு இலவச சத்தான உணவு. Coverage: Class 1-10 (Govt + Aided schools). Menu: Rice/Variety rice + Sambar + Egg/Banana + Boiled Egg (weekly). காலை: Morning nutrition breakfast (select areas). Nutrition: 450-700 calories, 12-20g protein. Aim: School attendance increase, Nutrition, Dropout prevention. Quality: Monthly inspection, Nutritionist supervision. Anganwadi: 0-6 years kids-க்கு Integrated Child Development Services.",
+          "topic": "mid_day_meal",
+          "language": "pure_tamil",
+          "parallel_id": "TNR004"
+        },
+        {
+          "id": "TNR004",
+          "question": "TN Mid-Day Meal Scheme endraal enna?",
+          "answer": "Free nutritious lunch for Govt school students. Coverage: Class 1-10 (Govt + Aided schools). Menu: Rice/Variety rice + Sambar + Egg/Banana + Boiled Egg (weekly). Morning: Nutrition breakfast (select areas). Nutrition: 450-700 calories, 12-20g protein. Aim: Increase school attendance, Nutrition, Prevent dropouts. Quality: Monthly inspection, Nutritionist supervision. Anganwadi: Integrated Child Development Services for 0-6 years kids.",
+          "topic": "mid_day_meal",
+          "language": "tanglish",
+          "parallel_id": "TNR003"
+        }
+      ]
+    },
+    {
+      "category": "tn_reference_directory",
+      "category_tamil": "தமிழ்நாடு குறிப்பு அடைவு",
+      "pairs": [
+        {
+          "id": "TNREF001",
+          "question": "TN அரசு websites என்னென்ன?",
+          "answer": "முக்கிய TN Government Portals: tn.gov.in (TN Govt main), tnpds.gov.in (Ration/PDS), cmchistn.com (Health Insurance), tnvelaivaaippu.gov.in (Employment), bcmbcmw.tn.gov.in (BC Welfare), adwb.tn.gov.in (SC/ST Welfare), tnhb.tn.gov.in (Housing Board), tangedco.gov.in (Electricity), tnreginet.gov.in (Registration), serviceonline.gov.in (e-Sevai). Mobile: UZHAVAN (Farmers), TNeGA (e-Governance).",
+          "topic": "government_portals",
+          "language": "pure_tamil",
+          "parallel_id": "TNREF002"
+        },
+        {
+          "id": "TNREF002",
+          "question": "TN Government websites enna enna?",
+          "answer": "Important TN Government Portals: tn.gov.in (TN Govt main), tnpds.gov.in (Ration/PDS), cmchistn.com (Health Insurance), tnvelaivaaippu.gov.in (Employment), bcmbcmw.tn.gov.in (BC Welfare), adwb.tn.gov.in (SC/ST Welfare), tnhb.tn.gov.in (Housing Board), tangedco.gov.in (Electricity), tnreginet.gov.in (Registration), serviceonline.gov.in (e-Sevai). Mobile: UZHAVAN (Farmers), TNeGA (e-Governance).",
+          "topic": "government_portals",
+          "language": "tanglish",
+          "parallel_id": "TNREF001"
+        },
+        {
+          "id": "TNREF003",
+          "question": "TN Helpline Numbers என்னென்ன?",
+          "answer": "முக்கிய TN Helplines: 1967 (Ration complaints), 1077 (CM Helpline), 108 (Emergency Ambulance), 104 (Health Helpline), 100 (Police), 101 (Fire), 1091 (Women Helpline), 1098 (Child Helpline - Childline), 181 (Women Helpline - central), 1912 (Anti-Corruption), 155300 (Cyber Crime), 14461 (Kisan Call Centre), 1800-180-1111 (Pensioners). Free: Most are toll-free 24x7.",
+          "topic": "helpline_numbers",
+          "language": "pure_tamil",
+          "parallel_id": "TNREF004"
+        },
+        {
+          "id": "TNREF004",
+          "question": "TN Helpline Numbers enna enna?",
+          "answer": "Important TN Helplines: 1967 (Ration complaints), 1077 (CM Helpline), 108 (Emergency Ambulance), 104 (Health Helpline), 100 (Police), 101 (Fire), 1091 (Women Helpline), 1098 (Child Helpline - Childline), 181 (Women Helpline - central), 1912 (Anti-Corruption), 155300 (Cyber Crime), 14461 (Kisan Call Centre), 1800-180-1111 (Pensioners). Free: Most are toll-free 24x7.",
+          "topic": "helpline_numbers",
+          "language": "tanglish",
+          "parallel_id": "TNREF003"
+        }
+      ]
     }
   ],
   "metadata": {
@@ -1564,7 +2356,7 @@
     "target_audience": "Tamil Nadu citizens",
     "use_case": "Government services navigation",
     "license": "CC-BY-SA-4.0",
-    "version_notes": "v0.3.0 - Added comprehensive bilingual PAN Card procedures (new applications, corrections, PAN-Aadhaar linking, duplicates, multiple PAN resolution, minor PAN). Added Central Government Schemes coverage (PMJDY, MUDRA loans, Stand Up India, PMJJBY/PMSBY/APY insurance/pension, PM-KISAN, Ayushman Bharat, Janaushadhi, PMAY housing, Ujjwala LPG, Vidya Lakshmi education loans, NSP scholarships, PMKVY skill training, PMEGP self-employment, PM-SYM pension, PM SVANidhi vendor loans, PMMVY maternity benefit, Sukanya Samriddhi savings). Updated reference directory with central government portals and helplines.",
+    "version_notes": "v0.4.0 - Major expansion with Central Government Agriculture & Rural schemes (PMFBY crop insurance, PM-KUSUM solar, KCC credit, Soil Health Card, e-NAM market, PKVY organic farming, PMKSY irrigation, MGNREGA employment, PMGSY roads, DDU-GKY skill training, PM-AJAY healthcare). Added Senior Citizens schemes (IGNOAPS/IGNWPS/IGNDPS pensions, PMVVY LIC pension, SCSS savings, RVY assistive devices, travel concessions, legal rights). Comprehensive Tamil Nadu State Schemes coverage: Women welfare (Kalaignar Magalir ₹1000, Girl Child Protection, Marriage Assistance, Dr. Muthulakshmi Maternity), Education (CM Higher Education, SC/ST/BC Scholarships, Free Laptop, Free Bus Pass), Health (CMCHIS insurance, Amma Baby Kit, free healthcare), Agriculture (free electricity, UZHAVAN app, input subsidies), Social welfare (Old Age/Widow/Disability pensions), Housing (free site patta, TNHB, Slum Clearance), Employment (Employment Exchange, NEEDS loans), Ration/Food (PDS items, Mid-Day Meal). Added TN Government portals and helpline directory.",
     "last_updated": "2026-02-05",
     "languages_covered": [
       "pure_tamil",
