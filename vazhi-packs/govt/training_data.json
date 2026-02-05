@@ -1,0 +1,764 @@
+{
+  "pack_name": "vazhi_arasu",
+  "pack_name_tamil": "வழி அரசு",
+  "description": "Government services pack for navigating Tamil Nadu and Central government schemes",
+  "version": "0.1.0",
+  "total_pairs": 100,
+  "categories": [
+    {
+      "category": "ration_card",
+      "category_tamil": "ரேஷன் அட்டை",
+      "pairs": [
+        {
+          "id": "RC001",
+          "question": "புதிய ரேஷன் கார்டு எப்படி விண்ணப்பிப்பது?",
+          "answer": "tnpds.gov.in website-ல் online விண்ணப்பிக்கலாம். அல்லது அருகிலுள்ள taluk office-ல் form 1 நிரப்பி கொடுக்கலாம். Aadhaar, address proof, income certificate தேவை. 30 நாட்களில் கிடைக்கும்.",
+          "document_type": "ration_card",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC002",
+          "question": "ரேஷன் கார்டில் பெயர் சேர்க்க என்ன செய்ய வேண்டும்?",
+          "answer": "புதிதாக பிறந்த குழந்தை அல்லது திருமணம் ஆன பெண் என்றால் Form 2 நிரப்ப வேண்டும். Birth certificate அல்லது marriage certificate, Aadhaar copy கொடுக்க வேண்டும். Online-லும் apply செய்யலாம்.",
+          "document_type": "ration_card_addition",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC003",
+          "question": "ரேஷன் கார்டில் இருந்து பெயர் நீக்க முடியுமா?",
+          "answer": "முடியும். இறந்துவிட்டால் death certificate, வேறு வீட்டுக்கு மாறினால் transfer certificate கொடுத்து Form 3 நிரப்ப வேண்டும். Taluk supply office-ல் கொடுக்கலாம்.",
+          "document_type": "ration_card_deletion",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC004",
+          "question": "ஒரு மாவட்டத்திலிருந்து வேறு மாவட்டத்திற்கு ரேஷன் கார்டு மாற்றம் செய்வது எப்படி?",
+          "answer": "One Nation One Ration Card திட்டத்தின் கீழ் இப்போது எளிது. புதிய முகவரியில் Aadhaar update செய்து, பழைய மாவட்ட office-ல் NOC வாங்கி, புதிய மாவட்டத்தில் விண்ணப்பிக்கவும்.",
+          "document_type": "ration_card_transfer",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RC005",
+          "question": "Smart ration card எப்போது கிடைக்கும்? பழைய card வைத்திருக்கிறேன்.",
+          "answer": "தமிழ்நாடு முழுவதும் smart card வழங்கப்பட்டுவிட்டது. உங்கள் card இன்னும் வரவில்லை என்றால் taluk office-ல் விசாரிக்கவும். Aadhaar linking செய்திருக்க வேண்டும்.",
+          "document_type": "smart_card",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC006",
+          "question": "ரேஷன் கடையில் பொருட்கள் கிடைக்கவில்லை என்றால் எங்கு புகார் செய்வது?",
+          "answer": "1967 toll-free number-ல் புகார் செய்யலாம். அல்லது CM cell, district collector office-ல் புகார் கொடுக்கலாம். tnpds.gov.in-ல் online complaint-ம் செய்யலாம்.",
+          "document_type": "complaint",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC007",
+          "question": "எனக்கு rice card வேண்டும், sugar card இருக்கிறது. மாற்ற முடியுமா?",
+          "answer": "குடும்ப வருமானம் ஆண்டுக்கு 1 லட்சத்திற்கு கீழ் இருந்தால் rice card-க்கு eligible. Income certificate வாங்கி, taluk office-ல் விண்ணப்பிக்கவும். Verification-க்கு பிறகு மாற்றப்படும்.",
+          "document_type": "card_conversion",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RC008",
+          "question": "ரேஷன் கார்டு தொலைந்துவிட்டது. Duplicate எப்படி வாங்குவது?",
+          "answer": "Police station-ல் FIR போடுங்கள். FIR copy, Aadhaar, photo எடுத்துக்கொண்டு taluk office-ல் Form 4 நிரப்பி கொடுங்கள். Duplicate card 15-30 நாட்களில் கிடைக்கும்.",
+          "document_type": "duplicate_card",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC009",
+          "question": "Aadhaar இல்லாமல் ரேஷன் வாங்க முடியுமா?",
+          "answer": "தற்காலிகமாக Aadhaar enrollment slip அல்லது Aadhaar application receipt வைத்து வாங்கலாம். ஆனால் permanent-ஆக Aadhaar linking கட்டாயம். 6 மாதத்திற்குள் link செய்ய வேண்டும்.",
+          "document_type": "aadhaar_linking",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RC010",
+          "question": "ரேஷன் கடையில் biometric fail ஆகிறது. என்ன செய்வது?",
+          "answer": "விரல் ரேகை சிக்கல் இருந்தால் iris scan செய்யலாம். அதுவும் fail என்றால் Aadhaar centre-ல் biometric update செய்யுங்கள். தற்காலிகமாக OTP மூலமும் வாங்கலாம்.",
+          "document_type": "biometric_issue",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RC011",
+          "question": "ஒரே வீட்டில் இரண்டு குடும்பம் இருந்தால் தனி ரேஷன் கார்டு வாங்க முடியுமா?",
+          "answer": "முடியும். Separate குடும்பம் என்று நிரூபிக்க வேண்டும். Separate gas connection, EB bill இருந்தால் நல்லது. Taluk office-ல் விசாரணை நடக்கும்.",
+          "document_type": "separate_card",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RC012",
+          "question": "என் ரேஷன் கார்டு வேறொருவர் பெயரில் உள்ளது. தலைவர் பெயர் மாற்ற என்ன செய்வது?",
+          "answer": "குடும்ப தலைவர் இறந்திருந்தால் death certificate, அல்லது விவாகரத்து ஆகியிருந்தால் divorce decree கொடுத்து Form 5 நிரப்பவும். புதிய தலைவர் Aadhaar தேவை.",
+          "document_type": "head_change",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RC013",
+          "question": "ரேஷன் பொருட்கள் எவ்வளவு கிடைக்கும்? விலை என்ன?",
+          "answer": "Rice card: 20kg free rice per family. Sugar card: 5kg rice at Rs.1/kg. Wheat, sugar, palm oil-ம் subsidized விலையில் கிடைக்கும். Pongal, Diwali-க்கு special items உண்டு.",
+          "document_type": "entitlement",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC014",
+          "question": "Portability என்றால் என்ன? வேறு கடையில் ரேஷன் வாங்க முடியுமா?",
+          "answer": "One Nation One Ration Card திட்டத்தில் இந்தியாவில் எந்த ரேஷன் கடையிலும் வாங்கலாம். Aadhaar based authentication செய்ய வேண்டும். Travel செய்யும்போது மிகவும் useful.",
+          "document_type": "portability",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RC015",
+          "question": "என் பெயர் ரேஷன் கார்டில் தவறாக உள்ளது. திருத்த என்ன செய்வது?",
+          "answer": "Aadhaar-ல் உள்ள பெயரை சரி செய்து, அந்த copy-யுடன் taluk office-ல் correction application கொடுக்கவும். SSLC அல்லது passport proof-ஆக கொடுக்கலாம்.",
+          "document_type": "correction",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "category": "aadhaar_services",
+      "category_tamil": "ஆதார் சேவைகள்",
+      "pairs": [
+        {
+          "id": "AA001",
+          "question": "புதிதாக Aadhaar card எப்படி வாங்குவது?",
+          "answer": "அருகிலுள்ள Aadhaar enrollment centre-க்கு போங்கள். uidai.gov.in-ல் centre கண்டுபிடிக்கலாம். Address proof, ID proof, birth certificate கொண்டு செல்லுங்கள். Appointment book செய்வது நல்லது.",
+          "document_type": "new_aadhaar",
+          "difficulty": "easy"
+        },
+        {
+          "id": "AA002",
+          "question": "Aadhaar-ல் முகவரி மாற்றம் செய்வது எப்படி?",
+          "answer": "Online: myaadhaar.uidai.gov.in-ல் login செய்து update செய்யலாம். Address proof upload செய்ய வேண்டும். Offline: Aadhaar centre-ல் form நிரப்பி கொடுக்கலாம். Rs.50 charge.",
+          "document_type": "address_update",
+          "difficulty": "easy"
+        },
+        {
+          "id": "AA003",
+          "question": "Aadhaar card-ல் mobile number மாற்ற என்ன செய்வது?",
+          "answer": "Mobile number update-க்கு Aadhaar centre-க்கு நேரில் போக வேண்டும். Online-ல் செய்ய முடியாது. Original Aadhaar, new mobile number எடுத்துச் செல்லுங்கள். Biometric verification உண்டு.",
+          "document_type": "mobile_update",
+          "difficulty": "easy"
+        },
+        {
+          "id": "AA004",
+          "question": "Aadhaar PVC card எப்படி order செய்வது?",
+          "answer": "myaadhaar.uidai.gov.in அல்லது resident.uidai.gov.in-ல் order செய்யலாம். Rs.50 charge. Registered mobile-க்கு OTP வரும். 15-20 நாட்களில் post-ல் வரும்.",
+          "document_type": "pvc_card",
+          "difficulty": "easy"
+        },
+        {
+          "id": "AA005",
+          "question": "Aadhaar-ல் பிறந்த தேதி தவறாக உள்ளது. சரி செய்ய முடியுமா?",
+          "answer": "ஒரு முறை மட்டுமே DOB மாற்றலாம். Birth certificate அல்லது SSLC marksheet proof-ஆக தேவை. Aadhaar centre-ல் form நிரப்பி documents கொடுக்க வேண்டும்.",
+          "document_type": "dob_correction",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AA006",
+          "question": "என் Aadhaar யாரோ misuse செய்கிறார்கள். Lock செய்ய முடியுமா?",
+          "answer": "myaadhaar.uidai.gov.in-ல் Aadhaar lock செய்யலாம். Biometric lock, Aadhaar number lock இரண்டும் available. தேவைப்படும்போது unlock செய்யலாம். மிகவும் safe option.",
+          "document_type": "aadhaar_lock",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AA007",
+          "question": "Virtual ID (VID) என்றால் என்ன? எப்படி பயன்படுத்துவது?",
+          "answer": "VID என்பது 16 digit temporary number, actual Aadhaar number-க்கு பதில் பயன்படுத்தலாம். myaadhaar.uidai.gov.in-ல் generate செய்யலாம். Privacy protection-க்கு நல்லது.",
+          "document_type": "virtual_id",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AA008",
+          "question": "Aadhaar authentication history எப்படி பார்ப்பது?",
+          "answer": "resident.uidai.gov.in-ல் 'Aadhaar Authentication History' option உள்ளது. கடந்த 6 மாத authentication records பார்க்கலாம். Unauthorized use இருந்தால் complaint போடலாம்.",
+          "document_type": "auth_history",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AA009",
+          "question": "5 வயது குழந்தைக்கு Aadhaar எடுக்கலாமா?",
+          "answer": "பிறந்த குழந்தைக்கும் Aadhaar எடுக்கலாம். 5 வயதிற்கு கீழ் biometric இல்லாமல், photo மட்டும் எடுப்பார்கள். 5 மற்றும் 15 வயதில் mandatory biometric update உண்டு.",
+          "document_type": "child_aadhaar",
+          "difficulty": "easy"
+        },
+        {
+          "id": "AA010",
+          "question": "Aadhaar card தொலைந்துவிட்டது. Download செய்யலாமா?",
+          "answer": "eaadhaar.uidai.gov.in-ல் download செய்யலாம். Registered mobile-க்கு OTP வரும். e-Aadhaar original Aadhaar-க்கு சமம், எல்லா இடத்திலும் valid.",
+          "document_type": "download_aadhaar",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "category": "pension_schemes",
+      "category_tamil": "ஓய்வூதிய திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "PN001",
+          "question": "முதியோர் ஓய்வூதியம் யாருக்கு கிடைக்கும்? எவ்வளவு?",
+          "answer": "60 வயதுக்கு மேல், BPL குடும்பம், ஆண்டு வருமானம் Rs.72,000-க்கு கீழ் இருந்தால் eligible. தமிழ்நாட்டில் மாதம் Rs.1,000 கிடைக்கும். 80 வயதுக்கு மேல் Rs.1,500.",
+          "scheme_type": "old_age_pension",
+          "difficulty": "easy"
+        },
+        {
+          "id": "PN002",
+          "question": "விதவை ஓய்வூதியத்திற்கு எப்படி விண்ணப்பிப்பது?",
+          "answer": "கணவர் இறப்பு சான்றிதழ், Aadhaar, ration card, bank passbook copy எடுத்து taluk office-ல் விண்ணப்பிக்கவும். Online-ல் tnpensions.gov.in-ல் apply செய்யலாம்.",
+          "scheme_type": "widow_pension",
+          "difficulty": "easy"
+        },
+        {
+          "id": "PN003",
+          "question": "மாற்றுத்திறனாளிகளுக்கான ஓய்வூதியம் எவ்வளவு?",
+          "answer": "40% மேல் disability இருந்தால் மாதம் Rs.1,500 கிடைக்கும். Disability certificate (medical board certified), Aadhaar, income certificate தேவை. 18 வயது முதல் எந்த வயதிலும் apply செய்யலாம்.",
+          "scheme_type": "disability_pension",
+          "difficulty": "easy"
+        },
+        {
+          "id": "PN004",
+          "question": "Atal Pension Yojana (APY) என்றால் என்ன? யார் சேரலாம்?",
+          "answer": "18-40 வயது இருந்தால் சேரலாம். மாதம் Rs.42 முதல் கட்டினால், 60 வயதில் மாதம் Rs.1,000-5,000 pension கிடைக்கும். Bank-ல் account இருந்தால் போதும்.",
+          "scheme_type": "apy",
+          "difficulty": "medium"
+        },
+        {
+          "id": "PN005",
+          "question": "என் தந்தாவுக்கு pension வரவில்லை. எங்கு கேட்பது?",
+          "answer": "முதலில் bank account-ல் credit ஆனதா check செய்யுங்கள். வரவில்லை என்றால் taluk office-ல் விசாரிக்கவும். Life certificate கொடுத்திருக்கிறீர்களா என்று பாருங்கள்.",
+          "scheme_type": "pension_query",
+          "difficulty": "easy"
+        },
+        {
+          "id": "PN006",
+          "question": "Life certificate என்றால் என்ன? எப்படி கொடுப்பது?",
+          "answer": "ஆண்டுக்கு ஒருமுறை (November) pensioner உயிருடன் இருக்கிறார் என்று certificate கொடுக்க வேண்டும். Bank-ல் நேரில் போகலாம் அல்லது Jeevan Pramaan app மூலம் online submit செய்யலாம்.",
+          "scheme_type": "life_certificate",
+          "difficulty": "easy"
+        },
+        {
+          "id": "PN007",
+          "question": "Government employee pension எப்போது கிடைக்கும்?",
+          "answer": "Retirement-க்கு பின் 3-6 மாதத்தில் pension தொடங்கும். AG office-ல் PPO (Pension Payment Order) issue ஆக வேண்டும். Bank-ல் pension account open செய்ய வேண்டும்.",
+          "scheme_type": "govt_pension",
+          "difficulty": "medium"
+        },
+        {
+          "id": "PN008",
+          "question": "Family pension யாருக்கு கிடைக்கும்?",
+          "answer": "Government employee இறந்துவிட்டால் spouse-க்கு family pension கிடைக்கும். Spouse இல்லை என்றால் minor children-க்கு கிடைக்கும். AG office-ல் விண்ணப்பிக்க வேண்டும்.",
+          "scheme_type": "family_pension",
+          "difficulty": "medium"
+        },
+        {
+          "id": "PN009",
+          "question": "PM-SYM (Shram Yogi Mandhan) scheme என்ன?",
+          "answer": "Unorganized sector workers-க்கான pension scheme. 18-40 வயது, மாத வருமானம் Rs.15,000-க்கு கீழ் இருந்தால் சேரலாம். 60 வயதில் Rs.3,000 monthly pension. CSC centre-ல் register செய்யலாம்.",
+          "scheme_type": "pm_sym",
+          "difficulty": "medium"
+        },
+        {
+          "id": "PN010",
+          "question": "NPS (National Pension System) வேலை செய்யும் போதே சேரலாமா?",
+          "answer": "ஆம், 18-70 வயது யாரும் NPS-ல் சேரலாம். Tax benefit-ம் உண்டு. Online-ல் enps.nsdl.com-ல் account திறக்கலாம். Retirement-ல் 60% withdraw, 40% annuity.",
+          "scheme_type": "nps",
+          "difficulty": "medium"
+        },
+        {
+          "id": "PN011",
+          "question": "என் அம்மாவுக்கு pension card இல்லை. எங்கு கேட்பது?",
+          "answer": "Pension sanction ஆனதா tnpensions.gov.in-ல் status check செய்யுங்கள். Sanction ஆகி card வரவில்லை என்றால் taluk office-ல் விசாரிக்கவும். Application number வைத்து track செய்யலாம்.",
+          "scheme_type": "pension_card",
+          "difficulty": "easy"
+        },
+        {
+          "id": "PN012",
+          "question": "கைவிடப்பட்ட பெண்களுக்கு pension உண்டா?",
+          "answer": "ஆம், destitute/deserted women-க்கு widow pension-க்கு சமான pension கிடைக்கும். கணவரால் கைவிடப்பட்டதற்கு proof, income certificate, Aadhaar தேவை. Taluk office-ல் apply செய்யவும்.",
+          "scheme_type": "destitute_pension",
+          "difficulty": "medium"
+        },
+        {
+          "id": "PN013",
+          "question": "Pension bank account மாற்ற முடியுமா?",
+          "answer": "முடியும். புதிய bank-ல் account open செய்து, pension disbursing office-ல் (AG office அல்லது taluk) transfer request கொடுக்கவும். புதிய passbook copy தேவை.",
+          "scheme_type": "bank_transfer",
+          "difficulty": "easy"
+        },
+        {
+          "id": "PN014",
+          "question": "Pension arrears எப்போது கிடைக்கும்?",
+          "answer": "Pay commission revision-க்கு பின் arrears calculate செய்து கொடுப்பார்கள். சில மாதங்கள் ஆகலாம். AG office-ல் status check செய்யலாம். Installment-ஆக கொடுக்கலாம்.",
+          "scheme_type": "pension_arrears",
+          "difficulty": "medium"
+        },
+        {
+          "id": "PN015",
+          "question": "Pension வரும் போது TDS cut ஆகுமா?",
+          "answer": "ஆண்டு pension income taxable limit-ஐ தாண்டினால் TDS cut ஆகும். Senior citizens-க்கு Rs.3 lakh வரை tax இல்லை. Form 15H கொடுத்தால் TDS தவிர்க்கலாம்.",
+          "scheme_type": "pension_tax",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "category": "scholarship",
+      "category_tamil": "உதவித்தொகை திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "SC001",
+          "question": "Post-matric scholarship-க்கு யார் eligible?",
+          "answer": "SC/ST/OBC/BC மாணவர்கள், குடும்ப வருமானம் ஆண்டுக்கு Rs.2.5 லட்சத்திற்கு கீழ் இருந்தால் eligible. 11th முதல் PhD வரை apply செய்யலாம். scholarships.gov.in-ல் apply செய்யுங்கள்.",
+          "scheme_type": "post_matric",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC002",
+          "question": "BC/MBC மாணவர்களுக்கு என்ன scholarship உண்டு?",
+          "answer": "Tamil Nadu BC/MBC scholarship: Tuition fee, maintenance allowance கிடைக்கும். தமிழ்நாடு scholarship portal-ல் apply செய்யவும். Caste certificate, income certificate தேவை.",
+          "scheme_type": "bc_mbc_scholarship",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC003",
+          "question": "முதல் generation graduate-க்கு special scholarship உண்டா?",
+          "answer": "ஆம், Tamil Nadu First Graduate scholarship உண்டு. பெற்றோர் graduate இல்லை என்று affidavit தேவை. College fee, book allowance கிடைக்கும். College மூலம் apply செய்யலாம்.",
+          "scheme_type": "first_graduate",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC004",
+          "question": "Engineering/Medical படிக்க scholarship எப்படி வாங்குவது?",
+          "answer": "AICTE, state government scholarships available. Professional course-க்கு tuition fee waiver, living expenses கிடைக்கும். National Scholarship Portal-ல் deadlines check செய்து apply செய்யுங்கள்.",
+          "scheme_type": "professional_course",
+          "difficulty": "medium"
+        },
+        {
+          "id": "SC005",
+          "question": "Minority community students-க்கு என்ன scholarship?",
+          "answer": "Pre-matric, post-matric, merit-cum-means scholarship உண்டு. Muslim, Christian, Sikh, Buddhist, Jain, Parsi students eligible. minorityaffairs.gov.in-ல் apply செய்யலாம்.",
+          "scheme_type": "minority_scholarship",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC006",
+          "question": "Scholarship amount bank-ல் வரவில்லை. என்ன செய்வது?",
+          "answer": "NSP portal-ல் application status check செய்யுங்கள். 'Disbursed' என்று இருந்தால் bank-ல் விசாரிக்கவும். Account number தவறு இருக்கலாம். College scholarship cell-ல் கேளுங்கள்.",
+          "scheme_type": "scholarship_issue",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC007",
+          "question": "Scholarship application reject ஆனது. Reason என்ன?",
+          "answer": "Common reasons: income certificate issue, caste certificate problem, document mismatch, duplicate application. NSP portal-ல் rejection reason பாருங்கள். திருத்தி re-apply செய்யலாம்.",
+          "scheme_type": "rejection_reason",
+          "difficulty": "medium"
+        },
+        {
+          "id": "SC008",
+          "question": "PhD students-க்கு fellowship எப்படி வாங்குவது?",
+          "answer": "UGC NET JRF, CSIR JRF clear செய்தால் Rs.31,000-37,000 monthly fellowship கிடைக்கும். University-யிலும் PhD fellowship schemes உண்டு. Guide மூலம் apply செய்யவும்.",
+          "scheme_type": "phd_fellowship",
+          "difficulty": "medium"
+        },
+        {
+          "id": "SC009",
+          "question": "Girl students-க்கு special scholarship உண்டா?",
+          "answer": "CBSE Single Girl Child scholarship, Pragati scholarship (AICTE), Indira Gandhi scholarship for single girl child உண்டு. State-level-லும் girl students-க்கு special schemes இருக்கின்றன.",
+          "scheme_type": "girl_scholarship",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC010",
+          "question": "Abroad படிக்க scholarship கிடைக்குமா?",
+          "answer": "BC/MBC overseas scholarship, Dr. Ambedkar overseas scholarship (SC), national overseas scholarship உண்டு. TOEFL/IELTS scores, admission letter தேவை. ஆண்டுக்கு Rs.15-20 lakh வரை கிடைக்கலாம்.",
+          "scheme_type": "overseas_scholarship",
+          "difficulty": "medium"
+        },
+        {
+          "id": "SC011",
+          "question": "Free laptop scheme-க்கு எப்படி apply செய்வது?",
+          "answer": "Tamil Nadu-ல் government school 11th, 12th students-க்கு free laptop scheme உண்டு. Separate application தேவையில்லை, school மூலம் automatically பெறலாம். Aadhaar linking கட்டாயம்.",
+          "scheme_type": "free_laptop",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC012",
+          "question": "Scholarship-க்கு renewal எப்படி செய்வது?",
+          "answer": "ஒவ்வொரு academic year-க்கும் renewal apply செய்ய வேண்டும். Previous year marks, attendance, income certificate fresh-ஆக upload செய்யவும். Deadline miss ஆனால் scholarship நிற்கும்.",
+          "scheme_type": "renewal",
+          "difficulty": "easy"
+        },
+        {
+          "id": "SC013",
+          "question": "Private college students-க்கு government scholarship கிடைக்குமா?",
+          "answer": "AICTE/UGC approved private colleges-ல் படிக்கும் students-க்கு government scholarships applicable. College recognition verify செய்யுங்கள். Self-finance college-க்கும் சில schemes உண்டு.",
+          "scheme_type": "private_college",
+          "difficulty": "medium"
+        },
+        {
+          "id": "SC014",
+          "question": "Sports quota-ல் scholarship உண்டா?",
+          "answer": "State/National level sports achievement இருந்தால் sports scholarship கிடைக்கும். SAI (Sports Authority of India), state sports council scholarships உண்டு. Certificate proof தேவை.",
+          "scheme_type": "sports_scholarship",
+          "difficulty": "medium"
+        },
+        {
+          "id": "SC015",
+          "question": "Scholarship apply செய்ய last date எப்போது?",
+          "answer": "NSP portal-ல் fresh application: August-November, renewal: July-October (approximate). State scholarships-க்கு different dates. Deadline-க்கு முன்பே apply செய்யுங்கள், last minute rush தவிர்க்கவும்.",
+          "scheme_type": "deadline",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "category": "housing_schemes",
+      "category_tamil": "வீட்டு வசதி திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "HS001",
+          "question": "PMAY (Pradhan Mantri Awas Yojana) யாருக்கு கிடைக்கும்?",
+          "answer": "EWS (ஆண்டு வருமானம் Rs.3 lakh வரை), LIG (Rs.6 lakh வரை), MIG (Rs.18 lakh வரை) குடும்பங்களுக்கு. குடும்பத்தில் யாருக்கும் pucca வீடு இருக்கக்கூடாது. pmaymis.gov.in-ல் apply செய்யலாம்.",
+          "scheme_type": "pmay",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HS002",
+          "question": "PMAY subsidy எவ்வளவு கிடைக்கும்?",
+          "answer": "EWS/LIG: Rs.2.67 lakh வரை subsidy (6.5% interest subsidy). MIG-I: Rs.2.35 lakh (4% subsidy). MIG-II: Rs.2.30 lakh (3% subsidy). Home loan எடுத்தால் subsidy நேரடியாக loan account-ல் credit ஆகும்.",
+          "scheme_type": "pmay_subsidy",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HS003",
+          "question": "தமிழ்நாடு குடிசை மாற்று வாரியத்தில் வீடு எப்படி பெறுவது?",
+          "answer": "TNSCB (Slum Clearance Board) through application செய்யலாம். Slum area-ல் வசிக்கும் குடும்பங்களுக்கு priority. Ration card, Aadhaar, income proof கொடுத்து local office-ல் apply செய்யவும்.",
+          "scheme_type": "tnscb",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HS004",
+          "question": "Free house site patta எப்படி வாங்குவது?",
+          "answer": "Homeless குடும்பங்களுக்கு government free site patta கொடுக்கும். Village panchayat அல்லது municipality-ல் விண்ணப்பிக்கவும். BPL certificate, landless certificate தேவை.",
+          "scheme_type": "free_site_patta",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HS005",
+          "question": "வீடு கட்ட government loan scheme உள்ளதா?",
+          "answer": "Tamil Nadu Housing Board, HUDCO loan schemes உண்டு. Low interest rate-ல் home loan கிடைக்கும். Subsidy-யுடன் PMAY loan-ம் available. Bank-லும் home loan எடுத்து PMAY subsidy பெறலாம்.",
+          "scheme_type": "housing_loan",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HS006",
+          "question": "வீடு பழுது பார்க்க government உதவி உண்டா?",
+          "answer": "Rural areas-ல் IAY (Indira Awaas Yojana) கீழ் repair assistance உண்டு. Rs.15,000-20,000 வரை கிடைக்கலாம். Panchayat office-ல் விண்ணப்பிக்கவும். House condition inspection நடக்கும்.",
+          "scheme_type": "repair_assistance",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HS007",
+          "question": "PMAY application status எப்படி check செய்வது?",
+          "answer": "pmaymis.gov.in-ல் 'Track Your Assessment Status' option உள்ளது. Aadhaar number அல்லது application ID கொடுத்து status பாருங்கள். Sanctioned, approved, disbursed status தெரியும்.",
+          "scheme_type": "pmay_status",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HS008",
+          "question": "Rental housing scheme ஏதாவது உள்ளதா?",
+          "answer": "Affordable Rental Housing Complex (ARHC) scheme urban poor-க்கு உண்டு. Industrial workers, migrants-க்கு subsidized rent-ல் வீடு. State urban development department-ல் விசாரிக்கவும்.",
+          "scheme_type": "rental_housing",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HS009",
+          "question": "Single women-க்கு housing scheme உண்டா?",
+          "answer": "PMAY-ல் women ownership/co-ownership-க்கு preference உண்டு. Single women, widow-க்கு extra priority. State-level-லும் women-specific housing schemes இருக்கின்றன.",
+          "scheme_type": "women_housing",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HS010",
+          "question": "SC/ST-க்கு special housing scheme உள்ளதா?",
+          "answer": "ஆம், SC/ST housing scheme-ல் 100% grant கிடைக்கும், loan இல்லை. Adi Dravidar Welfare department மூலம் apply செய்யலாம். District office-ல் விண்ணப்பிக்கவும்.",
+          "scheme_type": "sc_st_housing",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "category": "agriculture_schemes",
+      "category_tamil": "விவசாய திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "AG001",
+          "question": "PM-KISAN scheme-ல் எப்படி register செய்வது?",
+          "answer": "pmkisan.gov.in-ல் online register செய்யலாம் அல்லது CSC centre-ல் செய்யலாம். Land records, Aadhaar, bank account தேவை. ஆண்டுக்கு Rs.6,000 (3 installments) கிடைக்கும்.",
+          "scheme_type": "pm_kisan",
+          "difficulty": "easy"
+        },
+        {
+          "id": "AG002",
+          "question": "Crop insurance எப்படி எடுப்பது?",
+          "answer": "PM Fasal Bima Yojana (PMFBY) கீழ் crop insurance எடுக்கலாம். Kharif-க்கு 2%, Rabi-க்கு 1.5% premium மட்டுமே farmer கட்ட வேண்டும். Bank அல்லது CSC centre மூலம் enroll செய்யலாம்.",
+          "scheme_type": "crop_insurance",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AG003",
+          "question": "விவசாய loan-க்கு interest subvention உண்டா?",
+          "answer": "Rs.3 lakh வரை crop loan-க்கு 7% interest, timely repayment செய்தால் 3% effective interest (4% subsidy). KCC (Kisan Credit Card) மூலம் loan எடுக்கலாம்.",
+          "scheme_type": "agri_loan",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AG004",
+          "question": "Free borewell scheme எப்படி apply செய்வது?",
+          "answer": "SC/ST, small/marginal farmers-க்கு free borewell scheme உண்டு. Agriculture department-ல் apply செய்யவும். Land document, caste certificate தேவை. Waiting list இருக்கும்.",
+          "scheme_type": "free_borewell",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AG005",
+          "question": "Subsidy-யில் tractor வாங்க முடியுமா?",
+          "answer": "ஆம், tractor மற்றும் farm equipment-க்கு 25-50% subsidy உண்டு. Agriculture Engineering department-ல் apply செய்யவும். Bank loan எடுத்து subsidy நேரடியாக credit ஆகும்.",
+          "scheme_type": "tractor_subsidy",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AG006",
+          "question": "Solar pump scheme யாருக்கு கிடைக்கும்?",
+          "answer": "PM-KUSUM scheme கீழ் solar pump subsidy உண்டு. 60% government subsidy, 30% loan, 10% farmer share. Agriculture department-ல் online apply செய்யலாம். 3HP-10HP pumps available.",
+          "scheme_type": "solar_pump",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AG007",
+          "question": "Organic farming-க்கு support உண்டா?",
+          "answer": "Paramparagat Krishi Vikas Yojana (PKVY) கீழ் organic farming support உண்டு. Rs.50,000/hectare 3 years-க்கு கிடைக்கும். Cluster formation, certification support உண்டு.",
+          "scheme_type": "organic_farming",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AG008",
+          "question": "Drip irrigation subsidy எவ்வளவு?",
+          "answer": "Micro irrigation-க்கு (drip/sprinkler) 55-100% subsidy உண்டு. Small/marginal farmers-க்கு அதிக subsidy. Horticulture department மூலம் apply செய்யலாம். pmksy.gov.in-ல் details பாருங்கள்.",
+          "scheme_type": "drip_irrigation",
+          "difficulty": "medium"
+        },
+        {
+          "id": "AG009",
+          "question": "விதை வாங்க subsidy கிடைக்குமா?",
+          "answer": "Certified seeds-க்கு 50% subsidy உண்டு. Agriculture department depot-ல் subsidized rate-ல் விதை வாங்கலாம். Paddy, millets, pulses-க்கு subsidy available.",
+          "scheme_type": "seed_subsidy",
+          "difficulty": "easy"
+        },
+        {
+          "id": "AG010",
+          "question": "Farmer Producer Organization (FPO) எப்படி தொடங்குவது?",
+          "answer": "குறைந்தது 300 farmers சேர்ந்து FPO form செய்யலாம். NABARD, state agriculture department support கிடைக்கும். Rs.15 lakh grant, Rs.2 crore credit guarantee உண்டு.",
+          "scheme_type": "fpo",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "category": "health_schemes",
+      "category_tamil": "சுகாதார திட்டங்கள்",
+      "pairs": [
+        {
+          "id": "HE001",
+          "question": "CM Health Insurance (CMCHIS) card எப்படி வாங்குவது?",
+          "answer": "ரேஷன் கார்டு வைத்திருந்தால் automatically eligible. Card இல்லை என்றால் district hospital-ல் CMCHIS counter-ல் apply செய்யலாம். Aadhaar, ration card copy தேவை.",
+          "scheme_type": "cmchis",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HE002",
+          "question": "Ayushman Bharat card எப்படி வாங்குவது?",
+          "answer": "SECC (Socio-Economic Caste Census) list-ல் இருந்தால் eligible. mera.pmjay.gov.in-ல் eligibility check செய்யுங்கள். CSC centre அல்லது empaneled hospital-ல் card வாங்கலாம்.",
+          "scheme_type": "ayushman_bharat",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HE003",
+          "question": "CMCHIS-ல் எவ்வளவு coverage கிடைக்கும்?",
+          "answer": "ஒரு குடும்பத்திற்கு ஆண்டுக்கு Rs.5 lakh வரை coverage. 1,027 procedures covered. Empaneled hospitals-ல் cashless treatment கிடைக்கும். Critical illness-க்கு Rs.7.5 lakh வரை.",
+          "scheme_type": "cmchis_coverage",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HE004",
+          "question": "Government hospital-ல் free dialysis கிடைக்குமா?",
+          "answer": "ஆம், PM National Dialysis Programme கீழ் government hospitals-ல் free dialysis உண்டு. CMCHIS card-ல் private hospitals-லும் claim செய்யலாம். District hospital-ல் register செய்யுங்கள்.",
+          "scheme_type": "free_dialysis",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HE005",
+          "question": "Cancer treatment-க்கு government help உண்டா?",
+          "answer": "CMCHIS-ல் cancer treatment covered. Chief Minister's Public Relief Fund-லும் apply செய்யலாம். Tata Memorial போன்ற hospitals-ல் subsidized treatment உண்டு. Social worker-ஐ contact செய்யுங்கள்.",
+          "scheme_type": "cancer_treatment",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HE006",
+          "question": "Pregnant women-க்கு என்ன benefits உண்டு?",
+          "answer": "Pradhan Mantri Matru Vandana Yojana: Rs.5,000 cash benefit. Dr. Muthulakshmi Maternity Benefit: Rs.18,000. Free delivery in government hospitals. Anganwadi-ல் nutrition support உண்டு.",
+          "scheme_type": "maternity_benefit",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HE007",
+          "question": "Free medicines எங்கு கிடைக்கும்?",
+          "answer": "Government hospitals-ல் essential medicines free. Jan Aushadhi stores-ல் 90% வரை discount-ல் medicines கிடைக்கும். Doctor prescription தேவை. janaushadhi.gov.in-ல் store locations பாருங்கள்.",
+          "scheme_type": "free_medicines",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HE008",
+          "question": "Mental health treatment free-யா?",
+          "answer": "Government mental health hospitals-ல் treatment free. NIMHANS, Institute of Mental Health (Chennai) போன்ற institutes உண்டு. District Mental Health Programme கீழ் PHC-லும் counseling available.",
+          "scheme_type": "mental_health",
+          "difficulty": "easy"
+        },
+        {
+          "id": "HE009",
+          "question": "Heart surgery-க்கு CMCHIS use செய்யலாமா?",
+          "answer": "ஆம், cardiac surgeries CMCHIS-ல் covered. Bypass, valve replacement, angioplasty எல்லாம் cashless. Empaneled cardiac hospitals-ல் treatment பெறலாம். Pre-authorization தேவை.",
+          "scheme_type": "heart_surgery",
+          "difficulty": "medium"
+        },
+        {
+          "id": "HE010",
+          "question": "Disability certificate எப்படி வாங்குவது?",
+          "answer": "District hospital-ல் medical board மூலம் disability certificate issue ஆகும். Concerned specialist doctors examine செய்வார்கள். 40% மேல் disability இருந்தால் certificate கிடைக்கும். UDID card-க்கும் apply செய்யலாம்.",
+          "scheme_type": "disability_certificate",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "category": "certificates_documents",
+      "category_tamil": "சான்றிதழ்கள்",
+      "pairs": [
+        {
+          "id": "CD001",
+          "question": "Income certificate எப்படி வாங்குவது?",
+          "answer": "tnedistrict.tn.gov.in-ல் online apply செய்யலாம். Village Administrative Officer (VAO) அல்லது Tahsildar office-லும் apply செய்யலாம். Salary slip அல்லது self-declaration form தேவை. 7-15 நாட்களில் கிடைக்கும்.",
+          "document_type": "income_certificate",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD002",
+          "question": "Community certificate எப்படி பெறுவது?",
+          "answer": "Tahsildar office-ல் apply செய்யலாம். பெற்றோர் community certificate, school TC, family card copy தேவை. Field verification நடக்கும். Online-லும் tnedistrict.tn.gov.in-ல் apply செய்யலாம்.",
+          "document_type": "community_certificate",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD003",
+          "question": "Nativity certificate என்ன? எப்படி வாங்குவது?",
+          "answer": "தமிழ்நாட்டில் பிறந்தவர் என்று நிரூபிக்கும் certificate. SSLC certificate, birth certificate proof-ஆக கொடுக்கலாம். Tahsildar office-ல் apply செய்யுங்கள். Government jobs-க்கு தேவை.",
+          "document_type": "nativity_certificate",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD004",
+          "question": "Birth certificate online-ல் download செய்யலாமா?",
+          "answer": "crsorgi.gov.in-ல் registered births-க்கு download செய்யலாம். Corporation/Municipality area என்றால் respective website-ல் பாருங்கள். Recent births online-ல் available, பழைய records-க்கு office போக வேண்டும்.",
+          "document_type": "birth_certificate",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD005",
+          "question": "Death certificate எப்படி வாங்குவது?",
+          "answer": "இறப்பு நடந்த 21 நாட்களுக்குள் register செய்ய வேண்டும். Hospital death-க்கு hospital certificate, வீட்டில் என்றால் declaration form தேவை. Corporation/Panchayat office-ல் register செய்யுங்கள்.",
+          "document_type": "death_certificate",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD006",
+          "question": "Marriage certificate எப்படி பெறுவது?",
+          "answer": "Special Marriage Act அல்லது Hindu Marriage Act கீழ் register செய்யலாம். Sub-Registrar office-ல் இருவரும் நேரில் போக வேண்டும். 2 witnesses தேவை. Age proof, address proof, photos கொண்டு செல்லுங்கள்.",
+          "document_type": "marriage_certificate",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CD007",
+          "question": "OBC certificate-க்கு creamy layer என்றால் என்ன?",
+          "answer": "குடும்ப வருமானம் ஆண்டுக்கு Rs.8 lakh-க்கு மேல் இருந்தால் creamy layer. Creamy layer-ல் இருந்தால் OBC reservation கிடைக்காது. Non-creamy layer certificate scholarship, jobs-க்கு தேவை.",
+          "document_type": "obc_ncl",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CD008",
+          "question": "Legal heir certificate எப்போது தேவை?",
+          "answer": "இறந்த நபரின் property, bank balance, insurance claim செய்ய legal heir certificate தேவை. Tahsildar office-ல் apply செய்யலாம். Death certificate, family members details, ID proof தேவை.",
+          "document_type": "legal_heir",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CD009",
+          "question": "Encumbrance Certificate (EC) என்றால் என்ன?",
+          "answer": "Property-க்கு loan அல்லது legal dispute இல்லை என்று காட்டும் certificate. Sub-Registrar office-ல் apply செய்யலாம். Property sale, loan எடுக்க EC தேவை. tnreginet.gov.in-ல் online-லும் apply செய்யலாம்.",
+          "document_type": "encumbrance_certificate",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CD010",
+          "question": "Patta transfer எப்படி செய்வது?",
+          "answer": "Property வாங்கிய பின் 30 நாட்களுக்குள் patta transfer apply செய்ய வேண்டும். Sale deed registered copy, seller's patta, EC தேவை. Taluk office-ல் apply செய்யுங்கள். Online-லும் eservices.tn.gov.in-ல் apply செய்யலாம்.",
+          "document_type": "patta_transfer",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CD011",
+          "question": "Driving license renew எப்படி செய்வது?",
+          "answer": "parivahan.gov.in-ல் online apply செய்யலாம். Expiry-க்கு 1 வருடம் முன் அல்லது expiry-க்கு பின் 5 வருடம் வரை renew செய்யலாம். Form 9, medical certificate, old DL தேவை. RTO visit தேவைப்படலாம்.",
+          "document_type": "driving_license",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD012",
+          "question": "Passport apply செய்ய என்ன documents தேவை?",
+          "answer": "passportindia.gov.in-ல் online apply செய்யுங்கள். Aadhaar, PAN அல்லது voter ID, birth certificate தேவை. PSK appointment book செய்து நேரில் போக வேண்டும். Police verification நடக்கும்.",
+          "document_type": "passport",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CD013",
+          "question": "PAN card எப்படி apply செய்வது?",
+          "answer": "tin-nsdl.com அல்லது utiitsl.com-ல் online apply செய்யலாம். Aadhaar based e-KYC-யில் instant e-PAN கிடைக்கும். Physical card-க்கு Rs.107 fee. 15-20 நாட்களில் வரும்.",
+          "document_type": "pan_card",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD014",
+          "question": "Voter ID card-ல் address மாற்ற என்ன செய்வது?",
+          "answer": "voters.eci.gov.in-ல் Form 8A நிரப்பி online submit செய்யலாம். புதிய address proof upload செய்யுங்கள். BLO verification நடக்கும். 15-30 நாட்களில் updated card வரும்.",
+          "document_type": "voter_id_update",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CD015",
+          "question": "Police verification certificate எங்கு வாங்குவது?",
+          "answer": "Passport, visa, employment-க்கு police verification certificate தேவைப்படலாம். Local police station-ல் apply செய்யலாம். Character certificate/Police clearance certificate என்றும் சொல்வார்கள். 7-15 நாட்கள் ஆகும்.",
+          "document_type": "police_verification",
+          "difficulty": "easy"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "created_date": "2024-01-15",
+    "language": "Tamil",
+    "target_audience": "Tamil Nadu citizens",
+    "use_case": "Government services navigation",
+    "license": "CC-BY-SA-4.0"
+  }
+}

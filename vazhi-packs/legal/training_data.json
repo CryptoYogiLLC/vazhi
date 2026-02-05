@@ -1,0 +1,642 @@
+{
+  "pack_name": "vazhi_neethi",
+  "pack_name_tamil": "வழி நீதி",
+  "description": "Legal pack for understanding basic legal rights, tenant laws, contracts, RTI, and consumer protection in Tamil Nadu",
+  "version": "0.1.0",
+  "total_pairs": 100,
+  "categories": [
+    {
+      "category": "tenant_rights",
+      "category_tamil": "குத்தகைதாரர் உரிமைகள்",
+      "pairs": [
+        {
+          "id": "TR001",
+          "question": "வீட்டு உரிமையாளர் திடீரென வெளியேறச் சொல்கிறார். உடனே போக வேண்டுமா?",
+          "answer": "இல்லை. Tamil Nadu Buildings (Lease and Rent Control) Act-ன் படி, written notice கொடுக்க வேண்டும். 15 நாள் முதல் 1 மாத notice தேவை. Court order இல்லாமல் உங்களை force-ஆக வெளியேற்ற முடியாது.",
+          "legal_topic": "eviction_notice",
+          "difficulty": "easy"
+        },
+        {
+          "id": "TR002",
+          "question": "வீட்டு உரிமையாளர் current, water bill பணத்தை rent-உடன் சேர்த்து அதிகமாக கேட்கிறார். Legal-ஆ?",
+          "answer": "Actual meter reading-க்கு மட்டுமே pay செய்ய வேண்டும். Owner excess வசூலித்தால் Consumer Forum-ல் complaint கொடுக்கலாம். Bill copy கேட்டு verify செய்யுங்கள்.",
+          "legal_topic": "utility_charges",
+          "difficulty": "easy"
+        },
+        {
+          "id": "TR003",
+          "question": "Advance deposit கொடுத்தேன், ஆனால் agreement இல்லை. வீட்டை காலி செய்யும்போது advance திரும்ப கிடைக்குமா?",
+          "answer": "Agreement இல்லாமல் கஷ்டம். எழுத்துப்பூர்வ ஒப்பந்தம் இருந்தால் ஆதாரமாக பயன்படும். Payment receipt, bank transfer proof வைத்துக்கொள்ளுங்கள். Small Causes Court-ல் case போடலாம்.",
+          "legal_topic": "security_deposit",
+          "difficulty": "medium"
+        },
+        {
+          "id": "TR004",
+          "question": "Owner permission இல்லாமல் வீட்டை sub-let செய்யலாமா?",
+          "answer": "பொதுவாக முடியாது. Rent agreement-ல் sub-letting clause இருந்தால் மட்டுமே அனுமதி. Permission இல்லாமல் sub-let செய்தால் eviction grounds ஆகும்.",
+          "legal_topic": "subletting",
+          "difficulty": "medium"
+        },
+        {
+          "id": "TR005",
+          "question": "வீட்டில் repairs தேவை - roof leak ஆகிறது. யார் செலவில் repair செய்ய வேண்டும்?",
+          "answer": "Major repairs (structural, roof, plumbing) owner responsibility. Minor repairs (bulb, tap washer) tenant responsibility. Rent Act-ன் படி owner மறுத்தால், நீங்கள் செய்து rent-ல் கழிக்கலாம் (written notice-க்கு பிறகு).",
+          "legal_topic": "repairs_maintenance",
+          "difficulty": "easy"
+        },
+        {
+          "id": "TR006",
+          "question": "Owner ஒரே நேரத்தில் rent 50% increase செய்கிறார். Accept செய்ய வேண்டுமா?",
+          "answer": "Rent Control Act area-ல் இருந்தால், arbitrary increase செய்ய முடியாது. Standard rent நிர்ணயம் உண்டு. Agreement-ல் increment clause இருந்தால் அதன்படி மட்டுமே. Excess increase-க்கு Rent Control Court-ல் appeal செய்யலாம்.",
+          "legal_topic": "rent_increase",
+          "difficulty": "medium"
+        },
+        {
+          "id": "TR007",
+          "question": "Owner என் அனுமதி இல்லாமல் வீட்டுக்குள் வருகிறார். நான் என்ன செய்யலாம்?",
+          "answer": "Tenant-க்கு peaceful enjoyment right உண்டு. Owner notice இல்லாமல் வர முடியாது. Privacy violation-க்கு police complaint போடலாம். Reasonable notice (24-48 hours) கொடுக்க வேண்டும்.",
+          "legal_topic": "privacy_rights",
+          "difficulty": "easy"
+        },
+        {
+          "id": "TR008",
+          "question": "Lock-out செய்து உள்ளே விடாமல் owner தடுக்கிறார். என்ன செய்வது?",
+          "answer": "இது illegal eviction. உடனே police station-ல் complaint கொடுங்கள். IPC Section 441 (Criminal Trespass) under case ஆகும். Court order இல்லாமல் lock-out செய்ய முடியாது.",
+          "legal_topic": "illegal_lockout",
+          "difficulty": "medium"
+        },
+        {
+          "id": "TR009",
+          "question": "Commercial property rent-க்கு இருக்கிறேன். Residential-க்கு apply ஆகும் laws commercial-க்கும் apply ஆகுமா?",
+          "answer": "Tamil Nadu Rent Control Act commercial properties-க்கும் apply ஆகும், ஆனால் சில differences உண்டு. Rent increase, eviction grounds வேறுபடலாம். Commercial lease agreement terms முக்கியம்.",
+          "legal_topic": "commercial_tenancy",
+          "difficulty": "hard"
+        },
+        {
+          "id": "TR010",
+          "question": "Owner 11 month agreement sign பண்ணச் சொல்கிறார். ஏன்?",
+          "answer": "12 months மேல் lease registration கட்டாயம் (Registration Act). 11-month agreement registration தவிர்க்க. இது common practice. ஆனால் renewal-க்கு fresh agreement போடுங்கள், oral renewal நம்ப வேண்டாம்.",
+          "legal_topic": "lease_registration",
+          "difficulty": "medium"
+        },
+        {
+          "id": "TR011",
+          "question": "Owner என் belongings வெளியே போட்டுவிட்டார். Police help கிடைக்குமா?",
+          "answer": "ஆம். இது IPC 425 (Mischief) and 441 (Trespass) கீழ் offence. FIR போடுங்கள். Civil suit போட்டு damages கேட்கலாம். Belongings-ன் list, photos வைத்துக்கொள்ளுங்கள் evidence-ஆக.",
+          "legal_topic": "wrongful_eviction",
+          "difficulty": "medium"
+        },
+        {
+          "id": "TR012",
+          "question": "Rent agreement-ல் pet வளர்க்க கூடாது என்று clause இருக்கிறது. இது valid-ஆ?",
+          "answer": "ஆம், இது valid clause. Agreement-ல் sign செய்துவிட்டால் follow செய்ய வேண்டும். Pet வேண்டும் என்றால் புதிய வீடு தேடுவது better. Some owners additional deposit கேட்கலாம்.",
+          "legal_topic": "pet_clause",
+          "difficulty": "easy"
+        },
+        {
+          "id": "TR013",
+          "question": "Owner என் Aadhaar, PAN copy வைத்துக்கொள்ள கேட்கிறார். கொடுக்க வேண்டுமா?",
+          "answer": "Police verification-க்கு address proof தேவை. Aadhaar/ID copy கொடுக்கலாம், ஆனால் original கொடுக்க வேண்டாம். Copy-யில் 'Only for rental verification purpose' என்று எழுதி sign போடுங்கள்.",
+          "legal_topic": "identity_documents",
+          "difficulty": "easy"
+        },
+        {
+          "id": "TR014",
+          "question": "Owner மாதம் தள்ளி rent கேட்டாலும் late fee charge பண்றேன் என்கிறார். Legal-ஆ?",
+          "answer": "Agreement-ல் late fee clause இருந்தால் valid. இல்லை என்றால் arbitrary-ஆ charge செய்ய முடியாது. Reasonable late fee (1-2% per month) acceptable. Excessive penalty unenforceable.",
+          "legal_topic": "late_fees",
+          "difficulty": "medium"
+        },
+        {
+          "id": "TR015",
+          "question": "வீட்டை விட்டு போகிறேன். Paint, cleaning charges கழிக்கிறேன் என்று owner சொல்கிறார். சரியா?",
+          "answer": "Normal wear and tear-க்கு tenant responsible இல்லை. Agreement-ல் painting clause இருந்தால் மட்டுமே. Excessive deduction-க்கு object செய்யலாம். Before-after photos எடுத்து வைக்கவும்.",
+          "legal_topic": "deposit_deductions",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "category": "contract_basics",
+      "category_tamil": "ஒப்பந்த அடிப்படைகள்",
+      "pairs": [
+        {
+          "id": "CB001",
+          "question": "WhatsApp-ல் okay சொன்னது agreement ஆகுமா?",
+          "answer": "ஆம். Indian Contract Act-ன் படி, offer + acceptance + consideration = valid contract. WhatsApp message written evidence ஆகும். IT Act 2000 electronic records-ஐ recognize செய்கிறது. Important deals-க்கு written agreement better.",
+          "legal_topic": "electronic_contracts",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB002",
+          "question": "Stamp paper இல்லாமல் agreement valid-ஆ?",
+          "answer": "Agreement valid, ஆனால் court-ல் stamp paper இல்லாத document ஐ evidence ஆக accept செய்யாது (Indian Stamp Act). Stamp duty pay செய்து notarize செய்தால் safe.",
+          "legal_topic": "stamp_duty",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB003",
+          "question": "Minor (18 வயதுக்கு கீழ்) sign செய்த agreement valid-ஆ?",
+          "answer": "இல்லை. Indian Contract Act Section 11 - minor cannot enter into contract. Agreement void ab initio. Guardian sign செய்ய வேண்டும். Exception: Necessaries (food, education) க்கு minor liable.",
+          "legal_topic": "minor_contracts",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB004",
+          "question": "Agreement-ல் fine print படிக்காமல் sign போட்டேன். Cancel செய்ய முடியுமா?",
+          "answer": "கஷ்டம். Signature போட்டால் entire document படித்ததாக assume. ஆனால் fraud, misrepresentation இருந்தால் cancel செய்யலாம். Unfair contract terms Consumer Protection Act-ல் challenge செய்யலாம்.",
+          "legal_topic": "fine_print",
+          "difficulty": "hard"
+        },
+        {
+          "id": "CB005",
+          "question": "Oral agreement (வாய்மொழி ஒப்பந்தம்) court-ல் நிற்குமா?",
+          "answer": "ஆம், oral agreements valid (exceptions: property sale, 1 year+ lease). ஆனால் prove செய்வது கஷ்டம். Witnesses, SMS, call recordings evidence ஆகலாம். Important matters-க்கு written agreement போடுங்கள்.",
+          "legal_topic": "oral_contracts",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB006",
+          "question": "Agreement-ல் ஒரு clause unfair-ஆக இருக்கிறது. நான் refuse செய்யலாமா?",
+          "answer": "Sign செய்வதற்கு முன் negotiate செய்யலாம். Sign செய்த பிறகு bound ஆகிவிடுவீர்கள். Consumer contracts-ல் unfair terms Consumer Protection Act-ல் void ஆகலாம். Legal advice வாங்குங்கள்.",
+          "legal_topic": "unfair_clauses",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB007",
+          "question": "Force majeure clause என்றால் என்ன? COVID போன்ற situation-ல் contract cancel ஆகுமா?",
+          "answer": "Force majeure = act of God, unexpected events. Contract-ல் clause இருந்தால், such events-ல் obligations suspend/cancel ஆகலாம். COVID-19 some courts-ல் force majeure ஆக accept ஆனது.",
+          "legal_topic": "force_majeure",
+          "difficulty": "hard"
+        },
+        {
+          "id": "CB008",
+          "question": "Agreement breach ஆனால் என்ன compensation கிடைக்கும்?",
+          "answer": "Actual loss + reasonably foreseeable damages. Specific performance (agreement-ன் படி செய்ய order) கேட்கலாம். Penalty clause இருந்தால் அது liquidated damages-ஆக consider ஆகும்.",
+          "legal_topic": "breach_damages",
+          "difficulty": "hard"
+        },
+        {
+          "id": "CB009",
+          "question": "Notary, Registration, Attestation - difference என்ன?",
+          "answer": "Notary: Notary public முன் sign, identity verify. Registration: Sub-registrar office-ல் record (property mandatory). Attestation: Witnesses sign. Property sale-க்கு registration கட்டாயம்.",
+          "legal_topic": "document_types",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB010",
+          "question": "NDA (Non-Disclosure Agreement) break பண்ணினால் என்ன ஆகும்?",
+          "answer": "Civil damages pay செய்ய வேண்டி வரும். NDA-ல் mentioned penalty applicable. Injunction order வரலாம் (further disclosure தடுக்க). Serious cases-ல் criminal breach of trust (IPC 405) apply ஆகலாம்.",
+          "legal_topic": "nda_breach",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB011",
+          "question": "EMI தவறினால் loan agreement-ன் படி என்ன நடக்கும்?",
+          "answer": "Late payment charges apply. CIBIL score பாதிக்கும். 90 days default = NPA. Bank/NBFC recovery process start செய்யும். SARFAESI Act-ன் கீழ் secured asset seize செய்யலாம்.",
+          "legal_topic": "loan_default",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CB012",
+          "question": "சாட்சி இல்லாமல் agreement valid-ஆ?",
+          "answer": "ஆம், witness mandatory இல்லை (exception: will). ஆனால் dispute வந்தால் witnesses helpful. Important agreements-க்கு 2 witnesses வைத்துக்கொள்வது safe. அவர்கள் content பற்றி testify செய்ய கூடாது, signature மட்டும்.",
+          "legal_topic": "witnesses",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CB013",
+          "question": "E-signature valid-ஆ India-ல்?",
+          "answer": "ஆம். IT Act 2000, Section 5 - electronic signature valid. Aadhaar eSign, DSC (Digital Signature Certificate) legally recognized. Online agreements, e-contracts enforceable.",
+          "legal_topic": "e_signature",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CB014",
+          "question": "Agreement-ல் arbitration clause இருக்கிறது. Court-க்கு போக முடியாதா?",
+          "answer": "Arbitration clause இருந்தால், முதலில் arbitration போக வேண்டும். Court arbitration-க்கு refer செய்யும். Arbitration award-க்கு against appeal limited grounds-ல் மட்டுமே.",
+          "legal_topic": "arbitration",
+          "difficulty": "hard"
+        },
+        {
+          "id": "CB015",
+          "question": "Power of Attorney கொடுத்தால் revoke செய்ய முடியுமா?",
+          "answer": "ஆம், general POA எப்போது வேண்டுமானாலும் revoke செய்யலாம். Irrevocable POA (coupled with interest) revoke செய்ய முடியாது. Revocation written-ஆக, registered-ஆக இருக்க வேண்டும்.",
+          "legal_topic": "power_of_attorney",
+          "difficulty": "medium"
+        }
+      ]
+    },
+    {
+      "category": "rti_process",
+      "category_tamil": "தகவல் அறியும் உரிமை",
+      "pairs": [
+        {
+          "id": "RTI001",
+          "question": "RTI application எப்படி போடுவது?",
+          "answer": "Plain paper-ல் அல்லது prescribed form-ல். Rs.10 application fee (postal order/DD/cash). PIO (Public Information Officer) க்கு submit. Online-ல் rtionline.gov.in (central) அல்லது respective state portal-ல் போடலாம்.",
+          "legal_topic": "rti_filing",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RTI002",
+          "question": "RTI போட்டால் எத்தனை நாளில் reply வரும்?",
+          "answer": "30 days within reply வர வேண்டும். Life/liberty பற்றிய matter-க்கு 48 hours. Third party involved என்றால் 40 days. Reply வரவில்லை என்றால் first appeal போடலாம்.",
+          "legal_topic": "rti_timeline",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RTI003",
+          "question": "RTI reply திருப்தியாக இல்லை. Appeal எப்படி போடுவது?",
+          "answer": "First Appeal: 30 days within, First Appellate Authority-க்கு. Second Appeal: 90 days within, Information Commission-க்கு. Fee இல்லை appeals-க்கு. Written grounds mention செய்ய வேண்டும்.",
+          "legal_topic": "rti_appeal",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RTI004",
+          "question": "Private companies-கிட்டு RTI போடலாமா?",
+          "answer": "நேரடியாக முடியாது. ஆனால் government-controlled companies, government funding பெறும் NGOs-க்கு RTI apply ஆகும். Private company info government department வழியாக (regulatory body) கேட்கலாம்.",
+          "legal_topic": "rti_scope",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RTI005",
+          "question": "RTI-ல் என்னென்ன கேட்கக்கூடாது?",
+          "answer": "Section 8 exemptions: National security, foreign relations, trade secrets, cabinet papers, privacy of third party, investigation details, fiduciary relationship. ஆனால் public interest overrides most exemptions.",
+          "legal_topic": "rti_exemptions",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RTI006",
+          "question": "என் RTI application reject ஆனது. என்ன செய்யலாம்?",
+          "answer": "Rejection order copy கேளுங்கள். Reason valid இல்லை என்றால் First Appeal போடுங்கள். Section 8 cite பண்ணினால், public interest argument use செய்யுங்கள். Commission till போகலாம்.",
+          "legal_topic": "rti_rejection",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RTI007",
+          "question": "RTI-ல் documents copy வேண்டும். Charges என்ன?",
+          "answer": "Rs.2 per page (A4). Larger size pages Rs.actual cost. Inspection first hour free, then Rs.5/hour. CD/floppy Rs.50 per piece. BPL card holders free. States may have different rates.",
+          "legal_topic": "rti_fees",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RTI008",
+          "question": "Government officer RTI reply தரவில்லை. Penalty உண்டா?",
+          "answer": "ஆம். PIO-க்கு Rs.250 per day penalty, maximum Rs.25,000. Disciplinary action recommend செய்யலாம். Complaint to Information Commission போடுங்கள். Malafide refusal-க்கு department action.",
+          "legal_topic": "rti_penalty",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RTI009",
+          "question": "Tamil-ல் RTI போடலாமா?",
+          "answer": "ஆம். RTI Act Section 6(1) - Hindi, English அல்லது regional language-ல் போடலாம். Tamil Nadu-ல் Tamil-ல் application போடலாம். Reply அந்த language-லேயே வர வேண்டும்.",
+          "legal_topic": "rti_language",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RTI010",
+          "question": "Online RTI எப்படி போடுவது?",
+          "answer": "Central government: rtionline.gov.in. Tamil Nadu: rtionline.tn.gov.in. Register, login, select department, fill form, pay online (Rs.10). Track status with registration number. Receipt download செய்யுங்கள்.",
+          "legal_topic": "online_rti",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RTI011",
+          "question": "Municipality-க்கு RTI போடலாமா?",
+          "answer": "ஆம். Local bodies - Municipality, Panchayat, Corporation எல்லாம் RTI-க்கு உட்பட்டவை. Ward-wise PIO இருப்பார். Budget, contracts, licenses பற்றி info கேட்கலாம்.",
+          "legal_topic": "local_body_rti",
+          "difficulty": "easy"
+        },
+        {
+          "id": "RTI012",
+          "question": "File notings கேட்கலாமா RTI-ல்?",
+          "answer": "ஆம். Section 2(j) - 'information' includes file notings. Government Manmohan Singh circular (2009) confirm செய்தது. Some exemptions apply (Section 8), ஆனால் generally file notings accessible.",
+          "legal_topic": "file_notings",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RTI013",
+          "question": "RTI போட்டதால் department என்னை harass செய்கிறது. என்ன செய்வது?",
+          "answer": "Whistle Blowers Protection Act protection உண்டு. Harassment proof collect செய்யுங்கள். Information Commission-க்கு complaint போடுங்கள். Media/NGO support வாங்கலாம். Legal aid available.",
+          "legal_topic": "rti_harassment",
+          "difficulty": "hard"
+        },
+        {
+          "id": "RTI014",
+          "question": "என் சொந்த file RTI-ல் கேட்கலாமா?",
+          "answer": "ஆம். Personal information Right to Privacy கீழ் exempt (Section 8(1)(j)), ஆனால் உங்கள் சொந்த information உங்களுக்கு கொடுக்க வேண்டும். Service records, examination marks கேட்கலாம்.",
+          "legal_topic": "personal_info_rti",
+          "difficulty": "medium"
+        },
+        {
+          "id": "RTI015",
+          "question": "RTI application-க்கு reason கொடுக்க வேண்டுமா?",
+          "answer": "இல்லை. Section 6(2) - reason கேட்கக்கூடாது. 'Why do you need this information?' என்று PIO கேட்க கூடாது. Reason கொடுக்க refuse செய்யலாம். Information seek செய்வது fundamental right.",
+          "legal_topic": "rti_no_reason",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "category": "consumer_protection",
+      "category_tamil": "நுகர்வோர் பாதுகாப்பு",
+      "pairs": [
+        {
+          "id": "CP001",
+          "question": "Online வாங்கிய product defective. Return refuse செய்கிறார்கள். என்ன செய்வது?",
+          "answer": "Consumer Protection Act 2019 apply ஆகும். E-commerce rules-ன் படி return/refund policy mandatory. Consumer Forum complaint போடலாம். National Consumer Helpline 1800-11-4000 அழைக்கவும்.",
+          "legal_topic": "ecommerce_return",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CP002",
+          "question": "Consumer Court-ல் case போட fees என்ன?",
+          "answer": "Rs.5 lakh வரை claim: District Forum, fee Rs.200. Rs.5 lakh-2 crore: State Commission, fee Rs.2000-4000. Rs.2 crore+: National Commission, fee Rs.5000-10000. Lawyer இல்லாமலும் போகலாம்.",
+          "legal_topic": "consumer_court_fees",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP003",
+          "question": "MRP-ஐ விட அதிகமாக charge செய்கிறார்கள். Illegal-ஆ?",
+          "answer": "ஆம். Legal Metrology Act-ன் படி MRP-ஐ விட அதிகம் வாங்குவது offense. Shopkeeper-க்கு Rs.25,000 fine, 1 year jail வரை. Weights and Measures Department-ல் complaint போடுங்கள்.",
+          "legal_topic": "mrp_violation",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CP004",
+          "question": "Hospital bill exorbitant-ஆ இருக்கிறது. Challenge செய்யலாமா?",
+          "answer": "ஆம். Medical services Consumer Protection Act கீழ் வரும். Clinical Establishment Act rates apply. Itemized bill கேளுங்கள். Consumer Forum-ல் complaint போடலாம். State Medical Council-லும் complain செய்யலாம்.",
+          "legal_topic": "medical_bills",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP005",
+          "question": "Builder flat handover delay செய்கிறார். Compensation கிடைக்குமா?",
+          "answer": "ஆம். RERA (Real Estate Regulatory Authority) complaint போடுங்கள். Delay-க்கு interest compensation (SBI highest lending rate) கிடைக்கும். Agreement cancel பண்ணி full refund கேட்கலாம்.",
+          "legal_topic": "rera_delay",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP006",
+          "question": "Bank excess charges வசூலித்தது. Refund கிடைக்குமா?",
+          "answer": "RBI guidelines-க்கு மாறாக excess charges illegal. Bank ombudsman complaint போடுங்கள். Consumer Forum-ல் case போடலாம். Interest with refund கிடைக்கும். Statement-ல் charges verify செய்யுங்கள்.",
+          "legal_topic": "bank_charges",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP007",
+          "question": "Insurance claim reject ஆனது. Appeal எப்படி?",
+          "answer": "Insurance company grievance cell-க்கு first complaint. 15 days-ல் reply இல்லை என்றால் Insurance Ombudsman-க்கு. Rs.30 lakh வரை claim. Consumer Forum-லும் போகலாம். IRDAI-க்கும் complaint போடலாம்.",
+          "legal_topic": "insurance_claim",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP008",
+          "question": "Warranty period-ல் product repair செய்ய மறுக்கிறார்கள். Rights என்ன?",
+          "answer": "Warranty terms-ன் படி free repair/replacement கிடைக்க வேண்டும். 'Manufacturing defect' vs 'misuse' dispute-க்கு expert opinion. Consumer Forum-ல் case போடலாம். Warranty card, bill வைத்துக்கொள்ளுங்கள்.",
+          "legal_topic": "warranty_rights",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CP009",
+          "question": "Misleading advertisement-ஆல் ஏமாந்தேன். Action எடுக்கலாமா?",
+          "answer": "ஆம். Consumer Protection Act 2019 - misleading ads prohibited. CCPA (Central Consumer Protection Authority) complaint. Rs.10 lakh penalty for endorser, Rs.50 lakh for manufacturer. Consumer Forum-ல் damages கேட்கலாம்.",
+          "legal_topic": "misleading_ads",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP010",
+          "question": "Food-ல் foreign object கிடைத்தது. என்ன action எடுக்கலாம்?",
+          "answer": "Photo/video evidence எடுங்கள். Food Safety Officer-க்கு complaint. FSSAI helpline: 1800-112-100. Criminal case (Food Safety Act) + Consumer Forum case. Compensation + penalty கிடைக்கும்.",
+          "legal_topic": "food_safety",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP011",
+          "question": "Gym membership cancel செய்ய refuse செய்கிறார்கள். Legal-ஆ?",
+          "answer": "Unfair contract terms Consumer Protection Act-ல் void. Reasonable notice with cancellation allowed. Non-refundable clause challenged ஆகலாம். Consumer Forum-ல் case போடலாம். Terms படிக்காமல் sign போடாதீர்கள்.",
+          "legal_topic": "membership_cancellation",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP012",
+          "question": "Courier-ல் damaged product வந்தது. யார் responsible?",
+          "answer": "Seller + courier both liable. 'Delivery at doorstep' responsibility seller-க்கு. Unboxing video எடுங்கள். Seller-க்கு complaint, refuse செய்தால் Consumer Forum. Insurance claim courier company மேல்.",
+          "legal_topic": "courier_damage",
+          "difficulty": "easy"
+        },
+        {
+          "id": "CP013",
+          "question": "Credit card reward points expire ஆகிவிட்டது. Fair-ஆ?",
+          "answer": "RBI circular - unreasonable expiry unfair. 'Use it or lose it' challenged successfully. Expiry notice mandatory. Consumer Forum complaint போடலாம். Terms and Conditions read செய்யுங்கள்.",
+          "legal_topic": "reward_points",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP014",
+          "question": "Mobile repair shop original parts போடாமல் local parts போட்டார்கள். Recourse உண்டா?",
+          "answer": "Unfair trade practice. Written estimate கேட்டிருக்க வேண்டும். Original parts replacement demand செய்யுங்கள். Consumer Forum case. If branded service center, company customer care-க்கு escalate.",
+          "legal_topic": "repair_fraud",
+          "difficulty": "medium"
+        },
+        {
+          "id": "CP015",
+          "question": "Travel agency refund தரவில்லை. Consumer Forum போகலாமா?",
+          "answer": "ஆம். Travel services Consumer Protection Act கீழ் வரும். Flight/hotel cancellation refund rules apply. Ministry of Tourism complaint. Consumer Forum-ல் compensation + refund கேட்கலாம்.",
+          "legal_topic": "travel_refund",
+          "difficulty": "easy"
+        }
+      ]
+    },
+    {
+      "category": "general_legal",
+      "category_tamil": "பொது சட்ட விஷயங்கள்",
+      "pairs": [
+        {
+          "id": "GL001",
+          "question": "Police station-ல் FIR போட மறுக்கிறார்கள். என்ன செய்வது?",
+          "answer": "Written complaint கொடுங்கள், acknowledgement வாங்குங்கள். SP/DIG-க்கு complaint. Section 154(3) CrPC - Magistrate-க்கு direct complaint. Online FIR facility பயன்படுத்துங்கள். Zero FIR எங்கும் போடலாம்.",
+          "legal_topic": "fir_refusal",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL002",
+          "question": "Legal aid free-யா கிடைக்குமா?",
+          "answer": "ஆம். Legal Services Authority Act-ன் கீழ் eligible persons-க்கு free. Women, SC/ST, disabled, annual income Rs.3 lakh கீழ், custody-ல் உள்ளவர்கள் eligible. District Legal Services Authority-ல் apply.",
+          "legal_topic": "free_legal_aid",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL003",
+          "question": "Cheque bounce ஆனால் என்ன action எடுக்கலாம்?",
+          "answer": "NI Act Section 138 case. 30 days-க்குள் legal notice அனுப்புங்கள். 15 days wait. Reply இல்லை/payment இல்லை என்றால் Magistrate court-ல் complaint. 2 year jail + compensation. Civil recovery case also.",
+          "legal_topic": "cheque_bounce",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL004",
+          "question": "Property dispute-க்கு எந்த court போவது?",
+          "answer": "Value-ஐ பொறுத்து: Rs.3 lakh வரை - Junior Civil Judge. Rs.3-50 lakh - Senior Civil Judge. Rs.50 lakh+ - District Court. Location: property இருக்கும் jurisdiction-ல். Title suit, partition suit, injunction - different procedures.",
+          "legal_topic": "property_court",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL005",
+          "question": "Domestic violence-க்கு immediate help எப்படி பெறுவது?",
+          "answer": "Women Helpline: 181. Police: 100. Protection order under DV Act 2005. Magistrate court-ல் complaint. Residence right, maintenance, compensation கிடைக்கும். Protection Officer help கிடைக்கும்.",
+          "legal_topic": "domestic_violence",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL006",
+          "question": "Will எழுதாமல் இறந்துவிட்டால் சொத்து யாருக்கு போகும்?",
+          "answer": "Hindu Succession Act apply. Class I heirs: spouse, children, mother. Equal share. Wife + 2 children + mother = 1/4 each. Son's son, daughter's daughter Class II. Ancestral vs self-acquired property வேறுபாடு உண்டு.",
+          "legal_topic": "intestate_succession",
+          "difficulty": "hard"
+        },
+        {
+          "id": "GL007",
+          "question": "Accident-ல் injured ஆனேன். Compensation எப்படி கிடைக்கும்?",
+          "answer": "Motor Accident Claims Tribunal (MACT) claim. No-fault liability Rs.50,000 (death) / Rs.25,000 (injury) immediate. Full compensation: medical + loss of income + pain & suffering. Hit and run: Solatium Fund.",
+          "legal_topic": "accident_compensation",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL008",
+          "question": "Neighbor என் land-ல் encroach செய்கிறார். Legal action என்ன?",
+          "answer": "Written notice first. Negotiation fail என்றால் Civil suit for possession. Injunction பெறலாம். Panchayat/Tahsildar complaint. Revenue records verify செய்யுங்கள். Survey செய்து boundary fix.",
+          "legal_topic": "encroachment",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL009",
+          "question": "Defamation-க்கு case போடலாமா?",
+          "answer": "Civil + Criminal both possible. Civil: damages claim, District Court. Criminal: IPC 499, 500 - Magistrate Court. Truth is defense. Public interest, fair comment exceptions உண்டு. Written defamation = libel.",
+          "legal_topic": "defamation",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL010",
+          "question": "Bail எப்படி கிடைக்கும்?",
+          "answer": "Bailable offence: Station-லேயே bail. Non-bailable: Court bail. Regular bail, anticipatory bail, interim bail. Surety bond + personal bond. Lawyer மூலம் apply. Serious crimes-ல் difficult.",
+          "legal_topic": "bail",
+          "difficulty": "hard"
+        },
+        {
+          "id": "GL011",
+          "question": "Traffic challan online pay செய்யலாமா?",
+          "answer": "ஆம். echallan.parivahan.gov.in அல்லது state portal. Challan number with pay. Contest செய்ய வேண்டும் என்றால் traffic court appear. Spot challan, e-challan (camera) different. License suspension avoid panna pay.",
+          "legal_topic": "traffic_challan",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL012",
+          "question": "Cybercrime-க்கு complaint எங்கே போடுவது?",
+          "answer": "cybercrime.gov.in - National Cyber Crime Portal. Local cyber cell. IT Act 2000 provisions apply. Social media crimes, online fraud, hacking எல்லாம் file செய்யலாம். Evidence screenshots preserve செய்யுங்கள்.",
+          "legal_topic": "cybercrime_complaint",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL013",
+          "question": "Land documents எங்கே verify செய்வது?",
+          "answer": "Sub-registrar office - Encumbrance Certificate (EC). Taluk office - Patta, Chitta, A-Register. TNREGINET online (Tamil Nadu). 30 years EC check. Title search lawyer மூலம். Survey records verify.",
+          "legal_topic": "land_verification",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL014",
+          "question": "Marriage registration கட்டாயமா?",
+          "answer": "Hindu Marriage Act, Special Marriage Act-ன் படி optional ஆனால் strongly recommended. Proof of marriage-க்கு useful. Passport, visa, property matters-க்கு required. Sub-registrar office-ல் register.",
+          "legal_topic": "marriage_registration",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL015",
+          "question": "Court case எத்தனை வருடம் ஆகும்?",
+          "answer": "Case type பொறுத்து. Consumer Forum: 3-6 months ideal, 1-2 years reality. Civil suit: 3-10 years. Criminal: 2-5 years. Supreme Court: 5-10 years. Lok Adalat, mediation faster options.",
+          "legal_topic": "case_duration",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL016",
+          "question": "Harassment at workplace-க்கு complaint எப்படி?",
+          "answer": "Internal Complaints Committee (ICC) - every company mandatory. Written complaint within 3 months. Sexual Harassment of Women at Workplace Act 2013. Local Complaints Committee if no ICC. Confidentiality protected.",
+          "legal_topic": "workplace_harassment",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL017",
+          "question": "Passport impound ஆனால் travel செய்ய முடியுமா?",
+          "answer": "இல்லை. Impound/revoke ஆனால் travel prohibited. Look Out Circular (LOC) issued. Court permission பெற வேண்டும். Criminal case pending என்றால் impound possible. RPO appeal செய்யலாம்.",
+          "legal_topic": "passport_impound",
+          "difficulty": "hard"
+        },
+        {
+          "id": "GL018",
+          "question": "Noise pollution-க்கு complaint எப்படி?",
+          "answer": "Local police station. Pollution Control Board. Municipal Corporation. Noise Pollution Rules limit: residential 55 dB (day), 45 dB (night). Loudspeaker 10 PM - 6 AM banned. NGT complaint possible.",
+          "legal_topic": "noise_pollution",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL019",
+          "question": "Pension delay ஆகிறது. Legal remedy உண்டா?",
+          "answer": "Department grievance cell first. Administrative tribunal (CAT for central, SAT for state). Court writ petition. Delay-க்கு interest கேட்கலாம். Pension sanctioning authority-க்கு RTI போடுங்கள்.",
+          "legal_topic": "pension_delay",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL020",
+          "question": "Adoption procedure India-ல் எப்படி?",
+          "answer": "CARA (Central Adoption Resource Authority) through. caraindia.nic.in register. Hindu Adoption Act (Hindu), JJ Act (others). Home study, court order required. Single parents, NRI eligible with conditions.",
+          "legal_topic": "adoption",
+          "difficulty": "hard"
+        },
+        {
+          "id": "GL021",
+          "question": "Lok Adalat என்றால் என்ன? போகலாமா?",
+          "answer": "Alternative dispute resolution forum. No court fee. Compromise-based settlement. Award = decree, appeal இல்லை. Motor accident, bank recovery, matrimonial, labor disputes suitable. Legal Services Authority conducts.",
+          "legal_topic": "lok_adalat",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL022",
+          "question": "Aadhar mandatory-யா எல்லா இடத்திலும்?",
+          "answer": "Supreme Court: Aadhaar mandatory for PAN, ITR, government subsidies. Not mandatory for: bank account, mobile SIM, school admission. Biometric failure alternative verification உண்டு. UIDAI grievance redressal.",
+          "legal_topic": "aadhaar_mandatory",
+          "difficulty": "medium"
+        },
+        {
+          "id": "GL023",
+          "question": "Senior citizen-க்கு special rights உண்டா?",
+          "answer": "Maintenance and Welfare of Parents and Senior Citizens Act 2007. Children maintenance கொடுக்க வேண்டும். Tribunal order possible. Property transfer revoke முடியும். Senior citizen helpline: 14567.",
+          "legal_topic": "senior_citizen_rights",
+          "difficulty": "easy"
+        },
+        {
+          "id": "GL024",
+          "question": "Intellectual property (trademark, copyright) register எப்படி?",
+          "answer": "Trademark: ipindia.gov.in, Rs.4500 online fee, 6-12 months. Copyright: copyright.gov.in, Rs.500-5000, 2-3 months. Patent: expensive, complex, 3-5 years. IP attorney helpful.",
+          "legal_topic": "intellectual_property",
+          "difficulty": "hard"
+        },
+        {
+          "id": "GL025",
+          "question": "GST-related dispute-க்கு appeal எங்கே?",
+          "answer": "Appellate Authority (within 3 months of order). Appellate Tribunal (within 3 months of AA order). High Court (substantial question of law). Supreme Court. Pre-deposit required for appeals.",
+          "legal_topic": "gst_appeal",
+          "difficulty": "hard"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "created_date": "2024-01-16",
+    "language": "Tamil",
+    "target_audience": "Tamil Nadu general public",
+    "use_case": "Basic legal awareness and rights information",
+    "license": "CC-BY-SA-4.0",
+    "disclaimer": "This information is for general awareness only. Consult a lawyer for specific legal advice."
+  }
+}

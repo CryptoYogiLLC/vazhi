@@ -1,0 +1,631 @@
+{
+  "pack_name": "vazhi_kalvi",
+  "pack_name_tamil": "வழி கல்வி",
+  "description": "Education pack for study guidance, exam preparation, scholarship info, and career counseling in Tamil Nadu",
+  "version": "0.1.0",
+  "total_pairs": 100,
+  "categories": [
+    {
+      "category": "study_guidance",
+      "category_tamil": "படிப்பு வழிகாட்டுதல்",
+      "pairs": [
+        {
+          "id": "SG001",
+          "question": "10th படிக்கிறேன். நல்ல marks வாங்க எப்படி படிக்கணும்?",
+          "answer": "Daily 3-4 மணி நேரம் தொடர்ந்து படிங்க. Subjects-ஐ rotate பண்ணுங்க - ஒரே subject தொடர்ந்து படிக்காதீங்க. Previous year question papers solve பண்ணுங்க. Short notes எழுதுங்க. Morning time படிப்பது memory-க்கு நல்லது. தினமும் revise பண்ணுங்க.",
+          "level": "10th",
+          "topic": "general_study_tips"
+        },
+        {
+          "id": "SG002",
+          "question": "கணிதம் புரியல, எப்படி improve பண்றது?",
+          "answer": "Basic concepts-ஐ முதல்ல clear பண்ணுங்க. Formula-களை memorize பண்ணாம புரிஞ்சு படிங்க. Daily practice problems solve பண்ணுங்க. NCERT textbook examples முதல்ல செய்யுங்க. Doubts இருந்தா teacher-கிட்ட கேளுங்க. YouTube-ல Khan Academy Tamil videos பாருங்க.",
+          "level": "general",
+          "topic": "mathematics"
+        },
+        {
+          "id": "SG003",
+          "question": "English weak-ஆ இருக்கு. எப்படி improve பண்றது?",
+          "answer": "Daily English newspaper படிங்க - The Hindu, Indian Express. English movies with subtitles பாருங்க. Daily 10 new words learn பண்ணுங்க. Short paragraphs எழுதி practice பண்ணுங்க. Grammar basics - tenses, articles நல்லா படிங்க. Speak பண்ண தயங்காதீங்க.",
+          "level": "general",
+          "topic": "english"
+        },
+        {
+          "id": "SG004",
+          "question": "Science subjects எப்படி படிக்கணும்? Theory நிறைய இருக்கு.",
+          "answer": "Concepts புரிஞ்சு படிங்க, by-heart பண்ணாதீங்க. Diagrams வரைஞ்சு படிங்க - memory-க்கு உதவும். Lab practicals attend பண்ணுங்க. Real life examples-ஓட connect பண்ணுங்க. Mind maps create பண்ணுங்க. Group study உதவும் - friends-கிட்ட explain பண்ணுங்க.",
+          "level": "general",
+          "topic": "science"
+        },
+        {
+          "id": "SG005",
+          "question": "தமிழ் subject-ல marks குறைவா வருது. என்ன பண்றது?",
+          "answer": "பாடப்புத்தகம் நன்றாக படிங்க. இலக்கணம் - எழுத்து, சொல், தொடர் வகைகள் clear-ஆ தெரிஞ்சுக்குங்க. கவிதை, உரைநடை - author background படிங்க. Essay writing daily practice பண்ணுங்க. திருக்குறள் அர்த்தத்தோட படிங்க. Tamil literature enjoy பண்ணி படிங்க.",
+          "level": "general",
+          "topic": "tamil"
+        },
+        {
+          "id": "SG006",
+          "question": "Social science-ல dates எல்லாம் remember ஆகல. Tips இருக்கா?",
+          "answer": "Timeline chart போட்டு படிங்க. Events-ஐ story format-ல connect பண்ணுங்க. Important dates-க்கு mnemonics use பண்ணுங்க. Maps-ஐ frequently refer பண்ணுங்க. Current affairs link பண்ணி படிங்க. Weekly revision important dates-க்கு.",
+          "level": "general",
+          "topic": "social_science"
+        },
+        {
+          "id": "SG007",
+          "question": "படிக்கும்போது தூக்கம் வருது. எப்படி alert-ஆ இருக்கறது?",
+          "answer": "8 மணி நேரம் proper sleep எடுங்க. Heavy food-க்கு பிறகு படிக்காதீங்க. Well-lit room-ல படிங்க. Every 45 minutes 5-minute break எடுங்க. Water அதிகம் drink பண்ணுங்க. Active reading - notes எழுதுங்க, questions கேளுங்க. Morning படிப்பது better.",
+          "level": "general",
+          "topic": "study_habits"
+        },
+        {
+          "id": "SG008",
+          "question": "12th படிக்கிறேன். Board exam preparation எப்படி plan பண்றது?",
+          "answer": "Syllabus-ஐ 3 months-க்கு divide பண்ணுங்க. Important chapters முதல்ல complete பண்ணுங்க. Previous 10 years question papers analyze பண்ணுங்க. Model exams attend பண்ணுங்க. Last month full revision-க்கு வையுங்க. Time management practice பண்ணுங்க.",
+          "level": "12th",
+          "topic": "board_exam_preparation"
+        },
+        {
+          "id": "SG009",
+          "question": "NEET/JEE-க்கு coaching போகணுமா? Self-study enough-ஆ?",
+          "answer": "Self-discipline இருந்தா self-study possible. But coaching structure, guidance தரும். Online coaching (Unacademy, BYJU'S) option. Free resources - NCERT, PYQ analysis முக்கியம். Coaching போனாலும் self-study essential. Your learning style-க்கு ஏற்ப decide பண்ணுங்க.",
+          "level": "competitive_exam",
+          "topic": "coaching_guidance"
+        },
+        {
+          "id": "SG010",
+          "question": "Group study useful-ஆ இருக்குமா?",
+          "answer": "Doubts clarify பண்ண useful. Different perspectives கிடைக்கும். Explain பண்றப்ப better understand ஆகும். But focus இருக்கணும் - gossip ஆகிடக்கூடாது. Week-ல 2-3 times enough. Individual study-யும் balance பண்ணுங்க. Serious friends-ஓட மட்டும் group study பண்ணுங்க.",
+          "level": "general",
+          "topic": "study_methods"
+        },
+        {
+          "id": "SG011",
+          "question": "Mobile phone படிப்புக்கு distraction ஆகுது. என்ன பண்றது?",
+          "answer": "Study time-ல phone silent mode-ல வையுங்க. Separate room-ல keep பண்ணுங்க. App blockers use பண்ணுங்க - Forest, Stay Focused. Notification off பண்ணுங்க. Study முடிஞ்சதும் reward-ஆ phone use பண்ணுங்க. Parents-கிட்ட கொடுத்துடுங்க study time-ல.",
+          "level": "general",
+          "topic": "focus_concentration"
+        },
+        {
+          "id": "SG012",
+          "question": "Memory power increase பண்ண என்ன பண்ணலாம்?",
+          "answer": "Regular sleep - 7-8 hours essential. Active recall practice பண்ணுங்க - படிச்சதை மூடி சொல்லுங்க. Spaced repetition - intervals-ல revise பண்ணுங்க. Physical exercise memory-க்கு நல்லது. Healthy food - nuts, fruits சாப்பிடுங்க. Teach others - best memory technique.",
+          "level": "general",
+          "topic": "memory_techniques"
+        },
+        {
+          "id": "SG013",
+          "question": "படிப்புல interest இல்ல. Motivation எப்படி கொண்டு வர்றது?",
+          "answer": "Goal set பண்ணுங்க - என்ன achieve பண்ணணும்? Role models பத்தி படிங்க. Small wins celebrate பண்ணுங்க. Subjects-ஐ real life-ஓட connect பண்ணுங்க. Study environment change பண்ணுங்க. Rewards system வையுங்க. Success stories கேளுங்க.",
+          "level": "general",
+          "topic": "motivation"
+        },
+        {
+          "id": "SG014",
+          "question": "Tuition போகணுமா? School enough-ஆ இல்லையா?",
+          "answer": "Weak subjects-க்கு tuition useful. But over-dependence வேண்டாம். School classes attentive-ஆ கேளுங்க first. Self-study habit develop பண்ணுங்க. Tuition போனா, நல்ல teacher select பண்ணுங்க. Multiple tuitions = burnout. Balance maintain பண்ணுங்க.",
+          "level": "general",
+          "topic": "tuition_guidance"
+        },
+        {
+          "id": "SG015",
+          "question": "Creative subjects - Art, Music படிக்க parents encourage பண்றதில்ல. என்ன பண்றது?",
+          "answer": "Academic performance maintain பண்ணுங்க first. Creative-ஐ hobby-ஆ pursue பண்ணுங்க. Success stories காட்டுங்க - AR Rahman, Rajinikanth started small. Career options explain பண்ணுங்க - design, animation, music therapy. Balance காட்டுங்க. Parents-ஓட communicate பண்ணுங்க.",
+          "level": "general",
+          "topic": "creative_education"
+        }
+      ]
+    },
+    {
+      "category": "exam_preparation",
+      "category_tamil": "தேர்வு தயாரிப்பு",
+      "pairs": [
+        {
+          "id": "EP001",
+          "question": "TNPSC Group 4 exam-க்கு எப்படி prepare ஆவது?",
+          "answer": "6th to 10th TN State Board books படிங்க - History, Geography, Civics, Science. Current affairs daily படிங்க. Tamil - Thirukkural, Grammar important. Aptitude practice பண்ணுங்க. Previous year papers solve பண்ணுங்க. Free coaching - government libraries available.",
+          "exam_type": "TNPSC",
+          "level": "Group 4"
+        },
+        {
+          "id": "EP002",
+          "question": "NEET exam-க்கு best books எது?",
+          "answer": "NCERT Biology, Physics, Chemistry - முதல்ல thoroughly படிங்க. Physics - HC Verma, DC Pandey. Chemistry - OP Tandon (Organic), P Bahadur (Physical). Biology - Trueman's, MTG. Previous 10 years NEET papers must. Mock tests regular-ஆ எழுதுங்க.",
+          "exam_type": "NEET",
+          "level": "medical_entrance"
+        },
+        {
+          "id": "EP003",
+          "question": "JEE Main-க்கு எவ்வளவு நேரம் படிக்கணும்?",
+          "answer": "Daily 6-8 hours focused study. Quality > Quantity. Physics - concepts + problems. Chemistry - NCERT + reactions. Maths - daily problem practice. Weekends full mock test. Revision weekly. JEE Main PYQs most important. 11th concepts strong இருக்கணும்.",
+          "exam_type": "JEE",
+          "level": "engineering_entrance"
+        },
+        {
+          "id": "EP004",
+          "question": "UPSC prelims-க்கு என்ன படிக்கணும்?",
+          "answer": "NCERT 6-12 all subjects - foundation. Indian Polity - Laxmikanth. Geography - Majid Husain. Economy - Ramesh Singh. History - Spectrum. Current affairs - The Hindu daily. CSAT - practice papers. Answer writing practice start பண்ணுங்க.",
+          "exam_type": "UPSC",
+          "level": "civil_services"
+        },
+        {
+          "id": "EP005",
+          "question": "Bank exam PO/Clerk-க்கு எப்படி prepare ஆவது?",
+          "answer": "Quantitative Aptitude - RS Aggarwal. Reasoning - MK Pandey. English - Newspaper reading + grammar. Banking awareness - monthly magazines. Computer knowledge - basics. Current affairs - last 6 months. Speed accuracy important - daily practice. Online mock tests essential.",
+          "exam_type": "Bank_Exams",
+          "level": "banking"
+        },
+        {
+          "id": "EP006",
+          "question": "10th public exam-ல centum வாங்க tips?",
+          "answer": "Textbook thoroughly படிங்க - every line important. Blueprint follow பண்ணுங்க. Previous 5 years papers pattern analyze பண்ணுங்க. Diagrams neat-ஆ draw பண்ணுங்க. Time management - 3 hours practice. Presentation neat-ஆ இருக்கணும். Spelling mistakes avoid பண்ணுங்க.",
+          "exam_type": "Board_Exam",
+          "level": "10th"
+        },
+        {
+          "id": "EP007",
+          "question": "12th board exam answer paper எப்படி எழுதணும்?",
+          "answer": "Question paper 15 minutes படிங்க. Easy questions முதல்ல answer பண்ணுங்க. Points format use பண்ணுங்க. Headings, subheadings போடுங்க. Diagrams - labelled, neat. Word limit follow பண்ணுங்க. Margins விடுங்க. Legible handwriting important. Time manage பண்ணுங்க.",
+          "exam_type": "Board_Exam",
+          "level": "12th"
+        },
+        {
+          "id": "EP008",
+          "question": "Competitive exam-க்கு time management எப்படி?",
+          "answer": "Mock tests regular-ஆ எழுதுங்க - real exam conditions-ல. Question-க்கு average time calculate பண்ணுங்க. Easy questions first - confidence boost. Difficult questions-க்கு mark பண்ணி skip பண்ணுங்க. Negative marking இருந்தா guess ஆகாதீங்க. Watch வச்சு practice பண்ணுங்க.",
+          "exam_type": "general",
+          "level": "competitive"
+        },
+        {
+          "id": "EP009",
+          "question": "SSC CGL exam pattern என்ன? எப்படி படிக்கணும்?",
+          "answer": "Tier 1: Reasoning, Quant, English, GK - 200 marks. Tier 2: Quant, English - descriptive. Tier 3: Descriptive paper. Daily 4-5 hours study. Quant + Reasoning together practice. English grammar + vocabulary. GK - static + current. Kiran, Paramount books useful.",
+          "exam_type": "SSC",
+          "level": "graduate"
+        },
+        {
+          "id": "EP010",
+          "question": "Railway exam-க்கு என்ன படிக்கணும்?",
+          "answer": "Maths - percentage, ratio, SI/CI, profit-loss. Reasoning - coding, series, analogy. GK - Indian Railways facts, current affairs. Science - Physics, Chemistry basics. Previous year RRB papers solve பண்ணுங்க. Speed important - shortcut methods learn பண்ணுங்க.",
+          "exam_type": "Railway",
+          "level": "various"
+        },
+        {
+          "id": "EP011",
+          "question": "IELTS exam-க்கு எப்படி prepare ஆவது?",
+          "answer": "Listening - BBC, podcasts daily. Reading - newspaper, magazines. Writing - Task 1 graphs, Task 2 essays practice. Speaking - mirror practice, record yourself. Cambridge IELTS books 1-18 solve பண்ணுங்க. Vocabulary daily 10 words. Grammar accuracy important. Mock tests take.",
+          "exam_type": "IELTS",
+          "level": "international"
+        },
+        {
+          "id": "EP012",
+          "question": "CA Foundation exam-க்கு எப்படி prepare ஆவது?",
+          "answer": "ICAI study material primary source. Accounts - basics strong இருக்கணும். Law - sections memorize பண்ணுங்க. Economics, BCK - NCERT helpful. Maths - practice more problems. Past 5 years papers solve பண்ணுங்க. Revision notes prepare பண்ணுங்க. Mock test series join பண்ணுங்க.",
+          "exam_type": "CA",
+          "level": "foundation"
+        },
+        {
+          "id": "EP013",
+          "question": "GATE exam preparation எப்படி start பண்றது?",
+          "answer": "Core subjects identify பண்ணுங்க - weightage படி. Standard textbooks படிங்க - subject wise. Previous 20 years papers must solve. Aptitude + English prepare பண்ணுங்க. Made Easy/ACE notes useful. Virtual calculator practice பண்ணுங்க. Last 3 months - revision + mock tests.",
+          "exam_type": "GATE",
+          "level": "postgraduate"
+        },
+        {
+          "id": "EP014",
+          "question": "Exam anxiety இருக்கு. Stress manage எப்படி பண்றது?",
+          "answer": "Deep breathing exercises practice பண்ணுங்க. Regular preparation - last minute avoid பண்ணுங்க. Sleep properly exam முன் நாள். Positive self-talk பண்ணுங்க. Light exercise - walk, yoga. Healthy food சாப்பிடுங்க. Exam hall-ல relax ஆக 5 minutes எடுங்க. Best prepare பண்ணீங்க - நம்பிக்கை வையுங்க.",
+          "exam_type": "general",
+          "level": "all"
+        },
+        {
+          "id": "EP015",
+          "question": "TET exam-க்கு எப்படி prepare ஆவது?",
+          "answer": "Child Development Psychology - Piaget, Vygotsky theories. Tamil/English pedagogy - teaching methods. Environmental Studies pedagogy. Maths pedagogy - NCF 2005 important. TN SCERT books படிங்க. Previous TET papers solve பண்ணுங்க. CTET papers also helpful.",
+          "exam_type": "TET",
+          "level": "teacher_eligibility"
+        },
+        {
+          "id": "EP016",
+          "question": "UGC NET exam-க்கு preparation tips?",
+          "answer": "Paper 1 - Teaching aptitude, research methodology, ICT. Paper 2 - your subject deep study. NTA official syllabus follow பண்ணுங்க. Previous year papers pattern analyze பண்ணுங்க. Subject experts YouTube videos பாருங்க. Time management crucial - 180 questions/180 minutes.",
+          "exam_type": "UGC_NET",
+          "level": "lecturer"
+        },
+        {
+          "id": "EP017",
+          "question": "TNUSRB Police exam-க்கு என்ன படிக்கணும்?",
+          "answer": "GK - TN history, polity, geography. Current affairs - last 1 year. Aptitude - basic maths. Tamil - grammar, comprehension. Constitution - fundamental rights, duties. Previous TNUSRB papers must. Physical fitness prepare பண்ணுங்க. Certificate verification documents ready வையுங்க.",
+          "exam_type": "TNUSRB",
+          "level": "police"
+        },
+        {
+          "id": "EP018",
+          "question": "Olympiad exams-க்கு எப்படி prepare ஆவது?",
+          "answer": "NCERT concepts thoroughly படிங்க. Higher level thinking develop பண்ணுங்க. SOF, Unified Council previous papers solve பண்ணுங்க. Logical reasoning practice பண்ணுங்க. Online resources - Olympiad trainer websites. Subject specific books - MTG Olympiad series. Regular practice important.",
+          "exam_type": "Olympiad",
+          "level": "school"
+        }
+      ]
+    },
+    {
+      "category": "scholarship_info",
+      "category_tamil": "உதவித்தொகை தகவல்",
+      "pairs": [
+        {
+          "id": "SC001",
+          "question": "BC/MBC students-க்கு என்ன scholarships இருக்கு?",
+          "answer": "Post Matric Scholarship - BC/MBC/DNC students-க்கு. Fee reimbursement + maintenance allowance. Apply: scholarships.tn.gov.in. Documents: community certificate, income certificate, marksheet. Deadline: usually August-September. Renewal yearly apply பண்ணணும்.",
+          "category_beneficiary": "BC_MBC",
+          "scholarship_type": "state_government"
+        },
+        {
+          "id": "SC002",
+          "question": "SC/ST students-க்கு central government scholarships என்ன?",
+          "answer": "Pre-Matric Scholarship - Class 9-10. Post-Matric Scholarship - Class 11 onwards. Top Class Education - premier institutions-க்கு full support. National Fellowship - PhD students-க்கு. Apply: National Scholarship Portal (scholarships.gov.in). Income limit varies by scheme.",
+          "category_beneficiary": "SC_ST",
+          "scholarship_type": "central_government"
+        },
+        {
+          "id": "SC003",
+          "question": "First generation graduate-க்கு special scholarship இருக்கா?",
+          "answer": "ஆம்! TN government First Graduate Scholarship available. Parents படிக்காம இருந்தா eligible. Fee exemption + stipend. Apply college through. Income limit applicable. Documents: parents education proof, income certificate. College admission-ஓட apply பண்ணுங்க.",
+          "category_beneficiary": "first_generation",
+          "scholarship_type": "state_government"
+        },
+        {
+          "id": "SC004",
+          "question": "Engineering படிக்க scholarship எங்க apply பண்றது?",
+          "answer": "AICTE Pragati Scholarship - girls-க்கு. AICTE Saksham - differently abled-க்கு. State post-matric scholarship apply பண்ணுங்க. Private scholarships - L&T, Tata, Reliance Foundation. College-specific scholarships check பண்ணுங்க. Merit-cum-means available.",
+          "category_beneficiary": "engineering_students",
+          "scholarship_type": "multiple"
+        },
+        {
+          "id": "SC005",
+          "question": "Medical college scholarship options என்ன?",
+          "answer": "Government college - free for eligible. NEET rank-based scholarship some private colleges. Vidyasaarathi - medical students-க்கு. State post-matric scholarship. Minority scholarship - applicable categories-க்கு. Hospital-sponsored bonds - service commitment required.",
+          "category_beneficiary": "medical_students",
+          "scholarship_type": "multiple"
+        },
+        {
+          "id": "SC006",
+          "question": "Girl students-க்கு special scholarships இருக்கா?",
+          "answer": "AICTE Pragati - technical education girls. Begum Hazrat Mahal Scholarship - minority girls. CBSE Single Girl Child Scholarship. Indira Gandhi Scholarship - PG students. State schemes - free education till PG for girls. Cycle scheme, laptop scheme available.",
+          "category_beneficiary": "girls",
+          "scholarship_type": "multiple"
+        },
+        {
+          "id": "SC007",
+          "question": "Minority students-க்கு scholarship எப்படி apply பண்றது?",
+          "answer": "Pre-Matric, Post-Matric, Merit-cum-Means Scholarship - NSP portal-ல apply பண்ணுங்க. Maulana Azad National Fellowship - research-க்கு. State Minority Welfare scholarships. Documents: minority certificate, income proof. Deadline: usually September-October.",
+          "category_beneficiary": "minorities",
+          "scholarship_type": "central_state"
+        },
+        {
+          "id": "SC008",
+          "question": "Abroad படிக்க scholarship இருக்கா?",
+          "answer": "TN CM's Special Scholarship - foreign study. GREAT Scholarships - UK universities. Fulbright Program - USA. Commonwealth Scholarship - UK. Erasmus Mundus - Europe. DAAD - Germany. Most need good academics + IELTS/GRE scores. Apply 1 year advance.",
+          "category_beneficiary": "abroad_study",
+          "scholarship_type": "international"
+        },
+        {
+          "id": "SC009",
+          "question": "National Scholarship Portal-ல எப்படி apply பண்றது?",
+          "answer": "scholarships.gov.in போங்க. New registration - Aadhaar, mobile verify. Profile complete பண்ணுங்க. Scheme select பண்ணுங்க. Documents upload - marksheet, income, caste certificates. Institute verify பண்ணும். Track status online. Renewal separate apply.",
+          "category_beneficiary": "all",
+          "scholarship_type": "process"
+        },
+        {
+          "id": "SC010",
+          "question": "PhD-க்கு fellowship எங்க apply பண்றது?",
+          "answer": "UGC-NET JRF - NET qualify with JRF rank. CSIR-NET JRF - science subjects. ICMR-JRF - medical research. DBT-JRF - biotechnology. University fellowships - admission-ஓட. Project fellowships - professor guidance-ல. Monthly stipend 31,000+ current rates.",
+          "category_beneficiary": "research_students",
+          "scholarship_type": "fellowship"
+        },
+        {
+          "id": "SC011",
+          "question": "Scholarship application reject ஆச்சு. என்ன பண்றது?",
+          "answer": "Rejection reason check பண்ணுங்க portal-ல. Common reasons: wrong documents, income limit exceed, deadline miss. Correct documents-ஓட grievance file பண்ணுங்க. District welfare office contact பண்ணுங்க. Next year proper-ஆ apply பண்ணுங்க. Alternative scholarships find பண்ணுங்க.",
+          "category_beneficiary": "all",
+          "scholarship_type": "troubleshooting"
+        },
+        {
+          "id": "SC012",
+          "question": "Private company scholarships எப்படி find பண்றது?",
+          "answer": "Buddy4Study website check பண்ணுங்க. Vidyasaarathi portal - multiple private scholarships. Company websites directly - TCS, Infosys, L&T foundations. College placement cell enquire பண்ணுங்க. LinkedIn scholarship posts follow பண்ணுங்க. Eligibility criteria carefully read பண்ணுங்க.",
+          "category_beneficiary": "all",
+          "scholarship_type": "private"
+        },
+        {
+          "id": "SC013",
+          "question": "Sports quota scholarship இருக்கா?",
+          "answer": "SAI scholarship - national level players. State sports scholarships - state level players. University sports quota admission + fee waiver. Khelo India Scholarship. Sports Authority of TN schemes. District, State, National level certificates required. Regular training + performance maintain பண்ணணும்.",
+          "category_beneficiary": "sports_students",
+          "scholarship_type": "sports"
+        },
+        {
+          "id": "SC014",
+          "question": "Differently abled students-க்கு என்ன schemes இருக்கு?",
+          "answer": "AICTE Saksham Scholarship - technical education. National Scholarship for PwD - NSP portal. State disability welfare scholarships. Special coaching + assistive devices. Scribes facility exams-ல. Extra time allowance. Accessible infrastructure institutions-ல. Disability certificate 40%+ required.",
+          "category_beneficiary": "differently_abled",
+          "scholarship_type": "multiple"
+        },
+        {
+          "id": "SC015",
+          "question": "Orphan students-க்கு scholarship எங்க?",
+          "answer": "PM CARES for Children - COVID orphans. State Social Welfare Department scholarships. NGO scholarships - SOS Children's Villages, Akshaya Patra. District Collector office apply பண்ணுங்க. Free education government schools. Hostel facility available. Counselling support provided.",
+          "category_beneficiary": "orphans",
+          "scholarship_type": "social_welfare"
+        }
+      ]
+    },
+    {
+      "category": "career_counseling",
+      "category_tamil": "தொழில் வழிகாட்டுதல்",
+      "pairs": [
+        {
+          "id": "CC001",
+          "question": "10th-க்கு அப்புறம் என்ன படிக்கலாம்?",
+          "answer": "Science group - Engineering/Medical aim இருந்தா. Commerce group - CA, business interest. Arts group - UPSC, law, journalism. Vocational courses - ITI, Polytechnic. Decide பண்ண: interest என்ன? strength என்ன? future goal என்ன? Parents, teachers-கிட்ட discuss பண்ணுங்க.",
+          "stage": "post_10th",
+          "career_path": "general"
+        },
+        {
+          "id": "CC002",
+          "question": "Engineering vs Medical - எது better?",
+          "answer": "Both excellent careers. Engineering: 4 years, diverse fields, IT boom. Medical: 5.5 years + PG, service-oriented. Engineering - placements faster. Medical - longer study, higher respect. Interest எதுல இருக்கு? Biology good-ன்னா Medical. Maths strong-ன்னா Engineering. Passion follow பண்ணுங்க.",
+          "stage": "post_12th",
+          "career_path": "comparison"
+        },
+        {
+          "id": "CC003",
+          "question": "Government job-க்கு compete பண்றது worth-ஆ?",
+          "answer": "Job security, pension, respect - advantages. Competition high - lakhs apply. Age limit இருக்கு - early start பண்ணுங்க. Attempt limit some exams-ல. Backup plan வையுங்க. Private job experience parallel-ஆ. UPSC/State PSC worth if dedicated. Time, effort invest பண்ண ready-ன்னா go for it.",
+          "stage": "career_decision",
+          "career_path": "government"
+        },
+        {
+          "id": "CC004",
+          "question": "IT field-ல future இருக்கா?",
+          "answer": "Strong future - AI, ML, Cloud, Cybersecurity growing. But automation risk - manual jobs reduce. Continuous learning essential. Specialization important - full stack, data science, DevOps. Remote work opportunities. Global market access. Salary good but work-life balance varies. Upskilling constant.",
+          "stage": "career_choice",
+          "career_path": "technology"
+        },
+        {
+          "id": "CC005",
+          "question": "Arts stream படிச்சா job கிடைக்குமா?",
+          "answer": "Definitely! UPSC, State PSC exams - Arts background advantage. Law - 5 year integrated. Journalism, Media. Teaching - TET, KVS, NVS. Banking, SSC exams. MBA possible after any degree. Content writing, translation. Civil services toppers many Arts background. Career planning important.",
+          "stage": "post_12th",
+          "career_path": "arts"
+        },
+        {
+          "id": "CC006",
+          "question": "Commerce படிச்சா என்ன jobs இருக்கு?",
+          "answer": "CA, CS, CMA - professional courses. MBA - management career. Banking - PO, Clerk, Specialist Officer. Insurance - LIC, private companies. Taxation, Audit. Stock market - research, trading. Entrepreneurship. Accountant - every company needs. E-commerce opportunities. Finance sector growing.",
+          "stage": "post_12th",
+          "career_path": "commerce"
+        },
+        {
+          "id": "CC007",
+          "question": "Diploma vs Degree - எது select பண்றது?",
+          "answer": "Diploma: 3 years, practical skills, early job. Degree: 4 years, theoretical + practical, better growth. Diploma - immediate employment. Degree - higher positions, better salary long-term. Lateral entry - Diploma to Degree possible. Financial situation consider பண்ணுங்க. Career goals analyze பண்ணுங்க.",
+          "stage": "post_10th",
+          "career_path": "comparison"
+        },
+        {
+          "id": "CC008",
+          "question": "MBA worth பண்றதா இப்போ?",
+          "answer": "Top IIMs, IITs - still excellent ROI. Tier 2-3 colleges - evaluate carefully. Work experience 2-3 years after-ன்னா better MBA. Online MBA options now. Executive MBA working professionals-க்கு. Specialization important - Finance, Marketing, HR, Operations. Without MBA-யும் grow பண்ணலாம் industry-ல.",
+          "stage": "post_graduation",
+          "career_path": "management"
+        },
+        {
+          "id": "CC009",
+          "question": "Teacher ஆகணும். என்ன படிக்கணும்?",
+          "answer": "School teacher: B.Ed compulsory (after graduation). TET/CTET qualify பண்ணணும். College lecturer: PG + UGC NET/SET. Professor: PhD required. Private school - B.Ed enough. Government school - TET + TRB exam. Subject expertise + pedagogy skills. Patience, communication important.",
+          "stage": "career_choice",
+          "career_path": "teaching"
+        },
+        {
+          "id": "CC010",
+          "question": "Doctor ஆகணும். NEET தவிர வேற வழி இருக்கா?",
+          "answer": "MBBS-க்கு NEET only way India-ல. Alternative medical: BAMS (Ayurveda), BHMS (Homeopathy), BUMS (Unani) - NEET required. BDS (Dental) - NEET. Nursing - no NEET, good career. Paramedical - Physiotherapy, Lab Tech. Abroad MBBS - Ukraine, Russia, Philippines - NEET needed but lower cutoff.",
+          "stage": "medical_career",
+          "career_path": "healthcare"
+        },
+        {
+          "id": "CC011",
+          "question": "Lawyer ஆகணும். எப்படி?",
+          "answer": "After 12th: 5 year integrated BA LLB, BBA LLB. After graduation: 3 year LLB. Top colleges: NLUs (CLAT exam). Practice: Apprentice under senior lawyer. Specializations: Criminal, Civil, Corporate, IP, Cyber. Court practice or corporate legal. Patience needed - early years tough. Good communication essential.",
+          "stage": "career_choice",
+          "career_path": "law"
+        },
+        {
+          "id": "CC012",
+          "question": "Abroad போய் settle ஆகணும். எந்த field best?",
+          "answer": "IT/Tech - US, Canada, Europe demand. Healthcare - Nursing, doctors (licensing needed). Engineering - Germany, Australia. Research - PhD abroad, then settle. MBA - top schools placement. Skilled trades - Canada points system. PR pathways: Express Entry Canada, EB-2/EB-3 US. Language skills + qualification recognition important.",
+          "stage": "international_career",
+          "career_path": "abroad"
+        },
+        {
+          "id": "CC013",
+          "question": "Business start பண்ணணும். என்ன படிக்கணும்?",
+          "answer": "Formal education optional for business. But helpful: BBA, MBA - business fundamentals. CA - finance understanding. Engineering - tech startups. Specific domain knowledge. Online courses - Coursera, NPTEL. Mentorship important. Start small, learn by doing. Failure part of journey. Passion for problem-solving essential.",
+          "stage": "entrepreneurship",
+          "career_path": "business"
+        },
+        {
+          "id": "CC014",
+          "question": "Creative field-ல career - parents oppose பண்றாங்க. Convince எப்படி?",
+          "answer": "Success stories share பண்ணுங்க - Designers, artists earning well. Career options explain: UX design, animation, advertising, film. Salary data show பண்ணுங்க - good designers earn 15L+. Hybrid approach: stable job + creative side. Portfolio build பண்ணுங்க prove பண்ண. Small wins achieve பண்ணுங்க first.",
+          "stage": "career_choice",
+          "career_path": "creative"
+        },
+        {
+          "id": "CC015",
+          "question": "Career change பண்ணணும். Late-ஆ ஆயிடுச்சா?",
+          "answer": "Never too late! Transferable skills identify பண்ணுங்க. Upskilling - online courses available. Part-time transition possible. Networking in new field. Entry-level role accept பண்ணுங்க initially. Age is just number - experience is asset. Financial runway plan பண்ணுங்க. Gradual transition safer than sudden.",
+          "stage": "mid_career",
+          "career_path": "career_change"
+        },
+        {
+          "id": "CC016",
+          "question": "Freelancing vs Full-time job - எது better?",
+          "answer": "Full-time: stable income, benefits, structure. Freelancing: flexibility, multiple clients, self-management. Early career - job experience valuable. Freelance skills: self-discipline, marketing, finances. Start freelancing as side project. Transition when stable client base. Risk tolerance consider பண்ணுங்க. Some do hybrid.",
+          "stage": "career_decision",
+          "career_path": "work_style"
+        },
+        {
+          "id": "CC017",
+          "question": "Village-ல இருந்தே career build பண்ண முடியுமா?",
+          "answer": "Yes, possible now! Remote work opportunities - IT, content, design. Internet connectivity improving. Online education access. Agriculture-based careers - organic farming, agri-tech. Local business - e-commerce reach. Government jobs - posting village possible. Teaching, healthcare - rural need. Smart Village initiatives supporting.",
+          "stage": "location_based",
+          "career_path": "rural"
+        },
+        {
+          "id": "CC018",
+          "question": "IAS officer ஆகணும். Start எங்கிருந்து?",
+          "answer": "Foundation: NCERT 6-12 thoroughly. Graduation: any stream - choose your interest. Optional subject: your graduation subject usually. Age: 21-32 (varies by category). Attempts: 6 for general. Start early - graduation time-லேயே basics. Standard books, newspaper, answer writing. Coaching optional but helpful. 1-2 year dedicated preparation.",
+          "stage": "career_goal",
+          "career_path": "civil_services"
+        },
+        {
+          "id": "CC019",
+          "question": "Data Science/AI field-க்கு போகணும். Background வேணுமா?",
+          "answer": "Maths, Statistics background helpful but not mandatory. Programming - Python must learn. Online courses - Coursera, NPTEL, DataCamp. Degrees: B.Tech CSE, MCA, M.Sc Statistics. Transition possible from any background. Projects build பண்ணுங்க. Kaggle competitions participate பண்ணுங்க. Bootcamps available. Industry demand high.",
+          "stage": "emerging_field",
+          "career_path": "data_science"
+        },
+        {
+          "id": "CC020",
+          "question": "Sports career pursue பண்ணலாமா? Risk இருக்கா?",
+          "answer": "Passion இருந்தா pursue பண்ணுங்க. Early start important - most sports. Parallel education continue பண்ணுங்க. Backup plan: coaching, sports management, commentary. Injury risk இருக்கு - insurance. SAI support for talented. State/National level reach first. Sports + studies balance possible. Career span limited - plan second career.",
+          "stage": "career_choice",
+          "career_path": "sports"
+        }
+      ]
+    },
+    {
+      "category": "skill_development",
+      "category_tamil": "திறன் மேம்பாடு",
+      "pairs": [
+        {
+          "id": "SD001",
+          "question": "Communication skills எப்படி improve பண்றது?",
+          "answer": "Daily reading habit - newspapers, books. Mirror practice - speak to yourself. Record and listen - identify improvements. Join public speaking clubs - Toastmasters. Group discussions participate பண்ணுங்க. Vocabulary build பண்ணுங்க daily. Body language learn பண்ணுங்க. Listen actively - 50% communication.",
+          "skill_type": "soft_skill",
+          "importance": "high"
+        },
+        {
+          "id": "SD002",
+          "question": "Coding எங்கிருந்து learn பண்றது?",
+          "answer": "Free resources: freeCodeCamp, Codecademy, W3Schools. YouTube - CS50, Telusko, CodeWithHarry. Language choice: Python (beginners), JavaScript (web). Practice: HackerRank, LeetCode daily. Projects build பண்ணுங்க. GitHub profile create பண்ணுங்க. Consistency important - daily 1-2 hours. Community join பண்ணுங்க - Discord, Reddit.",
+          "skill_type": "technical",
+          "importance": "high"
+        },
+        {
+          "id": "SD003",
+          "question": "Resume எப்படி attractive-ஆ எழுதுறது?",
+          "answer": "One page - fresher-க்கு. Clean format - no fancy fonts. Contact info top-ல. Education - recent first. Skills section - relevant ones. Projects/Internships - impact mention பண்ணுங்க. Action verbs use பண்ணுங்க - developed, implemented. Keywords from job description include பண்ணுங்க. Proofread - zero errors. PDF format save பண்ணுங்க.",
+          "skill_type": "job_skill",
+          "importance": "high"
+        },
+        {
+          "id": "SD004",
+          "question": "Interview-ல எப்படி impress பண்றது?",
+          "answer": "Company research பண்ணுங்க thoroughly. Common questions practice பண்ணுங்க - Tell me about yourself, strengths/weaknesses. STAR method - Situation, Task, Action, Result. Dress formal. 10 minutes early போங்க. Eye contact maintain பண்ணுங்க. Questions கேளுங்க end-ல. Thank you mail send பண்ணுங்க. Confidence show பண்ணுங்க - not arrogance.",
+          "skill_type": "job_skill",
+          "importance": "high"
+        },
+        {
+          "id": "SD005",
+          "question": "Digital skills என்னென்ன learn பண்ணணும்?",
+          "answer": "MS Office - Word, Excel, PowerPoint essential. Google Suite - Docs, Sheets, Slides. Email etiquette. Basic Canva - design. Social media professional use. Typing speed improve பண்ணுங்க. Video conferencing - Zoom, Meet. Cloud storage - Drive, Dropbox. Cyber security awareness. Data backup practice.",
+          "skill_type": "technical",
+          "importance": "medium"
+        },
+        {
+          "id": "SD006",
+          "question": "Time management எப்படி பண்றது?",
+          "answer": "Priority list daily எழுதுங்க. Important vs Urgent differentiate பண்ணுங்க. Pomodoro technique - 25 min work, 5 min break. Calendar use பண்ணுங்க - Google Calendar. Deadlines set பண்ணுங்க. Distractions eliminate பண்ணுங்க. Say no to unnecessary things. Early wake up habit. Weekly review பண்ணுங்க.",
+          "skill_type": "soft_skill",
+          "importance": "high"
+        },
+        {
+          "id": "SD007",
+          "question": "Leadership skills develop பண்ண என்ன பண்றது?",
+          "answer": "Responsibility எடுங்க - college clubs, events. Team projects lead பண்ணுங்க. Decision making practice பண்ணுங்க. Listen to others - empathy. Public speaking improve பண்ணுங்க. Conflict resolution learn பண்ணுங்க. Read leadership books - 7 Habits, How to Win Friends. Mentor others. Self-awareness develop பண்ணுங்க.",
+          "skill_type": "soft_skill",
+          "importance": "high"
+        },
+        {
+          "id": "SD008",
+          "question": "Internship எப்படி கிடைக்கும்?",
+          "answer": "LinkedIn profile create - professional. Internshala, LetsIntern websites. Company career pages directly. College placement cell. Alumni network use பண்ணுங்க. Cold emailing - polite, specific. Skills relevant-ஆ develop பண்ணுங்க first. Projects showcase பண்ணுங்க. Start early - 2nd year-ல apply பண்ணுங்க. Unpaid-ம் learning-க்கு worth.",
+          "skill_type": "job_skill",
+          "importance": "high"
+        },
+        {
+          "id": "SD009",
+          "question": "English speaking fluency எப்படி வரும்?",
+          "answer": "Daily practice essential - speak 30 min. English movies without subtitles. Podcasts listen பண்ணுங்க. Read aloud daily. Tongue twisters practice பண்ணுங்க. Record yourself, listen, improve. Join speaking clubs. Online tutors - iTalki, Cambly. Think in English. Mistakes பண்ண பயப்படாதீங்க - part of learning.",
+          "skill_type": "language",
+          "importance": "high"
+        },
+        {
+          "id": "SD010",
+          "question": "Problem-solving skills எப்படி develop பண்றது?",
+          "answer": "Puzzles, brain teasers solve பண்ணுங்க. Coding problems practice - logical thinking. Case studies analyze பண்ணுங்க. Root cause analysis learn பண்ணுங்க - 5 Whys. Different perspectives consider பண்ணுங்க. Break problems into smaller parts. Real-world problems observe பண்ணுங்க. Creative thinking develop பண்ணுங்க. Failure-ல learn பண்ணுங்க.",
+          "skill_type": "cognitive",
+          "importance": "high"
+        },
+        {
+          "id": "SD011",
+          "question": "Certificates எந்த platforms-ல valuable?",
+          "answer": "Coursera - university certificates, recognized. Google certifications - IT, Digital Marketing, Data Analytics. AWS, Azure, GCP - cloud certifications. LinkedIn Learning - employer visible. NPTEL - IIT/IISc certificates, AICTE recognized. HubSpot - marketing. Cisco - networking. Choose industry-relevant ones. Portfolio-ல showcase பண்ணுங்க.",
+          "skill_type": "certification",
+          "importance": "medium"
+        },
+        {
+          "id": "SD012",
+          "question": "Networking எப்படி பண்றது career-க்கு?",
+          "answer": "LinkedIn active-ஆ use பண்ணுங்க - post, comment. Alumni meets attend பண்ணுங்க. Industry events, seminars போங்க. Informational interviews request பண்ணுங்க. Give before you ask - help others. Follow up maintain பண்ணுங்க. Professional groups join பண்ணுங்க. Business cards ready வையுங்க. Genuine connections build பண்ணுங்க.",
+          "skill_type": "soft_skill",
+          "importance": "high"
+        },
+        {
+          "id": "SD013",
+          "question": "Free-ல skills learn பண்ண best websites?",
+          "answer": "Coursera (audit mode free). Khan Academy - academics. freeCodeCamp - coding. Duolingo - languages. Google Digital Garage - marketing. SWAYAM/NPTEL - government platform. YouTube - everything available. Udemy (frequent sales). MIT OpenCourseWare. edX (audit free). Library resources - many have free access.",
+          "skill_type": "learning_resources",
+          "importance": "high"
+        },
+        {
+          "id": "SD014",
+          "question": "Soft skills vs Technical skills - எது முக்கியம்?",
+          "answer": "Both essential! Technical skills - job கிடைக்க. Soft skills - job-ல grow பண்ண. Entry level - technical 70%, soft 30%. Senior level - soft skills more important. Communication, teamwork, adaptability - everywhere needed. Balance develop பண்ணுங்க. Technical can be taught - soft skills harder. Emotional intelligence valuable.",
+          "skill_type": "comparison",
+          "importance": "high"
+        },
+        {
+          "id": "SD015",
+          "question": "Portfolio/GitHub எப்படி build பண்றது?",
+          "answer": "GitHub: personal projects upload பண்ணுங்க. README files proper-ஆ எழுதுங்க. Consistent commits - green squares. Open source contribute பண்ணுங்க. Portfolio website: GitHub Pages free. Projects showcase - screenshots, live demos. Blog write பண்ணுங்க - what you learned. Clean, organized code. Employers check பண்றாங்க - professional வையுங்க.",
+          "skill_type": "technical",
+          "importance": "high"
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "created_date": "2024-01-17",
+    "language": "Tamil with English technical terms",
+    "target_audience": "Tamil Nadu students from 10th standard to post-graduation and job seekers",
+    "use_case": "Educational guidance, exam preparation, scholarship information, and career counseling",
+    "license": "CC-BY-SA-4.0",
+    "version_notes": "v0.1.0 - Initial release covering study guidance, exam preparation for major exams (TNPSC, NEET, JEE, UPSC, Banking, SSC), scholarship information for various categories, career counseling for multiple paths, and skill development",
+    "exams_covered": ["TNPSC", "NEET", "JEE", "UPSC", "SSC", "Banking", "Railway", "IELTS", "CA", "GATE", "TET", "UGC_NET", "TNUSRB"],
+    "scholarship_types": ["state_government", "central_government", "private", "international", "fellowship"],
+    "career_paths": ["engineering", "medical", "government", "technology", "arts", "commerce", "teaching", "law", "business", "creative", "sports", "abroad"]
+  }
+}
