@@ -1,0 +1,146 @@
+# VAZHI (வழி)
+
+**Voluntary AI with Zero-cost Helpful Intelligence**
+
+*The open path to Tamil AI*
+
+---
+
+## What is VAZHI?
+
+VAZHI is an open-source Tamil language LLM designed to run **offline on mobile phones**. It's built by the community, for the community — ensuring Tamil speakers have access to AI tools without depending on paid APIs or Big Tech.
+
+### Core Principles
+
+| Principle | What It Means |
+|-----------|---------------|
+| **வழி காட்டும்** | Shows the way — guides users with helpful AI |
+| **Zero-cost** | Free to use, no API fees, runs on your device |
+| **Open source** | Transparent, community-owned, forkable |
+| **Tamil-first** | Built natively for Tamil, not translated |
+
+---
+
+## Features
+
+### Base Model (vazhi-base)
+- 3B parameter model fine-tuned for Tamil
+- Runs offline on mobile devices (~1.7GB quantized)
+- Conversational chat, Q&A, translation
+
+### Modular Packs
+Download only what you need:
+
+| Pack | Purpose | Status |
+|------|---------|--------|
+| 🛡️ **Vazhi Kaval** (காவல்) | Scam detection, fraud alerts | 🚧 In Progress |
+| ⚖️ **Vazhi Neethi** (நீதி) | Legal document guidance | 📋 Planned |
+| 🏛️ **Vazhi Arasu** (அரசு) | Government schemes & services | 📋 Planned |
+| 📚 **Vazhi Kalvi** (கல்வி) | Education assistance | 📋 Planned |
+
+### Smart Escalation
+When questions are too complex, VAZHI transparently offers:
+- "This needs expert advice. Want me to ask Gemini/Grok?"
+- Links to verified professionals
+- Never pretends to know more than it does
+
+---
+
+## Quick Start
+
+### Run Inference (Colab)
+
+```python
+# Coming soon - Day 1 notebook
+```
+
+### Mobile App
+
+```bash
+# Coming soon - Week 2
+```
+
+---
+
+## Project Structure
+
+```
+vazhi/
+├── data/                # Training datasets
+├── models/              # Model checkpoints
+├── notebooks/           # Colab training notebooks
+├── scripts/             # Utility scripts
+├── vazhi-packs/         # Modular LoRA packs
+│   ├── security/        # Vazhi Kaval
+│   ├── legal/           # Vazhi Neethi
+│   ├── govt/            # Vazhi Arasu
+│   └── education/       # Vazhi Kalvi
+└── docs/                # Documentation
+```
+
+---
+
+## Roadmap
+
+### Phase 1: Foundation (Weeks 1-2)
+- [ ] Fine-tune base Tamil LLM on Qwen 2.5 3B
+- [ ] Create first pack (Security/Scam detection)
+- [ ] Quantize for mobile deployment
+- [ ] Basic mobile app prototype
+
+### Phase 2: Expansion (Months 2-3)
+- [ ] Additional packs (Legal, Government, Education)
+- [ ] Community contribution guidelines
+- [ ] Pack review and curation system
+- [ ] iOS and Android apps
+
+### Phase 3: Community (Months 4-6)
+- [ ] Open pack submissions
+- [ ] Multi-dialect support
+- [ ] Voice input/output
+- [ ] Offline-first PWA
+
+---
+
+## Contributing
+
+VAZHI is built by the community. We welcome:
+
+- **Data contributions**: Tamil conversations, Q&A pairs, domain-specific content
+- **Pack creators**: Build specialized LoRA packs for your expertise area
+- **Translators**: Help with documentation in Tamil
+- **Testers**: Try the app and report issues
+
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
+
+---
+
+## Why "VAZHI"?
+
+**வழி** (vazhi) means "path" or "way" in Tamil.
+
+- It **shows the way** — guiding users through complex information
+- It's an **open path** — anyone can walk it, contribute to it, fork it
+- It's **your path** — runs on your device, owned by the community
+
+**Acronym**: **V**oluntary **A**I with **Z**ero-cost **H**elpful **I**ntelligence
+
+---
+
+## License
+
+MIT License — Free to use, modify, and distribute.
+
+---
+
+## Acknowledgments
+
+- [AI4Bharat](https://ai4bharat.org/) for pioneering Indian language NLP
+- [Qwen](https://github.com/QwenLM/Qwen) for excellent multilingual base models
+- The Tamil open-source community
+
+---
+
+<p align="center">
+  <b>வழி காட்டும் AI — The open path to Tamil AI</b>
+</p>

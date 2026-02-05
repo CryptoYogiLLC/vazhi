@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Models (large files)
+*.bin
+*.safetensors
+*.gguf
+*.ggml
+models/*.pt
+models/*.pth
+
+# Data (may contain sensitive info)
+data/raw/
+data/private/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Secrets
+.env
+*.env
+secrets/
+credentials/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+wandb/
+
+# Mobile
+node_modules/
+*.apk
+*.ipa
+.gradle/
+android/.gradle/
+ios/Pods/
