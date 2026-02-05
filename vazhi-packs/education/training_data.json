@@ -2,21 +2,30 @@
   "pack_name": "vazhi_kalvi",
   "pack_name_tamil": "வழி கல்வி",
   "description": "Comprehensive education pack for study guidance, exam preparation, scholarship info, higher studies, vocational training, and career counseling in Tamil Nadu",
-  "version": "0.3.0",
-  "total_pairs": 1112,
+  "version": "0.4.0",
+  "total_pairs": 610,
   "language_split": {
-    "pure_tamil": 556,
-    "tanglish": 556
+    "pure_tamil": 305,
+    "tanglish": 305
   },
   "data_sources": [
-    "tn_education_school_level.json (80 entries)",
-    "tn_education_higher_studies.json (85 entries)",
-    "tn_education_scholarships.json (75 entries)",
-    "tn_education_competitive_exams.json (100 entries)",
-    "tn_education_exam_preparation.json (85 entries)",
-    "tn_education_vocational_skills.json (65 entries)",
-    "legacy_education_pack (66 entries)"
+    "tn_education_school_level.json (19 entries)",
+    "tn_education_competitive_exams.json (16 entries)",
+    "tn_education_higher_studies.json (44 entries)",
+    "tn_education_scholarships.json (32 entries)",
+    "tn_education_vocational_skills.json (30 entries)",
+    "tn_education_exam_preparation.json (32 entries)",
+    "tn_education_age_groups_scenarios.json (23 entries)",
+    "tn_education_common_questions.json (31 entries)",
+    "tn_education_supplementary.json (28 entries)",
+    "tn_education_practical_guide.json (25 entries)",
+    "tn_education_extended.json (25 entries)"
   ],
+  "coverage": {
+    "regional_dialects": ["Chennai", "Madurai", "Coimbatore (Kongu)", "Tirunelveli"],
+    "age_groups": ["6-10", "11-14", "15-18", "19-25", "25+ working adults"],
+    "content_types": ["Q&A", "Conversational dialogues", "Myths vs Facts", "Troubleshooting", "Quick references"]
+  },
   "categories": [
     {
       "category": "school_primary",
@@ -750,6 +759,370 @@
           "question": "Exam hall-la tension vandhaal enna seivathu?",
           "answer": "Tension relief tips: 1) Deep breathing - 10 murai moochu vidunga 2) Easy questions mudhalil attempt 3) Stuck aanaal skip, later return 4) Water kudiyunga 5) Positive self-talk: 'Naan padiththirukkiren, ezhudha mudiyum' 6) Question paper muzhuvathum mudhalil padiyunga. Before exam: Proper sleep, light food, early arrival. Severe panic: Invigilator-ku sollunga, rest room break.",
           "parallel_id": "TIPS003"
+        }
+      ]
+    },
+    {
+      "category": "age_group_scenarios",
+      "category_tamil": "வயது சார்ந்த காட்சிகள்",
+      "description": "Age-specific education scenarios and dialogues (6-50 years)",
+      "pairs": [
+        {
+          "id": "AGE001_TM",
+          "language": "pure_tamil",
+          "question": "மத்திய உணவு திட்டம் (Mid-day Meal) பற்றி சொல்லுங்கள். என் பையன் சாப்பிடுவானா?",
+          "answer": "Mid-day Meal Scheme: அரசுப் பள்ளி மாணவர்களுக்கு இலவச சத்தான மதிய உணவு. Class 1-8 வரை அனைவருக்கும். Menu: அரிசி, பருப்பு, காய்கறி, முட்டை (வாரம் 3 முறை), பழம். சமையல் பள்ளியிலேயே. தரமான உணவு - மாவட்ட அதிகாரிகள் inspect செய்வார்கள். குழந்தைகள் ஆரோக்கியமாக வளர உதவும். Attendance அதிகரிக்கும். பள்ளியில் சேர்த்தால் automatic-ஆக கிடைக்கும்.",
+          "parallel_id": "AGE001"
+        },
+        {
+          "id": "AGE001_TG",
+          "language": "tanglish",
+          "question": "Madhiya Unavu Thittam (Mid-day Meal) pathi sollunga. En paiyan saappiduvana?",
+          "answer": "Mid-day Meal Scheme: Government school students-ku free healthy lunch. Class 1-8 varai anaivarukum. Menu: Rice, dal, vegetables, egg (weekly 3 times), fruit. Cooking school-layae. Quality food - district officials inspect pannuvanga. Children grow healthy. Attendance increases. School-la serthaal automatic-aa kidaikkum.",
+          "parallel_id": "AGE001"
+        },
+        {
+          "id": "AGE002_TM",
+          "language": "pure_tamil",
+          "question": "NEET-ஆ JEE-ஆ? Doctor-ஆ Engineer-ஆ? எப்படி decide பண்றது?",
+          "answer": "Decision factors: 1) Interest - Patient care vs Problem solving 2) Study style - Memory vs Logic 3) Duration - MBBS 5.5 years vs Engineering 4 years 4) Investment - Medical costlier 5) Lifestyle - Doctor on-call vs Engineer 9-5. Self-assessment: Biology enjoy பண்றீங்களா = NEET. Maths/Physics enjoy = JEE. Both attempt possible (Science stream). Shadow a doctor and engineer if possible. Final call: Your genuine interest, not family pressure.",
+          "parallel_id": "AGE002"
+        },
+        {
+          "id": "AGE002_TG",
+          "language": "tanglish",
+          "question": "NEET-aa JEE-aa? Doctor-aa Engineer-aa? Eppadi decide panrathu?",
+          "answer": "Decision factors: 1) Interest - Patient care vs Problem solving 2) Study style - Memory vs Logic 3) Duration - MBBS 5.5 years vs Engineering 4 years 4) Investment - Medical costlier 5) Lifestyle - Doctor on-call vs Engineer 9-5. Self-assessment: Biology enjoy panreengala = NEET. Maths/Physics enjoy = JEE. Both attempt possible (Science stream). Shadow a doctor and engineer if possible. Final call: Your genuine interest, not family pressure.",
+          "parallel_id": "AGE002"
+        },
+        {
+          "id": "AGE003_TM",
+          "language": "pure_tamil",
+          "question": "Board exam-ல் fail ஆயிட்டேன். Life waste ஆயிடுச்சு என்று feel ஆகுது. என்ன செய்வது?",
+          "answer": "First: You are NOT a failure! Exam failure ≠ Life failure. Many successful people failed exams: Abdul Kalam, Dhirubhai Ambani. Immediate steps: 1) Supplementary exam-க்கு prepare - 3 months time 2) Talk to parents/teacher openly 3) If severe stress - school counsellor or helpline iCALL: 9152987821. Future: Many paths to success - ITI, Diploma, NIOS, Skill training. One exam doesn't define you. Rise again stronger!",
+          "parallel_id": "AGE003"
+        },
+        {
+          "id": "AGE003_TG",
+          "language": "tanglish",
+          "question": "Board exam-la fail aayitten. Life waste aayiduchu endru feel aagudhu. Enna seivathu?",
+          "answer": "First: You are NOT a failure! Exam failure ≠ Life failure. Many successful people failed exams: Abdul Kalam, Dhirubhai Ambani. Immediate steps: 1) Supplementary exam-ku prepare - 3 months time 2) Talk to parents/teacher openly 3) If severe stress - school counsellor or helpline iCALL: 9152987821. Future: Many paths to success - ITI, Diploma, NIOS, Skill training. One exam doesn't define you. Rise again stronger!",
+          "parallel_id": "AGE003"
+        },
+        {
+          "id": "AGE004_TM",
+          "language": "pure_tamil",
+          "question": "வேலைக்கு போறேன், ஆனா degree complete பண்ணல. இப்போ படிக்க முடியுமா?",
+          "answer": "100% possible! Options: 1) IGNOU - most flexible, exams twice yearly 2) Tamil Nadu Open University (TNOU) - Tamil medium available 3) University of Madras Distance 4) Evening colleges in Chennai 5) Online degrees - recognized universities. Process: Work continues + study weekends + exams during leave. Duration: UG 3 years, PG 2 years. Benefits: Promotion eligibility, government job apply, self-satisfaction. Many working people complete degrees in 30s, 40s. Never too late!",
+          "parallel_id": "AGE004"
+        },
+        {
+          "id": "AGE004_TG",
+          "language": "tanglish",
+          "question": "Velaiku poren, aanaa degree complete pannala. Ippo padikka mudiyumaa?",
+          "answer": "100% possible! Options: 1) IGNOU - most flexible, exams twice yearly 2) Tamil Nadu Open University (TNOU) - Tamil medium available 3) University of Madras Distance 4) Evening colleges in Chennai 5) Online degrees - recognized universities. Process: Work continues + study weekends + exams during leave. Duration: UG 3 years, PG 2 years. Benefits: Promotion eligibility, government job apply, self-satisfaction. Many working people complete degrees in 30s, 40s. Never too late!",
+          "parallel_id": "AGE004"
+        }
+      ]
+    },
+    {
+      "category": "common_questions_faqs",
+      "category_tamil": "அடிக்கடி கேட்கப்படும் கேள்விகள்",
+      "description": "Frequently asked questions, myths vs facts, and troubleshooting",
+      "pairs": [
+        {
+          "id": "FAQ001_TM",
+          "language": "pure_tamil",
+          "question": "Plus One admission-க்கு எப்போது apply பண்ணணும்?",
+          "answer": "Timeline: 10th result வந்த பிறகு 1 week-ல் notification. Usually May-June. Online application: www.tnschooleducation.in. Documents ready: 10th marks card, TC, community certificate, income certificate, Aadhaar. Choice filling: Preferred schools + subjects. Random allocation for government schools. Cutoff based for popular schools. Don't miss deadline - late applications not accepted.",
+          "parallel_id": "FAQ001"
+        },
+        {
+          "id": "FAQ001_TG",
+          "language": "tanglish",
+          "question": "Plus One admission-ku eppo apply pannanum?",
+          "answer": "Timeline: 10th result vandha piragu 1 week-la notification. Usually May-June. Online application: www.tnschooleducation.in. Documents ready: 10th marks card, TC, community certificate, income certificate, Aadhaar. Choice filling: Preferred schools + subjects. Random allocation for government schools. Cutoff based for popular schools. Don't miss deadline - late applications not accepted.",
+          "parallel_id": "FAQ001"
+        },
+        {
+          "id": "FAQ002_TM",
+          "language": "pure_tamil",
+          "question": "Myth: Government school-ல் படிச்சா success ஆக முடியாது",
+          "answer": "Fact: பல IAS officers, Doctors, Engineers government school products. 7.5% reservation போன பிறகு government school NEET toppers அதிகரித்துள்ளனர். Quality of education depends on student's effort + teacher dedication. Many district toppers from government schools. Free education + scholarships = excellent opportunity.",
+          "parallel_id": "FAQ002"
+        },
+        {
+          "id": "FAQ002_TG",
+          "language": "tanglish",
+          "question": "Myth: Government school-la padichaa success aaga mudiyaadhu",
+          "answer": "Fact: Pala IAS officers, Doctors, Engineers government school products. 7.5% reservation pona piragu government school NEET toppers athigaritthullanar. Quality depends on student effort + teacher dedication. Many district toppers from government schools. Free education + scholarships = excellent opportunity.",
+          "parallel_id": "FAQ002"
+        },
+        {
+          "id": "FAQ003_TM",
+          "language": "pure_tamil",
+          "question": "Online application submit ஆகல, error வருது",
+          "answer": "Common fixes: 1) Clear browser cache, try incognito mode 2) Different browser (Chrome/Firefox) 3) Check file size limits (usually <200KB photos, <500KB docs) 4) PDF/JPG format correct? 5) All mandatory fields filled? 6) Internet stable? 7) Deadline passed? 8) Server busy - try late night. Still failing: Screenshot error, contact helpline. Alternative: Try from e-Sevai centre - they have dedicated lines.",
+          "parallel_id": "FAQ003"
+        },
+        {
+          "id": "FAQ003_TG",
+          "language": "tanglish",
+          "question": "Online application submit aagala, error varudhu",
+          "answer": "Common fixes: 1) Clear browser cache, try incognito mode 2) Different browser (Chrome/Firefox) 3) Check file size limits (usually <200KB photos, <500KB docs) 4) PDF/JPG format correct? 5) All mandatory fields filled? 6) Internet stable? 7) Deadline passed? 8) Server busy - try late night. Still failing: Screenshot error, contact helpline. Alternative: Try from e-Sevai centre - they have dedicated lines.",
+          "parallel_id": "FAQ003"
+        },
+        {
+          "id": "FAQ004_TM",
+          "language": "pure_tamil",
+          "question": "Scholarship apply பண்ணேன், status எப்படி check பண்றது?",
+          "answer": "Status check methods: 1) NSP login - dashboard shows status 2) PFMS portal - payment tracking 3) State portal - respective department 4) SMS alerts (if registered) 5) College scholarship cell. Common statuses: Pending verification, Under process, Sanctioned, Disbursed, Rejected. Rejected: Check defect list, re-apply with correct documents. Timeline: 2-6 months from application. Grievance: Portal helpdesk option.",
+          "parallel_id": "FAQ004"
+        },
+        {
+          "id": "FAQ004_TG",
+          "language": "tanglish",
+          "question": "Scholarship apply pannen, status eppadi check panrathu?",
+          "answer": "Status check methods: 1) NSP login - dashboard shows status 2) PFMS portal - payment tracking 3) State portal - respective department 4) SMS alerts (if registered) 5) College scholarship cell. Common statuses: Pending verification, Under process, Sanctioned, Disbursed, Rejected. Rejected: Check defect list, re-apply with correct documents. Timeline: 2-6 months from application. Grievance: Portal helpdesk option.",
+          "parallel_id": "FAQ004"
+        }
+      ]
+    },
+    {
+      "category": "practical_student_guide",
+      "category_tamil": "நடைமுறை மாணவர் வழிகாட்டி",
+      "description": "Hostel life, finances, placements, and practical guidance",
+      "pairs": [
+        {
+          "id": "PRAC001_TM",
+          "language": "pure_tamil",
+          "question": "College hostel-ல் முதல் முறை stay பண்றேன். என்ன எடுத்துக்கணும்?",
+          "answer": "Essential items: 1) Bedding - mattress, pillow, blanket 2) Bucket, mug, toiletries 3) Clothes + hangers 4) Study materials, stationery 5) Lock for cupboard 6) Electric kettle (if allowed) 7) First aid basics 8) Important documents photocopies 9) Passport size photos 10) Emergency contact numbers. Don't bring: Costly items, too many clothes initially. Adjust first, buy locally if needed.",
+          "parallel_id": "PRAC001"
+        },
+        {
+          "id": "PRAC001_TG",
+          "language": "tanglish",
+          "question": "College hostel-la mudhal murai stay panren. Enna eduthukkannum?",
+          "answer": "Essential items: 1) Bedding - mattress, pillow, blanket 2) Bucket, mug, toiletries 3) Clothes + hangers 4) Study materials, stationery 5) Lock for cupboard 6) Electric kettle (if allowed) 7) First aid basics 8) Important documents photocopies 9) Passport size photos 10) Emergency contact numbers. Don't bring: Costly items, too many clothes initially. Adjust first, buy locally if needed.",
+          "parallel_id": "PRAC001"
+        },
+        {
+          "id": "PRAC002_TM",
+          "language": "pure_tamil",
+          "question": "Campus placement-க்கு எப்படி prepare ஆவது?",
+          "answer": "Placement preparation: 1) Aptitude - RS Aggarwal, IndiaBix daily 2) Technical - Core subjects revision 3) Coding - HackerRank, LeetCode (for IT) 4) Resume - 1 page, achievement focused 5) Communication - Mock interviews practice 6) GD - Current affairs, articulation 7) HR questions - self-intro, strengths, goals. Timeline: Start 6 months before placement season. CGPA matters - maintain above 7 minimum. Internships boost resume significantly.",
+          "parallel_id": "PRAC002"
+        },
+        {
+          "id": "PRAC002_TG",
+          "language": "tanglish",
+          "question": "Campus placement-ku eppadi prepare aavadhu?",
+          "answer": "Placement preparation: 1) Aptitude - RS Aggarwal, IndiaBix daily 2) Technical - Core subjects revision 3) Coding - HackerRank, LeetCode (for IT) 4) Resume - 1 page, achievement focused 5) Communication - Mock interviews practice 6) GD - Current affairs, articulation 7) HR questions - self-intro, strengths, goals. Timeline: Start 6 months before placement season. CGPA matters - maintain above 7 minimum. Internships boost resume significantly.",
+          "parallel_id": "PRAC002"
+        },
+        {
+          "id": "PRAC003_TM",
+          "language": "pure_tamil",
+          "question": "College-ல் stress அதிகமா இருக்கு. Handle பண்றது எப்படி?",
+          "answer": "Stress management: 1) Sleep 7-8 hours - non-negotiable 2) Exercise 30 min daily - even walking helps 3) Healthy food - avoid junk during stress 4) Break big tasks into small 5) Talk to friends, family 6) College counsellor - free service 7) Hobbies continue - music, sports, art 8) Social media break 9) Deep breathing when overwhelmed 10) Professional help if severe - no shame. Remember: Grades ≠ Self-worth. You matter more than marks.",
+          "parallel_id": "PRAC003"
+        },
+        {
+          "id": "PRAC003_TG",
+          "language": "tanglish",
+          "question": "College-la stress athigamaa irukku. Handle panrathu eppadi?",
+          "answer": "Stress management: 1) Sleep 7-8 hours - non-negotiable 2) Exercise 30 min daily - even walking helps 3) Healthy food - avoid junk during stress 4) Break big tasks into small 5) Talk to friends, family 6) College counsellor - free service 7) Hobbies continue - music, sports, art 8) Social media break 9) Deep breathing when overwhelmed 10) Professional help if severe - no shame. Remember: Grades ≠ Self-worth. You matter more than marks.",
+          "parallel_id": "PRAC003"
+        },
+        {
+          "id": "PRAC004_TM",
+          "language": "pure_tamil",
+          "question": "Ragging face பண்றேன். என்ன செய்யணும்?",
+          "answer": "Immediate action: 1) Don't comply with unreasonable demands 2) Note names, time, place 3) Report to Anti-Ragging Committee (every college has) 4) Online complaint: www.antiragging.in 5) Helpline: 1800-180-5522 (toll-free) 6) College principal/warden 7) Police if physical harm 8) UGC complaint portal. Protection: Your identity can be kept confidential. Punishment: Expulsion, criminal case against raggers. Don't suffer silently!",
+          "parallel_id": "PRAC004"
+        },
+        {
+          "id": "PRAC004_TG",
+          "language": "tanglish",
+          "question": "Ragging face panren. Enna seiyanum?",
+          "answer": "Immediate action: 1) Don't comply with unreasonable demands 2) Note names, time, place 3) Report to Anti-Ragging Committee (every college has) 4) Online complaint: www.antiragging.in 5) Helpline: 1800-180-5522 (toll-free) 6) College principal/warden 7) Police if physical harm 8) UGC complaint portal. Protection: Your identity can be kept confidential. Punishment: Expulsion, criminal case against raggers. Don't suffer silently!",
+          "parallel_id": "PRAC004"
+        }
+      ]
+    },
+    {
+      "category": "supplementary_specialized",
+      "category_tamil": "சிறப்புப் படிப்புகள் மற்றும் மாவட்ட தகவல்",
+      "description": "Specialized courses, district-specific info, and regional dialects",
+      "pairs": [
+        {
+          "id": "SPEC001_TM",
+          "language": "pure_tamil",
+          "question": "Hotel Management படிப்பு தமிழ்நாட்டில் எங்கே உள்ளது?",
+          "answer": "Top institutes: 1) IHM Chennai - Central Government 2) IHM Guruvayur - Private 3) SIHM Madurai - State 4) SRM Hotel School. Admission: NCHM JEE entrance + counselling. Eligibility: 12th pass 45-50%. Duration: 3 years BSc HM. Fees: Govt ₹50,000-80,000/year, Private ₹1-3 lakh/year. Jobs: Hotels, airlines, cruise ships, resorts. Good starting salary: ₹20,000-35,000.",
+          "parallel_id": "SPEC001"
+        },
+        {
+          "id": "SPEC001_TG",
+          "language": "tanglish",
+          "question": "Hotel Management padippu Tamil Nadu-la enge ulladhu?",
+          "answer": "Top institutes: 1) IHM Chennai - Central Government 2) IHM Guruvayur - Private 3) SIHM Madurai - State 4) SRM Hotel School. Admission: NCHM JEE entrance + counselling. Eligibility: 12th pass 45-50%. Duration: 3 years BSc HM. Fees: Govt ₹50,000-80,000/year, Private ₹1-3 lakh/year. Jobs: Hotels, airlines, cruise ships, resorts. Good starting salary: ₹20,000-35,000.",
+          "parallel_id": "SPEC001"
+        },
+        {
+          "id": "SPEC002_TM",
+          "language": "pure_tamil",
+          "question": "Chennai-ல் free coaching centres எங்கே இருக்கு?",
+          "answer": "Free coaching Chennai: 1) Government Free Coaching Centre - Nungambakkam (UPSC, TNPSC) 2) Adi Dravidar Welfare coaching - Saidapet 3) BC/MBC coaching - Egmore 4) IAS Academy free batches - Anna Salai 5) Employment Exchange coaching - various locations. Apply: Respective department websites. Selection: Merit + income based. Also: Marina Library study hall, Connemara Library resources free.",
+          "parallel_id": "SPEC002"
+        },
+        {
+          "id": "SPEC002_TG",
+          "language": "tanglish",
+          "question": "Chennai-la free coaching centres enge irukku?",
+          "answer": "Free coaching Chennai: 1) Government Free Coaching Centre - Nungambakkam (UPSC, TNPSC) 2) Adi Dravidar Welfare coaching - Saidapet 3) BC/MBC coaching - Egmore 4) IAS Academy free batches - Anna Salai 5) Employment Exchange coaching - various locations. Apply: Respective department websites. Selection: Merit + income based. Also: Marina Library study hall, Connemara Library resources free.",
+          "parallel_id": "SPEC002"
+        },
+        {
+          "id": "SPEC003_TM",
+          "language": "pure_tamil",
+          "question": "Madurai region-ல் top engineering colleges எவை?",
+          "answer": "Top engineering colleges Madurai region: 1) Thiagarajar College of Engineering (TCE) - Autonomous, top ranked 2) Government College of Engineering Tirunelveli 3) National Engineering College Kovilpatti 4) Mepco Schlenk Madurai 5) PSNA College of Engineering Dindigul. Admission: TNEA counselling. TCE cutoff high - 195+ for popular branches. Government colleges affordable - ₹50,000/year approx.",
+          "parallel_id": "SPEC003"
+        },
+        {
+          "id": "SPEC003_TG",
+          "language": "tanglish",
+          "question": "Madurai region-la top engineering colleges evai?",
+          "answer": "Top engineering colleges Madurai region: 1) Thiagarajar College of Engineering (TCE) - Autonomous, top ranked 2) Government College of Engineering Tirunelveli 3) National Engineering College Kovilpatti 4) Mepco Schlenk Madurai 5) PSNA College of Engineering Dindigul. Admission: TNEA counselling. TCE cutoff high - 195+ for popular branches. Government colleges affordable - ₹50,000/year approx.",
+          "parallel_id": "SPEC003"
+        },
+        {
+          "id": "DIAL001_TM",
+          "language": "pure_tamil",
+          "question": "College-ku poga budget illa da. Free-ya padikka mudiyuma? (Tirunelveli dialect)",
+          "answer": "Mudiyum da! Government colleges-la fees romba kammi - yearly ₹1000-5000 only. Scholarship apply pannu - BC/MBC/SC/ST full scholarship kidaikkum. Distance education - IGNOU, TNOU almost free. Skill training - TNSDC 100% free. Padikka aasai irundhaa vazhi irukku!",
+          "parallel_id": "DIAL001"
+        },
+        {
+          "id": "DIAL001_TG",
+          "language": "tanglish",
+          "question": "College-ku poga budget illa da. Free-ya padikka mudiyuma? (Tirunelveli dialect)",
+          "answer": "Mudiyum da! Government colleges-la fees romba kammi - yearly ₹1000-5000 only. Scholarship apply pannu - BC/MBC/SC/ST full scholarship kidaikkum. Distance education - IGNOU, TNOU almost free. Skill training - TNSDC 100% free. Padikka aasai irundhaa vazhi irukku!",
+          "parallel_id": "DIAL001"
+        }
+      ]
+    },
+    {
+      "category": "extended_coverage",
+      "category_tamil": "விரிவாக்கப்பட்ட உள்ளடக்கம்",
+      "description": "Special education, sports, arts, dropout prevention, and emergency scenarios",
+      "pairs": [
+        {
+          "id": "EXT001_TM",
+          "language": "pure_tamil",
+          "question": "குறைபாடுள்ள குழந்தைகளுக்கான சிறப்புப் பள்ளிகள் தமிழ்நாட்டில் எங்கு உள்ளன?",
+          "answer": "ஒவ்வொரு மாவட்டத்திலும் அரசு சிறப்புப் பள்ளிகள் உள்ளன. NIEPMD (ஆடையாறு), செவித்திறன் குறைபாடுள்ளோருக்கான பள்ளிகள், பார்வையற்றோர் பள்ளிகள், மனவளர்ச்சி குறைபாடுள்ளோருக்கான பள்ளிகள் இயங்குகின்றன. அனைத்தும் இலவசம்.",
+          "parallel_id": "EXT001"
+        },
+        {
+          "id": "EXT001_TG",
+          "language": "tanglish",
+          "question": "Kuraipaaduulla kuzhanthaikalukkana sirappu pallikal Tamil Naattil engu ullan?",
+          "answer": "Ovvoru maavattathilum arasu sirappu pallikal ullan. NIEPMD (Adyar), hearing impaired schools, visually impaired schools, mentally challenged schools ellam irukku. Ellame free.",
+          "parallel_id": "EXT001"
+        },
+        {
+          "id": "EXT002_TM",
+          "language": "pure_tamil",
+          "question": "படிப்பை பாதியில் நிறுத்தியவர்கள் மீண்டும் படிக்க என்ன வழி?",
+          "answer": "NIOS (National Institute of Open Schooling) மூலம் 10th, 12th படிக்கலாம். Tamil Nadu Open University-ல் degree பெறலாம். Bridge course, evening colleges, distance education options உள்ளன. வயது வரம்பு இல்லை.",
+          "parallel_id": "EXT002"
+        },
+        {
+          "id": "EXT002_TG",
+          "language": "tanglish",
+          "question": "Padippa paathila niruthinavar meedum padikka enna vazhi?",
+          "answer": "NIOS (National Institute of Open Schooling) moolam 10th, 12th padikkalam. TNOU-la degree vaangalam. Bridge course, evening colleges, distance education irukku. Age limit illa.",
+          "parallel_id": "EXT002"
+        },
+        {
+          "id": "EXT003_TM",
+          "language": "pure_tamil",
+          "question": "Sports quota-வில் college admission வாங்க என்ன தகுதி வேண்டும்?",
+          "answer": "State/National level-ல் participate பண்ணியிருக்கணும். Sports certificate (SAI/Association certified) வேண்டும். District, State, National எந்த level-ல் play பண்ணியிருந்தாலும் quota-க்கு apply பண்ணலாம். Trials நடக்கும்.",
+          "parallel_id": "EXT003"
+        },
+        {
+          "id": "EXT003_TG",
+          "language": "tanglish",
+          "question": "Sports quota-la college admission vaanga enna thaguthi venum?",
+          "answer": "State/National level-la participate panniyirukkanum. Sports certificate (SAI/Association certified) venum. District, State, National - edha level-la play panniyirundhalum quota-kku apply pannalam. Trials nadakkum.",
+          "parallel_id": "EXT003"
+        },
+        {
+          "id": "EXT004_TM",
+          "language": "pure_tamil",
+          "question": "Bharatanatyam, Carnatic music படிக்க government institution இருக்கா?",
+          "answer": "Tamil Nadu Music and Fine Arts University, Kalakshetra Foundation (Chennai), Government Music Colleges உள்ளன. Diploma, Degree courses available. Fee மிகக் குறைவு. Talented students-க்கு scholarship உண்டு.",
+          "parallel_id": "EXT004"
+        },
+        {
+          "id": "EXT004_TG",
+          "language": "tanglish",
+          "question": "Bharatanatyam, Carnatic music padikka government institution irukka?",
+          "answer": "Tamil Nadu Music and Fine Arts University, Kalakshetra Foundation (Chennai), Government Music Colleges irukku. Diploma, Degree courses available. Fee miga koraivau. Talented students-kku scholarship undu.",
+          "parallel_id": "EXT004"
+        },
+        {
+          "id": "EXT005_TM",
+          "language": "pure_tamil",
+          "question": "என் பையன்/பொண்ணு career choice-ஐ accept பண்ண முடியல. என்ன செய்வது?",
+          "answer": "Generation gap bridge: 1) Listen to their reasons - genuinely try to understand 2) Research that field - income potential, growth, stability 3) Meet professionals in that career - get real picture 4) Trial period suggestion - internship, shadowing 5) Your fears express - but don't impose 6) Compromise explore - related but acceptable field 7) Remember: It's their life to live. Reality: Many non-traditional careers successful today. Trust your upbringing - they'll be fine!",
+          "parallel_id": "EXT005"
+        },
+        {
+          "id": "EXT005_TG",
+          "language": "tanglish",
+          "question": "En paiyan/ponnu career choice-a accept panna mudiyala. Enna seivathu?",
+          "answer": "Generation gap bridge: 1) Listen to their reasons - genuinely try to understand 2) Research that field - income potential, growth, stability 3) Meet professionals in that career - get real picture 4) Trial period suggestion - internship, shadowing 5) Your fears express - but don't impose 6) Compromise explore - related but acceptable field 7) Remember: It's their life to live. Reality: Many non-traditional careers successful today. Trust your upbringing - they'll be fine!",
+          "parallel_id": "EXT005"
+        }
+      ]
+    },
+    {
+      "category": "helpline_contacts",
+      "category_tamil": "உதவி எண்கள்",
+      "description": "Important education helplines and websites",
+      "pairs": [
+        {
+          "id": "HELP001_TM",
+          "language": "pure_tamil",
+          "question": "கல்வி தொடர்பான முக்கிய helpline எண்கள் என்ன?",
+          "answer": "முக்கிய உதவி எண்கள்: 1) TN School Education Helpline: 1800-599-9880 (Toll-free) 2) Higher Education Helpline: 044-28524904 3) NEET Helpline: 011-40759000 4) TNPSC Helpline: 044-25332833 5) NSP Scholarship Helpline: 0120-6619540 6) Student Mental Health (iCALL): 9152987821 7) Women Helpline: 181 8) Child Helpline: 1098 9) Anti-Ragging: 1800-180-5522",
+          "parallel_id": "HELP001"
+        },
+        {
+          "id": "HELP001_TG",
+          "language": "tanglish",
+          "question": "Education related important helpline numbers enna?",
+          "answer": "Important helplines: 1) TN School Education: 1800-599-9880 (Toll-free) 2) Higher Education: 044-28524904 3) NEET: 011-40759000 4) TNPSC: 044-25332833 5) NSP Scholarship: 0120-6619540 6) Student Mental Health (iCALL): 9152987821 7) Women Helpline: 181 8) Child Helpline: 1098 9) Anti-Ragging: 1800-180-5522",
+          "parallel_id": "HELP001"
+        },
+        {
+          "id": "HELP002_TM",
+          "language": "pure_tamil",
+          "question": "முக்கிய education websites என்ன?",
+          "answer": "முக்கிய websites: 1) TN School Education: www.tnschools.gov.in 2) TN Higher Education: www.tndhe.gov.in 3) TNEA Engineering: www.tneaonline.org 4) TNPSC: www.tnpsc.gov.in 5) NSP Scholarship: www.scholarships.gov.in 6) NEET NTA: www.neet.nta.nic.in 7) IGNOU Distance: www.ignou.ac.in 8) Skill Training: www.tnskill.tn.gov.in",
+          "parallel_id": "HELP002"
+        },
+        {
+          "id": "HELP002_TG",
+          "language": "tanglish",
+          "question": "Important education websites enna?",
+          "answer": "Important websites: 1) TN School Education: www.tnschools.gov.in 2) TN Higher Education: www.tndhe.gov.in 3) TNEA Engineering: www.tneaonline.org 4) TNPSC: www.tnpsc.gov.in 5) NSP Scholarship: www.scholarships.gov.in 6) NEET NTA: www.neet.nta.nic.in 7) IGNOU Distance: www.ignou.ac.in 8) Skill Training: www.tnskill.tn.gov.in",
+          "parallel_id": "HELP002"
         }
       ]
     }
