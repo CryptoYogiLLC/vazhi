@@ -1,0 +1,2410 @@
+[
+  {
+    "instruction": "வீட்டு ஓனர் நம்மள திட்டுறாரு, என்னா பண்றது?",
+    "output": "திட்டுறது harassment-தான். Recording பண்ணி வச்சுக்கோங்க (legal in TN). Police complaint போடலாம் - IPC 504 (intentional insult). Women/SC/ST-க்கு additional protection laws இருக்கு. Advocate-கிட்ட consult பண்ணுங்க.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA032_TM"
+  },
+  {
+    "instruction": "'UAE எக்ஸ்சேஞ்ச் லாட்டரி - நீங்கள் $1 மில்லியன் வென்றீர்கள்' என்று ஈமெயில் வந்தது. நம்பலாமா?",
+    "output": "இது international lottery scam. நீங்கள் வாங்காத டிக்கெட்டுக்கு பரிசு கிடைக்காது. பாஸ்போர்ட் அல்லது வங்கி தகவல் கொடுக்காதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "lottery_scam",
+    "id": "LS009"
+  },
+  {
+    "instruction": "Advance thirumba thara ethanai naal time irukku?",
+    "output": "Sattapadi veedu kaali seydha 30 days-kkul advance thirumba thara venum. Delay aanaal 6% interest-udan thara venum. Idhu 2017 Act-la clearly mention aagiyirukku.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA008_TG"
+  },
+  {
+    "instruction": "e-NAM என்றால் என்ன? எப்படி பயனடைவது?",
+    "output": "Electronic National Agriculture Market. Online trading platform - இந்தியா முழுவதும் விற்கலாம். Benefit: நல்ல விலை கிடைக்கும், middlemen குறையும், transparent bidding. Register: enam.gov.in, அருகிலுள்ள e-NAM mandi. Process: Produce → Quality testing → Online auction → Highest bidder wins → Payment to bank. TN-ல்: UZHAVAR SANDHAIS connected. Quality Parameters: Moisture, foreign matter, damaged grains-க்கு grade.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "agriculture_schemes",
+    "id": "AGR009"
+  },
+  {
+    "instruction": "'Tirupati TTD la irundhu pesuren ayya, special Hundi donation ku select aairukkeenga, 5000 contribution pannina VIP darshan + prasadam' nu call vandhudhu.",
+    "output": "TTD random calls panni donation kekaadhu ayya. 'VIP darshan for donation' official scheme illa. Phone donation scam - money pogum, darshan varaadhu. ttdevasthanams.ap.gov.in - official website only. Phone calls ignore pannunga.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS019"
+  },
+  {
+    "instruction": "Consumer case evvalavu naal aagum?",
+    "output": "Sattapadi 3-5 months-la mudiikkanum. Aanaal practical-aa 6 months - 2 years aagalam. Simple cases faster. Mediation option irundhaal 30-60 days-la settle aagalam. e-Filing cases faster-aa process aagum.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS021_TG"
+  },
+  {
+    "instruction": "Income Certificate எப்படி பெறுவது?",
+    "output": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Aadhaar, ration card, self-declaration of income, salary slip (if employed). VAO enquiry at home possible. Time: 7-15 days. Fee: ₹20. Valid for 6 months to 1 year.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA011"
+  },
+  {
+    "instruction": "Right to be forgotten என்றால் என்ன?",
+    "output": "Online-ல் உள்ள personal information delete செய்ய request பண்ணும் right. DPDP Act 2023-ல் provision உண்டு. Google search results remove: Google legal removal request. Social media: Platform privacy settings. Court orders மூலமும் removal possible.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "cyber_laws",
+    "id": "CYBE012_TM"
+  },
+  {
+    "instruction": "Bank account-ல காசு போச்சு, யாரோ OTP வாங்கி எடுத்துட்டாங்க",
+    "output": "உடனே: 1) Bank-க்கு call - 24/7 helpline, account freeze கேளுங்க, 2) 1930 helpline call, 3) Net banking-ல் transactions block, 4) ATM card block. 3 days-க்குள் report பண்ணா liability குறையும். Debit card insurance check பண்ணுங்க.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "cyber_laws",
+    "id": "CYBE021_TM"
+  },
+  {
+    "instruction": "Expired product vitraal enna complaint seyyalam?",
+    "output": "FSSAI complaint: fssai.gov.in or Food Safety Officer (District)-kku. Consumer forum-la compensation case. Police complaint (IPC 273 - selling adulterated food). Seller-kku fine + license cancellation aagalam. Product, bill vaichirunga.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS032_TG"
+  },
+  {
+    "instruction": "MGNREGA endraal enna? Velai eppadi peruvadhu?",
+    "output": "100-day work guarantee for rural families. Eligibility: Rural household, above 18 years, ready for manual labor. Job Card: Apply at Gram Panchayat, get card in 15 days. Wage: ₹294/day in TN (varies by state). Works: Water conservation, roads, agriculture, tree planting. If no work in 15 days: Unemployment allowance. Wages: To bank account within 15 days.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "rural_development",
+    "id": "RD002"
+  },
+  {
+    "instruction": "Pen students-ku enna special schemes irukku?",
+    "output": "**Girl Students Special Schemes:**\n\n**1. CM Girl Child Protection:** ₹50,000 FD at birth, ₹1.5L+ at 18\n\n**2. Free Education:** Up to PG in Govt institutions\n\n**3. Moovalur Ramamirtham:** ₹1,000/month for UG girls\n\n**4. Free Bicycle:** Class 11-12 girls\n\n**5. CBSE Udaan:** Free engineering prep for girls\n\n**6. Pragati (AICTE):** ₹50,000/year for tech education\n\n**7. Begum Hazrat Mahal:** Minority girls - ₹5,000-12,000\n\n**8. Free Bus Travel:** All women free in ordinary buses\n\n**Apply:** tneservices.tn.gov.in or through school/college",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "school_education",
+    "id": "SCHO017_TG"
+  },
+  {
+    "instruction": "Call vandhudhu 'Police welfare fund contribution audit. Pay 2000 to clear discrepancy.' Welfare fund la issue irukka?",
+    "output": "Police welfare contributions deducted at source from salary. No separate payments for 'audit clearance'. Such calls are scams targeting police personnel. Check with your station accounts or district welfare office for any actual issues.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS084"
+  },
+  {
+    "instruction": "'Instant loan 5 minutes-ல் approval, no documents needed' என்று app install செய்ய சொல்கிறார்கள். Safe-ஆ?",
+    "output": "Unknown loan apps மிகவும் dangerous. High interest, harassment, photos misuse செய்வார்கள். RBI registered NBFC apps மட்டுமே பயன்படுத்துங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "loan_scam",
+    "id": "LN001"
+  },
+  {
+    "instruction": "Golden hour endraal enna? Adhula hospital poganumaa?",
+    "output": "Golden hour = First 60 minutes after trauma/heart attack. Critical because: 1) Brain damage starts in minutes without oxygen, 2) Bleeding control crucial, 3) Heart attack - early treatment = more heart saved, 4) Trauma - internal bleeding stops. Action: 1) Call 108 immediately, 2) Don't move spine injury victims, 3) CPR if no pulse (if trained), 4) Control visible bleeding. Nearest hospital first - don't travel far.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH034_TG"
+  },
+  {
+    "instruction": "திருவள்ளுவர் தினம் எப்போது கொண்டாடப்படுகிறது?",
+    "output": "தை மாதம் 2-ம் தேதி (ஜனவரி 15 அல்லது 16). பொங்கலுக்கு அடுத்த நாள். Tamil Nadu-வில் government holiday. Schools-ல் Thirukkural competitions நடக்கும்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT033_TM"
+  },
+  {
+    "instruction": "'NEET answer key - 100% correct! Pay 5000 for early access' - Telegram channel offer. Buy பண்ணலாமா?",
+    "output": "Scam! Official answer key NTA release பண்ணும் free-ஆ. 'Early access' என்று ஏமாத்துறாங்க. Exam result time-ல anxiety exploit பண்றாங்க. Official websites மட்டும் trust பண்ணுங்க. Paid answer keys எல்லாம் fraud.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS032"
+  },
+  {
+    "instruction": "QR code scan panna panam poachu (reverse scam). Special recovery procedure irukka?",
+    "output": "Why tricky: YOU authorized transaction (entered PIN), bank sees as 'legitimate'. But still possible: Step 1 (within 30 min): Call bank - 'Fraudulently induced to make payment', request beneficiary bank freeze. Step 2: Contact beneficiary bank from UPI ID (@oksbi = SBI, @okicici = ICICI). Step 3: FIR - Section 420 IPC (Cheating by inducement), Section 66D IT Act. Step 4: Collect QR code image, chat where asked to scan. Legal argument: 'Consent obtained by fraud is no consent'. Recovery: 20-30% if reported within 1 hour.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "recovery_reporting_procedures",
+    "id": "RR017"
+  },
+  {
+    "instruction": "Blood transfusion-la wrong blood koduthaanga - action enna?",
+    "output": "Serious negligence! Life-threatening error. Blood bank + hospital liable. Action: 1) Medical records + blood bank records collect, 2) Consumer Forum, 3) Criminal case if death/serious injury, 4) Blood bank license complaint (State Blood Transfusion Council). Protocols violated: Blood matching, cross-matching, identification. Compensation: High - can be fatal mistake.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "medical_negligence",
+    "id": "HLTH054_TG"
+  },
+  {
+    "instruction": "Lok Adalat என்றால் என்ன?",
+    "output": "Alternative dispute resolution forum - Court fee இல்லை, compromise மூலம் settlement. Motor accident claims, labour disputes, matrimonial (except divorce), cheque bounce, compoundable offences - இவற்றை handle செய்வார்கள். Award final - appeal இல்லை.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "criminal_basics",
+    "id": "CRIM018_TM"
+  },
+  {
+    "instruction": "Email vandhuchu 'Your Jira license expiring, IT head approved renewal. Click to pay 50,000 from company account.' IT head name mention pannirukkanga, process pannalama?",
+    "output": "Business Email Compromise (BEC) attack! Scammers research company structure, impersonate executives. Real renewals go through procurement, not random emails. Verify with IT head directly through phone/internal chat. Never pay based on email alone.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS010"
+  },
+  {
+    "instruction": "தமிழ்நாட்டில் BBA/BCA சேர்க்கை எப்படி நடக்கிறது?",
+    "output": "+2 ஏதேனும் group pass. அரசு கல்லூரிகளுக்கு: TNGASA counselling மூலம். தனியார் கல்லூரிகள்: நேரடி விண்ணப்பம். BBA - Business படிப்பு, BCA - Computer படிப்பு. படிப்பு காலம்: 3 ஆண்டுகள். அரசு கல்லூரி கட்டணம்: ₹3,000-8,000/ஆண்டு. Anna University affiliated colleges பல உள்ளன.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH010_TM"
+  },
+  {
+    "instruction": "Ration card complaint enge koduppadhu?",
+    "output": "Options: 1) Ration shop-la complaint book, 2) Taluk Supply Officer, 3) District Supply Officer, 4) Food helpline: 1967, 5) TNCSC website. Issues: Fake entries, quantity shortage, quality issues, dealer misbehavior. Aadhaar seeding problems: UIDAI + DSO.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "rti_government",
+    "id": "RTI_011_TG"
+  },
+  {
+    "instruction": "Nalla arasanin / leader-oda gunangal enna endru Valluvar solkiraar?",
+    "output": "Kural: 'Muraiseidhu kaappaatrum mannavan makkadku iraiyendru vaikkap padum'. Neeyaamaaga nadandhu, makkalai kaappaatrum arasan kadavulukkku samam. Melum: 'Kodaiyali sengol kudiyombal naangum udaiyaanaam vendharkku oli'. Kodai, arul, needhi, makkal nalam - indha naangum ulla leader sirandhavar.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT080_TG"
+  },
+  {
+    "instruction": "TN Mid-Day Meal Scheme endraal enna?",
+    "output": "Free nutritious lunch for Govt school students. Coverage: Class 1-10 (Govt + Aided schools). Menu: Rice/Variety rice + Sambar + Egg/Banana + Boiled Egg (weekly). Morning: Nutrition breakfast (select areas). Nutrition: 450-700 calories, 12-20g protein. Aim: Increase school attendance, Nutrition, Prevent dropouts. Quality: Monthly inspection, Nutritionist supervision. Anganwadi: Integrated Child Development Services for 0-6 years kids.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "tn_ration_food",
+    "id": "TNR004"
+  },
+  {
+    "instruction": "Thiruvalluvar siddharaaga karudhapadugiraaraa?",
+    "output": "Thiruvalluvar Siddhargaloda pattiyalil silaraal serkkapadugirar. Gnaani endra vagayil Siddhar pondra status. Aanaal Thirukkural maruththuvam, rasavaadham pondra Siddhar subjects patri pesavillai - ethics, morality, worldly wisdom patri pesugiradhu. Enavae 'Gnaani' endru solvathu more appropriate. Siddhargaloda spiritual depth, Thiruvalluvaroda practical wisdom - irandaum complementary. Tamil gnnaanathoda iru mugangal!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT194_TG"
+  },
+  {
+    "instruction": "என்கம்பிரன்ஸ் சான்று (EC) எங்கே பெறுவது?",
+    "output": "ஆன்லைன்: tnreginet.gov.in (1987 முதல் கிடைக்கும்). நேரடி: சார்பதிவாளர் அலுவலகம். கட்டணம்: ஒவ்வொரு வருடத்திற்கும் ₹15. காலம்: ஆன்லைனில் உடனடி, நேரடியாக 3-5 நாட்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "bilingual_govt_procedures",
+    "id": "BGP007"
+  },
+  {
+    "instruction": "ESI card benefits என்னென்ன?",
+    "output": "Benefits: 1) Free medical care (ESI hospitals/dispensaries), 2) Sickness benefit (70% wages), 3) Maternity benefit (100% wages - 26 weeks), 4) Disability benefit, 5) Dependent benefit (death case), 6) Funeral expenses. Salary Rs.21,000/month வரை ESI applicable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "employment_labor",
+    "id": "EMPL005_TM"
+  },
+  {
+    "instruction": "கோலம் (Kolam) என்ன? எப்படி போடுவது?",
+    "output": "கோலம் - வீட்டு வாசலில் போடும் floor design. Rice flour (அரிசி மாவு) பயன்படுத்துவது traditional - ants, birds-க்கு உணவு. வகைகள்: 1) புள்ளி கோலம் - dots around design, 2) சிக்கு கோலம் - intricate patterns, 3) நேர் கோலம் - straight lines. Every day different design. பொங்கல் - special big கோலம். Aadi month - கல் பூக்கள் (stone flowers) add பண்றாங்க. YouTube-ல் tutorials நிறைய. Tamil women's daily art form!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "arts_literature",
+    "id": "CULT175_TM"
+  },
+  {
+    "instruction": "Panam semikka mudiyavillai - enna kural udhavum?",
+    "output": "'Alavarinndhu vaazhaadhaan vaazhkkai ulapola illaagiththondraak kedum'. Varavukku thagundabadi selavu seiyaadhavan vaazhkkai kedum. Melum: 'Aagaaru alavarinndhu eega' - income arinDhu selavaziyungal. Budget maintain pannungal. Needs vs Wants piriyungal. 50-30-20 rule follow pannungal!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT074_TG"
+  },
+  {
+    "instruction": "Documents சம்பந்தமான பொதுவான தவறுகள் என்ன?",
+    "output": "Birth Certificate:\n❌ 21 நாட்களுக்கு பின் பதிவு செய்ய முடியாது\n✅ முடியும், ஆனால் late fee + Affidavit தேவை\n\nMarriage Certificate:\n❌ இல்லாமல் married status prove செய்ய முடியாது\n✅ Wedding photos, invitation, witnesses மூலமும் prove செய்யலாம்\n\nDriving License:\n❌ Learning License-க்கு பின் உடனே DL test எழுதலாம்\n✅ 30 நாட்கள் காத்திருக்க வேண்டும்\n\nVoter ID:\n❌ 18 வயது ஆனவுடன் automatically கிடைக்கும்\n✅ Apply செய்ய வேண்டும் (Form 6)\n\nPassport:\n❌ Police Verification fail = Passport reject\n✅ Re-verification chance, appeal process உள்ளது\n\nEC (Encumbrance Certificate):\n❌ EC clear = property சுத்தமானது\n✅ EC 1987-க்கு பின் மட்டும், அதற்கு முன் manual check தேவை",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "common_misconceptions",
+    "id": "CMI009"
+  },
+  {
+    "instruction": "ITI padippu yarukku errathu? Eppadi seruvathu?",
+    "output": "8th or 10th pass aanavargalukku. 130+ types of trades irukku (Electrician, Fitter, Welder, Computer Operator etc). Admission: www.skilltraining.tn.gov.in. Duration: 6 months to 2 years. Govt ITI fully free. Padicha approm Apprenticeship seiyalam, nalla job opportunity.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH007_TG"
+  },
+  {
+    "instruction": "வாட்ஸ்அப் குழுவில் 'தினமும் 10% வருமானம், 1 லட்சம் முதலீடு செய்யுங்கள், 30 நாளில் 4 லட்சம் பெறுங்கள்' என்று பார்த்தேன். இது சாத்தியமா?",
+    "output": "இது போன்சி மோசடி திட்டம். தினமும் 10% (ஆண்டுக்கு 3650%) என்பது சாத்தியமற்றது. வங்கி வட்டி 7% மட்டுமே. இது உங்கள் பணத்தைத் திருடும் மோசடி. முதலீடு செய்யாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_scam_detection",
+    "id": "IF001_ta"
+  },
+  {
+    "instruction": "Merchant Navy join ஆக என்ன படிக்கணும்?",
+    "output": "Courses: 1) B.Sc Nautical Science (3 years) - Deck Officer 2) Marine Engineering (4 years) - Engine room 3) GP Rating (6 months) - Entry level. Eligibility: 12th PCM 60%+, Medical fitness strict. Institutes: IMU Chennai, AMET Chennai, MERI. Admission: IMU CET entrance exam. Career: High salary (₹50,000 - ₹5 lakh/month with experience), World travel. Challenges: Months away from family.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP005_TM"
+  },
+  {
+    "instruction": "Medical negligence-க்கு எவ்வளவு compensation கேட்கலாம்?",
+    "output": "Claim include: 1) Medical expenses incurred, 2) Future treatment cost, 3) Loss of income, 4) Pain and suffering (mental agony), 5) Loss of life expectancy, 6) Punitive damages. Lakhs to Crores வரை - case severity-ஐ பொறுத்தது. Expert lawyer consult பண்ணுங்க.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS025_TM"
+  },
+  {
+    "instruction": "'SEBI registered advisor, daily 2-3 stocks, 100% profit guaranteed, monthly subscription 10,000' nu call vandhudhu. Side income aagum nu paakkuren.",
+    "output": "'100% profit guaranteed' - SEBI regulations la illegal claim. Registered advisors ipdi cold calls pannaadhu. Subscription vaangitu random tips kuduppaanga - loss vandha responsibility illa. SEBI registered check pannunga sebi.gov.in la - most callers fake registration claim pannuvaanga.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS027"
+  },
+  {
+    "instruction": "Video call screenshot eduthu blackmail pannuraanga. Report panna bayam - video spread aagumaa?",
+    "output": "Critical understanding: Paying NEVER stops blackmail - increases it. Reporting DOES NOT spread content. Scammers rarely actually share (want money, not revenge). You're VICTIM, not criminal. Immediate: DO NOT PAY, DO NOT ENGAGE, document everything, secure accounts (change passwords, 2FA). Reporting: cybercrime.gov.in → 'Cyber Crime Against Women' (anonymous option), Women Helpline 181/1091, Platform report to remove content. FIR Sections: 384 IPC (Extortion), 506 IPC (Intimidation), 67A IT Act. Support: IT for Change, Cyber Peace Foundation. Your image is YOUR property.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "recovery_reporting_procedures",
+    "id": "RR019"
+  },
+  {
+    "instruction": "Thirukkuralil business-kku udhavum kuralgal enna?",
+    "output": "Porutpaalil business-kku etra adhigaarangal: 1) Ookkamudaimai - motivation, 2) Aalvinai udaimai - leadership, 3) Idanarithtal - market analysis, 4) Kaalamarithal - timing, 5) Vinaiththitpam - focus, 6) Vinaiththooimai - ethics, 7) Therindhu seyalvagai - planning. MBA courses-la Thirukkural teach panraanga ippo!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT020_TG"
+  },
+  {
+    "instruction": "Thirukkuraloda mudhal kural edhu?",
+    "output": "'Agara mudhala ezhuththellam aadhi bhagavan mudhatre ulagu'. Artham: 'A' ezhutthu ella ezhutthukkkalkkum aadharam pola, iraivan ulagaththirku aadharam.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT035_TG"
+  },
+  {
+    "instruction": "Dhanteras - 'Gold coin free with jewellery purchase! WhatsApp to reserve' jeweller offer. Genuine-ஆ?",
+    "output": "Verify the jeweller! Dhanteras-ல fly-by-night jewellers அதிகம். 'Free gold coin' bait வச்சு low quality sell பண்ணுவாங்க. Known jewellers மட்டும் trust பண்ணுங்க. BIS hallmark check பண்ணுங்க. WhatsApp booking avoid பண்ணுங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS046"
+  },
+  {
+    "instruction": "International Driving Permit (IDP) eppadi peruvathu?",
+    "output": "Apply: RTO office (not online). Documents: Valid Indian DL, passport, visa, photos. Fee: Rs.1,000. Validity: 1 year or Indian DL validity - edhu koraivo adhu. IDP alone not valid - Indian DL-udan carry pannanum.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "traffic_vehicles",
+    "id": "TRAF003_TG"
+  },
+  {
+    "instruction": "பெண் குழந்தைகளுக்கு property right இருக்கா?",
+    "output": "ஆம். 2005 Hindu Succession Amendment Act படி மகள்களுக்கு மகன்களுக்கு சமமான right உண்டு - ancestral property-லும், self-acquired property-லும். Married/unmarried difference இல்லை. இது retrospective-ஆ apply.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "property_land",
+    "id": "PROP007_TM"
+  },
+  {
+    "instruction": "Court marriage eppadi seivathu?",
+    "output": "Steps: 1) Marriage Registrar office-la form submit (30 days before), 2) Notice board-la display, 3) Objection period (30 days), 4) Marriage ceremony (Registrar mun), 5) Certificate issue. Witnesses: 3 per. Documents: Birth certificate, address proof, photos, affidavit.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI004_TG"
+  },
+  {
+    "instruction": "Semester exam-க்கு last minute preparation tips?",
+    "output": "Last week strategy: 1) Previous year papers - pattern identify 2) Important questions list make 3) Short notes revise, not new topics 4) Formula sheets ready 5) Sleep properly - memory consolidation 6) Light food, hydration 7) Morning revision of previous day 8) Group discussion for doubt clearing 9) Hall ticket, stationery ready. Avoid: All-night study, new topics, junk food, negative people. Trust your preparation!",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC008_TM"
+  },
+  {
+    "instruction": "Legal adoption எப்படி செய்வது?",
+    "output": "CARA (Central Adoption Resource Authority) through only - cara.wcd.gov.in. Register → Home study → Child matching → Pre-adoption fostering → Court order. Hindu Adoption Act-ன் கீழ் deed registration-உம் valid. Private adoption risky - legal complications வரலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI020_TM"
+  },
+  {
+    "instruction": "'ஆக்கம் இழந்தேமென்று' - தோல்வி பற்றிய குறள் என்ன சொல்கிறது?",
+    "output": "குறள்: 'ஆக்கம் இழந்தேமென்று அல்லாவார் ஊக்கம் ஒருவந்தம் கைத்துடை யார்'. அர்த்தம்: செல்வம் இழந்தாலும் 'இழந்துவிட்டோம்' என்று அழுவார் அல்ல, ஊக்கம் உள்ளவர்கள். Setbacks-க்கு cry பண்றவர்கள் weak. Strong people bounce back. Resilience is wealth!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT047_TM"
+  },
+  {
+    "instruction": "Matrimony site la romance scam - report and recovery?",
+    "output": "BharatMatrimony: Profile → Report → 'Fake/Fraud', support@bharatmatrimony.com, 044-45002300. Shaadi.com: Profile → Report, care@shaadi.com, 022-67448888. Tamil Matrimony: support@tamilmatrimony.com. Tinder/Bumble/Hinge: Profile → Report → 'Scam or Spam'. Important: Collect ALL chat history before reporting, profile screenshots (they'll delete), photos received, money transfer receipts. Police FIR essential for large amounts. Recovery very low (money usually abroad). Prevention better: Video call verify, never send money before meeting.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "recovery_reporting_procedures",
+    "id": "RR013"
+  },
+  {
+    "instruction": "Complaint file panna enna documents collect pannanum?",
+    "output": "Collect BEFORE filing: Screenshots of ALL conversations (WhatsApp, SMS, email), call recordings if available, scammer's phone numbers, scammer's bank account/UPI ID, transaction receipts/screenshots, bank statement showing debit, any links/websites shared, scammer's social media profiles, your Aadhaar/ID proof, your bank account details, timeline of events written down. Storage tip: Email screenshots to yourself (timestamp proof), Google Drive backup, don't delete anything from phone.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "recovery_reporting_procedures",
+    "id": "RR002"
+  },
+  {
+    "instruction": "PAN Card pattriya common thavarugal enna?",
+    "output": "Wrong Beliefs vs Truth:\n\n1. ❌ Cannot open Bank Account without PAN → ✅ PAN mandatory only for ₹50,000+ transactions\n2. ❌ Minor doesn't need PAN → ✅ Required in some cases (Investment, Income)\n3. ❌ PAN-Aadhaar link is optional → ✅ Mandatory, else PAN becomes inoperative\n4. ❌ Having two PANs is okay → ✅ Illegal, ₹10,000 fine\n5. ❌ PAN card needs renewal → ✅ Lifetime valid, no renewal needed\n6. ❌ PAN number changes → ✅ Lifetime same number\n7. ❌ e-PAN is not valid → ✅ e-PAN is legally valid\n\nCommon Mistakes:\n- Wrong DOB in PAN → Aadhaar mismatch\n- Father's name instead of Husband's name\n- Not linking despite ₹1,000 late fee",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "common_misconceptions",
+    "id": "CMI004"
+  },
+  {
+    "instruction": "கடைக்காரன் மோசமான சாமான் குடுத்துட்டான், என்ன பண்றது?",
+    "output": "Bill இருக்கா பாருங்க. Bill இருந்தா exchange/refund கேளுங்க. Refuse பண்ணா Consumer helpline-ல call பண்ணுங்க - 1800-11-4000. WhatsApp-ல complaint: 8800001915. Simple-ஆ solve ஆகும்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS034_TM"
+  },
+  {
+    "instruction": "Duplicate RC எப்படி பெறுவது?",
+    "output": "Steps: 1) FIR (if lost/stolen), 2) Form 26 fill, 3) Affidavit, 4) Newspaper advertisement, 5) RTO application + fee. Documents: ID proof, address proof, insurance, PUC. Time: 15-30 days. Fee: Rs.300-500 + penalties if applicable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "traffic_vehicles",
+    "id": "TRAF016_TM"
+  },
+  {
+    "instruction": "Bank Jobs-க்கு என்னென்ன exams இருக்கு? Eligibility என்ன?",
+    "output": "**Bank Exams Overview:**\n\n**Major Bank Exams:**\n\n**1. IBPS PO (Probationary Officer):**\n- Posts: Public Sector Banks PO\n- Eligibility: Any Degree\n- Age: 20-30 years\n- Salary: ₹52,000-67,000/month (starting)\n\n**2. IBPS Clerk:**\n- Posts: Clerical cadre in PSBs\n- Eligibility: Any Degree\n- Age: 20-28 years\n- Salary: ₹28,000-35,000/month\n\n**3. IBPS SO (Specialist Officer):**\n- Posts: IT Officer, Law Officer, HR, Marketing\n- Eligibility: Relevant Degree/PG\n- Age: 20-30 years\n\n**4. SBI PO:**\n- Posts: State Bank of India PO\n- Eligibility: Any Degree\n- Age: 21-30 years\n- Most prestigious bank exam!\n\n**5. SBI Clerk:**\n- Posts: SBI Clerical\n- Eligibility: Any Degree\n- Age: 20-28 years\n\n**6. RBI Grade B:**\n- Posts: Reserve Bank of India Officer\n- Eligibility: PG/Degree with 60%\n- Age: 21-30 years\n- Highest salary!\n\n**7. RRB (Regional Rural Banks):**\n- IBPS RRB PO\n- IBPS RRB Clerk\n- For rural area banking\n\n**Common Eligibility:**\n- Nationality: Indian\n- Computer Knowledge: Basic required\n- Language: Local language knowledge preferred\n\n**Age Relaxation:**\n| Category | Relaxation |\n|----------|------------|\n| SC/ST | +5 years |\n| OBC | +3 years |\n| PwD | +10 years |\n| Ex-Servicemen | As per rules |\n\n**Apply:** ibps.in, sbi.co.in, rbi.org.in",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "competitive_exams",
+    "id": "COMP012_TM"
+  },
+  {
+    "instruction": "RC transfer eppadi seivathu?",
+    "output": "Vehicle sale-kkup piragu: 1) Form 29, 30 fill, 2) Both buyer & seller sign, 3) NOC from financer (if loan), 4) Insurance transfer, 5) RTO submit + fee pay. Time: 30 days-kkul. Delay: Fine + legal issues. Online: parivahan.gov.in partially available.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "traffic_vehicles",
+    "id": "TRAF015_TG"
+  },
+  {
+    "instruction": "Advance directive for mental health endraal enna?",
+    "output": "Advance directive = When mentally well, write down treatment preferences for future crisis. Includes: 1) Preferred treatment methods, 2) Treatments to avoid, 3) Nominated representative, 4) Hospital preferences, 5) ECT consent/refusal. How: Register with Mental Health Review Board. Benefits: Your wishes respected even when unable to communicate. Can modify when competent. Legal document.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "mental_health",
+    "id": "HLTH107_TG"
+  },
+  {
+    "instruction": "Sleeping pills vaanga prescription venumaa?",
+    "output": "Yes! Most sleeping pills = Schedule H1/X - strict prescription control. Schedule H1: Alprazolam, Clonazepam, etc. - prescription + ID proof + register entry. Schedule X: Stronger sedatives - even stricter. Why: Addiction potential, misuse risk, suicide risk. Alternative: Melatonin (less restricted), lifestyle changes. Doctor: Will evaluate sleep issue cause first.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "pharmacy_medicines",
+    "id": "HLTH096_TG"
+  },
+  {
+    "instruction": "விதை வாங்க subsidy கிடைக்குமா?",
+    "output": "Certified seeds-க்கு 50% subsidy உண்டு. Agriculture department depot-ல் subsidized rate-ல் விதை வாங்கலாம். Paddy, millets, pulses-க்கு subsidy available.",
+    "language": "mixed",
+    "pack": "vazhi_arasu",
+    "category": "agriculture_schemes",
+    "id": "AG009"
+  },
+  {
+    "instruction": "Adakkam (humility) patri enna kuralgal ullana?",
+    "output": "Kural: 'Adakkam amararul uykkum adangaamai aaarirul uyththu vidum'. Adakkam sorgaththukkku kondu sellum, adangaamai naragaththukkku. Melum: 'Kaakka porulaa adakkaththai aakkam adhaninnooung killai uyirkku'. Adakkaththai uyiraip pol kaappaatrungal. Humility = gateway to success!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT096_TG"
+  },
+  {
+    "instruction": "புதிய ரேஷன் அட்டை எப்படி பெறுவது?",
+    "output": "Apply at tnpds.gov.in or Taluk Office. Documents: All family members' Aadhaar, address proof, income certificate, gas connection details, photos. Types: PHH (₹1 rice), AAY (free rice), NPHH. RI inspection, 30-45 days processing.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA012"
+  },
+  {
+    "instruction": "Online-la fraud aayitten, police-kku ponaa ozhungaa case poduvaangalaa? (Chennai style)",
+    "output": "Cyber crime special cell irukku - trained officers. cybercrime.gov.in-la first complaint podunga - track aagum. Local police-kkum FIR podunga. Both simultaneously pannalam. Evidence (screenshots, bank statements) ready-aa vachukonga.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "cyber_laws",
+    "id": "CYBE020_TG"
+  },
+  {
+    "instruction": "Petrorkaludan misunderstanding irundhaal enna seivadhu?",
+    "output": "'Annaiyum pithavum munnari deivam' (Kondraivendhan). Petrorae mudhal kadavul. Melum: 'Eendra pozhudhin peridhuvakkum thanmagaNai saandron enakketta thaay'. Thaay thandhai nam nalladharkae solkirargal. Patience-udan explain pannungal, respect maintain pannungal.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT067_TG"
+  },
+  {
+    "instruction": "Farmer family students-ku special scholarship ulladha?",
+    "output": "Agriculture family scholarships: 1) IFFCO Scholarship - ₹25,000/year 2) Kotak Kisan - ₹10,000-30,000 3) TNAU free education for farmers' children 4) Agriculture Department scholarships. Eligibility: Farmer certificate from VAO, small/marginal farmer category. Priority in agriculture courses. Krishi Vigyan Kendra (KVK) free training available. Apply through Agriculture office or online portals.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "scholarships",
+    "id": "SCHO024_TG"
+  },
+  {
+    "instruction": "NEET Exam endraal enna? Yaar ezhudhalaam?",
+    "output": "**NEET Exam:**\n\n**What:** Medical entrance exam by NTA\n\n**Courses:** MBBS, BDS, BAMS, BHMS, Nursing, Veterinary\n\n**Eligibility:**\n- Age: 17+ (Dec 31)\n- Education: 12th PCB\n- Marks: General 50%, OBC/SC/ST 40%\n\n**Attempts:** Unlimited\n\n**Languages:** Tamil, English, Hindi + 10 more\n\n**Apply:** neet.nta.nic.in (Dec-Jan)\n**Fee:** ₹1,700 (General), ₹1,000 (SC/ST)\n\n**TN Special:** 7.5% Govt school reservation",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "competitive_exams",
+    "id": "COMP001_TG"
+  },
+  {
+    "instruction": "Lock-out period-ல் rent கட்டணுமா?",
+    "output": "Lock-in period (not lock-out): Agreement-ல் specify பண்ணிருக்கும். During lock-in: 1) Tenant vacate பண்ணினால் - remaining months rent pay பண்ணணும், 2) Owner evict பண்ண முடியாது. After lock-in: Normal notice period applies (usually 1-2 months). Negotiate: Lock-in waiver possible with mutual consent. Always read agreement before signing!",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "supplementary",
+    "id": "SUPP010_TM"
+  },
+  {
+    "instruction": "Makkal nalam / public welfare patri enna kuralgal ullana?",
+    "output": "Kural: 'Kudipuram kaakkum oruvanai makkal adipuram kaapparul vaippar'. Makkalai kaappaatrrum arasanai makkal madhippaargal. Melum: 'Iraikkaakkum vaiyagam ellam avanai muraikkaakkum muttach seyin'. Arasan neeyaamaaga aandaal, ulagamae avanai kaakkum. Leader who serves people = people protect leader. Public service = ultimate duty!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT085_TG"
+  },
+  {
+    "instruction": "உண்மையா பொய்யா: Myth: Government school-ல் படிச்சா success ஆக முடியாது",
+    "output": "உண்மை: Fact: பல IAS officers, Doctors, Engineers government school products. 7.5% reservation போன பிறகு government school NEET toppers அதிகரித்துள்ளனர். Quality of education depends on student's effort + teacher dedication. Many district toppers from government schools. Free education + scholarships = excellent opportunity.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "common_questions",
+    "id": "COMM017_TM"
+  },
+  {
+    "instruction": "Small business owner-க்கு call - 'MSME loan sanction ஆனது, disbursement-க்கு GST registration fee முன்கூட்டியே கட்டுங்கள்'.",
+    "output": "Bank loan disbursement-க்கு advance fee கேட்காது. GST registration free (gst.gov.in). MSME portal-ல் நேரடியாக check செய்யுங்கள். Business owners-ஐ target செய்யும் scam.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT009"
+  },
+  {
+    "instruction": "'Premium Spotify/Netflix free - Download APK from [link]' nu Telegram la share aachhu. Official app paid, idhu free alternative aa?",
+    "output": "Pirated APKs malware contain pannum - banking trojans, keyloggers. 'Free premium' bait. Phone data full aa steal aagum. Legitimate apps - Play Store/App Store only. Piracy shortcuts la malware risk always irukku.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS055"
+  },
+  {
+    "instruction": "அரசு பள்ளியில் என்னென்ன இலவசமாக கிடைக்கும்?",
+    "output": "**அரசு பள்ளி இலவச சலுகைகள்:**\n\n**1. கல்வி:** முற்றிலும் இலவசம்\n\n**2. புத்தகங்கள்:** எல்லா பாடப்புத்தகங்களும் இலவசம்\n\n**3. சீருடை:**\n- 2 sets ஒவ்வொரு வருடமும்\n- Shoes, Socks உட்பட\n\n**4. Mid-Day Meal (Noon Meal):**\n- காலை சிற்றுண்டி\n- மதிய உணவு\n- வாரம் ஒரு முறை: முட்டை, பால், வாழைப்பழம்\n\n**5. Bus Pass:** இலவச பேருந்து பயணம்\n\n**6. Stationery Kit:**\n- Notebook, Pen, Pencil\n- Geometry box\n\n**7. School Bag:** சில பள்ளிகளில்\n\n**8. Footwear:** Canvas shoes\n\n**9. Health Checkup:**\n- வருடத்திற்கு 2 முறை\n- Free spectacles if needed\n\n**10. Scholarship:**\n- SC/ST/BC/MBC students-க்கு additional allowance",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "school_education",
+    "id": "SCHO002_TM"
+  },
+  {
+    "instruction": "Tirupati darshan ku donation pannunga nu call vandhuchchi ayyaa. TTD la irundhu nu sonnanga ayyaa.",
+    "output": "TTD phone la donation kekkaadhu ayyaa! Official website la mattum pannunga. Phone call scam ayyaa, paisa pogum.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS020"
+  },
+  {
+    "instruction": "Naturopathy endraal enna? Ayurveda-vida verupaadu?",
+    "output": "Naturopathy = Treatment using nature's elements. Methods: Water (hydrotherapy), mud, air, sun, diet, fasting, yoga. Difference from Ayurveda: 1) No medicines (mostly), 2) Focus on lifestyle correction, 3) More recent system, 4) Emphasizes fasting/detox. Combined: Often practiced with Yoga. Qualification: BNYS (Bachelor of Naturopathy and Yogic Sciences). Good for: Lifestyle diseases, prevention, detoxification.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "natural_remedies",
+    "id": "HLTH219_TG"
+  },
+  {
+    "instruction": "Email vandhudhu - 'Congratulations! Selected for XYZ Scholarship 50,000, processing fee 2000 required.'",
+    "output": "Legitimate scholarships processing fee kekaadhu. 'Selected' without application - impossible. Email links phishing sites. NSP (National Scholarship Portal), university official scholarships apply pannunga - all free process.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS069"
+  },
+  {
+    "instruction": "ATM receipt-ல் 'account balance check செய்ய missed call கொடுங்கள்' என்று sticker பார்த்தேன். செய்யலாமா?",
+    "output": "செய்யாதீர்கள். ATM-ல் போடப்படும் sticker-கள் scam. Missed call கொடுத்தால் உங்கள் நம்பர் scammer-க்கு போகும். வங்கியின் official number-ஐ மட்டுமே பயன்படுத்துங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "bank_otp_fraud",
+    "id": "BF015"
+  },
+  {
+    "instruction": "Aandaal yaar? Thiruppaavai endraal enna?",
+    "output": "Aandaal - 12 Azhvaargalil ore penn. Srivilliputhooril Periyaazhvaaraal valarkkappattavar. Ranganatharai (Srirangam) kanavaragaa karudhi, avaraiye manandhaar endru nambappadugiradhu. Thiruppaavai - 30 paasurangal, Margazhi maadhaththil paadappduvathu. 'Margazhith thingal madhiniraindha nannaalaal' endru thodangum. Kovilgal, veedugalil Margazhiyil dhinamum oru paasuram paaduvathu tradition. Naachiyar Thirumozhi matroru padaippu.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT186_TG"
+  },
+  {
+    "instruction": "Abortion refuse panraanga (unmarried) - rights?",
+    "output": "Illegal to refuse! MTP Act 2021: Explicitly includes unmarried women. If refused: 1) Ask for written reason, 2) Escalate to hospital administration, 3) Complaint to DHS, 4) Court (urgent petition). Marital status: Not relevant for abortion right. Judgment questions: Doctor should not morally judge. Alternative: Find another approved centre. Time sensitive: Don't delay - gestational limits apply.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "womens_health",
+    "id": "HLTH132_TG"
+  },
+  {
+    "instruction": "Disabled child-ku enna benefits irukku school-la?",
+    "output": "**Disabled Student Benefits:**\n\n**Education:**\n- Inclusive education in regular schools\n- Special schools (Blind, Deaf, etc.) - FREE\n\n**Financial:**\n- Scholarship: ₹1,000-3,000/month\n- Transport allowance\n- Reader/Scribe allowance\n\n**Exam Concessions:**\n- Extra 20-30 min/hour\n- Scribe allowed\n- Separate room\n- Computer allowed\n\n**Free Devices:** Wheelchair, Hearing aid, Braille kit\n\n**Apply:** District Differently Abled Welfare Officer\n**Must Have:** UDID Card from swavlambancard.gov.in",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "school_education",
+    "id": "SCHO004_TG"
+  },
+  {
+    "instruction": "Doctor-mela criminal case podalaamaa?",
+    "output": "Yes, for: 1) Death due to negligence (Section 304A IPC / Section 106 BNS), 2) Grievous hurt (Section 338 IPC), 3) Hurt (Section 337 IPC). Punishment: 304A - 2 years imprisonment + fine. Requirement: Gross negligence, not just error. Supreme Court: Doctors shouldn't be arrested for bona fide errors. But criminal recklessness = liable. FIR: Police can register on complaint.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "medical_negligence",
+    "id": "HLTH061_TG"
+  },
+  {
+    "instruction": "Abortion refuse பண்றாங்க (unmarried) - rights?",
+    "output": "Illegal to refuse! MTP Act 2021: Explicitly includes unmarried women. If refused: 1) Ask for written reason, 2) Escalate to hospital administration, 3) Complaint to DHS, 4) Court (urgent petition). Marital status: Not relevant for abortion right. Judgment questions: Doctor should not morally judge. Alternative: Find another approved centre. Time sensitive: Don't delay - gestational limits apply.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "womens_health",
+    "id": "HLTH132_TM"
+  },
+  {
+    "instruction": "'Passport office - உங்கள் passport revoke ஆகிவிட்டது, appeal செய்ய fee கட்டுங்கள்' என்று call வந்தது.",
+    "output": "Passport office phone-ல் fee கேட்காது. Passport status online-ல் check செய்யுங்கள். Official passport seva website மட்டுமே நம்பகமானது.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "govt_impersonation",
+    "id": "GI007"
+  },
+  {
+    "instruction": "Animation/VFX padippu career-ku nalladha?",
+    "output": "Growing industry! Courses: 1) B.Sc Animation 2) Diploma (Arena, MAAC, Frameboxx) 3) Certificate courses. Duration: 6 months - 3 years. Skills: Maya, 3ds Max, After Effects, Photoshop. Jobs: Animation studios, Game companies, Ad agencies, Film industry (VFX). Chennai: Major hub for animation studios. Salary: ₹15,000-40,000 starting. Freelancing possible. Portfolio = key to jobs.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP002_TG"
+  },
+  {
+    "instruction": "US job search panren. 'H1B sponsorship guaranteed, employer tie-up ready, processing fee $3000' nu consultancy solrudhu.",
+    "output": "H1B lottery-based - 'guaranteed' impossible. Legitimate employers employee fee pay pannuvaanga, candidate kekaadhu. $3000 vaangitu fake offer letter kuduppaanga - visa reject, money gone. Direct company applications, LinkedIn jobs - legitimate path.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS041"
+  },
+  {
+    "instruction": "Pudhiya electricity connection eppadi peruvadhu?",
+    "output": "Apply at nsc.tnebnet.org with ownership proof (sale deed/rent agreement), Aadhaar, building certificate. Inspection by TANGEDCO. Charges: Deposit ₹500-15,000 based on load. Time: 7-15 days. Agricultural connection: FREE electricity for farming.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA033T"
+  },
+  {
+    "instruction": "தமிழ்நாட்டில் பாலிடெக்னிக் டிப்ளோமா சேர்க்கை எப்படி?",
+    "output": "10th pass-க்கு பிறகு சேரலாம். DOTE (Directorate of Technical Education) கவுன்சிலிங்: 1) www.tndte.gov.in-ல் விண்ணப்பம் 2) 10th மதிப்பெண் அடிப்படையில் rank 3) ஆன்லைன் choice filling 4) கல்லூரி ஒதுக்கீடு. படிப்பு காலம்: 3 ஆண்டுகள். அரசு கல்லூரி கட்டணம்: ₹1,500-3,000/ஆண்டு. Lateral entry to engineering 2nd year possible.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH006_TM"
+  },
+  {
+    "instruction": "மாற்றுத்திறனாளிகளுக்கான ஓய்வூதியம் எவ்வளவு?",
+    "output": "40% மேல் disability இருந்தால் மாதம் Rs.1,500 கிடைக்கும். Disability certificate (medical board certified), Aadhaar, income certificate தேவை. 18 வயது முதல் எந்த வயதிலும் apply செய்யலாம்.",
+    "language": "mixed",
+    "pack": "vazhi_arasu",
+    "category": "pension_schemes",
+    "id": "PN003"
+  },
+  {
+    "instruction": "Retrenchment compensation எவ்வளவு கிடைக்கும்?",
+    "output": "Formula: 15 days average pay × years of service. Applicable: 100+ employees company, 1 year+ service. Notice: 3 months advance or 3 months pay. LIFO principle (Last In First Out) follow ஆகணும். Re-employment preference உண்டு.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "employment_labor",
+    "id": "EMPL011_TM"
+  },
+  {
+    "instruction": "Legal notice எப்படி அனுப்புவது? Lawyer வேணுமா?",
+    "output": "Self அனுப்பலாம், but lawyer recommended for proper drafting. Format: 1) From/To addresses, 2) Subject, 3) Facts, 4) Legal grounds, 5) Demand/relief sought, 6) Time limit (usually 15-30 days), 7) Consequence warning. Send: Registered post AD (Acknowledgement Due). Keep copy + postal receipt. Reply not mandatory but advisable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "supplementary",
+    "id": "SUPP017_TM"
+  },
+  {
+    "instruction": "Anticipatory bail endraal enna?",
+    "output": "Arrest aavadharku munnaalaye bail peruvathu. Non-bailable offence-kku Sessions Court/High Court-la apply pannalam. FIR padhivana udanaye apply pannalam. Grant aanaal arrest aagaamal investigation-la cooperate seyyalam.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "criminal_basics",
+    "id": "CRIM007_TG"
+  },
+  {
+    "instruction": "Data Science, AI courses-க்கு எந்த college best?",
+    "output": "IIT Madras (BSc in Data Science - online), Anna University, VIT, SRM, PSG Tech ஆகியவற்றில் AI/ML courses உள்ளன. IIT Madras online degree affordable-ஆகவும் flexible-ஆகவும் இருக்கு.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE022_TM"
+  },
+  {
+    "instruction": "Avvaiyar yaar? Eththanai Avvaiyargal irundhaargal?",
+    "output": "Avvaiyar - Tamilin migap pugazh petra penn kavignar. 'Avvai' endraal 'moodhaatti' alladhu 'thaay' endru porul. Pala kaalakattangalil vevveru Avvaiyargal irundhathaaga scholars karudhugirar: 1) Sangam kaala Avvaiyar - Puranaanooru paadiyavar, Athiyamaan Nedunchezhiyanoda nanbar, 2) Bhakthi kaala Avvaiyar - Aathichudi, Kondraivendhan ezhuthiyavar, Murugan bhakthai. Irandaavadhu Avvaiyar migavum popular - kuzhanthaigalukkku needhi karpikkum paadalgal ezhuthiyavar.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT188_TG"
+  },
+  {
+    "instruction": "யாரோ என்னைப் பற்றி gossip பண்றாங்க - எப்படி handle பண்றது?",
+    "output": "'கண்ணின்று கண்ணறச் சொல்லினும் சொல்லற்க முன்னின்று பின்நோக்காச் சொல்'. முன்னால் நல்லது பேசி, பின்னால் கெட்டது பேசுவதை avoid பண்ணுங்கள். Gossip பண்றவர்கள் own credibility இழப்பார்கள். Ignore them. 'மன்த்துக்கண் மாசிலன் ஆதல்' - உங்கள் மனம் clean-ஆக இருந்தால் போதும். Their words can't hurt you.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT073_TM"
+  },
+  {
+    "instruction": "Hospital bill excessive-aa irukku - enna seyyalam?",
+    "output": "Itemized bill kelunga - hospital thara venum. Rate list display kattaayam (Clinical Establishments Act). Overcharging complaint: 1) State Health Department, 2) District Collector, 3) Consumer forum. Insurance involved-aa irundhaal TPA-kkum complaint podunga.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS017_TG"
+  },
+  {
+    "instruction": "NEET-ku prepare aaga enna pannanum-pa? Free coaching irukkuma?",
+    "output": "NCERT Biology, Physics, Chemistry - line by line read pannu/pannunga. Free coaching: Government centres-la apply pannu through school. Online free: YouTube (Physics Wallah), SWAYAM. 7.5% reservation govt school students-ku. Daily 6-8 hours padikka venum. Previous year papers practice important.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "exam_preparation",
+    "id": "EXAM031A_TG"
+  },
+  {
+    "instruction": "Payir kadan (Crop Loan) kuraintha vattiyil eppadi vaanguvadhu? KCC endraal enna?",
+    "output": "**Kisan Credit Card (KCC) - Crop Loan:**\n\n**What is KCC?**\n- Credit Card for farmers\n- Loan for crop expenses\n- Low interest\n- Withdraw anytime\n\n**Interest Rate:**\n- Normal: 7%\n- Central Subvention: -3%\n- State Incentive: -3%\n- **Effective: Only 4%!**\n\n**Eligibility:**\n- Land owning farmer\n- Tenant farmer (Oral Lessee included)\n- SHG/JLG members\n- Fishermen, Animal husbandry\n\n**Loan Amount:**\n- Up to ₹3 lakh: Collateral-free\n- Up to ₹1.6 lakh: 4% interest\n\n**Apply:**\n1. Bank directly OR\n2. pmkisan.gov.in → KCC tab\n\n**Documents:**\n- Aadhaar, PAN\n- Land Records\n- Sowing Certificate\n- Photos\n\n**Repayment:** End of crop season, timely = 4%",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "rural_scenarios",
+    "id": "RUR008T"
+  },
+  {
+    "instruction": "Doctor enga native language-la explain pannanumaa?",
+    "output": "Yes! Right to information in understandable language. Includes: 1) Diagnosis explanation, 2) Treatment options, 3) Risks and benefits, 4) Consent form explanation, 5) Medicine instructions. If doctor doesn't speak Tamil: Hospital should arrange translator. Written materials: Should be in local language. Complaint: If communication barrier causes harm - negligence claim possible.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH031_TG"
+  },
+  {
+    "instruction": "PAN-Aadhaar Link எப்படி செய்வது?",
+    "output": "Online: eportal.incometax.gov.in → Link Aadhaar → Enter PAN and Aadhaar → OTP verify → Pay ₹1,000 late fee. SMS method: Send 'UIDPAN <Aadhaar> <PAN>' to 567678. MANDATORY - unlinked PAN becomes inoperative!",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA007"
+  },
+  {
+    "instruction": "Court marriage எப்படி செய்வது?",
+    "output": "Steps: 1) Marriage Registrar office-ல் form submit (30 days before), 2) Notice board-ல் display, 3) Objection period (30 days), 4) Marriage ceremony (Registrar முன்), 5) Certificate issue. Witnesses: 3 பேர். Documents: Birth certificate, address proof, photos, affidavit.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI004_TM"
+  },
+  {
+    "instruction": "Siddha maruththuvam endraal enna?",
+    "output": "Siddha = Tamilnaattin paarambariya maruththuva murai. Origin: 18 Siddhars (gnaniyar) developed. Age: 5,000+ years old. Principle: Udal (body), Uyir (soul), Manam (mind) balance. Based on: Pancha bootham (5 elements), 96 thathuvangal, 3 doshas (Vatham, Pitham, Kabam). Treatment: Diet, herbs, minerals, yoga, lifestyle. Recognition: Government of India recognized AYUSH system.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "siddha_medicine",
+    "id": "HLTH169_TG"
+  },
+  {
+    "instruction": "Pregnant women-க்கு என்ன free schemes இருக்கு?",
+    "output": "TN schemes: 1) Dr. Muthulakshmi Maternity Benefit Scheme - Rs.18,000 cash assistance, 2) Free delivery at government hospitals, 3) Free antenatal checkups, 4) Iron/folic acid tablets free, 5) Free ultrasound scans, 6) 102 ambulance for transport, 7) Post-delivery nutrition support. Register: PHC/Government hospital within first trimester. Amma Baby Care Kit: Free baby items.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "government_schemes",
+    "id": "HLTH008_TM"
+  },
+  {
+    "instruction": "Competitive exam preparation-க்கு daily routine எப்படி இருக்க வேண்டும்?",
+    "output": "Ideal routine: 5:00 AM - எழுந்து, fresh topics படிப்பு (2-3 hrs). 8:00 AM - breakfast, current affairs. 9:00 AM - Practice/mock tests. 12:00 PM - lunch, short rest. 2:00 PM - revision, notes making. 5:00 PM - exercise/break. 6:00 PM - optional subjects. 9:00 PM - light revision, daily news. 10:00 PM - sleep. Weekly: 1 full mock test. Monthly: syllabus completion target வையுங்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH041_TM"
+  },
+  {
+    "instruction": "Paramparagat Krishi Vikas Yojana (PKVY) என்றால் என்ன?",
+    "output": "Organic Farming ஊக்குவிப்பு திட்டம். Cluster: 50+ விவசாயிகள் சேர்ந்து 50 ஏக்கர். Support: ₹50,000/hectare (3 வருடத்தில்) - Organic inputs, certification, marketing. PGS Certification: Participatory Guarantee System - free organic certification. Benefit: Premium price for organic produce, export opportunity, soil health improvement. Join: Agriculture Department, Krishi Vigyan Kendra. Training: Organic farming techniques, composting, bio-pesticides.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "agriculture_schemes",
+    "id": "AGR011"
+  },
+  {
+    "instruction": "Diagnosis miss ஆச்சு, cancer late-ஆ detect ஆச்சு - negligence-ஆ?",
+    "output": "Depends on circumstances. Negligence if: 1) Symptoms clearly pointed to cancer, 2) Standard tests not ordered, 3) Reports misread, 4) Follow-up not done, 5) Patient's complaints ignored. Not negligence if: Symptoms were atypical, tests done but cancer not detectable at that stage. Prove: What a reasonably competent doctor would have done. Expert witness: Essential for such cases.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "medical_negligence",
+    "id": "HLTH053_TM"
+  },
+  {
+    "instruction": "Traffic police license vaangittu poyittaar, enna panradhu? (Chennai style)",
+    "output": "Challan receipt vaangunga - license-kku padhil temporary receipt koduppaanga. Fine pay panni license collect pannunga (traffic police station/court). 60 days-kkul collect pannalnna cancelled aagalam. Online payment-um available.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "traffic_vehicles",
+    "id": "TRAF020_TG"
+  },
+  {
+    "instruction": "'Vinaikkan vinaiyudaiyaan' - velayoda mukkiyaththuvam patriya kural enna?",
+    "output": "Kural: 'Vinaikkan vinaiyudaiyaan kenmai veraaga ninaippaanai neengum thiru'. Artham: Velai seiyum bodhu fully focused illaamal, vera vishayangal ninaippavanaai selvam vittu poyvidum. Work-la distraction = failure. Concentration and dedication needed for success.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT048_TG"
+  },
+  {
+    "instruction": "தமிழ்நாடு குடிசை மாற்று வாரியத்தில் வீடு எப்படி பெறுவது?",
+    "output": "TNSCB (Slum Clearance Board) through application செய்யலாம். Slum area-ல் வசிக்கும் குடும்பங்களுக்கு priority. Ration card, Aadhaar, income proof கொடுத்து local office-ல் apply செய்யவும்.",
+    "language": "mixed",
+    "pack": "vazhi_arasu",
+    "category": "housing_schemes",
+    "id": "HS003"
+  },
+  {
+    "instruction": "PhD students-க்கு fellowship எப்படி வாங்குவது?",
+    "output": "UGC NET JRF, CSIR JRF clear செய்தால் Rs.31,000-37,000 monthly fellowship கிடைக்கும். University-யிலும் PhD fellowship schemes உண்டு. Guide மூலம் apply செய்யவும்.",
+    "language": "mixed",
+    "pack": "vazhi_arasu",
+    "category": "scholarship",
+    "id": "SC008"
+  },
+  {
+    "instruction": "Mental illness treatment government hospital-ல் கிடைக்குமா?",
+    "output": "Yes! Free psychiatric services available. Where: 1) Institute of Mental Health (Kilpauk - Chennai), 2) District Mental Health Program (DMHP) centres, 3) Medical college psychiatry OPD. Services: 1) Consultation, 2) Medicines, 3) Counseling, 4) Admission if needed. DMHP: Every district has mental health team. Helpline: iCALL - 9152987821, Vandrevala - 1860-2662-345. Stigma-free treatment encouraged.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "government_schemes",
+    "id": "HLTH018_TM"
+  },
+  {
+    "instruction": "Instagram la 'Valorant account with rare skins, 2000 only (worth 10,000)' nu post paathen. Buy pannalama?",
+    "output": "Account selling - game ToS violation, ban risk anyway. Payment pannina - account credentials varaadhu or credentials vandhu password change panniduvaanga. Skins officially game store la vaangunga. Third-party account sales almost always scam.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS062"
+  },
+  {
+    "instruction": "Bank account-la kaasu pochu, yaaro OTP vaangi eduthuttaanga (Madurai style)",
+    "output": "Udane: 1) Bank-kku call - 24/7 helpline, account freeze kelunga, 2) 1930 helpline call, 3) Net banking-la transactions block, 4) ATM card block. 3 days-kkul report pannaa liability kuraiyum. Debit card insurance check pannunga.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "cyber_laws",
+    "id": "CYBE021_TG"
+  },
+  {
+    "instruction": "WhatsApp message 'Uzhavar sandhai registration open. 5000 deposit for permanent stall.' Uzhavar sandhai la sell panna chance, genuine aa?",
+    "output": "Uzhavar Sandhai registration through agriculture department office, not WhatsApp. No large deposits for stall allocation. Visit nearest Uzhavar Sandhai office or agriculture extension officer. Government market stalls have proper application process.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS052"
+  },
+  {
+    "instruction": "Thanjavur Oviyam endraal enna?",
+    "output": "Thanjavur Oviyam - Tamil Nadu-oda traditional painting style. 16th century-la Nayak period-la develop aanadhu. Sirappugal: 1) Gold foil work - relief, 3D effect, 2) Semi-precious stones embedded, 3) Vibrant colors, 4) Hindu gods, goddesses themes, 5) Wooden base with cloth coating. GI (Geographical Indication) tag petradhu. Prices: ₹500 (small) to ₹50,000+ (large). Thanjavur-la niraiya shops. Wedding gift-aaga popular. Museum quality pieces collectors buy panraanga.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "arts_literature",
+    "id": "CULT173_TG"
+  },
+  {
+    "instruction": "மதுரை சித்திரை திருவிழா எப்படி நடக்கும்?",
+    "output": "தமிழ்நாட்டின் மிகப்பெரிய திருவிழா. ஒரு மாதம் நடக்கும். முக்கிய events: 1) திருக்கல்யாணம் - மீனாட்சி-சுந்தரேஸ்வரர் திருமணம், 2) ஆழ்வார் திருவீதி புறப்பாடு - Vishnu's brother role, 3) தேர்த்திருவிழா - huge temple car, 4) தெப்பத்திருவிழா - float festival at Mariamman Teppakulam. 1 million+ people வருவார்கள். Hotels, transport early book செய்ய வேண்டும். April/May-ல் வெயில் அதிகம் - prepare accordingly.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "temples_heritage",
+    "id": "CULT146_TM"
+  },
+  {
+    "instruction": "JEE vs TNEA - TN-la Engineering-ku edhu better?",
+    "output": "**JEE vs TNEA:**\n\n**TNEA:**\n- 12th marks based (No exam!)\n- TN colleges only\n- Score = Maths×50 + Phy×25 + Chem×25 = 200\n- tneaonline.org\n\n**JEE:**\n- Exam based\n- All India (IIT, NIT, IIIT)\n- Tough competition\n\n**Choose TNEA if:**\n- Want TN college\n- Limited coaching\n- Strong in boards\n\n**Choose JEE if:**\n- Target IIT/NIT\n- Can do coaching\n- Want All India options\n\n**Best:** Prepare JEE + Apply both!",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "competitive_exams",
+    "id": "COMP007_TG"
+  },
+  {
+    "instruction": "SMS vandhudhu - 'Dear Customer, your SBI account will be blocked. Update KYC immediately: [link]'. Reading glasses illa, pera kitta padikka sonneen, genuine aa?",
+    "output": "Fake SMS ayya! SBI official SMS la suspicious links anuppaadhu. 'Account blocked' bayamudhuthal tactic. Link click pannina fake website - login details enter pannina account empty aagum. Ignore pannunga. Doubt irundhaa SBI branch ku ponga.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS016"
+  },
+  {
+    "instruction": "NEET Tamil Medium-la ezhudhalamaa? Translation problem irukkumaa?",
+    "output": "**NEET Tamil Medium:**\n\n**Yes, Tamil-la ezhudhalaam!**\n\n**Paper:** Bilingual - Tamil + English both printed\n\n**Translation Tips:**\n1. NCERT Tamil version read\n2. English terms-um therinjirukanum (Scientific names, formulas)\n3. Both versions study\n4. Mock tests Tamil-la practice\n\n**Exam Day:**\n- Question confusing? Check English version\n- Scientific terms same in both\n\n**Past Issues:**\n- Some translation errors reported\n- NTA improved now\n\n**Success:** Many Tamil medium students cleared!\n7.5% reservation for Govt school students helps.\n\n**Language is NOT a barrier!**",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "competitive_exams",
+    "id": "COMP004_TG"
+  },
+  {
+    "instruction": "Bank exam Reasoning section eppadi crack panrathu?",
+    "output": "Reasoning topics: Puzzles & Seating Arrangement (30-40% weightage), Syllogism, Blood Relations, Direction, Coding-Decoding, Inequality. Strategy: 1) Puzzles - daily 10 practice 2) Logic rules memorize 3) Speed improve through timed practice 4) Easy questions first in exam 5) Skip time-consuming Qs. Resources: RS Aggarwal, Rakesh Yadav, Testbook app. Time: 35 questions in 20-25 minutes. Practice = key to success.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "exam_preparation",
+    "id": "EXAM022_TG"
+  },
+  {
+    "instruction": "En pillai career choice-a accept panna mudiyala. Enna seivathu?",
+    "output": "Generation gap bridge: 1) Listen to their reasons - genuinely try to understand 2) Research that field - income potential, growth, stability 3) Meet professionals in that career - get real picture 4) Trial period suggestion - internship, shadowing 5) Your fears express - but don't impose 6) Compromise explore - related but acceptable field 7) Remember: It's their life to live. Reality: Many non-traditional careers successful today. Trust your upbringing - they'll be fine!",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC025_TG"
+  },
+  {
+    "instruction": "Amazon வாடிக்கையாளர் சேவை என்று அழைத்து 'உங்கள் ஆர்டர் ரத்து, பணத்திரும்பப் பெற AnyDesk நிறுவுங்கள்' என்றார்கள்.",
+    "output": "ஆபத்து! AnyDesk நிறுவினால் உங்கள் தொலைபேசியை மோசடிக்காரர் கட்டுப்படுத்த முடியும். Amazon இப்படி செயலிகள் நிறுவச் சொல்வதில்லை. தொலைபேசியை வைக்கவும், Amazon செயலியில் நேரடியாக சரிபார்க்கவும்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_scam_detection",
+    "id": "CS001_ta"
+  },
+  {
+    "instruction": "Video call வருகிறது ஆனால் 'camera problem' என்கிறார், voice மட்டும் கேட்கிறது. நம்பலாமா?",
+    "output": "Camera problem தொடர்ந்து இருந்தால் suspicious. Voice calls fake செய்வது easy. Video verification இல்லாமல் relationship முன்னேற்றாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "romance_scam",
+    "id": "RS010"
+  },
+  {
+    "instruction": "Cheque bounce ஆனது - என்ன action எடுக்கலாம்?",
+    "output": "NI Act 138 procedure: 1) Bank memo receive, 2) Legal notice within 30 days, 3) 15 days wait for payment, 4) Complaint within 30 days (total 45 days from bounce). Court: Magistrate Court. Punishment: 2 years imprisonment + twice cheque amount fine.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "practical_scenarios",
+    "id": "PRAC006_TM"
+  },
+  {
+    "instruction": "Management quota vs Government quota - என்ன difference?",
+    "output": "Government quota (65%): Counselling-based merit admission, low fees. Management quota (35%): College direct admission, higher fees (2-5x). NRI quota: Foreign citizen children, highest fees. Reality: Same degree, same placement opportunity. Management quota useful if: Marks low but can afford, specific college wanted, late application. Government quota: Always try first - significant cost savings. Private self-financing colleges: 100% management, higher fees.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "common_questions",
+    "id": "COMM004_TM"
+  },
+  {
+    "instruction": "Medicine missed dose - double dose எடுக்கலாமா?",
+    "output": "Generally NO! Rules vary: 1) Most medicines - take when remembered, skip if close to next dose, 2) Never double dose unless doctor says, 3) Blood pressure/diabetes - specific rules, 4) Antibiotics - complete course important. Dangerous to double: Blood thinners, heart medicines, insulin. Safe practice: 1) Set reminders, 2) Pill boxes, 3) Ask pharmacist/doctor specific instructions. If unsure: Call doctor before taking.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "practical_scenarios",
+    "id": "HLTH154_TM"
+  },
+  {
+    "instruction": "வாட்ஸ்அப்பில் 'Amazon லக்கி டிரா வென்றீர்கள்' என்று வந்தது. லிங்க் கிளிக் செய்யலாமா?",
+    "output": "கிளிக் செய்யாதீர்கள்! Amazon இப்படி வாட்ஸ்அப்பில் மெசேஜ் அனுப்பாது. இந்த லிங்க் உங்கள் தகவல்களை திருட உருவாக்கப்பட்டது.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "lottery_scam",
+    "id": "LS003"
+  },
+  {
+    "instruction": "TB (Tuberculosis) treatment free-yaa kidaikkumaa?",
+    "output": "Yes! National TB Elimination Program - completely FREE. Services: 1) Diagnosis (sputum test, X-ray), 2) Medicines (6-9 months course), 3) Follow-up tests, 4) DOTS therapy supervision, 5) Nutrition support (Rs.500/month), 6) Transport allowance. Where: Government hospitals, designated TB centres. Private diagnosis: Government will still provide free treatment. Nikshay Poshan Yojana: DBT nutrition support.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "government_schemes",
+    "id": "HLTH013_TG"
+  },
+  {
+    "instruction": "Emergency-ல் hospital admission refuse பண்ணலாமா?",
+    "output": "NO! Illegal to refuse emergency. Law: Every hospital (government/private) must provide emergency care. Stabilization mandatory before transfer. Cannot ask for: 1) Advance payment, 2) Police clearance (accident), 3) ID proof. MLC cases: Treatment first, formalities later. Violation: Criminal prosecution + license cancellation. Report: 108, police, Health Department.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH032_TM"
+  },
+  {
+    "instruction": "PM SVANidhi (Street Vendor Loan) endraal enna?",
+    "output": "Loan for Street Vendors. First loan: ₹10,000, Second: ₹20,000 (for timely repayment), Third: ₹50,000. Interest Subsidy: 7%. Cashback: Up to ₹1,200/year for digital payments. Eligibility: Certificate of Vending/Letter of Recommendation, Name in Urban Local Body survey. Apply: pmsvanidhi.mohua.gov.in",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "central_govt_schemes",
+    "id": "CGS034"
+  },
+  {
+    "instruction": "என் பையன் engineering வேண்டாம்னு சொல்றான் - என்ன பண்றது?",
+    "output": "பையனோட interest என்னனு புரிஞ்சுக்கோங்க. Arts, Commerce, Vocational, Creative fields-லயும் நல்ல career opportunities இருக்கு. Aptitude test எடுங்க. Career counsellor-கிட்ட பேசுங்க. Force பண்ணாதீங்க.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE023_TM"
+  },
+  {
+    "instruction": "Gopuram, Vimanam irandukum enna viththiyaasam?",
+    "output": "Gopuram: Koviloda entrance gate tower. Piramaandamaga irukkum. Veliye theriyum. Sirpangal niraiya irukkum. Pirkala kovilkalil gopuram miga uyaram. Vimanam: Karuvrai (sanctum sanctorum) mel ulla tower. Moolavar meedhu neradiyaga irukkum. Aaramba kaala kovilkalil (Chozhar kaalam) vimanam miga uyaram - example: Thanjai Periya Kovil. Pirkaalathil gopuram uyaramanadhu, vimanam siriyathanadhu.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "temples_heritage",
+    "id": "CULT132_TG"
+  },
+  {
+    "instruction": "Aathichudi endraal enna? Sila udhaarangal sollungal?",
+    "output": "Aathichudi - Avvaiyar ezhuthiya needhi nool. Kuzhanthaigalukkku nallozhukkam karpikka. Ovvoru ezhuthilum thodangum ottrai vari arivuraigal. Famous examples: 1) 'Aram seiya virumbu' - do good deeds, 2) 'Aaruvadhu sinam' - control anger, 3) 'Iyalvadhu karavelv' - don't hide your capabilities, 4) 'Udaiyadhu vilambel' - don't boast, 5) 'Ookkamadhu kaividel' - don't give up enthusiasm. Tamil Nadu schools-la compulsory. Simple but powerful moral lessons!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT189_TG"
+  },
+  {
+    "instruction": "Mattra districts-la Siddha hospital irukkaa?",
+    "output": "Yes! TN Siddha infrastructure: 1) Government Siddha Medical Colleges - Palayamkottai, Tirunelveli (oldest), 2) District AYUSH hospitals - Every district, 3) Taluk level Siddha dispensaries, 4) PHC attached Siddha units. Major colleges: Tirunelveli, Chennai (2), Palani. All services free. Find: tnhealth.tn.gov.in or AYUSH department website. Total: 100+ government Siddha facilities in TN.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "siddha_medicine",
+    "id": "HLTH174_TG"
+  },
+  {
+    "instruction": "தேரையர் சித்தர் யார்? அவர் specialty என்ன?",
+    "output": "தேரையர் (Theraiyar) Siddha medicine-ன் founding fathers-ல் ஒருவர். 'நோய் நாடல்' (diagnosis) மற்றும் 'நோய் முதல் நாடல்' (finding root cause)-ல் expert. தேரையர் வைத்திய காண்டம், தேரையர் கருக்கிடை வைத்தியம் போன்ற நூல்கள் எழுதியவர். நோயின் 8 வகை diagnosis methods (என்வகைத் தேர்வு) இவர் formulate செய்ததாக கூறப்படுகிறது.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT117_TM"
+  },
+  {
+    "instruction": "திருக்குறளுக்கு வேறு என்ன பெயர்கள் உள்ளன?",
+    "output": "திருக்குறளுக்கு பல பெயர்கள் உண்டு: 1) முப்பால் - மூன்று பிரிவுகள் இருப்பதால், 2) உத்தரவேதம் - தெற்கின் வேதம், 3) தெய்வநூல் - தெய்வீக நூல், 4) பொதுமறை - எல்லா மதங்களுக்கும் பொதுவான நூல், 5) தமிழ் மறை - தமிழரின் புனித நூல், 6) பொய்யாமொழி - உண்மையான வார்த்தைகள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT006_TM"
+  },
+  {
+    "instruction": "State board vs CBSE - எது better preparation?",
+    "output": "Comparison: State Board - Regional language strong, local competitive exams friendly. CBSE - National level exams (JEE, NEET) aligned, English medium uniform. For NEET/JEE: CBSE syllabus closer. For TNPSC: State board better. Reality: Both boards students crack all exams - preparation matters more than board. State board + NCERT combination = best for competitive exams. TN State board now NCERT aligned.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "exam_preparation",
+    "id": "EXAM004_TM"
+  },
+  {
+    "instruction": "Cold/cough-க்கு வீட்டு வைத்தியம் என்ன?",
+    "output": "Effective remedies: 1) Chukku Kaapi - Dry ginger + pepper + palm jaggery boiled in water, 2) Turmeric milk (Manjal Paal) - Before sleep, 3) Steam inhalation with tulsi/eucalyptus, 4) Honey + ginger juice, 5) Pepper rasam, 6) Tulsi kashayam, 7) Gargle with warm salt water. Avoid: Cold water, ice cream, curd. When to see doctor: Fever >3 days, breathing difficulty, blood in phlegm.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "natural_remedies",
+    "id": "HLTH208_TM"
+  },
+  {
+    "instruction": "5 லட்சம் மோசடியில் போனது. அதிகபட்ச மீட்புக்கு என்னென்ன செய்ய வேண்டும்?",
+    "output": "நாள் 1: அனைத்து நிலையான படிகள் + வழக்கறிஞர் ஆலோசனை, பல வங்கி அழைப்புகள் (உங்களுடையது + பயனாளி), சமூக ஊடக எச்சரிக்கை இடுகை. வாரம் 1: அனைத்து பிரிவுகளுடன் விரிவான FIR ✓, சைபர் செல் வழக்கு ஒதுக்கீடு ✓, சைபர் குற்ற பிரிவுக்கு நேரடி வருகை ✓, செய்தித்தாள் புகார் ✓, வங்கிக்கு RTI ✓. வாரம் 2-4: விசாரணை அதிகாரியுடன் பின்தொடர்தல் ✓, SP சைபர் க்ரைம் விண்ணப்பம் ✓, இணையான குறைதீர்ப்பாளர் புகார் ✓, மற்ற பாதிக்கப்பட்டவர்களைக் கண்டறியவும் ✓, கூட்டு புகார் ✓. மாதம் 2: வங்கிக்கு சட்ட நோட்டீஸ் ✓, நுகர்வோர் மன்றம் தயாரிப்பு ✓, >5L என்றால் ED புகார் ✓, ஊடக அணுகுமுறை ✓. மாதம் 3-6: நுகர்வோர் மன்ற வழக்கு ✓, நீதிமன்ற தேதி வருகை ✓. மீட்பு: தீவிர முயற்சியுடன் 40-60%. காலம்: 6-18 மாதங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_recovery",
+    "id": "RR023_ta"
+  },
+  {
+    "instruction": "Stray dog bite ஆனால் compensation கிடைக்குமா?",
+    "output": "Corporation/Municipality நிலை பொறுத்தது. Complaint: Corporation + Animal Welfare Board. Compensation: Civil Court suit against local body (negligence). Medical expenses claim. ABC (Animal Birth Control) program failure prove பண்ணணும். Police complaint-உம் possible.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "extended_topics",
+    "id": "EXTE018_TM"
+  },
+  {
+    "instruction": "TN-la vithai/uram subsidy eppadi peruvadhu?",
+    "output": "Subsidized seeds/fertilizers for farmers. Seed Subsidy: 50% discount on certified seeds, buy at Agriculture dept office. Fertilizer Subsidy: Urea, DAP, MOP at subsidized prices. UZHAVAN Card: Track subsidy, check eligibility. Distribution: Co-operative societies, Agri office. Documents: Patta, Farmer ID, Aadhaar. Season: Announced before sowing season.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "tn_agriculture",
+    "id": "TNA006"
+  },
+  {
+    "instruction": "Case status online-la eppadi check panradhu?",
+    "output": "Websites: ecourts.gov.in (all courts), highcourtmadras.gov.in (Madras HC), sci.gov.in (Supreme Court). Search by: CNR number, party name, case number, advocate name. e-Courts app-um available. Cause list (daily hearing list) check pannalam.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "extended_topics",
+    "id": "EXTE003_TG"
+  },
+  {
+    "instruction": "Ex-servicemen pillaikkalukku padippu salugaigal enna?",
+    "output": "Benefits: 1) TNPSC-la 2% horizontal reservation 2) Engineering/Medical admission-la reservation 3) Sainik School admission priority 4) AFMC, NDA-la priority 5) Fee concession pala colleges-la. Prime Minister's Scholarship: ₹36,000-60,000/year professional courses-ku. Kendriya Sainik Board scholarship available. Apply with father's discharge certificate.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH037_TG"
+  },
+  {
+    "instruction": "இன்ஸ்டாகிராமில் 'giveaway winner நீங்கள்! DM செய்யுங்கள்' என்று comment வந்தது. நம்பலாமா?",
+    "output": "அந்த account verify செய்யுங்கள். பெரும்பாலும் போலி accounts. DM-ல் பணம் அல்லது தகவல் கேட்டால் block செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "lottery_scam",
+    "id": "LS014"
+  },
+  {
+    "instruction": "Sexual harassment complaint eppadi seivathu?",
+    "output": "Internal Complaints Committee (ICC)-kku written complaint. ICC illaattal Local Complaints Committee (District level). Time limit: 3 months from incident. POSH Act 2013 protection. Anonymous complaint-um valid. Retaliation-kku protection undu.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "employment_labor",
+    "id": "EMPL015_TG"
+  },
+  {
+    "instruction": "Pradhan Mantri Awas Yojana (PMAY) - TN-la eppadi peruvadhu?",
+    "output": "PMAY-Urban: Eligibility - EWS (income up to ₹3 lakh), LIG (₹3-6 lakh), MIG-I (₹6-12 lakh), MIG-II (₹12-18 lakh). Benefit: Interest subsidy 3-6.5%. Apply: pmay-urban.gov.in/CSC/Bank. PMAY-Gramin: Houseless as per SECC data. Assistance: ₹1.20 lakh (Plain)/₹1.30 lakh (Hilly). Apply: Gram Panchayat/Block Office. TN: Can also apply through TNHB",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "central_govt_schemes",
+    "id": "CGS020"
+  },
+  {
+    "instruction": "Varadatchanai kekkuraanga, enga poi solrathu? (Madurai style)",
+    "output": "Recording vachukonga - phone calls, conversations. Messages screenshot edunga. Women helpline 181, or All Women Police Station-la complaint. Dowry Prohibition Act-la case podalam. 5 years jail + fine - kekkuravangalukkum kodukuravangalukkum.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI027_TG"
+  },
+  {
+    "instruction": "10th/12th pass-ku endhendha government jobs apply seiyalaam?",
+    "output": "10th pass jobs: 1) Railway Group D 2) SSC MTS (Multi-Tasking Staff) 3) TNPSC Group 4 4) Police constable 5) Post office GDS. 12th pass jobs: 1) SSC CHSL (LDC, DEO) 2) TNPSC Group 4 (higher posts) 3) Bank clerk (some) 4) Railway NTPC 5) Defence - Army, Navy, Air Force. Age: 18-30 (varies). Apply: Respective recruitment websites. Free coaching available through Employment Exchange.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "vocational_training",
+    "id": "VOCA023_TG"
+  },
+  {
+    "instruction": "தேவாரம், திவ்யப்பிரபந்தம் எங்கே கேட்கலாம்/படிக்கலாம்?",
+    "output": "கேட்க/படிக்க வழிகள்: 1) கோயில்களில் - daily ஓதுவார்கள் பாடுவார்கள், 2) YouTube - Sirkali Govindarajan, DKJ, Bombay Sisters versions famous, 3) Spotify, Gaana apps - playlists உள்ளன, 4) Project Madurai - free text online, 5) Tamil Virtual Academy, 6) Books - Giri Trading, Higginbothams, 7) Apps - Thevaram app, Divya Prabandham app. Morning/evening கேட்டால் peaceful feeling. Margazhi month-ல் திருப்பாவை daily radio-ல் வரும்!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT200_TM"
+  },
+  {
+    "instruction": "Manikkavasagar yaar?",
+    "output": "Manikkavasagar - 'Thiruvasagam' ezhuthiya Saiva punidhiar. Pandiya mannaroda amaichcharaaga irundhavar. Thirupperunduraiyil Sivanai sandhiththu ellavattraiyum vittu bhakthan aanaar. 'Thiruvasagaththukku urugaadhaar oru vaasagaththukkum urugaar' enbadhu famous pazhamozhi. Chidambarathil Sivanidm aikyamaanaar endru nambappadugiradhu. 8-vadhu Thirumurai Thiruvasagam. Unarchi miguntha bhakthi poetry.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT182_TG"
+  },
+  {
+    "instruction": "'யாதானும் நாடாமால் ஊராமால்' - இந்த புகழ்பெற்ற குறள் என்ன சொல்கிறது?",
+    "output": "குறள்: 'யாதானும் நாடாமால் ஊராமால் என்னொருவன் சாந்துணையும் கல்லாத வாறு'. அர்த்தம்: எந்த நாடும் எந்த ஊரும் கல்வி கற்றவனுக்கு சொந்தம். அவன் எங்கு சென்றாலும் மதிப்பு பெறுவான். ஆனால் கல்வி இல்லாதவன் சாகும் வரை ஒன்றும் இல்லாதவனாகவே இருப்பான். கல்வியின் அவசியத்தை வலியுறுத்தும் குறள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT010_TM"
+  },
+  {
+    "instruction": "Exam-la time management eppadi seivathu?",
+    "output": "Strategies: 1) Question paper muzhuvathum mudhalil padiyunga (5 mins) 2) Easy questions mudhalil attempt 3) Marks-ku erpa time allocate (1 mark = 1 minute rule) 4) Stuck aanaal skip, later return 5) Last 10 minutes revision-ku keep 6) Answer length = marks (2 marks = half page, 5 marks = 1 page) 7) Watch/clock parunga regularly. Practice: At home, exam conditions-la previous papers ezhuthunga.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH044_TG"
+  },
+  {
+    "instruction": "Medical records copy கேட்கலாமா? Hospital தர மறுக்கலாமா?",
+    "output": "Patient's absolute right! Records include: 1) Discharge summary, 2) Investigation reports, 3) Operation notes, 4) Prescription copies, 5) Bills. Hospital must provide within 72 hours of request. Cannot refuse. Charges: Nominal photocopying charges only. Digital records: Soft copy also must provide. Retention: Hospital must keep records 3 years minimum. Missing records: Hospital liable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH027_TM"
+  },
+  {
+    "instruction": "Nandri marappadu patri enna solkiraar?",
+    "output": "Kural: 'Endhandri kondraarkum uyvundaam uyvilai seinandri kondra magarku'. Ella baavangalukkum mannippu undu, aanaal nandri marandhavnukku illai. Melum: 'Nandri marappadu nandrandru nandralla thandriyum marappadu nandru'. Nandriyai marakkakkoodaadhu, theemayai marakkalaam. Forgetting kindness = unforgivable sin!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT093_TG"
+  },
+  {
+    "instruction": "ரேஷன் கார்டில் பெயர் சேர்க்க என்ன செய்ய வேண்டும்?",
+    "output": "புதிதாக பிறந்த குழந்தை அல்லது திருமணம் ஆன பெண் என்றால் Form 2 நிரப்ப வேண்டும். Birth certificate அல்லது marriage certificate, Aadhaar copy கொடுக்க வேண்டும். Online-லும் apply செய்யலாம்.",
+    "language": "mixed",
+    "pack": "vazhi_arasu",
+    "category": "ration_card",
+    "id": "RC002"
+  },
+  {
+    "instruction": "Porumai (patience) patri mukkiya kuralgal enna?",
+    "output": "Kural: 'Agazhvaarai thaangum nilampoola thammai igazhvaarp poruththal thalai'. Thannai igazhpavargalaiyum bhoomi pol thaanguvadhae sirandha gunam. Melum: 'Poruththaaraip pondraami kaakkum'. Porumai ullavargalai failure kaakkum. Patience = shield against failure!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT090_TG"
+  },
+  {
+    "instruction": "Friend சொன்னான்: 'இந்த app-ல் invest செய்தால் daily 5% interest கிடைக்கும்' - genuine-ஆ?",
+    "output": "Daily 5% என்றால் வருடத்திற்கு 1800%! இது சாத்தியமில்லை. Ponzi scheme. ஆரம்பத்தில் பணம் தருவார்கள், பின்பு app மூடிவிடும்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "investment_fraud",
+    "id": "IF003"
+  },
+  {
+    "instruction": "Case ethanai years oodum? Settlement pannalaamaa?",
+    "output": "Timeline: Consumer Forum 1-3 years, Civil court 5-10 years, Criminal 3-7 years. Settlement: 1) Lok Adalat (mutually agreed), 2) Mediation (court-annexed), 3) Direct negotiation. Benefits: Faster resolution, certain outcome, lower legal costs. Caution: Don't settle too low - get legal opinion on fair amount. Hospital insurance: Usually pushes for settlement.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "medical_negligence",
+    "id": "HLTH060_TG"
+  },
+  {
+    "instruction": "MA/M.Sc/M.Com படிப்பு அரசு கல்லூரிகளில் எப்படி சேருவது?",
+    "output": "சேர்க்கை முறை: 1) TNGASA PG Admissions portal 2) UG மதிப்பெண் அடிப்படையில் rank 3) ஆன்லைன் counselling. தகுதி: சம்பந்தப்பட்ட UG படிப்பு 50% marks. கட்டணம்: அரசு கல்லூரிகளில் ₹2,000-5,000/ஆண்டு மட்டுமே. படிப்பு காலம்: 2 ஆண்டுகள். NET/SET தேர்வுக்கு தயாராகலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH013_TM"
+  },
+  {
+    "instruction": "Free vaccination schedule என்ன? எங்கே போகணும்?",
+    "output": "Universal Immunization Program - FREE for all children. Schedule: Birth - BCG, OPV, Hep B; 6 weeks - DPT, OPV, Hep B; 10 weeks - DPT, OPV; 14 weeks - DPT, OPV, Hep B; 9 months - Measles, Vitamin A; 16-24 months - DPT booster, OPV, Measles. Where: PHC, Government hospital, Anganwadi. Carry: Child's health card. Missed dose: Can catch up - consult ANM.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "government_schemes",
+    "id": "HLTH011_TM"
+  },
+  {
+    "instruction": "Traffic police wrongly fine போட்டால் என்ன செய்வது?",
+    "output": "Options: 1) On-spot - evidence காட்டி argue (dashcam, photos), 2) Court-ல் contest (challan dispute), 3) Online grievance: tnpolice.gov.in, 4) RTO officer complaint. Challan copy கேளுங்க. Court contest-க்கு time limit உண்டு.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "traffic_vehicles",
+    "id": "TRAF006_TM"
+  },
+  {
+    "instruction": "Stroke symptoms enna? FAST endraal enna?",
+    "output": "FAST test: F - Face drooping (one side), A - Arm weakness (can't raise one arm), S - Speech difficulty (slurred), T - Time to call emergency. Other symptoms: Sudden confusion, vision problem, severe headache, walking difficulty. Action: 1) Call 108, 2) Note time symptoms started (important for treatment), 3) Don't give food/water (swallowing problem possible). Window: 3-4.5 hours for clot-busting treatment.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "practical_scenarios",
+    "id": "HLTH147_TG"
+  },
+  {
+    "instruction": "Eviction notice வந்தால் எத்தனை நாள் time கிடைக்கும்?",
+    "output": "Agreement-ல் mention செய்த notice period (1-3 மாதம்) கிடைக்கும். Court through eviction என்றால் reasonable time கொடுப்பார்கள். Rent default case-ல் 15 நாள் notice கொடுத்து arrears pay செய்ய chance தருவார்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA014_TM"
+  },
+  {
+    "instruction": "Association maintenance fee yaar kattanum?",
+    "output": "Podhuvaaga tenant kattuvathu practice. But agreement-la enna solliyirukko adhuthaan valid. Corpus fund, sinking fund pola one-time payments owner responsibility. Monthly maintenance tenant kattuvathu common.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA020_TG"
+  },
+  {
+    "instruction": "LinkedIn la 'HR from Google/Microsoft' message - 'Your profile selected, initial interview fee 5,000 for assessment platform access.' Dream job opportunity, pay pannalama?",
+    "output": "Google, Microsoft - NO interview fees. 'HR' direct message - fake recruiter. Assessment platforms company provide pannum free. LinkedIn fake recruiters mass aa irukkaanga. Official career pages la apply pannunga, DM job offers ignore pannunga.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS039"
+  },
+  {
+    "instruction": "Snake bite aanaal enna seyyanum? Enna koodaadhu?",
+    "output": "DO: 1) Stay calm, 2) Immobilize bitten limb (don't move), 3) Remove jewelry (swelling), 4) Call 108/go to hospital immediately, 5) Note snake appearance if possible. DON'T: 1) Cut/suck wound, 2) Apply tourniquet tightly, 3) Apply ice/electric shock, 4) Give alcohol/traditional remedies, 5) Waste time catching snake. Antivenom: Available free at government hospitals. All snake bites need hospital evaluation.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "practical_scenarios",
+    "id": "HLTH148_TG"
+  },
+  {
+    "instruction": "Marriage-க்கு minimum age என்ன?",
+    "output": "பெண் - 18 years, ஆண் - 21 years. Underage marriage illegal (Child Marriage Restraint Act). Underage marriage voidable (annul செய்யலாம்). Parents/guardians-க்கு 2 years imprisonment + Rs.1 lakh fine. Marriage fix பண்றவர்களும் liable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI002_TM"
+  },
+  {
+    "instruction": "பொறுமையின் பலன் என்ன?",
+    "output": "குறள்: 'உண்ணாது நோற்பார் பெரியர் பிறர்சொல்லும் இன்னாச்சொல் நோற்பாரின் பின்'. கடுஞ்சொற்களை பொறுப்பவர்கள் விரதம் இருப்பவர்களை விட பெரியவர்கள். மேலும்: 'ஒறுத்தாரை ஒன்றாக வையாரே வைப்பர் பொறுத்தாரைப் பொன்றாக வைப்பர்'. Revenge எடுப்பவரை மக்கள் மதிக்க மாட்டார்கள், பொறுப்பவரை மதிப்பார்கள். Patience earns respect!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT091_TM"
+  },
+  {
+    "instruction": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY) endraal enna?",
+    "output": "Free Skill Training. Duration: 150-300 hours. Courses: IT, Healthcare, Construction, Retail, etc. Benefits: Free Training, Certificate (Industry recognized), Placement assistance, Up to ₹8,000 reward (if assessment passed). Join: pmkvyofficial.org → Find Training Center, Nearby PMKVY Training Center, Need Aadhaar, Photo. RPL: Certificate for those with existing skills, ₹500 assessment fee (refundable)",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "central_govt_schemes",
+    "id": "CGS028"
+  },
+  {
+    "instruction": "Sore throat-kku gargle options?",
+    "output": "Gargle remedies: 1) Salt + warm water (most common), 2) Turmeric + salt + warm water, 3) Honey + warm water, 4) Apple cider vinegar diluted, 5) Licorice (Athimathuram) decoction. Frequency: 3-4 times daily. Drinks: 1) Warm water throughout day, 2) Honey + lemon + warm water, 3) Tulsi tea. Avoid: Cold drinks, spicy food, shouting. Persistent: If >1 week, see ENT doctor.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "natural_remedies",
+    "id": "HLTH212_TG"
+  },
+  {
+    "instruction": "Minor குழந்தைக்கு PAN Card தேவையா?",
+    "output": "தேவைப்படும் சூழ்நிலைகள்: குழந்தை பெயரில் Fixed Deposit/Investment, குழந்தைக்கு வருமானம் இருந்தால் (Child Artist), Property குழந்தை பெயரில் இருந்தால். விண்ணப்பிக்க: பெற்றோர்/Guardian விண்ணப்பிக்க வேண்டும், குழந்தையின் Birth Certificate + Parent's ID proof தேவை, 18 வயதானதும் details update செய்ய வேண்டும் (photo, signature)",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "pan_card_bilingual",
+    "id": "PAN011"
+  },
+  {
+    "instruction": "அழைப்பு வந்தது 'மின்சார வாரியத்திலிருந்து பேசுகிறேன். உங்கள் மின்சார இணைப்பு இன்று துண்டிக்கப்படும். தவிர்க்க இப்போதே 2000 செலுத்துங்கள்.' என்ன செய்வது?",
+    "output": "இது மோசடி அழைப்பு. மின்சார வாரியம் தொலைபேசியில் பணம் கேட்பதில்லை, நோட்டீஸ் அனுப்பும். எந்த பணமும் செலுத்தாதீர்கள். அருகிலுள்ள EB அலுவலகத்தில் நேரடியாக சரிபார்க்கவும்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_scam_detection",
+    "id": "GI001_ta"
+  },
+  {
+    "instruction": "New Year eve - 'Party pass 50% off! Limited slots, pay now!' Instagram DM வந்துச்சு. Book பண்ணலாமா?",
+    "output": "Risky! New Year party scams common. Unknown organizers money வாங்கி event cancel பண்ணிடுவாங்க. Verified event organizers மட்டும் trust பண்ணுங்க. DM offer-ஐ avoid பண்ணுங்க. Reviews check பண்ணுங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS017"
+  },
+  {
+    "instruction": "Call vandhudhu 'RERA registration update mandatory. Pay 20,000 processing fee immediately.' RERA registered broker, update pannanum aa?",
+    "output": "RERA agent registration through state RERA portal (rera.tn.gov.in for TN). Renewal fees are fixed and much lower. Updates done online, no phone-based processing. Check your registration status directly on RERA portal. Scammers target real estate professionals.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS074"
+  },
+  {
+    "instruction": "Medicine MRP-க்கு மேல் விற்றால் complaint எங்கே?",
+    "output": "Complaint: Drug Inspector (District), State Drug Control. Legal Metrology Department-உம் complaint எடுக்கும். Pharmacy license suspend/cancel ஆகலாம். Consumer forum-ல் compensation. Evidence: Bill with MRP comparison. Toll-free: 1800-11-4000.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "practical_scenarios",
+    "id": "PRAC016_TM"
+  },
+  {
+    "instruction": "Bank loan EMI கட்ட முடியல, என்ன ஆகும்?",
+    "output": "EMI default ஆனால்: 1) 90 days delay = NPA (Non-Performing Asset), 2) Bank notice அனுப்பும், 3) Recovery agent வரலாம் - ஆனால் அவங்க threaten பண்ண கூடாது, 4) Restructure/one-time settlement கேளுங்க, 5) Home loan: SARFAESI Act-ன் கீழ் property auction ஆகலாம். RBI guidelines: Recovery agent harassment-க்கு complaint போடலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "supplementary",
+    "id": "SUPP001_TM"
+  },
+  {
+    "instruction": "Voter ID card-ல் address மாற்ற என்ன செய்வது?",
+    "output": "voters.eci.gov.in-ல் Form 8A நிரப்பி online submit செய்யலாம். புதிய address proof upload செய்யுங்கள். BLO verification நடக்கும். 15-30 நாட்களில் updated card வரும்.",
+    "language": "mixed",
+    "pack": "vazhi_arasu",
+    "category": "certificates_documents",
+    "id": "CD014"
+  },
+  {
+    "instruction": "Kalaignar Magalir Urimai Thittam enna?",
+    "output": "₹1,000/month for woman head of family in TN. Eligibility: 21+ age, family income below ₹2.5 lakh, not govt employee/tax payer, no other pension. Apply through Anganwadi or kalaaboravu.tn.gov.in with Aadhaar, ration card, bank account.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA022T"
+  },
+  {
+    "instruction": "En paiyan/ponnu college-la veliyoor poraanga. Eppadi support panrathu?",
+    "output": "Parent support tips: 1) Regular communication - but not controlling 2) Visit once in first month - help settle 3) Emergency contact with warden establish 4) Bank account with adequate funds 5) UPI/GPay teach for daily expenses 6) Health insurance ensure 7) Trust them - allow independence 8) Listen without judging when they share problems 9) Homesickness normal - patience. Balance: Support without helicopter parenting. They're growing up!",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC023_TG"
+  },
+  {
+    "instruction": "Gym/Coaching centre refund தர மறுக்கிறார்கள் - சட்டப்படி கேட்கலாமா?",
+    "output": "Service not availed-க்கு pro-rata refund கேட்கலாம். 'No refund' policy unfair trade practice ஆகலாம். Lock-in period reasonable-ஆ இருக்கணும். Consumer forum-ல் complaint போடலாம். Covid போன்ற force majeure cases-ல் full refund கிடைக்கும்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS018_TM"
+  },
+  {
+    "instruction": "Dementia patient-kku legal protection enna?",
+    "output": "Protections: 1) Guardianship: Court can appoint guardian for person/property, 2) Power of Attorney: Execute while still competent, 3) Senior Citizens Act: Protection from exploitation, 4) RPD Act: Disability rights. Financial: 1) Joint account with trusted person, 2) Nomination in all accounts, 3) Will execution early. Healthcare: Advance directive possible. Abuse: Report to police, Senior Citizens Tribunal.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "mental_health",
+    "id": "HLTH122_TG"
+  },
+  {
+    "instruction": "Visitation rights endraal enna?",
+    "output": "Custody illadha parent-kku child-ai sandhikkum right. Court order: Weekly/monthly visits, holiday stays, phone/video calls. Visitation deny panninaal contempt of court. Both parents cooperate seivathu child-kku nalladhu.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI014_TG"
+  },
+  {
+    "instruction": "Marriage-la mental illness ground for divorce-aa?",
+    "output": "Complex issue. Law: Mental disorder is a ground under Hindu Marriage Act, but: 1) Must be incurable/very severe, 2) Must be before marriage or continuous after, 3) Court considers treatment possibility, 4) Living together impossible. Safeguards: 1) Medical evidence needed, 2) Treatment efforts considered, 3) Maintenance rights protected. Progressive interpretation: Courts increasingly protective of mentally ill spouse.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "mental_health",
+    "id": "HLTH124_TG"
+  },
+  {
+    "instruction": "Maatruththiraanaali (differently abled) students-ku padippu salugaigal enna?",
+    "output": "Benefits: 1) 5% reservation in all courses 2) Full fee waiver in govt colleges 3) Free laptop scheme 4) Special scholarship ₹3,000-10,000/month 5) Scribe facility in exams 6) Extra time (20 minutes/hour). UDID card theva. Disability certificate 40%+ irukka venum. Apply through Differently Abled Welfare Department.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH036_TG"
+  },
+  {
+    "instruction": "Doctor எங்க native language-ல் explain பண்ணணுமா?",
+    "output": "Yes! Right to information in understandable language. Includes: 1) Diagnosis explanation, 2) Treatment options, 3) Risks and benefits, 4) Consent form explanation, 5) Medicine instructions. If doctor doesn't speak Tamil: Hospital should arrange translator. Written materials: Should be in local language. Complaint: If communication barrier causes harm - negligence claim possible.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH031_TM"
+  },
+  {
+    "instruction": "Cashless hospitalization எப்படி வேலை செய்யும்?",
+    "output": "Process: 1) Check hospital in network list, 2) Inform TPA/insurer before admission (planned), 3) Show health card at admission, 4) Hospital sends pre-auth request, 5) TPA approves amount, 6) Treatment happens, 7) Final bill - approved amount deducted, balance you pay. Emergency: Inform within 24 hours. Rejected: Appeal to insurer, pay and claim reimbursement.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "private_hospitals",
+    "id": "HLTH077_TM"
+  },
+  {
+    "instruction": "MBBS/BDS admission-ku Tamil Nadu-la enna seiya venum?",
+    "output": "NEET exam compulsory. Steps: 1) NEET ezhuthunga 2) TN Medical Selection Committee counselling-ku apply pannunga 3) Online choice filling 4) Govt/Private medical college allotment. Govt college fee: Yearly ₹13,500. 7.5% govt school students-ku separate reservation.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH003_TG"
+  },
+  {
+    "instruction": "Vallalar (Ramalinga Adigal) yaar?",
+    "output": "Vallalar (1823-1874) - 'Arutperunjothi' thaththuvathai parappiyavar. Jaadhi, madha verupaadugalai ethirthavar. 'Samarasa Suttha Sanmaarga Sangam' niruvinar. Vadaloor Sathya Gnana Sabhai kattinar - kovil without idol, pure light worship. 'Jeevakarunyam' (compassion for all living beings) mukkiya bodhanai. 1874-la 'Degathai oliyaaga maatri maraindhaar' endru nambappadugiradhu. Annadhaanam thodangiyavar - free food for all.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT197_TG"
+  },
+  {
+    "instruction": "Board exam-ku eppadi thirambaada padippathu?",
+    "output": "Tips: 1) Previous year question papers practice pannunga 2) Time table pottu padiyunga 3) Blue print padi important chapters-ku priority 4) Daily 6-8 hours study 5) Weekly revision 6) Health-a kavaniyunga - proper sleep, food 7) Group study avoid, self-study better. TN government question bank: www.dge.tn.gov.in. Sample papers free download.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH040_TG"
+  },
+  {
+    "instruction": "Marriage registration eppadi seyvadhu?",
+    "output": "Hindu Marriage Act paadi: 1. Sub-registrar office-la application 2. Documents: Both age proof (Male 21+, Female 18+), Address proof, photos, Marriage invitation / photos, 2 witnesses (Aadhaar copy) 3. Fee: ₹100-500 4. Online: tnreginet.gov.in",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "bilingual_govt_procedures",
+    "id": "BGP018"
+  },
+  {
+    "instruction": "RTI reply எத்தனை நாளில் கிடைக்கும்?",
+    "output": "Normal: 30 days. Life/liberty matter: 48 hours. Third party information: 40 days. Transfer to other department: 35 days (5 days transfer + 30 days). Reply இல்லாவிட்டால் deemed refusal - First Appeal போடலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "rti_government",
+    "id": "RTI_004_TM"
+  },
+  {
+    "instruction": "'அறிவுடையார் ஆவது அறிவார்' - leadership பற்றி வள்ளுவர் என்ன சொல்கிறார்?",
+    "output": "குறள்: 'அறிவுடையார் ஆவது அறிவார் அறிவிலார் அஃதறி கல்லா தவர்'. அர்த்தம்: அறிவுடையவர்கள் வரப்போவதை முன்கூட்டியே அறிவார்கள். அறிவில்லாதவர்கள் அப்படி அறிய மாட்டார்கள். எதிர்காலத்தைப் பார்க்கும் திறன் (foresight) பற்றிய குறள். நல்ல leader-க்கு இது அவசியம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT014_TM"
+  },
+  {
+    "instruction": "Wrong product deliver aanadhu - return policy illaiyaam, enna seivathu?",
+    "output": "Wrong product deliver aanaal return policy illa endru solla mudiyaadhu - idhu seller mistake. Consumer Protection Act-in keezh correct product or full refund ketkalam. Screenshots, photos eduthu complaint podunga. NCH, consumer forum - irandilum case podalam.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS010_TG"
+  },
+  {
+    "instruction": "Traffic police thappaa fine pottuttaaru, ethirkkalaama? (Tirunelveli style)",
+    "output": "Aamaa ethirkkalam. Dashcam/CCTV proof irundhaa best. Court-la challan contest pannalam. Online grievance: tnpolice.gov.in. Time limit undu - delay aagaama ponga. Challan copy kattaayam vaangunga.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "practical_scenarios",
+    "id": "PRAC027_TG"
+  },
+  {
+    "instruction": "'Azhukkaaru avaa veguli' - theeya gunangal patriya kural enna?",
+    "output": "Kural: 'Azhukkaaru avaaveguli innaachol naangum izhukkaarau iyandradhu il'. Artham: 1) Azhukkaaru (jealousy), 2) Avaa (greed), 3) Veguli (anger), 4) Innaachol (harsh words) - indha naangum illadhavan ozhukkamaanavan. Four enemies of good character!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT039_TG"
+  },
+  {
+    "instruction": "Birth certificate eppadi peruvadhu?",
+    "output": "Register within 21 days at hospital location's Municipality/Panchayat - FREE! After 21 days: ₹50 late fee + affidavit. Documents: Hospital discharge summary, parents' Aadhaar. Online at tnreginet.gov.in or crsorgi.gov.in. Certificate in 3-5 days.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA008T"
+  },
+  {
+    "instruction": "Tamil medium-la padichaa future-la problem varumaa? English medium better-aa?",
+    "output": "Reality check: Tamil medium = Mother tongue strong, concepts clear. English medium = Language advantage. Both work! Important: 1) Foundation subjects (Maths, Science) any medium OK 2) English can be learned later 3) Many Tamil medium toppers in competitive exams 4) Government jobs no medium preference. Advice: Choose based on child comfort. Tamil medium + English tuition = balanced approach. Focus on learning, not medium.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "age_group_scenarios",
+    "id": "AGE_005_TG"
+  },
+  {
+    "instruction": "Medicine expiry ஆனா use பண்ணலாமா?",
+    "output": "NO! Expired medicine risks: 1) May not work (lost potency), 2) May become toxic, 3) Can cause adverse reactions. Law: Selling expired medicine = criminal offence. Check: Expiry date on strip/bottle before purchase. If sold expired: 1) Return to pharmacy, 2) Drug Inspector complaint, 3) Consumer Forum. Storage: Keep as per instructions - some need refrigeration.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "pharmacy_medicines",
+    "id": "HLTH089_TM"
+  },
+  {
+    "instruction": "Aadhaar paadhukaappaaga vaikka enna seyyalam?",
+    "output": "1) Lock biometrics at myaadhaar.uidai.gov.in - prevents unauthorized authentication. 2) Use Virtual ID (VID) - 16-digit temporary number instead of Aadhaar. 3) Use Masked Aadhaar - shows only last 4 digits. 4) Check authentication history regularly.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA005T"
+  },
+  {
+    "instruction": "'Start your e-commerce business, we handle everything - products, delivery, marketing. Investment 1 lakh, returns 50,000/month.'",
+    "output": "Legitimate dropshipping requires YOUR effort - product selection, marketing, customer service. 'We handle everything + guaranteed returns' = Ponzi. 1 lakh vaangitu fake dashboard kaatuppaanga with 'profits' - withdrawal impossible. Real business = real work, no guarantees.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS050"
+  },
+  {
+    "instruction": "SC/ST students-ku ennenna scholarships kidaikkum?",
+    "output": "Adi Dravidar Welfare Department: 1) Pre-matric scholarship - ₹500-1,500/year 2) Post-matric scholarship - ₹3,000-10,000/year 3) Professional course - full fee + maintenance 4) PhD scholarship 5) Foreign study - ₹20 lakh 6) Free laptop 7) Hostel free 8) Books, uniform free. Apply: www.adwelfare.tn.gov.in. Income limit: ₹2.5 lakh/year. Almost all courses-ku scholarship irukku.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "scholarships",
+    "id": "SCHO002_TG"
+  },
+  {
+    "instruction": "Consumer forum order implement ஆகல - என்ன செய்வது?",
+    "output": "Execution petition file பண்ணுங்க. Order implement செய்யாத party-க்கு: 1) Fine, 2) Imprisonment (up to 3 years), 3) Property attachment. Forum-க்கே execution petition போடுங்க. District Collector மூலமும் execution நடக்கும்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS022_TM"
+  },
+  {
+    "instruction": "Tuition poganuuma? School padippu mattum podhaadha?",
+    "output": "Depends on: 1) School quality - Government/Private 2) Child's self-study ability 3) Parent support at home 4) Specific subject weakness. Tuition alternatives: 1) Free government coaching centres 2) YouTube educational videos 3) Khan Academy, BYJU'S free tier 4) Group study with friends 5) Senior students help. When needed: Maths, Science weak subjects, competitive exam preparation. Cost: ₹500-2000/month for tuition. Self-study skill develop = best investment.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "age_group_scenarios",
+    "id": "AGE_007_TG"
+  },
+  {
+    "instruction": "Pregnant lady-க்கு call - 'Pradhan Mantri Matru Vandana Yojana-ல் extra benefit, registration-க்கு Aadhaar OTP கொடுங்கள்'.",
+    "output": "PMMVY registration-க்கு OTP தேவையில்லை. Anganwadi center அல்லது hospital-ல் direct apply செய்யலாம். Pregnant women-ஐ target செய்யும் scam. OTP கொடுக்காதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT012"
+  },
+  {
+    "instruction": "Govt school-la ennenna free-ya kidaikkum?",
+    "output": "**Govt School Free Benefits:**\n\n1. **Education:** Fully free\n2. **Books:** All textbooks free\n3. **Uniform:** 2 sets/year + Shoes, Socks\n4. **Mid-Day Meal:** Breakfast + Lunch + Weekly egg, milk, banana\n5. **Bus Pass:** Free travel\n6. **Stationery:** Notebook, Pen, Pencil, Geometry box\n7. **School Bag:** Some schools\n8. **Footwear:** Canvas shoes\n9. **Health Checkup:** 2 times/year + Free spectacles\n10. **Scholarship:** Additional for SC/ST/BC/MBC",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "school_education",
+    "id": "SCHO002_TG"
+  },
+  {
+    "instruction": "'Ayya, hospital la irundhu pesuren, unga son accident la admit, immediate surgery ku 1 lakh vendum, UPI pannunga' nu call vandhudhu. Bayama irukku, enna pannanum?",
+    "output": "Ayya, FIRST unga son ku phone pannunga! Answer pannala na, daughter-in-law, office ku call pannunga. Real hospital random numbers la UPI kekkaadhu - admission formalities irukkum. Panic la verify pannama pay pannaadheenga. 30 seconds verification lakhs save pannum.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS008"
+  },
+  {
+    "instruction": "Management quota vs Government quota - enna difference?",
+    "output": "Government quota (65%): Counselling-based merit admission, low fees. Management quota (35%): College direct admission, higher fees (2-5x). NRI quota: Foreign citizen children, highest fees. Reality: Same degree, same placement opportunity. Management quota useful if: Marks low but can afford, specific college wanted, late application. Government quota: Always try first - significant cost savings. Private self-financing colleges: 100% management, higher fees.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "common_questions",
+    "id": "COMM004_TG"
+  },
+  {
+    "instruction": "Karunai illadhavargal patri enna solkiraar?",
+    "output": "Kural: 'Arulillaarkku avvulagam illai porulillaarkku ivvulagam illai'. Karunai illadhavargalukkku marumai illai, panam illadhavargalukkku immai kashtam. Melum: 'Porulartraar pooppar orukaal arulartraar artrraarmatr raadhal aridhu'. Panam ponaal thirumba varum, karunai ponaal thirumba varaadhu. Kindness once lost = hardest to regain!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT099_TG"
+  },
+  {
+    "instruction": "முதியோர் ஓய்வூதியம் எப்படி பெறுவது?",
+    "output": "TN State: ₹1,000/month (60-79 years), ₹1,500/month (80+). Eligibility: BPL/low income, no other pension. Apply at tneservices.tn.gov.in or Taluk Office with age proof, income certificate, Aadhaar, bank account. VAO verification. Time: 30-60 days.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA023"
+  },
+  {
+    "instruction": "Doctor credentials எப்படி verify பண்றது?",
+    "output": "Verify: 1) NMC website (nmc.org.in) - Indian Medical Register, 2) State Medical Council register, 3) Specialist registration (for specialists), 4) Hospital website - doctor profile. Check: 1) MBBS registration number, 2) PG degree registration, 3) Disciplinary actions if any. Fake doctor: Report to police + Medical Council. Important: Any doctor must display registration number.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "medical_negligence",
+    "id": "HLTH068_TM"
+  },
+  {
+    "instruction": "Agathiyar ezhuthiya noolgal enna?",
+    "output": "Agathiyar peyaril ulla noolgal: 1) Agathiyar Gnaanam - aanmeega gnaanam, 2) Agathiyar Vaiththiyam - maruththuvam, 3) Agathiyar Karma Kaandam - astrology, 4) Agathiyar Yogam - yoga practices, 5) Agathiyar Naadi - palm leaf predictions, 6) Agathiyar Rathna Soothiram - gemology. 'Agathiyar 12000' endra periya noolum ulladhu. Moththam 200-kkum merppatta noolgal avar peyaril ullana.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT106_TG"
+  },
+  {
+    "instruction": "'கற்றதனால் ஆய பயனென்கொல்' - இந்த குறளின் பொருள் என்ன?",
+    "output": "குறள்: 'கற்றதனால் ஆய பயனென்கொல் வாலறிவன் நற்றாள் தொழாஅர் எனின்'. அர்த்தம்: தூய அறிவுடைய இறைவனின் திருவடிகளை வணங்காவிட்டால், கற்ற கல்வியால் என்ன பயன்? கல்வியின் உண்மையான பயன் இறைவனை வணங்குவதே என்கிறார் வள்ளுவர்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT008_TM"
+  },
+  {
+    "instruction": "மீனவர் குடும்ப மாணவர்களுக்கு scholarship உள்ளதா?",
+    "output": "ஆம், Fisheries Department Scholarships: 1) Pre-matric - ₹500-1,500/ஆண்டு 2) Post-matric - ₹2,000-5,000/ஆண்டு 3) Professional courses - ₹10,000-30,000 4) Higher education abroad - ₹10 lakh. தகுதி: Fishermen community certificate, registered fisherman's child. Apply: www.fisheries.tn.gov.in. Special quota in Anna University marine courses.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "scholarships",
+    "id": "SCHO007_TM"
+  },
+  {
+    "instruction": "Owner advance-la painting charge, cleaning charge kazhikkuraar - sariyaa?",
+    "output": "Normal wear and tear-kku tenant responsible illa. Paint fading, minor scratches idhukku kazhikka mudiyaadhu. But tenant potta holes, major damage-kku kazhikkalam. Move-in bodhu photos eduthu vaichirupathu nalladhu.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA009_TG"
+  },
+  {
+    "instruction": "Ration card complaint எங்கே கொடுப்பது?",
+    "output": "Options: 1) Ration shop-ல் complaint book, 2) Taluk Supply Officer, 3) District Supply Officer, 4) Food helpline: 1967, 5) TNCSC website. Issues: Fake entries, quantity shortage, quality issues, dealer misbehavior. Aadhaar seeding problems: UIDAI + DSO.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "rti_government",
+    "id": "RTI_011_TM"
+  },
+  {
+    "instruction": "PM-KUSUM scheme endraal enna? Solar pump eppadi vaanguvadhu?",
+    "output": "Solar Energy scheme for farmers. Component A: Install solar power plants (500kW-2MW), sell electricity to grid. Component B: Standalone solar pumps (up to 7.5 HP), 60% subsidy (Central 30% + State 30%), farmer pays only 40%. Component C: Convert existing pump to solar. Apply: mnre.gov.in or State DISCOM. Benefit: Free electricity, reduced carbon footprint.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "agriculture_schemes",
+    "id": "AGR004"
+  },
+  {
+    "instruction": "Defence Jobs-ku ennenna exams irukku? Age limit enna?",
+    "output": "**Defence Exams:**\n\n**1. NDA:** 12th pass, 16.5-19.5 age, UPSC exam, Males only\n\n**2. CDS:** Degree, 19-25 age, UPSC exam\n\n**3. AFCAT:** Degree 60%, 20-26 age, Air Force\n\n**4. Army:**\n- Soldier GD: 10th, 17.5-21 age\n- Soldier Clerk: 12th, 17.5-23 age\n- Technical: Engineering degree\n\n**5. Navy:** SSC Officer, Sailor entries\n\n**6. Coast Guard:** Navik, Yantrik - 10th/12th\n\n**Physical Standards:**\n- Height 157-170 cm\n- Vision 6/6 or correctable\n- No flat feet\n\n**Preparation:** Written + SSB Interview + Medical + Physical\n\n**Websites:** joinindianarmy.nic.in, joinindiannavy.gov.in",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "competitive_exams",
+    "id": "COMP015_TG"
+  },
+  {
+    "instruction": "Government hospital-ல் waiting time அதிகமா இருக்கு, tips?",
+    "output": "Tips: 1) Go early morning (6-7 AM for token), 2) Weekdays better than Monday, 3) Avoid month-end, 4) Use online appointment if available, 5) Get referral from PHC for direct specialist access, 6) Emergency = no waiting (use emergency entrance), 7) Follow-up visits - ask for specific date/time. Seniors/pregnant: Priority queue usually available. Avoid: Public holidays, exam result days.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "government_schemes",
+    "id": "HLTH021_TM"
+  },
+  {
+    "instruction": "Senior Citizens-க்கு Travel Concession என்ன உள்ளது?",
+    "output": "Railways: Men 60+ 40% discount, Women 58+ 50% discount, Sleeper/AC classes. Booking: Counters-ல் age proof காட்டவும். Airlines: Some airlines offer 50% discount (varies). State Buses: TN-ல் 50% discount (65+ years) ordinary buses. Metro: Some cities 25-50% discount. Documents: Age proof (Aadhaar/Voter ID) carry பண்ணுங்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "senior_citizens_schemes",
+    "id": "SC013"
+  },
+  {
+    "instruction": "Natural = Safe enbadhu correct-aa?",
+    "output": "NOT always! Natural doesn't mean: 1) No side effects (many herbs have), 2) No interactions (herb-drug interactions real), 3) Safe for everyone (allergies, conditions), 4) Any amount is okay (overdose possible). Examples: 1) Neem - excess can harm liver, 2) Turmeric - blood thinner interaction, 3) Aloe - not for pregnant, 4) Some herbs toxic in large doses. Safe approach: 1) Moderate amounts, 2) Inform doctors, 3) Buy quality products, 4) Watch for reactions.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "natural_remedies",
+    "id": "HLTH227_TG"
+  },
+  {
+    "instruction": "National Institute of Siddha (NIS) special treatments என்ன?",
+    "output": "NIS Tambaram specialties: 1) Noi Naadal (diagnostics), 2) Maruthuvam (general medicine), 3) Kuzhanthai Maruthuvam (pediatrics), 4) Sirappu Maruthuvam (specialties), 5) Nanju Nool (toxicology), 6) Gunapadam (pharmacology), 7) Pothu Maruthuvam. Special: 1) Varmam unit, 2) Panchakarma therapies, 3) Yoga therapy, 4) Research wing. Referral: Complex cases from all over India. Contact: 044-22411611.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "siddha_medicine",
+    "id": "HLTH175_TM"
+  },
+  {
+    "instruction": "College senior 'insider crypto tips' share pannaan - 'This coin 10x confirmed, invest now, I'll guide.' Trust pannalama?",
+    "output": "'Insider tips' in crypto - usually pump and dump. Senior buy panniruppaan already, your buying increases price, senior sells, you hold worthless coins. Seniors um scammed aagiruppaan, chain continues. Own research pannunga, 'tips' avoid.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS071"
+  },
+  {
+    "instruction": "Social media-la Thirukkural eppadi popular aanadhu?",
+    "output": "1) #Thirukkural hashtag Twitter/X-la trending aagudhu, 2) Instagram-la artistic kural posts popular, 3) WhatsApp status-la kuralgal share aagindrana, 4) YouTube-la vilakka videos millions of views perugindrana, 5) Reels-la quick kural explanations viral aagindrana. Gen Z kooda Thirukkural-a 'ancient wisdom' endru appreciate panraanga. Memes kooda irukku - 'Valluvar said it 2000 years ago' format!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT024_TG"
+  },
+  {
+    "instruction": "அடக்கமின்மை-யின் விளைவு என்ன?",
+    "output": "குறள்: 'உயர்வு உடையவர் யாரோ உடலொடு நீர்த்து வியத்தலாகா மேலவர்க்கு'. உயர்ந்தவர்கள் யார் என்றால், தங்களை உயர்த்திக் கொள்ளாதவர்கள். மேலும்: 'நிறையுடைமை நீங்காமை வேண்டின் பொறையுடைமை போற்றி ஒழுகப் படும்'. Ego-ஐ விட்டால் மதிப்பு கிடைக்கும். Pride goes before a fall!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT097_TM"
+  },
+  {
+    "instruction": "Periya Kovil (Thanjavur) patri sollungal?",
+    "output": "Brihadeeswara Kovil (Periya Kovil) Thanjavur-la ulladhu. Rajaraja Chozhan 1010 CE-la kattinaan. Features: 1) Vimanam 216 adi uyaram - India-vilaiye uyaramaana vimanam, 2) Mel ulla kal 80 ton edai - eppadi thookinaargal enbadhu mystery, 3) Gopuratthai vida vimanam uyaram - unique, 4) Nandi - 25 ton edai, ore kallil sedhukkappattathu. UNESCO World Heritage Site (2004).",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "temples_heritage",
+    "id": "CULT134_TG"
+  },
+  {
+    "instruction": "தமிழ்நாடு அரசின் BC/MBC மாணவர்களுக்கான scholarship என்ன?",
+    "output": "BC/MBC Welfare Department Scholarships: 1) Post-matric scholarship - ₹1,000-3,000/ஆண்டு 2) Professional course scholarship - ₹10,000-50,000 3) Foreign study scholarship - ₹20 lakh வரை 4) Free laptop 5) Free bicycle (school students). தகுதி: BC/MBC community certificate, income ₹2.5 lakh/ஆண்டு கீழ். Apply: www.bcmbcmw.tn.gov.in. Deadline: Usually September-October.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "scholarships",
+    "id": "SCHO001_TM"
+  },
+  {
+    "instruction": "Lazy-ஆக feel ஆகும்போது motivation-க்கு என்ன குறள்?",
+    "output": "'மடியிலா மன்னவன் எய்தும் அடியளந்தான் தாவித் தளரினும் வெல்லும்'. சோம்பல் இல்லாதவன் வெற்றி பெறுவான். மேலும்: 'ஊக்கமது கைவிடேல்' (ஆத்திசூடி). 'உடையர் எனப்படுவது ஊக்கம்' - motivation-தான் real wealth. Start small, build momentum. Action creates motivation, not the other way!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT070_TM"
+  },
+  {
+    "instruction": "Aadhaar-la address change eppadi seyvadhu?",
+    "output": "Online: myaadhaar.uidai.gov.in → Login with OTP → Update Address → Upload new address proof → Pay ₹50. Address proof can be EB bill, bank statement, rent agreement. If no document, use Address Validation Letter (AVL) method where verifier at new address confirms.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA002T"
+  },
+  {
+    "instruction": "Student budget எப்படி manage பண்றது?",
+    "output": "Budget tips: 1) Monthly expenses list make 2) Essentials first - food, transport, stationery 3) Track spending - apps like Money Manager 4) Hostel food cheaper than outside 5) Second-hand books - seniors, book banks 6) Student discounts use everywhere 7) Part-time work if possible 8) Avoid peer pressure spending 9) Emergency fund small amount keep 10) Scholarship money wise use. Rule: Needs > Wants.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC010_TM"
+  },
+  {
+    "instruction": "SDAT coaching centre-la sera enna seyyanum?",
+    "output": "SDAT (Sports Development Authority of Tamil Nadu) ovvoru district-layum coaching centres vaichirikku. Age: 8-14 years. Selection trials nadakkum. Free coaching, kit, diet allowance kedaikum. District Sports Officer-a contact pannunga.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE015_TG"
+  },
+  {
+    "instruction": "பிரதான் மந்திரி பயிர் பீமா யோஜனா (PMFBY) என்றால் என்ன?",
+    "output": "விவசாயிகளுக்கான பயிர் காப்பீடு திட்டம். Premium: Kharif 2%, Rabi 1.5%, Commercial crops 5% மட்டுமே - மீதி Government கட்டும். Coverage: இயற்கை சீற்றம், பூச்சி தாக்குதல், நோய் தாக்குதல், அறுவடை பின் 14 நாள் வரை. விண்ணப்பம்: Bank/CSC/Insurance Portal. Documents: Land records, Aadhaar, Bank details. Claim: 72 மணி நேரத்தில் இழப்பை report செய்ய வேண்டும். Crop Cutting Experiments மூலம் இழப்பு கணக்கிடப்படும்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "agriculture_schemes",
+    "id": "AGR001"
+  },
+  {
+    "instruction": "Padippa paathila niruthinavar meedum padikka enna vazhi?",
+    "output": "NIOS (National Institute of Open Schooling) moolam 10th, 12th padikkalam. TNOU-la degree vaangalam. Bridge course, evening colleges, distance education irukku. Age limit illa.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE004_TG"
+  },
+  {
+    "instruction": "எங்க பாட்டி சொன்ன சளி வைத்தியம் - ஒரே நாளில் சரியாகும்-னு, நம்பலாமா?",
+    "output": "பாட்டி வைத்தியம் பல நல்லது! சுக்கு காபி, மஞ்சள் பால், pepper rasam - எல்லாம் effective. ஆனா \"ஒரே நாள்\" expectation வேண்டாம் - 2-3 days patience வேணும். Severe-ஆ இருந்தா, fever higher than 103, breathing problem இருந்தா - doctor போங்க. Simple cold-க்கு home remedy try பண்ணுங்க first. Combination: Rest + warm liquids + remedy = faster recovery.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "natural_remedies",
+    "id": "HLTH229_TM"
+  },
+  {
+    "instruction": "Sexual harassment complaint எப்படி செய்வது?",
+    "output": "Internal Complaints Committee (ICC)-க்கு written complaint. ICC இல்லாவிட்டால் Local Complaints Committee (District level). Time limit: 3 months from incident. POSH Act 2013 protection. Anonymous complaint-உம் valid. Retaliation-க்கு protection உண்டு.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "employment_labor",
+    "id": "EMPL015_TM"
+  },
+  {
+    "instruction": "மாணிக்கவாசகர் யார்?",
+    "output": "மாணிக்கவாசகர் - 'திருவாசகம்' எழுதிய சைவ புனிதர். பாண்டிய மன்னரின் அமைச்சராக இருந்தவர். திருப்பெருந்துறையில் சிவனை சந்தித்து எல்லாவற்றையும் விட்டு பக்தன் ஆனார். 'திருவாசகத்துக்கு உருகாதார் ஒரு வாசகத்துக்கும் உருகார்' என்பது famous பழமொழி. சிதம்பரத்தில் சிவனிடம் ஐக்கியமானார் என்று நம்பப்படுகிறது. 8-வது திருமுறை திருவாசகம். உணர்ச்சி மிகுந்த பக்தி poetry.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT182_TM"
+  },
+  {
+    "instruction": "நாயன்மார்கள் யார்? எத்தனை பேர்?",
+    "output": "நாயன்மார்கள் - சைவ பக்தி இயக்கத்தின் 63 புனிதர்கள். 'நாயன்மார்' என்றால் 'தலைவர்' என்று பொருள். இவர்கள் சிவபெருமானை வணங்கி, பக்தி மார்க்கத்தை பரப்பினார்கள். வெவ்வேறு சாதி, தொழில், பின்னணியிலிருந்து வந்தவர்கள் - அரசர், வணிகர், வேலைக்காரர், பெண்கள் எல்லாரும் உண்டு. சேக்கிழார் எழுதிய 'பெரிய புராணம்' இவர்கள் வரலாற்றைக் கூறுகிறது. சைவ சமயத்தின் ஆதாரம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "saints_sages",
+    "id": "CULT179_TM"
+  },
+  {
+    "instruction": "மோசடியில் மாட்டிக்கொண்டேன் என்று தெரிந்தவுடன் என்ன செய்ய வேண்டும்?",
+    "output": "பொன்னான முதல் ஒரு மணி நேரம் மிக முக்கியம்! படி 1 (0-5 நிமிடம்): மோசடிக்காரருடன் தொடர்பை நிறுத்துங்கள், எண்ணைத் தடுக்கவும். படி 2 (5-15 நிமிடம்): வங்கியின் 24/7 உதவி எண்ணை அழைக்கவும், கணக்கை முடக்கவும், அங்கீகரிக்கப்படாத பரிவர்த்தனையை புகாரளிக்கவும். படி 3 (15-30 நிமிடம்): சைபர் குற்ற உதவி எண் 1930 அழைக்கவும். படி 4 (30-60 நிமிடம்): cybercrime.gov.in இல் புகார் செய்யவும். 24 மணி நேரத்திற்குள் நடவடிக்கை எடுத்தால் 40-50% மீட்பு வாய்ப்பு. 72 மணி நேரத்திற்குப் பிறகு 10-15% மட்டுமே.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_recovery",
+    "id": "RR001_ta"
+  },
+  {
+    "instruction": "10th முடித்த பிறகு என்னென்ன courses இருக்கு?",
+    "output": "**10th-க்குப் பிறகு Pathways:**\n\n**1. Plus Two (+2) / Higher Secondary:**\n- Duration: 2 years\n- Streams: Science, Commerce, Arts, Vocational\n- Board: TN State Board / CBSE\n\n**2. Diploma (Polytechnic):**\n- Duration: 3 years\n- Branches: Civil, Mechanical, ECE, EEE, Computer, etc.\n- Lateral entry to Engineering 2nd year possible\n- Apply: tnpolytechnic.org\n\n**3. ITI (Industrial Training Institute):**\n- Duration: 6 months - 2 years\n- Trades: Electrician, Fitter, Welder, Mechanic, COPA\n- Direct employment opportunity\n- Apply: itidata.tn.gov.in\n\n**4. Paramedical Courses:**\n- ANM (Auxiliary Nurse Midwife)\n- Lab Technician\n- X-Ray Technician\n- Duration: 1-2 years\n\n**5. Skill Development Courses:**\n- NSDC certified courses\n- Free under PMKVY\n- Duration: 3-6 months\n- Job placement support\n\n**6. Open Schooling (NIOS):**\n- For those who can't attend regular school\n- Same validity as regular +2\n- nios.ac.in\n\n**Comparison Table:**\n\n| Course | Duration | Entry | Job/Higher Studies |\n|--------|----------|-------|-------------------|\n| +2 | 2 years | 10th pass | UG admission |\n| Diploma | 3 years | 10th pass | Job / Lateral entry |\n| ITI | 6m-2y | 8th/10th | Direct job |\n| Paramedical | 1-2 years | 10th pass | Healthcare jobs |\n\n**எந்த option best?**\n- Higher studies interest: +2\n- Quick job: ITI\n- Technical job: Diploma",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "school_education",
+    "id": "SCHO010_TM"
+  },
+  {
+    "instruction": "SMS vandhuchu 'GPF balance verification required. Click link to confirm account or interest payment affected.' GPF very important for future, verify pannalama?",
+    "output": "GPF statements come through department annually. Check balance through official AG website or PFMS portal. Never click SMS links for financial verification. Your GPF is safe with government - scammers create fear about retirement savings.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS028"
+  },
+  {
+    "instruction": "Tally course படித்தால் என்ன job கிடைக்கும்?",
+    "output": "Tally jobs: 1) Accountant - small/medium businesses 2) Billing operator 3) Inventory manager 4) GST filing assistant 5) Bank data entry. Salary: ₹10,000-20,000 starting. Course duration: 2-3 months. Government centres: NIELIT, TNSDC. Private: Tally Academy (authorized). Certification: Tally.ERP 9 / TallyPrime. Combined with GST knowledge = better opportunities. Self-employment: Freelance accounting services.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "vocational_training",
+    "id": "VOCA015_TM"
+  },
+  {
+    "instruction": "PMAY-Gramin எப்படி பெறுவது?",
+    "output": "House construction assistance for rural poor. Amount: ₹1.20 lakh (plain) / ₹1.30 lakh (hilly). Selection from SECC 2011 data. Check eligibility at pmayg.nic.in. If not in list: Appeal at Gram Panchayat. Additional: MGNREGA wages, toilet under SBM. Total: ₹1.5 lakh+",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA040"
+  },
+  {
+    "instruction": "'Kedil vizhuch selvam kalvi' - kalviyoda mathippu enna?",
+    "output": "Kural: 'Kedil vizhuch selvam kalvi oruvarku maadalla mattraiyavai'. Artham: Kalviye azhiyaadha selvam. Matra ella selvangalum (panam, thangam, soththu) oru naal poyvidum. Aanaal kalvi eppodhum unnudan irukkum. Education = permanent wealth. Investment in knowledge = best investment!",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT051_TG"
+  },
+  {
+    "instruction": "'Diwali crackers 60% off - only today! Pay advance to book' - Unknown number message. Order பண்ணலாமா?",
+    "output": "Scam! Advance வாங்கிட்டு crackers deliver பண்ண மாட்டாங்க. Diwali season-ல cracker scam common. Unknown sellers-கிட்ட advance தராதீங்க. Local licensed shop-ல buy பண்ணுங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS012"
+  },
+  {
+    "instruction": "'BGMI/FF unlimited UC hack - Download APK' nu YouTube video paathen. Free UC kedaikuma?",
+    "output": "'Hack APKs' malware contain pannum - phone data steal, banking apps access. UC/diamonds server-side - hacking impossible. Account ban guaranteed if detected. Game integrity maintain pannunga - play fair or pay official.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "age_specific_scams",
+    "id": "AS063"
+  },
+  {
+    "instruction": "திருவண்ணாமலை கோயிலின் சிறப்பு என்ன?",
+    "output": "அருணாசலேஸ்வரர் கோயில் - அக்னி லிங்கம் (Pancha Bhoota Sthalams-ல் ஒன்று). சிறப்புகள்: 1) கார்த்திகை தீபம் - மலை உச்சியில் பெரிய தீபம், lakhs of people வருவார்கள், 2) கிரிவலம் - மலையை சுற்றி நடப்பது (14 km) - full moon-ல் லட்சக்கணக்கானோர், 3) ரமண மகரிஷி ஆசிரமம் அருகில், 4) 4 கோபுரங்கள் - கிழக்கு ராஜகோபுரம் 217 அடி. Spiritual capital of Tamil Nadu என்று சொல்லலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "temples_heritage",
+    "id": "CULT140_TM"
+  },
+  {
+    "instruction": "Banking and Financial matters-la common thavarugal enna?",
+    "output": "Bank Account:\n❌ Jan Dhan needs minimum balance → ✅ Zero balance account\n❌ Nomination = Legal Heir → ✅ Nominee is trustee, not owner\n❌ Joint holder has automatic rights → ✅ Check Either or Survivor clause\n\nInsurance:\n❌ PMJJBY/PMSBY auto-renews → ✅ Must renew by June 1, need balance\n❌ PMJJBY covers suicide → ✅ First year not covered\n❌ PMSBY covers all accidents → ✅ Only permanent disability\n\nTax:\n❌ Senior Citizens don't pay tax → ✅ Only up to ₹3 lakh exempt (60-80)\n❌ Agricultural income fully exempt → ✅ State tax may apply\n❌ PPF interest is taxable → ✅ Fully exempt (EEE status)\n\nLoan:\n❌ Education loan needs collateral → ✅ Up to ₹7.5 lakh collateral-free\n❌ KCC interest is always 4% → ✅ Only for timely repayment",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "common_misconceptions",
+    "id": "CMI012"
+  },
+  {
+    "instruction": "Employer-kitta mental health issue sollanumaa?",
+    "output": "Not mandatory to disclose. Rights: 1) No termination for mental illness (disability discrimination), 2) Reasonable accommodation (flexible hours, WFH), 3) Medical leave like any illness, 4) Confidentiality if disclosed. When to consider: If need accommodation, if affecting work significantly. Protection: RPD Act 2016 + MHCA 2017. Termination for mental illness: Challenge in labor court.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "mental_health",
+    "id": "HLTH109_TG"
+  },
+  {
+    "instruction": "என் பையன்/பொண்ணு college-ல் வெளியூர் போறாங்க. எப்படி support பண்றது?",
+    "output": "Parent support tips: 1) Regular communication - but not controlling 2) Visit once in first month - help settle 3) Emergency contact with warden establish 4) Bank account with adequate funds 5) UPI/GPay teach for daily expenses 6) Health insurance ensure 7) Trust them - allow independence 8) Listen without judging when they share problems 9) Homesickness normal - patience. Balance: Support without helicopter parenting. They're growing up!",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC023_TM"
+  },
+  {
+    "instruction": "Panchakarma treatment TN-ல் எங்கே கிடைக்கும்?",
+    "output": "Panchakarma = 5 detoxification therapies. Where in TN: 1) Government AYUSH hospitals (limited), 2) Private Ayurveda centers - Arya Vaidya Pharmacy branches, 3) Kerala-based resorts with TN branches, 4) Integrated wellness centers. Cities: Chennai, Coimbatore, Madurai have more options. Cost: Private Rs.2,000-10,000/day. Duration: 7-21 days typically. Best: Kerala for authentic Panchakarma (closer option).",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "ayurveda",
+    "id": "HLTH194_TM"
+  },
+  {
+    "instruction": "Menstrual cramps-kku natural relief?",
+    "output": "Remedies: 1) Hot water bag on abdomen, 2) Ginger tea, 3) Ajwain water, 4) Fenugreek (Vendhayam) soaked water, 5) Sesame seeds (til) with jaggery, 6) Light exercise/yoga (child's pose, cat-cow), 7) Massage with warm sesame oil. Diet: Avoid cold foods, have warm foods. Long-term: Regular exercise, healthy weight help. Severe pain: Check for PCOS, endometriosis - see gynecologist.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "natural_remedies",
+    "id": "HLTH214_TG"
+  },
+  {
+    "instruction": "Women entrepreneurs-ku special schemes ulladha?",
+    "output": "Women-specific schemes: 1) Stand-Up India - ₹10 lakh to ₹1 crore (SC/ST/Women) 2) Mudra Yojana - Women priority 3) TANSIDCO - Women Entrepreneurship Programme 4) State Industries Department - 30% subsidy 5) TNCDW (Corporation for Development of Women) - interest-free loans. Training: TNSDC women skill programmes, TRYSEM. Self-help groups moolamum loans available. Apply: Respective department websites.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "vocational_training",
+    "id": "VOCA022_TG"
+  },
+  {
+    "instruction": "Medical negligence-க்கு எவ்வளவு compensation கிடைக்கும்?",
+    "output": "Depends on: 1) Severity of injury/death, 2) Age of victim, 3) Earning capacity, 4) Future medical needs, 5) Mental agony. Components: 1) Medical expenses (past + future), 2) Loss of income, 3) Pain and suffering, 4) Disability compensation, 5) Loss of consortium (spouse), 6) Punitive damages (gross negligence). Range: Rs.5 lakhs to Rs.5+ crores. Death: Multiplier method based on age and income.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "medical_negligence",
+    "id": "HLTH058_TM"
+  },
+  {
+    "instruction": "WhatsApp group 'TET/TRB coaching material - 10,000 for complete package with question papers and answers.' Exam prepare pannanum, buy pannalama?",
+    "output": "Official TET/TRB materials available free on TRB website. Many YouTube channels provide free coaching. 'Question papers with answers' promise is fraudulent - papers are confidential. If they have papers, it's either fake or illegal.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS024"
+  },
+  {
+    "instruction": "Veedu kaali seyyum bodhu advance thirumba tharuvaangala?",
+    "output": "Aama, kattaayam thara venum. Veetukku damage irundhaal repair cost kazhichu meedhi thara venum. Normal wear and tear-kku kazhikka mudiyaadhu. Owner tharaattal Rent Authority or Civil Court-la case podalam.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA007_TG"
+  },
+  {
+    "instruction": "Engineering/Medical படிக்க scholarship எப்படி வாங்குவது?",
+    "output": "AICTE, state government scholarships available. Professional course-க்கு tuition fee waiver, living expenses கிடைக்கும். National Scholarship Portal-ல் deadlines check செய்து apply செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_arasu",
+    "category": "scholarship",
+    "id": "SC004"
+  },
+  {
+    "instruction": "Patient-kku ennenna rights irukku?",
+    "output": "Charter of Patient Rights (NMC): 1) Right to information (diagnosis, treatment options), 2) Right to records, 3) Right to emergency care, 4) Right to informed consent, 5) Right to confidentiality, 6) Right to second opinion, 7) Right to choose treatment/refuse treatment, 8) Right to non-discrimination, 9) Right to safe treatment, 10) Right to complaint redressal. Display: Hospitals must display patient rights.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH025_TG"
+  },
+  {
+    "instruction": "RTI reject ஆனால் என்ன செய்வது?",
+    "output": "First Appeal: Appellate Authority-க்கு 30 days-க்குள் (PIO-வின் senior officer). Second Appeal: State/Central Information Commission-க்கு 90 days-க்குள். No fee for appeals. Commission penalty போடலாம் - Rs.250/day, max Rs.25,000.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "rti_government",
+    "id": "RTI_005_TM"
+  },
+  {
+    "instruction": "'பொங்கல் போனஸ் credited! 5000 ரூபாய் claim பண்ண OTP சொல்லுங்க' - government message-ஆ இது?",
+    "output": "Fake message! Government போனஸ் directly account-ல வரும், OTP கேக்காது. பொங்கல் time-ல இந்த scam அதிகம். 'Bonus claim' message வந்தா ignore பண்ணுங்க. Cyber crime-ல report பண்ணுங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS002"
+  },
+  {
+    "instruction": "Board exam-க்கு எப்படி திறம்பட படிப்பது?",
+    "output": "வழிமுறைகள்: 1) Previous year question papers பயிற்சி செய்யுங்கள் 2) Time table போட்டு படியுங்கள் 3) Blue print படி முக்கிய chapters-க்கு priority 4) Daily 6-8 மணி நேரம் படிப்பு 5) Weekly revision 6) Health-ஐ கவனியுங்கள் - proper sleep, food 7) Group study avoid, self-study better. TN government question bank: www.dge.tn.gov.in. Sample papers free download.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "higher_studies",
+    "id": "HIGH040_TM"
+  },
+  {
+    "instruction": "Endha vaccines adults-kku venum?",
+    "output": "Recommended: 1) Influenza (flu) - yearly (especially elderly, diabetics), 2) Pneumococcal - 65+ years, 3) Tetanus booster - every 10 years, 4) Hepatitis B - if not taken earlier, 5) HPV - up to 26 years, 6) COVID - as per current guidelines. Pregnancy: Tetanus, Pertussis. Travel: Yellow fever, etc. based on destination. Cost: Some free at government, others subsidized. Consult doctor for personalized schedule.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "practical_scenarios",
+    "id": "HLTH163_TG"
+  },
+  {
+    "instruction": "I am visually impaired. Board exam-la enna special facilities kidaikkum?",
+    "output": "PWD exam facilities: 1) Scribe/Writer - you dictate, they write 2) Extra time - 20 minutes per hour 3) Separate room if needed 4) Large print question paper 5) Exemption from certain papers (language options). Apply: Through school with disability certificate (40%+). UDID card helps. Competitive exams: Same facilities available. Career: Many PWD-friendly government jobs reserved (4% reservation).",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP014_TG"
+  },
+  {
+    "instruction": "Medical emergency hostel-la vandhaal enna seivathu?",
+    "output": "Emergency steps: 1) Call warden immediately 2) College has tie-up hospital - use that 3) 108 ambulance if serious 4) Keep parent contact updated with warden 5) Student health insurance - claim process know 6) ESI hospital if eligible 7) Govt hospital - free emergency care for all. Preparation: Keep emergency contacts, medical history, blood group info with you. Health card carry. Prevention: Regular health checkup, don't ignore symptoms.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC017_TG"
+  },
+  {
+    "instruction": "Naukri/LinkedIn la fake job scam - report eppidi?",
+    "output": "Naukri.com: Job listing → 'Report this job', email grievance@naukri.com. LinkedIn: Job → Three dots → 'Report this job', report fake recruiter profile. Indeed: Job → 'Report job', support.indeed.com. Internshala: help@internshala.com. Monster: india-care@monster.com. General: Ministry of Labour labour.gov.in, if recruitment fee taken - Police FIR + Labour Department complaint. If overseas job scam: Protector of Emigrants complaint.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "recovery_reporting_procedures",
+    "id": "RR012"
+  },
+  {
+    "instruction": "Owner thideernu veetai kaali seyyach sollalaamaa?",
+    "output": "Mudiyaadhu. Agreement-la ulla notice period (podhuvaaga 1-3 months) kodukka venum. Notice illaamal evict seydhaal illegal. Rent Authority-kku complaint seyyalam. Court order illaamal forceful eviction seyya mudiyaadhu.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA010_TG"
+  },
+  {
+    "instruction": "WhatsApp message 'Reality show audition fee 2000. Selected get 1 lakh signing amount.' Reality show la chance irukka?",
+    "output": "Legitimate reality shows don't charge audition fees - they invest in production. Auditions at announced venues, not through random WhatsApp payments. 'Signing amount' promise is bait. Famous shows announce through official channels. Paid auditions are scams.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS081"
+  },
+  {
+    "instruction": "cybercrime.gov.in இல் புகார் எப்படி செய்வது?",
+    "output": "இணையதளம்: cybercrime.gov.in. படி 1: 'புகார் செய்யுங்கள்' கிளிக் செய்யவும், மொபைல் எண்ணுடன் பதிவு செய்யவும், OTP சரிபார்ப்பு. படி 2: வகையைத் தேர்ந்தெடுக்கவும் - இணைய நிதி மோசடி, சமூக ஊடக குற்றம், வேலை மோசடி, கிரிப்டோ மோசடி போன்றவை. படி 3: விவரங்களை நிரப்புங்கள் - சம்பவ தேதி/நேரம், இழந்த தொகை, முறை (UPI/அட்டை/நெட் பேங்கிங்), மோசடிக்காரர் விவரங்கள், ஆதாரங்களைப் பதிவேற்றுங்கள் (அதிகபட்சம் 10 கோப்புகள், ஒன்றுக்கு 5MB). படி 4: சமர்ப்பித்து ஒப்புகை எண்ணைக் குறித்துக்கொள்ளுங்கள். நிலை சரிபார்ப்பு: உள்நுழைந்து 'உங்கள் புகாரைக் கண்காணிக்கவும்'. 30 நாட்களில் பதில் இல்லாவிட்டால்: மாநில சைபர் செல், DGP சைபர் க்ரைம்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_recovery",
+    "id": "RR006_ta"
+  },
+  {
+    "instruction": "Fee katta mudiyala, college-la exam ezhudha vidamaattengiraanga",
+    "output": "Immediate options: 1) Talk to Principal - installment arrangement 2) Education loan - bank/college tie-up 3) Student Aid Fund (most colleges have) 4) Scholarship if eligible - pending payment proof show 5) NGO support - Rotary, Lions Club. Legal: College cannot deny exam for genuine financial difficulty. Escalate: University Registrar, UGC grievance. Documentation: Keep written request, college response. Prevention: Apply for scholarships, loans in advance.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "common_questions",
+    "id": "COMM029_TG"
+  },
+  {
+    "instruction": "புதிய ஓட்டுநர் உரிமம் எப்படி பெறுவது?",
+    "output": "Step 1: Apply for Learner's License (LLR) at parivahan.gov.in - age proof, address proof, medical declaration. Pass computer test. Step 2: After 30 days, apply for DL. Take driving test at RTO. Fee: ₹200-700. Age: 18+ for car/bike, 16+ for without gear.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA014"
+  },
+  {
+    "instruction": "பிரதான் மந்திரி சுரக்ஷா பீமா யோஜனா (PMSBY) என்றால் என்ன?",
+    "output": "Accident Insurance திட்டம். Premium: ஆண்டுக்கு ₹20 மட்டுமே. Coverage: மரணம்/முழு ஊனம் ₹2 லட்சம், பகுதி ஊனம் ₹1 லட்சம். வயது: 18-70 வயது. தகுதி: Savings Account உள்ளவர்கள். சேர: Bank-ல் படிவம், Auto-debit consent. June 1-ல் renew. PMJJBY + PMSBY இரண்டும்: ₹456/வருடம் → ₹4 லட்சம் coverage!",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "central_govt_schemes",
+    "id": "CGS009"
+  },
+  {
+    "instruction": "Single parent/orphan students-ku enna scholarship?",
+    "output": "Support schemes: 1) AICTE Swanath Scholarship - ₹50,000/year orphans-ku 2) PM CARES for Children (COVID orphans) - full support till graduation 3) Social Welfare Department orphan scholarship 4) NGO support - SOS Children's Villages, Udayan Care. Documents: Parent death certificate, guardian affidavit. Priority in government hostel admission. Apply through respective department.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "scholarships",
+    "id": "SCHO023_TG"
+  },
+  {
+    "instruction": "Journalism/Mass Communication படிக்க சிறந்த college?",
+    "output": "Top colleges: 1) Asian College of Journalism Chennai 2) Loyola College MA Journalism 3) Stella Maris 4) Anna University Media Sciences 5) SRM Mass Comm. Courses: BA/B.Sc Mass Comm (3 years), PG Diploma (1 year), MA Journalism (2 years). Jobs: TV channels, Newspapers, Digital media, PR agencies, Advertising. Skills: Writing, communication, current affairs knowledge. Internships important.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP007_TM"
+  },
+  {
+    "instruction": "Inter-caste/Inter-religion marriage register எப்படி செய்வது?",
+    "output": "Special Marriage Act 1954-ன் கீழ் register செய்யலாம். 30 days notice period உண்டு. Any religion/caste மணமக்கள் register பண்ணலாம். Parents consent not required (if major). Inter-caste marriage-க்கு TN government Rs.50,000 incentive scheme உண்டு.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI003_TM"
+  },
+  {
+    "instruction": "பொதிகை மலை ஏன் சித்தர்களுக்கு முக்கியம்?",
+    "output": "பொதிகை மலை (Agastyamalai) Western Ghats-ல் உள்ளது. அகத்தியர் இங்கே தவம் செய்ததாக நம்பப்படுகிறது. Rare herbs நிறைய கிடைக்கும். இன்றும் அகத்தியர் இங்கே இருப்பதாக சிலர் நம்புகிறார்கள். Spiritual seekers இங்கே யாத்திரை செல்கிறார்கள். Courtallam (குற்றாலம்) அருகே. Dense forest என்பதால் trekking permits தேவை. Biodiversity hotspot-ஆகவும் declared.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT127_TM"
+  },
+  {
+    "instruction": "National Scholarship Portal (NSP) eppadi payanpaduthuvadhu?",
+    "output": "Central Govt Scholarships in one place. Website: scholarships.gov.in. Key Scholarships: Pre-Matric SC (Class 1-10, ₹150-750/month), Post-Matric SC (Class 11+, ₹230-1,200/month), Merit-cum-Means (Technical edu, Tuition + ₹1,000/month), INSPIRE (Science top 1%, ₹80,000/year), NMMS (Class 9-12 EWS, ₹12,000/year). How to apply: scholarships.gov.in → Register, Upload Aadhaar, Income Certificate, Marksheet, Institute verification, Comes to Bank via DBT",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "central_govt_schemes",
+    "id": "CGS026"
+  },
+  {
+    "instruction": "யாரோ 'தவறுதலாக உங்கள் account-க்கு பணம் அனுப்பிட்டேன், திருப்பி அனுப்புங்கள்' என்று கேட்கிறார்கள்.",
+    "output": "உங்கள் account-ல் பணம் வந்ததா check செய்யுங்கள். வரவில்லை என்றால் scam. வந்திருந்தாலும், வங்கி மூலமே திருப்பி அனுப்ப சொல்லுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "bank_otp_fraud",
+    "id": "BF012"
+  },
+  {
+    "instruction": "விவசாய குடும்ப மாணவர்களுக்கு சிறப்பு scholarship உள்ளதா?",
+    "output": "Agriculture family scholarships: 1) IFFCO Scholarship - ₹25,000/ஆண்டு 2) Kotak Kisan - ₹10,000-30,000 3) TNAU free education for farmers' children 4) Agriculture Department scholarships. Eligibility: Farmer certificate from VAO, small/marginal farmer category. Priority in agriculture courses. Krishi Vigyan Kendra (KVK) free training available. Apply through Agriculture office or online portals.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "scholarships",
+    "id": "SCHO024_TM"
+  },
+  {
+    "instruction": "Doctor sex சொன்னார்/கேட்டார் - complain எங்கே?",
+    "output": "Report immediately! Complaint to: 1) District Appropriate Authority (Collector office), 2) State Supervisory Board (DHS), 3) Police FIR, 4) Medical Council. Evidence: If possible, record/witness. Confidential complaint: Identity protected. Reward: Some states offer reward for reporting. Action: Center sealed, license cancelled, criminal prosecution. Even asking = offence for both parties.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "womens_health",
+    "id": "HLTH134_TM"
+  },
+  {
+    "instruction": "ESI hospital-ல் treatment எப்படி பெறுவது?",
+    "output": "ESI card + ID proof காட்டுங்க. Dispensary-ல் OP treatment free. Serious cases: ESI hospital referral. Tied-up hospitals-லும் treatment available. Emergency-க்கு any hospital-ல் treatment பெற்று reimbursement claim பண்ணலாம். Dependent family members-க்கும் cover உண்டு.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "employment_labor",
+    "id": "EMPL006_TM"
+  },
+  {
+    "instruction": "Senior citizens-ku Bus/Train concession enna?",
+    "output": "TN State Bus: FREE travel in ordinary buses for 60+ (just show age proof). Railway: 40% discount for men 60+, 50% for women 58+ (auto-applied on IRCTC). Air India: 50% on select routes for 63+. Always carry age proof.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA024T"
+  },
+  {
+    "instruction": "Builder common area handover vaangaama irukku - enna seivathu?",
+    "output": "RERA-la complaint podunga - builder conveyance deed execute seyyanum endru order vaangalam. 50%+ flats occupied aanaal association form panni legal notice anuppunga. Non-compliance-kku penalty, imprisonment provisions undu.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "property_land",
+    "id": "PROP024_TG"
+  },
+  {
+    "instruction": "Doctor-mela complaint poda enge poganum?",
+    "output": "Tamil Nadu Medical Council (TNMC): For registered doctors. Address: 914, EVR Periyar Salai, Kilpauk, Chennai-10. Process: 1) Written complaint with evidence, 2) Inquiry by Council, 3) Hearing, 4) Action: Warning, suspension, removal from register. Timeline: 6 months - 2 years. Alternative: Consumer Forum for compensation. Criminal: Police if criminal negligence.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH043_TG"
+  },
+  {
+    "instruction": "Koviloda vevveru paguthigal enna?",
+    "output": "Koviloda mukkiya paguthigal: 1) Gopuram - entrance tower, 2) Maha Dwaaram - main door, 3) Balipeedam - sacrificial altar, 4) Kodimaram - flag post, 5) Nandi/Vaahanam - deity's vehicle, 6) Mukhamandapam - front hall, 7) Artha Mandapam - intermediate hall, 8) Maha Mandapam - great hall, 9) Andharaalam - vestibule, 10) Garbhagriham/Karuvrai - sanctum sanctorum, 11) Prakaaram - circumambulatory path, 12) Kovil Kulam - temple tank.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "temples_heritage",
+    "id": "CULT133_TG"
+  },
+  {
+    "instruction": "Thirukkural UN-ல் recognize ஆனதா?",
+    "output": "Thirukkural formally UN-ஆல் recognize ஆகவில்லை, ஆனால்: 1) UN conferences-ல் Thirukkural quotes cite ஆகியுள்ளன, 2) UNESCO Tamil-ஐ classical language-ஆக recognize பண்ணியபோது Thirukkural-ஐ highlight பண்ணியது, 3) International scholars Thirukkural-ஐ 'Universal ethical text' என்று praise பண்றாங்க. Thirukkural-ஐ UN officially recognize பண்ண வேண்டும் என்று campaign நடக்கிறது.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT028_TM"
+  },
+  {
+    "instruction": "Thiruvasagam patri sollungal?",
+    "output": "Thiruvasagam - Manikkavasagar paadiyathu. 8-vadhu Thirumurai. 'Thiruvasagaththukku urugaadhaar oru vaasagaththukkum urugaar' enbadhu famous pazhamozhi. Sivaperumaaanoda arulai unarndu paadiya bhakthi uchcham. Thirupperundurai, Thiruvannamalai, Chidambaram kovilkalil paadappattathu. 'Sivapuraanam' endra paguthi migavum famous. Unarchi poorvamaana Tamil kavithai.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "arts_literature",
+    "id": "CULT163_TG"
+  },
+  {
+    "instruction": "நான் கிராமத்தில் பெண்கள் சுய உதவிக் குழு (SHG) ஆரம்பிக்க விரும்புகிறேன். எப்படி பதிவு செய்வது?",
+    "output": "**SHG துவக்குதல் - படிப்படியாக:**\n\n**Step 1: குழு அமைத்தல்**\n- 10-20 பெண்கள் (ஒரே கிராமம்/பகுதி)\n- ஒத்த சிந்தனை உடையவர்கள்\n- வயது: 18-60\n\n**Step 2: Meetings தொடங்குதல்**\n- வாரம் ஒரு முறை கூட்டம்\n- சிறிய தொகை சேமிப்பு (₹50-100/week)\n- Minutes book maintain\n\n**Step 3: Bank Account திறத்தல்**\n- 3 மாத meeting records காட்டி\n- Joint account (President + Secretary)\n- Nationalized Bank / Co-operative Bank\n\n**Step 4: Mahalir Thittam பதிவு**\n- எங்கே: Block Development Office\n- TNSRLM (Tamil Nadu State Rural Livelihoods Mission)\n- Website: tnrd.gov.in\n\n**தேவையான ஆவணங்கள்:**\n- உறுப்பினர்கள் Aadhaar\n- குழு தீர்மானம் (Resolution)\n- Member list with photos\n- Savings passbook\n- Minutes book\n\n**Benefits after registration:**\n1. **Revolving Fund:** ₹15,000 (grant)\n2. **Community Investment Fund:** ₹50,000-1,00,000\n3. **Bank Loan:** Up to ₹10 lakh (low interest)\n4. **Training:** Free skill training\n5. **Market access:** Exhibition, Melas\n\n**Loan வாங்குதல்:**\n- 6 மாத savings record\n- Regular meetings\n- Good credit history\n- Interest: 4-7%",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "rural_scenarios",
+    "id": "RUR004"
+  },
+  {
+    "instruction": "Estimate-ai vida bill adhigamaa vandhadhu - refuse pannalaamaa?",
+    "output": "Estimate must be reasonable. Rights: 1) Written estimate before planned admission, 2) Significant variation needs explanation, 3) Complications = valid reason for increase, 4) No complication + major increase = dispute. Rule of thumb: 10-15% variation acceptable. More: Ask itemized justification. Still disputed: 1) Pay under protest (written), 2) Consumer Forum for refund. Keep estimate copy!",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "private_hospitals",
+    "id": "HLTH076_TG"
+  },
+  {
+    "instruction": "Customs officer-nu call pannunga, unga peru-la parcel irukku drugs-oda, jail poganum-nu bayamuruturaanga",
+    "output": "100% scam call sir. Customs ivalo call pannudhu illa. Settlement-nu panam kettaa - fraud. Bayapadaadheenga, 1930 call pannunga.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "tanglish_scam_detection",
+    "id": "TG009"
+  },
+  {
+    "instruction": "கிராமத்துல delivery பண்ணலாமா? Hospital போகணுமா?",
+    "output": "Hospital delivery best! Why: 1) Emergency handling (bleeding, cord problem), 2) C-section if needed, 3) Baby complications - immediate care. Government: PHC level delivery (normal cases), higher centre referral. 102 ambulance: Free transport - call early when labour starts. Incentive: JSY + Muthulakshmi scheme - Rs.18,000+ for hospital delivery. Dai (TBA): Not trained for emergencies. Register PHC early - they plan delivery place based on risk.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "practical_scenarios",
+    "id": "HLTH160_TM"
+  },
+  {
+    "instruction": "Health insurance cashless reject ஆனால் reimbursement கிடைக்குமா?",
+    "output": "ஆம். Cashless rejection ≠ claim rejection. Pay hospital, submit bills to insurer. Reimbursement claim: 15-30 days. Rejection-க்கு: IRDAI complaint, Ombudsman, Consumer forum. Pre-authorization issues: TPA (Third Party Administrator) contact. Network hospital outside-உம் claim possible.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "extended_topics",
+    "id": "EXTE013_TM"
+  },
+  {
+    "instruction": "10th padikkura students-ku enna scholarship irukku?",
+    "output": "**Class 9-10 Scholarships:**\n\n**1. Pre-Matric (SC/ST):**\n- Day: ₹150/month\n- Hostel: ₹350/month\n- Books: ₹750/year\n\n**2. Pre-Matric (BC/MBC):**\n- Day: ₹100/month\n- Hostel: ₹250/month\n\n**3. Minorities:**\n- ₹100/month + ₹500/year\n\n**4. NMMS:** ₹12,000/year (if qualified in Class 8)\n\n**5. Private:**\n- Tata Trust, Reliance Foundation, L&T\n- Sitaram Jindal: ₹750/month\n\n**Apply:** scholarships.gov.in\n**Deadline:** September-October usually",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "school_education",
+    "id": "SCHO009_TG"
+  },
+  {
+    "instruction": "MUDRA Loan எப்படி வாங்குவது?",
+    "output": "Collateral-free business loan from any bank. Shishu: up to ₹50,000, Kishore: up to ₹5 lakh, Tarun: up to ₹10 lakh. Apply at bank or mudra.org.in with business plan, ID proof, address proof. Interest: 8-12%. Good for starting/expanding small business.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA021"
+  },
+  {
+    "instruction": "WhatsApp message 'CAPF canteen credit offer. Pay 1000 registration for 5000 credit limit.' Canteen la benefit kedaikum aa?",
+    "output": "Canteen facilities managed by CSD/departmental process. No external 'credit registration' schemes. Benefits through official service channels. Scammers target security personnel knowing their canteen reliance. Check with your unit welfare officer.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS085"
+  },
+  {
+    "instruction": "அப்பாவுக்கு (retired) போன் வந்தது - 'Pension arrears கிடைக்கும், processing-க்கு advance கட்டுங்கள்' என்று.",
+    "output": "Pension department advance கேட்காது. Treasury-ல் நேரடியாக விசாரியுங்கள். Retired employees-ஐ target செய்யும் common scam இது.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT003"
+  },
+  {
+    "instruction": "Single parent-க்கு WhatsApp - 'குழந்தைகளுக்கு special scholarship, form fill பண்ண meeting-க்கு வாங்க' என்று unknown person message.",
+    "output": "Unknown persons-ஐ நம்பாதீர்கள். குழந்தைகள் safety முக்கியம். Official school அல்லது government website மூலமே scholarship apply செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT011"
+  },
+  {
+    "instruction": "Marriage registration kattaayamaa? Enge panrathu?",
+    "output": "Tamil Nadu-la Compulsory Registration of Marriages Act 2009-in keezh kattaayam. Register: 1) Hindu Marriage Act - Registrar of Marriages (Sub-Registrar office), 2) Special Marriage Act - Marriage Registrar. Online apply: serviceonline.gov.in. Documents: Age proof, address proof, photos, invitation card, witnesses.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI001_TG"
+  },
+  {
+    "instruction": "Tubectomy/Vasectomy - rights enna? Compensation?",
+    "output": "Rights: 1) Completely voluntary - no forced sterilization, 2) Informed consent mandatory, 3) Cooling-off period before surgery, 4) Minimum age 22 (women), 21 (men). Compensation: TN scheme - cash incentive after surgery. Complications: Government covers treatment, additional compensation. Failure: Pregnancy after sterilization - compensation scheme exists. Never sign blank forms - read consent fully.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "womens_health",
+    "id": "HLTH136_TG"
+  },
+  {
+    "instruction": "WhatsApp message 'Nursing abroad recruitment - Canada/UK. Pay 50,000 registration, guaranteed placement.' Abroad job chance, apply pannalama?",
+    "output": "Legitimate foreign nursing recruitment through licensed agencies (check POE list at mea.gov.in). 50,000 upfront for 'guarantee' is scam pattern. Real process involves exams (NCLEX, IELTS), credential verification. Many nurses cheated by fake abroad job promises. Verify agency registration before any payment.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "occupation_specific_scams",
+    "id": "OS058"
+  },
+  {
+    "instruction": "Consumer Forum-ல் hospital-மேல் case போடலாமா?",
+    "output": "Yes! Medical service = consumer service. Grounds: 1) Medical negligence, 2) Deficiency in service, 3) Overcharging, 4) Wrong treatment, 5) Denial of service. Claim: 1) Rs.1 crore வரை - District Forum, 2) Rs.1-10 crore - State Commission, 3) Above Rs.10 crore - National Commission. Fee: Nominal (Rs.100-5000). Limitation: 2 years from incident. Lawyer: Optional but recommended.",
+    "language": "pure_tamil",
+    "pack": "vazhi_maruthuvam",
+    "category": "patient_rights",
+    "id": "HLTH044_TM"
+  },
+  {
+    "instruction": "Tax / வரி பற்றி வள்ளுவர் என்ன சொல்கிறார்?",
+    "output": "குறள்: 'உழுவார் உலகத்தார்க்கு ஆணிஅஃ தாற்றாது எழுவாரை எல்லாம் பொறுத்து'. விவசாயிகள் உலகின் ஆதாரம். மேலும்: 'அளவொத்து வாழாத மன்னவன் உலகத்து அளவிறந்து மிகைபடுத்து'. வரி அதிகமாக வாங்கும் அரசன் மக்களை துன்புறுத்துகிறான். Fair taxation, farmers' welfare - 2000+ years ago சொன்ன modern economics!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT083_TM"
+  },
+  {
+    "instruction": "தமிழ்நாட்டில் சைபர் குற்றம் புகார் செய்ய குறிப்பிட்ட தொடர்புகள் என்ன?",
+    "output": "மாநில சைபர் குற்ற பிரிவு: DGP அலுவலக வளாகம், மயிலாப்பூர், சென்னை-4, தொலைபேசி: 044-28512440, மின்னஞ்சல்: ccps.tnpol@nic.in. மாவட்ட பிரிவுகள்: சென்னை 044-28512440, கோயம்புத்தூர் 0422-2300106, மதுரை 0452-2531500, திருச்சி 0431-2418717, சேலம் 0427-2211001, திருநெல்வேலி 0462-2501500. இணையம்: eservices.tnpolice.gov.in (இணைய FIR), காவலன் SOS செயலி (அவசரம்). சிறப்பு பிரிவுகள்: பெண்கள் சைபர் குற்றம் 044-28592750, குழந்தை இணைய பாதுகாப்பு 1098.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_recovery",
+    "id": "RR007_ta"
+  },
+  {
+    "instruction": "Death certificate-ku enna documents vendum?",
+    "output": "Deceased Aadhaar card, Hospital death certificate / Postmortem report, Applicant ID proof vendum. 21 days-kulla register pannanum.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "bilingual_govt_procedures",
+    "id": "BGP004"
+  },
+  {
+    "instruction": "Employment Exchange-la register eppadi seyvadhu?",
+    "output": "Online at tnvelaivaaippu.gov.in → OTR (One Time Registration). Documents: Educational certificates, community certificate, Aadhaar, photo. Benefits: Govt job notifications, private opportunities, skill training. Renew every 3 years. Also available at District Employment Office.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA030T"
+  },
+  {
+    "instruction": "Law படிக்க என்ன entrance exam எழுதணும்?",
+    "output": "**Law Entrance Exams:**\n\n**1. CLAT (Common Law Admission Test):**\n- For: 22 National Law Universities (NLUs)\n- Eligibility: 12th pass with 45% (40% SC/ST)\n- Age: No upper limit\n- Exam: December (usually)\n- Top NLUs: NLSIU Bangalore, NALSAR Hyderabad, NLU Delhi\n\n**CLAT Pattern:**\n| Section | Questions | Marks |\n|---------|-----------|-------|\n| English | 28-32 | 28-32 |\n| Current Affairs + GK | 35-39 | 35-39 |\n| Legal Reasoning | 35-39 | 35-39 |\n| Logical Reasoning | 28-32 | 28-32 |\n| Quantitative | 13-17 | 13-17 |\n| **Total** | **150** | **150** |\n\n- Duration: 2 hours\n- Negative: 0.25 marks\n\n**2. AILET (All India Law Entrance Test):**\n- For: NLU Delhi only\n- Similar pattern to CLAT\n- Separate exam\n\n**3. LSAT India:**\n- For: Private law colleges\n- Logical reasoning focus\n- Multiple test dates\n\n**4. TNDALU (TN Dr. Ambedkar Law University):**\n- For: TN Law Colleges\n- State-level entrance\n- tndalu.ac.in\n\n**5. Integrated LLB (5 years):**\n- After 12th\n- BA LLB, BBA LLB, BCom LLB\n\n**6. LLB (3 years):**\n- After Degree\n- Most state universities\n\n**Preparation:**\n\n**Start from Class 11:**\n- Read newspapers daily\n- Legal awareness\n- Logical reasoning practice\n- English comprehension\n\n**Books:**\n| Subject | Book |\n|---------|------|\n| Legal Reasoning | AP Bhardwaj |\n| Logical Reasoning | RS Aggarwal |\n| English | Word Power Made Easy |\n| GK | Lucent + Current Affairs |\n\n**Mock Tests:** clatconsortium.nic.in practice papers",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "competitive_exams",
+    "id": "COMP016_TM"
+  },
+  {
+    "instruction": "Reliance Foundation Scholarship eppadi vaanguvadhu?",
+    "output": "Reliance Foundation Undergraduate Scholarship: UG 1st year students-ku ₹2 lakh over 4 years. Eligibility: Family income ₹2.5 lakh kizha, JEE/NEET rank holders, 12th 60%+. Selection: Application + Interview. Apply: www.reliancefoundation.org. Scholarship Plus program: Leadership development, mentoring, internships included.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "scholarships",
+    "id": "SCHO017_TG"
+  },
+  {
+    "instruction": "Telegram la daily income nu group invite vandhudhu - join aagalama?",
+    "output": "Famous scam ithu. Mudhal la konjam panam koduppanga, apram investment nu kettuppanga. Latcham ellam poirum. Join aagaadheenga.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "tanglish_scam_detection",
+    "id": "TG003"
+  },
+  {
+    "instruction": "திருமண தளத்தில் சந்தித்த நபர் 'என் தந்தைக்கு உடல்நிலை சரியில்லை, 50,000 உதவி செய்யுங்கள், திருமணத்திற்குப் பிறகு தருகிறேன்' என்கிறார்.",
+    "output": "எச்சரிக்கை! நேரில் சந்திக்காமல் பணம் கேட்பது காதல் மோசடியின் அறிகுறி. திருமணத்திற்கு முன் பணம் கொடுக்காதீர்கள். முதலில் நேரில் சந்தித்து, குடும்பத்தை சரிபார்த்து, பின்னர் முடிவெடுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_scam_detection",
+    "id": "RS001_ta"
+  },
+  {
+    "instruction": "'அகர முதல எழுத்தெல்லாம்' - இந்த குறளின் அர்த்தம் என்ன?",
+    "output": "குறள்: 'அகர முதல எழுத்தெல்லாம் ஆதி பகவன் முதற்றே உலகு'. அர்த்தம்: எழுத்துக்கள் எல்லாம் 'அ' என்ற எழுத்தில் தொடங்குவது போல், உலகம் முழுவதும் இறைவனால் தொடங்கியது. இது திருக்குறளின் முதல் குறள். கடவுள் வாழ்த்து அதிகாரத்தில் உள்ளது.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT007_TM"
+  }
+]

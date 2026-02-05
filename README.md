@@ -38,14 +38,9 @@ Download only what you need:
 | 📚 **Vazhi Kalvi** (கல்வி) | Education assistance, scholarships | 602 pairs | ✅ Data Ready |
 | ⚖️ **Vazhi Sattam** (சட்டம்) | Legal rights, RTI, consumer protection | 610 pairs | ✅ Data Ready |
 | 🏥 **Vazhi Maruthuvam** (மருத்துவம்) | Healthcare, govt schemes, traditional medicine | 460 pairs | ✅ Data Ready |
+| 🏛️ **Vazhi Panpaadu** (பண்பாடு) | Tamil culture, Thirukkural, Siddhars, temples | 400 pairs | ✅ Data Ready |
 
-**Total: 2,607 bilingual training pairs** (Pure Tamil + Tanglish)
-
-### Planned Packs (Tamil Culture - Base Model)
-| Pack | Purpose | Status |
-|------|---------|--------|
-| 📜 **Thirukkural** | Thiruvalluvar's wisdom & ethics | 📋 Planned |
-| 🔮 **Siddhar Wisdom** | Bhogar, Agastyar, Konganar teachings | 📋 Planned |
+**Total: 3,007 training pairs** (Pure Tamil + Tanglish + Mixed)
 
 ### Smart Escalation
 When questions are too complex, VAZHI transparently offers:
@@ -92,9 +87,12 @@ vazhi/
 ## Roadmap
 
 ### Phase 1: Foundation (Weeks 1-2)
-- [x] **Data Collection** - 2,147 bilingual pairs across 4 domains ✅
-- [ ] Fine-tune base Tamil LLM on Qwen 2.5 3B
-- [ ] Quantize for mobile deployment (~1.7GB)
+- [x] **Data Collection** - 3,007 pairs across 6 domains ✅
+- [x] **Day 1** - Colab environment + Qwen 2.5 3B baseline test ✅
+- [x] **Day 2** - Merged SFT training data (2,706 train / 301 val) ✅
+- [ ] **Day 3** - LoRA fine-tuning setup
+- [ ] **Day 4** - Fine-tune base Tamil LLM
+- [ ] **Day 6** - Quantize for mobile deployment (~1.7GB)
 - [ ] Basic mobile app prototype
 
 ### Phase 2: Expansion (Months 2-3)
@@ -103,7 +101,7 @@ vazhi/
 - [x] Education Pack data (602 pairs) ✅
 - [x] Legal Pack data (610 pairs) ✅
 - [x] Healthcare Pack data (460 pairs) ✅
-- [ ] Tamil Culture data (Thiruvalluvar, Siddhars) - for base model
+- [x] Tamil Culture Pack data (400 pairs) - Thirukkural, Siddhars, temples ✅
 - [ ] Community contribution guidelines
 - [ ] Pack review and curation system
 - [ ] iOS and Android apps
