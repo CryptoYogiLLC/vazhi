@@ -89,8 +89,20 @@ for prompt in test_prompts:
 
 ---
 
-### Day 2: Merge Training Data + Format Conversion 👈 CURRENT
+### Day 2: Merge Training Data + Format Conversion ✅ COMPLETE
 **Goal**: Prepare unified training dataset in SFT format
+
+**Status**: DONE
+- [x] Created vazhi_panpaadu (Culture) pack - 400 pairs
+- [x] Merged all 6 packs into SFT format
+- [x] Created train/val split (90/10)
+
+**Output Files**:
+- `data/vazhi_training_merged.json` - 3,007 pairs
+- `data/vazhi_train.json` - 2,706 pairs
+- `data/vazhi_val.json` - 301 pairs
+
+**Original Plan**:
 
 ```python
 import json
@@ -145,7 +157,7 @@ with open("data/vazhi_val.json", "w") as f:
 
 ---
 
-### Day 3: LoRA Fine-tuning Setup with Unsloth
+### Day 3: LoRA Fine-tuning Setup with Unsloth 👈 CURRENT
 **Goal**: Configure training environment for Tamil LLM
 
 ```python
@@ -584,9 +596,10 @@ const QUICK_SUGGESTIONS = {
 
 | Deliverable | Original Plan | Revised Status |
 |-------------|---------------|----------------|
-| Training data (500-1000 pairs) | Day 2 | ✅ DONE (2,147 pairs) |
+| Training data (500-1000 pairs) | Day 2 | ✅ DONE (3,007 pairs) |
 | Colab environment + baseline test | Day 1 | ✅ DONE (01_vazhi_first_inference.ipynb) |
-| Merged SFT dataset | Day 2 | 👈 NEXT |
+| Merged SFT dataset | Day 2 | ✅ DONE (2,706 train / 301 val) |
+| Culture Pack (Thirukkural, Siddhars) | Day 2 | ✅ DONE (400 pairs) |
 | Tamil base LLM (3B, fine-tuned) | Day 4 | 🔲 Day 4 |
 | Quantized mobile model | Day 6 | 🔲 Day 6 |
 | Security Pack LoRA | Day 9 | ✅ Data ready, merged into base |
