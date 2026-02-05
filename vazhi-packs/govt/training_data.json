@@ -2,8 +2,8 @@
   "pack_name": "vazhi_arasu",
   "pack_name_tamil": "வழி அரசு",
   "description": "Government services pack for navigating Tamil Nadu and Central government schemes",
-  "version": "0.1.0",
-  "total_pairs": 100,
+  "version": "0.2.0",
+  "total_pairs": 144,
   "categories": [
     {
       "category": "ration_card",
@@ -752,6 +752,368 @@
           "difficulty": "easy"
         }
       ]
+    },
+    {
+      "category": "bilingual_govt_procedures",
+      "category_tamil": "இருமொழி அரசு நடைமுறைகள்",
+      "description": "Government procedures in both pure Tamil and Tanglish formats",
+      "pairs": [
+        {
+          "id": "BGP001",
+          "question": "பிறப்பு சான்றிதழ் எப்படி பெறுவது?",
+          "answer": "பிறப்பு சான்றிதழ் பெற: 1. அருகிலுள்ள நகராட்சி/பேரூராட்சி அலுவலகம் செல்லவும் 2. படிவம் எண் 1 நிரப்பவும் 3. தேவையான ஆவணங்கள்: மருத்துவமனை சான்று, பெற்றோர் அடையாள அட்டை 4. கட்டணம்: 21 நாட்களுக்குள் இலவசம், அதன் பின் ₹50 தாமதக் கட்டணம் 5. ஆன்லைன்: tnreginet.gov.in மூலமும் விண்ணப்பிக்கலாம்",
+          "topic": "certificates",
+          "language": "pure_tamil",
+          "parallel_id": "BGP002"
+        },
+        {
+          "id": "BGP002",
+          "question": "Birth certificate eppadi peruvadhu?",
+          "answer": "Birth certificate pera: 1. Nearby municipality/panchayat office ponga 2. Form No. 1 fill pannunga 3. Documents: Hospital record, parents ID proof 4. Fee: 21 days-ku free, adha pinna ₹50 late fee 5. Online: tnreginet.gov.in la apply pannalam",
+          "topic": "certificates",
+          "language": "tanglish",
+          "parallel_id": "BGP001"
+        },
+        {
+          "id": "BGP003",
+          "question": "இறப்பு சான்றிதழுக்கு என்ன ஆவணங்கள் தேவை?",
+          "answer": "இறந்தவரின் ஆதார் அட்டை, மருத்துவமனை இறப்பு சான்று / போஸ்ட்மார்ட்டம் அறிக்கை, விண்ணப்பதாரரின் அடையாள அட்டை தேவை. 21 நாட்களுக்குள் பதிவு செய்ய வேண்டும்.",
+          "topic": "certificates",
+          "language": "pure_tamil",
+          "parallel_id": "BGP004"
+        },
+        {
+          "id": "BGP004",
+          "question": "Death certificate-ku enna documents vendum?",
+          "answer": "Deceased Aadhaar card, Hospital death certificate / Postmortem report, Applicant ID proof vendum. 21 days-kulla register pannanum.",
+          "topic": "certificates",
+          "language": "tanglish",
+          "parallel_id": "BGP003"
+        },
+        {
+          "id": "BGP005",
+          "question": "பட்டா மாற்றம் எப்படி செய்வது?",
+          "answer": "பட்டா மாற்றத்திற்கு: 1. சார்பதிவாளர் அலுவலகத்தில் பத்திரப்பதிவு செய்யவும் 2. தாலுகா அலுவலகத்தில் பட்டா மாற்ற விண்ணப்பம் கொடுக்கவும் 3. தேவையான ஆவணங்கள்: பதிவு செய்த ஆவணம், EC (என்கம்பிரன்ஸ் சான்று), அடையாள/முகவரி சான்று, வரி செலுத்திய ரசீது 4. கால அவகாசம்: 30-45 நாட்கள் 5. ஆன்லைன்: eservices.tn.gov.in",
+          "topic": "property",
+          "language": "pure_tamil",
+          "parallel_id": "BGP006"
+        },
+        {
+          "id": "BGP006",
+          "question": "Patta maatram eppadi seyvadhu?",
+          "answer": "Patta transfer-ku: 1. Sub-registrar office-la document register pannunga 2. Taluk office-la patta transfer application kudunga 3. Documents: Registered document, EC (Encumbrance Certificate), ID/Address proof, Tax paid receipt 4. Time: 30-45 days 5. Online: eservices.tn.gov.in",
+          "topic": "property",
+          "language": "tanglish",
+          "parallel_id": "BGP005"
+        },
+        {
+          "id": "BGP007",
+          "question": "என்கம்பிரன்ஸ் சான்று (EC) எங்கே பெறுவது?",
+          "answer": "ஆன்லைன்: tnreginet.gov.in (1987 முதல் கிடைக்கும்). நேரடி: சார்பதிவாளர் அலுவலகம். கட்டணம்: ஒவ்வொரு வருடத்திற்கும் ₹15. காலம்: ஆன்லைனில் உடனடி, நேரடியாக 3-5 நாட்கள்.",
+          "topic": "property",
+          "language": "pure_tamil",
+          "parallel_id": "BGP008"
+        },
+        {
+          "id": "BGP008",
+          "question": "EC (Encumbrance Certificate) enga peruvadhu?",
+          "answer": "Online: tnreginet.gov.in (1987 onwards available). Offline: Sub-registrar office. Fee: ₹15 per year. Time: Online instant, offline 3-5 days.",
+          "topic": "property",
+          "language": "tanglish",
+          "parallel_id": "BGP007"
+        },
+        {
+          "id": "BGP009",
+          "question": "புதிய ரேஷன் அட்டை எப்படி பெறுவது?",
+          "answer": "1. tnpds.gov.in இணையதளத்தில் விண்ணப்பிக்கவும் 2. அல்லது அருகிலுள்ள நியாய விலைக் கடையில் படிவம் பெறவும் 3. தேவையான ஆவணங்கள்: குடும்ப உறுப்பினர்களின் ஆதார், வருமானச் சான்று, வீட்டு முகவரி சான்று, புகைப்படங்கள் 4. வகைகள்: PHH (ரூ.1 அரிசி), AAY (இலவச அரிசி), NPHH",
+          "topic": "ration_card",
+          "language": "pure_tamil",
+          "parallel_id": "BGP010"
+        },
+        {
+          "id": "BGP010",
+          "question": "Pudhiya ration card eppadi peruvadhu?",
+          "answer": "1. tnpds.gov.in website-la apply pannunga 2. Or nearby ration shop-la form vaangunga 3. Documents: Family members Aadhaar, Income certificate, Address proof, Photos 4. Types: PHH (₹1 rice), AAY (free rice), NPHH",
+          "topic": "ration_card",
+          "language": "tanglish",
+          "parallel_id": "BGP009"
+        },
+        {
+          "id": "BGP011",
+          "question": "ரேஷன் அட்டையில் பெயர் சேர்க்க/நீக்க என்ன செய்ய வேண்டும்?",
+          "answer": "சேர்க்க: திருமணம்/பிறப்பு சான்று + ஆதார் தேவை. நீக்க: இறப்பு சான்று / வேறு அட்டையில் சேர்ந்த சான்று. விண்ணப்பம்: tnpds.gov.in அல்லது தாசில்தார் அலுவலகம். காலம்: 15-30 நாட்கள்.",
+          "topic": "ration_card",
+          "language": "pure_tamil",
+          "parallel_id": "BGP012"
+        },
+        {
+          "id": "BGP012",
+          "question": "Ration card-la per seerkka/neekka enna seyyanum?",
+          "answer": "Seerkka: Marriage/Birth certificate + Aadhaar vendum. Neekka: Death certificate / Vera card-la serntha proof. Apply: tnpds.gov.in or Tahsildar office. Time: 15-30 days.",
+          "topic": "ration_card",
+          "language": "tanglish",
+          "parallel_id": "BGP011"
+        },
+        {
+          "id": "BGP013",
+          "question": "புதிய ஓட்டுநர் உரிமம் எப்படி பெறுவது?",
+          "answer": "1. parivahan.gov.in இல் ஸ்லாட் புக் செய்யவும் 2. முதலில் கற்றல் உரிமம் (LLR) பெறவும்: வயது: இருசக்கர 18+, நான்கு சக்கர 18+ (கியர்), 20+ (வாணிக). ஆதார், முகவரி சான்று, மருத்துவ சான்று தேவை. கட்டணம்: ₹200-500 3. 30 நாட்கள் கழித்து DL டெஸ்ட் எழுதவும்",
+          "topic": "driving_license",
+          "language": "pure_tamil",
+          "parallel_id": "BGP014"
+        },
+        {
+          "id": "BGP014",
+          "question": "Pudhiya driving license eppadi peruvadhu?",
+          "answer": "1. parivahan.gov.in la slot book pannunga 2. First Learner's License (LLR) vaangunga: Age: Two-wheeler 18+, Car 18+ (gear), Commercial 20+. Aadhaar, address proof, medical certificate vendum. Fee: ₹200-500 3. 30 days kazhichu DL test ezhudhunga",
+          "topic": "driving_license",
+          "language": "tanglish",
+          "parallel_id": "BGP013"
+        },
+        {
+          "id": "BGP015",
+          "question": "ஓட்டுநர் உரிமம் புதுப்பிக்க என்ன செய்ய வேண்டும்?",
+          "answer": "காலாவதியாவதற்கு 1 வருடம் முன்பே விண்ணப்பிக்கலாம். காலாவதியான பின் 5 வருடம் வரை புதுப்பிக்கலாம். ஆன்லைன்: parivahan.gov.in. ஆவணங்கள்: பழைய DL, ஆதார், மருத்துவ சான்று (40+ வயது). கட்டணம்: ₹200 + ஸ்மார்ட் கார்டு கட்டணம்.",
+          "topic": "driving_license",
+          "language": "pure_tamil",
+          "parallel_id": "BGP016"
+        },
+        {
+          "id": "BGP016",
+          "question": "Driving license renew eppadi pannuradhu?",
+          "answer": "Expiry-ku 1 year munnadi apply pannalam. Expiry aana pinna 5 years varaikkum renew pannalam. Online: parivahan.gov.in. Documents: Old DL, Aadhaar, Medical certificate (40+ age). Fee: ₹200 + smart card fee.",
+          "topic": "driving_license",
+          "language": "tanglish",
+          "parallel_id": "BGP015"
+        },
+        {
+          "id": "BGP017",
+          "question": "திருமண பதிவு எப்படி செய்வது?",
+          "answer": "இந்து திருமணச் சட்டம் படி: 1. சார்பதிவாளர் அலுவலகத்தில் விண்ணப்பம் 2. ஆவணங்கள்: இருவரின் வயது சான்று (ஆண் 21+, பெண் 18+), முகவரி சான்று, புகைப்படங்கள், திருமண அழைப்பிதழ் / திருமண புகைப்படங்கள், 2 சாட்சிகள் (ஆதார் நகல்) 3. கட்டணம்: ₹100-500 4. ஆன்லைன்: tnreginet.gov.in",
+          "topic": "marriage",
+          "language": "pure_tamil",
+          "parallel_id": "BGP018"
+        },
+        {
+          "id": "BGP018",
+          "question": "Marriage registration eppadi seyvadhu?",
+          "answer": "Hindu Marriage Act paadi: 1. Sub-registrar office-la application 2. Documents: Both age proof (Male 21+, Female 18+), Address proof, photos, Marriage invitation / photos, 2 witnesses (Aadhaar copy) 3. Fee: ₹100-500 4. Online: tnreginet.gov.in",
+          "topic": "marriage",
+          "language": "tanglish",
+          "parallel_id": "BGP017"
+        },
+        {
+          "id": "BGP019",
+          "question": "வாக்காளர் அடையாள அட்டை எப்படி பெறுவது?",
+          "answer": "1. voters.eci.gov.in அல்லது Voter Helpline App பயன்படுத்தவும் 2. படிவம் 6 நிரப்பவும் 3. ஆவணங்கள்: வயது சான்று (18+ ஆக இருக்க வேண்டும்), முகவரி சான்று, பாஸ்போர்ட் அளவு புகைப்படம் 4. BLO (Booth Level Officer) உங்கள் வீட்டிற்கு சரிபார்க்க வருவார் 5. காலம்: 30-45 நாட்கள்",
+          "topic": "voter_id",
+          "language": "pure_tamil",
+          "parallel_id": "BGP020"
+        },
+        {
+          "id": "BGP020",
+          "question": "Voter ID eppadi peruvadhu?",
+          "answer": "1. voters.eci.gov.in or Voter Helpline App use pannunga 2. Form 6 fill pannunga 3. Documents: Age proof (must be 18+), Address proof, Passport size photo 4. BLO will visit your home for verification 5. Time: 30-45 days",
+          "topic": "voter_id",
+          "language": "tanglish",
+          "parallel_id": "BGP019"
+        },
+        {
+          "id": "BGP021",
+          "question": "கலைஞர் மகளிர் உரிமைத் திட்டம் என்றால் என்ன?",
+          "answer": "மாதம் ₹1,000 குடும்பத் தலைவிக்கு. தகுதி: குடும்பத் தலைவி பெண்ணாக இருக்க வேண்டும், குடும்ப வருமானம் ₹2.5 லட்சத்திற்கு கீழ், ஏற்கனவே வேறு ஓய்வூதியம் பெறாமல் இருக்க வேண்டும். விண்ணப்பம்: அங்கன்வாடி மையம் / கிராம நிர்வாக அலுவலர். ஆவணங்கள்: ஆதார், ரேஷன் கார்டு, வங்கி கணக்கு",
+          "topic": "govt_schemes",
+          "language": "pure_tamil",
+          "parallel_id": "BGP022"
+        },
+        {
+          "id": "BGP022",
+          "question": "Kalaignar Magalir Urimai Thittam enna?",
+          "answer": "Monthly ₹1,000 for woman head of family. Eligibility: Family head should be woman, Family income below ₹2.5 lakhs, Should not receive any other pension. Apply: Anganwadi center / Village Administrative Officer. Documents: Aadhaar, Ration card, Bank account",
+          "topic": "govt_schemes",
+          "language": "tanglish",
+          "parallel_id": "BGP021"
+        },
+        {
+          "id": "BGP023",
+          "question": "முதியோர் ஓய்வூதியம் எப்படி பெறுவது?",
+          "answer": "தகுதி: 60 வயதுக்கு மேல், BPL குடும்பம். தொகை: மாதம் ₹1,000. விண்ணப்பம்: ஆன்லைன்: pensionschemes.tn.gov.in, நேரடி: தாசில்தார் / தாலுகா அலுவலகம். ஆவணங்கள்: வயது சான்று, வருமானச் சான்று, ஆதார், பாஸ்புக்",
+          "topic": "pension",
+          "language": "pure_tamil",
+          "parallel_id": "BGP024"
+        },
+        {
+          "id": "BGP024",
+          "question": "Mudhiyor pension eppadi peruvadhu?",
+          "answer": "Eligibility: 60+ years, BPL family. Amount: Monthly ₹1,000. Apply: Online: pensionschemes.tn.gov.in, Offline: Tahsildar / Taluk office. Documents: Age proof, Income certificate, Aadhaar, Bank passbook",
+          "topic": "pension",
+          "language": "tanglish",
+          "parallel_id": "BGP023"
+        },
+        {
+          "id": "BGP025",
+          "question": "FIR எப்படி பதிவு செய்வது?",
+          "answer": "1. அருகிலுள்ள காவல் நிலையம் செல்லவும் 2. புகார் எழுத்தில் கொடுக்கவும் 3. Zero FIR: எந்த காவல் நிலையத்திலும் பதிவு செய்யலாம் 4. ஆன்லைன்: eservices.tnpolice.gov.in (சில குற்றங்களுக்கு) 5. FIR நகல் இலவசமாக பெறலாம் (உங்கள் உரிமை!) 6. பதிவு செய்ய மறுத்தால்: SP / மாவட்ட ஆட்சியர் புகார்",
+          "topic": "police_legal",
+          "language": "pure_tamil",
+          "parallel_id": "BGP026"
+        },
+        {
+          "id": "BGP026",
+          "question": "FIR eppadi register seyvadhu?",
+          "answer": "1. Nearby police station ponga 2. Written complaint kudunga 3. Zero FIR: Any police station-la register pannalam 4. Online: eservices.tnpolice.gov.in (some crimes) 5. FIR copy free-ya vaangalam (your right!) 6. If refused: Complain to SP / District Collector",
+          "topic": "police_legal",
+          "language": "tanglish",
+          "parallel_id": "BGP025"
+        },
+        {
+          "id": "BGP027",
+          "question": "இலவச சட்ட உதவி எங்கே பெறுவது?",
+          "answer": "Tamil Nadu State Legal Services Authority (TNSLSA). தகுதி: BPL குடும்பம், SC/ST, பெண்கள், மாற்றுத்திறனாளிகள். தொலைபேசி: 15100 (இலவச எண்). ஒவ்வொரு மாவட்ட நீதிமன்றத்திலும் Legal Aid Cell உள்ளது. Lok Adalat: வழக்குகளை சுலபமாக தீர்க்கலாம்.",
+          "topic": "police_legal",
+          "language": "pure_tamil",
+          "parallel_id": "BGP028"
+        },
+        {
+          "id": "BGP028",
+          "question": "Free legal aid enga kidaikum?",
+          "answer": "Tamil Nadu State Legal Services Authority (TNSLSA). Eligibility: BPL family, SC/ST, Women, Differently abled. Phone: 15100 (toll-free). Every district court-la Legal Aid Cell irukku. Lok Adalat: Cases-a easily solve pannalam.",
+          "topic": "police_legal",
+          "language": "tanglish",
+          "parallel_id": "BGP027"
+        },
+        {
+          "id": "BGP029",
+          "question": "அரசு பள்ளியில் சேர்க்கை எப்படி?",
+          "answer": "RTE Act படி 6-14 வயது குழந்தைகளுக்கு இலவச கல்வி. ஆவணங்கள்: பிறப்பு சான்று, ஆதார், Transfer Certificate (பழைய பள்ளி). சேர்க்கை: ஜூன்-ஜூலை (கல்வியாண்டு துவக்கம்). புகார்: அருகிலுள்ள BEO / DEO அலுவலகம்.",
+          "topic": "education",
+          "language": "pure_tamil",
+          "parallel_id": "BGP030"
+        },
+        {
+          "id": "BGP030",
+          "question": "Government school-la admission eppadi?",
+          "answer": "RTE Act paadi 6-14 age children-ku free education. Documents: Birth certificate, Aadhaar, Transfer Certificate (old school). Admission: June-July (academic year start). Complaint: Nearby BEO / DEO office.",
+          "topic": "education",
+          "language": "tanglish",
+          "parallel_id": "BGP029"
+        },
+        {
+          "id": "BGP031",
+          "question": "கல்வி உதவித்தொகை (Scholarship) எப்படி பெறுவது?",
+          "answer": "BC/MBC/SC/ST மாணவர்களுக்கு இலவச கல்வி + உதவித்தொகை. விண்ணப்பம்: tneservices.tn.gov.in. ஆவணங்கள்: Community certificate, Income certificate, Marksheet. முக்கிய திட்டங்கள்: முதலமைச்சர் உயர்கல்வி உதவித்தொகை, BC/MBC Post-Matric Scholarship, SC/ST Scholarship",
+          "topic": "education",
+          "language": "pure_tamil",
+          "parallel_id": "BGP032"
+        },
+        {
+          "id": "BGP032",
+          "question": "Scholarship eppadi peruvadhu?",
+          "answer": "BC/MBC/SC/ST students-ku free education + stipend. Apply: tneservices.tn.gov.in. Documents: Community certificate, Income certificate, Marksheet. Key schemes: CM Higher Education Scholarship, BC/MBC Post-Matric Scholarship, SC/ST Scholarship",
+          "topic": "education",
+          "language": "tanglish",
+          "parallel_id": "BGP031"
+        },
+        {
+          "id": "BGP033",
+          "question": "கடை தொடங்க என்ன அனுமதி வேண்டும்?",
+          "answer": "1. GST பதிவு (₹40 லட்சத்திற்கு மேல் விற்பனை) 2. Trade License: நகராட்சி/கிராம பஞ்சாயத்து 3. Shop & Establishment Act பதிவு: tnlabour.tn.gov.in 4. FSSAI License (உணவு வணிகம்): fssai.gov.in 5. Fire Safety Certificate (பெரிய கடைகள்)",
+          "topic": "business",
+          "language": "pure_tamil",
+          "parallel_id": "BGP034"
+        },
+        {
+          "id": "BGP034",
+          "question": "Kadai thodanga enna permission vendum?",
+          "answer": "1. GST registration (above ₹40 lakh turnover) 2. Trade License: Municipality/Gram Panchayat 3. Shop & Establishment Act: tnlabour.tn.gov.in 4. FSSAI License (food business): fssai.gov.in 5. Fire Safety Certificate (large shops)",
+          "topic": "business",
+          "language": "tanglish",
+          "parallel_id": "BGP033"
+        },
+        {
+          "id": "BGP035",
+          "question": "புதிய மின் இணைப்பு எப்படி பெறுவது?",
+          "answer": "விண்ணப்பம்: nsc.tnebnet.org. ஆவணங்கள்: சொத்து ஆவணம் / வாடகை ஒப்பந்தம், ஆதார். கட்டணம்: ₹500-2000 (load பொறுத்து). காலம்: 7-15 நாட்கள். புகார்: 94987-94987",
+          "topic": "utilities",
+          "language": "pure_tamil",
+          "parallel_id": "BGP036"
+        },
+        {
+          "id": "BGP036",
+          "question": "New electricity connection eppadi peruvadhu?",
+          "answer": "Apply: nsc.tnebnet.org. Documents: Property document / Rental agreement, Aadhaar. Fee: ₹500-2000 (depends on load). Time: 7-15 days. Complaint: 94987-94987",
+          "topic": "utilities",
+          "language": "tanglish",
+          "parallel_id": "BGP035"
+        },
+        {
+          "id": "BGP037",
+          "question": "குடிநீர் இணைப்பு எப்படி பெறுவது?",
+          "answer": "நகராட்சி பகுதி: twadboard.tn.gov.in. கிராமப்புறம்: கிராம நிர்வாக அலுவலர். ஆவணங்கள்: சொத்து ஆவணம், அடையாள சான்று, வரி ரசீது. கட்டணம்: ₹500-1500 (இணைப்பு கட்டணம்)",
+          "topic": "utilities",
+          "language": "pure_tamil",
+          "parallel_id": "BGP038"
+        },
+        {
+          "id": "BGP038",
+          "question": "Water connection eppadi peruvadhu?",
+          "answer": "Urban area: twadboard.tn.gov.in. Rural: Village Administrative Officer. Documents: Property document, ID proof, Tax receipt. Fee: ₹500-1500 (connection charge)",
+          "topic": "utilities",
+          "language": "tanglish",
+          "parallel_id": "BGP037"
+        },
+        {
+          "id": "BGP039",
+          "question": "பிரதான் மந்திரி ஆவாஸ் யோஜனா (PMAY) எப்படி பெறுவது?",
+          "answer": "தகுதி: சொந்த வீடு இல்லாத குடும்பம், EWS/LIG/MIG. நிதி உதவி: ₹1.5-2.67 லட்சம் வரை. விண்ணப்பம்: pmay-urban.gov.in / Common Service Center. ஆவணங்கள்: ஆதார், வருமானச் சான்று, நில ஆவணம். வங்கி கடன் வட்டியில் மானியம் கிடைக்கும்.",
+          "topic": "housing",
+          "language": "pure_tamil",
+          "parallel_id": "BGP040"
+        },
+        {
+          "id": "BGP040",
+          "question": "PMAY (Pradhan Mantri Awas Yojana) eppadi peruvadhu?",
+          "answer": "Eligibility: Family without own house, EWS/LIG/MIG. Assistance: Up to ₹1.5-2.67 lakhs. Apply: pmay-urban.gov.in / Common Service Center. Documents: Aadhaar, Income certificate, Land document. Interest subsidy on bank loan available.",
+          "topic": "housing",
+          "language": "tanglish",
+          "parallel_id": "BGP039"
+        }
+      ]
+    },
+    {
+      "category": "reference_directory",
+      "category_tamil": "குறிப்பு அடைவு",
+      "description": "Important government websites and helpline numbers",
+      "pairs": [
+        {
+          "id": "REF001",
+          "question": "முக்கிய அரசு இணையதளங்கள் என்ன?",
+          "answer": "All e-Services: tneservices.tn.gov.in, Property Registration: tnreginet.gov.in, Ration Card: tnpds.gov.in, Vehicle/DL: parivahan.gov.in, Pension: pensionschemes.tn.gov.in, Police: eservices.tnpolice.gov.in, Employment: tnvelaivaaippu.gov.in, Electricity: nsc.tnebnet.org, Land Records: eservices.tn.gov.in/landrecords",
+          "topic": "reference",
+          "language": "pure_tamil"
+        },
+        {
+          "id": "REF002",
+          "question": "Important government websites enna?",
+          "answer": "All e-Services: tneservices.tn.gov.in, Property Registration: tnreginet.gov.in, Ration Card: tnpds.gov.in, Vehicle/DL: parivahan.gov.in, Pension: pensionschemes.tn.gov.in, Police: eservices.tnpolice.gov.in, Employment: tnvelaivaaippu.gov.in, Electricity: nsc.tnebnet.org, Land Records: eservices.tn.gov.in/landrecords",
+          "topic": "reference",
+          "language": "tanglish"
+        },
+        {
+          "id": "REF003",
+          "question": "முக்கிய உதவி எண்கள் என்ன?",
+          "answer": "Emergency: 112, Women Helpline: 181, Child Helpline: 1098, CM Cell: 1100, Legal Aid: 15100, Consumer: 1915, Electricity: 94987-94987, Water: 1916, Ration Card: 1967",
+          "topic": "helplines",
+          "language": "pure_tamil"
+        },
+        {
+          "id": "REF004",
+          "question": "Important helpline numbers enna?",
+          "answer": "Emergency: 112, Women Helpline: 181, Child Helpline: 1098, CM Cell: 1100, Legal Aid: 15100, Consumer: 1915, Electricity: 94987-94987, Water: 1916, Ration Card: 1967",
+          "topic": "helplines",
+          "language": "tanglish"
+        }
+      ]
     }
   ],
   "metadata": {
@@ -759,6 +1121,12 @@
     "language": "Tamil",
     "target_audience": "Tamil Nadu citizens",
     "use_case": "Government services navigation",
-    "license": "CC-BY-SA-4.0"
+    "license": "CC-BY-SA-4.0",
+    "version_notes": "v0.2.0 - Added bilingual (Pure Tamil + Tanglish) government procedures covering certificates, property, ration card, driving license, marriage, voter ID, schemes, police/legal, education, business, utilities, housing. Added reference directory with websites and helplines.",
+    "last_updated": "2026-02-05",
+    "languages_covered": [
+      "pure_tamil",
+      "tanglish"
+    ]
   }
 }
