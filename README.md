@@ -37,8 +37,15 @@ Download only what you need:
 | 🏛️ **Vazhi Arasu** (அரசு) | Government schemes & services | 467 pairs | ✅ Data Ready |
 | 📚 **Vazhi Kalvi** (கல்வி) | Education assistance, scholarships | 602 pairs | ✅ Data Ready |
 | ⚖️ **Vazhi Sattam** (சட்டம்) | Legal rights, RTI, consumer protection | 610 pairs | ✅ Data Ready |
+| 🏥 **Vazhi Maruthuvam** (மருத்துவம்) | Healthcare, govt schemes, traditional medicine | 460 pairs | ✅ Data Ready |
 
-**Total: 2,147 bilingual training pairs** (Pure Tamil + Tanglish)
+**Total: 2,607 bilingual training pairs** (Pure Tamil + Tanglish)
+
+### Planned Packs (Tamil Culture - Base Model)
+| Pack | Purpose | Status |
+|------|---------|--------|
+| 📜 **Thirukkural** | Thiruvalluvar's wisdom & ethics | 📋 Planned |
+| 🔮 **Siddhar Wisdom** | Bhogar, Agastyar, Konganar teachings | 📋 Planned |
 
 ### Smart Escalation
 When questions are too complex, VAZHI transparently offers:
@@ -95,6 +102,8 @@ vazhi/
 - [x] Government Pack data (467 pairs) ✅
 - [x] Education Pack data (602 pairs) ✅
 - [x] Legal Pack data (610 pairs) ✅
+- [x] Healthcare Pack data (460 pairs) ✅
+- [ ] Tamil Culture data (Thiruvalluvar, Siddhars) - for base model
 - [ ] Community contribution guidelines
 - [ ] Pack review and curation system
 - [ ] iOS and Android apps
