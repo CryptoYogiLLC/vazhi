@@ -2,8 +2,8 @@
   "pack_name": "vazhi_arasu",
   "pack_name_tamil": "வழி அரசு",
   "description": "Government services pack for navigating Tamil Nadu and Central government schemes",
-  "version": "0.5.0",
-  "total_pairs": 340,
+  "version": "0.6.0",
+  "total_pairs": 467,
   "categories": [
     {
       "category": "ration_card",
@@ -2766,6 +2766,2546 @@
           "language": "tanglish"
         }
       ]
+    },
+    {
+      "category": "rural_scenarios",
+      "category_tamil": "கிராமப்புற நடைமுறைகள்",
+      "pairs": [
+        {
+          "id": "RUR001",
+          "question": "நான் சிறு விவசாயி. Organic விவசாயம் செய்ய விரும்புகிறேன். என்ன உதவி கிடைக்கும்?",
+          "answer": "Organic விவசாயத்திற்கு பல திட்டங்கள் உள்ளன:\n\n1. **PKVY (Paramparagat Krishi Vikas Yojana)**\n   - உதவி: ₹50,000/hectare (3 வருடம்)\n   - Cluster அடிப்படையில் (50 விவசாயிகள்)\n   - எங்கே: District Agriculture Officer\n\n2. **PGS Certification (Free)**\n   - pgsindia-ncof.gov.in\n   - Group-ஆக apply செய்யவும்\n\n3. **Tamil Nadu Organic Farming Policy**\n   - Vermicompost unit: 50% subsidy\n   - Bio-fertilizer: Free distribution\n   - எங்கே: Block Agriculture Office\n\n4. **Training**\n   - KVK (Krishi Vigyan Kendra) - Free training\n   - TNAU - Certificate courses\n\n5. **Market Support**\n   - Organic Mandi through e-NAM\n   - Direct consumer sale permission",
+          "topic": "rural_agriculture",
+          "language": "pure_tamil",
+          "parallel_id": "RUR001T",
+          "metadata": {
+            "scenario": "Small farmer wanting to start organic farming",
+            "key_offices": [
+              "District Agriculture Officer",
+              "Block Agriculture Office",
+              "KVK"
+            ],
+            "websites": [
+              "pgsindia-ncof.gov.in",
+              "agriportal.tn.gov.in"
+            ],
+            "documents": [
+              "Land Records",
+              "Aadhaar",
+              "Bank Account",
+              "Group formation documents"
+            ]
+          }
+        },
+        {
+          "id": "RUR001T",
+          "question": "Naan siru vivasaayi. Organic vivasaayam seiyya virumburen. Enna udhavi kidaikkum?",
+          "answer": "Organic vivasaayathukku pala thittangal ullana:\n\n1. **PKVY Scheme**\n   - Help: ₹50,000/hectare (3 years)\n   - Cluster basis (50 farmers)\n   - Where: District Agriculture Officer\n\n2. **PGS Certification (Free)**\n   - pgsindia-ncof.gov.in\n   - Apply as group\n\n3. **TN Organic Farming Policy**\n   - Vermicompost unit: 50% subsidy\n   - Bio-fertilizer: Free\n   - Where: Block Agriculture Office\n\n4. **Training**\n   - KVK - Free training\n   - TNAU - Certificate courses\n\n5. **Market Support**\n   - Organic Mandi through e-NAM\n   - Direct sale allowed",
+          "topic": "rural_agriculture",
+          "language": "tanglish",
+          "parallel_id": "RUR001",
+          "metadata": {
+            "scenario": "Small farmer wanting to start organic farming",
+            "key_offices": [
+              "District Agriculture Officer",
+              "Block Agriculture Office",
+              "KVK"
+            ],
+            "websites": [
+              "pgsindia-ncof.gov.in",
+              "agriportal.tn.gov.in"
+            ],
+            "documents": [
+              "Land Records",
+              "Aadhaar",
+              "Bank Account",
+              "Group formation documents"
+            ]
+          }
+        },
+        {
+          "id": "RUR002",
+          "question": "என் நிலத்தில் புதிய ஆழ்துளை கிணறு (Borewell) அமைக்க என்ன permission வேண்டும்?",
+          "answer": "Borewell permission process:\n\n**Step 1: Permission வாங்குதல்**\n- எங்கே: PWD Ground Water Wing / District Collector Office\n- Online: tnpwd.gov.in\n\n**Step 2: தேவையான ஆவணங்கள்**\n- நில ஆவணம் (Patta/Chitta)\n- FMB Extract\n- Location sketch\n- Adjacent borewell details (500m சுற்றளவில்)\n- Aadhaar, Photo\n\n**Step 3: கட்டணம்**\n- Application fee: ₹100-500\n- NOC fee: ₹500-1,000\n\n**Step 4: Inspection**\n- PWD officer visit\n- Ground water level check\n- Spacing norms verification (Minimum 200m from other borewells)\n\n**Step 5: Approval**\n- காலம்: 15-30 நாட்கள்\n- Depth restriction இருக்கலாம்\n\n**Free Electricity Connection:**\n- Borewell complete-ஆன பின் TANGEDCO-ல் apply\n- Agricultural free connection\n\n**முக்கியம்:**\n- Permission இல்லாமல் borewell போட்டால் legal action\n- Over-exploited areas-ல் permission கிடைக்காது",
+          "topic": "rural_agriculture",
+          "language": "pure_tamil",
+          "parallel_id": "RUR002T",
+          "metadata": {
+            "scenario": "Farmer wanting to dig a new borewell",
+            "key_offices": [
+              "PWD Ground Water Wing",
+              "District Collector",
+              "TANGEDCO"
+            ],
+            "websites": [
+              "tnpwd.gov.in"
+            ],
+            "documents": [
+              "Patta",
+              "Chitta",
+              "FMB",
+              "Aadhaar"
+            ]
+          }
+        },
+        {
+          "id": "RUR002T",
+          "question": "En nilathula pudhiya borewell amaikkka enna permission vendum?",
+          "answer": "Borewell permission process:\n\n**Step 1: Get Permission**\n- Where: PWD Ground Water Wing / District Collector\n- Online: tnpwd.gov.in\n\n**Step 2: Documents**\n- Land document (Patta/Chitta)\n- FMB Extract\n- Location sketch\n- Adjacent borewell details (within 500m)\n- Aadhaar, Photo\n\n**Step 3: Fee**\n- Application: ₹100-500\n- NOC: ₹500-1,000\n\n**Step 4: Inspection**\n- PWD officer visit\n- Ground water check\n- Spacing norms (Min 200m from others)\n\n**Step 5: Approval**\n- Time: 15-30 days\n- Depth restriction possible\n\n**Important:** Without permission = legal action",
+          "topic": "rural_agriculture",
+          "language": "tanglish",
+          "parallel_id": "RUR002",
+          "metadata": {
+            "scenario": "Farmer wanting to dig a new borewell",
+            "key_offices": [
+              "PWD Ground Water Wing",
+              "District Collector",
+              "TANGEDCO"
+            ],
+            "websites": [
+              "tnpwd.gov.in"
+            ],
+            "documents": [
+              "Patta",
+              "Chitta",
+              "FMB",
+              "Aadhaar"
+            ]
+          }
+        },
+        {
+          "id": "RUR003",
+          "question": "என் விவசாய நிலத்தை வீட்டு மனையாக மாற்ற என்ன செய்ய வேண்டும்?",
+          "answer": "**விவசாய நில மாற்றம் (Land Conversion):**\n\n**எங்கே Apply செய்வது:**\n- District Collector Office\n- Online: eservices.tn.gov.in\n\n**வகைகள்:**\n1. **NA Conversion (Non-Agricultural)**\n   - விவசாயம் → Residential/Commercial\n   \n2. **Layout Approval** (பல மனைகள்)\n   - DTCP approval தேவை\n\n**தேவையான ஆவணங்கள்:**\n- Patta (உங்கள் பெயரில்)\n- Chitta & Adangal\n- FMB (Field Measurement Book)\n- EC (30 years)\n- Tax receipts\n- Location sketch\n- NOC from Agriculture Dept (சில cases)\n\n**கட்டணம்:**\n- Conversion fee: Land value-ன் 1-3%\n- Market value-ன் 50% stamp duty difference\n\n**Process:**\n1. Application submit\n2. Revenue Dept verification\n3. Agriculture Dept NOC\n4. Site inspection\n5. Collector approval\n6. Patta-ல் land type மாற்றம்\n\n**காலம்:** 2-6 மாதங்கள்\n\n**தடைகள்:**\n- Wet land (நஞ்சை) → கடினம்\n- Prime agricultural zone → Not allowed\n- 2 acre-க்கு மேல் → Special permission\n\n**Penalty (without conversion):**\n- Unauthorized construction\n- Panchayat action\n- Legal issues during sale",
+          "topic": "rural_agriculture",
+          "language": "pure_tamil",
+          "parallel_id": "RUR003T",
+          "metadata": {
+            "scenario": "Farmer wanting to convert agricultural land",
+            "key_offices": [
+              "District Collector",
+              "Revenue Department",
+              "Agriculture Department",
+              "DTCP"
+            ],
+            "websites": [
+              "eservices.tn.gov.in"
+            ],
+            "documents": [
+              "Patta",
+              "Chitta",
+              "Adangal",
+              "FMB",
+              "EC",
+              "Tax receipts"
+            ]
+          }
+        },
+        {
+          "id": "RUR003T",
+          "question": "En vivasaaya nilaththa veettu manaiyaaga maatra enna seiyya vendum?",
+          "answer": "**Agricultural Land Conversion:**\n\n**Where to Apply:**\n- District Collector Office\n- Online: eservices.tn.gov.in\n\n**Types:**\n1. **NA Conversion** - Agri to Residential/Commercial\n2. **Layout Approval** - Multiple plots, need DTCP\n\n**Documents:**\n- Patta (your name)\n- Chitta & Adangal\n- FMB\n- EC (30 years)\n- Tax receipts\n- Location sketch\n- Agriculture Dept NOC (some cases)\n\n**Fee:** 1-3% of land value + stamp duty difference\n\n**Time:** 2-6 months\n\n**Restrictions:**\n- Wet land = difficult\n- Prime agri zone = not allowed\n- Above 2 acres = special permission",
+          "topic": "rural_agriculture",
+          "language": "tanglish",
+          "parallel_id": "RUR003",
+          "metadata": {
+            "scenario": "Farmer wanting to convert agricultural land",
+            "key_offices": [
+              "District Collector",
+              "Revenue Department",
+              "Agriculture Department",
+              "DTCP"
+            ],
+            "websites": [
+              "eservices.tn.gov.in"
+            ],
+            "documents": [
+              "Patta",
+              "Chitta",
+              "Adangal",
+              "FMB",
+              "EC",
+              "Tax receipts"
+            ]
+          }
+        },
+        {
+          "id": "RUR004",
+          "question": "நான் கிராமத்தில் பெண்கள் சுய உதவிக் குழு (SHG) ஆரம்பிக்க விரும்புகிறேன். எப்படி பதிவு செய்வது?",
+          "answer": "**SHG துவக்குதல் - படிப்படியாக:**\n\n**Step 1: குழு அமைத்தல்**\n- 10-20 பெண்கள் (ஒரே கிராமம்/பகுதி)\n- ஒத்த சிந்தனை உடையவர்கள்\n- வயது: 18-60\n\n**Step 2: Meetings தொடங்குதல்**\n- வாரம் ஒரு முறை கூட்டம்\n- சிறிய தொகை சேமிப்பு (₹50-100/week)\n- Minutes book maintain\n\n**Step 3: Bank Account திறத்தல்**\n- 3 மாத meeting records காட்டி\n- Joint account (President + Secretary)\n- Nationalized Bank / Co-operative Bank\n\n**Step 4: Mahalir Thittam பதிவு**\n- எங்கே: Block Development Office\n- TNSRLM (Tamil Nadu State Rural Livelihoods Mission)\n- Website: tnrd.gov.in\n\n**தேவையான ஆவணங்கள்:**\n- உறுப்பினர்கள் Aadhaar\n- குழு தீர்மானம் (Resolution)\n- Member list with photos\n- Savings passbook\n- Minutes book\n\n**Benefits after registration:**\n1. **Revolving Fund:** ₹15,000 (grant)\n2. **Community Investment Fund:** ₹50,000-1,00,000\n3. **Bank Loan:** Up to ₹10 lakh (low interest)\n4. **Training:** Free skill training\n5. **Market access:** Exhibition, Melas\n\n**Loan வாங்குதல்:**\n- 6 மாத savings record\n- Regular meetings\n- Good credit history\n- Interest: 4-7%",
+          "topic": "rural_welfare",
+          "language": "pure_tamil",
+          "parallel_id": "RUR004T",
+          "metadata": {
+            "scenario": "Rural woman wanting to start self-help group",
+            "key_offices": [
+              "Block Development Office",
+              "TNSRLM",
+              "Mahalir Thittam Office"
+            ],
+            "websites": [
+              "tnrd.gov.in",
+              "tnsrlm.tn.gov.in"
+            ],
+            "documents": [
+              "Member Aadhaar cards",
+              "Resolution",
+              "Minutes book",
+              "Savings passbook"
+            ]
+          }
+        },
+        {
+          "id": "RUR004T",
+          "question": "Naan gramathula pengal Self Help Group (SHG) aarambikka virumburen. Eppadi register seyvadhu?",
+          "answer": "**Starting SHG - Step by Step:**\n\n**Step 1: Form Group**\n- 10-20 women (same village/area)\n- Like-minded people\n- Age: 18-60\n\n**Step 2: Start Meetings**\n- Weekly meeting\n- Small savings (₹50-100/week)\n- Maintain minutes book\n\n**Step 3: Open Bank Account**\n- Show 3-month meeting records\n- Joint account (President + Secretary)\n\n**Step 4: Mahalir Thittam Registration**\n- Where: Block Development Office\n- TNSRLM\n- Website: tnrd.gov.in\n\n**Benefits:**\n1. Revolving Fund: ₹15,000 (grant)\n2. CIF: ₹50,000-1,00,000\n3. Bank Loan: Up to ₹10 lakh\n4. Free training\n5. Market access",
+          "topic": "rural_welfare",
+          "language": "tanglish",
+          "parallel_id": "RUR004",
+          "metadata": {
+            "scenario": "Rural woman wanting to start self-help group",
+            "key_offices": [
+              "Block Development Office",
+              "TNSRLM",
+              "Mahalir Thittam Office"
+            ],
+            "websites": [
+              "tnrd.gov.in",
+              "tnsrlm.tn.gov.in"
+            ],
+            "documents": [
+              "Member Aadhaar cards",
+              "Resolution",
+              "Minutes book",
+              "Savings passbook"
+            ]
+          }
+        },
+        {
+          "id": "RUR005",
+          "question": "எங்கள் கிராமத்தில் வேலை இல்லை. MGNREGA Job Card எப்படி வாங்குவது? வேலை எப்படி கேட்பது?",
+          "answer": "**MGNREGA - 100 நாள் வேலை உத்தரவாதம்:**\n\n**Job Card பெறுதல்:**\n\n**Step 1: விண்ணப்பம்**\n- எங்கே: Gram Panchayat Office\n- Family-க்கு ஒரு card\n- 18+ வயது உறுப்பினர்கள் சேர்க்கலாம்\n\n**Step 2: ஆவணங்கள்**\n- Address proof (Ration Card/Aadhaar)\n- Age proof\n- Family photo\n- No income proof needed!\n\n**Step 3: Card issue**\n- 15 நாட்களுக்குள் card கிடைக்கும்\n- இலவசம்\n- Photo laminated card\n\n**வேலை கேட்பது:**\n\n**Step 1: எழுத்துபூர்வ விண்ணப்பம்**\n- Gram Panchayat-ல் எழுத்தில் கொடுக்கவும்\n- குறைந்தது 14 நாட்கள் வேலை கேட்கவும்\n- Acknowledgment வாங்கவும்\n\n**Step 2: வேலை ஒதுக்கீடு**\n- 15 நாட்களுக்குள் வேலை கொடுக்க வேண்டும்\n- 5 km சுற்றளவில் வேலை\n- இல்லாவிட்டால் 10% extra wage\n\n**Step 3: வேலை செய்தல்**\n- Muster roll-ல் attendance\n- பகல் வேலை, shade facility\n- குடிநீர், First Aid கட்டாயம்\n\n**கூலி:**\n- TN: ₹294/நாள் (2024)\n- 14 நாட்களுக்குள் Bank-ல் செலுத்த வேண்டும்\n\n**வேலை கிடைக்கவில்லை என்றால்:**\n- Unemployment Allowance கேட்கலாம்\n- 1/4 to 1/2 wage rate\n- Block Development Officer-க்கு புகார்\n\n**புகார்:**\n- Gram Sabha-ல் எழுப்பலாம்\n- nrega.nic.in - online complaint\n- District Programme Coordinator",
+          "topic": "rural_welfare",
+          "language": "pure_tamil",
+          "parallel_id": "RUR005T",
+          "metadata": {
+            "scenario": "Getting MGNREGA job card and work",
+            "key_offices": [
+              "Gram Panchayat",
+              "Block Development Officer",
+              "District Programme Coordinator"
+            ],
+            "websites": [
+              "nrega.nic.in"
+            ],
+            "documents": [
+              "Address proof",
+              "Age proof",
+              "Family photo"
+            ]
+          }
+        },
+        {
+          "id": "RUR005T",
+          "question": "Engal gramathula velai illai. MGNREGA Job Card eppadi vaanguvadhu? Velai eppadi keppadu?",
+          "answer": "**MGNREGA - 100 Days Work Guarantee:**\n\n**Getting Job Card:**\n\n**Step 1: Apply**\n- Where: Gram Panchayat Office\n- One card per family\n- 18+ members can be added\n\n**Step 2: Documents**\n- Address proof\n- Age proof\n- Family photo\n- No income proof needed!\n\n**Step 3: Card issue**\n- Within 15 days\n- Free\n\n**Demanding Work:**\n\n**Step 1: Written Application**\n- Give in writing at Panchayat\n- Ask minimum 14 days work\n- Get acknowledgment\n\n**Step 2: Work Allocation**\n- Must give work within 15 days\n- Within 5 km radius\n- Else 10% extra wage\n\n**Wage:** ₹294/day (TN 2024)\n\n**No work given:**\n- Ask for Unemployment Allowance\n- Complain to BDO\n- Online: nrega.nic.in",
+          "topic": "rural_welfare",
+          "language": "tanglish",
+          "parallel_id": "RUR005",
+          "metadata": {
+            "scenario": "Getting MGNREGA job card and work",
+            "key_offices": [
+              "Gram Panchayat",
+              "Block Development Officer",
+              "District Programme Coordinator"
+            ],
+            "websites": [
+              "nrega.nic.in"
+            ],
+            "documents": [
+              "Address proof",
+              "Age proof",
+              "Family photo"
+            ]
+          }
+        },
+        {
+          "id": "RUR006",
+          "question": "என் அப்பா இறந்துவிட்டார். கிராமத்தில் அவர் பெயரில் நிலம் உள்ளது. என் பெயருக்கு பட்டா மாற்ற என்ன செய்ய வேண்டும்?",
+          "answer": "**வாரிசு பட்டா மாற்றம் (Succession Patta Transfer):**\n\n**Step 1: இறப்பு சான்றிதழ்**\n- 21 நாட்களுக்குள் பதிவு\n- Panchayat / Municipality\n\n**Step 2: Legal Heir Certificate**\n- எங்கே: Taluk Office / tneservices.tn.gov.in\n- ஆவணங்கள்:\n  - Death Certificate\n  - குடும்ப விவரம் (எல்லா வாரிசுகளும்)\n  - Aadhaar of all heirs\n  - Ration Card\n- காலம்: 15-30 நாட்கள்\n- கட்டணம்: ₹50-100\n\n**Step 3: வாரிசுகள் ஒப்புதல்**\n- Will இருந்தால்: Will படி\n- Will இல்லாவிட்டால்: எல்லா வாரிசுகளுக்கும் சம பங்கு\n- Release Deed: மற்ற வாரிசுகள் தங்கள் பங்கை விட்டுக்கொடுக்க\n\n**Step 4: Patta Transfer Application**\n- எங்கே: Taluk Office / Village Administrative Officer\n- Online: eservices.tn.gov.in\n\n**ஆவணங்கள்:**\n- Death Certificate\n- Legal Heir Certificate\n- Original Patta\n- Chitta & Adangal\n- EC (Encumbrance Certificate)\n- Tax paid receipts\n- Release Deed / Family Partition Deed (if applicable)\n- Aadhaar, Photo\n\n**Step 5: Field Inspection**\n- VAO/RI visit\n- Boundary verification\n- Enquiry with neighbors\n\n**Step 6: Patta Issue**\n- Tahsildar approval\n- புதிய Patta issue\n- காலம்: 30-60 நாட்கள்\n\n**கட்டணம்:**\n- பதிவு கட்டணம் இல்லை (succession case)\n- Stamp duty: Nominal\n\n**சிக்கல்கள்:**\n- வாரிசுகள் இடையே தகராறு → Civil Court\n- Will dispute → Probate Court\n- Missing documents → Affidavit + Newspaper notice",
+          "topic": "rural_land",
+          "language": "pure_tamil",
+          "parallel_id": "RUR006T",
+          "metadata": {
+            "scenario": "Patta transfer after father's death in village",
+            "key_offices": [
+              "Taluk Office",
+              "VAO",
+              "Revenue Inspector"
+            ],
+            "websites": [
+              "eservices.tn.gov.in",
+              "tneservices.tn.gov.in"
+            ],
+            "documents": [
+              "Death Certificate",
+              "Legal Heir Certificate",
+              "Patta",
+              "Chitta",
+              "Adangal",
+              "EC",
+              "Release Deed"
+            ]
+          }
+        },
+        {
+          "id": "RUR006T",
+          "question": "En appa irandhuittaar. Gramathula avar peyarla nilam ulladhu. En peyarukku patta maatra enna seiyya vendum?",
+          "answer": "**Succession Patta Transfer:**\n\n**Step 1: Death Certificate**\n- Within 21 days\n- Panchayat/Municipality\n\n**Step 2: Legal Heir Certificate**\n- Where: Taluk Office / tneservices.tn.gov.in\n- Documents: Death Certificate, Family details, All heirs' Aadhaar\n- Time: 15-30 days\n\n**Step 3: Heirs Consent**\n- If Will exists: Follow Will\n- No Will: Equal share to all heirs\n- Release Deed: If others give up share\n\n**Step 4: Patta Transfer Application**\n- Where: Taluk Office / VAO\n- Online: eservices.tn.gov.in\n\n**Documents:**\n- Death Certificate, Legal Heir Certificate\n- Original Patta, Chitta, Adangal\n- EC, Tax receipts\n- Release Deed (if applicable)\n\n**Step 5: Field Inspection**\n- VAO/RI visit and verification\n\n**Step 6: Patta Issue**\n- Time: 30-60 days\n- No registration fee for succession",
+          "topic": "rural_land",
+          "language": "tanglish",
+          "parallel_id": "RUR006",
+          "metadata": {
+            "scenario": "Patta transfer after father's death in village",
+            "key_offices": [
+              "Taluk Office",
+              "VAO",
+              "Revenue Inspector"
+            ],
+            "websites": [
+              "eservices.tn.gov.in",
+              "tneservices.tn.gov.in"
+            ],
+            "documents": [
+              "Death Certificate",
+              "Legal Heir Certificate",
+              "Patta",
+              "Chitta",
+              "Adangal",
+              "EC",
+              "Release Deed"
+            ]
+          }
+        },
+        {
+          "id": "RUR007",
+          "question": "நான் கிராமத்தில் உள்ள அரசு பள்ளியில் படிக்கிறேன். BC மாணவன். என்னென்ன benefits கிடைக்கும்?",
+          "answer": "**BC மாணவர்களுக்கான அரசு நலத்திட்டங்கள்:**\n\n**பள்ளியில் (School Level):**\n\n1. **இலவச கல்வி**\n   - Tuition fee இல்லை\n   - Government/Aided schools\n\n2. **இலவச பாடப்புத்தகங்கள்**\n   - எல்லா subjects\n   - School-லேயே கொடுப்பார்கள்\n\n3. **இலவச சீருடை**\n   - 2 sets per year\n   - School-ல் distribution\n\n4. **Mid-Day Meal**\n   - காலை உணவு + மதிய உணவு\n   - Weekly: Egg, Milk, Banana\n\n5. **இலவச Bus Pass**\n   - School ID காட்டி Bus Depot-ல்\n\n6. **Scholarship (BC)**\n   - Pre-Matric: ₹150-500/month\n   - எங்கே Apply: School through, tneservices.tn.gov.in\n\n**Higher Secondary (11th-12th):**\n\n7. **இலவச Laptop**\n   - Government School students\n   - 11th-ல் கொடுப்பார்கள்\n\n8. **BC Scholarship**\n   - Tuition fee + ₹500/month stipend\n   - Income limit: ₹2 lakh/year\n\n**College Level:**\n\n9. **முதலமைச்சர் உயர்கல்வி உறுதி திட்டம்**\n   - First Generation Graduate\n   - Free education + Laptop + ₹1,000/month\n\n10. **BC Post-Matric Scholarship**\n    - Full fee waiver\n    - Hostel fee\n    - ₹500-1,500/month stipend\n\n**Apply செய்ய:**\n- School/College scholarship committee\n- tneservices.tn.gov.in\n- scholarships.gov.in (Central)\n\n**Documents:**\n- Community Certificate\n- Income Certificate\n- Aadhaar\n- Previous year marksheet\n- Bank account",
+          "topic": "rural_welfare",
+          "language": "pure_tamil",
+          "parallel_id": "RUR007T",
+          "metadata": {
+            "scenario": "Rural student wanting free education benefits",
+            "key_offices": [
+              "School",
+              "College",
+              "BC Welfare Department"
+            ],
+            "websites": [
+              "tneservices.tn.gov.in",
+              "scholarships.gov.in"
+            ],
+            "documents": [
+              "Community Certificate",
+              "Income Certificate",
+              "Aadhaar",
+              "Marksheet",
+              "Bank account"
+            ]
+          }
+        },
+        {
+          "id": "RUR007T",
+          "question": "Naan gramathula ulla govt school-la padikkiren. BC student. Ennenna benefits kidaikkum?",
+          "answer": "**BC Student Benefits:**\n\n**School Level:**\n1. Free education\n2. Free textbooks\n3. Free uniform (2 sets)\n4. Mid-Day Meal + Egg, Milk, Banana\n5. Free Bus Pass\n6. Pre-Matric Scholarship: ₹150-500/month\n\n**11th-12th:**\n7. Free Laptop (11th)\n8. BC Scholarship: Fees + ₹500/month\n\n**College:**\n9. CM Higher Education Scheme (First Gen Graduate): Free + Laptop + ₹1,000/month\n10. BC Post-Matric: Full fee waiver + Hostel + Stipend\n\n**Apply:** tneservices.tn.gov.in, School/College\n\n**Documents:** Community Certificate, Income Certificate, Aadhaar, Marksheet, Bank account",
+          "topic": "rural_welfare",
+          "language": "tanglish",
+          "parallel_id": "RUR007",
+          "metadata": {
+            "scenario": "Rural student wanting free education benefits",
+            "key_offices": [
+              "School",
+              "College",
+              "BC Welfare Department"
+            ],
+            "websites": [
+              "tneservices.tn.gov.in",
+              "scholarships.gov.in"
+            ],
+            "documents": [
+              "Community Certificate",
+              "Income Certificate",
+              "Aadhaar",
+              "Marksheet",
+              "Bank account"
+            ]
+          }
+        },
+        {
+          "id": "RUR008",
+          "question": "பயிர் கடன் (Crop Loan) குறைந்த வட்டியில் எப்படி வாங்குவது? KCC என்றால் என்ன?",
+          "answer": "**Kisan Credit Card (KCC) - பயிர் கடன்:**\n\n**KCC என்றால் என்ன?**\n- விவசாயிகளுக்கான Credit Card\n- பயிர் செலவுக்கு கடன்\n- குறைந்த வட்டி\n- எந்த நேரத்திலும் withdraw\n\n**வட்டி விகிதம்:**\n- Normal: 7%\n- Subvention: -3% (Central Govt)\n- Prompt Repayment Incentive: -3% (State)\n- **Effective Rate: 4% only!**\n\n**தகுதி:**\n- நில உடைமை விவசாயி\n- குத்தகை விவசாயி (Oral Lessee உட்பட)\n- SHG / JLG உறுப்பினர்கள்\n- மீனவர், கால்நடை வளர்ப்போர்\n\n**கடன் அளவு:**\n- Scale of Finance x Cultivated Area\n- ₹3 லட்சம் வரை Collateral-free\n- ₹1.6 லட்சம் வரை 4% interest\n\n**Apply செய்ய:**\n\n**Method 1 - Bank நேரடி:**\n1. அருகிலுள்ள Bank / Co-operative Bank\n2. Application form நிரப்பவும்\n3. Documents submit\n4. Verification\n5. KCC issue (7-14 days)\n\n**Method 2 - PM-KISAN மூலம்:**\n1. pmkisan.gov.in → KCC tab\n2. Aadhaar verify\n3. Bank select\n4. Application auto-forward\n\n**Documents:**\n- Aadhaar + PAN\n- Land Records (Patta, Chitta)\n- Sowing Certificate (VAO)\n- Passport photos\n- Existing loan details (if any)\n\n**Repayment:**\n- Crop season முடிவில்\n- Grace period available\n- Timely repayment = 4% interest\n- Default = Higher interest + penalty\n\n**Renewal:**\n- ஒவ்வொரு வருடமும் renewal\n- 5 வருடத்திற்கு valid\n- Limit increase possible",
+          "topic": "rural_agriculture",
+          "language": "pure_tamil",
+          "parallel_id": "RUR008T",
+          "metadata": {
+            "scenario": "Farmer wanting crop loan with interest subvention",
+            "key_offices": [
+              "Bank",
+              "Co-operative Bank",
+              "Agriculture Office"
+            ],
+            "websites": [
+              "pmkisan.gov.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "PAN",
+              "Patta",
+              "Chitta",
+              "Sowing Certificate"
+            ]
+          }
+        },
+        {
+          "id": "RUR008T",
+          "question": "Payir kadan (Crop Loan) kuraintha vattiyil eppadi vaanguvadhu? KCC endraal enna?",
+          "answer": "**Kisan Credit Card (KCC) - Crop Loan:**\n\n**What is KCC?**\n- Credit Card for farmers\n- Loan for crop expenses\n- Low interest\n- Withdraw anytime\n\n**Interest Rate:**\n- Normal: 7%\n- Central Subvention: -3%\n- State Incentive: -3%\n- **Effective: Only 4%!**\n\n**Eligibility:**\n- Land owning farmer\n- Tenant farmer (Oral Lessee included)\n- SHG/JLG members\n- Fishermen, Animal husbandry\n\n**Loan Amount:**\n- Up to ₹3 lakh: Collateral-free\n- Up to ₹1.6 lakh: 4% interest\n\n**Apply:**\n1. Bank directly OR\n2. pmkisan.gov.in → KCC tab\n\n**Documents:**\n- Aadhaar, PAN\n- Land Records\n- Sowing Certificate\n- Photos\n\n**Repayment:** End of crop season, timely = 4%",
+          "topic": "rural_agriculture",
+          "language": "tanglish",
+          "parallel_id": "RUR008",
+          "metadata": {
+            "scenario": "Farmer wanting crop loan with interest subvention",
+            "key_offices": [
+              "Bank",
+              "Co-operative Bank",
+              "Agriculture Office"
+            ],
+            "websites": [
+              "pmkisan.gov.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "PAN",
+              "Patta",
+              "Chitta",
+              "Sowing Certificate"
+            ]
+          }
+        },
+        {
+          "id": "RUR009",
+          "question": "கிராமத்தில் எங்களுக்கு சொந்த வீடு இல்லை. PMAY-Gramin மூலம் வீடு கட்ட உதவி எப்படி பெறுவது?",
+          "answer": "**PMAY-Gramin (கிராமப்புற வீட்டு திட்டம்):**\n\n**தகுதி:**\n- SECC 2011 data-ல் வீடில்லாதவர்\n- Kutcha house / Homeless\n- Priority: SC/ST, Minorities, BPL\n\n**உதவி தொகை:**\n- Plain areas: ₹1,20,000\n- Hilly/Difficult areas: ₹1,30,000\n- MGNREGA: 90/95 days unskilled labor\n- Toilet: ₹12,000 (SBM link)\n- **Total: ₹1.5 லட்சம்+**\n\n**Payment Installments:**\n- 1st: Foundation complete - 25%\n- 2nd: Lintel level - 45%\n- 3rd: Completion - 30%\n\n**Apply Process:**\n\n**Automatic Selection (Awaas+):**\n1. SECC data based selection\n2. Gram Sabha approval\n3. No need to apply separately\n\n**Not in list? Appeal:**\n1. Gram Panchayat-ல் complaint\n2. SECC data correction request\n3. Block Development Officer\n\n**Check Eligibility:**\n- pmayg.nic.in → Stakeholder → IAY/PMAYG Beneficiary\n- Enter: State, District, Block, Panchayat\n- Search your name\n\n**Construction:**\n- Beneficiary builds own house\n- Standard design / Own design\n- Geo-tagged photos at each stage\n- Bank account DBT\n\n**Additional Benefits:**\n- MGNREGA wages for labor\n- Free LPG connection (Ujjwala)\n- Free electricity connection\n- Toilet (SBM)\n\n**Timeline:**\n- Selection to completion: 12 months\n- Delays = Gram Sabha review\n\n**Documents (if applying):**\n- Aadhaar\n- Bank Account\n- Land ownership / Patta (house site)\n- Photo\n- BPL Certificate",
+          "topic": "rural_welfare",
+          "language": "pure_tamil",
+          "parallel_id": "RUR009T",
+          "metadata": {
+            "scenario": "Getting house under PMAY-Gramin",
+            "key_offices": [
+              "Gram Panchayat",
+              "Block Development Officer",
+              "District Rural Development Agency"
+            ],
+            "websites": [
+              "pmayg.nic.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "Bank Account",
+              "Land document",
+              "BPL Certificate"
+            ]
+          }
+        },
+        {
+          "id": "RUR009T",
+          "question": "Gramathula engalukku sontha veedu illai. PMAY-Gramin moola veedu katta udhavi eppadi peruvadhu?",
+          "answer": "**PMAY-Gramin (Rural Housing):**\n\n**Eligibility:**\n- Houseless as per SECC 2011 data\n- Kutcha house / Homeless\n- Priority: SC/ST, Minorities, BPL\n\n**Assistance:**\n- Plain areas: ₹1,20,000\n- Hilly areas: ₹1,30,000\n- MGNREGA labor wages: 90/95 days\n- Toilet: ₹12,000\n- **Total: ₹1.5 lakh+**\n\n**Process:**\n1. SECC data based auto-selection\n2. Gram Sabha approval\n3. If not in list: Appeal at Gram Panchayat/BDO\n\n**Check Eligibility:**\n- pmayg.nic.in → Search your name\n\n**Payment:** 3 installments based on construction stage\n\n**Additional:** MGNREGA wages, Free LPG, Free electricity, Toilet",
+          "topic": "rural_welfare",
+          "language": "tanglish",
+          "parallel_id": "RUR009",
+          "metadata": {
+            "scenario": "Getting house under PMAY-Gramin",
+            "key_offices": [
+              "Gram Panchayat",
+              "Block Development Officer",
+              "District Rural Development Agency"
+            ],
+            "websites": [
+              "pmayg.nic.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "Bank Account",
+              "Land document",
+              "BPL Certificate"
+            ]
+          }
+        },
+        {
+          "id": "RUR010",
+          "question": "எங்கள் கிராமத்தில் குடிநீர் பிரச்சனை உள்ளது. அரசாங்கத்திடம் எப்படி புகார் செய்வது? என்ன திட்டங்கள் உள்ளன?",
+          "answer": "**கிராம குடிநீர் பிரச்சனை தீர்வு:**\n\n**புகார் செய்ய:**\n\n1. **Gram Panchayat**\n   - Panchayat President / Secretary\n   - எழுத்துபூர்வமாக புகார்\n   - Gram Sabha-ல் எழுப்பவும்\n\n2. **Block Development Officer**\n   - Panchayat action எடுக்கவில்லை என்றால்\n   - எழுத்துபூர்வ புகார்\n\n3. **District Collector**\n   - Online: tndistricts.gov.in\n   - CM Cell: 1100\n   - Grievance petition\n\n4. **TWAD Board**\n   - twadboard.tn.gov.in\n   - Toll-free: 1800-425-5434\n\n**அரசு திட்டங்கள்:**\n\n1. **Jal Jeevan Mission (JJM)**\n   - Every rural household-க்கு tap water\n   - 2024 deadline\n   - 55 litres/person/day\n   - Free connection\n\n2. **Combined Water Supply Scheme**\n   - Multi-village scheme\n   - TWAD Board implementation\n\n3. **Oorani / Tank Restoration**\n   - Traditional water body repair\n   - MGNREGA funds\n\n4. **RO Plant**\n   - TDS அதிகமான areas\n   - Panchayat level RO\n\n**Individual Connection:**\n- Gram Panchayat-ல் apply\n- ₹100-500 connection charge\n- Monthly water tax\n\n**Borewell Request:**\n- Panchayat resolution\n- PWD survey\n- Ground water availability check\n\n**Water Quality Issue:**\n- Sample to District Lab\n- PHC-ல் complaint\n- Water testing free\n\n**Emergency:**\n- Tanker water request\n- Block/District level\n- Free during drought",
+          "topic": "rural_welfare",
+          "language": "pure_tamil",
+          "parallel_id": "RUR010T",
+          "metadata": {
+            "scenario": "Rural area drinking water problem",
+            "key_offices": [
+              "Gram Panchayat",
+              "TWAD Board",
+              "Block Development Officer",
+              "District Collector"
+            ],
+            "websites": [
+              "twadboard.tn.gov.in",
+              "jaljeevanmission.gov.in"
+            ],
+            "documents": [
+              "Written complaint",
+              "Address proof"
+            ]
+          }
+        },
+        {
+          "id": "RUR010T",
+          "question": "Engal gramathula kudineer prachhanai ulladhu. Government-kitta eppadi complaint seyvadhu? Enna thittangal ullana?",
+          "answer": "**Rural Drinking Water Problem Solution:**\n\n**Complaint Channels:**\n1. Gram Panchayat - Written complaint, Gram Sabha\n2. Block Development Officer - If Panchayat doesn't act\n3. District Collector - tndistricts.gov.in, CM Cell 1100\n4. TWAD Board - twadboard.tn.gov.in, 1800-425-5434\n\n**Government Schemes:**\n1. **Jal Jeevan Mission** - Tap water to every house, Free\n2. **Combined Water Supply** - Multi-village scheme\n3. **Oorani Restoration** - Traditional water body repair\n4. **RO Plant** - For high TDS areas\n\n**Individual Connection:**\n- Apply at Panchayat\n- ₹100-500 charge\n\n**Water Quality Issue:**\n- Free testing at District Lab",
+          "topic": "rural_welfare",
+          "language": "tanglish",
+          "parallel_id": "RUR010",
+          "metadata": {
+            "scenario": "Rural area drinking water problem",
+            "key_offices": [
+              "Gram Panchayat",
+              "TWAD Board",
+              "Block Development Officer",
+              "District Collector"
+            ],
+            "websites": [
+              "twadboard.tn.gov.in",
+              "jaljeevanmission.gov.in"
+            ],
+            "documents": [
+              "Written complaint",
+              "Address proof"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "urban_scenarios",
+      "category_tamil": "நகர்ப்புற நடைமுறைகள்",
+      "pairs": [
+        {
+          "id": "URB001",
+          "question": "Chennai-ல் Apartment வாங்க போகிறேன். என்னென்ன சரிபார்க்க வேண்டும்? RERA என்றால் என்ன?",
+          "answer": "**Apartment வாங்கும் முன் Checklist:**\n\n**1. RERA Registration (கட்டாயம்!)**\n- Website: rera.tn.gov.in\n- RERA Number verify செய்யவும்\n- Project details, Completion date பாருங்க\n- Complaint history check\n\n**RERA என்றால் என்ன?**\n- Real Estate Regulatory Authority\n- Builder accountability\n- Buyer protection\n- Delayed delivery compensation\n\n**2. Legal Documents Check:**\n\n| Document | என்ன பார்க்கணும் |\n|----------|------------------|\n| Mother Deed | Land ownership chain |\n| EC (30 years) | Encumbrance இல்லை |\n| Approved Plan | CMDA/DTCP approval |\n| Building Permit | Corporation approval |\n| Completion Certificate | Building complete |\n| Occupancy Certificate | Stay permission |\n\n**3. CMDA/DTCP Approval**\n- Approved layout verify\n- FSI/FAR compliance\n- Setback rules followed\n- cmdachennai.gov.in\n\n**4. Builder Check:**\n- Previous projects visit\n- Delivery track record\n- Legal cases check\n- RERA complaints\n\n**5. Financial Check:**\n- All inclusive price\n- Hidden charges (Parking, Club, etc.)\n- GST: 5% (affordable) / 12% (luxury)\n- Stamp Duty: 7%\n- Registration: 4%\n\n**6. Home Loan:**\n- Bank approved project?\n- Easier loan if approved\n- PMAY benefit (First home): 3-6.5% subsidy\n\n**7. Society/Association:**\n- Association formed?\n- Common area ownership\n- Maintenance charges\n\n**Red Flags:**\n- No RERA registration\n- No approved plan\n- Unapproved deviation\n- Multiple legal cases\n- Land dispute",
+          "topic": "urban_property",
+          "language": "pure_tamil",
+          "parallel_id": "URB001T",
+          "metadata": {
+            "scenario": "Buying apartment in Chennai",
+            "key_offices": [
+              "RERA",
+              "CMDA",
+              "DTCP",
+              "Corporation"
+            ],
+            "websites": [
+              "rera.tn.gov.in",
+              "cmdachennai.gov.in"
+            ],
+            "documents": [
+              "Sale Agreement",
+              "RERA Certificate",
+              "Approved Plan",
+              "EC",
+              "Bank Loan documents"
+            ]
+          }
+        },
+        {
+          "id": "URB001T",
+          "question": "Chennai-la Apartment vaanga porein. Ennenna check pannanum? RERA endraal enna?",
+          "answer": "**Apartment Buying Checklist:**\n\n**1. RERA Registration (Must!)**\n- Check at: rera.tn.gov.in\n- Verify RERA Number\n- Project details, Completion date\n\n**What is RERA?**\n- Real Estate Regulatory Authority\n- Builder accountability & Buyer protection\n\n**2. Legal Documents:**\n- Mother Deed - Land ownership\n- EC (30 years) - No encumbrance\n- CMDA/DTCP Approval\n- Building Permit\n- Completion Certificate\n- Occupancy Certificate\n\n**3. Builder Check:**\n- Previous projects\n- Delivery track record\n- Legal cases\n\n**4. Costs:**\n- Price + Hidden charges\n- GST: 5-12%\n- Stamp Duty: 7% + Registration: 4%\n\n**5. PMAY Benefit:** First home = 3-6.5% interest subsidy\n\n**Red Flags:** No RERA, No approved plan, Land dispute",
+          "topic": "urban_property",
+          "language": "tanglish",
+          "parallel_id": "URB001",
+          "metadata": {
+            "scenario": "Buying apartment in Chennai",
+            "key_offices": [
+              "RERA",
+              "CMDA",
+              "DTCP",
+              "Corporation"
+            ],
+            "websites": [
+              "rera.tn.gov.in",
+              "cmdachennai.gov.in"
+            ],
+            "documents": [
+              "Sale Agreement",
+              "RERA Certificate",
+              "Approved Plan",
+              "EC",
+              "Bank Loan documents"
+            ]
+          }
+        },
+        {
+          "id": "URB002",
+          "question": "நகரத்தில் Restaurant தொடங்க என்னென்ன license வேண்டும்?",
+          "answer": "**Restaurant தொடங்க தேவையான Licenses:**\n\n**1. FSSAI License (கட்டாயம்)**\n- Website: fssai.gov.in\n- Types:\n  - Basic (₹12L turnover வரை): ₹100/year\n  - State (₹12L-₹20Cr): ₹2,000-5,000/year\n  - Central (₹20Cr+): ₹7,500/year\n- Time: 7-60 days\n\n**2. Trade License**\n- எங்கே: Corporation/Municipality\n- Fee: ₹2,000-25,000 (area based)\n- Renewal: Yearly\n\n**3. Shop & Establishment**\n- எங்கே: tnlabour.tn.gov.in\n- Fee: ₹500-2,000\n- Within 30 days of opening\n\n**4. Fire Safety NOC**\n- எங்கே: Fire Department\n- Seating 50+ கட்டாயம்\n- Fire extinguishers required\n- Annual renewal\n\n**5. GST Registration**\n- Turnover ₹20L+ (Service)\n- gst.gov.in\n- Free registration\n\n**6. Health/Eating House License**\n- Corporation Health Dept\n- Kitchen inspection\n- Staff health checkup\n- Annual renewal\n\n**7. Liquor License (if serving)**\n- TASMAC permission\n- Very strict process\n- Additional fees\n\n**8. Signage License**\n- Corporation\n- Board size limits\n- Fee based on size\n\n**9. Music/Entertainment License**\n- Live music/DJ இருந்தால்\n- Police permission\n- Noise regulations\n\n**10. Pollution NOC (if needed)**\n- Kitchen exhaust\n- Waste management\n- TNPCB\n\n**Staff Requirements:**\n- PF Registration (20+ employees)\n- ESI Registration (10+ employees)\n- Minimum Wages compliance\n\n**Timeline:**\n- FSSAI: 7-60 days\n- Trade License: 7-15 days\n- Fire NOC: 15-30 days\n- Total setup: 2-3 months\n\n**Common Mistakes:**\n- Opening without FSSAI\n- No fire safety\n- Staff without health cards\n- Non-compliance fines heavy!",
+          "topic": "urban_business",
+          "language": "pure_tamil",
+          "parallel_id": "URB002T",
+          "metadata": {
+            "scenario": "Starting restaurant in city",
+            "key_offices": [
+              "FSSAI",
+              "Corporation",
+              "Labour Department",
+              "Fire Department",
+              "GST"
+            ],
+            "websites": [
+              "fssai.gov.in",
+              "tnlabour.tn.gov.in",
+              "gst.gov.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "PAN",
+              "Rent Agreement",
+              "Building Plan",
+              "NOCs"
+            ]
+          }
+        },
+        {
+          "id": "URB002T",
+          "question": "Nagarathula Restaurant thodanga ennenna license vendum?",
+          "answer": "**Restaurant Licenses Required:**\n\n**Must Have:**\n1. **FSSAI License** - fssai.gov.in, ₹100-7,500/year\n2. **Trade License** - Corporation, ₹2,000-25,000\n3. **Shop & Establishment** - tnlabour.tn.gov.in\n4. **Fire Safety NOC** - Fire Dept (50+ seating)\n5. **GST** - If turnover ₹20L+\n6. **Health License** - Corporation\n\n**Optional:**\n7. Liquor License - TASMAC\n8. Signage License - Corporation\n9. Music License - Police\n10. Pollution NOC - TNPCB\n\n**Staff:** PF (20+ employees), ESI (10+ employees)\n\n**Timeline:** 2-3 months total\n\n**Warning:** Heavy fines for non-compliance!",
+          "topic": "urban_business",
+          "language": "tanglish",
+          "parallel_id": "URB002",
+          "metadata": {
+            "scenario": "Starting restaurant in city",
+            "key_offices": [
+              "FSSAI",
+              "Corporation",
+              "Labour Department",
+              "Fire Department",
+              "GST"
+            ],
+            "websites": [
+              "fssai.gov.in",
+              "tnlabour.tn.gov.in",
+              "gst.gov.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "PAN",
+              "Rent Agreement",
+              "Building Plan",
+              "NOCs"
+            ]
+          }
+        },
+        {
+          "id": "URB003",
+          "question": "புதிய கடைக்கு Commercial Electricity Connection எப்படி வாங்குவது?",
+          "answer": "**Commercial Electricity Connection (TANGEDCO):**\n\n**Step 1: Online Application**\n- Website: nsc.tnebnet.org\n- Select: LT Commercial / HT Commercial\n- Fill application form\n\n**Step 2: Documents Upload**\n- Ownership proof:\n  - Own building: Sale Deed / Patta\n  - Rent: Registered Rent Agreement\n- Identity: Aadhaar + PAN\n- Trade License / GST (if available)\n- Building Completion Certificate\n- Passport photo\n\n**Step 3: Load Calculation**\n- AC, Refrigerator, Lights, etc.\n- Select appropriate load (kW)\n- Higher load = Higher deposit\n\n**Step 4: Inspection**\n- TANGEDCO engineer visit\n- Wiring check\n- Meter location finalize\n- Earthing check\n\n**Step 5: Payment**\n\n| Item | Amount (Approx) |\n|------|----------------|\n| Security Deposit | ₹1,500-15,000 |\n| Service Connection | ₹500-2,000 |\n| Meter Cost | ₹1,000-3,000 |\n| Test Fee | ₹200-500 |\n\n**Step 6: Connection**\n- Meter installation\n- Supply start\n- **Time: 7-15 days**\n\n**Tariff (Commercial LT):**\n- Slab based\n- Higher than domestic\n- ToD (Time of Day) metering option\n\n**HT Connection (Large Shops/Malls):**\n- Load > 112 kW\n- Separate application\n- Transformer may be needed\n- Higher deposit\n\n**Tips:**\n- Apply load slightly higher than need\n- Load enhancement later is tedious\n- Temporary connection available for construction\n\n**Complaints:**\n- 94987-94987\n- TANGEDCO App\n- EB Office visit",
+          "topic": "urban_utilities",
+          "language": "pure_tamil",
+          "parallel_id": "URB003T",
+          "metadata": {
+            "scenario": "New electricity connection for shop",
+            "key_offices": [
+              "TANGEDCO",
+              "Electrical Inspectorate"
+            ],
+            "websites": [
+              "nsc.tnebnet.org"
+            ],
+            "documents": [
+              "Ownership proof",
+              "Aadhaar",
+              "PAN",
+              "Trade License",
+              "Building Certificate"
+            ]
+          }
+        },
+        {
+          "id": "URB003T",
+          "question": "Pudhiya kadaikku Commercial Electricity Connection eppadi vaanguvadhu?",
+          "answer": "**Commercial Electricity Connection:**\n\n**Step 1:** Apply at nsc.tnebnet.org\n\n**Step 2: Documents**\n- Ownership: Sale Deed/Rent Agreement\n- Aadhaar + PAN\n- Trade License/GST\n- Building Certificate\n\n**Step 3:** Calculate load (AC, Fridge, etc.)\n\n**Step 4:** TANGEDCO inspection\n\n**Step 5: Payment**\n- Deposit: ₹1,500-15,000\n- Service: ₹500-2,000\n- Meter: ₹1,000-3,000\n\n**Step 6:** Connection in 7-15 days\n\n**Commercial Tariff:** Higher than domestic, slab based\n\n**Complaint:** 94987-94987, TANGEDCO App",
+          "topic": "urban_utilities",
+          "language": "tanglish",
+          "parallel_id": "URB003",
+          "metadata": {
+            "scenario": "New electricity connection for shop",
+            "key_offices": [
+              "TANGEDCO",
+              "Electrical Inspectorate"
+            ],
+            "websites": [
+              "nsc.tnebnet.org"
+            ],
+            "documents": [
+              "Ownership proof",
+              "Aadhaar",
+              "PAN",
+              "Trade License",
+              "Building Certificate"
+            ]
+          }
+        },
+        {
+          "id": "URB004",
+          "question": "Chennai-ல் Property Tax எப்படி கட்டுவது? Assessment தவறு என்றால் என்ன செய்வது?",
+          "answer": "**Property Tax Payment (Chennai Corporation):**\n\n**Online Payment:**\n1. Website: chennaicorporation.gov.in\n2. Click: Property Tax\n3. Enter: Zone Number + Division + Bill Number\n4. Or: Property Tax Assessment Number\n5. View bill details\n6. Pay: Net Banking / UPI / Card\n7. Download receipt\n\n**Offline Payment:**\n- Corporation Zonal Office\n- e-Seva Centers\n- Common Service Centers\n\n**Due Dates:**\n- Half-yearly: April & October\n- Advance payment: 5% discount\n- Delay: 2% penalty per month\n\n**Assessment Calculation:**\n- Annual Rental Value (ARV) method\n- Factors: Location, Area, Age, Usage\n- Residential vs Commercial rates different\n\n**Assessment தவறு என்றால்:**\n\n**Step 1: Objection Filing**\n- எங்கே: Zonal Office / Online\n- Within 15 days of assessment\n- Form + Supporting documents\n\n**Step 2: Documents for Objection**\n- Property document\n- Previous tax receipts\n- Building plan (approved)\n- Area measurement proof\n- Usage proof (Residential/Commercial)\n\n**Step 3: Hearing**\n- Revenue Inspector verification\n- Assistant Revenue Officer hearing\n- Your explanation\n\n**Step 4: Revised Assessment**\n- If accepted: New assessment\n- If rejected: Appeal to Commissioner\n\n**Appeal Process:**\n- First Appeal: Commissioner\n- Second Appeal: Small Causes Court\n- Time limit: 30 days each stage\n\n**Common Issues:**\n- Wrong plinth area\n- Commercial rate for residential\n- Old building shown as new\n- Vacant land taxed as building\n\n**Tips:**\n- Keep all tax receipts\n- Update ownership after purchase\n- Inform about demolition/modification\n- Check assessment every revision cycle",
+          "topic": "urban_property",
+          "language": "pure_tamil",
+          "parallel_id": "URB004T",
+          "metadata": {
+            "scenario": "Property tax payment and assessment",
+            "key_offices": [
+              "Corporation Zonal Office",
+              "Revenue Department",
+              "Commissioner"
+            ],
+            "websites": [
+              "chennaicorporation.gov.in"
+            ],
+            "documents": [
+              "Property document",
+              "Tax receipts",
+              "Building plan",
+              "Area measurement"
+            ]
+          }
+        },
+        {
+          "id": "URB004T",
+          "question": "Chennai-la Property Tax eppadi kattuvadhu? Assessment thavaru endraal enna seyvadhu?",
+          "answer": "**Property Tax Payment (Chennai):**\n\n**Online:** chennaicorporation.gov.in → Property Tax → Enter Bill Number → Pay\n\n**Offline:** Corporation Zonal Office, e-Seva\n\n**Due Dates:** April & October (half-yearly)\n- Advance: 5% discount\n- Delay: 2% penalty/month\n\n**Assessment Wrong?**\n\n**Step 1:** File Objection at Zonal Office / Online (within 15 days)\n\n**Step 2: Documents**\n- Property document\n- Previous receipts\n- Building plan\n- Area measurement\n\n**Step 3:** Hearing with Revenue Officer\n\n**Step 4:** Revised assessment or Appeal to Commissioner\n\n**Appeal:** Commissioner → Small Causes Court\n\n**Common Issues:** Wrong area, Commercial rate for residential, Old building as new",
+          "topic": "urban_property",
+          "language": "tanglish",
+          "parallel_id": "URB004",
+          "metadata": {
+            "scenario": "Property tax payment and assessment",
+            "key_offices": [
+              "Corporation Zonal Office",
+              "Revenue Department",
+              "Commissioner"
+            ],
+            "websites": [
+              "chennaicorporation.gov.in"
+            ],
+            "documents": [
+              "Property document",
+              "Tax receipts",
+              "Building plan",
+              "Area measurement"
+            ]
+          }
+        },
+        {
+          "id": "URB005",
+          "question": "Second-hand Car வாங்கினேன். RC Transfer எப்படி செய்வது?",
+          "answer": "**RC Transfer Process (Used Vehicle):**\n\n**Seller செய்ய வேண்டியவை:**\n\n1. **Form 29 & 30**\n   - Transfer of Ownership forms\n   - Seller signature\n   - parivahan.gov.in download\n\n2. **NOC (if different state)**\n   - Original RTO-யிலிருந்து\n   - Loan இருந்தால் Bank NOC\n\n3. **Deliver to Buyer:**\n   - Original RC\n   - Insurance transfer letter\n   - PUC Certificate\n   - Signed forms\n\n**Buyer செய்ய வேண்டியவை:**\n\n**Step 1: Online Application**\n1. parivahan.gov.in → Online Services → TN\n2. Transfer of Ownership\n3. Fill Form 29 & 30\n4. Upload documents\n5. Pay fee online\n\n**Step 2: Documents**\n- Form 29 & 30 (signed by both)\n- Original RC Book\n- Insurance (transferred or new)\n- PUC Certificate\n- Seller's Aadhaar + Address proof\n- Buyer's Aadhaar + Address proof\n- Sale receipt / Agreement\n- NOC (if applicable)\n\n**Step 3: RTO Visit**\n- Book slot online\n- Both parties present (or POA)\n- Document verification\n- Vehicle inspection (HPT check)\n- Biometric/Photo\n\n**Step 4: Fee Payment**\n\n| Item | Amount |\n|------|--------|\n| Transfer Fee | ₹300-500 |\n| Smart Card | ₹200 |\n| Road Tax (if applicable) | Varies |\n\n**Step 5: New RC**\n- Processing: 7-15 days\n- Collect or by post\n\n**Timeline:** 14 days from sale (legal requirement)\n\n**Penalty for Delay:**\n- ₹50/day after 14 days\n- Maximum ₹500\n\n**Loan Vehicle:**\n- Bank NOC mandatory\n- Hypothecation removal first\n- Or transfer with hypothecation\n\n**Insurance Transfer:**\n- Within 14 days\n- Or take fresh policy\n- NCB transfer possible",
+          "topic": "urban_transport",
+          "language": "pure_tamil",
+          "parallel_id": "URB005T",
+          "metadata": {
+            "scenario": "Vehicle registration transfer after purchase",
+            "key_offices": [
+              "RTO"
+            ],
+            "websites": [
+              "parivahan.gov.in"
+            ],
+            "documents": [
+              "Form 29",
+              "Form 30",
+              "Original RC",
+              "Insurance",
+              "PUC",
+              "Aadhaar",
+              "Sale receipt",
+              "NOC"
+            ]
+          }
+        },
+        {
+          "id": "URB005T",
+          "question": "Second-hand Car vaanginen. RC Transfer eppadi seyvadhu?",
+          "answer": "**RC Transfer for Used Vehicle:**\n\n**Seller Must:**\n1. Sign Form 29 & 30\n2. Get NOC if different state\n3. Give: Original RC, Insurance, PUC, Signed forms\n\n**Buyer Must:**\n\n**Step 1:** Apply at parivahan.gov.in → Transfer of Ownership\n\n**Step 2: Documents**\n- Form 29 & 30 (both signed)\n- Original RC\n- Insurance (transferred)\n- PUC\n- Both Aadhaar + Address proof\n- Sale receipt\n\n**Step 3:** RTO Visit - Both parties, Vehicle inspection\n\n**Step 4: Fee**\n- Transfer: ₹300-500\n- Smart Card: ₹200\n\n**Step 5:** New RC in 7-15 days\n\n**Deadline:** 14 days from sale\n**Penalty:** ₹50/day delay (max ₹500)\n\n**Loan Vehicle:** Bank NOC mandatory",
+          "topic": "urban_transport",
+          "language": "tanglish",
+          "parallel_id": "URB005",
+          "metadata": {
+            "scenario": "Vehicle registration transfer after purchase",
+            "key_offices": [
+              "RTO"
+            ],
+            "websites": [
+              "parivahan.gov.in"
+            ],
+            "documents": [
+              "Form 29",
+              "Form 30",
+              "Original RC",
+              "Insurance",
+              "PUC",
+              "Aadhaar",
+              "Sale receipt",
+              "NOC"
+            ]
+          }
+        },
+        {
+          "id": "URB006",
+          "question": "நான் Online-ல் Products விற்கிறேன். GST Registration எப்போது கட்டாயம்? எப்படி register செய்வது?",
+          "answer": "**GST Registration for E-commerce:**\n\n**எப்போது கட்டாயம்?**\n\n| Category | Threshold |\n|----------|----------|\n| Goods (Inter-state) | ₹0 - Immediately! |\n| Goods (Intra-state) | ₹40 lakh turnover |\n| Services | ₹20 lakh turnover |\n| E-commerce Seller | ₹0 - Immediately! |\n\n**E-commerce-ல் விற்றால்:**\n- Amazon, Flipkart, Meesho, etc.\n- Turnover limit இல்லை\n- முதல் sale-க்கு முன்னே GST வேண்டும்!\n\n**Registration Process:**\n\n**Step 1: gst.gov.in**\n1. Services → Registration → New Registration\n2. Part A: PAN, Mobile, Email verify\n3. TRN (Temporary Reference Number) கிடைக்கும்\n\n**Step 2: Part B - Details**\n1. Business Information\n2. Promoter/Partner details\n3. Principal place of business\n4. Additional place (if any)\n5. Goods/Services categories\n6. Bank account details\n7. Document upload\n\n**Step 3: Documents**\n- PAN Card\n- Aadhaar Card\n- Business Address Proof:\n  - Own: Electricity Bill + Property Tax\n  - Rent: Rent Agreement + NOC from owner\n- Bank Statement / Cancelled Cheque\n- Photo (Passport size)\n- Digital Signature (Partnership/Company)\n\n**Step 4: Verification**\n- Aadhaar OTP / EVC\n- Or: Physical verification by officer\n\n**Step 5: GSTIN Issue**\n- Time: 3-7 working days\n- 15-digit GSTIN\n- Certificate download\n\n**Fee:** FREE (No government fee)\n\n**After Registration:**\n1. Issue GST invoices\n2. Collect GST from customers\n3. File monthly returns (GSTR-1, GSTR-3B)\n4. Pay GST by 20th of next month\n\n**Composition Scheme:**\n- Turnover < ₹1.5 Cr\n- Pay 1% tax (instead of regular)\n- No input credit\n- Quarterly return\n- Not for e-commerce sellers!\n\n**Penalties (no registration):**\n- 10% of tax due or ₹10,000 (whichever higher)\n- Serious offense: Imprisonment possible",
+          "topic": "urban_business",
+          "language": "pure_tamil",
+          "parallel_id": "URB006T",
+          "metadata": {
+            "scenario": "GST registration for online business",
+            "key_offices": [
+              "GST Office"
+            ],
+            "websites": [
+              "gst.gov.in"
+            ],
+            "documents": [
+              "PAN",
+              "Aadhaar",
+              "Address proof",
+              "Rent Agreement",
+              "Bank Statement",
+              "Photo"
+            ]
+          }
+        },
+        {
+          "id": "URB006T",
+          "question": "Naan Online-la Products vikkiren. GST Registration eppo kattaayam? Eppadi register seyvadhu?",
+          "answer": "**GST for E-commerce:**\n\n**When Mandatory?**\n- E-commerce seller: ₹0 threshold - Need GST before first sale!\n- Regular goods: ₹40 lakh\n- Services: ₹20 lakh\n\n**Registration Process:**\n\n**Step 1:** gst.gov.in → New Registration → PAN/Mobile/Email verify → Get TRN\n\n**Step 2:** Fill Part B - Business details, Address, Bank account\n\n**Step 3: Documents**\n- PAN, Aadhaar\n- Address proof (Own: EB Bill / Rent: Agreement + NOC)\n- Bank Statement / Cheque\n- Photo\n\n**Step 4:** Aadhaar OTP verification\n\n**Step 5:** GSTIN in 3-7 days (FREE)\n\n**After Registration:**\n- Issue GST invoices\n- File monthly returns\n- Pay by 20th of next month\n\n**Warning:** No registration = 10% penalty or ₹10,000",
+          "topic": "urban_business",
+          "language": "tanglish",
+          "parallel_id": "URB006",
+          "metadata": {
+            "scenario": "GST registration for online business",
+            "key_offices": [
+              "GST Office"
+            ],
+            "websites": [
+              "gst.gov.in"
+            ],
+            "documents": [
+              "PAN",
+              "Aadhaar",
+              "Address proof",
+              "Rent Agreement",
+              "Bank Statement",
+              "Photo"
+            ]
+          }
+        },
+        {
+          "id": "URB007",
+          "question": "Chennai-ல் புதிய Metro Water Connection எப்படி வாங்குவது? Online apply செய்யலாமா?",
+          "answer": "**CMWSSB (Chennai Metro Water) - New Connection:**\n\n**Online Application:**\n1. Website: chennaimetrowater.tn.gov.in\n2. Online Services → New Connection\n3. Register / Login\n4. Fill application\n5. Upload documents\n6. Pay fee online\n\n**Offline Application:**\n- Area Engineer Office\n- CMWSSB Head Office\n\n**Documents Required:**\n- Property document (Patta / Sale Deed)\n- Building Approval Plan\n- Property Tax Receipt\n- Aadhaar Card\n- Passport Photo\n- Existing water bill (if any)\n\n**Types of Connection:**\n\n| Type | Monthly Charge |\n|------|---------------|\n| Domestic | ₹70-400 (based on usage) |\n| Commercial | Higher rates |\n| Industrial | Highest |\n\n**Process:**\n\n**Step 1:** Application Submit\n\n**Step 2:** Site Inspection\n- Feasibility check\n- Pipeline proximity\n- Road cutting requirement\n\n**Step 3:** Estimate\n- Connection charge\n- Road cutting charge (if any)\n- Deposit\n\n**Approximate Costs:**\n| Item | Amount |\n|------|--------|\n| Connection Charge | ₹500-2,000 |\n| Security Deposit | ₹500-1,000 |\n| Road Cutting | ₹5,000-20,000 (if needed) |\n\n**Step 4:** Payment\n\n**Step 5:** Connection\n- Time: 15-30 days (normal)\n- Road cutting: 1-2 months\n\n**No Water Supply Area:**\n- Tanker request: chennaimetrowater.tn.gov.in\n- Borewell permission from CMWSSB\n\n**Complaints:**\n- Helpline: 044-4567 4567\n- App: CMWSSB Mobile App\n- Email: customercare@cmwssb.tn.gov.in\n\n**Bill Payment:**\n- Online: chennaimetrowater.tn.gov.in\n- PayTM, PhonePe, etc.\n- Area Office\n- Due: Monthly\n- Delay penalty applies",
+          "topic": "urban_utilities",
+          "language": "pure_tamil",
+          "parallel_id": "URB007T",
+          "metadata": {
+            "scenario": "Metro water connection in Chennai",
+            "key_offices": [
+              "CMWSSB",
+              "Area Engineer Office"
+            ],
+            "websites": [
+              "chennaimetrowater.tn.gov.in"
+            ],
+            "documents": [
+              "Property document",
+              "Building Plan",
+              "Property Tax Receipt",
+              "Aadhaar"
+            ]
+          }
+        },
+        {
+          "id": "URB007T",
+          "question": "Chennai-la pudhiya Metro Water Connection eppadi vaanguvadhu? Online apply seyyalamaa?",
+          "answer": "**CMWSSB New Connection:**\n\n**Online:** chennaimetrowater.tn.gov.in → New Connection\n\n**Documents:**\n- Property document\n- Building Plan\n- Property Tax Receipt\n- Aadhaar, Photo\n\n**Process:**\n1. Application submit\n2. Site inspection\n3. Get estimate\n4. Pay fees\n5. Connection (15-30 days)\n\n**Costs:**\n- Connection: ₹500-2,000\n- Deposit: ₹500-1,000\n- Road cutting: ₹5,000-20,000 (if needed)\n\n**Monthly:** ₹70-400 (domestic, usage based)\n\n**Complaint:** 044-4567 4567, CMWSSB App",
+          "topic": "urban_utilities",
+          "language": "tanglish",
+          "parallel_id": "URB007",
+          "metadata": {
+            "scenario": "Metro water connection in Chennai",
+            "key_offices": [
+              "CMWSSB",
+              "Area Engineer Office"
+            ],
+            "websites": [
+              "chennaimetrowater.tn.gov.in"
+            ],
+            "documents": [
+              "Property document",
+              "Building Plan",
+              "Property Tax Receipt",
+              "Aadhaar"
+            ]
+          }
+        },
+        {
+          "id": "URB008",
+          "question": "என் Car 15 வருடம் ஆகிவிட்டது. Fitness Certificate எப்படி வாங்குவது? எந்த test செய்வார்கள்?",
+          "answer": "**Vehicle Fitness Certificate:**\n\n**எப்போது தேவை?**\n- Private Vehicle: 15 வருடத்திற்கு பின் (every 5 years)\n- Commercial Vehicle: 8 வருடத்திற்கு பின் (every year)\n- Transport Vehicle: Every year\n\n**Online Application:**\n1. parivahan.gov.in → Online Services → TN\n2. Fitness Certificate\n3. RC number enter\n4. Book slot at Authorized Testing Station (ATS)\n5. Pay fee online\n\n**Documents:**\n- Original RC Book\n- Insurance (valid)\n- PUC Certificate\n- Previous Fitness Certificate (if any)\n- Tax paid receipts\n\n**Testing Parameters:**\n\n| Test | What they check |\n|------|----------------|\n| Brake Test | Efficiency, Balance |\n| Emission Test | Smoke, CO, HC levels |\n| Headlight | Alignment, Intensity |\n| Suspension | Shock absorbers, Springs |\n| Steering | Play, Alignment |\n| Speedometer | Accuracy |\n| Horn | Sound level |\n| Body | Rust, Damage, Safety |\n| Tyres | Condition, Tread depth |\n| Mirrors | Condition, Position |\n\n**Fee:**\n- Testing: ₹300-500\n- Certificate: ₹200\n- Re-test (if failed): ₹100-200\n\n**Process:**\n1. Reach ATS with appointment\n2. Document verification\n3. Automated testing (30-45 mins)\n4. Report generation\n5. Pass: Certificate issued\n6. Fail: Rectify → Re-test\n\n**Validity:**\n- Private (15+ years): 5 years\n- Commercial: 1 year\n- Transport: 1 year\n\n**Fail ஆனால்:**\n- Defects rectify within 7 days\n- Re-test at same station\n- Partial fee\n\n**No Fitness Certificate:**\n- Vehicle seized\n- Fine: ₹500-5,000\n- Insurance claim rejected in accident\n\n**Authorized Testing Stations (Chennai):**\n- RTO premises\n- Private ATS (ARAI approved)\n- List at: parivahan.gov.in",
+          "topic": "urban_transport",
+          "language": "pure_tamil",
+          "parallel_id": "URB008T",
+          "metadata": {
+            "scenario": "Getting vehicle fitness certificate",
+            "key_offices": [
+              "RTO",
+              "Authorized Testing Station"
+            ],
+            "websites": [
+              "parivahan.gov.in"
+            ],
+            "documents": [
+              "RC Book",
+              "Insurance",
+              "PUC",
+              "Tax receipts"
+            ]
+          }
+        },
+        {
+          "id": "URB008T",
+          "question": "En Car 15 varusham aagividuchu. Fitness Certificate eppadi vaanguvadhu? Endha test seivanga?",
+          "answer": "**Vehicle Fitness Certificate:**\n\n**When needed?**\n- Private: After 15 years (every 5 years)\n- Commercial: After 8 years (every year)\n\n**Apply:** parivahan.gov.in → Fitness Certificate → Book ATS slot\n\n**Documents:**\n- RC Book, Insurance, PUC\n- Previous Fitness Certificate\n- Tax receipts\n\n**Tests:**\n- Brake, Emission, Headlight\n- Suspension, Steering, Speedometer\n- Horn, Body, Tyres, Mirrors\n\n**Fee:** Testing ₹300-500 + Certificate ₹200\n\n**Process:** ATS visit → 30-45 min test → Report → Certificate\n\n**Validity:** 5 years (private 15+), 1 year (commercial)\n\n**No Certificate:** Vehicle seized, ₹500-5,000 fine",
+          "topic": "urban_transport",
+          "language": "tanglish",
+          "parallel_id": "URB008",
+          "metadata": {
+            "scenario": "Getting vehicle fitness certificate",
+            "key_offices": [
+              "RTO",
+              "Authorized Testing Station"
+            ],
+            "websites": [
+              "parivahan.gov.in"
+            ],
+            "documents": [
+              "RC Book",
+              "Insurance",
+              "PUC",
+              "Tax receipts"
+            ]
+          }
+        },
+        {
+          "id": "URB009",
+          "question": "வீடு வாடகைக்கு கொடுக்க போகிறேன். Rent Agreement register செய்ய வேண்டுமா? Online செய்யலாமா?",
+          "answer": "**Rent Agreement Registration:**\n\n**கட்டாயமா?**\n- 11 மாதத்திற்கு மேல்: Registration கட்டாயம்\n- 11 மாதம் வரை: Notarized போதும் (but recommended to register)\n\n**ஏன் Register செய்ய வேண்டும்?**\n- Legal validity\n- Dispute-ல் Court proof\n- Tenant eviction easier\n- Passport/Visa proof\n- Bank loan address proof\n\n**Online Registration:**\n1. tnreginet.gov.in\n2. E-stamping → Rent Agreement\n3. Enter details:\n   - Landlord info\n   - Tenant info\n   - Property address\n   - Rent amount\n   - Duration\n   - Terms & conditions\n4. Pay stamp duty online\n5. Download e-stamp paper\n6. Print agreement on e-stamp\n7. Book SRO slot\n8. Visit with both parties + witnesses\n\n**Stamp Duty:**\n- 1% of (Average Annual Rent + Advance)\n- Minimum: ₹20\n\n**Registration Fee:**\n- 1% of above\n- Maximum: ₹20,000\n\n**Example Calculation:**\n- Monthly Rent: ₹15,000\n- Advance: ₹45,000 (3 months)\n- Duration: 11 months\n- Annual Rent: ₹1,65,000\n- Stamp Duty: ₹1,650 + ₹450 = ₹2,100\n- Registration: ₹2,100\n- **Total: ~₹4,200**\n\n**Documents:**\n- Property document (Owner)\n- Aadhaar (Both parties)\n- Photos (Both + 2 witnesses)\n- Previous electricity bill\n- Property tax receipt\n\n**SRO Visit:**\n- Both parties present\n- 2 witnesses with Aadhaar\n- Biometric capture\n- Time: 30-45 minutes\n\n**Registered Agreement Copy:**\n- tnreginet.gov.in → EC Search\n- Download anytime\n\n**Model Agreement:**\n- Available at tnreginet.gov.in\n- Or lawyer draft\n- Include: Rent, Duration, Increase clause, Termination, Maintenance",
+          "topic": "urban_property",
+          "language": "pure_tamil",
+          "parallel_id": "URB009T",
+          "metadata": {
+            "scenario": "Rent agreement registration",
+            "key_offices": [
+              "Sub-Registrar Office"
+            ],
+            "websites": [
+              "tnreginet.gov.in"
+            ],
+            "documents": [
+              "Property document",
+              "Aadhaar",
+              "Photos",
+              "EB Bill",
+              "Tax receipt"
+            ]
+          }
+        },
+        {
+          "id": "URB009T",
+          "question": "Veedu vadakaikku kodukka porein. Rent Agreement register seiyya venduma? Online seyyalamaa?",
+          "answer": "**Rent Agreement Registration:**\n\n**Mandatory?**\n- Above 11 months: Registration mandatory\n- Up to 11 months: Notarized enough (but register recommended)\n\n**Why Register?**\n- Legal validity, Court proof\n- Easier tenant eviction\n- Address proof for Passport/Bank\n\n**Online Process:**\n1. tnreginet.gov.in\n2. E-stamping → Rent Agreement\n3. Fill details (Landlord, Tenant, Property, Rent, Duration)\n4. Pay stamp duty\n5. Download e-stamp\n6. Book SRO slot\n7. Visit with parties + witnesses\n\n**Costs:**\n- Stamp Duty: 1% of (Annual Rent + Advance)\n- Registration: 1%\n\n**Example:** ₹15,000/month rent → ~₹4,200 total\n\n**Documents:** Property document, Aadhaar, Photos, EB Bill, Tax receipt\n\n**SRO Visit:** Both parties + 2 witnesses + Biometric",
+          "topic": "urban_property",
+          "language": "tanglish",
+          "parallel_id": "URB009",
+          "metadata": {
+            "scenario": "Rent agreement registration",
+            "key_offices": [
+              "Sub-Registrar Office"
+            ],
+            "websites": [
+              "tnreginet.gov.in"
+            ],
+            "documents": [
+              "Property document",
+              "Aadhaar",
+              "Photos",
+              "EB Bill",
+              "Tax receipt"
+            ]
+          }
+        },
+        {
+          "id": "URB010",
+          "question": "நான் Tuition Center / Coaching Institute தொடங்க விரும்புகிறேன். என்ன permission வேண்டும்?",
+          "answer": "**Coaching Center / Tuition Classes - Permissions:**\n\n**Basic Requirements:**\n\n**1. Shop & Establishment Registration**\n- எங்கே: tnlabour.tn.gov.in\n- Fee: ₹500-1,500\n- 30 நாட்களுக்குள் opening-க்கு பின்\n\n**2. Trade License**\n- எங்கே: Corporation / Municipality\n- Category: Educational Services\n- Fee: ₹1,000-5,000\n\n**3. Fire Safety NOC**\n- 50+ students கட்டாயம்\n- Fire extinguishers\n- Emergency exit\n- Fire Dept inspection\n\n**4. Building Safety**\n- Structural stability certificate\n- Rent agreement (if rented)\n- No residential area violation\n\n**Large Institute-க்கு கூடுதல்:**\n\n**5. Society/Trust/Company Registration**\n- Trust: Registrar of Trusts\n- Society: Registrar of Societies\n- Company: MCA (LLP/Pvt Ltd)\n\n**6. GST Registration**\n- Turnover > ₹20 lakh\n- Or: If franchising\n\n**7. PF/ESI (if employees)**\n- PF: 20+ employees\n- ESI: 10+ employees\n\n**Specific Coaching:**\n\n**Competitive Exam Coaching (IAS/JEE/NEET):**\n- Standard permissions enough\n- No special license\n\n**Foreign Language:**\n- No special permission\n- Certification from foreign body (optional)\n\n**Driving School:**\n- RTO approval mandatory\n- Special license\n\n**Computer Training:**\n- Standard permissions\n- IT company as optional\n\n**Staff Requirements:**\n- Qualified teachers\n- Background verification (recommended)\n- PF/ESI for permanent staff\n\n**Infrastructure:**\n- Proper ventilation\n- Clean drinking water\n- Toilet facilities\n- Adequate space per student\n\n**Insurance:**\n- Public liability (recommended)\n- Fire insurance\n\n**Advertising:**\n- No false claims\n- Success rate proof\n- Corporation permission for banners\n\n**Timeline:**\n- Basic setup: 2-4 weeks\n- Large institute: 1-2 months",
+          "topic": "urban_business",
+          "language": "pure_tamil",
+          "parallel_id": "URB010T",
+          "metadata": {
+            "scenario": "Starting private coaching center",
+            "key_offices": [
+              "Labour Department",
+              "Corporation",
+              "Fire Department"
+            ],
+            "websites": [
+              "tnlabour.tn.gov.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "PAN",
+              "Rent Agreement",
+              "Building Certificate"
+            ]
+          }
+        },
+        {
+          "id": "URB010T",
+          "question": "Naan Tuition Center / Coaching Institute thodanga virumburen. Enna permission vendum?",
+          "answer": "**Coaching Center Permissions:**\n\n**Basic Requirements:**\n1. **Shop & Establishment** - tnlabour.tn.gov.in (₹500-1,500)\n2. **Trade License** - Corporation (₹1,000-5,000)\n3. **Fire Safety NOC** - If 50+ students\n4. **Building Safety** - Structural certificate\n\n**Large Institute Additional:**\n5. **Trust/Society Registration** - If structured entity\n6. **GST** - If turnover > ₹20 lakh\n7. **PF/ESI** - If employees\n\n**Staff:** Qualified teachers, Background verification\n\n**Infrastructure:** Ventilation, Drinking water, Toilets, Space\n\n**Timeline:** Basic 2-4 weeks, Large 1-2 months\n\n**No special license for:** IAS/JEE/NEET coaching, Language classes, Computer training",
+          "topic": "urban_business",
+          "language": "tanglish",
+          "parallel_id": "URB010",
+          "metadata": {
+            "scenario": "Starting private coaching center",
+            "key_offices": [
+              "Labour Department",
+              "Corporation",
+              "Fire Department"
+            ],
+            "websites": [
+              "tnlabour.tn.gov.in"
+            ],
+            "documents": [
+              "Aadhaar",
+              "PAN",
+              "Rent Agreement",
+              "Building Certificate"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "category": "conversational_dialogues",
+      "category_tamil": "உரையாடல் வழிகாட்டிகள்",
+      "pairs": [
+        {
+          "id": "CONV001",
+          "question": "[Multi-turn dialogue] Getting Birth Certificate for Newborn - Full conversation guide",
+          "answer": "User: Hi, en wife delivery aayiruchu. Baby-ku birth certificate vaanganum. Eppadi?\n\nAssistant: Congratulations! Birth certificate vaanga indha steps follow pannunga:\n\n**Mudhalil:** Hospital-la irundhu discharge summary vaangunga - adhu la baby birth date, time, weight ellam irukkum.\n\n**Enga apply pannanum:** Neengal enga irukkeenga - hospital area municipality/panchayat or unga home area?\n\nUser: Hospital Chennai-la, but naanga Tambaram-la irukkoom\n\nAssistant: Okay, Chennai hospital-la delivery na, Chennai Corporation-la dhan register pannanum. Hospital location-based registration.\n\n**2 Options:**\n\n1. **Hospital-layae** - Periya hospitals (Govt/Big Private) la birth registration desk irukku. Avanga direct register panniduvanga.\n\n2. **Corporation Office** - Hospital register pannala na, hospital area Corporation Zonal Office-la neengal apply pannanum.\n\nUnga hospital register pannuchaa illa neengal pannumaa?\n\nUser: Hospital register pannala. Naangal dhan pannanum. Enna documents vendum?\n\nAssistant: Okay, neengal apply pannanum na indha documents ready pannunga:\n\n**Documents:**\n1. Hospital Discharge Summary (Original + Copy)\n2. Father's Aadhaar Card (Original + Copy)\n3. Mother's Aadhaar Card (Original + Copy)\n4. Marriage Certificate (Original + Copy)\n5. Address Proof\n\n**Important:** 21 days-kulla apply pannunga - FREE! Adhukku apram ₹50 late fee + Affidavit vendum.\n\nBaby birth date enna? 21 days kazhinjuchaa?\n\nUser: Illa, 10 days dhan aachu. Online apply panna mudiyumaa?\n\nAssistant: Super, time irukku! Yes, online apply pannalam:\n\n**Online Process:**\n1. **Website:** chennaicorporation.gov.in\n2. **Click:** Birth Registration\n3. **Fill:** Baby details, Parents details\n4. **Upload:** Documents scan\n5. **Submit**\n\n**Or** tnreginet.gov.in la \"Birth Certificate\" section use pannalaam.\n\n**Apram:**\n- Application number kedaikum\n- 3-5 days-la certificate ready\n- Download pannalam or office-la collect pannalam\n\nOnline try pannureengalaa, illa office-ku pogalaamaa?\n\nUser: Online try panren. Baby-ku name decide aagala, adhu problem aa?\n\nAssistant: No problem! Name illama register pannalam:\n\n**2 Options:**\n\n1. **Without Name Register:** Birth certificate \"Baby of [Mother's Name]\" nu varum. Later name add pannalam.\n\n2. **Add Name Later:** \n   - 1 year-kulla name add pannalam (No fee)\n   - Form fill panni same office-la submit\n   - Documents: Original Birth Certificate + Affidavit\n\n**Tip:** Naming ceremony / Naming date decide aana apram add pannunga. Most people 1-3 months-la name add pannuvanga.\n\nSchool admission-ku full name certificate pogum, so worry pannaadheenga!\n\nVera enna doubt irukku?\n\nUser: Thanks! Oru doubt - Aadhaar card baby-ku eppo apply pannalam?\n\nAssistant: Good question! Baby Aadhaar apply pannalam:\n\n**When:** Birth-ku apram anytime - but 5 years-kulla recommended\n\n**Baal Aadhaar (0-5 years):**\n- **Color:** Blue (Regular Aadhaar white)\n- **Biometric:** Photo only (No fingerprint/iris)\n- **Validity:** 5 years - apram mandatory update\n\n**Documents:**\n- Baby's Birth Certificate\n- Either Parent's Aadhaar (POI & POA)\n- Hospital Discharge (optional)\n\n**Where:**\n- Aadhaar Enrollment Center\n- Appointment: appointments.uidai.gov.in\n\n**Fee:** FREE (first enrollment)\n\n**Process:**\n1. Book appointment\n2. Go with baby + parent\n3. Baby photo capture\n4. Parent biometric verification\n5. 90 days-la Aadhaar varum\n\nBirth certificate ready aana apram Aadhaar apply pannunga! Anything else?",
+          "topic": "certificates",
+          "language": "tanglish",
+          "format": "multi_turn_dialogue",
+          "key_learnings": [
+            "Birth certificate must be registered within 21 days (free)",
+            "Registration at hospital location, not home location",
+            "Can register without baby name initially",
+            "Baal Aadhaar for children under 5 years"
+          ]
+        },
+        {
+          "id": "CONV002",
+          "question": "[Multi-turn dialogue] Lost Aadhaar and PAN - Recovery Process - Full conversation guide",
+          "answer": "User: Ennoda purse tholainjuduchu. Aadhaar, PAN card ellam poyiduchu. Enna pannanum?\n\nAssistant: Oh no! Don't worry, recover pannidalam. First few immediate steps:\n\n**Urgently pannunga:**\n1. **Bank Cards Block:** Bank helpline-ku call panni ATM/Debit card block pannunga\n2. **Aadhaar Biometric Lock:** Misuse thadukka myaadhaar.uidai.gov.in la lock pannunga\n\n**Apram documents recover pannalam.** Purse-la enna ellam irundhuchu?\n\nUser: Aadhaar, PAN, ATM card, Driving License irundhuchu. Bank card block pannitten already.\n\nAssistant: Good, bank card block panneeteenga. Now one by one recover pannuvaom:\n\n**1. Aadhaar Card (Easiest - 5 mins):**\n- Website: eaadhaar.uidai.gov.in\n- Enter: Aadhaar Number (remember pannunga or family member kitta irukka?)\n- OTP: Registered mobile-la varum\n- Download: e-Aadhaar PDF (Free!)\n- Password: First 4 letters of name (CAPS) + Birth Year\n\nUnga Aadhaar number nenaivil irukka?\n\nUser: Aadhaar number nenaivil illa. Mobile number register pannirukken but number maathiten recently.\n\nAssistant: Hmm, slight complication but solve pannalam:\n\n**Aadhaar Number Maranthu + Mobile Maariruchu:**\n\n**Option 1: Family Member Check**\n- Spouse/Parent Aadhaar-la sometimes linked family details irukku\n- Old documents-la Aadhaar copy irukka? (Bank, College, Office)\n\n**Option 2: Aadhaar Enrollment Center**\n- Nearest center: uidai.gov.in → Locate Center\n- Go with any ID proof (Voter ID, Passport, DL)\n- Biometric match pannuvanga\n- Mobile update pannalam + Aadhaar retrieve\n- Fee: ₹50\n\n**Option 3: myaadhaar.uidai.gov.in**\n- \"Retrieve Lost UID/EID\"\n- But needs registered email or mobile\n\nVera ID proof edhaachu irukka - Voter ID, Passport?\n\nUser: Voter ID veetla irukku. DL tholainjuduchu.\n\nAssistant: Perfect! Voter ID irukku na process easy:\n\n**Step 1: Aadhaar Retrieve**\n1. Nearest Aadhaar Seva Kendra (ASK) poganum\n2. Carry: Voter ID Original\n3. Tell: \"Aadhaar number retrieve pannanum, mobile update pannanum\"\n4. Biometric verify pannuvanga\n5. New mobile link aagum\n6. Aadhaar number kedaikum\n7. Fee: ₹50\n\n**Find ASK:** uidai.gov.in → Locate Enrollment Center\n\n**Step 2: After Aadhaar Ready**\n- Download e-Aadhaar immediately\n- PVC card order: ₹50 (optional)\n\nVoter ID eduthukitu ASK pogalaamaa? Apram PAN and DL paakalam.\n\nUser: Okay Aadhaar panniten nu vechukonga. PAN card eppadi?\n\nAssistant: Good! Aadhaar ready na PAN super easy:\n\n**e-PAN Download (Instant & FREE):**\n1. Website: eportal.incometax.gov.in\n2. Click: \"Instant e-PAN\"\n3. Click: \"Check Status / Download e-PAN\"\n4. Enter: PAN Number... \n\n**PAN Number Maranthuducha?**\n\n**Know Your PAN:**\n1. Same website: eportal.incometax.gov.in\n2. \"Know Your PAN\" option\n3. Enter: Name + DOB + Mobile Number\n4. OTP verify\n5. PAN Number display aagum!\n\nApram:\n- \"Instant e-PAN\" la download\n- Aadhaar OTP verify\n- PDF ready - FREE!\n\nPAN number nenaivil irukka?\n\nUser: PAN number nenaivila illa, but Aadhaar ready nu vechukonga. Aadhaar irundha PAN kedaikuma?\n\nAssistant: Yes! Aadhaar irundha PAN retrieve pannalam:\n\n**Method 1: Know Your PAN with Aadhaar**\n1. eportal.incometax.gov.in\n2. \"Know Your PAN\"\n3. Enter: Full Name (as in PAN) + DOB + Registered Mobile\n4. OTP\n5. PAN display\n\n**Method 2: If PAN-Aadhaar Linked**\n1. Same portal\n2. \"Link Aadhaar Status\"\n3. Enter Aadhaar number\n4. If linked, PAN number display aagum!\n\n**Method 3: Form 49A (if above fail)**\n- onlineservices.nsdl.com\n- \"Reprint of PAN Card\"\n- Enter details\n- ₹50 fee\n- Physical card varum\n\nTry pannunga - most likely Method 1 or 2 work aagum. Driving License paaklamaa?\n\nUser: Okay try panren. DL eppadi recover pannuvadhu?\n\nAssistant: **Duplicate Driving License:**\n\n**Online Process:**\n1. Website: parivahan.gov.in\n2. Online Services → Tamil Nadu\n3. \"Duplicate Driving License\"\n4. Enter: DL Number (nenaivil irukka?)\n\n**DL Number Maranthuducha?**\n- parivahan.gov.in → \"Know Your DL Number\"\n- Enter: Name + DOB + Mobile\n- DL details varum\n\n**Documents Upload:**\n- Aadhaar Card\n- Address Proof\n- FIR Copy (Optional but recommended)\n- Passport Photo\n\n**Fee:** ₹200-500\n\n**RTO Visit:**\n- Online apply panna apram\n- Slot book pannunga\n- Document verification\n- Photo capture\n- Duplicate DL issue (Smart Card by post)\n\n**Time:** 7-15 days\n\n**Tip:** FIR file pannunga (online: eservices.tnpolice.gov.in) - future-ku safe, plus some RTOs ask for it.\n\nVera documents tholainjucha?\n\nUser: Illa, idhu dhan. Summary solunga please\n\nAssistant: **Complete Recovery Summary:**\n\n**1. Aadhaar Card**\n- ASK visit with Voter ID\n- Biometric verify + Mobile update\n- Fee: ₹50\n- Then: eaadhaar.uidai.gov.in la download (FREE)\n\n**2. PAN Card**\n- eportal.incometax.gov.in\n- \"Know Your PAN\" → Retrieve number\n- \"Instant e-PAN\" → Download (FREE)\n- Physical card: ₹50 (optional)\n\n**3. Driving License**\n- parivahan.gov.in\n- \"Know Your DL\" → Get number\n- \"Duplicate DL\" → Apply\n- Fee: ₹200-500\n- RTO visit for verification\n- Time: 7-15 days\n\n**Bonus Tips:**\n1. FIR file pannunga for records\n2. DigiLocker app use pannunga - all documents digital-la safe\n3. Aadhaar biometric lock pannunga until new cards varum\n\n**Priority Order:** Aadhaar first → PAN → DL\n\nAll the best! Vendum na ask pannunga.",
+          "topic": "documents",
+          "language": "tanglish",
+          "format": "multi_turn_dialogue",
+          "key_learnings": [
+            "e-Aadhaar and e-PAN can be downloaded free instantly",
+            "Aadhaar can be retrieved using biometric at ASK",
+            "PAN can be found using Aadhaar if linked",
+            "FIR recommended for lost documents"
+          ]
+        },
+        {
+          "id": "CONV003",
+          "question": "[Multi-turn dialogue] Farmer Applying for PM-KISAN and Crop Insurance - Full conversation guide",
+          "answer": "User: Naan vivasaayi. PM-KISAN scheme-la register aagala. Eppadi pannuvadhu?\n\nAssistant: PM-KISAN register panna simple process. First few questions:\n\n1. Unga peyarla land irukka? (Patta unga name-la?)\n2. Evvalavu land irukku?\n3. Neengal income tax file pannuveengalaa?\n\nIndha details sollunga, eligibility check pannalam.\n\nUser: Aamaa, 3 acre peyarla irukku. Income tax file pannala.\n\nAssistant: Perfect! Neengal eligible:\n\n**PM-KISAN Eligibility ✓**\n- Land owner: ✓\n- Not Income Tax payer: ✓\n\n**Benefits:** ₹6,000/year (₹2,000 x 3 installments)\n\n**Registration Options:**\n\n**Option 1: Online (Self)**\n1. pmkisan.gov.in\n2. \"New Farmer Registration\"\n3. State: Tamil Nadu\n4. Aadhaar number enter\n5. Fill details\n6. Upload: Patta/Chitta\n7. Submit\n\n**Option 2: CSC / Agriculture Office**\n- Nearest Common Service Center\n- Agriculture Officer office\n- Avanga free-ya register pannuvanga\n\nOnline try pannuveengalaa? Documents ready irukka?\n\nUser: Online try panren. Enna documents scan pannanum?\n\nAssistant: **PM-KISAN Registration Documents:**\n\n**Mandatory:**\n1. **Aadhaar Card** - Front & Back scan\n2. **Bank Passbook** - First page (Name, Account No, IFSC)\n3. **Land Records:**\n   - Patta (latest)\n   - Chitta\n   - OR Adangal extract\n\n**Details you need:**\n- Aadhaar Number\n- Mobile Number (Aadhaar linked better)\n- Bank Account Number\n- IFSC Code\n- Survey Numbers (land)\n- Land area (hectares)\n\n**Important:**\n- Bank account unga name-la irukkanum\n- Aadhaar-Bank name match aaganum\n- Mobile number active irukkanum\n\nEllaam ready aa?\n\nUser: Documents ready. Oru doubt - crop insurance-um pannanum. Adhukku separate aa apply pannumaa?\n\nAssistant: Good question! Yes, Crop Insurance (PMFBY) separate application:\n\n**PM-KISAN vs PMFBY:**\n| | PM-KISAN | PMFBY |\n|--|----------|-------|\n| What | Direct cash | Crop Insurance |\n| Amount | ₹6,000/year fixed | Claim based on loss |\n| Apply | Once (auto-renew) | Every season |\n\n**PMFBY Apply:**\n- **When:** Before sowing - deadline irukku\n- **Where:** Bank / CSC / pmfby.gov.in / UZHAVAN App\n\n**Premium (You pay):**\n- Kharif crops: 2% of Sum Insured\n- Rabi crops: 1.5%\n- Commercial crops: 5%\n\n**Example:** 3 acres paddy\n- Sum Insured: ~₹1,50,000\n- Your Premium: ₹3,000 (2%)\n- Govt pays rest\n\n**Claim:** Natural calamity, pest attack la loss na compensation\n\nNeengal enna crop poda porreenga? Deadline check pannalam.\n\nUser: Paddy podalaam nu irukken. Deadline eppo?\n\nAssistant: **Paddy (Samba/Thaladi) - Kharif Season:**\n\n**Deadline:** Usually August-September (exact date varies yearly)\n\n**Check Current Deadline:**\n1. pmfby.gov.in → Crop Insurance tab\n2. Select: State (TN) → District → Season → Crop\n3. Shows: Last date, Premium, Sum Insured\n\n**Or:** UZHAVAN App la notification varum\n\n**Apply Process:**\n\n**Option 1: Through Bank (Easiest)**\n- KCC (Kisan Credit Card) irukka?\n- KCC loan vaangunavanga-ku auto-enrollment\n- Premium loan-layae deduct aagum\n\n**Option 2: Online Self**\n1. pmfby.gov.in → \"Farmer Corner\"\n2. Register with mobile\n3. Fill crop details\n4. Upload: Land records, Sowing certificate\n5. Pay premium online\n\n**Option 3: CSC / Agriculture Office**\n- Documents kondu poganum\n- Avanga apply pannuvanga\n\nKCC irukka ungakitta?\n\nUser: KCC illa. Vaangalaamaa? Interest evvalavu?\n\nAssistant: **KCC (Kisan Credit Card) - Must Have for Farmers!**\n\n**Benefits:**\n- **Interest:** Only 4% (Normal 7% - 3% Govt subsidy)\n- **Collateral Free:** Up to ₹1.6 lakh\n- **Flexible:** Withdraw anytime, pay after harvest\n- **Crop Insurance:** Auto-enrolled\n- **PM-KISAN link:** Easy processing\n\n**Eligibility:**\n- Land owner ✓ (You qualify!)\n- Tenant farmers - also eligible\n- Even oral lessees can apply\n\n**KCC Loan Amount:**\n- Based on: Crop + Area + Scale of Finance\n- 3 acres paddy: ~₹60,000-90,000 per season\n\n**Apply:**\n\n**Option 1: Bank**\n- Nearest Commercial Bank / Co-operative Bank\n- Documents: Aadhaar, Patta, Chitta, Photos\n- Time: 7-14 days\n\n**Option 2: Through PM-KISAN**\n- pmkisan.gov.in → KCC tab\n- Auto-forward to bank\n- Easier process for PM-KISAN beneficiaries\n\n**My Suggestion:** Apply KCC first, then:\n- PM-KISAN registration easier\n- Crop insurance auto\n- 4% interest loan ready\n\nBank pogalaamaa? Cooperative irukka near-by?\n\nUser: Okay, KCC first apply panren. Complete process sollunga\n\nAssistant: **KCC Application - Complete Process:**\n\n**Step 1: Choose Bank**\n- Primary Agricultural Credit Society (PACS) - Easiest for farmers\n- Co-operative Bank\n- Any Commercial Bank (SBI, Indian Bank, etc.)\n\n**Step 2: Collect Documents**\n1. Aadhaar Card (Original + 2 copies)\n2. PAN Card (if available)\n3. Patta (Original + copy)\n4. Chitta & Adangal (from VAO)\n5. Sowing Certificate (from VAO) - optional initially\n6. Passport Photos - 4\n7. Bank passbook (if existing account)\n\n**Step 3: Visit Bank**\n- Ask for \"KCC Application Form\"\n- Fill the form\n- Attach documents\n- Submit\n\n**Step 4: Bank Process**\n- Document verification\n- Land record check\n- Credit limit calculation\n- Field visit (sometimes)\n\n**Step 5: Sanction**\n- Sanction letter\n- KCC card issue\n- Cheque book (optional)\n- **Time:** 7-14 days\n\n**Step 6: Disbursement**\n- Go to bank\n- Withdraw as needed\n- Repay after harvest\n- **Interest:** 4% if timely repayment!\n\n**After KCC Ready:**\n- PM-KISAN auto-link\n- PMFBY premium auto-deduct\n- Soil Health Card link\n\n**One tip:** Sowing certificate VAO kitta vaangunga - multiple uses irukku.\n\nAll clear aa? Vendum na summary sheet tharattumaa?\n\nUser: Thanks! Oru last doubt - Soil Health Card enna? Free aa?\n\nAssistant: **Soil Health Card - Free & Very Useful!**\n\n**What is it?**\n- Unga nilathoda soil test report\n- Nutrients (N, P, K, etc.) evvalavu irukku\n- pH level, Organic carbon\n- Enna fertilizer evvalavu podanum - recommendation\n\n**Benefits:**\n- Right fertilizer = Less cost\n- Better yield\n- Soil damage prevent\n\n**How to Get (FREE):**\n\n**Option 1: Online Request**\n1. soilhealth.dac.gov.in\n2. Register with Aadhaar\n3. Enter land details\n4. Request soil testing\n5. Sample collection by Agri Dept\n6. Report online + Card by post\n\n**Option 2: Agriculture Office**\n- Visit Block Agriculture Office\n- Give land details\n- They'll collect soil sample\n- Report in 2-3 weeks\n\n**Option 3: KVK (Krishi Vigyan Kendra)**\n- Nearby KVK-la free testing\n- Plus free advice\n\n**When to Test:**\n- Before sowing season\n- Every 3 years recommended\n\n**Pro Tip:** Soil test result based-la fertilizer vaangunga - waste avoid, yield increase!\n\n**Summary ungalukku:**\n1. KCC Apply → Bank\n2. PM-KISAN Register → pmkisan.gov.in\n3. Crop Insurance → Auto with KCC or pmfby.gov.in\n4. Soil Health Card → soilhealth.dac.gov.in\n\nAll the best for your farming! Vendum na kekuinga.",
+          "topic": "agriculture",
+          "language": "tanglish",
+          "format": "multi_turn_dialogue",
+          "key_learnings": [
+            "PM-KISAN gives ₹6,000/year in 3 installments",
+            "KCC provides crop loan at 4% interest",
+            "PMFBY auto-enrolls with KCC",
+            "Soil Health Card is free and helps reduce fertilizer costs"
+          ]
+        },
+        {
+          "id": "CONV004",
+          "question": "[Multi-turn dialogue] Senior Citizen Pension and Benefits - Full conversation guide",
+          "answer": "User: En appa-ku 62 years aaguchu. Retire aanaar. Enna government benefits kidaikum?\n\nAssistant: 62 years-ku niraiya benefits irukku! First, siladhu clarify pannanum:\n\n1. Appa government employee-aa private-aa?\n2. Appa income tax file pannuvaaraa?\n3. BPL card / Rice card irukka?\n4. Vera pension vaanguraaraa?\n\nIndha details sollunga, exact benefits sollren.\n\nUser: Private employee, small company. Income tax illa. Rice card irukku. No pension.\n\nAssistant: Good! Appa-ku niraiya benefits eligible:\n\n**1. Old Age Pension (TN State)**\n- Amount: ₹1,000/month\n- Eligibility: 60+ years, Low income, Rice card ✓\n- Where: Taluk Office / tneservices.tn.gov.in\n\n**2. Kalaignar Magalir Urimai Thittam**\n- Wait... indha Amma-ku dhan, Appa-ku illa\n\n**3. Free/Subsidized Benefits:**\n- Free bus travel (ordinary buses)\n- Free health insurance (CMCHIS)\n- Railway ticket 40% discount\n\n**4. Banking Benefits:**\n- Senior Citizen FD - Extra 0.5% interest\n- SCSS (Senior Citizen Savings Scheme) - 8.2% interest\n\n**5. Rashtriya Vayoshri Yojana (if needed)**\n- Free: Spectacles, Walking stick, Hearing aid, etc.\n\nMudhalil Old Age Pension apply pannalaamaa?\n\nUser: Aamaa pension apply pannanum. Online mudiyumaa?\n\nAssistant: **Old Age Pension - Online Application:**\n\n**Website:** tneservices.tn.gov.in\n\n**Steps:**\n1. Go to tneservices.tn.gov.in\n2. Register: Mobile number, Create login\n3. Services → Social Security → Old Age Pension\n4. Fill application form\n5. Upload documents\n6. Submit\n7. Note: Application number\n\n**Documents to Upload:**\n1. **Age Proof:** Aadhaar / Voter ID / Birth Certificate\n2. **Address Proof:** Aadhaar / Ration Card\n3. **Income Certificate:** (Less than ₹24,000/year) - from Taluk Office\n4. **Ration Card:** Front page\n5. **Bank Passbook:** First page\n6. **Passport Photo:** Recent\n\n**Income Certificate illana mudhalil adhu vaanganum:**\n- Taluk Office / tneservices.tn.gov.in\n- VAO verification nadakkum\n- 7-15 days\n\nIncome certificate irukka Appa kitta?\n\nUser: Income certificate illa. Adhu eppadi vaanguvadhu?\n\nAssistant: **Income Certificate - Process:**\n\n**Online (Easier):**\n1. tneservices.tn.gov.in → Income Certificate\n2. Register/Login\n3. Fill: Name, Address, Family members, Income sources\n4. Upload: Aadhaar, Address proof\n5. Submit + Pay ₹20 (online)\n\n**Offline:**\n1. VAO (Village Administrative Officer) office\n2. Fill application\n3. Submit documents\n4. VAO enquiry (may visit home)\n\n**After Apply:**\n- VAO verification\n- Revenue Inspector check\n- Tahsildar approval\n- Certificate issue\n\n**Time:** 7-15 days\n\n**Documents Needed:**\n- Aadhaar Card\n- Ration Card\n- Self-declaration of income\n- If employed before: Last salary slip / relieving letter\n\n**Appa's case:** Retired, no current income, Rice card holder → Easy approval\n\n**Tip:** Apply online - faster, track status easily\n\nOnline apply pannalaamaa?\n\nUser: Okay apply panren. CMCHIS health card eppadi vaanguvadhu?\n\nAssistant: **CMCHIS Health Card (₹5 Lakh Free Treatment):**\n\n**Good News:** Rice card holder na automatic eligibility!\n\n**How to Get Card:**\n\n**Option 1: Government Hospital (Easiest)**\n1. Nearest Government Hospital poganum\n2. Ayushman Mitra / CMCHIS counter find pannunga\n3. Documents kaattunga:\n   - Aadhaar Card\n   - Ration Card\n4. They'll check eligibility online\n5. Photo capture\n6. Card print - **Same day!**\n7. **Cost: FREE**\n\n**Option 2: Online Check + Hospital**\n1. pmjay.gov.in → \"Am I Eligible\"\n2. Enter Ration Card number\n3. If eligible → Go to hospital for card\n\n**Option 3: CSC (Common Service Center)**\n- Nearest CSC\n- Same documents\n- Card issue\n\n**What's Covered:**\n- ₹5 lakh per family per year\n- 1,500+ surgeries and treatments\n- Empanelled hospitals (Govt + Private)\n- Cashless treatment\n\n**Not Covered:**\n- OPD (Outpatient)\n- Cosmetic surgery\n- Fertility treatment\n\n**Tip:** Card vaangina, list of empanelled hospitals vaangunga - emergency-ku useful.\n\nGovernment hospital near-by irukka?\n\nUser: GH irukku. Appa-ku regular medicines vendum - BP, Sugar. Cheap-aa enga vaanguvadhu?\n\nAssistant: **Cheap Medicines for Senior Citizens:**\n\n**1. Jan Aushadhi Kendra (Best Option!)**\n- **Discount:** 50-90% off MRP!\n- **Quality:** Same as branded (WHO-GMP certified)\n- **Find:** janaushadhi.gov.in → Store Locator\n- Chennai-la 100+ stores irukku\n\n**Price Comparison:**\n| Medicine | Market | Jan Aushadhi |\n|----------|--------|-------------|\n| Metformin 500mg (10 tabs) | ₹25 | ₹3.50 |\n| Amlodipine 5mg (10 tabs) | ₹30 | ₹4 |\n| Atorvastatin 10mg (10 tabs) | ₹80 | ₹12 |\n\n**2. Government Hospital Pharmacy**\n- Free medicines (with prescription)\n- GH OPD-la prescription vaangunga\n- Pharmacy-la free medicines\n\n**3. Amma Pharmacy (TN Govt)**\n- Subsidized rates\n- CMCHIS card holders - additional discount\n\n**4. Generic Medicine Shops**\n- Any pharmacy-la \"generic\" medicine kekuinga\n- Same salt, less price\n\n**For Regular BP/Sugar:**\n\n**Best Strategy:**\n1. GH-la OPD poganum (₹5-10 registration)\n2. Doctor prescription vaangunga\n3. Same hospital pharmacy - FREE medicines\n4. Illa na Jan Aushadhi store - cheap\n\n**Tip:** CMCHIS card-la OPD free, medicines free at GH!\n\nMonthly medicines list irukka? Jan Aushadhi-la kidaikuma check pannalaam.\n\nUser: Super! Bus-la free travel eppadi? Pass vaangumaa?\n\nAssistant: **Senior Citizen Free Bus Travel (TN):**\n\n**Eligibility:**\n- Age: 60+ years\n- Valid in: Ordinary buses (not AC, not Express)\n\n**No Pass Needed!**\n\n**How it Works:**\n1. Carry: **Age proof** (Aadhaar / Voter ID showing DOB)\n2. Show to conductor when asked\n3. Free travel!\n\n**What's Free:**\n- TNSTC Ordinary buses\n- Town buses (ordinary)\n- Mofussil ordinary buses\n\n**Not Free:**\n- AC buses\n- Express / Super Deluxe\n- Private buses\n\n**Optional: Senior Citizen ID Card**\n- From: District Social Welfare Office\n- Useful for: Multiple benefits at one place\n- Carry along with Aadhaar\n\n**For Women 58+:**\n- Same benefits\n- Free travel in ordinary buses\n\n**Railway Discount:**\n- Male 60+: 40% discount\n- Female 58+: 50% discount\n- Book online: irctc.co.in (auto-applied)\n- Counter: Show age proof\n\n**Pro Tip:** Voter ID best - photo + DOB clear-aa irukku, easy to show conductor.\n\nVera doubt irukka? Summary sheet tharattumaa?\n\nUser: Ella benefits-um summary pannunga please\n\nAssistant: **Senior Citizen Benefits Summary (Appa - 62 years, Rice Card Holder):**\n\n**MONTHLY INCOME:**\n| Benefit | Amount | Where to Apply |\n|---------|--------|----------------|\n| Old Age Pension | ₹1,000/month | tneservices.tn.gov.in |\n| (80+ aana) | ₹1,500/month | Auto upgrade |\n\n**HEALTH:**\n| Benefit | Value | Where |\n|---------|-------|-------|\n| CMCHIS Card | ₹5 lakh/year free treatment | Government Hospital |\n| Free Medicines | Unlimited | GH Pharmacy |\n| Cheap Medicines | 50-90% off | Jan Aushadhi Kendra |\n| Free Aids | Spectacles, Walking stick, Hearing aid | District Social Welfare |\n\n**TRAVEL:**\n| Mode | Discount | How |\n|------|----------|-----|\n| TN Ordinary Bus | 100% FREE | Show Aadhaar/Voter ID |\n| Railway | 40% discount | Auto at booking |\n| Air India | 50% (select routes) | At booking |\n\n**BANKING:**\n| Scheme | Benefit |\n|--------|--------|\n| Senior Citizen FD | Extra 0.5% interest |\n| SCSS | 8.2% interest (up to ₹30 lakh) |\n| PMVVY (LIC) | 7.4% guaranteed pension |\n\n**TO-DO LIST:**\n1. ✅ Income Certificate - tneservices.tn.gov.in\n2. ✅ Old Age Pension - tneservices.tn.gov.in\n3. ✅ CMCHIS Card - Government Hospital\n4. ✅ Find Jan Aushadhi - janaushadhi.gov.in\n\n**HELPLINE:**\n- Elder Helpline: 14567 (24x7)\n- Any abuse/neglect - call immediately\n\nPrint pannikonga! All the best to Appa!",
+          "topic": "welfare",
+          "language": "tanglish",
+          "format": "multi_turn_dialogue",
+          "key_learnings": [
+            "Old Age Pension: ₹1,000/month for 60+ with low income",
+            "CMCHIS provides ₹5 lakh free treatment",
+            "Jan Aushadhi offers 50-90% cheaper medicines",
+            "Free bus travel - just show age proof",
+            "Railway 40% discount for senior men"
+          ]
+        },
+        {
+          "id": "CONV005",
+          "question": "[Multi-turn dialogue] First Time Home Buyer - PMAY and Registration - Full conversation guide",
+          "answer": "User: First time veedu vaanga porein. PMAY subsidy kidaikumaa? Process enna?\n\nAssistant: Congrats on your first home! PMAY subsidy kedaikum if you're eligible. Few questions:\n\n1. Unga annual income evvalavu?\n2. Married aa? Spouse income?\n3. Unga peyarla or spouse peyarla vera veedu/flat irukka India-la?\n4. Metro city (Chennai, etc.) or non-metro?\n5. Flat/Apartment or Individual house?\n\nIndha details sollunga, eligibility check pannalam.\n\nUser: Annual income 8 lakhs. Married, wife works - 4 lakhs. No other property. Chennai. Apartment vaanga porein.\n\nAssistant: **PMAY Eligibility Check:**\n\n**Combined Income:** ₹12 lakh (8L + 4L)\n\n**Category:** MIG-I (₹6-12 lakh annual income)\n\n**Eligible: ✓**\n\n**PMAY-Urban Benefits for You:**\n\n| Parameter | Your Eligibility |\n|-----------|------------------|\n| Interest Subsidy | 4% |\n| Max Loan | ₹9 lakh |\n| Max Subsidy | ~₹2.35 lakh |\n| Carpet Area | Up to 160 sq.m |\n\n**What this means:**\n- ₹2.35 lakh subsidy on home loan!\n- Subsidy credited upfront to loan\n- EMI reduces significantly\n\n**EMI Impact Example:**\n- Loan: ₹50 lakh, 20 years\n- Without PMAY: ~₹43,000/month\n- With PMAY: ~₹40,000/month (saves ₹3,000/month!)\n\n**Important:** Subsidy is on max ₹9 lakh, not total loan.\n\nApartment select pannitteenga? RERA check panniteengalaa?\n\nUser: Oru flat shortlist panniten. RERA enna? Check pannanum?\n\nAssistant: **RERA - Real Estate Regulatory Authority**\n\n**Why Important:**\n- Builder accountability\n- Project details transparency\n- Delivery timeline guarantee\n- Buyer protection\n- Delayed delivery compensation\n\n**RERA Check - MUST DO!**\n\n**Step 1: Get RERA Number**\n- Ask builder for RERA Registration Number\n- Format: TN/01/Building/0XXX/2024\n\n**Step 2: Verify Online**\n1. Website: rera.tn.gov.in\n2. Search → Project\n3. Enter RERA number\n4. Check:\n   - Project name matches?\n   - Builder name correct?\n   - Approved units?\n   - Completion date?\n   - Any complaints?\n\n**Red Flags:**\n- No RERA registration\n- RERA expired\n- Multiple complaints\n- Delayed projects history\n\n**Builder shortcuts-la flat sell pannalaam - RERA registration illama. Avoid pannunga!**\n\nFlat RERA number kedachcha? Check pannalaamaa?\n\nUser: RERA number irukku, verify panniten - okay irukku. Loan process eppadi? PMAY subsidy automatic aa?\n\nAssistant: Good! RERA verified. Now loan + PMAY:\n\n**Home Loan + PMAY Process:**\n\n**Step 1: Choose Bank**\n- Compare interest rates\n- Check: SBI, HDFC, ICICI, LIC Housing\n- Current rates: 8.5-9.5%\n- Use online EMI calculators\n\n**Step 2: Loan Application**\n1. Bank visit / Online apply\n2. Documents submit\n3. Income verification\n4. Property verification (Bank does this)\n5. Sanction letter\n\n**Step 3: PMAY Subsidy (Not Automatic!)**\n\n**You have to apply separately:**\n\n**Option 1: Through Bank (Easier)**\n- Tell bank: \"PMAY subsidy vendum\"\n- Bank submits to Central Nodal Agency (CNA)\n- CNA verifies eligibility\n- Subsidy credited to loan account\n\n**Option 2: Online**\n- pmay-urban.gov.in\n- Fill beneficiary form\n- Link to bank loan\n\n**Important Documents for PMAY:**\n- Aadhaar (Both husband & wife)\n- Income proof\n- Affidavit: No pucca house in India\n- Bank loan sanction letter\n\n**Timeline:**\n- Loan sanction: 1-2 weeks\n- PMAY subsidy credit: 2-3 months after disbursement\n\nBank select panniteengala?\n\nUser: SBI apply pannalaam nu irukken. Registration charges evvalavu aagum?\n\nAssistant: **Property Registration Costs (Chennai/TN):**\n\n**Your Apartment - Cost Calculation:**\n\nLet's say Flat Value: ₹60 lakhs (example)\n\n| Charge | Rate | Amount |\n|--------|------|--------|\n| Stamp Duty | 7% | ₹4,20,000 |\n| Registration Fee | 4% | ₹2,40,000 |\n| **Total** | **11%** | **₹6,60,000** |\n\n**Additional Costs:**\n| Item | Approximate |\n|------|-------------|\n| Legal charges | ₹10,000-25,000 |\n| Loan processing | 0.5-1% of loan |\n| GST (under construction) | 5% |\n| Maintenance deposit | 1-2 years advance |\n| Corpus fund | ₹50,000-2,00,000 |\n\n**GST Note:**\n- Ready-to-move: No GST (already paid)\n- Under construction: 5% GST (affordable housing) or 12%\n\n**Women Rebate:**\n- If wife is co-owner/sole owner:\n- Stamp Duty: 1% less (7% → 6%)\n- Savings: ₹60,000 on ₹60L property!\n\n**Tip:** Make wife joint owner for stamp duty savings!\n\n**Payment Breakdown:**\n- Booking: 10%\n- Agreement: 10%\n- Construction milestones: 70%\n- Registration: 10%\n\nFlat evvalavu price?\n\nUser: 55 lakhs flat. Wife-um owner-aa add pannalaam. Registration process enna?\n\nAssistant: **₹55 Lakh Flat - Registration Cost:**\n\n**With Wife as Co-Owner (1% rebate):**\n| Charge | Rate | Amount |\n|--------|------|--------|\n| Stamp Duty | 6% | ₹3,30,000 |\n| Registration Fee | 4% | ₹2,20,000 |\n| **Total** | **10%** | **₹5,50,000** |\n\n**Savings:** ₹55,000 (vs 7% stamp duty)\n\n**Registration Process:**\n\n**Step 1: Agreement Drafting**\n- Builder provides draft\n- Lawyer review (recommended - ₹5,000-10,000)\n- Negotiate terms if needed\n\n**Step 2: E-Stamping**\n- tnreginet.gov.in → E-stamping\n- Pay stamp duty online\n- Get e-stamp paper\n\n**Step 3: Book SRO Slot**\n- tnreginet.gov.in → Appointment\n- Select Sub-Registrar Office\n- Book date\n\n**Step 4: Registration Day**\n\n**Who should come:**\n- You (Buyer)\n- Wife (Co-owner)\n- Builder representative\n- 2 Witnesses (with Aadhaar)\n\n**Documents to carry:**\n- Sale Agreement (on e-stamp)\n- Builder's documents (Mother deed, EC, etc.)\n- Both Aadhaar + PAN (Original + Copy)\n- Passport photos (4 each)\n- Bank loan sanction letter\n- PMAY application copy\n- Witness Aadhaar\n\n**Step 5: At SRO**\n- Document verification\n- Biometric capture (all parties)\n- Registration complete\n- Get registered document copy\n\n**Time:** 1-2 hours at SRO\n\n**After Registration:**\n- Patta/Khata transfer (within 3 months)\n- Property tax registration\n- Society membership\n\nBuilder agreement ready aa?\n\nUser: Almost ready. Oru doubt - veetla already oru old property irukku Appa peyarla. Adhu PMAY-ku problem aa?\n\nAssistant: **Important Question! Let me clarify:**\n\n**PMAY Rule:**\n\"Beneficiary family should not own a pucca house in any part of India\"\n\n**\"Beneficiary Family\" means:**\n- Husband\n- Wife\n- Unmarried children\n\n**NOT included:**\n- Parents\n- Married siblings\n- In-laws\n\n**Your Case:**\n- Appa peyarla property = **No Problem!**\n- Appa is not \"beneficiary family\"\n- You + Wife don't own any property = **Eligible!**\n\n**But Important:**\n1. **Affidavit required:** \"We (husband + wife) don't own pucca house anywhere in India\"\n2. **Declaration is legal document** - false declaration = serious consequences\n\n**Double Check:**\n- Any property in YOUR name? Even inherited share?\n- Any property in WIFE's name?\n- Any jointly owned with siblings?\n\nIf answer is NO for all → **You're 100% eligible!**\n\nConfirm pannunga - any property unga or wife peyarla irukka?\n\nUser: Illa, enga peyarla onnum illa. Thanks for clarifying! Final checklist tharunga please.\n\nAssistant: **FIRST HOME PURCHASE - COMPLETE CHECKLIST:**\n\n**BEFORE BOOKING:**\n- [ ] RERA verification ✓\n- [ ] Builder background check\n- [ ] Visit site & model flat\n- [ ] Check CMDA/DTCP approval\n- [ ] Compare 3-4 similar properties\n\n**LOAN & PMAY:**\n- [ ] Compare bank interest rates\n- [ ] SBI/Other bank loan apply\n- [ ] Submit income documents\n- [ ] Get loan sanction letter\n- [ ] **Apply PMAY through bank** - Don't forget!\n- [ ] PMAY affidavit (no other property)\n\n**BEFORE REGISTRATION:**\n- [ ] Lawyer verify all documents\n- [ ] Check: Mother deed, EC (30 years), Tax receipts\n- [ ] Verify flat carpet area\n- [ ] Get OC/CC from builder\n- [ ] Final payment calculation\n\n**REGISTRATION:**\n- [ ] E-stamp purchase (tnreginet.gov.in)\n- [ ] Book SRO appointment\n- [ ] **Wife as co-owner** (1% saving) ✓\n- [ ] All documents ready\n- [ ] 2 witnesses arranged\n- [ ] Registration complete\n\n**AFTER REGISTRATION:**\n- [ ] Patta/Khata transfer - Taluk/Corporation\n- [ ] Property tax registration\n- [ ] Electricity connection transfer\n- [ ] Society membership\n- [ ] Home insurance (recommended)\n\n**COSTS SUMMARY (₹55L Flat):**\n| Item | Amount |\n|------|--------|\n| Stamp Duty (6%) | ₹3,30,000 |\n| Registration (4%) | ₹2,20,000 |\n| Legal | ₹10,000 |\n| Loan Processing | ₹25,000 |\n| Miscellaneous | ₹50,000 |\n| **Total Extra** | **~₹6.35 lakh** |\n\n**PMAY Subsidy:** ~₹2.35 lakh back!\n\n**Net Extra Cost:** ~₹4 lakh\n\n**IMPORTANT CONTACTS:**\n- RERA TN: rera.tn.gov.in\n- Registration: tnreginet.gov.in\n- PMAY: pmay-urban.gov.in\n- SBI Home Loan: 1800-425-3800\n\nAll the best for your new home! 🏠",
+          "topic": "property",
+          "language": "tanglish",
+          "format": "multi_turn_dialogue",
+          "key_learnings": [
+            "PMAY-Urban gives up to ₹2.35 lakh subsidy for MIG-I",
+            "RERA verification is mandatory before buying",
+            "Wife as co-owner saves 1% stamp duty",
+            "Total registration cost is ~11% of property value",
+            "Parent's property doesn't affect PMAY eligibility"
+          ]
+        },
+        {
+          "id": "CONV006",
+          "question": "[Multi-turn dialogue] Cyber Fraud Recovery Process - Full conversation guide",
+          "answer": "User: Ennoda account-la irundhu 25,000 online-la poyiduchu. Enna pannanum?\n\nAssistant: **URGENT! Immediately pannunga:**\n\n**RIGHT NOW (Next 5 minutes):**\n\n1. **Bank-ku Call:**\n   - SBI: 1800-111-111\n   - HDFC: 1800-202-3344\n   - ICICI: 1800-102-4242\n   - Tell: \"Unauthorized transaction, block my account\"\n\n2. **Note down:**\n   - Transaction date & time\n   - Amount\n   - Transaction ID (SMS-la irukkum)\n\nBank call panniteengala? Enna bank?\n\nUser: SBI. Call pannitein, account freeze pannittanga\n\nAssistant: Good! Fast action. Now next steps:\n\n**Next 30 Minutes - Cyber Crime Report:**\n\n**Step 1: Online Complaint (Fastest)**\n1. Website: **cybercrime.gov.in**\n2. Click: \"Report Cyber Crime\"\n3. Select: \"Financial Fraud\"\n4. Fill:\n   - Your details\n   - Bank details\n   - Transaction details\n   - Suspect details (if any)\n5. Upload: Bank SMS screenshot\n6. Submit\n7. **Note: Complaint Number**\n\n**Step 2: Call 1930**\n- National Cyber Crime Helpline\n- 24x7 available\n- They'll also register complaint\n- Helps freeze suspect's account faster!\n\n**Why urgency matters:**\n- Within 24 hours = 70-80% recovery chance\n- After 48 hours = Drops to 30-40%\n- After 1 week = Very difficult\n\ncybercrime.gov.in complaint panniteengala?\n\nUser: Complaint panniten, number kedaichuchu. Ippo enna pannanum?\n\nAssistant: **Complaint Number - KEEP SAFE!**\n\n**Next Steps:**\n\n**Step 1: Written Bank Complaint (Within 24 hours)**\n1. Go to your SBI branch\n2. Write complaint letter:\n   - \"Unauthorized transaction of ₹25,000 on [date]\"\n   - Transaction ID\n   - Cyber complaint number\n   - Request: \"Reverse transaction and investigate\"\n3. Get acknowledgment with date stamp\n4. Keep copy\n\n**Step 2: Police FIR (Within 24 hours)**\n\n**Online:** eservices.tnpolice.gov.in → Cyber Crime\n\n**Or Visit:** \n- Cyber Crime Police Station\n- Any Police Station (they'll transfer)\n\n**Documents for FIR:**\n- Bank statement showing fraud transaction\n- SMS screenshots\n- Cyber crime complaint number\n- ID proof\n\n**Step 3: Email to Bank Nodal Officer**\n- SBI Nodal Officer: cms.gm@sbi.co.in\n- Subject: \"Cyber Fraud - Urgent - ₹25,000\"\n- Attach: Cyber complaint, Transaction details\n\nBank branch pogureengala ippo?\n\nUser: Poittu vandhutein. FIR-um panniten. Panam thirumba varum?\n\nAssistant: Good work! Recovery chances:\n\n**RBI Rules - Bank's Liability:**\n\n| Reporting Time | Your Loss (Max) |\n|----------------|----------------|\n| Within 3 days | ₹0 (Full refund if not your fault) |\n| 4-7 days | ₹10,000 max |\n| After 7 days | Bank's discretion |\n\n**Your Case:**\n- Reported same day ✓\n- You should get **FULL REFUND** if:\n  - You didn't share OTP\n  - You didn't share password\n  - No negligence from your side\n\n**Bank Investigation Process:**\n1. Bank has **10 working days** to investigate\n2. They'll check: Was it system failure or user error?\n3. **90 days maximum** to resolve\n\n**If Bank Denies:**\n1. First Appeal: Branch Manager\n2. Second: Bank's Grievance Officer\n3. Third: **Banking Ombudsman** (cms.rbi.org.in)\n4. Final: Consumer Court\n\n**Track Your Case:**\n- Bank complaint status: Call branch\n- Cyber complaint: cybercrime.gov.in → Track\n\n**Question:** Eppadi panam poachu? OTP share panneenga? Link click panneenga?\n\nUser: Link click pannitein - SBI update nu message vandhuchu, adha click pannein\n\nAssistant: Ah, **Phishing Scam** - Very common!\n\n**What Happened:**\n- Fake SBI SMS\n- Fake website (looks real)\n- You entered details\n- They used it to transfer money\n\n**Impact on Refund:**\n\n**Honest Assessment:**\n- Bank may argue \"customer negligence\"\n- But still fight for refund!\n- Many cases - bank still refunds 50-100%\n\n**Strengthen Your Case:**\n\n**Argument 1:** \"Sophisticated scam\"\n- SMS looked genuine\n- Website looked real\n- Not obvious fraud\n\n**Argument 2:** \"Bank's responsibility too\"\n- Why did bank allow suspicious transaction?\n- Why no OTP for large amount? (Wait - OTP vandhucha?)\n\n**Argument 3:** \"Immediate reporting\"\n- You reported within hours\n- Shows you're genuine victim\n\n**What to Write in Bank Complaint:**\n\"I was victim of sophisticated phishing scam using fake bank communication. Despite being a careful customer, the fraudulent website was indistinguishable from genuine SBI website. I reported immediately upon discovering fraud. As per RBI circular, bank should credit the amount within 10 days.\"\n\nOTP message vandhucha? Enter panneenga?\n\nUser: OTP vandhuchi, enter pannitten nu nenaikkuren. Full details nenaivila illa tension-la\n\nAssistant: **Understandable. Let's document everything:**\n\n**For Your Records (Write down now):**\n\n1. **Timeline:**\n   - Date: ?\n   - Time of SMS received: ?\n   - Time you clicked link: ?\n   - Time you noticed money gone: ?\n   - Time you called bank: ?\n\n2. **What you entered on fake site:**\n   - Card number? (Probably yes)\n   - CVV? (Maybe)\n   - OTP? (Yes)\n   - Net banking password? (Maybe)\n\n**Immediate Security Actions:**\n\n**Do RIGHT NOW:**\n1. **Change SBI Net Banking Password**\n   - onlinesbi.sbi.co.in → Forgot Password\n   \n2. **Change ATM PIN**\n   - Call SBI or use SBI YONO app\n\n3. **Request New Debit Card**\n   - Old card details compromised\n   - Block old card, request new\n\n4. **Check Other Accounts**\n   - Same password used elsewhere?\n   - Change those too!\n\n5. **Enable Transaction Alerts**\n   - SMS + Email alerts ON\n   - Transaction limit set\n\n**Fraudsters may try again!** - Common pattern\n\nNet banking password change panniteengala?\n\nUser: Pannitten. Bank eppo reply pannuvanga? Vera enna pannanum?\n\nAssistant: **Bank Timeline & Next Steps:**\n\n**Bank Response Timeline:**\n| Stage | Time |\n|-------|------|\n| Acknowledgment | 24-48 hours |\n| Investigation | 10 working days |\n| Resolution | Up to 90 days |\n| Credit (if approved) | Within 10 days of decision |\n\n**What to Do Now:**\n\n**Week 1:**\n- [ ] Follow up call to branch (after 3 days)\n- [ ] Get written acknowledgment if not received\n- [ ] Check cyber complaint status: cybercrime.gov.in\n\n**Week 2:**\n- [ ] If no response, email escalation:\n  - Branch Manager\n  - cms.gm@sbi.co.in (Nodal Officer)\n- [ ] Reference: RBI Circular on Limiting Liability\n\n**Week 3-4:**\n- [ ] If rejected/no response: Banking Ombudsman\n- [ ] cms.rbi.org.in → Lodge Complaint\n- [ ] Free service, usually effective\n\n**Keep Ready:**\n- All complaint numbers\n- Bank acknowledgments\n- FIR copy\n- SMS/Email screenshots\n- Timeline document\n\n**Realistic Expectation:**\n- Phishing with OTP = Partial to Full refund possible\n- Fight ka laga - don't give up!\n- Ombudsman usually sides with customer\n\nVera doubt?\n\nUser: Thanks! Future-la eppadi safe-aa irukkuradhu?\n\nAssistant: **Cyber Safety Tips - MUST FOLLOW:**\n\n**SMS/Email Safety:**\n| Red Flag | What to Do |\n|----------|------------|\n| \"Click urgent link\" | NEVER click - Go to official app/website directly |\n| \"Your account blocked\" | Call bank directly, don't use number in SMS |\n| \"Update KYC immediately\" | Banks never ask via SMS link |\n| Shortened URLs (bit.ly) | Never click from unknown source |\n\n**OTP Rules:**\n- **NEVER share OTP with anyone** - Even if they say \"bank officer\"\n- OTP valid for YOUR transactions only\n- Bank staff will NEVER ask OTP\n\n**Banking Safety:**\n\n1. **SBI YONO App** - Use app, not website\n   - Genuine app from Play Store/App Store\n   - Biometric login\n\n2. **Transaction Limits**\n   - Set daily limit (₹25,000 for example)\n   - UPI limit separate\n\n3. **Alerts**\n   - SMS + Email both ON\n   - Immediate notification\n\n4. **Two Accounts Strategy**\n   - Savings account: Large amounts (no net banking)\n   - Current/separate: Daily use (limited balance)\n\n**Mobile Safety:**\n- Don't install apps from links\n- Keep phone updated\n- Use official banking apps only\n\n**If Suspicious Call:**\n- Hang up\n- Call bank official number\n- Report to 1930\n\n**Quick Reference Card:**\n```\n✓ Official app only\n✓ Never share OTP\n✓ Never click SMS links\n✓ Set transaction limits\n✓ When in doubt - CALL BANK\n```\n\n**Emergency Numbers:**\n- Cyber Crime: 1930\n- SBI: 1800-111-111\n- RBI Ombudsman: 14448\n\nStay safe! Anything else?",
+          "topic": "legal",
+          "language": "tanglish",
+          "format": "multi_turn_dialogue",
+          "key_learnings": [
+            "Report cyber fraud within 3 days for zero liability",
+            "cybercrime.gov.in and 1930 for immediate reporting",
+            "Bank must resolve within 90 days",
+            "Banking Ombudsman is free and effective for appeals",
+            "Never click links in SMS - go to official app directly"
+          ]
+        },
+        {
+          "id": "CONV007",
+          "question": "[Multi-turn dialogue] Marriage Registration After Hindu Wedding - Full conversation guide",
+          "answer": "User: Last month wedding aachu. Marriage certificate vaanganum. Eppadi?\n\nAssistant: Congrats! Marriage registration important - passport, visa, bank, property ellathukum use aagum.\n\n**Quick Questions:**\n1. Hindu marriage aa? Other religion?\n2. Wedding enga nadandhuchu - TN or other state?\n3. Bride & Groom - both TN residents aa?\n\nIndha details sollunga, exact process sollren.\n\nUser: Hindu marriage. Chennai-la nadandhuchu. Both TN residents.\n\nAssistant: Perfect! Hindu Marriage Act-la register pannalam:\n\n**Two Options:**\n\n**Option 1: Compulsory Registration (TN Rules)**\n- Within 1 year of marriage\n- No delay fee\n- Easier process\n\n**Option 2: After 1 year**\n- Additional affidavit\n- Newspaper notice\n- More documents\n\nUnga wedding evvalavu days aachu?\n\nUser: 3 weeks aachu. Online apply pannalaamaa?\n\nAssistant: **Yes! Online Apply Available:**\n\n**Step 1: tnreginet.gov.in**\n1. Go to tnreginet.gov.in\n2. Register / Login\n3. Select: Marriage Registration\n4. Choose: Hindu Marriage Act\n5. Fill Form:\n   - Husband details\n   - Wife details\n   - Marriage details (date, place, priest)\n6. Upload documents\n7. Pay fee online: ₹100-500\n8. Book SRO appointment\n\n**Step 2: Gather Documents**\n\n**Both parties:**\n- Age Proof (Aadhaar / DOB Certificate / SSLC)\n- Address Proof\n- Passport size photos (4 each)\n\n**Marriage Proof (Any 2):**\n- Wedding Invitation Card\n- Wedding Photos (with clear faces)\n- Priest's Certificate\n- Hall booking receipt\n\n**Witnesses:**\n- 2 witnesses with Aadhaar copy\n- (Usually parents or relatives)\n\n**Important:** \n- Husband age: 21+\n- Wife age: 18+\n- Both should be unmarried before this wedding\n\nDocuments ready aa?\n\nUser: Documents ready. SRO la enna nadakkum? Eppo poganum?\n\nAssistant: **SRO Visit Process:**\n\n**Who Should Come:**\n1. Husband (with all original documents)\n2. Wife (with all original documents)\n3. 2 Witnesses (with Aadhaar original)\n\n**At SRO:**\n\n**Step 1: Token/Appointment**\n- Show online booking\n- Get token number\n\n**Step 2: Document Verification**\n- Officer checks all documents\n- Verifies ages\n- Checks photos\n\n**Step 3: Signing**\n- Husband signs\n- Wife signs\n- Witnesses sign\n- Officer signs\n\n**Step 4: Biometric**\n- All 4 persons - fingerprint & photo\n\n**Step 5: Certificate**\n- Marriage Certificate issued\n- Same day!\n- Certified copy: Additional ₹50\n\n**Time:** 1-2 hours (depending on crowd)\n\n**Best Time to Go:**\n- Reach by 10:30 AM\n- Avoid month-end\n- Avoid Fridays (rush)\n\n**After Certificate:**\n- Wife can change name in documents\n- Aadhaar, PAN, Passport update possible\n\nSRO appointment book panniteengala?\n\nUser: Book pannitten. Oru doubt - wife name change pannumaa documents-la?\n\nAssistant: **Wife's Name Change - Optional!**\n\n**Two Options:**\n\n**Option 1: No Name Change**\n- Perfectly legal\n- Many women keep maiden name\n- Marriage certificate shows maiden name\n- No issues with any document\n\n**Option 2: Name Change**\n- Add husband's surname\n- Or completely change to husband's family name\n- Requires updating all documents\n\n**If Wife Wants to Change:**\n\n**Documents to Update:**\n1. **Aadhaar** - Aadhaar Seva Kendra (₹50)\n2. **PAN** - onlineservices.nsdl.com (₹107)\n3. **Passport** - passportindia.gov.in (₹1,500)\n4. **Voter ID** - voters.eci.gov.in (Free)\n5. **Bank Account** - Bank branch (Free)\n6. **Driving License** - parivahan.gov.in (₹200-500)\n\n**Order of Update:**\n1. Aadhaar first (base document)\n2. PAN second (link with Aadhaar)\n3. Then others\n\n**Documents Needed for Each:**\n- Marriage Certificate\n- Old document\n- Husband's ID proof (some places)\n\n**Time:** 2-4 weeks for all updates\n\nWife name change panna plan irukka?\n\nUser: Wife name add pannanum. Aadhaar-la eppadi?\n\nAssistant: **Wife Aadhaar Name Change:**\n\n**Can't do fully online - Need to visit Aadhaar Seva Kendra**\n\n**Step 1: Book Appointment (Optional but better)**\n- appointments.uidai.gov.in\n- Select: Update Aadhaar\n- Choose nearby center\n\n**Step 2: Documents to Carry**\n- **Original Aadhaar Card** (wife's)\n- **Marriage Certificate** (Original + Copy)\n- **Husband's Aadhaar** (Copy)\n- **Passport Photo** (if photo update needed)\n\n**Step 3: At Aadhaar Center**\n1. Fill Update form\n2. Select: Name Change + Address Change (if needed)\n3. Submit documents\n4. Biometric verification\n5. Pay: ₹50\n6. Get acknowledgment slip\n\n**Step 4: New Aadhaar**\n- URN (Update Request Number) on slip\n- Track: uidai.gov.in\n- New Aadhaar by post: 2-3 weeks\n- Download e-Aadhaar: Same time\n\n**Name Format Options:**\n- Add surname: \"Priya Kumar\" → \"Priya Ravi Kumar\"\n- Full change: \"Priya Kumar\" → \"Priya Ravi\"\n- Both acceptable\n\n**Important:**\n- New Aadhaar same number\n- Photo can also be updated (recommended)\n\n**After Aadhaar:**\n- PAN update becomes easy (Aadhaar OTP)\n- Bank update: Just show new Aadhaar\n\nAadhaar center nearby irukka? Appointment book pannalaamaa?\n\nUser: Okay. PAN update automatic aagumaa Aadhaar link irundhaa?\n\nAssistant: **Good Question! No - Not Automatic**\n\n**PAN Won't Auto-Update!**\n- PAN-Aadhaar link irundhalum name different irukkalam\n- But mismatch irundha problems varum\n- So update is MUST\n\n**PAN Name Change Process:**\n\n**After Aadhaar Updated:**\n\n**Step 1: Online Apply**\n1. onlineservices.nsdl.com\n2. \"Changes or Correction in PAN Data\"\n3. Select: Change in Name\n4. Enter: Old PAN details\n5. Enter: New name (as per new Aadhaar)\n6. Upload: New Aadhaar + Marriage Certificate\n7. Pay: ₹107\n8. Submit\n\n**Step 2: Verification**\n- Aadhaar OTP verification\n- Or: Sign & send documents by post\n\n**Step 3: New PAN Card**\n- Same PAN number (number doesn't change)\n- New card with new name\n- Time: 15-20 days\n\n**PAN-Aadhaar Re-linking:**\n- After name change, re-verify link\n- eportal.incometax.gov.in → Link Aadhaar Status\n\n**Mismatch Problem:**\nIf names don't match:\n- ITR filing issues\n- Bank KYC problems\n- Mutual Fund issues\n\n**Tip:** Keep both names similar across documents!\n\nShall I give complete name change checklist?\n\nUser: Yes please, complete checklist tharunga\n\nAssistant: **WIFE'S NAME CHANGE - COMPLETE CHECKLIST:**\n\n**ORDER OF UPDATE (Follow this sequence!):**\n\n**STEP 1: Marriage Certificate**\n- [ ] tnreginet.gov.in - Apply\n- [ ] SRO Visit - Both parties + 2 witnesses\n- [ ] Get certified copies (2-3)\n- **Time:** 1 day\n- **Cost:** ₹100-500\n\n**STEP 2: Aadhaar Card (Do First!)**\n- [ ] Book appointment: appointments.uidai.gov.in\n- [ ] Visit Aadhaar Seva Kendra\n- [ ] Documents: Old Aadhaar + Marriage Certificate + Husband Aadhaar copy\n- [ ] Pay ₹50\n- [ ] Download e-Aadhaar when ready\n- **Time:** 2-3 weeks\n- **Cost:** ₹50\n\n**STEP 3: PAN Card**\n- [ ] onlineservices.nsdl.com\n- [ ] Upload: New Aadhaar + Marriage Certificate\n- [ ] Pay ₹107\n- [ ] Verify PAN-Aadhaar link after\n- **Time:** 15-20 days\n- **Cost:** ₹107\n\n**STEP 4: Bank Account**\n- [ ] Visit branch\n- [ ] Documents: New Aadhaar + PAN + Marriage Certificate\n- [ ] Update: Name, Address, Nominee\n- [ ] Get new cheque book, debit card\n- **Time:** 7 days\n- **Cost:** Free\n\n**STEP 5: Voter ID**\n- [ ] voters.eci.gov.in → Form 8\n- [ ] Upload: New Aadhaar + Marriage Certificate\n- [ ] BLO verification\n- [ ] New EPIC issued\n- **Time:** 2-4 weeks\n- **Cost:** Free\n\n**STEP 6: Driving License (if applicable)**\n- [ ] parivahan.gov.in\n- [ ] Upload: New Aadhaar + Marriage Certificate\n- [ ] Pay ₹200-500\n- [ ] RTO visit for biometric\n- **Time:** 7-15 days\n- **Cost:** ₹200-500\n\n**STEP 7: Passport (if needed)**\n- [ ] passportindia.gov.in\n- [ ] Fresh passport or Re-issue\n- [ ] Documents: All updated + Marriage Certificate\n- [ ] PSK visit\n- [ ] Police verification\n- **Time:** 2-4 weeks\n- **Cost:** ₹1,500\n\n**OTHER UPDATES:**\n- [ ] Insurance policies - Nominee + Name\n- [ ] EPF (if employed) - Nomination\n- [ ] LIC policies\n- [ ] Demat account\n- [ ] Property (if joint owner)\n\n**TOTAL ESTIMATED:**\n- Time: 4-6 weeks for main documents\n- Cost: ~₹2,500-3,000\n\n**TIPS:**\n1. Keep 5 copies of Marriage Certificate\n2. Scan all documents - digital copies handy\n3. Update Aadhaar FIRST - base for everything\n4. Inform employer HR for records\n\n**QUICK REFERENCE:**\n| Document | Where | Time | Cost |\n|----------|-------|------|------|\n| Marriage Cert | SRO | 1 day | ₹500 |\n| Aadhaar | ASK | 2-3 weeks | ₹50 |\n| PAN | NSDL | 15-20 days | ₹107 |\n| Bank | Branch | 7 days | Free |\n| Voter ID | Online | 2-4 weeks | Free |\n| DL | RTO | 7-15 days | ₹500 |\n| Passport | PSK | 2-4 weeks | ₹1,500 |\n\nAll the best! Happy married life! 🎉",
+          "topic": "certificates",
+          "language": "tanglish",
+          "format": "multi_turn_dialogue",
+          "key_learnings": [
+            "Marriage registration within 1 year is easier",
+            "Both parties and 2 witnesses needed at SRO",
+            "Wife's name change is optional",
+            "Aadhaar should be updated first - base for all others",
+            "PAN-Aadhaar names must match"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "comprehensive_qa",
+      "category_tamil": "விரிவான கேள்வி-பதில்கள்",
+      "pairs": [
+        {
+          "id": "CQA001",
+          "question": "புதிய ஆதார் அட்டை எப்படி பெறுவது?",
+          "answer": "Visit nearest Aadhaar Enrollment Center (find at uidai.gov.in), carry identity proof (Voter ID/PAN/Passport), address proof (Ration Card/EB Bill), and age proof (Birth Certificate/SSLC). Biometric capture will be done. First enrollment is FREE. Aadhaar delivered within 90 days.",
+          "topic": "aadhaar",
+          "language": "pure_tamil",
+          "parallel_id": "CQA001T",
+          "key_points": [
+            "Free first enrollment",
+            "uidai.gov.in to find centers",
+            "ID + Address + Age proof needed",
+            "90 days delivery"
+          ],
+          "websites": [
+            "uidai.gov.in",
+            "appointments.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA001T",
+          "question": "Pudhiya Aadhaar card eppadi peruvadhu?",
+          "answer": "Visit nearest Aadhaar Enrollment Center (find at uidai.gov.in), carry identity proof (Voter ID/PAN/Passport), address proof (Ration Card/EB Bill), and age proof (Birth Certificate/SSLC). Biometric capture will be done. First enrollment is FREE. Aadhaar delivered within 90 days.",
+          "topic": "aadhaar",
+          "language": "tanglish",
+          "parallel_id": "CQA001",
+          "key_points": [
+            "Free first enrollment",
+            "uidai.gov.in to find centers",
+            "ID + Address + Age proof needed",
+            "90 days delivery"
+          ],
+          "websites": [
+            "uidai.gov.in",
+            "appointments.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA002",
+          "question": "ஆதாரில் முகவரி மாற்றம் எப்படி செய்வது?",
+          "answer": "Online: myaadhaar.uidai.gov.in → Login with OTP → Update Address → Upload new address proof → Pay ₹50. Address proof can be EB bill, bank statement, rent agreement. If no document, use Address Validation Letter (AVL) method where verifier at new address confirms.",
+          "topic": "aadhaar",
+          "language": "pure_tamil",
+          "parallel_id": "CQA002T",
+          "key_points": [
+            "Online at myaadhaar.uidai.gov.in",
+            "₹50 fee",
+            "Address proof upload",
+            "AVL option if no document"
+          ],
+          "websites": [
+            "myaadhaar.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA002T",
+          "question": "Aadhaar-la address change eppadi seyvadhu?",
+          "answer": "Online: myaadhaar.uidai.gov.in → Login with OTP → Update Address → Upload new address proof → Pay ₹50. Address proof can be EB bill, bank statement, rent agreement. If no document, use Address Validation Letter (AVL) method where verifier at new address confirms.",
+          "topic": "aadhaar",
+          "language": "tanglish",
+          "parallel_id": "CQA002",
+          "key_points": [
+            "Online at myaadhaar.uidai.gov.in",
+            "₹50 fee",
+            "Address proof upload",
+            "AVL option if no document"
+          ],
+          "websites": [
+            "myaadhaar.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA003",
+          "question": "ஆதார் - மொபைல் எண் மாற்றம் எப்படி?",
+          "answer": "Cannot be done online for security reasons. Must visit Aadhaar Seva Kendra (ASK) with original Aadhaar and new active SIM. Biometric verification required. Fee: ₹50. Update is immediate with SMS confirmation.",
+          "topic": "aadhaar",
+          "language": "pure_tamil",
+          "parallel_id": "CQA003T",
+          "key_points": [
+            "Not available online",
+            "Visit Aadhaar Seva Kendra",
+            "₹50 fee",
+            "Biometric verification needed"
+          ],
+          "websites": [
+            "uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA003T",
+          "question": "Aadhaar mobile number change eppadi?",
+          "answer": "Cannot be done online for security reasons. Must visit Aadhaar Seva Kendra (ASK) with original Aadhaar and new active SIM. Biometric verification required. Fee: ₹50. Update is immediate with SMS confirmation.",
+          "topic": "aadhaar",
+          "language": "tanglish",
+          "parallel_id": "CQA003",
+          "key_points": [
+            "Not available online",
+            "Visit Aadhaar Seva Kendra",
+            "₹50 fee",
+            "Biometric verification needed"
+          ],
+          "websites": [
+            "uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA004",
+          "question": "ஆதார் தொலைந்துவிட்டது - என்ன செய்வது?",
+          "answer": "Download e-Aadhaar from eaadhaar.uidai.gov.in using Aadhaar number or Enrollment ID + OTP. It's FREE and legally valid. For PVC card, order at uidai.gov.in for ₹50. If forgot Aadhaar number, retrieve at myaadhaar.uidai.gov.in → Retrieve Lost UID.",
+          "topic": "aadhaar",
+          "language": "pure_tamil",
+          "parallel_id": "CQA004T",
+          "key_points": [
+            "e-Aadhaar download FREE at eaadhaar.uidai.gov.in",
+            "PVC card ₹50",
+            "Can retrieve forgotten number",
+            "e-Aadhaar legally valid"
+          ],
+          "websites": [
+            "eaadhaar.uidai.gov.in",
+            "myaadhaar.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA004T",
+          "question": "Aadhaar tholaindhuvidadhu - enna seyvadhu?",
+          "answer": "Download e-Aadhaar from eaadhaar.uidai.gov.in using Aadhaar number or Enrollment ID + OTP. It's FREE and legally valid. For PVC card, order at uidai.gov.in for ₹50. If forgot Aadhaar number, retrieve at myaadhaar.uidai.gov.in → Retrieve Lost UID.",
+          "topic": "aadhaar",
+          "language": "tanglish",
+          "parallel_id": "CQA004",
+          "key_points": [
+            "e-Aadhaar download FREE at eaadhaar.uidai.gov.in",
+            "PVC card ₹50",
+            "Can retrieve forgotten number",
+            "e-Aadhaar legally valid"
+          ],
+          "websites": [
+            "eaadhaar.uidai.gov.in",
+            "myaadhaar.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA005",
+          "question": "ஆதார் பாதுகாப்பாக வைக்க என்ன செய்யலாம்?",
+          "answer": "1) Lock biometrics at myaadhaar.uidai.gov.in - prevents unauthorized authentication. 2) Use Virtual ID (VID) - 16-digit temporary number instead of Aadhaar. 3) Use Masked Aadhaar - shows only last 4 digits. 4) Check authentication history regularly.",
+          "topic": "aadhaar",
+          "language": "pure_tamil",
+          "parallel_id": "CQA005T",
+          "key_points": [
+            "Lock biometrics",
+            "Use Virtual ID (VID)",
+            "Masked Aadhaar option",
+            "Check authentication history"
+          ],
+          "websites": [
+            "myaadhaar.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA005T",
+          "question": "Aadhaar paadhukaappaaga vaikka enna seyyalam?",
+          "answer": "1) Lock biometrics at myaadhaar.uidai.gov.in - prevents unauthorized authentication. 2) Use Virtual ID (VID) - 16-digit temporary number instead of Aadhaar. 3) Use Masked Aadhaar - shows only last 4 digits. 4) Check authentication history regularly.",
+          "topic": "aadhaar",
+          "language": "tanglish",
+          "parallel_id": "CQA005",
+          "key_points": [
+            "Lock biometrics",
+            "Use Virtual ID (VID)",
+            "Masked Aadhaar option",
+            "Check authentication history"
+          ],
+          "websites": [
+            "myaadhaar.uidai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA006",
+          "question": "புதிய PAN Card எப்படி பெறுவது?",
+          "answer": "Easiest: Instant e-PAN at eportal.incometax.gov.in using Aadhaar - FREE and instant! Alternative: Apply at onlineservices.nsdl.com or pan.utiitsl.com - ₹107 for physical card, 15-20 days. Need ID proof, address proof, DOB proof, photo, and signature.",
+          "topic": "pan_card",
+          "language": "pure_tamil",
+          "parallel_id": "CQA006T",
+          "key_points": [
+            "Instant e-PAN FREE with Aadhaar",
+            "Physical card ₹107",
+            "15-20 days for physical",
+            "eportal.incometax.gov.in"
+          ],
+          "websites": [
+            "eportal.incometax.gov.in",
+            "onlineservices.nsdl.com"
+          ]
+        },
+        {
+          "id": "CQA006T",
+          "question": "Pudhiya PAN Card eppadi peruvadhu?",
+          "answer": "Easiest: Instant e-PAN at eportal.incometax.gov.in using Aadhaar - FREE and instant! Alternative: Apply at onlineservices.nsdl.com or pan.utiitsl.com - ₹107 for physical card, 15-20 days. Need ID proof, address proof, DOB proof, photo, and signature.",
+          "topic": "pan_card",
+          "language": "tanglish",
+          "parallel_id": "CQA006",
+          "key_points": [
+            "Instant e-PAN FREE with Aadhaar",
+            "Physical card ₹107",
+            "15-20 days for physical",
+            "eportal.incometax.gov.in"
+          ],
+          "websites": [
+            "eportal.incometax.gov.in",
+            "onlineservices.nsdl.com"
+          ]
+        },
+        {
+          "id": "CQA007",
+          "question": "PAN-Aadhaar Link எப்படி செய்வது?",
+          "answer": "Online: eportal.incometax.gov.in → Link Aadhaar → Enter PAN and Aadhaar → OTP verify → Pay ₹1,000 late fee. SMS method: Send 'UIDPAN <Aadhaar> <PAN>' to 567678. MANDATORY - unlinked PAN becomes inoperative!",
+          "topic": "pan_card",
+          "language": "pure_tamil",
+          "parallel_id": "CQA007T",
+          "key_points": [
+            "Mandatory linking",
+            "₹1,000 late fee",
+            "eportal.incometax.gov.in",
+            "Unlinked PAN = inoperative"
+          ],
+          "websites": [
+            "eportal.incometax.gov.in"
+          ]
+        },
+        {
+          "id": "CQA007T",
+          "question": "PAN-Aadhaar Link eppadi seyvadhu?",
+          "answer": "Online: eportal.incometax.gov.in → Link Aadhaar → Enter PAN and Aadhaar → OTP verify → Pay ₹1,000 late fee. SMS method: Send 'UIDPAN <Aadhaar> <PAN>' to 567678. MANDATORY - unlinked PAN becomes inoperative!",
+          "topic": "pan_card",
+          "language": "tanglish",
+          "parallel_id": "CQA007",
+          "key_points": [
+            "Mandatory linking",
+            "₹1,000 late fee",
+            "eportal.incometax.gov.in",
+            "Unlinked PAN = inoperative"
+          ],
+          "websites": [
+            "eportal.incometax.gov.in"
+          ]
+        },
+        {
+          "id": "CQA008",
+          "question": "பிறப்பு சான்றிதழ் எப்படி பெறுவது?",
+          "answer": "Register within 21 days at hospital location's Municipality/Panchayat - FREE! After 21 days: ₹50 late fee + affidavit. Documents: Hospital discharge summary, parents' Aadhaar. Online at tnreginet.gov.in or crsorgi.gov.in. Certificate in 3-5 days.",
+          "topic": "certificates",
+          "language": "pure_tamil",
+          "parallel_id": "CQA008T",
+          "key_points": [
+            "Free within 21 days",
+            "Hospital location registration",
+            "tnreginet.gov.in online",
+            "Parents Aadhaar needed"
+          ],
+          "websites": [
+            "tnreginet.gov.in",
+            "crsorgi.gov.in"
+          ]
+        },
+        {
+          "id": "CQA008T",
+          "question": "Birth certificate eppadi peruvadhu?",
+          "answer": "Register within 21 days at hospital location's Municipality/Panchayat - FREE! After 21 days: ₹50 late fee + affidavit. Documents: Hospital discharge summary, parents' Aadhaar. Online at tnreginet.gov.in or crsorgi.gov.in. Certificate in 3-5 days.",
+          "topic": "certificates",
+          "language": "tanglish",
+          "parallel_id": "CQA008",
+          "key_points": [
+            "Free within 21 days",
+            "Hospital location registration",
+            "tnreginet.gov.in online",
+            "Parents Aadhaar needed"
+          ],
+          "websites": [
+            "tnreginet.gov.in",
+            "crsorgi.gov.in"
+          ]
+        },
+        {
+          "id": "CQA009",
+          "question": "இறப்பு சான்றிதழ் எப்படி பெறுவது?",
+          "answer": "Register within 21 days at place of death's Municipality/Panchayat - FREE! Documents: Medical death certificate, deceased's Aadhaar, informant's ID. After 21 days: Late fee + affidavit. Online at tnreginet.gov.in.",
+          "topic": "certificates",
+          "language": "pure_tamil",
+          "parallel_id": "CQA009T",
+          "key_points": [
+            "Free within 21 days",
+            "Medical certificate needed",
+            "Place of death registration",
+            "tnreginet.gov.in"
+          ],
+          "websites": [
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA009T",
+          "question": "Death certificate eppadi peruvadhu?",
+          "answer": "Register within 21 days at place of death's Municipality/Panchayat - FREE! Documents: Medical death certificate, deceased's Aadhaar, informant's ID. After 21 days: Late fee + affidavit. Online at tnreginet.gov.in.",
+          "topic": "certificates",
+          "language": "tanglish",
+          "parallel_id": "CQA009",
+          "key_points": [
+            "Free within 21 days",
+            "Medical certificate needed",
+            "Place of death registration",
+            "tnreginet.gov.in"
+          ],
+          "websites": [
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA010",
+          "question": "Community Certificate எப்படி பெறுவது?",
+          "answer": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Parent's community certificate, school TC, Aadhaar, address proof. VAO verification, RI check, Tahsildar approval. Time: 15-30 days. Fee: ₹25-50. Essential for reservation benefits.",
+          "topic": "certificates",
+          "language": "pure_tamil",
+          "parallel_id": "CQA010T",
+          "key_points": [
+            "tneservices.tn.gov.in",
+            "Parent's certificate needed",
+            "15-30 days",
+            "VAO verification"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA010T",
+          "question": "Community Certificate eppadi peruvadhu?",
+          "answer": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Parent's community certificate, school TC, Aadhaar, address proof. VAO verification, RI check, Tahsildar approval. Time: 15-30 days. Fee: ₹25-50. Essential for reservation benefits.",
+          "topic": "certificates",
+          "language": "tanglish",
+          "parallel_id": "CQA010",
+          "key_points": [
+            "tneservices.tn.gov.in",
+            "Parent's certificate needed",
+            "15-30 days",
+            "VAO verification"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA011",
+          "question": "Income Certificate எப்படி பெறுவது?",
+          "answer": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Aadhaar, ration card, self-declaration of income, salary slip (if employed). VAO enquiry at home possible. Time: 7-15 days. Fee: ₹20. Valid for 6 months to 1 year.",
+          "topic": "certificates",
+          "language": "pure_tamil",
+          "parallel_id": "CQA011T",
+          "key_points": [
+            "tneservices.tn.gov.in",
+            "VAO enquiry",
+            "7-15 days",
+            "Valid 6 months-1 year"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA011T",
+          "question": "Income Certificate eppadi peruvadhu?",
+          "answer": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Aadhaar, ration card, self-declaration of income, salary slip (if employed). VAO enquiry at home possible. Time: 7-15 days. Fee: ₹20. Valid for 6 months to 1 year.",
+          "topic": "certificates",
+          "language": "tanglish",
+          "parallel_id": "CQA011",
+          "key_points": [
+            "tneservices.tn.gov.in",
+            "VAO enquiry",
+            "7-15 days",
+            "Valid 6 months-1 year"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA012",
+          "question": "புதிய ரேஷன் அட்டை எப்படி பெறுவது?",
+          "answer": "Apply at tnpds.gov.in or Taluk Office. Documents: All family members' Aadhaar, address proof, income certificate, gas connection details, photos. Types: PHH (₹1 rice), AAY (free rice), NPHH. RI inspection, 30-45 days processing.",
+          "topic": "ration_card",
+          "language": "pure_tamil",
+          "parallel_id": "CQA012T",
+          "key_points": [
+            "tnpds.gov.in",
+            "All family Aadhaar needed",
+            "PHH/AAY/NPHH types",
+            "30-45 days"
+          ],
+          "websites": [
+            "tnpds.gov.in"
+          ]
+        },
+        {
+          "id": "CQA012T",
+          "question": "Pudhiya ration card eppadi peruvadhu?",
+          "answer": "Apply at tnpds.gov.in or Taluk Office. Documents: All family members' Aadhaar, address proof, income certificate, gas connection details, photos. Types: PHH (₹1 rice), AAY (free rice), NPHH. RI inspection, 30-45 days processing.",
+          "topic": "ration_card",
+          "language": "tanglish",
+          "parallel_id": "CQA012",
+          "key_points": [
+            "tnpds.gov.in",
+            "All family Aadhaar needed",
+            "PHH/AAY/NPHH types",
+            "30-45 days"
+          ],
+          "websites": [
+            "tnpds.gov.in"
+          ]
+        },
+        {
+          "id": "CQA013",
+          "question": "ரேஷன் அட்டையில் பெயர் சேர்க்க என்ன செய்வது?",
+          "answer": "For birth: Apply at tnpds.gov.in with birth certificate + baby's Aadhaar. For marriage: Marriage certificate + spouse's Aadhaar. Remove old card entry if transferring. Taluk Office verification. Time: 15-30 days.",
+          "topic": "ration_card",
+          "language": "pure_tamil",
+          "parallel_id": "CQA013T",
+          "key_points": [
+            "tnpds.gov.in",
+            "Birth certificate for baby",
+            "Marriage certificate for spouse",
+            "15-30 days"
+          ],
+          "websites": [
+            "tnpds.gov.in"
+          ]
+        },
+        {
+          "id": "CQA013T",
+          "question": "Ration card-la name serkka enna seyvadhu?",
+          "answer": "For birth: Apply at tnpds.gov.in with birth certificate + baby's Aadhaar. For marriage: Marriage certificate + spouse's Aadhaar. Remove old card entry if transferring. Taluk Office verification. Time: 15-30 days.",
+          "topic": "ration_card",
+          "language": "tanglish",
+          "parallel_id": "CQA013",
+          "key_points": [
+            "tnpds.gov.in",
+            "Birth certificate for baby",
+            "Marriage certificate for spouse",
+            "15-30 days"
+          ],
+          "websites": [
+            "tnpds.gov.in"
+          ]
+        },
+        {
+          "id": "CQA014",
+          "question": "புதிய ஓட்டுநர் உரிமம் எப்படி பெறுவது?",
+          "answer": "Step 1: Apply for Learner's License (LLR) at parivahan.gov.in - age proof, address proof, medical declaration. Pass computer test. Step 2: After 30 days, apply for DL. Take driving test at RTO. Fee: ₹200-700. Age: 18+ for car/bike, 16+ for without gear.",
+          "topic": "driving_license",
+          "language": "pure_tamil",
+          "parallel_id": "CQA014T",
+          "key_points": [
+            "parivahan.gov.in",
+            "LLR first, then DL",
+            "30 days gap mandatory",
+            "18+ for geared vehicles"
+          ],
+          "websites": [
+            "parivahan.gov.in"
+          ]
+        },
+        {
+          "id": "CQA014T",
+          "question": "Pudhiya driving license eppadi peruvadhu?",
+          "answer": "Step 1: Apply for Learner's License (LLR) at parivahan.gov.in - age proof, address proof, medical declaration. Pass computer test. Step 2: After 30 days, apply for DL. Take driving test at RTO. Fee: ₹200-700. Age: 18+ for car/bike, 16+ for without gear.",
+          "topic": "driving_license",
+          "language": "tanglish",
+          "parallel_id": "CQA014",
+          "key_points": [
+            "parivahan.gov.in",
+            "LLR first, then DL",
+            "30 days gap mandatory",
+            "18+ for geared vehicles"
+          ],
+          "websites": [
+            "parivahan.gov.in"
+          ]
+        },
+        {
+          "id": "CQA015",
+          "question": "வாக்காளர் அடையாள அட்டை எப்படி பெறுவது?",
+          "answer": "Apply at voters.eci.gov.in or Voter Helpline App. Fill Form 6. Documents: Age proof (18+ on Jan 1), address proof, passport photo. BLO will visit for verification. e-EPIC downloadable on app. Time: 30-45 days. FREE.",
+          "topic": "voter_id",
+          "language": "pure_tamil",
+          "parallel_id": "CQA015T",
+          "key_points": [
+            "voters.eci.gov.in",
+            "Form 6",
+            "BLO home visit",
+            "e-EPIC on app",
+            "FREE"
+          ],
+          "websites": [
+            "voters.eci.gov.in"
+          ]
+        },
+        {
+          "id": "CQA015T",
+          "question": "Voter ID eppadi peruvadhu?",
+          "answer": "Apply at voters.eci.gov.in or Voter Helpline App. Fill Form 6. Documents: Age proof (18+ on Jan 1), address proof, passport photo. BLO will visit for verification. e-EPIC downloadable on app. Time: 30-45 days. FREE.",
+          "topic": "voter_id",
+          "language": "tanglish",
+          "parallel_id": "CQA015",
+          "key_points": [
+            "voters.eci.gov.in",
+            "Form 6",
+            "BLO home visit",
+            "e-EPIC on app",
+            "FREE"
+          ],
+          "websites": [
+            "voters.eci.gov.in"
+          ]
+        },
+        {
+          "id": "CQA016",
+          "question": "திருமண பதிவு எப்படி செய்வது?",
+          "answer": "Apply at tnreginet.gov.in or Sub-Registrar Office. Documents: Age proof (groom 21+, bride 18+), address proof, wedding photos/invitation, 2 witnesses with Aadhaar. Both parties must be present at SRO. Fee: ₹100-500. Same day certificate.",
+          "topic": "marriage",
+          "language": "pure_tamil",
+          "parallel_id": "CQA016T",
+          "key_points": [
+            "tnreginet.gov.in",
+            "Both parties + 2 witnesses at SRO",
+            "Age: Groom 21+, Bride 18+",
+            "Same day certificate"
+          ],
+          "websites": [
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA016T",
+          "question": "Marriage registration eppadi seyvadhu?",
+          "answer": "Apply at tnreginet.gov.in or Sub-Registrar Office. Documents: Age proof (groom 21+, bride 18+), address proof, wedding photos/invitation, 2 witnesses with Aadhaar. Both parties must be present at SRO. Fee: ₹100-500. Same day certificate.",
+          "topic": "marriage",
+          "language": "tanglish",
+          "parallel_id": "CQA016",
+          "key_points": [
+            "tnreginet.gov.in",
+            "Both parties + 2 witnesses at SRO",
+            "Age: Groom 21+, Bride 18+",
+            "Same day certificate"
+          ],
+          "websites": [
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA017",
+          "question": "Encumbrance Certificate (EC) எங்கே பெறுவது?",
+          "answer": "Online at tnreginet.gov.in (records from 1987 onwards) - instant download. Offline at Sub-Registrar Office - 3-5 days. Fee: ₹15 per year. Essential for property verification - shows if property has any legal dues or mortgages.",
+          "topic": "property",
+          "language": "pure_tamil",
+          "parallel_id": "CQA017T",
+          "key_points": [
+            "tnreginet.gov.in for online",
+            "₹15 per year",
+            "From 1987 onwards online",
+            "Shows mortgages/dues"
+          ],
+          "websites": [
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA017T",
+          "question": "EC enga peruvadhu?",
+          "answer": "Online at tnreginet.gov.in (records from 1987 onwards) - instant download. Offline at Sub-Registrar Office - 3-5 days. Fee: ₹15 per year. Essential for property verification - shows if property has any legal dues or mortgages.",
+          "topic": "property",
+          "language": "tanglish",
+          "parallel_id": "CQA017",
+          "key_points": [
+            "tnreginet.gov.in for online",
+            "₹15 per year",
+            "From 1987 onwards online",
+            "Shows mortgages/dues"
+          ],
+          "websites": [
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA018",
+          "question": "பட்டா மாற்றம் எப்படி செய்வது?",
+          "answer": "After property registration at SRO, apply for Patta transfer at Taluk Office or eservices.tn.gov.in. Documents: Registered document, EC, ID proof, tax receipts. Field inspection by VAO/RI. Time: 30-45 days. Essential for proving ownership.",
+          "topic": "property",
+          "language": "pure_tamil",
+          "parallel_id": "CQA018T",
+          "key_points": [
+            "Apply at Taluk Office after registration",
+            "eservices.tn.gov.in",
+            "VAO inspection",
+            "30-45 days"
+          ],
+          "websites": [
+            "eservices.tn.gov.in",
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA018T",
+          "question": "Patta maatram eppadi seyvadhu?",
+          "answer": "After property registration at SRO, apply for Patta transfer at Taluk Office or eservices.tn.gov.in. Documents: Registered document, EC, ID proof, tax receipts. Field inspection by VAO/RI. Time: 30-45 days. Essential for proving ownership.",
+          "topic": "property",
+          "language": "tanglish",
+          "parallel_id": "CQA018",
+          "key_points": [
+            "Apply at Taluk Office after registration",
+            "eservices.tn.gov.in",
+            "VAO inspection",
+            "30-45 days"
+          ],
+          "websites": [
+            "eservices.tn.gov.in",
+            "tnreginet.gov.in"
+          ]
+        },
+        {
+          "id": "CQA019",
+          "question": "PM-KISAN திட்டம் என்றால் என்ன?",
+          "answer": "Direct cash transfer of ₹6,000/year (₹2,000 x 3 installments) to land-owning farmers. Register at pmkisan.gov.in with Aadhaar, land records, bank account. Exclusions: Income tax payers, govt employees, professionals. State verification required.",
+          "topic": "government_schemes",
+          "language": "pure_tamil",
+          "parallel_id": "CQA019T",
+          "key_points": [
+            "₹6,000/year in 3 installments",
+            "pmkisan.gov.in",
+            "Land owners only",
+            "Excludes tax payers"
+          ],
+          "websites": [
+            "pmkisan.gov.in"
+          ]
+        },
+        {
+          "id": "CQA019T",
+          "question": "PM-KISAN scheme enna?",
+          "answer": "Direct cash transfer of ₹6,000/year (₹2,000 x 3 installments) to land-owning farmers. Register at pmkisan.gov.in with Aadhaar, land records, bank account. Exclusions: Income tax payers, govt employees, professionals. State verification required.",
+          "topic": "government_schemes",
+          "language": "tanglish",
+          "parallel_id": "CQA019",
+          "key_points": [
+            "₹6,000/year in 3 installments",
+            "pmkisan.gov.in",
+            "Land owners only",
+            "Excludes tax payers"
+          ],
+          "websites": [
+            "pmkisan.gov.in"
+          ]
+        },
+        {
+          "id": "CQA020",
+          "question": "ஆயுஷ்மான் பாரத் (PMJAY) என்றால் என்ன?",
+          "answer": "₹5 lakh free health insurance per family per year. Eligibility based on SECC 2011 BPL data. Check eligibility at pmjay.gov.in. Get card FREE at govt hospital/CSC with Aadhaar + ration card. Covers 1,500+ procedures at empanelled hospitals. In TN, combined with CMCHIS.",
+          "topic": "government_schemes",
+          "language": "pure_tamil",
+          "parallel_id": "CQA020T",
+          "key_points": [
+            "₹5 lakh/family/year",
+            "BPL families eligible",
+            "Free card at govt hospital",
+            "1,500+ procedures covered"
+          ],
+          "websites": [
+            "pmjay.gov.in",
+            "cmchistn.com"
+          ]
+        },
+        {
+          "id": "CQA020T",
+          "question": "Ayushman Bharat (PMJAY) enna?",
+          "answer": "₹5 lakh free health insurance per family per year. Eligibility based on SECC 2011 BPL data. Check eligibility at pmjay.gov.in. Get card FREE at govt hospital/CSC with Aadhaar + ration card. Covers 1,500+ procedures at empanelled hospitals. In TN, combined with CMCHIS.",
+          "topic": "government_schemes",
+          "language": "tanglish",
+          "parallel_id": "CQA020",
+          "key_points": [
+            "₹5 lakh/family/year",
+            "BPL families eligible",
+            "Free card at govt hospital",
+            "1,500+ procedures covered"
+          ],
+          "websites": [
+            "pmjay.gov.in",
+            "cmchistn.com"
+          ]
+        },
+        {
+          "id": "CQA021",
+          "question": "MUDRA Loan எப்படி வாங்குவது?",
+          "answer": "Collateral-free business loan from any bank. Shishu: up to ₹50,000, Kishore: up to ₹5 lakh, Tarun: up to ₹10 lakh. Apply at bank or mudra.org.in with business plan, ID proof, address proof. Interest: 8-12%. Good for starting/expanding small business.",
+          "topic": "government_schemes",
+          "language": "pure_tamil",
+          "parallel_id": "CQA021T",
+          "key_points": [
+            "Collateral-free",
+            "Up to ₹10 lakh",
+            "Apply at any bank",
+            "Need business plan"
+          ],
+          "websites": [
+            "mudra.org.in"
+          ]
+        },
+        {
+          "id": "CQA021T",
+          "question": "MUDRA Loan eppadi vaanguvadhu?",
+          "answer": "Collateral-free business loan from any bank. Shishu: up to ₹50,000, Kishore: up to ₹5 lakh, Tarun: up to ₹10 lakh. Apply at bank or mudra.org.in with business plan, ID proof, address proof. Interest: 8-12%. Good for starting/expanding small business.",
+          "topic": "government_schemes",
+          "language": "tanglish",
+          "parallel_id": "CQA021",
+          "key_points": [
+            "Collateral-free",
+            "Up to ₹10 lakh",
+            "Apply at any bank",
+            "Need business plan"
+          ],
+          "websites": [
+            "mudra.org.in"
+          ]
+        },
+        {
+          "id": "CQA022",
+          "question": "கலைஞர் மகளிர் உரிமைத் திட்டம் என்றால் என்ன?",
+          "answer": "₹1,000/month for woman head of family in TN. Eligibility: 21+ age, family income below ₹2.5 lakh, not govt employee/tax payer, no other pension. Apply through Anganwadi or kalaaboravu.tn.gov.in with Aadhaar, ration card, bank account.",
+          "topic": "government_schemes",
+          "language": "pure_tamil",
+          "parallel_id": "CQA022T",
+          "key_points": [
+            "₹1,000/month",
+            "Woman family head",
+            "Income below ₹2.5 lakh",
+            "Apply at Anganwadi"
+          ],
+          "websites": [
+            "kalaaboravu.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA022T",
+          "question": "Kalaignar Magalir Urimai Thittam enna?",
+          "answer": "₹1,000/month for woman head of family in TN. Eligibility: 21+ age, family income below ₹2.5 lakh, not govt employee/tax payer, no other pension. Apply through Anganwadi or kalaaboravu.tn.gov.in with Aadhaar, ration card, bank account.",
+          "topic": "government_schemes",
+          "language": "tanglish",
+          "parallel_id": "CQA022",
+          "key_points": [
+            "₹1,000/month",
+            "Woman family head",
+            "Income below ₹2.5 lakh",
+            "Apply at Anganwadi"
+          ],
+          "websites": [
+            "kalaaboravu.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA023",
+          "question": "முதியோர் ஓய்வூதியம் எப்படி பெறுவது?",
+          "answer": "TN State: ₹1,000/month (60-79 years), ₹1,500/month (80+). Eligibility: BPL/low income, no other pension. Apply at tneservices.tn.gov.in or Taluk Office with age proof, income certificate, Aadhaar, bank account. VAO verification. Time: 30-60 days.",
+          "topic": "senior_citizens",
+          "language": "pure_tamil",
+          "parallel_id": "CQA023T",
+          "key_points": [
+            "₹1,000-1,500/month",
+            "60+ years, BPL",
+            "tneservices.tn.gov.in",
+            "VAO verification"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA023T",
+          "question": "Old Age Pension eppadi peruvadhu?",
+          "answer": "TN State: ₹1,000/month (60-79 years), ₹1,500/month (80+). Eligibility: BPL/low income, no other pension. Apply at tneservices.tn.gov.in or Taluk Office with age proof, income certificate, Aadhaar, bank account. VAO verification. Time: 30-60 days.",
+          "topic": "senior_citizens",
+          "language": "tanglish",
+          "parallel_id": "CQA023",
+          "key_points": [
+            "₹1,000-1,500/month",
+            "60+ years, BPL",
+            "tneservices.tn.gov.in",
+            "VAO verification"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA024",
+          "question": "முதியோருக்கு Bus/Train சலுகை என்ன?",
+          "answer": "TN State Bus: FREE travel in ordinary buses for 60+ (just show age proof). Railway: 40% discount for men 60+, 50% for women 58+ (auto-applied on IRCTC). Air India: 50% on select routes for 63+. Always carry age proof.",
+          "topic": "senior_citizens",
+          "language": "pure_tamil",
+          "parallel_id": "CQA024T",
+          "key_points": [
+            "Free TN ordinary bus",
+            "Railway 40-50% discount",
+            "Auto-applied on IRCTC",
+            "Carry age proof"
+          ],
+          "websites": [
+            "irctc.co.in"
+          ]
+        },
+        {
+          "id": "CQA024T",
+          "question": "Senior citizens-ku Bus/Train concession enna?",
+          "answer": "TN State Bus: FREE travel in ordinary buses for 60+ (just show age proof). Railway: 40% discount for men 60+, 50% for women 58+ (auto-applied on IRCTC). Air India: 50% on select routes for 63+. Always carry age proof.",
+          "topic": "senior_citizens",
+          "language": "tanglish",
+          "parallel_id": "CQA024",
+          "key_points": [
+            "Free TN ordinary bus",
+            "Railway 40-50% discount",
+            "Auto-applied on IRCTC",
+            "Carry age proof"
+          ],
+          "websites": [
+            "irctc.co.in"
+          ]
+        },
+        {
+          "id": "CQA025",
+          "question": "Kisan Credit Card (KCC) எப்படி பெறுவது?",
+          "answer": "Apply at any bank or through pmkisan.gov.in. Documents: Aadhaar, PAN, land records (Patta/Chitta), sowing certificate. Loan up to ₹3 lakh collateral-free at only 4% interest (with subvention). Crop insurance auto-enrolled. Repay after harvest.",
+          "topic": "agriculture",
+          "language": "pure_tamil",
+          "parallel_id": "CQA025T",
+          "key_points": [
+            "4% interest with subvention",
+            "Up to ₹3 lakh collateral-free",
+            "Crop insurance included",
+            "Repay after harvest"
+          ],
+          "websites": [
+            "pmkisan.gov.in"
+          ]
+        },
+        {
+          "id": "CQA025T",
+          "question": "KCC eppadi peruvadhu?",
+          "answer": "Apply at any bank or through pmkisan.gov.in. Documents: Aadhaar, PAN, land records (Patta/Chitta), sowing certificate. Loan up to ₹3 lakh collateral-free at only 4% interest (with subvention). Crop insurance auto-enrolled. Repay after harvest.",
+          "topic": "agriculture",
+          "language": "tanglish",
+          "parallel_id": "CQA025",
+          "key_points": [
+            "4% interest with subvention",
+            "Up to ₹3 lakh collateral-free",
+            "Crop insurance included",
+            "Repay after harvest"
+          ],
+          "websites": [
+            "pmkisan.gov.in"
+          ]
+        },
+        {
+          "id": "CQA026",
+          "question": "பயிர் காப்பீடு (PMFBY) எப்படி பெறுவது?",
+          "answer": "Apply before sowing at pmfby.gov.in, bank, or CSC. Premium: Kharif 2%, Rabi 1.5%, Commercial 5% - rest paid by govt. KCC holders auto-enrolled. Documents: Land records, Aadhaar, bank account. Report crop loss within 72 hours for claim. Helpline: 14447.",
+          "topic": "agriculture",
+          "language": "pure_tamil",
+          "parallel_id": "CQA026T",
+          "key_points": [
+            "Apply before sowing",
+            "Low premium (1.5-5%)",
+            "KCC auto-enrolled",
+            "Report loss in 72 hours"
+          ],
+          "websites": [
+            "pmfby.gov.in"
+          ]
+        },
+        {
+          "id": "CQA026T",
+          "question": "Crop Insurance (PMFBY) eppadi peruvadhu?",
+          "answer": "Apply before sowing at pmfby.gov.in, bank, or CSC. Premium: Kharif 2%, Rabi 1.5%, Commercial 5% - rest paid by govt. KCC holders auto-enrolled. Documents: Land records, Aadhaar, bank account. Report crop loss within 72 hours for claim. Helpline: 14447.",
+          "topic": "agriculture",
+          "language": "tanglish",
+          "parallel_id": "CQA026",
+          "key_points": [
+            "Apply before sowing",
+            "Low premium (1.5-5%)",
+            "KCC auto-enrolled",
+            "Report loss in 72 hours"
+          ],
+          "websites": [
+            "pmfby.gov.in"
+          ]
+        },
+        {
+          "id": "CQA027",
+          "question": "BC/MBC/SC/ST Scholarship எப்படி பெறுவது?",
+          "answer": "Apply at tneservices.tn.gov.in or scholarships.gov.in through school/college. Documents: Community certificate, income certificate, marksheet, Aadhaar, bank account. Benefits: Full fee waiver + monthly stipend ₹500-1,500. Apply within deadline each year.",
+          "topic": "education",
+          "language": "pure_tamil",
+          "parallel_id": "CQA027T",
+          "key_points": [
+            "tneservices.tn.gov.in",
+            "Community + Income certificate needed",
+            "Fee waiver + stipend",
+            "Annual application"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in",
+            "scholarships.gov.in"
+          ]
+        },
+        {
+          "id": "CQA027T",
+          "question": "BC/MBC/SC/ST Scholarship eppadi peruvadhu?",
+          "answer": "Apply at tneservices.tn.gov.in or scholarships.gov.in through school/college. Documents: Community certificate, income certificate, marksheet, Aadhaar, bank account. Benefits: Full fee waiver + monthly stipend ₹500-1,500. Apply within deadline each year.",
+          "topic": "education",
+          "language": "tanglish",
+          "parallel_id": "CQA027",
+          "key_points": [
+            "tneservices.tn.gov.in",
+            "Community + Income certificate needed",
+            "Fee waiver + stipend",
+            "Annual application"
+          ],
+          "websites": [
+            "tneservices.tn.gov.in",
+            "scholarships.gov.in"
+          ]
+        },
+        {
+          "id": "CQA028",
+          "question": "Education Loan எப்படி வாங்குவது?",
+          "answer": "Apply through vidyalakshmi.co.in (40+ banks, single application) or directly at bank. Up to ₹7.5 lakh: collateral-free. Interest: 8-10%. EWS students get interest subsidy during study. Documents: Admission letter, fee structure, co-borrower details, ID proofs.",
+          "topic": "education",
+          "language": "pure_tamil",
+          "parallel_id": "CQA028T",
+          "key_points": [
+            "vidyalakshmi.co.in",
+            "₹7.5 lakh collateral-free",
+            "EWS interest subsidy",
+            "Co-borrower needed"
+          ],
+          "websites": [
+            "vidyalakshmi.co.in"
+          ]
+        },
+        {
+          "id": "CQA028T",
+          "question": "Education Loan eppadi vaanguvadhu?",
+          "answer": "Apply through vidyalakshmi.co.in (40+ banks, single application) or directly at bank. Up to ₹7.5 lakh: collateral-free. Interest: 8-10%. EWS students get interest subsidy during study. Documents: Admission letter, fee structure, co-borrower details, ID proofs.",
+          "topic": "education",
+          "language": "tanglish",
+          "parallel_id": "CQA028",
+          "key_points": [
+            "vidyalakshmi.co.in",
+            "₹7.5 lakh collateral-free",
+            "EWS interest subsidy",
+            "Co-borrower needed"
+          ],
+          "websites": [
+            "vidyalakshmi.co.in"
+          ]
+        },
+        {
+          "id": "CQA029",
+          "question": "Jan Aushadhi-ல் மருந்து ஏன் மலிவு?",
+          "answer": "Jan Aushadhi sells generic medicines with same quality as branded (WHO-GMP certified) at 50-90% lower price. No brand premium. Find stores at janaushadhi.gov.in. Example: Metformin 500mg - Market ₹25, Jan Aushadhi ₹3.50. Great for long-term medications.",
+          "topic": "healthcare",
+          "language": "pure_tamil",
+          "parallel_id": "CQA029T",
+          "key_points": [
+            "50-90% cheaper",
+            "Same quality (generic)",
+            "janaushadhi.gov.in for stores",
+            "1,800+ medicines available"
+          ],
+          "websites": [
+            "janaushadhi.gov.in"
+          ]
+        },
+        {
+          "id": "CQA029T",
+          "question": "Jan Aushadhi-la marundhu yen malivu?",
+          "answer": "Jan Aushadhi sells generic medicines with same quality as branded (WHO-GMP certified) at 50-90% lower price. No brand premium. Find stores at janaushadhi.gov.in. Example: Metformin 500mg - Market ₹25, Jan Aushadhi ₹3.50. Great for long-term medications.",
+          "topic": "healthcare",
+          "language": "tanglish",
+          "parallel_id": "CQA029",
+          "key_points": [
+            "50-90% cheaper",
+            "Same quality (generic)",
+            "janaushadhi.gov.in for stores",
+            "1,800+ medicines available"
+          ],
+          "websites": [
+            "janaushadhi.gov.in"
+          ]
+        },
+        {
+          "id": "CQA030",
+          "question": "Employment Exchange-ல் பதிவு எப்படி செய்வது?",
+          "answer": "Online at tnvelaivaaippu.gov.in → OTR (One Time Registration). Documents: Educational certificates, community certificate, Aadhaar, photo. Benefits: Govt job notifications, private opportunities, skill training. Renew every 3 years. Also available at District Employment Office.",
+          "topic": "employment",
+          "language": "pure_tamil",
+          "parallel_id": "CQA030T",
+          "key_points": [
+            "tnvelaivaaippu.gov.in",
+            "OTR registration",
+            "Renew every 3 years",
+            "Job notifications"
+          ],
+          "websites": [
+            "tnvelaivaaippu.gov.in"
+          ]
+        },
+        {
+          "id": "CQA030T",
+          "question": "Employment Exchange-la register eppadi seyvadhu?",
+          "answer": "Online at tnvelaivaaippu.gov.in → OTR (One Time Registration). Documents: Educational certificates, community certificate, Aadhaar, photo. Benefits: Govt job notifications, private opportunities, skill training. Renew every 3 years. Also available at District Employment Office.",
+          "topic": "employment",
+          "language": "tanglish",
+          "parallel_id": "CQA030",
+          "key_points": [
+            "tnvelaivaaippu.gov.in",
+            "OTR registration",
+            "Renew every 3 years",
+            "Job notifications"
+          ],
+          "websites": [
+            "tnvelaivaaippu.gov.in"
+          ]
+        },
+        {
+          "id": "CQA031",
+          "question": "GST Registration எப்போது கட்டாயம்?",
+          "answer": "Goods (intra-state): ₹40 lakh+ turnover. Services: ₹20 lakh+. E-commerce sellers: ₹0 - mandatory from first sale! Inter-state supply: Mandatory regardless of turnover. Register FREE at gst.gov.in with PAN, Aadhaar, address proof, bank details.",
+          "topic": "business",
+          "language": "pure_tamil",
+          "parallel_id": "CQA031T",
+          "key_points": [
+            "₹40L goods, ₹20L services threshold",
+            "E-commerce: No threshold",
+            "gst.gov.in FREE registration",
+            "Inter-state = mandatory"
+          ],
+          "websites": [
+            "gst.gov.in"
+          ]
+        },
+        {
+          "id": "CQA031T",
+          "question": "GST Registration eppo kattaayam?",
+          "answer": "Goods (intra-state): ₹40 lakh+ turnover. Services: ₹20 lakh+. E-commerce sellers: ₹0 - mandatory from first sale! Inter-state supply: Mandatory regardless of turnover. Register FREE at gst.gov.in with PAN, Aadhaar, address proof, bank details.",
+          "topic": "business",
+          "language": "tanglish",
+          "parallel_id": "CQA031",
+          "key_points": [
+            "₹40L goods, ₹20L services threshold",
+            "E-commerce: No threshold",
+            "gst.gov.in FREE registration",
+            "Inter-state = mandatory"
+          ],
+          "websites": [
+            "gst.gov.in"
+          ]
+        },
+        {
+          "id": "CQA032",
+          "question": "FSSAI License எப்படி பெறுவது?",
+          "answer": "Mandatory for food business. Basic (up to ₹12L turnover): ₹100/year. State (₹12L-₹20Cr): ₹2,000-5,000/year. Apply at fssai.gov.in with ID proof, address proof, business proof. Display license number on food products. Renewal annual.",
+          "topic": "business",
+          "language": "pure_tamil",
+          "parallel_id": "CQA032T",
+          "key_points": [
+            "Mandatory for food business",
+            "fssai.gov.in",
+            "Basic/State/Central categories",
+            "Display on products"
+          ],
+          "websites": [
+            "fssai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA032T",
+          "question": "FSSAI License eppadi peruvadhu?",
+          "answer": "Mandatory for food business. Basic (up to ₹12L turnover): ₹100/year. State (₹12L-₹20Cr): ₹2,000-5,000/year. Apply at fssai.gov.in with ID proof, address proof, business proof. Display license number on food products. Renewal annual.",
+          "topic": "business",
+          "language": "tanglish",
+          "parallel_id": "CQA032",
+          "key_points": [
+            "Mandatory for food business",
+            "fssai.gov.in",
+            "Basic/State/Central categories",
+            "Display on products"
+          ],
+          "websites": [
+            "fssai.gov.in"
+          ]
+        },
+        {
+          "id": "CQA033",
+          "question": "புதிய மின் இணைப்பு எப்படி பெறுவது?",
+          "answer": "Apply at nsc.tnebnet.org with ownership proof (sale deed/rent agreement), Aadhaar, building certificate. Inspection by TANGEDCO. Charges: Deposit ₹500-15,000 based on load. Time: 7-15 days. Agricultural connection: FREE electricity for farming.",
+          "topic": "utilities",
+          "language": "pure_tamil",
+          "parallel_id": "CQA033T",
+          "key_points": [
+            "nsc.tnebnet.org",
+            "Ownership proof needed",
+            "7-15 days",
+            "Agri connection free"
+          ],
+          "websites": [
+            "nsc.tnebnet.org"
+          ]
+        },
+        {
+          "id": "CQA033T",
+          "question": "Pudhiya electricity connection eppadi peruvadhu?",
+          "answer": "Apply at nsc.tnebnet.org with ownership proof (sale deed/rent agreement), Aadhaar, building certificate. Inspection by TANGEDCO. Charges: Deposit ₹500-15,000 based on load. Time: 7-15 days. Agricultural connection: FREE electricity for farming.",
+          "topic": "utilities",
+          "language": "tanglish",
+          "parallel_id": "CQA033",
+          "key_points": [
+            "nsc.tnebnet.org",
+            "Ownership proof needed",
+            "7-15 days",
+            "Agri connection free"
+          ],
+          "websites": [
+            "nsc.tnebnet.org"
+          ]
+        },
+        {
+          "id": "CQA034",
+          "question": "Chennai-ல் Metro Water Connection எப்படி?",
+          "answer": "Apply at chennaimetrowater.tn.gov.in with property document, building plan, tax receipt, Aadhaar. Site inspection for feasibility. Charges: Connection ₹500-2,000, deposit ₹500-1,000, road cutting extra. Monthly bill ₹70-400 (domestic). Helpline: 044-4567 4567.",
+          "topic": "utilities",
+          "language": "pure_tamil",
+          "parallel_id": "CQA034T",
+          "key_points": [
+            "chennaimetrowater.tn.gov.in",
+            "Site inspection",
+            "₹70-400 monthly",
+            "Helpline: 044-4567 4567"
+          ],
+          "websites": [
+            "chennaimetrowater.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA034T",
+          "question": "Chennai-la Metro Water Connection eppadi?",
+          "answer": "Apply at chennaimetrowater.tn.gov.in with property document, building plan, tax receipt, Aadhaar. Site inspection for feasibility. Charges: Connection ₹500-2,000, deposit ₹500-1,000, road cutting extra. Monthly bill ₹70-400 (domestic). Helpline: 044-4567 4567.",
+          "topic": "utilities",
+          "language": "tanglish",
+          "parallel_id": "CQA034",
+          "key_points": [
+            "chennaimetrowater.tn.gov.in",
+            "Site inspection",
+            "₹70-400 monthly",
+            "Helpline: 044-4567 4567"
+          ],
+          "websites": [
+            "chennaimetrowater.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA035",
+          "question": "FIR எப்படி பதிவு செய்வது?",
+          "answer": "Visit nearest police station with written complaint. Zero FIR: Can file at ANY station. Online for some crimes: eservices.tnpolice.gov.in. Get FIR copy FREE (your right!). If police refuse: Complain to SP/District Collector. For cyber crimes: cybercrime.gov.in or call 1930.",
+          "topic": "legal",
+          "language": "pure_tamil",
+          "parallel_id": "CQA035T",
+          "key_points": [
+            "Zero FIR at any station",
+            "Free FIR copy",
+            "eservices.tnpolice.gov.in",
+            "Cyber: 1930"
+          ],
+          "websites": [
+            "eservices.tnpolice.gov.in",
+            "cybercrime.gov.in"
+          ]
+        },
+        {
+          "id": "CQA035T",
+          "question": "FIR eppadi register seyvadhu?",
+          "answer": "Visit nearest police station with written complaint. Zero FIR: Can file at ANY station. Online for some crimes: eservices.tnpolice.gov.in. Get FIR copy FREE (your right!). If police refuse: Complain to SP/District Collector. For cyber crimes: cybercrime.gov.in or call 1930.",
+          "topic": "legal",
+          "language": "tanglish",
+          "parallel_id": "CQA035",
+          "key_points": [
+            "Zero FIR at any station",
+            "Free FIR copy",
+            "eservices.tnpolice.gov.in",
+            "Cyber: 1930"
+          ],
+          "websites": [
+            "eservices.tnpolice.gov.in",
+            "cybercrime.gov.in"
+          ]
+        },
+        {
+          "id": "CQA036",
+          "question": "இலவச சட்ட உதவி எங்கே பெறுவது?",
+          "answer": "TNSLSA (Tamil Nadu State Legal Services Authority) provides free legal aid. Eligibility: BPL, SC/ST, women, differently-abled, senior citizens, victims of trafficking. Helpline: 15100 (24x7). Legal Aid Cell at every district court. Lok Adalat for quick settlements.",
+          "topic": "legal",
+          "language": "pure_tamil",
+          "parallel_id": "CQA036T",
+          "key_points": [
+            "Helpline 15100",
+            "BPL/SC/ST/Women eligible",
+            "Legal Aid Cell at courts",
+            "Lok Adalat for settlements"
+          ],
+          "websites": [
+            "tnsla.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA036T",
+          "question": "Free legal aid enga peruvadhu?",
+          "answer": "TNSLSA (Tamil Nadu State Legal Services Authority) provides free legal aid. Eligibility: BPL, SC/ST, women, differently-abled, senior citizens, victims of trafficking. Helpline: 15100 (24x7). Legal Aid Cell at every district court. Lok Adalat for quick settlements.",
+          "topic": "legal",
+          "language": "tanglish",
+          "parallel_id": "CQA036",
+          "key_points": [
+            "Helpline 15100",
+            "BPL/SC/ST/Women eligible",
+            "Legal Aid Cell at courts",
+            "Lok Adalat for settlements"
+          ],
+          "websites": [
+            "tnsla.tn.gov.in"
+          ]
+        },
+        {
+          "id": "CQA037",
+          "question": "Jan Dhan Account என்றால் என்ன?",
+          "answer": "FREE zero-balance bank account for any Indian. Benefits: Free RuPay card, ₹2 lakh accident insurance, ₹30,000 life insurance (new accounts), overdraft up to ₹10,000, DBT transfer enabled. Open at any bank/Bank Mitra with just Aadhaar or Voter ID.",
+          "topic": "banking",
+          "language": "pure_tamil",
+          "parallel_id": "CQA037T",
+          "key_points": [
+            "Zero balance",
+            "Free RuPay card",
+            "₹2 lakh accident insurance",
+            "Aadhaar enough to open"
+          ],
+          "websites": [
+            "pmjdy.gov.in"
+          ]
+        },
+        {
+          "id": "CQA037T",
+          "question": "Jan Dhan Account endraal enna?",
+          "answer": "FREE zero-balance bank account for any Indian. Benefits: Free RuPay card, ₹2 lakh accident insurance, ₹30,000 life insurance (new accounts), overdraft up to ₹10,000, DBT transfer enabled. Open at any bank/Bank Mitra with just Aadhaar or Voter ID.",
+          "topic": "banking",
+          "language": "tanglish",
+          "parallel_id": "CQA037",
+          "key_points": [
+            "Zero balance",
+            "Free RuPay card",
+            "₹2 lakh accident insurance",
+            "Aadhaar enough to open"
+          ],
+          "websites": [
+            "pmjdy.gov.in"
+          ]
+        },
+        {
+          "id": "CQA038",
+          "question": "PMJJBY/PMSBY Insurance என்றால் என்ன?",
+          "answer": "PMJJBY: Life insurance ₹2 lakh for ₹436/year (18-55 age). PMSBY: Accident insurance ₹2 lakh for just ₹20/year (18-70 age). Both together: ₹456/year for ₹4 lakh coverage! Enroll through bank with savings account. Auto-debit on June 1.",
+          "topic": "banking",
+          "language": "pure_tamil",
+          "parallel_id": "CQA038T",
+          "key_points": [
+            "PMJJBY: ₹436/year, ₹2L life cover",
+            "PMSBY: ₹20/year, ₹2L accident",
+            "Combined: ₹456 for ₹4L",
+            "Auto-debit June 1"
+          ],
+          "websites": [
+            "jansuraksha.gov.in"
+          ]
+        },
+        {
+          "id": "CQA038T",
+          "question": "PMJJBY/PMSBY Insurance enna?",
+          "answer": "PMJJBY: Life insurance ₹2 lakh for ₹436/year (18-55 age). PMSBY: Accident insurance ₹2 lakh for just ₹20/year (18-70 age). Both together: ₹456/year for ₹4 lakh coverage! Enroll through bank with savings account. Auto-debit on June 1.",
+          "topic": "banking",
+          "language": "tanglish",
+          "parallel_id": "CQA038",
+          "key_points": [
+            "PMJJBY: ₹436/year, ₹2L life cover",
+            "PMSBY: ₹20/year, ₹2L accident",
+            "Combined: ₹456 for ₹4L",
+            "Auto-debit June 1"
+          ],
+          "websites": [
+            "jansuraksha.gov.in"
+          ]
+        },
+        {
+          "id": "CQA039",
+          "question": "PMAY-Urban எப்படி பெறுவது?",
+          "answer": "Interest subsidy for first home buyers. EWS/LIG: 6.5%, MIG-I: 4%, MIG-II: 3% subsidy on home loan. Apply through bank or pmay-urban.gov.in. Condition: No pucca house anywhere in India. Affidavit required. Wife as co-owner recommended. Saves ₹2-2.5 lakh!",
+          "topic": "housing",
+          "language": "pure_tamil",
+          "parallel_id": "CQA039T",
+          "key_points": [
+            "3-6.5% interest subsidy",
+            "First home buyers only",
+            "Apply through bank",
+            "Saves ₹2-2.5 lakh"
+          ],
+          "websites": [
+            "pmay-urban.gov.in"
+          ]
+        },
+        {
+          "id": "CQA039T",
+          "question": "PMAY-Urban eppadi peruvadhu?",
+          "answer": "Interest subsidy for first home buyers. EWS/LIG: 6.5%, MIG-I: 4%, MIG-II: 3% subsidy on home loan. Apply through bank or pmay-urban.gov.in. Condition: No pucca house anywhere in India. Affidavit required. Wife as co-owner recommended. Saves ₹2-2.5 lakh!",
+          "topic": "housing",
+          "language": "tanglish",
+          "parallel_id": "CQA039",
+          "key_points": [
+            "3-6.5% interest subsidy",
+            "First home buyers only",
+            "Apply through bank",
+            "Saves ₹2-2.5 lakh"
+          ],
+          "websites": [
+            "pmay-urban.gov.in"
+          ]
+        },
+        {
+          "id": "CQA040",
+          "question": "PMAY-Gramin எப்படி பெறுவது?",
+          "answer": "House construction assistance for rural poor. Amount: ₹1.20 lakh (plain) / ₹1.30 lakh (hilly). Selection from SECC 2011 data. Check eligibility at pmayg.nic.in. If not in list: Appeal at Gram Panchayat. Additional: MGNREGA wages, toilet under SBM. Total: ₹1.5 lakh+",
+          "topic": "housing",
+          "language": "pure_tamil",
+          "parallel_id": "CQA040T",
+          "key_points": [
+            "₹1.20-1.30 lakh assistance",
+            "SECC 2011 based selection",
+            "pmayg.nic.in to check",
+            "Additional MGNREGA wages"
+          ],
+          "websites": [
+            "pmayg.nic.in"
+          ]
+        },
+        {
+          "id": "CQA040T",
+          "question": "PMAY-Gramin eppadi peruvadhu?",
+          "answer": "House construction assistance for rural poor. Amount: ₹1.20 lakh (plain) / ₹1.30 lakh (hilly). Selection from SECC 2011 data. Check eligibility at pmayg.nic.in. If not in list: Appeal at Gram Panchayat. Additional: MGNREGA wages, toilet under SBM. Total: ₹1.5 lakh+",
+          "topic": "housing",
+          "language": "tanglish",
+          "parallel_id": "CQA040",
+          "key_points": [
+            "₹1.20-1.30 lakh assistance",
+            "SECC 2011 based selection",
+            "pmayg.nic.in to check",
+            "Additional MGNREGA wages"
+          ],
+          "websites": [
+            "pmayg.nic.in"
+          ]
+        }
+      ]
     }
   ],
   "metadata": {
@@ -2774,7 +5314,7 @@
     "target_audience": "Tamil Nadu citizens",
     "use_case": "Government services navigation",
     "license": "CC-BY-SA-4.0",
-    "version_notes": "v0.5.0 - Added comprehensive scenario-based life event guides (Q77-Q86): New Baby Born complete checklist, Marriage documentation and benefits, Death in family formalities, Starting Small Business licenses and loans, Property purchase verification and registration, Higher Education admission/scholarships/loans, Lost Documents recovery procedures, Senior Citizen benefits and safety measures, Farmer Crop Loss compensation and relief, Cyber Fraud victim response. Added Common Misconceptions section (Q87-Q94): Aadhaar myths (citizenship, mobile update, school/hospital denial), PAN Card myths (mandatory requirements, linking, duplicates), Ration Card myths (online services, portability, Aadhaar), Government Schemes myths (PM-KISAN, Ayushman Bharat, MUDRA, PMAY eligibility), Document-related mistakes, Banking/Financial mistakes, Property purchase mistakes, Scheme application errors. Added 16 Detailed Tanglish Procedure guides (Q95-Q110): Aadhaar mobile change/address update/biometric lock, Instant e-PAN, PAN-Aadhaar linking, PM-KISAN registration, MUDRA Loan, Ayushman Bharat card, Old Age Pension TN, Kalaignar Magalir Urimai Thittam, TNPDS online services, TANGEDCO connection, IT Return filing, Passport application, Driving License (LLR to DL), Voter ID registration.",
+    "version_notes": "v0.6.0 - Integrated comprehensive regional scenarios, conversational dialogues, and complete Q&A dataset. Added Rural Scenarios (organic farming, borewell permission, land conversion, SHG formation, MGNREGA job card, succession patta transfer, student scholarships, KCC crop loan, PMAY-Gramin housing, rural drinking water). Added Urban Scenarios (apartment buying/RERA, restaurant licensing, commercial electricity, property tax, vehicle RC transfer, GST for online business, metro water connection, vehicle fitness certificate, rent agreement, coaching center permissions). Added multi-turn conversational dialogues for newborn birth certificate, lost documents recovery, PM-KISAN & crop insurance, senior citizen benefits, first-time home buyer PMAY, cyber fraud recovery, marriage registration. Added comprehensive simple Q&A pairs covering Aadhaar, PAN, certificates, ration card, driving license, voter ID, property, marriage, and more.",
     "last_updated": "2026-02-05",
     "languages_covered": [
       "pure_tamil",
