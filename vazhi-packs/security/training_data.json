@@ -2,8 +2,8 @@
   "pack_name": "vazhi_kaval",
   "pack_name_tamil": "வழி காவல்",
   "description": "Security pack for detecting scams, fraud, and phishing in Tamil and Tanglish",
-  "version": "0.6.0",
-  "total_pairs": 415,
+  "version": "0.7.0",
+  "total_pairs": 443,
   "categories": [
     {
       "category": "lottery_scam",
@@ -3214,6 +3214,208 @@
           "dialect": "madurai_tanglish"
         }
       ]
+    },
+    {
+      "category": "recovery_reporting_procedures",
+      "category_tamil": "மீட்பு மற்றும் புகார் நடைமுறைகள்",
+      "pairs": [
+        {
+          "id": "RR001",
+          "question": "Scam la maatikitten nu realize aana udane enna pannanum?",
+          "answer": "GOLDEN HOUR - First 1 hour most critical! Step 1 (0-5 min): STOP all communication, block scammer. Step 2 (5-15 min): Call BANK 24/7 helpline, freeze account, report unauthorized transaction. Step 3 (15-30 min): Call Cyber Crime Helpline 1930. Step 4 (30-60 min): File FIR at cybercrime.gov.in. Within 24 hours action = 40-50% recovery chance. 72 hours later = only 10-15% chance.",
+          "procedure_type": "immediate_steps",
+          "priority": "critical"
+        },
+        {
+          "id": "RR002",
+          "question": "Complaint file panna enna documents collect pannanum?",
+          "answer": "Collect BEFORE filing: Screenshots of ALL conversations (WhatsApp, SMS, email), call recordings if available, scammer's phone numbers, scammer's bank account/UPI ID, transaction receipts/screenshots, bank statement showing debit, any links/websites shared, scammer's social media profiles, your Aadhaar/ID proof, your bank account details, timeline of events written down. Storage tip: Email screenshots to yourself (timestamp proof), Google Drive backup, don't delete anything from phone.",
+          "procedure_type": "documentation",
+          "priority": "high"
+        },
+        {
+          "id": "RR003",
+          "question": "UPI la panam poachu, bank la enna process follow pannanum?",
+          "answer": "Step 1: Call Bank's 24/7 Fraud Helpline - SBI: 1800-111-109, HDFC: 1800-266-4332, ICICI: 1800-1080, Axis: 1800-419-5959, Indian Bank: 1800-425-4422. Say: 'Unauthorized transaction aachu, amount [X], time [X], beneficiary UPI ID [X]. Please freeze and initiate reversal.' Step 2: Visit branch within 24 hours, submit written complaint, get acknowledgment. Step 3: File dispute in banking app under 'Dispute Transaction'. Step 4: RBI Escalation at cms.rbi.org.in if bank doesn't respond in 30 days. Recovery timeline: 10-45 days if reported within 24 hours.",
+          "procedure_type": "bank_recovery",
+          "priority": "critical"
+        },
+        {
+          "id": "RR004",
+          "question": "Card details leak aaiduchu, transactions nadandhuruchu. Recovery process enna?",
+          "answer": "Immediate (within 1 hour): Call bank - BLOCK CARD, note last 4 legitimate transactions, report unauthorized ones. Within 24 hours: Written complaint at branch, request new card, file chargeback for each transaction. RBI Rules: Zero liability if reported within 3 days, max ₹10,000 if reported 4-7 days, full liability after 7 days. Documents needed: Card block confirmation, list of unauthorized transactions, FIR copy, cyber crime complaint acknowledgment. Recovery timeline: 7-90 days for credit card chargeback.",
+          "procedure_type": "card_fraud_recovery",
+          "priority": "critical"
+        },
+        {
+          "id": "RR005",
+          "question": "SIM swap fraud la account empty aaiduchu. Special procedure irukka?",
+          "answer": "Step 1 (FIRST): Call telecom - Airtel: 121/1800-103-4444, Jio: 198/1800-889-9999, Vi: 199/1800-119-1199, BSNL: 1800-180-1503. Say: 'Unauthorized SIM swap happened, block my number immediately.' Step 2: Call ALL banks simultaneously, freeze accounts, disable mobile/UPI banking. Step 3: Visit telecom store with original ID and police complaint, get new SIM. Step 4: FIR mentioning IT Act Section 66C (Identity Theft), Section 420 IPC (Cheating). Recovery chance: 30-50% if acted within 2-3 hours.",
+          "procedure_type": "sim_swap_recovery",
+          "priority": "critical"
+        },
+        {
+          "id": "RR006",
+          "question": "cybercrime.gov.in la complaint eppidi file pannuradhu?",
+          "answer": "Website: cybercrime.gov.in. Step 1: Click 'File a Complaint', register with mobile, OTP verification. Step 2: Select category - Online Financial Fraud, Social Media Crime, Job Fraud, Crypto Fraud, etc. Step 3: Fill details - incident date/time, amount lost, mode (UPI/Card/NetBanking), scammer details, upload evidence (max 10 files, 5MB each). Step 4: Submit and note ACKNOWLEDGMENT NUMBER, screenshot confirmation. Status check: Login → 'Track Your Complaint'. Escalation if no response 30 days: State Cyber Cell, DGP Cyber Crime.",
+          "procedure_type": "cyber_crime_portal",
+          "priority": "high"
+        },
+        {
+          "id": "RR007",
+          "question": "Tamil Nadu la cyber crime report panna specific contacts enna?",
+          "answer": "State Cyber Crime Cell: DGP Office Complex, Mylapore, Chennai-4, Phone: 044-28512440, Email: ccps.tnpol@nic.in. District Cells: Chennai 044-28512440, Coimbatore 0422-2300106, Madurai 0452-2531500, Trichy 0431-2418717, Salem 0427-2211001, Tirunelveli 0462-2501500. Online: eservices.tnpolice.gov.in (Online FIR), Kavalan SOS App (Emergency). Special Cells: Women Cyber Crime 044-28592750, Child Online Safety 1098/childlineindia.org.",
+          "procedure_type": "tn_specific_contacts",
+          "priority": "high"
+        },
+        {
+          "id": "RR008",
+          "question": "Police station la FIR file panna enna process? Refuse pannaa enna pannuradhu?",
+          "answer": "Documents needed: Written complaint (2 copies), evidence printouts, ID proof, bank statements, screenshots, cyber crime acknowledgment. Sections to mention: 420 IPC (Cheating), 406 IPC (Breach of trust), 66C IT Act (Identity theft), 66D IT Act (Cheating using computer). If police refuse: Step 1: Written application citing Section 154(3) CrPC. Step 2: Meet SP/DSP. Step 3: Section 156(3) CrPC application to Judicial Magistrate. Step 4: State Human Rights Commission. Step 5: High Court writ petition (if all else fails).",
+          "procedure_type": "fir_filing",
+          "priority": "high"
+        },
+        {
+          "id": "RR009",
+          "question": "PhonePe/GPay/Paytm la fraud report eppidi pannuradhu?",
+          "answer": "PhonePe: App → Help → Report an Issue, or call 080-68727374, email support@phonepe.com. Google Pay: App → Help → 'Money sent to wrong person/scam', or call 1800-419-0157. Paytm: App → 24×7 Help → Fraud/Scam report, call 0120-4456456, email care@paytm.com. Amazon Pay: App → Help → 'Report unauthorized transaction', call 1800-3000-9009. BHIM: App → Profile → Help → Report Issue. For all UPI disputes: NPCI at npci.org.in for resolution if app doesn't help.",
+          "procedure_type": "upi_app_reporting",
+          "priority": "high"
+        },
+        {
+          "id": "RR010",
+          "question": "Facebook/Instagram/WhatsApp la scammer report eppidi pannuradhu?",
+          "answer": "WhatsApp: Open chat → Tap name → 'Report', forward scam to wa.me/919845098450 (India tip line). Instagram: Profile → Three dots → 'Report' → 'Scam or fraud', or help.instagram.com. Facebook: Profile/Post → Three dots → 'Find support or report', facebook.com/hacked if compromised. Telegram: Profile → Report, email abuse@telegram.org, @notoscam bot. Twitter/X: Profile → Three dots → 'Report'. LinkedIn: Profile → More → 'Report/Block', linkedin.com/help/linkedin/ask/fraud.",
+          "procedure_type": "social_media_reporting",
+          "priority": "medium"
+        },
+        {
+          "id": "RR011",
+          "question": "Flipkart/Amazon la seller scam - report and refund process enna?",
+          "answer": "Amazon: Orders → Problem with order, A-to-Z Guarantee claim if seller unresponsive, call 1800-3000-9009, refund 5-10 days. Flipkart: My Orders → Need Help, call 1800-208-9898, email cs@flipkart.com. Meesho: My Orders → Help → Report, call 080-61799600, refund 7-15 days. OLX/Quikr: No buyer protection - Police complaint route, olx.in/support. For all platforms escalation: Consumer Forum consumerhelpline.gov.in, National Consumer Helpline 1800-11-4000.",
+          "procedure_type": "ecommerce_reporting",
+          "priority": "medium"
+        },
+        {
+          "id": "RR012",
+          "question": "Naukri/LinkedIn la fake job scam - report eppidi?",
+          "answer": "Naukri.com: Job listing → 'Report this job', email grievance@naukri.com. LinkedIn: Job → Three dots → 'Report this job', report fake recruiter profile. Indeed: Job → 'Report job', support.indeed.com. Internshala: help@internshala.com. Monster: india-care@monster.com. General: Ministry of Labour labour.gov.in, if recruitment fee taken - Police FIR + Labour Department complaint. If overseas job scam: Protector of Emigrants complaint.",
+          "procedure_type": "job_portal_reporting",
+          "priority": "medium"
+        },
+        {
+          "id": "RR013",
+          "question": "Matrimony site la romance scam - report and recovery?",
+          "answer": "BharatMatrimony: Profile → Report → 'Fake/Fraud', support@bharatmatrimony.com, 044-45002300. Shaadi.com: Profile → Report, care@shaadi.com, 022-67448888. Tamil Matrimony: support@tamilmatrimony.com. Tinder/Bumble/Hinge: Profile → Report → 'Scam or Spam'. Important: Collect ALL chat history before reporting, profile screenshots (they'll delete), photos received, money transfer receipts. Police FIR essential for large amounts. Recovery very low (money usually abroad). Prevention better: Video call verify, never send money before meeting.",
+          "procedure_type": "romance_scam_reporting",
+          "priority": "medium"
+        },
+        {
+          "id": "RR014",
+          "question": "Illegal loan app harassment - contacts ku call pannuraanga, morphed photos threat. Enna pannuradhu?",
+          "answer": "Immediate: STOP paying (harassment won't stop), document ALL harassment, warn close contacts. Step 1: RBI Complaint at cms.rbi.org.in - 'Complaint against unauthorized digital lending app'. Step 2: Play Store report - Flag → 'Financial harm'. Step 3: Cyber Crime FIR - Sections 66E IT Act (privacy violation), 506 IPC (criminal intimidation), 509 IPC (insult modesty). Step 4: Legal notice through lawyer. Step 5: Twitter tag @RBI. Legal protection: Courts ruled loan app harassment illegal. Support: Women helpline 181, Legal Services Authority (free aid).",
+          "procedure_type": "loan_app_harassment",
+          "priority": "critical"
+        },
+        {
+          "id": "RR015",
+          "question": "Crypto/Stock trading scam la lakhs poachu. Recovery possible aa?",
+          "answer": "Report to: SEBI (stock related) at scores.sebi.gov.in, ED Economic Offences (>10 lakhs) through Police escalation, cybercrime.gov.in, Platform fraud team (Binance, WazirX). Recovery channels: Bank reversal (within 24-48 hours), Crypto tracing (blockchain traceable, specialized cyber cells), Civil suit if scammer identified, Collective action with other victims. Recovery reality: Crypto 5-10%, Stock scams 10-20% if SEBI acts, Ponzi depends on assets seized.",
+          "procedure_type": "investment_scam_recovery",
+          "priority": "high"
+        },
+        {
+          "id": "RR016",
+          "question": "Fake job offer ku processing fee potten, now company traceable illa. Recovery eppidi?",
+          "answer": "Immediate: Collect company details, analyze email headers, note payment beneficiary details. Report to: cybercrime.gov.in (Job fraud category), Labour Department labour.gov.in, Company impersonated (fake TCS/Infosys letter - report to real company), Job portal used, Bank complaint for beneficiary account freeze. Recovery: Police tracing beneficiary, if domestic scammer caught - court recovery, if international - very difficult. Prevention for others: Share fake offer on LinkedIn, report to portals.",
+          "procedure_type": "job_scam_recovery",
+          "priority": "high"
+        },
+        {
+          "id": "RR017",
+          "question": "QR code scan panna panam poachu (reverse scam). Special recovery procedure irukka?",
+          "answer": "Why tricky: YOU authorized transaction (entered PIN), bank sees as 'legitimate'. But still possible: Step 1 (within 30 min): Call bank - 'Fraudulently induced to make payment', request beneficiary bank freeze. Step 2: Contact beneficiary bank from UPI ID (@oksbi = SBI, @okicici = ICICI). Step 3: FIR - Section 420 IPC (Cheating by inducement), Section 66D IT Act. Step 4: Collect QR code image, chat where asked to scan. Legal argument: 'Consent obtained by fraud is no consent'. Recovery: 20-30% if reported within 1 hour.",
+          "procedure_type": "qr_scam_recovery",
+          "priority": "high"
+        },
+        {
+          "id": "RR018",
+          "question": "OTP share panniten, account empty aaiduchu. Bank liability evlo?",
+          "answer": "RBI Guidelines: Bank's fault = Zero liability, Third party breach (you not at fault) = Zero if reported in 3 days, Customer negligence (OTP sharing) = Full liability IF bank proves negligence. But you can argue: Social engineering defense (deceived, not negligent), Bank's duty of care (clear warnings?), Delayed debit argument (unusual pattern). Steps: Written complaint (say 'OTP obtained through fraud' not 'I gave OTP'), Banking Ombudsman at cms.rbi.org.in (90% get partial refund), Consumer Forum, Civil Court for large amounts.",
+          "procedure_type": "otp_fraud_recovery",
+          "priority": "high"
+        },
+        {
+          "id": "RR019",
+          "question": "Video call screenshot eduthu blackmail pannuraanga. Report panna bayam - video spread aagumaa?",
+          "answer": "Critical understanding: Paying NEVER stops blackmail - increases it. Reporting DOES NOT spread content. Scammers rarely actually share (want money, not revenge). You're VICTIM, not criminal. Immediate: DO NOT PAY, DO NOT ENGAGE, document everything, secure accounts (change passwords, 2FA). Reporting: cybercrime.gov.in → 'Cyber Crime Against Women' (anonymous option), Women Helpline 181/1091, Platform report to remove content. FIR Sections: 384 IPC (Extortion), 506 IPC (Intimidation), 67A IT Act. Support: IT for Change, Cyber Peace Foundation. Your image is YOUR property.",
+          "procedure_type": "sextortion_recovery",
+          "priority": "critical"
+        },
+        {
+          "id": "RR020",
+          "question": "Email/social media account hack aaiduchu, scammer friends kitta kaasu kekuraan. Recovery process?",
+          "answer": "Immediate - Warn contacts: Call/SMS friends 'My account hacked, don't send money'. Platform recovery: Gmail - accounts.google.com/signin/recovery, Facebook - facebook.com/hacked (24-72 hours), Instagram - Help → Login → 'Can't log in' (video selfie verification), WhatsApp - Login with OTP kicks out hacker, enable 2-step. Post-recovery: Change ALL passwords, enable 2FA everywhere, check connected apps, check email forwarding rules, inform contacts about scam messages. If friends lost money: They file complaint, your account takeover FIR helps their case.",
+          "procedure_type": "account_takeover_recovery",
+          "priority": "high"
+        },
+        {
+          "id": "RR021",
+          "question": "Bank/Company respond pannala, Consumer Forum la case file eppidi?",
+          "answer": "Jurisdiction: Up to ₹50 lakhs - District Forum, ₹50L-2Cr - State Commission, Above ₹2Cr - National Commission. Online filing: edaakhil.nic.in. Documents: Complaint in format, payment proof, correspondence, evidence, previous complaint acknowledgments, ID proof. Fees: Up to ₹5L = ₹100, ₹5-10L = ₹200, ₹10-20L = ₹300, ₹20-50L = ₹500. Process: Filing → OP notice (30 days) → Written statement → Hearings → Order (90-150 days). TN District Forums: confonet.nic.in for list.",
+          "procedure_type": "consumer_forum",
+          "priority": "medium"
+        },
+        {
+          "id": "RR022",
+          "question": "Advocate hire panna budget illa. Free legal help eppidi kedaikum?",
+          "answer": "District Legal Services Authority (DLSA): Every district has one, free lawyers for eligible (income <₹3L), application at District Court. Taluk Legal Services Committee: Taluk level. State Legal Services: tnsla.gov.in (Tamil Nadu), Helpline 15100 (NALSA). Law School Clinics: NLU, NLSIU - free consultation. NGOs: Human Rights Law Network, Alternative Law Forum, PUCL. Eligible: SC/ST, Women/Children, Senior citizens, Disabled, Industrial workmen, Trafficking/disaster victims, Below income threshold. Documents: Income certificate, ID proof, case documents.",
+          "procedure_type": "free_legal_aid",
+          "priority": "medium"
+        },
+        {
+          "id": "RR023",
+          "question": "5000 rupees dhaan poachu. Complaint file panna worth aa?",
+          "answer": "Worth filing because: Police track patterns - your complaint + others = arrests, cyber crime data prevents future scams, scammer accounts get flagged. Quick process: cybercrime.gov.in (15 min), Bank complaint via app (10 min), organize evidence. Skip if: Time investment too high, evidence insufficient, no scammer financial details. Alternative: Report scammer profiles on platforms, warn others on social media, contribute to scam number databases. Recovery chance: Low for small amounts. But reporting value: HIGH (helps others).",
+          "procedure_type": "small_amount_guidance",
+          "priority": "low"
+        },
+        {
+          "id": "RR024",
+          "question": "50,000 poachu. Full process follow pannanum. Complete checklist kudungal.",
+          "answer": "Day 1 (Critical): Bank fraud helpline ✓, Account freeze/dispute ✓, 1930 call ✓, cybercrime.gov.in ✓, Evidence backed up ✓, Scammer blocked ✓. Day 2-3: Bank branch written complaint ✓, Police FIR ✓, UPI app complaint ✓, Screenshots emailed to self ✓. Day 7: Bank acknowledgment ✓, FIR copy ✓, Cyber cell follow-up ✓. Day 30: Status check ✓, Escalation if needed ✓, Banking Ombudsman if unhelpful ✓. Day 60: Ombudsman complaint ✓, Consumer Forum prep ✓. Recovery chance: 30-40% with fast reporting. Timeline: 2-6 months.",
+          "procedure_type": "medium_amount_checklist",
+          "priority": "high"
+        },
+        {
+          "id": "RR025",
+          "question": "5 lakhs fraud la poachu. Maximum recovery ku enna ellam pannanum?",
+          "answer": "Day 1: All standard steps PLUS lawyer consultation, multiple bank calls (yours + beneficiary), social media warning post. Week 1: Detailed FIR with all sections ✓, Cyber cell case assignment ✓, Personal visit to cyber cell ✓, Newspaper complaint ✓, RTI to bank ✓. Week 2-4: IO follow-up ✓, SP Cyber Crime application ✓, Banking Ombudsman parallel ✓, Find other victims ✓, Collective complaint ✓. Month 2: Legal notice to bank ✓, Consumer Forum prep ✓, ED complaint if >5L ✓, Media approach ✓. Month 3-6: Consumer Forum case ✓, Court attendance ✓, Bank settlement negotiation ✓. Recovery: 40-60% with aggressive pursuit. Timeline: 6-18 months.",
+          "procedure_type": "large_amount_recovery",
+          "priority": "critical"
+        },
+        {
+          "id": "RR026",
+          "question": "Scam la maatindhadu ku romba guilty feel aagudhu, family ku sollala. Emotional support eppidi get pannuradhu?",
+          "answer": "Understanding: Scam victims experience real trauma - guilt, shame, anxiety, depression common. You are NOT stupid: Scammers are professionals, doctors/IIT/IAS officers get scammed, psychological manipulation is sophisticated. Steps: 1) Tell someone you trust (sharing reduces shame), 2) Join support groups (Facebook 'Cyber Crime Victims India', Reddit r/Scams), 3) Professional help - iCall 9152987821, Vandrevala 1860-2662-345, NIMHANS 080-46110007, Snehi Chennai 044-24640050, 4) Focus on action (complaints give control), 5) Forgive yourself (you trusted, that's not wrong). Family talk: Choose calm moment, focus on facts not self-blame, discuss recovery plan together.",
+          "procedure_type": "emotional_support",
+          "priority": "high"
+        },
+        {
+          "id": "RR027",
+          "question": "Scam aana aprom inime secure aa irukkanum. Enna measures follow pannanum?",
+          "answer": "Immediate: Change ALL passwords, enable 2FA everywhere, check bank standing instructions, cancel unknown auto-pay mandates, change ATM PIN, request new cards if details shared. Device: Scan for malware, uninstall suspicious apps, check app permissions, update OS, check browser extensions. Accounts: Review login sessions, revoke suspicious connected apps, set login alerts, check email forwarding rules. Financial: Transaction alerts (every transaction), set limits, disable international if not needed, enable SIM lock, consider CIBIL lock. Data: Check haveibeenpwned.com, Google Alerts for your name, Aadhaar lock at uidai.gov.in, check CIBIL for unauthorized loans. Long-term: Password manager, never share OTP, verify calls via official numbers, two-person rule for large transactions, monthly statement review.",
+          "procedure_type": "post_scam_security",
+          "priority": "high"
+        },
+        {
+          "id": "RR028",
+          "question": "Emergency contacts ellam oru edathula vendum. Master list kudungal.",
+          "answer": "EMERGENCY: Police 100, Cyber Crime 1930, Women 181, Child 1098, Senior 14567. BANKS: RBI Ombudsman 14448, SBI 1800-111-109, HDFC 1800-266-4332, ICICI 1800-1080, Axis 1800-419-5959, Indian Bank 1800-425-4422. CYBER: National 1930, Portal cybercrime.gov.in, TN 044-28512440. CONSUMER: Helpline 1800-11-4000, Portal consumerhelpline.gov.in. UPI: PhonePe 080-68727374, GPay 1800-419-0157, Paytm 0120-4456456. LEGAL: NALSA 15100, TN SLSA tnsla.gov.in. MENTAL HEALTH: iCALL 9152987821, Vandrevala 1860-2662-345, Snehi 044-24640050. TELECOM: Airtel 121, Jio 198, Vi 199, BSNL 1800-180-1503.",
+          "procedure_type": "master_contacts",
+          "priority": "critical"
+        }
+      ]
     }
   ],
   "metadata": {
@@ -3223,7 +3425,7 @@
     "target_audience": "Tamil Nadu general public across all age groups and districts",
     "use_case": "Scam detection and awareness with regional language support and age-specific targeting",
     "license": "CC-BY-SA-4.0",
-    "version_notes": "v0.6.0 - Added occupation-specific scams covering 17 professional categories including IT Professionals, Doctors, Teachers, Government Employees, Lawyers, CAs, Business Owners, Auto/Taxi Drivers, Farmers, Nurses, Construction Workers, Domestic Workers, Jewellers, Restaurant Owners, Real Estate Agents, Media/Journalists, Artists/Musicians, and Police/Security with targeted professional context and terminology",
+    "version_notes": "v0.7.0 - Added comprehensive recovery and reporting procedures including Golden Hour recovery steps, bank fraud recovery (UPI/Card/SIM swap), cyber crime portal filing, TN-specific contacts, platform reporting (UPI apps, social media, e-commerce, job portals), specific procedures for loan app harassment, investment scams, sextortion, account takeover, consumer forum guidance, free legal aid resources, amount-based recovery checklists, emotional support resources, and master emergency contact directory",
     "dialects_covered": ["chennai", "madurai", "coimbatore", "tirunelveli", "trichy", "salem", "thanjavur", "kanyakumari", "erode", "dindigul", "vellore"],
     "festivals_covered": ["pongal", "tamil_new_year", "ayudha_pooja", "navaratri", "diwali", "karthigai_deepam", "christmas", "new_year", "thai_poosam", "ramadan_eid", "vinayaka_chaturthi"],
     "seasons_covered": ["summer_vacation", "admission_season", "wedding_season", "exam_season", "monsoon_flood", "agricultural", "school_reopening"],
