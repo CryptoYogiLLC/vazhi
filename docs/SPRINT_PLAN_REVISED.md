@@ -31,8 +31,22 @@
 
 ## WEEK 1: Base Model + First Pack Training
 
-### Day 1: Environment Setup + Base Model Inference
+### Day 1: Environment Setup + Base Model Inference ✅ COMPLETE
 **Goal**: Validate Qwen 2.5 3B's Tamil capabilities
+
+**Status**: DONE - See `01_vazhi_first_inference.ipynb` in Google Colab
+- [x] Colab environment with T4 GPU
+- [x] Qwen/Qwen2.5-3B-Instruct loaded (6.17GB)
+- [x] Tamil greeting test passed
+- [x] Tamil knowledge question test passed
+- [x] Tamil story generation test passed
+
+**Baseline Observations**:
+- Model understands Tamil well out-of-the-box
+- Responds naturally to conversational Tamil
+- Good factual knowledge about Tamil Nadu
+
+**Original Plan**:
 
 **Morning (2-3 hours)**:
 ```python
@@ -75,7 +89,7 @@ for prompt in test_prompts:
 
 ---
 
-### Day 2: Merge Training Data + Format Conversion
+### Day 2: Merge Training Data + Format Conversion 👈 CURRENT
 **Goal**: Prepare unified training dataset in SFT format
 
 ```python
@@ -571,6 +585,8 @@ const QUICK_SUGGESTIONS = {
 | Deliverable | Original Plan | Revised Status |
 |-------------|---------------|----------------|
 | Training data (500-1000 pairs) | Day 2 | ✅ DONE (2,147 pairs) |
+| Colab environment + baseline test | Day 1 | ✅ DONE (01_vazhi_first_inference.ipynb) |
+| Merged SFT dataset | Day 2 | 👈 NEXT |
 | Tamil base LLM (3B, fine-tuned) | Day 4 | 🔲 Day 4 |
 | Quantized mobile model | Day 6 | 🔲 Day 6 |
 | Security Pack LoRA | Day 9 | ✅ Data ready, merged into base |
