@@ -2,8 +2,8 @@
   "pack_name": "vazhi_arasu",
   "pack_name_tamil": "வழி அரசு",
   "description": "Government services pack for navigating Tamil Nadu and Central government schemes",
-  "version": "0.4.0",
-  "total_pairs": 288,
+  "version": "0.5.0",
+  "total_pairs": 340,
   "categories": [
     {
       "category": "ration_card",
@@ -2348,6 +2348,424 @@
           "parallel_id": "TNREF003"
         }
       ]
+    },
+    {
+      "category": "scenario_life_events",
+      "category_tamil": "வாழ்க்கை நிகழ்வுகள் வழிகாட்டி",
+      "pairs": [
+        {
+          "id": "SLE001",
+          "question": "எங்கள் குடும்பத்தில் புதிதாக குழந்தை பிறந்துள்ளது. என்னென்ன documents மற்றும் benefits-க்கு apply செய்ய வேண்டும்?",
+          "answer": "படிப்படியாக செய்ய வேண்டியவை:\n\nமுதல் 21 நாட்களுக்குள் (அவசரம்!):\n1. பிறப்பு சான்றிதழ் பதிவு - மருத்துவமனை/நகராட்சி/பஞ்சாயத்து - இலவசம்\n\nமுதல் 3 மாதங்களுக்குள்:\n2. குழந்தைக்கு Aadhaar Card - Aadhaar Enrollment Center\n3. Ration Card-ல் பெயர் சேர்க்க - tnpds.gov.in\n\nதாய்க்கான Benefits:\n4. Dr. Muthulakshmi Maternity Benefit (₹18,000) - PHC/Anganwadi\n5. PMMVY - Central Govt (₹5,000) - முதல் குழந்தை\n6. Amma Baby Care Kit - Govt Hospital-ல் automatic\n\nபெண் குழந்தை என்றால் கூடுதலாக:\n7. முதலமைச்சர் பெண் குழந்தைகள் பாதுகாப்பு திட்டம் - FD ₹50,000\n8. Sukanya Samriddhi Yojana - Post Office/Bank - 8.2% வட்டி",
+          "topic": "new_baby_checklist",
+          "language": "pure_tamil",
+          "parallel_id": "SLE002"
+        },
+        {
+          "id": "SLE002",
+          "question": "Engal kudumbathula pudhusa kuzhanthai piranthuirukku. Enna ella documents and benefits-ku apply pannanum?",
+          "answer": "Step-by-step seiyya vendiyavai:\n\nFirst 21 days (Urgent!):\n1. Birth Certificate Registration - Hospital/Municipality/Panchayat - Free\n\nFirst 3 months:\n2. Baby's Aadhaar Card - Aadhaar Enrollment Center\n3. Add name in Ration Card - tnpds.gov.in\n\nMother's Benefits:\n4. Dr. Muthulakshmi Maternity Benefit (₹18,000) - PHC/Anganwadi\n5. PMMVY - Central (₹5,000) - First child only\n6. Amma Baby Care Kit - Auto at Govt Hospital\n\nIf girl child, additional:\n7. CM Girl Child Protection Scheme - ₹50,000 FD\n8. Sukanya Samriddhi Yojana - Post Office/Bank - 8.2% interest",
+          "topic": "new_baby_checklist",
+          "language": "tanglish",
+          "parallel_id": "SLE001"
+        },
+        {
+          "id": "SLE003",
+          "question": "நான் திருமணம் செய்ய போகிறேன். திருமண பதிவு, documents மாற்றம், benefits எல்லாம் என்னென்ன செய்ய வேண்டும்?",
+          "answer": "திருமணத்திற்கு முன்:\n1. திருமண உதவி திட்டம் - 40 நாட்களுக்கு முன் - 8 gram Gold + ₹25,000-50,000\n\nதிருமணத்திற்கு பின் (1 மாதத்திற்குள்):\n2. திருமண பதிவு - Sub-Registrar/tnreginet.gov.in - ₹100-500\n\nDocuments மாற்றம் (பெண்ணுக்கு):\n3. Aadhaar - பெயர் & முகவரி மாற்றம் - ASK - ₹50\n4. PAN Card - பெயர் மாற்றம் - onlineservices.nsdl.com - ₹107\n5. Voter ID - Form 8 - voters.eci.gov.in\n6. Passport - Re-issue - ₹1,500\n7. Bank Account - பெயர் & Nominee மாற்றம்\n8. Ration Card - கணவர் card-ல் சேர அல்லது புதிய card\n9. Insurance/EPF - Nominee update",
+          "topic": "marriage_checklist",
+          "language": "pure_tamil",
+          "parallel_id": "SLE004"
+        },
+        {
+          "id": "SLE004",
+          "question": "Naan thirumaanam seiya porein. Marriage registration, documents maatram, benefits ellam ennenna seiyya vendum?",
+          "answer": "Before marriage:\n1. Marriage Assistance Scheme - Apply 40 days before (if eligible) - 8 gram Gold + ₹25,000-50,000\n\nAfter marriage (within 1 month):\n2. Marriage Registration - Sub-Registrar Office - ₹100-500\n\nDocument changes (for bride):\n3. Aadhaar - Name & Address change at ASK (₹50)\n4. PAN Card - Name change online (₹107)\n5. Voter ID - Form 8 at voters.eci.gov.in\n6. Passport - Re-issue with new name (₹1,500)\n7. Bank Account - Name & Nominee change\n8. Ration Card - Add to husband's or new card\n9. Insurance/EPF - Nominee update",
+          "topic": "marriage_checklist",
+          "language": "tanglish",
+          "parallel_id": "SLE003"
+        },
+        {
+          "id": "SLE005",
+          "question": "குடும்பத்தில் ஒருவர் இறந்துவிட்டார். என்னென்ன formalities செய்ய வேண்டும்? என்ன benefits கிடைக்கும்?",
+          "answer": "உடனடியாக (24-48 மணி நேரத்தில்):\n1. மருத்துவ சான்று - Hospital/PHC Doctor\n\n21 நாட்களுக்குள் (கட்டாயம்):\n2. இறப்பு சான்றிதழ் பதிவு - நகராட்சி/பஞ்சாயத்து - இலவசம்\n\n1-3 மாதங்களுக்குள்:\n3. Bank Account Claim - Death Certificate + Nominee ID\n4. Legal Heir Certificate - Taluk Office - 15-30 நாட்கள்\n5. Ration Card-ல் பெயர் நீக்குதல் - tnpds.gov.in\n6. Property Transfer - Legal Heir Certificate + Taluk Office\n\nBenefits:\n7. PMJJBY Claim (₹2 லட்சம்) - Bank Branch\n8. PMSBY Claim (₹2 லட்சம்) - Accident death\n9. EPF Claim - epfindia.gov.in\n10. Family Pension - Govt employees\n11. விதவை ஓய்வூதியம் (₹1,000/month) - BPL",
+          "topic": "death_formalities",
+          "language": "pure_tamil",
+          "parallel_id": "SLE006"
+        },
+        {
+          "id": "SLE006",
+          "question": "Kudumbathula oruvar irandhuittaar. Ennenna formalities seiyya vendum? Enna benefits kidaikkum?",
+          "answer": "Immediately (24-48 hours):\n1. Medical Certificate - Hospital / PHC Doctor\n\nWithin 21 days (Mandatory):\n2. Death Certificate Registration - Municipality/Panchayat (Free)\n\nWithin 1-3 months:\n3. Bank Account Claim - Death Certificate + Nominee ID\n4. Legal Heir Certificate - Taluk Office (15-30 days)\n5. Ration Card name removal - tnpds.gov.in\n6. Property Transfer - Legal Heir Certificate + Taluk Office\n\nBenefits for family:\n7. PMJJBY Claim - ₹2 lakh (if enrolled)\n8. PMSBY Claim - ₹2 lakh (accident death)\n9. EPF Claim - If employed\n10. Family Pension - Govt employees\n11. Widow Pension - ₹1,000/month (BPL)",
+          "topic": "death_formalities",
+          "language": "tanglish",
+          "parallel_id": "SLE005"
+        },
+        {
+          "id": "SLE007",
+          "question": "நான் சிறிய கடை / தொழில் ஆரம்பிக்க விரும்புகிறேன். என்னென்ன license, loan, benefits கிடைக்கும்?",
+          "answer": "Step 1 - Registration:\n1. Udyam Registration (MSME) - udyamregistration.gov.in - இலவசம்\n2. GST Registration - ₹40 லட்சம்+ turnover-க்கு கட்டாயம்\n\nStep 2 - Local Licenses:\n3. Trade License - நகராட்சி - ₹500-5,000\n4. Shop & Establishment - tnlabour.tn.gov.in - ₹150-500\n5. FSSAI License - உணவு வணிகம் - fssai.gov.in\n\nStep 3 - Loans & Subsidies:\n6. PMEGP - ₹50 லட்சம் வரை - 15-35% subsidy\n7. MUDRA Loan - ₹10 லட்சம் வரை - No collateral\n8. NEEDS (TN) - ₹25 லட்சம் வரை - 25-30% subsidy\n9. Stand Up India (SC/ST/Women) - ₹1 கோடி வரை\n\nStep 4 - Ongoing:\n10. GST Returns - Monthly/Quarterly\n11. Income Tax - Yearly",
+          "topic": "business_startup",
+          "language": "pure_tamil",
+          "parallel_id": "SLE008"
+        },
+        {
+          "id": "SLE008",
+          "question": "Naan siriya kadai / thozhil aarambikka virumburen. Ennenna license, loan, benefits kidaikkum?",
+          "answer": "Step 1 - Registration:\n1. Udyam Registration - udyamregistration.gov.in (Free)\n2. GST Registration - If turnover > ₹40 lakh\n\nStep 2 - Local Licenses:\n3. Trade License - Municipality (₹500-5,000)\n4. Shop & Establishment - tnlabour.tn.gov.in\n5. FSSAI - For food business\n\nStep 3 - Loans:\n6. PMEGP - Up to ₹50 lakh, 15-35% subsidy\n7. MUDRA - Up to ₹10 lakh, no collateral\n8. NEEDS (TN) - Up to ₹25 lakh, 25-30% subsidy\n9. Stand Up India - SC/ST/Women, up to ₹1 crore\n\nStep 4 - Ongoing Compliances:\n10. GST Returns - Monthly/Quarterly\n11. Income Tax - Yearly",
+          "topic": "business_startup",
+          "language": "tanglish",
+          "parallel_id": "SLE007"
+        },
+        {
+          "id": "SLE009",
+          "question": "நான் நிலம் / வீடு வாங்க போகிறேன். என்னென்ன சரிபார்க்க வேண்டும்? Registration எப்படி செய்வது?",
+          "answer": "வாங்குவதற்கு முன் சரிபார்க்க வேண்டியவை:\n1. Title Verification - 30 வருட Parent Document Chain - Lawyer verify\n2. EC (Encumbrance Certificate) - tnreginet.gov.in - 30 years\n3. Patta & Chitta - eservices.tn.gov.in/landrecords\n4. TSLR Extract (FMB) - நிலத்தின் அளவு\n5. Tax Receipts - Property Tax paid-ஆ?\n6. Approved Layout - DTCP/CMDA/RERA\n7. Land Use - Agricultural/Residential?\n\nRegistration:\n8. Stamp Duty: 7% + Registration: 4% = ~11%\n9. Sale Deed - Lawyer-உடன் prepare\n10. Sub-Registrar - Both parties + 2 witnesses\n11. Post-Registration: Patta transfer at Taluk Office\n\nPMAY Benefit: முதல் வீடு - 3-6.5% வட்டி மானியம்",
+          "topic": "property_purchase",
+          "language": "pure_tamil",
+          "parallel_id": "SLE010"
+        },
+        {
+          "id": "SLE010",
+          "question": "Naan nilam / veedu vaanga porein. Ennenna check pannanum? Registration eppadi seyvadhu?",
+          "answer": "Before buying - Verify:\n1. Title - 30 years chain, Lawyer verify\n2. EC - tnreginet.gov.in, 30 years\n3. Patta & Chitta - Seller name correct?\n4. FMB - Land measurement correct?\n5. Tax Receipts - No dues?\n6. Approved Layout - DTCP/CMDA/RERA\n7. Land Use - Agricultural/Residential?\n\nRegistration:\n8. Stamp Duty - 7% + 4% = ~11%\n9. Sale Deed - Prepare with Lawyer\n10. Sub-Registrar - Both parties + witnesses\n11. Post-Registration - Patta transfer at Taluk Office\n\nPMAY Benefit: First home buyers - 3-6.5% interest subsidy",
+          "topic": "property_purchase",
+          "language": "tanglish",
+          "parallel_id": "SLE009"
+        },
+        {
+          "id": "SLE011",
+          "question": "என் பிள்ளை 12th முடித்துவிட்டார். College admission, scholarship, education loan எல்லாம் எப்படி?",
+          "answer": "Admission Process:\n1. Entrance Exams - NEET/JEE Main/TNEA\n2. Counselling - tneaonline.org/josaa.nic.in\n\nScholarships:\n3. BC/MBC/SC/ST Scholarship - tneservices.tn.gov.in - Full fee waiver + Stipend\n4. முதலமைச்சர் உயர்கல்வி உறுதி திட்டம் - First Gen Graduates - Free education + Laptop + ₹1,000/month\n5. National Scholarship Portal - scholarships.gov.in\n6. Merit-cum-Means - Technical education\n\nEducation Loan:\n7. Vidya Lakshmi Portal - vidyalakshmi.co.in - 40+ Banks\n8. ₹7.5 lakh வரை Collateral-free\n9. Interest Subsidy - EWS students\n\nFree Laptop: Govt School/College students\nFree Hostel: BC/MBC/SC/ST",
+          "topic": "higher_education",
+          "language": "pure_tamil",
+          "parallel_id": "SLE012"
+        },
+        {
+          "id": "SLE012",
+          "question": "En pillai 12th mudichuttaar. College admission, scholarship, education loan ellam eppadi?",
+          "answer": "Admission:\n1. Entrance Exams - NEET, JEE, TNEA\n2. Counselling - tneaonline.org / josaa.nic.in\n\nScholarships:\n3. BC/MBC/SC/ST - tneservices.tn.gov.in (Full fee waiver)\n4. CM Higher Education Scheme - First gen graduates - Free education + Laptop + ₹1,000/month\n5. NSP - scholarships.gov.in\n\nEducation Loan:\n6. Vidya Lakshmi - vidyalakshmi.co.in - 40+ banks\n7. Up to ₹7.5 lakh - No collateral\n8. Interest Subsidy - EWS students\n\nFree Laptop: Govt school/college students\nFree Hostel: BC/MBC/SC/ST",
+          "topic": "higher_education",
+          "language": "tanglish",
+          "parallel_id": "SLE011"
+        },
+        {
+          "id": "SLE013",
+          "question": "என் பையில் எல்லா documents-உம் திருடு போய்விட்டது (Aadhaar, PAN, DL, Voter ID, Bank Card). என்ன செய்வது?",
+          "answer": "உடனடியாக செய்ய வேண்டியவை:\n1. Police FIR - eservices.tnpolice.gov.in - எல்லா documents list\n2. Bank Card Block - Helpline call (SBI: 1800-111-111)\n3. Mobile SIM Block - திருடு போனால்\n\nDocuments மறுபடியும் பெற:\n4. Aadhaar - eaadhaar.uidai.gov.in - OTP - Free instant download\n5. PAN - eportal.incometax.gov.in - Instant e-PAN - Free\n6. Driving License - parivahan.gov.in - ₹200-500\n7. Voter ID - voters.eci.gov.in / Voter Helpline App - Form 002\n8. Bank Cards - Bank branch with FIR - 7-10 days\n9. Ration Card - tnpds.gov.in - Duplicate\n\nMisuse தடுக்க:\n10. Aadhaar Biometric Lock - myaadhaar.uidai.gov.in",
+          "topic": "lost_documents",
+          "language": "pure_tamil",
+          "parallel_id": "SLE014"
+        },
+        {
+          "id": "SLE014",
+          "question": "En bag-la ella documents-um thirudu poyiduchu (Aadhaar, PAN, DL, Voter ID, Bank Card). Enna seyvadhu?",
+          "answer": "Immediately:\n1. Police FIR - List all documents, get FIR copy\n2. Block Bank Cards - Call helpline immediately (SBI: 1800-111-111)\n3. Block SIM - If phone stolen\n\nGet duplicate documents:\n4. Aadhaar - eaadhaar.uidai.gov.in (Free instant download)\n5. PAN - eportal.incometax.gov.in (Free e-PAN)\n6. Driving License - parivahan.gov.in (₹200-500)\n7. Voter ID - voters.eci.gov.in or Voter Helpline App\n8. Bank Cards - Bank branch with FIR (7-10 days)\n9. Ration Card - tnpds.gov.in\n\nImportant: Lock Aadhaar biometrics at myaadhaar.uidai.gov.in",
+          "topic": "lost_documents",
+          "language": "tanglish",
+          "parallel_id": "SLE013"
+        },
+        {
+          "id": "SLE015",
+          "question": "நான் 65 வயது முதியவர். தனியாக இருக்கிறேன். என்னென்ன benefits, safety measures பெறலாம்?",
+          "answer": "Monthly Income/Pension:\n1. Old Age Pension (TN) - ₹1,000/month (60-79), ₹1,500 (80+)\n2. PMVVY (LIC) - ₹15 லட்சம் → ₹9,250/month\n3. SCSS (Post Office) - 8.2% interest quarterly\n\nHealthcare:\n4. CMCHIS/Ayushman Bharat - ₹5 லட்சம் free treatment\n5. Rashtriya Vayoshri Yojana - Free walking stick, wheelchair, hearing aid\n6. PM Janaushadhi - 50-90% மலிவான மருந்துகள்\n\nSafety & Legal:\n7. Elder Line - 14567 (24x7)\n8. Maintenance Tribunal - பிள்ளைகள் பராமரிக்கவில்லை என்றால் - ₹10,000/month order\n9. Police Senior Citizen Cell - Regular check-ups\n\nTravel: Railway 40-50% discount, TN Bus free\nBanking: Senior Citizen FD - Extra 0.5% interest",
+          "topic": "senior_citizen_benefits",
+          "language": "pure_tamil",
+          "parallel_id": "SLE016"
+        },
+        {
+          "id": "SLE016",
+          "question": "Naan 65 vayasu mudhiyavar. Thaniyaa irukkiren. Ennenna benefits, safety measures peralaam?",
+          "answer": "Monthly Income:\n1. Old Age Pension - ₹1,000-1,500/month (TN)\n2. PMVVY (LIC) - ₹9,250/month for ₹15L investment\n3. SCSS - 8.2% quarterly interest\n\nHealthcare:\n4. CMCHIS - ₹5 lakh free treatment\n5. Free aids - Walking stick, wheelchair, hearing aid\n6. Janaushadhi - Cheap medicines\n\nSafety:\n7. Elder Line - 14567 (24x7)\n8. Maintenance Tribunal - If children neglect - up to ₹10,000/month\n9. Police Senior Cell - Register for regular checks\n\nTravel: Railway 40-50% discount, Free/discounted bus\nBanking: Senior Citizen FD - Extra 0.5% interest",
+          "topic": "senior_citizen_benefits",
+          "language": "tanglish",
+          "parallel_id": "SLE015"
+        },
+        {
+          "id": "SLE017",
+          "question": "கடும் மழையால் என் பயிர் முழுவதும் நாசமாகிவிட்டது. என்ன compensation, help கிடைக்கும்?",
+          "answer": "உடனடியாக (72 மணி நேரத்திற்குள்):\n1. PMFBY Claim - pmfby.gov.in / 14447 - Photos எடுத்து வைக்கவும்\n2. VAO/Agriculture Officer-க்கு Written complaint\n\nAssessment:\n3. Crop Cutting Experiment - Agriculture Dept + Insurance\n4. Claim Amount - Yield loss % படி\n\nOther Relief:\n5. SDRF - District Collector - இயற்கை பேரிடர் relief\n6. Input Subsidy - ₹6,800/hectare (Rainfed), ₹13,500 (Irrigated)\n7. CM Relief Fund - Severe cases\n\nLoan Relief:\n8. Loan restructuring - Bank apply\n9. Fresh KCC Loan - 4% interest - அடுத்த season-க்கு",
+          "topic": "crop_loss_compensation",
+          "language": "pure_tamil",
+          "parallel_id": "SLE018"
+        },
+        {
+          "id": "SLE018",
+          "question": "Kadum mazhaiyaal en payir muzhuvathum naasamaagividuchu. Enna compensation, help kidaikkum?",
+          "answer": "Within 72 hours:\n1. PMFBY Claim - pmfby.gov.in / 14447 - Take photos\n2. Inform VAO - Written complaint with acknowledgment\n\nAssessment:\n3. Crop Cutting Experiment - Agri Dept + Insurance\n4. Claim Amount - Based on yield loss %\n\nOther Relief:\n5. SDRF - Natural disaster relief from District Collector\n6. Input Subsidy - ₹6,800-13,500/hectare\n7. CM Relief Fund - Severe cases\n\nLoan Relief:\n8. Loan restructuring - Apply at Bank\n9. Fresh KCC Loan - 4% interest for next season",
+          "topic": "crop_loss_compensation",
+          "language": "tanglish",
+          "parallel_id": "SLE017"
+        },
+        {
+          "id": "SLE019",
+          "question": "என் Bank Account-ல் இருந்து OTP இல்லாமல் பணம் போய்விட்டது. Cyber fraud-க்கு என்ன செய்வது?",
+          "answer": "உடனடியாக (Minutes matter!):\n1. Bank Helpline Call - Account freeze, Transaction dispute raise\n2. cybercrime.gov.in - Financial Fraud complaint\n3. 1930 Helpline - National Cyber Crime (24x7)\n\n24 மணி நேரத்திற்குள்:\n4. Written Bank Complaint - Acknowledgment வாங்கவும்\n5. Police FIR - Cyber Crime Police Station / eservices.tnpolice.gov.in\n\nBank Liability (RBI Rules):\n6. 3 நாட்களுக்குள் report → Full refund\n7. 4-7 நாட்கள் → Max loss ₹10,000\n8. Bank 90 நாட்களுக்குள் resolve செய்ய வேண்டும்\n\nEscalation:\n9. Banking Ombudsman - cms.rbi.org.in\n\nPrevention:\n10. SMS alerts enable, Transaction limits set\n11. Never share OTP",
+          "topic": "cyber_fraud_response",
+          "language": "pure_tamil",
+          "parallel_id": "SLE020"
+        },
+        {
+          "id": "SLE020",
+          "question": "En Bank Account-la irundhu OTP illaama panam poyiduchu. Cyber fraud-ku enna seyvadhu?",
+          "answer": "Immediately (Minutes matter!):\n1. Call Bank - Freeze account, raise dispute\n2. cybercrime.gov.in - File complaint online\n3. 1930 Helpline - National Cyber Crime (24x7)\n\nWithin 24 hours:\n4. Written Bank Complaint - Get acknowledgment\n5. Police FIR - With all details + screenshots\n\nBank Liability (RBI Rules):\n6. Report within 3 days → Full refund\n7. 4-7 days → Max loss ₹10,000\n8. Bank must resolve in 90 days\n\nEscalation:\n9. Banking Ombudsman - cms.rbi.org.in\n\nPrevention:\n10. Enable SMS alerts, set transaction limits\n11. Never share OTP",
+          "topic": "cyber_fraud_response",
+          "language": "tanglish",
+          "parallel_id": "SLE019"
+        }
+      ]
+    },
+    {
+      "category": "common_misconceptions",
+      "category_tamil": "பொதுவான தவறான நம்பிக்கைகள்",
+      "pairs": [
+        {
+          "id": "CMI001",
+          "question": "Aadhaar பற்றிய தவறான நம்பிக்கைகள் என்ன?",
+          "answer": "தவறான நம்பிக்கைகள் vs உண்மை:\n\n1. ❌ Aadhaar citizenship proof → ✅ Identity proof மட்டுமே\n2. ❌ Mobile number online மாற்றலாம் → ✅ Aadhaar Seva Kendra செல்ல வேண்டும்\n3. ❌ Aadhaar இல்லாமல் School admission மறுக்கலாம் → ✅ RTE Act படி மறுக்க கூடாது\n4. ❌ Aadhaar இல்லாமல் Hospital treatment மறுக்கலாம் → ✅ Emergency-ல் மறுக்க கூடாது\n5. ❌ Aadhaar number share செய்தால் பணம் போய்விடும் → ✅ Aadhaar + OTP இரண்டும் தேவை\n6. ❌ DOB எத்தனை முறையும் மாற்றலாம் → ✅ ஒரு முறை மட்டுமே\n7. ❌ e-Aadhaar செல்லாது → ✅ e-Aadhaar = Physical (legally valid)\n8. ❌ Enrollment Center-ல் fee கொடுக்க வேண்டும் → ✅ புதிய Enrollment இலவசம்",
+          "topic": "aadhaar_myths",
+          "language": "pure_tamil",
+          "parallel_id": "CMI002"
+        },
+        {
+          "id": "CMI002",
+          "question": "Aadhaar pattriya thavraana nambikkaigal enna?",
+          "answer": "Wrong Beliefs vs Truth:\n\n1. ❌ Aadhaar is citizenship proof → ✅ Only identity proof, not citizenship\n2. ❌ Mobile change online possible → ✅ Must visit Aadhaar Seva Kendra\n3. ❌ School can deny admission without Aadhaar → ✅ RTE Act prohibits this\n4. ❌ Hospital can deny treatment without Aadhaar → ✅ Cannot deny emergency treatment\n5. ❌ Sharing Aadhaar number = money loss → ✅ Need Aadhaar + OTP both\n6. ❌ DOB can be changed multiple times → ✅ Only once allowed\n7. ❌ e-Aadhaar is not valid → ✅ e-Aadhaar = Physical (legally same)\n8. ❌ Enrollment center charges fee → ✅ New enrollment is free",
+          "topic": "aadhaar_myths",
+          "language": "tanglish",
+          "parallel_id": "CMI001"
+        },
+        {
+          "id": "CMI003",
+          "question": "PAN Card பற்றிய பொதுவான தவறுகள் என்ன?",
+          "answer": "தவறான நம்பிக்கைகள் vs உண்மை:\n\n1. ❌ PAN இல்லாமல் Bank Account திறக்க முடியாது → ✅ ₹50,000+ transaction-க்கு மட்டும் கட்டாயம்\n2. ❌ Minor-க்கு PAN தேவையில்லை → ✅ சில cases-ல் தேவை (Investment, Income)\n3. ❌ PAN-Aadhaar link optional → ✅ கட்டாயம், இல்லாவிட்டால் PAN inoperative\n4. ❌ இரண்டு PAN வைத்திருப்பது okay → ✅ சட்டவிரோதம், ₹10,000 fine\n5. ❌ PAN card renew செய்ய வேண்டும் → ✅ Lifetime valid, renew தேவையில்லை\n6. ❌ PAN number மாறும் → ✅ Lifetime same\n7. ❌ e-PAN valid அல்ல → ✅ e-PAN legally valid\n\nCommon Mistakes:\n- PAN-ல் தவறான DOB → Aadhaar mismatch\n- Father's name-க்கு பதில் Husband's name\n- Late fee இல்லாமல் link செய்யாமல் விடுவது",
+          "topic": "pan_myths",
+          "language": "pure_tamil",
+          "parallel_id": "CMI004"
+        },
+        {
+          "id": "CMI004",
+          "question": "PAN Card pattriya common thavarugal enna?",
+          "answer": "Wrong Beliefs vs Truth:\n\n1. ❌ Cannot open Bank Account without PAN → ✅ PAN mandatory only for ₹50,000+ transactions\n2. ❌ Minor doesn't need PAN → ✅ Required in some cases (Investment, Income)\n3. ❌ PAN-Aadhaar link is optional → ✅ Mandatory, else PAN becomes inoperative\n4. ❌ Having two PANs is okay → ✅ Illegal, ₹10,000 fine\n5. ❌ PAN card needs renewal → ✅ Lifetime valid, no renewal needed\n6. ❌ PAN number changes → ✅ Lifetime same number\n7. ❌ e-PAN is not valid → ✅ e-PAN is legally valid\n\nCommon Mistakes:\n- Wrong DOB in PAN → Aadhaar mismatch\n- Father's name instead of Husband's name\n- Not linking despite ₹1,000 late fee",
+          "topic": "pan_myths",
+          "language": "tanglish",
+          "parallel_id": "CMI003"
+        },
+        {
+          "id": "CMI005",
+          "question": "Ration Card பற்றிய தவறான புரிதல்கள் என்ன?",
+          "answer": "தவறான நம்பிக்கைகள் vs உண்மை:\n\n1. ❌ நேரில் மட்டும் apply செய்ய முடியும் → ✅ tnpds.gov.in-ல் online apply செய்யலாம்\n2. ❌ Rice Card இருந்தால் மட்டும் benefits → ✅ NPHH card-க்கும் சில benefits உண்டு\n3. ❌ வேறு மாவட்டத்தில் Ration வாங்க முடியாது → ✅ One Nation One Ration Card - எங்கும் வாங்கலாம்\n4. ❌ Aadhaar link இல்லாமல் Ration கிடைக்காது → ✅ சில exceptions உண்டு, but link better\n5. ❌ Smart Card இல்லாமல் Ration கிடைக்காது → ✅ Manual entry-லும் கொடுக்க வேண்டும்\n6. ❌ ஒரு வீட்டில் ஒரே card மட்டும் → ✅ Separate family என்றால் separate card\n\nCommon Mistakes:\n- Address change-க்கு பழைய card surrender செய்யாமல் விடுவது → Legal issue\n- இறந்தவர் பெயர் நீக்காமல் விடுவது → Ration loss",
+          "topic": "ration_myths",
+          "language": "pure_tamil",
+          "parallel_id": "CMI006"
+        },
+        {
+          "id": "CMI006",
+          "question": "Ration Card pattriya thavraana purithalkal enna?",
+          "answer": "Wrong Beliefs vs Truth:\n\n1. ❌ Can only apply in person → ✅ Online apply at tnpds.gov.in\n2. ❌ Benefits only for Rice Card → ✅ NPHH card also has some benefits\n3. ❌ Cannot get Ration in other district → ✅ One Nation One Ration Card works anywhere\n4. ❌ No Ration without Aadhaar link → ✅ Some exceptions exist, but linking is better\n5. ❌ No Ration without Smart Card → ✅ Manual entry must also be allowed\n6. ❌ Only one card per house → ✅ Separate family can get separate card\n\nCommon Mistakes:\n- Not surrendering old card during address change → Legal issue\n- Not removing deceased person's name → Ration loss",
+          "topic": "ration_myths",
+          "language": "tanglish",
+          "parallel_id": "CMI005"
+        },
+        {
+          "id": "CMI007",
+          "question": "அரசு திட்டங்கள் பற்றிய பொதுவான தவறுகள் என்ன?",
+          "answer": "PM-KISAN:\n❌ எல்லா விவசாயிகளுக்கும் → ✅ Income Tax payers, Govt employees விலக்கு\n❌ ₹6,000 ஒரே தவணையில் → ✅ ₹2,000 x 3 தவணை\n❌ Apply செய்தால் போதும் → ✅ State Govt verification கட்டாயம்\n\nAyushman Bharat:\n❌ எல்லா Hospital-லும் valid → ✅ Empanelled hospitals மட்டும்\n❌ எல்லா treatment covered → ✅ 1,500 specific procedures மட்டும்\n❌ OPD free → ✅ IPD மட்டும் covered\n❌ எல்லோருக்கும் eligible → ✅ BPL (SECC 2011 data) மட்டும்\n\nMUDRA Loan:\n❌ Government கொடுக்கும் → ✅ Banks கொடுக்கும், Govt guarantee மட்டும்\n❌ கண்டிப்பாக கிடைக்கும் → ✅ Bank's discretion\n❌ Subsidy உள்ளது → ✅ No subsidy, only collateral-free\n\nPMAY:\n❌ Free வீடு → ✅ Subsidy மட்டும், full cost அல்ல\n❌ ஏற்கனவே வீடு இருந்தாலும் eligible → ✅ Pucca house இருந்தால் ineligible",
+          "topic": "scheme_myths",
+          "language": "pure_tamil",
+          "parallel_id": "CMI008"
+        },
+        {
+          "id": "CMI008",
+          "question": "Government Schemes pattriya common thavarugal enna?",
+          "answer": "PM-KISAN:\n❌ All farmers get it → ✅ Income Tax payers, Govt employees excluded\n❌ ₹6,000 one-time → ✅ ₹2,000 x 3 installments\n❌ Just apply → ✅ State Govt verification mandatory\n\nAyushman Bharat:\n❌ Valid in all hospitals → ✅ Only empanelled hospitals\n❌ All treatments covered → ✅ Only 1,500 specific procedures\n❌ OPD free → ✅ Only IPD covered\n❌ Everyone eligible → ✅ Only BPL (SECC 2011 data)\n\nMUDRA Loan:\n❌ Government gives loan → ✅ Banks give loan, Govt only guarantees\n❌ Guaranteed approval → ✅ Bank's discretion, credit check needed\n❌ Has subsidy → ✅ No subsidy, only collateral-free\n\nPMAY:\n❌ Free house → ✅ Only subsidy, not full cost\n❌ Eligible even with existing house → ✅ Ineligible if pucca house exists",
+          "topic": "scheme_myths",
+          "language": "tanglish",
+          "parallel_id": "CMI007"
+        },
+        {
+          "id": "CMI009",
+          "question": "Documents சம்பந்தமான பொதுவான தவறுகள் என்ன?",
+          "answer": "Birth Certificate:\n❌ 21 நாட்களுக்கு பின் பதிவு செய்ய முடியாது\n✅ முடியும், ஆனால் late fee + Affidavit தேவை\n\nMarriage Certificate:\n❌ இல்லாமல் married status prove செய்ய முடியாது\n✅ Wedding photos, invitation, witnesses மூலமும் prove செய்யலாம்\n\nDriving License:\n❌ Learning License-க்கு பின் உடனே DL test எழுதலாம்\n✅ 30 நாட்கள் காத்திருக்க வேண்டும்\n\nVoter ID:\n❌ 18 வயது ஆனவுடன் automatically கிடைக்கும்\n✅ Apply செய்ய வேண்டும் (Form 6)\n\nPassport:\n❌ Police Verification fail = Passport reject\n✅ Re-verification chance, appeal process உள்ளது\n\nEC (Encumbrance Certificate):\n❌ EC clear = property சுத்தமானது\n✅ EC 1987-க்கு பின் மட்டும், அதற்கு முன் manual check தேவை",
+          "topic": "document_mistakes",
+          "language": "pure_tamil",
+          "parallel_id": "CMI010"
+        },
+        {
+          "id": "CMI010",
+          "question": "Documents sambanthamana common thavarugal enna?",
+          "answer": "Birth Certificate:\n❌ Cannot register after 21 days\n✅ Can register, but needs late fee + Affidavit\n\nMarriage Certificate:\n❌ Cannot prove married status without it\n✅ Can prove via wedding photos, invitation, witnesses\n\nDriving License:\n❌ Can take DL test immediately after LLR\n✅ Must wait 30 days\n\nVoter ID:\n❌ Automatic when turning 18\n✅ Must apply (Form 6)\n\nPassport:\n❌ Police Verification fail = Rejection\n✅ Re-verification chance and appeal process available\n\nEC (Encumbrance Certificate):\n❌ EC clear = property is clean\n✅ EC only from 1987 onwards, manual check needed for earlier records",
+          "topic": "document_mistakes",
+          "language": "tanglish",
+          "parallel_id": "CMI009"
+        },
+        {
+          "id": "CMI011",
+          "question": "Banking மற்றும் Financial matters-ல் பொதுவான தவறுகள் என்ன?",
+          "answer": "Bank Account:\n❌ Jan Dhan-ல் minimum balance வேண்டும் → ✅ Zero balance account\n❌ Nomination = Legal Heir → ✅ Nominee is trustee, not owner\n❌ Joint Account holder-க்கு automatic rights → ✅ Either or Survivor clause check பண்ணுங்க\n\nInsurance:\n❌ PMJJBY/PMSBY auto-renew → ✅ Every year June 1-ல் renew, balance இருக்கணும்\n❌ PMJJBY-ல் Suicide covered → ✅ முதல் year covered அல்ல\n❌ PMSBY எல்லா accident-க்கும் → ✅ Permanent disability மட்டும்\n\nTax:\n❌ Senior Citizens-க்கு tax இல்லை → ✅ ₹3 lakh வரை மட்டும் exempt (60-80)\n❌ Agricultural income fully exempt → ✅ State tax apply ஆகலாம்\n❌ PPF interest taxable → ✅ Fully exempt (EEE status)\n\nLoan:\n❌ Education loan-க்கு collateral கட்டாயம் → ✅ ₹7.5 lakh வரை collateral-free\n❌ KCC interest 4% fixed → ✅ Timely repayment-க்கு மட்டும்",
+          "topic": "banking_mistakes",
+          "language": "pure_tamil",
+          "parallel_id": "CMI012"
+        },
+        {
+          "id": "CMI012",
+          "question": "Banking and Financial matters-la common thavarugal enna?",
+          "answer": "Bank Account:\n❌ Jan Dhan needs minimum balance → ✅ Zero balance account\n❌ Nomination = Legal Heir → ✅ Nominee is trustee, not owner\n❌ Joint holder has automatic rights → ✅ Check Either or Survivor clause\n\nInsurance:\n❌ PMJJBY/PMSBY auto-renews → ✅ Must renew by June 1, need balance\n❌ PMJJBY covers suicide → ✅ First year not covered\n❌ PMSBY covers all accidents → ✅ Only permanent disability\n\nTax:\n❌ Senior Citizens don't pay tax → ✅ Only up to ₹3 lakh exempt (60-80)\n❌ Agricultural income fully exempt → ✅ State tax may apply\n❌ PPF interest is taxable → ✅ Fully exempt (EEE status)\n\nLoan:\n❌ Education loan needs collateral → ✅ Up to ₹7.5 lakh collateral-free\n❌ KCC interest is always 4% → ✅ Only for timely repayment",
+          "topic": "banking_mistakes",
+          "language": "tanglish",
+          "parallel_id": "CMI011"
+        },
+        {
+          "id": "CMI013",
+          "question": "Property வாங்கும்போது பொதுவான தவறுகள் என்ன?",
+          "answer": "Before Purchase:\n1. ❌ EC 13 years மட்டும் பார்ப்பது → ✅ குறைந்தது 30 years EC பாருங்க\n2. ❌ Patta இருந்தால் போதும் → ✅ Patta = Possession, Title = Ownership (Both different)\n3. ❌ Seller-ன் வாக்கை நம்புவது → ✅ Lawyer மூலம் independent title search\n4. ❌ Guideline Value-க்கு register → ✅ Under-reporting = Black money, legal issues\n5. ❌ Agricultural land verify இல்லாமல் வாங்குவது → ✅ Land ceiling, conversion check\n\nDuring Registration:\n6. ❌ யாரையாவது witness-ஆக கூட்டிட்டு போவது → ✅ Trusted persons மட்டும்\n7. ❌ Document படிக்காமல் sign → ✅ Every clause படிங்க, Lawyer present-ல் sign\n\nAfter Purchase:\n8. ❌ Patta transfer செய்யாமல் விடுவது → ✅ 3 months-க்குள் transfer application\n9. ❌ Property tax miss → ✅ Penalty + legal issues\n10. ❌ PMAY subsidy claim செய்யாமல் விடுவது → ✅ First home buyers-க்கு lakhs save",
+          "topic": "property_mistakes",
+          "language": "pure_tamil",
+          "parallel_id": "CMI014"
+        },
+        {
+          "id": "CMI014",
+          "question": "Property vaangum pothu common thavarugal enna?",
+          "answer": "Before Purchase:\n1. ❌ Checking only 13 years EC → ✅ Check at least 30 years EC\n2. ❌ Patta is enough → ✅ Patta = Possession, Title = Ownership (Different)\n3. ❌ Trusting seller's word → ✅ Independent title search via Lawyer\n4. ❌ Registering at Guideline Value → ✅ Under-reporting = Black money, legal issues\n5. ❌ Buying agricultural land without verification → ✅ Check land ceiling, conversion\n\nDuring Registration:\n6. ❌ Taking anyone as witness → ✅ Only trusted persons\n7. ❌ Signing without reading document → ✅ Read every clause, sign with Lawyer present\n\nAfter Purchase:\n8. ❌ Not transferring Patta → ✅ Apply within 3 months\n9. ❌ Missing Property tax → ✅ Penalty + legal issues\n10. ❌ Not claiming PMAY subsidy → ✅ First home buyers save lakhs",
+          "topic": "property_mistakes",
+          "language": "tanglish",
+          "parallel_id": "CMI013"
+        },
+        {
+          "id": "CMI015",
+          "question": "Government Schemes-க்கு apply செய்யும்போது பொதுவான தவறுகள் என்ன?",
+          "answer": "Documentation Errors:\n1. ❌ Expired Income Certificate submit → ✅ 6 months-க்குள் issue செய்யப்பட்டது தேவை\n2. ❌ Aadhaar-Bank mismatch → ✅ Name, DOB exact match இருக்கணும், DBT fail ஆகும்\n3. ❌ Wrong bank account (inactive/closed) → ✅ Active account with correct IFSC\n4. ❌ Wrong photo size/format → ✅ Passport size, recent, white background\n\nEligibility Mistakes:\n5. ❌ Income limit exceed ஆனாலும் apply → ✅ Rejection + blacklist possible\n6. ❌ Same benefit multiple scheme-ல் claim → ✅ DBT catch பண்ணும், recovery + penalty\n7. ❌ Family member already availed mention செய்யாமல் → ✅ Declaration-ல் சொல்லணும்\n\nTimeline Mistakes:\n8. ❌ Deadline miss → ✅ Academic scholarships especially strict\n9. ❌ Renewal miss → ✅ Many schemes need yearly renewal\n10. ❌ Status check செய்யாமல் wait → ✅ Regular check, deficiency correct பண்ணலாம்",
+          "topic": "scheme_application_mistakes",
+          "language": "pure_tamil",
+          "parallel_id": "CMI016"
+        },
+        {
+          "id": "CMI016",
+          "question": "Government Schemes-ku apply seyyum pothu common thavarugal enna?",
+          "answer": "Documentation Errors:\n1. ❌ Submitting expired Income Certificate → ✅ Must be issued within 6 months\n2. ❌ Aadhaar-Bank mismatch → ✅ Name, DOB must match exactly, else DBT fails\n3. ❌ Wrong bank account (inactive/closed) → ✅ Active account with correct IFSC\n4. ❌ Wrong photo size/format → ✅ Passport size, recent, white background\n\nEligibility Mistakes:\n5. ❌ Applying despite exceeding income limit → ✅ Rejection + possible blacklist\n6. ❌ Claiming same benefit in multiple schemes → ✅ DBT system catches, recovery + penalty\n7. ❌ Not mentioning family member already availed → ✅ Must declare\n\nTimeline Mistakes:\n8. ❌ Missing deadline → ✅ Academic scholarships especially strict\n9. ❌ Missing renewal → ✅ Many schemes need yearly renewal\n10. ❌ Waiting without status check → ✅ Regular check helps correct deficiencies",
+          "topic": "scheme_application_mistakes",
+          "language": "tanglish",
+          "parallel_id": "CMI015"
+        }
+      ]
+    },
+    {
+      "category": "tanglish_detailed_procedures",
+      "category_tamil": "விரிவான வழிமுறைகள் (Tanglish)",
+      "pairs": [
+        {
+          "id": "TPR001",
+          "question": "Aadhaar Card-la mobile number maatra enna seiyyanum?",
+          "answer": "Online-la mudiyaadhu - Aadhaar Seva Kendra pooganum\n\nSteps:\n1. Nearest ASK find: uidai.gov.in → Locate Enrollment Center\n2. Appointment book (optional): appointments.uidai.gov.in\n3. Documents: Original Aadhaar + New mobile (active SIM with OTP capability)\n4. At ASK: Form fill → Biometric verification → New mobile register\n5. Fee: ₹50\n6. Confirmation: SMS to new number\n\nImportant:\n- Old number-la OTP varaadhu, biometric verification thaan\n- 2-3 days-la update aagum\n- Verify at myaadhaar.uidai.gov.in",
+          "topic": "aadhaar_mobile_change",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR002",
+          "question": "Aadhaar address update online eppadi seyvadhu?",
+          "answer": "Online Method (easiest):\n1. Login: myaadhaar.uidai.gov.in\n2. OTP: Registered mobile-la varum\n3. Select: 'Update Address'\n4. Enter new address\n5. Upload document: Passport/Bank Statement/EB Bill/Rent Agreement (PDF < 2MB)\n6. Pay: ₹50 online\n7. Note URN (Update Request Number)\n8. Time: 2-3 weeks-la new Aadhaar varum\n\nAddress Validation Letter (Document illaadha case):\n1. myaadhaar → Address Update → 'Request for AVL'\n2. Enter Verifier details (relative/friend at new address)\n3. Verifier-ku letter pogum\n4. Verifier consent kodutha update aagum",
+          "topic": "aadhaar_address_update",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR003",
+          "question": "Aadhaar biometric lock eppadi seyvadhu? Yen seiyyanum?",
+          "answer": "Yen Lock seiyyanum:\n- Yaarum unga Aadhaar misuse seiyya mudiyaadhu\n- Fake SIM, fake bank account open panna mudiyaadhu\n- Only you can unlock when needed\n\nEppadi Lock seyvadhu:\n1. Go to: myaadhaar.uidai.gov.in\n2. Login: Aadhaar + OTP\n3. Click: 'Lock/Unlock Biometrics'\n4. Select: 'Lock'\n5. Confirm: Done!\n\nUnlock seiyya:\n- Same process, 'Unlock' select\n- Temporarily unlock for specific use\n- Auto re-lock option available\n\nVirtual ID (VID) - Better option:\n1. myaadhaar → VID Generator\n2. 16-digit temporary number kidaikum\n3. Aadhaar-ku badhila VID kodukalam\n4. Anytime new VID generate pannalam",
+          "topic": "aadhaar_biometric_lock",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR004",
+          "question": "Instant e-PAN eppadi vaanguvadhu? (Free method)",
+          "answer": "Completely FREE - Only for Aadhaar holders:\n\n1. Go to: eportal.incometax.gov.in\n2. Click: 'Instant e-PAN'\n3. Select: 'Get New e-PAN'\n4. Enter: Aadhaar Number\n5. Accept: Terms and Conditions\n6. OTP: Aadhaar registered mobile-la varum\n7. Validate: Enter OTP\n8. Done! e-PAN PDF download ready\n\nTime: 10 minutes!\n\nConditions:\n- Aadhaar-la mobile linked irukkanum\n- Never had PAN before\n- Individual applicants only (not company)\n\nAlready PAN irukka, download seiyya:\n1. eportal.incometax.gov.in → Instant e-PAN → 'Check Status / Download'\n2. Enter PAN number\n3. OTP validate\n4. Download PDF",
+          "topic": "instant_epan",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR005",
+          "question": "PAN-Aadhaar link status check pannuvadhu eppadi? Link pannuvadhu eppadi?",
+          "answer": "Status Check:\n1. Go to: eportal.incometax.gov.in\n2. Click: 'Link Aadhaar Status'\n3. Enter: PAN + Aadhaar\n4. Result: Linked / Not Linked\n\nLink pannuvadhu:\n\nMethod 1 - Online:\n1. eportal.incometax.gov.in → 'Link Aadhaar'\n2. Enter PAN + Aadhaar + Name + Mobile\n3. OTP validate\n4. Pay ₹1,000 (late fee)\n5. Done!\n\nMethod 2 - SMS:\n- Send: UIDPAN <12-digit Aadhaar> <10-digit PAN>\n- To: 567678 or 56161\n- Example: UIDPAN 123456789012 ABCDE1234F\n\nLink aagala na enna aagum:\n- PAN 'Inoperative' aagum\n- ITR file panna mudiyaadhu\n- ₹50,000+ transactions blocked\n- Higher TDS (20%)\n- Mutual Fund / Demat open panna mudiyaadhu",
+          "topic": "pan_aadhaar_link",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR006",
+          "question": "PM-KISAN registration eppadi seyvadhu? Status eppadi check pannuvadhu?",
+          "answer": "Registration:\n\nMethod 1 - Online (Self):\n1. Go to: pmkisan.gov.in\n2. Click: 'New Farmer Registration'\n3. Select: State → Tamil Nadu\n4. Enter: Aadhaar Number\n5. Fill: Personal, Bank, Land details\n6. Upload: Land records (Patta/Chitta)\n7. Submit\n\nMethod 2 - CSC / Agriculture Office:\n- Documents kondu ponaa avanga seivanga\n- ₹0 charge (free service)\n\nDocuments:\n- Aadhaar Card\n- Bank Passbook (first page)\n- Land Records (Patta, Chitta, Adangal)\n\nStatus Check:\n1. pmkisan.gov.in → 'Beneficiary Status'\n2. Enter: Aadhaar / Mobile / Account Number\n3. Check: Registration status, Payment history\n\nPayment schedule: ₹2,000 x 3 (April-July, Aug-Nov, Dec-March)\n\nReject reasons: Income Tax payer, Govt employee, Wrong land records, Bank mismatch",
+          "topic": "pmkisan_registration",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR007",
+          "question": "MUDRA Loan eppadi vaanguvadhu? Enna documents vendum?",
+          "answer": "Loan Types:\n- Shishu: Up to ₹50,000 (Start small business)\n- Kishore: ₹50,001 - ₹5 lakh (Expand business)\n- Tarun: ₹5 - ₹10 lakh (Big expansion)\n\nEligibility: 18+ age, Indian citizen, Business plan ready, No collateral needed!\n\nDocuments:\n1. Aadhaar + PAN\n2. Address Proof\n3. Business plan / Project report\n4. Quotations (machines, equipment)\n5. 2 passport photos\n6. Bank statement (6 months - existing business)\n7. ITR (if available)\n\nApply:\n\nMethod 1 - Bank:\n1. Nearest bank branch pogga\n2. MUDRA loan enquire\n3. Application form fill\n4. Documents submit\n5. Bank verification\n6. Sanction (7-15 days)\n\nMethod 2 - Online:\n- mudra.org.in\n- Udyamimitra.in (SIDBI)\n- psbloansin59minutes.com (existing businesses)\n\nInterest: 8-12% (bank discretion)\n\nRejection reasons: Poor CIBIL (< 650), Incomplete docs, Weak business plan, Existing default",
+          "topic": "mudra_loan",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR008",
+          "question": "Ayushman Bharat card eppadi vaanguvadhu? Eligibility check eppadi?",
+          "answer": "Eligibility Check:\n\nMethod 1 - Online:\n1. pmjay.gov.in → 'Am I Eligible'\n2. Enter: Mobile number\n3. OTP validate\n4. Enter: State, Name, Ration Card / Aadhaar\n5. Result: Eligible / Not Eligible\n\nMethod 2 - Helpline: 14555\nMethod 3 - Govt Hospital / Ayushman Mitra desk / CSC\n\nCard vaanguvadhu:\n1. Where: Government Hospital / CSC / PMJAY Kendra\n2. Documents: Aadhaar, Ration Card, Passport photo\n3. Process: Eligibility verify → Photo capture → e-Card generate\n4. Fee: FREE!\n5. Time: Same day (15-30 minutes)\n\nCard use:\n1. Empanelled hospital pogga\n2. Ayushman desk-la card kaattunga\n3. Pre-authorization (some surgeries)\n4. Treatment - cashless!\n5. No money needed (up to ₹5 lakh/year)\n\nTamil Nadu-la: CMCHIS + Ayushman Bharat combined, same card works",
+          "topic": "ayushman_bharat_card",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR009",
+          "question": "Old Age Pension TN-la eppadi apply pannuvadhu?",
+          "answer": "Eligibility: Age 60+, BPL/Low income, No other pension, TN resident\n\nAmount: 60-79 years: ₹1,000/month | 80+: ₹1,500/month\n\nApply:\n\nMethod 1 - Online:\n1. tneservices.tn.gov.in → 'Social Security Pension'\n2. Register with mobile\n3. Select: Old Age Pension\n4. Fill application\n5. Upload documents\n6. Submit\n\nMethod 2 - Offline:\n1. Taluk/Block Office pogga\n2. Application form vaangunga\n3. Fill pannunga\n4. Documents attach\n5. Submit with acknowledgment\n\nDocuments:\n- Age Proof (Aadhaar/Voter ID/Birth Certificate)\n- Address Proof\n- Income Certificate (< ₹24,000/year)\n- Ration Card\n- Bank Passbook (first page)\n- 2 Passport photos\n\nProcess: Application → Field verification (VAO/RI) → Tahsildar approval → Sanction → Monthly DBT\n\nTime: 30-60 days\nStatus: tneservices.tn.gov.in → Track Application",
+          "topic": "old_age_pension_tn",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR010",
+          "question": "Kalaignar Magalir Urimai Thittam - full details and apply process?",
+          "answer": "Scheme Summary: ₹1,000/month for woman head of family (Since 2023)\n\nEligibility:\n✅ Woman should be family head\n✅ Age 21+\n✅ Family income < ₹2.5 lakh/year\n✅ TN resident\n\nNot Eligible:\n❌ Govt employee\n❌ Income Tax payer\n❌ Already receiving other pension\n❌ 4-wheeler owner\n❌ 750cc+ two-wheeler owner\n❌ 5+ acre agricultural land owner\n\nApply:\n\nMethod 1 - Anganwadi:\n1. Nearest Anganwadi center pogga\n2. Anganwadi worker form kudupanga\n3. Fill pannunga\n4. Documents kudungunga\n5. They will process\n\nMethod 2 - Online: kalaaboravu.tn.gov.in\n1. Register with Aadhaar\n2. Fill application\n3. Upload documents\n4. Submit\n\nDocuments: Aadhaar, Ration Card (Family Head proof), Bank Passbook, Passport photo\n\nVerification: Anganwadi worker + Door-to-door survey → Block Officer approval\n\nPayment: Monthly ₹1,000 DBT (usually 1st week)",
+          "topic": "kalaignar_magalir_scheme",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR011",
+          "question": "TNPDS Online Services - Ration card apply, name add/remove, address change?",
+          "answer": "All services at: tnpds.gov.in\n\nNew Ration Card:\n1. tnpds.gov.in → 'New Card Application'\n2. Enter family details\n3. Upload: All Aadhaar, Address proof, Income certificate, Gas details, Photos\n4. Submit → RI inspection → Card issue (30-45 days)\n\nAdd Name (Birth/Marriage):\n1. tnpds.gov.in → 'Add Member'\n2. Select card number\n3. Enter new member details\n4. Upload: Birth/Marriage Certificate + Aadhaar\n5. Submit → Verification → Approval (15-30 days)\n\nRemove Name (Death/Transfer):\n1. tnpds.gov.in → 'Delete Member'\n2. Select card and member\n3. Reason: Death/Transferred/Left\n4. Upload: Death Certificate (if death)\n5. Submit → Approval (15 days)\n\nAddress Change:\n1. tnpds.gov.in → 'Address Modification'\n2. Enter new address\n3. Upload new address proof\n4. Submit → Inspection → Shop change if different area (30-45 days)\n\nChange Card Type (NPHH to PHH):\n- Apply at Taluk Office with new Income Certificate\n\nTrack: tnpds.gov.in → 'Application Status'",
+          "topic": "tnpds_services",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR012",
+          "question": "Veetla current connection pudusa vaanganum - enna seiyyanum?",
+          "answer": "TANGEDCO New Connection:\n\nStep 1 - Apply Online:\n1. nsc.tnebnet.org → 'New Service Connection'\n2. Register with mobile\n3. Select: Domestic/Commercial/Agricultural\n4. Fill application\n5. Upload documents\n\nDocuments: Ownership proof (Patta/Sale Deed/Rent Agreement), Aadhaar, Address proof, Building Completion Certificate (new building), Passport photo\n\nStep 2 - Inspection:\n- TANGEDCO officer visit\n- Wiring check\n- Meter location decide\n\nStep 3 - Payment:\n- Security Deposit: ₹500-2,000 (load based)\n- Service Connection Charge\n- Pay online or at TANGEDCO office\n\nStep 4 - Connection:\n- Meter installation\n- Supply start\n- Time: 7-15 days total\n\nAgricultural Connection (Free electricity):\n- Apply at TANGEDCO office\n- Documents: Land (Patta/Chitta), Pump set details, Well/Borewell proof\n- Processing: 30-60 days\n\nComplaint/Status: 94987-94987 or TANGEDCO Mobile App",
+          "topic": "tangedco_connection",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR013",
+          "question": "First time IT Return file pannanum - eppadi seyvadhu?",
+          "answer": "Who should file: Gross income > ₹2.5 lakh (below 60), > ₹3 lakh (60-80), > ₹5 lakh (80+), TDS refund needed\n\nBefore Filing - Collect:\n1. PAN Card (Aadhaar linked)\n2. Form 16 (from employer)\n3. Bank Statements (interest income)\n4. Investment Proofs (80C, 80D)\n5. Form 26AS (TDS details)\n6. AIS (all income sources)\n\nFiling Process:\n\nStep 1 - Register:\n1. eportal.incometax.gov.in\n2. Register with PAN\n3. Set password\n4. Link Aadhaar\n\nStep 2 - Select Form:\n- ITR-1 (Sahaj): Salary up to ₹50 lakh, one house\n- ITR-2: More than one house, capital gains\n- ITR-4: Business income (presumptive)\n\nStep 3 - Fill: Personal info → Income → Deductions → Tax calculation → Bank account\n\nStep 4 - Verify: Pre-filled data check, Form 26AS match\n\nStep 5 - Submit & e-Verify (within 30 days):\n- Aadhaar OTP (easiest)\n- Net Banking/Bank EVC/Demat\n\nDeadline: July 31 (usually)\n\nRefund: If TDS > Tax liability → Direct to bank. Track at eportal.incometax.gov.in",
+          "topic": "it_return_filing",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR014",
+          "question": "Passport first time apply pannanum - complete process enna?",
+          "answer": "Step 1 - Online Registration:\n1. passportindia.gov.in → 'New User Registration'\n2. Create account\n3. Login\n\nStep 2 - Fill Application:\n1. 'Apply for Fresh Passport'\n2. Select: Normal/Tatkaal\n3. Fill: Personal, Family, Address, Emergency contact\n4. Save and continue\n\nStep 3 - Book Appointment:\n1. Select PSK (Passport Seva Kendra)\n2. Choose date/time\n3. Pay: Normal 36 pages ₹1,500, 60 pages ₹2,000, Tatkaal +₹2,000\n4. Print Application Receipt\n\nStep 4 - PSK Visit:\nDocuments: Printed application, Aadhaar, PAN, Voter ID/DL, Birth Certificate/SSLC, Address proof (EB bill/Bank statement)\n\nAt PSK: Token → Document verification → Biometric → Photo → Final verification → Acknowledgment\n\nStep 5 - Police Verification:\n- Police visit address (1-2 weeks)\n- Keep documents ready\n- Neighbors may be asked\n\nStep 6 - Delivery:\n- Speed Post\n- Track: passportindia.gov.in\n- Normal: 15-30 days\n- Tatkaal: 1-7 days\n\nTips: Same name spelling in all docs, Recent address proof, Reach PSK 15 mins early",
+          "topic": "passport_application",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR015",
+          "question": "Driving License apply pannanum - LLR to DL full process?",
+          "answer": "Step 1 - Learner's License (LLR):\n\nApply Online:\n1. parivahan.gov.in → 'Online Services' → Tamil Nadu\n2. 'Apply for Learner's License'\n3. Fill Form 1 (Application)\n4. Fill Form 2 (Medical - self declaration)\n5. Upload: Age proof, Address proof, Photo, Signature\n6. Pay: ₹200-350\n\nAge Requirements: Scooty (no gear) 16, Bike/Car 18, Transport 20\n\nBook Slot: Select RTO, Choose date, Go for test\n\nLLR Test: Computer-based, 15 questions on road signs/rules, Pass: 9/15, Result: Same day, Valid: 6 months\n\nStep 2 - Driving Test for DL:\n\nWait Period: 30 days after LLR\n\nBook DL Slot:\n1. parivahan.gov.in → 'Apply for Driving License'\n2. Enter LLR number\n3. Fill Form 4\n4. Pay: ₹500-700\n5. Book slot\n\nTest Day:\n- Bring own vehicle (or rent near RTO)\n- Documents: LLR, Aadhaar, Photos\n- Tests: 8 formation (parking/reverse), Slope driving, Traffic signals, Road driving\n\nPass: Biometric capture → DL number → Card mailed\nFail: Re-test after 7 days + additional fee\n\nTimeline: LLR same day, DL test after 30 days, DL card 7-15 days after test",
+          "topic": "driving_license",
+          "language": "tanglish"
+        },
+        {
+          "id": "TPR016",
+          "question": "Voter ID - New registration, address change, name correction - full process?",
+          "answer": "New Registration:\n\nEligibility: Indian citizen, 18 years on Jan 1 (qualifying date), Ordinary resident\n\nApply Online:\n1. voters.eci.gov.in OR Voter Helpline App\n2. 'New Voter Registration' → Form 6\n3. Fill: Personal info, Address (where you want to vote), Family/Neighbor reference (existing voter)\n4. Upload: Age proof, Address proof, Passport photo\n5. Submit\n\nVerification: BLO (Booth Level Officer) visit → Verify residence → May ask neighbors (2-4 weeks)\n\nCollection: SMS notification → Download e-EPIC (Voter Helpline App) → Physical card from BLO/Election Office\n\nAddress Change (Within State):\n1. voters.eci.gov.in → Form 6 (new address)\n2. Upload new address proof\n3. BLO verification → Old entry deleted automatically\n\nAddress Change (Different State):\n- Apply Form 6 in new state → Added to new constituency → Deleted from old automatically\n\nName/DOB/Photo Correction:\n1. voters.eci.gov.in → Form 8\n2. Select correction type\n3. Upload supporting document\n4. Submit → Correction in 15-30 days\n\nDelete Entry (Shifted/Deceased): Form 7\n\nImportant: Jan 1 qualifying date, Electoral Roll revision Oct-Nov yearly",
+          "topic": "voter_id",
+          "language": "tanglish"
+        }
+      ]
     }
   ],
   "metadata": {
@@ -2356,7 +2774,7 @@
     "target_audience": "Tamil Nadu citizens",
     "use_case": "Government services navigation",
     "license": "CC-BY-SA-4.0",
-    "version_notes": "v0.4.0 - Major expansion with Central Government Agriculture & Rural schemes (PMFBY crop insurance, PM-KUSUM solar, KCC credit, Soil Health Card, e-NAM market, PKVY organic farming, PMKSY irrigation, MGNREGA employment, PMGSY roads, DDU-GKY skill training, PM-AJAY healthcare). Added Senior Citizens schemes (IGNOAPS/IGNWPS/IGNDPS pensions, PMVVY LIC pension, SCSS savings, RVY assistive devices, travel concessions, legal rights). Comprehensive Tamil Nadu State Schemes coverage: Women welfare (Kalaignar Magalir ₹1000, Girl Child Protection, Marriage Assistance, Dr. Muthulakshmi Maternity), Education (CM Higher Education, SC/ST/BC Scholarships, Free Laptop, Free Bus Pass), Health (CMCHIS insurance, Amma Baby Kit, free healthcare), Agriculture (free electricity, UZHAVAN app, input subsidies), Social welfare (Old Age/Widow/Disability pensions), Housing (free site patta, TNHB, Slum Clearance), Employment (Employment Exchange, NEEDS loans), Ration/Food (PDS items, Mid-Day Meal). Added TN Government portals and helpline directory.",
+    "version_notes": "v0.5.0 - Added comprehensive scenario-based life event guides (Q77-Q86): New Baby Born complete checklist, Marriage documentation and benefits, Death in family formalities, Starting Small Business licenses and loans, Property purchase verification and registration, Higher Education admission/scholarships/loans, Lost Documents recovery procedures, Senior Citizen benefits and safety measures, Farmer Crop Loss compensation and relief, Cyber Fraud victim response. Added Common Misconceptions section (Q87-Q94): Aadhaar myths (citizenship, mobile update, school/hospital denial), PAN Card myths (mandatory requirements, linking, duplicates), Ration Card myths (online services, portability, Aadhaar), Government Schemes myths (PM-KISAN, Ayushman Bharat, MUDRA, PMAY eligibility), Document-related mistakes, Banking/Financial mistakes, Property purchase mistakes, Scheme application errors. Added 16 Detailed Tanglish Procedure guides (Q95-Q110): Aadhaar mobile change/address update/biometric lock, Instant e-PAN, PAN-Aadhaar linking, PM-KISAN registration, MUDRA Loan, Ayushman Bharat card, Old Age Pension TN, Kalaignar Magalir Urimai Thittam, TNPDS online services, TANGEDCO connection, IT Return filing, Passport application, Driving License (LLR to DL), Voter ID registration.",
     "last_updated": "2026-02-05",
     "languages_covered": [
       "pure_tamil",
