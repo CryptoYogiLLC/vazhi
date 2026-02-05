@@ -2,8 +2,8 @@
   "pack_name": "vazhi_arasu",
   "pack_name_tamil": "வழி அரசு",
   "description": "Government services pack for navigating Tamil Nadu and Central government schemes",
-  "version": "0.2.0",
-  "total_pairs": 144,
+  "version": "0.3.0",
+  "total_pairs": 198,
   "categories": [
     {
       "category": "ration_card",
@@ -1112,6 +1112,448 @@
           "answer": "Emergency: 112, Women Helpline: 181, Child Helpline: 1098, CM Cell: 1100, Legal Aid: 15100, Consumer: 1915, Electricity: 94987-94987, Water: 1916, Ration Card: 1967",
           "topic": "helplines",
           "language": "tanglish"
+        },
+        {
+          "id": "REF005",
+          "question": "முக்கிய மத்திய அரசு இணையதளங்கள் என்ன?",
+          "answer": "All Services: services.india.gov.in, Aadhaar: uidai.gov.in / myaadhaar.uidai.gov.in, PAN: incometax.gov.in, Scholarships: scholarships.gov.in, Pension: maandhan.in, PM-KISAN: pmkisan.gov.in, Ayushman Bharat: pmjay.gov.in, PMAY Housing: pmay-urban.gov.in, Education Loan: vidyalakshmi.co.in, Skill Training: pmkvyofficial.org, MUDRA Loan: mudra.org.in, Street Vendor: pmsvanidhi.mohua.gov.in, LPG: mylpg.in, DigiLocker: digilocker.gov.in",
+          "topic": "reference",
+          "language": "pure_tamil"
+        },
+        {
+          "id": "REF006",
+          "question": "Important Central Government websites enna?",
+          "answer": "All Services: services.india.gov.in, Aadhaar: uidai.gov.in / myaadhaar.uidai.gov.in, PAN: incometax.gov.in, Scholarships: scholarships.gov.in, Pension: maandhan.in, PM-KISAN: pmkisan.gov.in, Ayushman Bharat: pmjay.gov.in, PMAY Housing: pmay-urban.gov.in, Education Loan: vidyalakshmi.co.in, Skill Training: pmkvyofficial.org, MUDRA Loan: mudra.org.in, Street Vendor: pmsvanidhi.mohua.gov.in, LPG: mylpg.in, DigiLocker: digilocker.gov.in",
+          "topic": "reference",
+          "language": "tanglish"
+        },
+        {
+          "id": "REF007",
+          "question": "மத்திய அரசு உதவி எண்கள் என்ன?",
+          "answer": "Aadhaar: 1947, PAN/Income Tax: 1800-180-1961, PM-KISAN: 155261, Ayushman Bharat: 14555, NSP Scholarship: 0120-6619540, PMKVY Skill: 1800-123-9626, Consumer: 1915, Women Helpline: 181, Cyber Crime: 1930",
+          "topic": "helplines",
+          "language": "pure_tamil"
+        },
+        {
+          "id": "REF008",
+          "question": "Central Government helpline numbers enna?",
+          "answer": "Aadhaar: 1947, PAN/Income Tax: 1800-180-1961, PM-KISAN: 155261, Ayushman Bharat: 14555, NSP Scholarship: 0120-6619540, PMKVY Skill: 1800-123-9626, Consumer: 1915, Women Helpline: 181, Cyber Crime: 1930",
+          "topic": "helplines",
+          "language": "tanglish"
+        }
+      ]
+    },
+    {
+      "category": "pan_card_bilingual",
+      "category_tamil": "பான் கார்டு (இருமொழி)",
+      "description": "PAN Card procedures in both Pure Tamil and Tanglish",
+      "pairs": [
+        {
+          "id": "PAN001",
+          "question": "புதிய PAN Card எப்படி பெறுவது?",
+          "answer": "Online விண்ணப்பம்: 1. NSDL: onlineservices.nsdl.com 2. UTIITSL: pan.utiitsl.com 3. e-Filing Portal (Instant e-PAN): eportal.incometax.gov.in (Aadhaar based - FREE!). தேவையான ஆவணங்கள்: அடையாள சான்று (Aadhaar/Voter ID/Passport), முகவரி சான்று, DOB சான்று, புகைப்படம் & கையொப்பம். கட்டணம்: Physical PAN ₹107 (India), e-PAN இலவசம். காலம்: 15-20 நாட்கள் (Physical), உடனடி (e-PAN)",
+          "topic": "pan_card",
+          "language": "pure_tamil",
+          "parallel_id": "PAN002"
+        },
+        {
+          "id": "PAN002",
+          "question": "Pudhiya PAN Card eppadi peruvadhu?",
+          "answer": "Online application: 1. NSDL: onlineservices.nsdl.com 2. UTIITSL: pan.utiitsl.com 3. e-Filing Portal (Instant e-PAN): eportal.incometax.gov.in (Aadhaar based - FREE!). Documents needed: ID Proof (Aadhaar/Voter ID/Passport), Address Proof, DOB Proof, Photo & Signature. Fee: Physical PAN ₹107 (India), e-PAN Free. Time: 15-20 days (Physical), Instant (e-PAN)",
+          "topic": "pan_card",
+          "language": "tanglish",
+          "parallel_id": "PAN001"
+        },
+        {
+          "id": "PAN003",
+          "question": "PAN Card-ல் தவறு இருக்கிறது - எப்படி சரி செய்வது?",
+          "answer": "திருத்தம் செய்ய: 1. onlineservices.nsdl.com → 'Changes or Correction in PAN Data' 2. Form நிரப்பவும் 3. சரியான ஆவணங்கள் upload செய்யவும் 4. கட்டணம்: ₹107. திருத்தக்கூடியவை: பெயர், பிறந்த தேதி, தந்தை பெயர், முகவரி, புகைப்படம்/கையொப்பம். முக்கியம்: PAN-Aadhaar link ஆகியிருந்தால், இரண்டிலும் details ஒரே மாதிரி இருக்க வேண்டும்",
+          "topic": "pan_correction",
+          "language": "pure_tamil",
+          "parallel_id": "PAN004"
+        },
+        {
+          "id": "PAN004",
+          "question": "PAN Card-la thavaru irukku - eppadi sari seyvadhu?",
+          "answer": "To correct: 1. onlineservices.nsdl.com → 'Changes or Correction in PAN Data' 2. Fill form 3. Upload correct documents 4. Fee: ₹107. Can correct: Name, DOB, Father's name, Address, Photo/Signature. Important: If PAN-Aadhaar linked, details must match in both",
+          "topic": "pan_correction",
+          "language": "tanglish",
+          "parallel_id": "PAN003"
+        },
+        {
+          "id": "PAN005",
+          "question": "PAN-Aadhaar Link எப்படி செய்வது? கட்டாயமா?",
+          "answer": "கட்டாயம்! Link செய்யாவிட்டால் PAN செயலிழக்கும் (Inoperative). Link செய்ய: 1. Online: eportal.incometax.gov.in → Link Aadhaar 2. SMS: UIDPAN <Aadhaar> <PAN> → 567678 or 56161 3. கட்டணம்: ₹1,000 (late fee). Status check: eportal.incometax.gov.in → Link Aadhaar Status. Link ஆகவில்லை என்றால்: ITR file செய்ய முடியாது, பெரிய bank transactions முடியாது, MF/Demat திறக்க முடியாது, Higher TDS",
+          "topic": "pan_aadhaar_link",
+          "language": "pure_tamil",
+          "parallel_id": "PAN006"
+        },
+        {
+          "id": "PAN006",
+          "question": "PAN-Aadhaar Link eppadi seyvadhu? Kattaayama?",
+          "answer": "Mandatory! If not linked, PAN becomes Inoperative. How to link: 1. Online: eportal.incometax.gov.in → Link Aadhaar 2. SMS: UIDPAN <Aadhaar> <PAN> → 567678 or 56161 3. Fee: ₹1,000 (late fee). Check status: eportal.incometax.gov.in → Link Aadhaar Status. If not linked: Cannot file ITR, Cannot do large bank transactions, Cannot open MF/Demat, Higher TDS deduction",
+          "topic": "pan_aadhaar_link",
+          "language": "tanglish",
+          "parallel_id": "PAN005"
+        },
+        {
+          "id": "PAN007",
+          "question": "PAN Card தொலைந்துவிட்டது - Duplicate எப்படி பெறுவது?",
+          "answer": "1. e-PAN Download (Free): eportal.incometax.gov.in → Instant e-PAN, Aadhaar OTP verification, PDF download. 2. Physical Duplicate: onlineservices.nsdl.com → 'Reprint of PAN Card', கட்டணம் ₹50, 15-20 நாட்களில் வரும். 3. PAN Number மறந்துவிட்டால்: incometax.gov.in → Know Your PAN, Name + DOB + Mobile கொடுத்து கண்டுபிடிக்கலாம்",
+          "topic": "duplicate_pan",
+          "language": "pure_tamil",
+          "parallel_id": "PAN008"
+        },
+        {
+          "id": "PAN008",
+          "question": "PAN Card tholaindhuvidadhu - Duplicate eppadi peruvadhu?",
+          "answer": "1. e-PAN Download (Free): eportal.incometax.gov.in → Instant e-PAN, Aadhaar OTP verification, PDF download. 2. Physical Duplicate: onlineservices.nsdl.com → 'Reprint of PAN Card', Fee ₹50, comes in 15-20 days. 3. Forgot PAN Number: incometax.gov.in → Know Your PAN, find using Name + DOB + Mobile",
+          "topic": "duplicate_pan",
+          "language": "tanglish",
+          "parallel_id": "PAN007"
+        },
+        {
+          "id": "PAN009",
+          "question": "ஒன்றுக்கு மேற்பட்ட PAN இருந்தால் என்ன செய்வது?",
+          "answer": "சட்டவிரோதம்! ₹10,000 அபராதம் விதிக்கலாம். Duplicate PAN Surrender செய்ய: 1. onlineservices.nsdl.com → 'Request for New PAN Card or/and Changes' 2. Item 11-ல் surrender செய்ய வேண்டிய PAN numbers எழுதவும் 3. Original PAN Cards அனுப்பவும் 4. கட்டணம்: ₹107. ஒரே PAN மட்டும் வைத்துக்கொள்ளவும்",
+          "topic": "multiple_pan",
+          "language": "pure_tamil",
+          "parallel_id": "PAN010"
+        },
+        {
+          "id": "PAN010",
+          "question": "Ondrukku merpatta PAN irundhaal enna seyvadhu?",
+          "answer": "Illegal! ₹10,000 penalty possible. To surrender duplicate PAN: 1. onlineservices.nsdl.com → 'Request for New PAN Card or/and Changes' 2. In Item 11, write PAN numbers to surrender 3. Send original PAN Cards 4. Fee: ₹107. Keep only one PAN",
+          "topic": "multiple_pan",
+          "language": "tanglish",
+          "parallel_id": "PAN009"
+        },
+        {
+          "id": "PAN011",
+          "question": "Minor குழந்தைக்கு PAN Card தேவையா?",
+          "answer": "தேவைப்படும் சூழ்நிலைகள்: குழந்தை பெயரில் Fixed Deposit/Investment, குழந்தைக்கு வருமானம் இருந்தால் (Child Artist), Property குழந்தை பெயரில் இருந்தால். விண்ணப்பிக்க: பெற்றோர்/Guardian விண்ணப்பிக்க வேண்டும், குழந்தையின் Birth Certificate + Parent's ID proof தேவை, 18 வயதானதும் details update செய்ய வேண்டும் (photo, signature)",
+          "topic": "minor_pan",
+          "language": "pure_tamil",
+          "parallel_id": "PAN012"
+        },
+        {
+          "id": "PAN012",
+          "question": "Minor kuzhanthaiku PAN Card thevaiya?",
+          "answer": "Needed when: FD/Investment in child's name, Child has income (Child Artist), Property in child's name. To apply: Parent/Guardian must apply, Need child's Birth Certificate + Parent's ID proof, Must update details (photo, signature) when turning 18",
+          "topic": "minor_pan",
+          "language": "tanglish",
+          "parallel_id": "PAN011"
+        }
+      ]
+    },
+    {
+      "category": "central_govt_schemes",
+      "category_tamil": "மத்திய அரசு திட்டங்கள்",
+      "description": "Central Government welfare and financial schemes in both Pure Tamil and Tanglish",
+      "pairs": [
+        {
+          "id": "CGS001",
+          "question": "பிரதான் மந்திரி ஜன் தன் யோஜனா (PMJDY) என்றால் என்ன?",
+          "answer": "இலவச வங்கி கணக்கு திட்டம். தகுதி: எந்த இந்திய குடிமகனும். நன்மைகள்: Zero Balance Account, Free RuPay Debit Card, ₹2 லட்சம் Accident Insurance (RuPay Card-ல்), ₹30,000 Life Insurance (புதிய கணக்குகளுக்கு), Overdraft ₹10,000 வரை, Direct Benefit Transfer (DBT) பெறலாம். திறக்க: அருகிலுள்ள Bank/Bank Mitra/CSC. ஆவணங்கள்: Aadhaar அல்லது Voter ID",
+          "topic": "financial_inclusion",
+          "language": "pure_tamil",
+          "parallel_id": "CGS002"
+        },
+        {
+          "id": "CGS002",
+          "question": "Pradhan Mantri Jan Dhan Yojana (PMJDY) endraal enna?",
+          "answer": "Free bank account scheme. Eligibility: Any Indian citizen. Benefits: Zero Balance Account, Free RuPay Debit Card, ₹2 lakh Accident Insurance (via RuPay), ₹30,000 Life Insurance (new accounts), Overdraft up to ₹10,000, Direct Benefit Transfer (DBT). How to open: Nearby Bank/Bank Mitra/CSC. Documents: Aadhaar or Voter ID",
+          "topic": "financial_inclusion",
+          "language": "tanglish",
+          "parallel_id": "CGS001"
+        },
+        {
+          "id": "CGS003",
+          "question": "பிரதான் மந்திரி முத்ரா யோஜனா (PMMY) - கடன் எப்படி பெறுவது?",
+          "answer": "சிறு தொழில் தொடங்க Collateral-free கடன். Categories: Shishu (₹50,000 வரை - தொழில் தொடங்க), Kishore (₹50,001-₹5 லட்சம் - விரிவாக்கம்), Tarun (₹5-₹10 லட்சம் - பெரிய விரிவாக்கம்). தகுதி: Manufacturing/Trading/Service sector, Non-Corporate Small Business. விண்ணப்பிக்க: mudra.org.in அல்லது அருகிலுள்ள Bank. தேவை: Business Plan, ID Proof, Address Proof",
+          "topic": "business_loan",
+          "language": "pure_tamil",
+          "parallel_id": "CGS004"
+        },
+        {
+          "id": "CGS004",
+          "question": "Pradhan Mantri MUDRA Yojana (PMMY) - loan eppadi peruvadhu?",
+          "answer": "Collateral-free loan for small business. Categories: Shishu (up to ₹50,000 - start business), Kishore (₹50,001-₹5 lakh - expansion), Tarun (₹5-₹10 lakh - larger expansion). Eligibility: Manufacturing/Trading/Service sector, Non-Corporate Small Business. Apply: mudra.org.in or nearby Bank. Need: Business Plan, ID Proof, Address Proof",
+          "topic": "business_loan",
+          "language": "tanglish",
+          "parallel_id": "CGS003"
+        },
+        {
+          "id": "CGS005",
+          "question": "ஸ்டாண்ட் அப் இந்தியா திட்டம் என்றால் என்ன?",
+          "answer": "SC/ST/பெண்களுக்கு தொழில் கடன். கடன் அளவு: ₹10 லட்சம் - ₹1 கோடி. தகுதி: SC/ST அல்லது பெண் தொழில்முனைவோர், 18 வயதுக்கு மேல், புதிய Manufacturing/Trading/Service தொழில், குறைந்தது 51% ownership. நன்மைகள்: Collateral-free (CGTMSE Guarantee), Low interest rate, 7 வருட திருப்பி செலுத்தும் காலம். விண்ணப்பம்: standupmitra.in",
+          "topic": "entrepreneurship",
+          "language": "pure_tamil",
+          "parallel_id": "CGS006"
+        },
+        {
+          "id": "CGS006",
+          "question": "Stand Up India scheme endraal enna?",
+          "answer": "Business loan for SC/ST/Women. Loan amount: ₹10 lakh - ₹1 crore. Eligibility: SC/ST or Women entrepreneur, Above 18 years, New Manufacturing/Trading/Service business, At least 51% ownership. Benefits: Collateral-free (CGTMSE Guarantee), Low interest rate, 7 year repayment period. Apply: standupmitra.in",
+          "topic": "entrepreneurship",
+          "language": "tanglish",
+          "parallel_id": "CGS005"
+        },
+        {
+          "id": "CGS007",
+          "question": "பிரதான் மந்திரி ஜீவன் ஜோதி பீமா யோஜனா (PMJJBY) என்றால் என்ன?",
+          "answer": "Life Insurance திட்டம். Premium: ஆண்டுக்கு ₹436 மட்டுமே. Coverage: ₹2 லட்சம் (மரணம் ஏற்பட்டால்). வயது: 18-55 வயது. தகுதி: Jan Dhan/Savings Account உள்ளவர்கள். சேர: Bank-ல் படிவம் நிரப்பவும், Auto-debit consent கொடுக்கவும். ஒவ்வொரு வருடமும் June 1-ல் renew ஆகும்",
+          "topic": "insurance",
+          "language": "pure_tamil",
+          "parallel_id": "CGS008"
+        },
+        {
+          "id": "CGS008",
+          "question": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) enna?",
+          "answer": "Life Insurance scheme. Premium: Only ₹436 per year. Coverage: ₹2 lakh (on death). Age: 18-55 years. Eligibility: Those with Jan Dhan/Savings Account. How to join: Fill form at Bank, Give auto-debit consent. Renews every June 1",
+          "topic": "insurance",
+          "language": "tanglish",
+          "parallel_id": "CGS007"
+        },
+        {
+          "id": "CGS009",
+          "question": "பிரதான் மந்திரி சுரக்ஷா பீமா யோஜனா (PMSBY) என்றால் என்ன?",
+          "answer": "Accident Insurance திட்டம். Premium: ஆண்டுக்கு ₹20 மட்டுமே. Coverage: மரணம்/முழு ஊனம் ₹2 லட்சம், பகுதி ஊனம் ₹1 லட்சம். வயது: 18-70 வயது. தகுதி: Savings Account உள்ளவர்கள். சேர: Bank-ல் படிவம், Auto-debit consent. June 1-ல் renew. PMJJBY + PMSBY இரண்டும்: ₹456/வருடம் → ₹4 லட்சம் coverage!",
+          "topic": "insurance",
+          "language": "pure_tamil",
+          "parallel_id": "CGS010"
+        },
+        {
+          "id": "CGS010",
+          "question": "Pradhan Mantri Suraksha Bima Yojana (PMSBY) enna?",
+          "answer": "Accident Insurance scheme. Premium: Only ₹20 per year. Coverage: Death/Total disability ₹2 lakh, Partial disability ₹1 lakh. Age: 18-70 years. Eligibility: Savings Account holders. Join: Form at Bank, Auto-debit consent. Renews June 1. PMJJBY + PMSBY together: ₹456/year → ₹4 lakh coverage!",
+          "topic": "insurance",
+          "language": "tanglish",
+          "parallel_id": "CGS009"
+        },
+        {
+          "id": "CGS011",
+          "question": "அடல் பென்ஷன் யோஜனா (APY) என்றால் என்ன?",
+          "answer": "Unorganized Sector Pension திட்டம். வயது: 18-40 வயது சேரலாம். 60 வயதில் பென்ஷன்: ₹1,000/₹2,000/₹3,000/₹4,000/₹5,000 மாதம். Contribution: வயது + pension amount பொறுத்து மாறும் (18 வயதில் சேர்ந்தால் ₹210/month for ₹5,000 pension). நன்மைகள்: Government co-contribution, Spouse-க்கு pension தொடரும், Nominee-க்கு corpus கிடைக்கும். சேர: Bank/Post Office",
+          "topic": "pension",
+          "language": "pure_tamil",
+          "parallel_id": "CGS012"
+        },
+        {
+          "id": "CGS012",
+          "question": "Atal Pension Yojana (APY) endraal enna?",
+          "answer": "Pension scheme for Unorganized Sector. Age: 18-40 years can join. Pension at 60: ₹1,000/₹2,000/₹3,000/₹4,000/₹5,000 per month. Contribution: Varies by age + pension amount (joining at 18 = ₹210/month for ₹5,000 pension). Benefits: Government co-contribution, Pension continues for spouse, Corpus to nominee. Join: Bank/Post Office",
+          "topic": "pension",
+          "language": "tanglish",
+          "parallel_id": "CGS011"
+        },
+        {
+          "id": "CGS013",
+          "question": "PM-KISAN திட்டம் என்றால் என்ன?",
+          "answer": "விவசாயிகளுக்கு நேரடி பண உதவி. தொகை: ஆண்டுக்கு ₹6,000 (₹2,000 x 3 தவணை). தகுதி: நில உடைமை விவசாயிகள். விலக்கு: Government employees, Income Tax செலுத்துபவர்கள், Professional registered (Doctor, Engineer, CA), ₹10,000+ pension பெறுபவர்கள். பதிவு: pmkisan.gov.in, CSC/Agriculture Office. Aadhaar, Land Records, Bank Account தேவை. Status Check: pmkisan.gov.in → Beneficiary Status",
+          "topic": "farmer_welfare",
+          "language": "pure_tamil",
+          "parallel_id": "CGS014"
+        },
+        {
+          "id": "CGS014",
+          "question": "PM-KISAN scheme enna?",
+          "answer": "Direct cash support for farmers. Amount: ₹6,000/year (₹2,000 x 3 installments). Eligibility: Land-owning farmers. Exclusions: Government employees, Income Tax payers, Registered professionals, Those getting ₹10,000+ pension. Registration: pmkisan.gov.in, CSC/Agriculture Office. Need Aadhaar, Land Records, Bank Account. Status: pmkisan.gov.in → Beneficiary Status",
+          "topic": "farmer_welfare",
+          "language": "tanglish",
+          "parallel_id": "CGS013"
+        },
+        {
+          "id": "CGS015",
+          "question": "ஆயுஷ்மான் பாரத் (PM-JAY) என்றால் என்ன?",
+          "answer": "₹5 லட்சம் இலவச சிகிச்சை. Coverage: குடும்பத்திற்கு ஆண்டுக்கு ₹5 லட்சம். தகுதி: SECC 2011 data படி BPL குடும்பங்கள். சிகிச்சைகள்: 1,500+ procedures covered (Surgery, ICU, etc.). தகுதி சரிபார்க்க: pmjay.gov.in → Am I Eligible, Aadhaar/Ration Card number கொடுக்கவும். Card பெற: Ayushman Mitra/Government Hospital, Aadhaar + Ration Card + Photo, இலவசம். Tamil Nadu-ல்: CMCHIS உடன் இணைக்கப்பட்டுள்ளது",
+          "topic": "healthcare",
+          "language": "pure_tamil",
+          "parallel_id": "CGS016"
+        },
+        {
+          "id": "CGS016",
+          "question": "Ayushman Bharat (PM-JAY) endraal enna?",
+          "answer": "₹5 lakh free treatment. Coverage: ₹5 lakh per family per year. Eligibility: BPL families as per SECC 2011 data. Treatments: 1,500+ procedures covered. Check eligibility: pmjay.gov.in → Am I Eligible, Enter Aadhaar/Ration Card number. Get card: Ayushman Mitra/Government Hospital, Need Aadhaar + Ration Card + Photo, Free. In TN: Integrated with CMCHIS",
+          "topic": "healthcare",
+          "language": "tanglish",
+          "parallel_id": "CGS015"
+        },
+        {
+          "id": "CGS017",
+          "question": "PM Janaushadhi Kendra என்றால் என்ன?",
+          "answer": "மலிவான மருந்துகள் வாங்கும் இடம். MRP-யில் 50-90% குறைந்த விலை. 1,800+ மருந்துகள் + 285+ Surgical items. Quality: NABL tested, WHO-GMP certified. கண்டுபிடிக்க: janaushadhi.gov.in → Store Locator. Tamil Nadu-ல் 1,000+ கடைகள். உதாரணம்: Paracetamol 500mg (10 tabs) - Market ₹15, Janaushadhi ₹2.50; Metformin 500mg - Market ₹25, Janaushadhi ₹3.50",
+          "topic": "healthcare",
+          "language": "pure_tamil",
+          "parallel_id": "CGS018"
+        },
+        {
+          "id": "CGS018",
+          "question": "PM Janaushadhi Kendra endraal enna?",
+          "answer": "Affordable medicines store. 50-90% less than MRP. 1,800+ medicines + 285+ Surgical items. Quality: NABL tested, WHO-GMP certified. Find: janaushadhi.gov.in → Store Locator. 1,000+ stores in Tamil Nadu. Example: Paracetamol 500mg (10 tabs) - Market ₹15, Janaushadhi ₹2.50; Metformin 500mg - Market ₹25, Janaushadhi ₹3.50",
+          "topic": "healthcare",
+          "language": "tanglish",
+          "parallel_id": "CGS017"
+        },
+        {
+          "id": "CGS019",
+          "question": "பிரதான் மந்திரி ஆவாஸ் யோஜனா (PMAY) - TN-ல் எப்படி பெறுவது?",
+          "answer": "PMAY-Urban: தகுதி - EWS (₹3 லட்சம் வரை வருமானம்), LIG (₹3-6 லட்சம்), MIG-I (₹6-12 லட்சம்), MIG-II (₹12-18 லட்சம்). நன்மை: வட்டி மானியம் 3-6.5%. விண்ணப்பம்: pmay-urban.gov.in/CSC/Bank. PMAY-Gramin: SECC data படி வீடில்லாதவர்கள். உதவி: ₹1.20 லட்சம் (Plain)/₹1.30 லட்சம் (Hilly). விண்ணப்பம்: Gram Panchayat/Block Office. TN Specific: TNHB மூலமும் விண்ணப்பிக்கலாம்",
+          "topic": "housing",
+          "language": "pure_tamil",
+          "parallel_id": "CGS020"
+        },
+        {
+          "id": "CGS020",
+          "question": "Pradhan Mantri Awas Yojana (PMAY) - TN-la eppadi peruvadhu?",
+          "answer": "PMAY-Urban: Eligibility - EWS (income up to ₹3 lakh), LIG (₹3-6 lakh), MIG-I (₹6-12 lakh), MIG-II (₹12-18 lakh). Benefit: Interest subsidy 3-6.5%. Apply: pmay-urban.gov.in/CSC/Bank. PMAY-Gramin: Houseless as per SECC data. Assistance: ₹1.20 lakh (Plain)/₹1.30 lakh (Hilly). Apply: Gram Panchayat/Block Office. TN: Can also apply through TNHB",
+          "topic": "housing",
+          "language": "tanglish",
+          "parallel_id": "CGS019"
+        },
+        {
+          "id": "CGS021",
+          "question": "பிரதான் மந்திரி உஜ்வலா யோஜனா (PMUY) என்றால் என்ன?",
+          "answer": "இலவச LPG Connection. தகுதி: BPL குடும்பங்கள், SC/ST, PM-ஆவாஸ் பயனாளிகள். நன்மை: இலவச LPG Connection, முதல் Cylinder + Stove deposit-free, EMI option for cylinder cost. விண்ணப்பிக்க: அருகிலுள்ள LPG Distributor (HP, Bharat, Indane), pmuy.gov.in. ஆவணங்கள்: Aadhaar, BPL Card, Bank Account. Refill Subsidy: DBT மூலம் Bank Account-ல் நேரடியாக வரும்",
+          "topic": "lpg_subsidy",
+          "language": "pure_tamil",
+          "parallel_id": "CGS022"
+        },
+        {
+          "id": "CGS022",
+          "question": "Pradhan Mantri Ujjwala Yojana (PMUY) endraal enna?",
+          "answer": "Free LPG Connection. Eligibility: BPL families, SC/ST, PM-Awas beneficiaries. Benefits: Free LPG Connection, First Cylinder + Stove deposit-free, EMI option for cylinder cost. Apply: Nearby LPG Distributor (HP, Bharat, Indane), pmuy.gov.in. Documents: Aadhaar, BPL Card, Bank Account. Refill Subsidy: Comes directly to Bank Account via DBT",
+          "topic": "lpg_subsidy",
+          "language": "tanglish",
+          "parallel_id": "CGS021"
+        },
+        {
+          "id": "CGS023",
+          "question": "PM Vidya Lakshmi Portal என்றால் என்ன?",
+          "answer": "கல்வி கடன் ஒரே இடத்தில். Website: vidyalakshmi.co.in. வசதிகள்: 40+ Banks, 125+ கடன் schemes, ஒரே application மூலம் பல banks-க்கு apply, Scholarship தகவல்களும் உள்ளன. கடன் வகைகள்: ₹4 லட்சம் வரை - Collateral இல்லாமல், ₹4-7.5 லட்சம் - Co-borrower தேவை, ₹7.5 லட்சத்திற்கு மேல் - Collateral தேவை. Interest Subsidy: EWS students-க்கு moratorium காலத்தில் வட்டி Govt செலுத்தும்",
+          "topic": "education_loan",
+          "language": "pure_tamil",
+          "parallel_id": "CGS024"
+        },
+        {
+          "id": "CGS024",
+          "question": "PM Vidya Lakshmi Portal endraal enna?",
+          "answer": "Education loan portal. Website: vidyalakshmi.co.in. Features: 40+ Banks, 125+ loan schemes, Apply to multiple banks with one application, Scholarship info available. Loan types: Up to ₹4 lakh - No collateral, ₹4-7.5 lakh - Co-borrower needed, Above ₹7.5 lakh - Collateral needed. Interest Subsidy: Govt pays interest during moratorium for EWS students",
+          "topic": "education_loan",
+          "language": "tanglish",
+          "parallel_id": "CGS023"
+        },
+        {
+          "id": "CGS025",
+          "question": "National Scholarship Portal (NSP) எப்படி பயன்படுத்துவது?",
+          "answer": "Central Govt Scholarships ஒரே இடத்தில். Website: scholarships.gov.in. முக்கிய Scholarships: Pre-Matric SC (Class 1-10, ₹150-750/month), Post-Matric SC (Class 11+, ₹230-1,200/month), Merit-cum-Means (Technical edu, Tuition fee + ₹1,000/month), INSPIRE (Science top 1%, ₹80,000/year), NMMS (Class 9-12 EWS, ₹12,000/year). விண்ணப்பிக்க: scholarships.gov.in → Register, Aadhaar, Income Certificate, Marksheet upload, Institute verification, DBT மூலம் Bank-ல் வரும்",
+          "topic": "scholarship",
+          "language": "pure_tamil",
+          "parallel_id": "CGS026"
+        },
+        {
+          "id": "CGS026",
+          "question": "National Scholarship Portal (NSP) eppadi payanpaduthuvadhu?",
+          "answer": "Central Govt Scholarships in one place. Website: scholarships.gov.in. Key Scholarships: Pre-Matric SC (Class 1-10, ₹150-750/month), Post-Matric SC (Class 11+, ₹230-1,200/month), Merit-cum-Means (Technical edu, Tuition + ₹1,000/month), INSPIRE (Science top 1%, ₹80,000/year), NMMS (Class 9-12 EWS, ₹12,000/year). How to apply: scholarships.gov.in → Register, Upload Aadhaar, Income Certificate, Marksheet, Institute verification, Comes to Bank via DBT",
+          "topic": "scholarship",
+          "language": "tanglish",
+          "parallel_id": "CGS025"
+        },
+        {
+          "id": "CGS027",
+          "question": "பிரதான் மந்திரி கௌசல் விகாஸ் யோஜனா (PMKVY) என்றால் என்ன?",
+          "answer": "இலவச Skill Training. காலம்: 150-300 மணி நேரம். Courses: IT, Healthcare, Construction, Retail, etc. நன்மைகள்: இலவச Training, Certificate (Industry recognized), Placement assistance, ₹8,000 வரை reward (assessment pass செய்தால்). சேர: pmkvyofficial.org → Find Training Center, அருகிலுள்ள PMKVY Training Center, Aadhaar, Photo தேவை. RPL: ஏற்கனவே skill உள்ளவர்களுக்கு Certificate, ₹500 assessment fee (refundable)",
+          "topic": "skill_development",
+          "language": "pure_tamil",
+          "parallel_id": "CGS028"
+        },
+        {
+          "id": "CGS028",
+          "question": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY) endraal enna?",
+          "answer": "Free Skill Training. Duration: 150-300 hours. Courses: IT, Healthcare, Construction, Retail, etc. Benefits: Free Training, Certificate (Industry recognized), Placement assistance, Up to ₹8,000 reward (if assessment passed). Join: pmkvyofficial.org → Find Training Center, Nearby PMKVY Training Center, Need Aadhaar, Photo. RPL: Certificate for those with existing skills, ₹500 assessment fee (refundable)",
+          "topic": "skill_development",
+          "language": "tanglish",
+          "parallel_id": "CGS027"
+        },
+        {
+          "id": "CGS029",
+          "question": "PM Employment Generation Programme (PMEGP) என்றால் என்ன?",
+          "answer": "சுய தொழில் தொடங்க மானியம். தகுதி: 18 வயதுக்கு மேல், 8th pass (Manufacturing ₹10L+, Service ₹5L+), புதிய தொழில் மட்டுமே. Project Cost: Manufacturing ₹50 லட்சம் வரை, Service ₹20 லட்சம் வரை. Subsidy: General - Urban 15%/Rural 25%, SC/ST/OBC/Women/Minorities - Urban 25%/Rural 35%. விண்ணப்பம்: kviconline.gov.in",
+          "topic": "self_employment",
+          "language": "pure_tamil",
+          "parallel_id": "CGS030"
+        },
+        {
+          "id": "CGS030",
+          "question": "PM Employment Generation Programme (PMEGP) endraal enna?",
+          "answer": "Subsidy for starting business. Eligibility: Above 18 years, 8th pass (Manufacturing ₹10L+, Service ₹5L+), New business only. Project Cost: Manufacturing up to ₹50 lakh, Service up to ₹20 lakh. Subsidy: General - Urban 15%/Rural 25%, SC/ST/OBC/Women/Minorities - Urban 25%/Rural 35%. Apply: kviconline.gov.in",
+          "topic": "self_employment",
+          "language": "tanglish",
+          "parallel_id": "CGS029"
+        },
+        {
+          "id": "CGS031",
+          "question": "PM Shram Yogi Maan-Dhan (PM-SYM) என்றால் என்ன?",
+          "answer": "Unorganized Workers-க்கு Pension. தகுதி: 18-40 வயது, மாத வருமானம் ₹15,000-க்கு கீழ், EPFO/ESIC/NPS இல் இல்லாதவர், Street vendors, Domestic workers, Construction workers, etc. Contribution: ₹55-200/month (வயது பொறுத்து). 60 வயதில்: ₹3,000/month pension. Government: Equal matching contribution. சேர: CSC (Common Service Center), maandhan.in. Aadhaar + Savings Account தேவை",
+          "topic": "social_security",
+          "language": "pure_tamil",
+          "parallel_id": "CGS032"
+        },
+        {
+          "id": "CGS032",
+          "question": "PM Shram Yogi Maan-Dhan (PM-SYM) endraal enna?",
+          "answer": "Pension for Unorganized Workers. Eligibility: 18-40 years, Monthly income below ₹15,000, Not in EPFO/ESIC/NPS, Street vendors, Domestic workers, Construction workers, etc. Contribution: ₹55-200/month (based on age). At 60: ₹3,000/month pension. Government: Equal matching contribution. Join: CSC, maandhan.in. Need Aadhaar + Savings Account",
+          "topic": "social_security",
+          "language": "tanglish",
+          "parallel_id": "CGS031"
+        },
+        {
+          "id": "CGS033",
+          "question": "PM SVANidhi (Street Vendor Loan) என்றால் என்ன?",
+          "answer": "Street Vendors-க்கு கடன். முதல் கடன்: ₹10,000, இரண்டாவது: ₹20,000 (timely repayment-க்கு), மூன்றாவது: ₹50,000. Interest Subsidy: 7%. Cashback: Digital payment-க்கு ₹1,200/year வரை. தகுதி: Certificate of Vending/Letter of Recommendation, Urban Local Body survey-ல் பெயர். விண்ணப்பம்: pmsvanidhi.mohua.gov.in",
+          "topic": "street_vendor",
+          "language": "pure_tamil",
+          "parallel_id": "CGS034"
+        },
+        {
+          "id": "CGS034",
+          "question": "PM SVANidhi (Street Vendor Loan) endraal enna?",
+          "answer": "Loan for Street Vendors. First loan: ₹10,000, Second: ₹20,000 (for timely repayment), Third: ₹50,000. Interest Subsidy: 7%. Cashback: Up to ₹1,200/year for digital payments. Eligibility: Certificate of Vending/Letter of Recommendation, Name in Urban Local Body survey. Apply: pmsvanidhi.mohua.gov.in",
+          "topic": "street_vendor",
+          "language": "tanglish",
+          "parallel_id": "CGS033"
+        },
+        {
+          "id": "CGS035",
+          "question": "பிரதான் மந்திரி மாத்ரு வந்தனா யோஜனா (PMMVY) என்றால் என்ன?",
+          "answer": "கர்ப்பிணி பெண்களுக்கு உதவி. தொகை: ₹5,000 (3 தவணைகளில்) - ₹1,000 கர்ப்பம் பதிவு (150 நாட்களுக்குள்), ₹2,000 - 6 மாத பரிசோதனை, ₹2,000 - குழந்தை பிறப்பு பதிவு + தடுப்பூசி. தகுதி: முதல் குழந்தை பிறக்கும் பெண்கள். விண்ணப்பம்: அருகிலுள்ள Anganwadi/Government Hospital. MCP Card, Aadhaar, Bank Account தேவை. Tamil Nadu-ல்: Dr. Muthulakshmi Maternity Benefit Scheme (₹18,000) கூடுதலாக உள்ளது",
+          "topic": "maternity",
+          "language": "pure_tamil",
+          "parallel_id": "CGS036"
+        },
+        {
+          "id": "CGS036",
+          "question": "Pradhan Mantri Matru Vandana Yojana (PMMVY) endraal enna?",
+          "answer": "Support for pregnant women. Amount: ₹5,000 (in 3 installments) - ₹1,000 pregnancy registration (within 150 days), ₹2,000 - 6 month checkup, ₹2,000 - birth registration + vaccination. Eligibility: Women having first child. Apply: Nearby Anganwadi/Government Hospital. Need MCP Card, Aadhaar, Bank Account. In TN: Additional Dr. Muthulakshmi Maternity Benefit Scheme (₹18,000)",
+          "topic": "maternity",
+          "language": "tanglish",
+          "parallel_id": "CGS035"
+        },
+        {
+          "id": "CGS037",
+          "question": "Sukanya Samriddhi Yojana (SSY) என்றால் என்ன?",
+          "answer": "பெண் குழந்தைகளுக்கு சேமிப்பு திட்டம். வயது: 10 வயதுக்குள் Account திறக்கலாம். Deposit: குறைந்தது ₹250, அதிகபட்சம் ₹1.5 லட்சம்/year. வட்டி: 8.2% (2024) - மிக அதிகம்! காலம்: 21 வருடம் அல்லது திருமணம் (18 வயதுக்கு மேல்). Tax Benefits: Section 80C deduction (₹1.5 lakh வரை), Interest tax-free, Maturity amount tax-free (EEE status). திறக்க: Post Office/Bank, Birth Certificate, Parent's ID proof. Partial Withdrawal: 18 வயதில் 50% (Higher education/Marriage)",
+          "topic": "girl_child_savings",
+          "language": "pure_tamil",
+          "parallel_id": "CGS038"
+        },
+        {
+          "id": "CGS038",
+          "question": "Sukanya Samriddhi Yojana (SSY) endraal enna?",
+          "answer": "Savings scheme for girl children. Age: Can open account before 10 years. Deposit: Minimum ₹250, Maximum ₹1.5 lakh/year. Interest: 8.2% (2024) - Very high! Duration: 21 years or marriage (above 18). Tax Benefits: Section 80C deduction (up to ₹1.5 lakh), Interest tax-free, Maturity tax-free (EEE status). Open: Post Office/Bank, Birth Certificate, Parent's ID proof. Partial Withdrawal: 50% at 18 (Higher education/Marriage)",
+          "topic": "girl_child_savings",
+          "language": "tanglish",
+          "parallel_id": "CGS037"
         }
       ]
     }
@@ -1122,7 +1564,7 @@
     "target_audience": "Tamil Nadu citizens",
     "use_case": "Government services navigation",
     "license": "CC-BY-SA-4.0",
-    "version_notes": "v0.2.0 - Added bilingual (Pure Tamil + Tanglish) government procedures covering certificates, property, ration card, driving license, marriage, voter ID, schemes, police/legal, education, business, utilities, housing. Added reference directory with websites and helplines.",
+    "version_notes": "v0.3.0 - Added comprehensive bilingual PAN Card procedures (new applications, corrections, PAN-Aadhaar linking, duplicates, multiple PAN resolution, minor PAN). Added Central Government Schemes coverage (PMJDY, MUDRA loans, Stand Up India, PMJJBY/PMSBY/APY insurance/pension, PM-KISAN, Ayushman Bharat, Janaushadhi, PMAY housing, Ujjwala LPG, Vidya Lakshmi education loans, NSP scholarships, PMKVY skill training, PMEGP self-employment, PM-SYM pension, PM SVANidhi vendor loans, PMMVY maternity benefit, Sukanya Samriddhi savings). Updated reference directory with central government portals and helplines.",
     "last_updated": "2026-02-05",
     "languages_covered": [
       "pure_tamil",
