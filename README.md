@@ -31,12 +31,14 @@ VAZHI is an open-source Tamil language LLM designed to run **offline on mobile p
 ### Modular Packs
 Download only what you need:
 
-| Pack | Purpose | Status |
-|------|---------|--------|
-| 🛡️ **Vazhi Kaval** (காவல்) | Scam detection, fraud alerts | 🚧 In Progress |
-| ⚖️ **Vazhi Neethi** (நீதி) | Legal document guidance | 📋 Planned |
-| 🏛️ **Vazhi Arasu** (அரசு) | Government schemes & services | 📋 Planned |
-| 📚 **Vazhi Kalvi** (கல்வி) | Education assistance | 📋 Planned |
+| Pack | Purpose | Training Data | Status |
+|------|---------|---------------|--------|
+| 🛡️ **Vazhi Kaval** (காவல்) | Scam detection, fraud alerts, cyber safety | 468 pairs | ✅ Data Ready |
+| 🏛️ **Vazhi Arasu** (அரசு) | Government schemes & services | 467 pairs | ✅ Data Ready |
+| 📚 **Vazhi Kalvi** (கல்வி) | Education assistance, scholarships | 602 pairs | ✅ Data Ready |
+| ⚖️ **Vazhi Sattam** (சட்டம்) | Legal rights, RTI, consumer protection | 610 pairs | ✅ Data Ready |
+
+**Total: 2,147 bilingual training pairs** (Pure Tamil + Tanglish)
 
 ### Smart Escalation
 When questions are too complex, VAZHI transparently offers:
@@ -83,20 +85,23 @@ vazhi/
 ## Roadmap
 
 ### Phase 1: Foundation (Weeks 1-2)
+- [x] **Data Collection** - 2,147 bilingual pairs across 4 domains ✅
 - [ ] Fine-tune base Tamil LLM on Qwen 2.5 3B
-- [ ] Create first pack (Security/Scam detection)
-- [ ] Quantize for mobile deployment
+- [ ] Quantize for mobile deployment (~1.7GB)
 - [ ] Basic mobile app prototype
 
 ### Phase 2: Expansion (Months 2-3)
-- [ ] Additional packs (Legal, Government, Education)
+- [x] Security Pack data (468 pairs) ✅
+- [x] Government Pack data (467 pairs) ✅
+- [x] Education Pack data (602 pairs) ✅
+- [x] Legal Pack data (610 pairs) ✅
 - [ ] Community contribution guidelines
 - [ ] Pack review and curation system
 - [ ] iOS and Android apps
 
 ### Phase 3: Community (Months 4-6)
 - [ ] Open pack submissions
-- [ ] Multi-dialect support
+- [ ] Multi-dialect support (Chennai, Madurai, Coimbatore)
 - [ ] Voice input/output
 - [ ] Offline-first PWA
 
