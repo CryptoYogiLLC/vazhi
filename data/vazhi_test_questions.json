@@ -1,0 +1,72 @@
+{
+  "version": "0.1",
+  "description": "VAZHI v0.1 Test Suite - 30 questions across 6 domains",
+  "test_questions": [
+    {
+      "category": "security",
+      "pack": "vazhi_kaval",
+      "questions": [
+        {"q": "Scam message-ஐ எப்படி identify பண்றது?", "expected_topics": ["OTP", "urgency", "unknown links"]},
+        {"q": "OTP யாருக்கும் share பண்ணக்கூடாது ஏன்?", "expected_topics": ["bank fraud", "security"]},
+        {"q": "Fake job offer-ஐ எப்படி கண்டுபிடிப்பது?", "expected_topics": ["advance payment", "too good to be true"]},
+        {"q": "Online-ல் safe-ஆ இருக்க என்ன பண்ணணும்?", "expected_topics": ["password", "2FA", "phishing"]},
+        {"q": "Cyber crime-க்கு complaint எங்கே பண்றது?", "expected_topics": ["cybercrime.gov.in", "police"]}
+      ]
+    },
+    {
+      "category": "government",
+      "pack": "vazhi_arasu",
+      "questions": [
+        {"q": "CMCHIS card எப்படி apply பண்றது?", "expected_topics": ["documents", "eligibility", "hospital"]},
+        {"q": "Ration card-க்கு என்ன documents வேணும்?", "expected_topics": ["Aadhaar", "address proof"]},
+        {"q": "PM Kisan scheme-ல் யாருக்கு பணம் கிடைக்கும்?", "expected_topics": ["farmers", "land", "Rs 6000"]},
+        {"q": "Passport apply பண்ண என்ன process?", "expected_topics": ["online", "documents", "police verification"]},
+        {"q": "Free bus pass யாருக்கு கிடைக்கும்?", "expected_topics": ["students", "senior citizens", "differently abled"]}
+      ]
+    },
+    {
+      "category": "education",
+      "pack": "vazhi_kalvi",
+      "questions": [
+        {"q": "12th படிச்சாச்சு, engineering-க்கு என்ன options?", "expected_topics": ["JEE", "TNEA", "counselling"]},
+        {"q": "First generation graduate-க்கு என்ன scholarship இருக்கு?", "expected_topics": ["state scholarship", "amount"]},
+        {"q": "NEET exam-க்கு எப்படி prepare பண்றது?", "expected_topics": ["NCERT", "practice", "coaching"]},
+        {"q": "Government school-ல் free education எந்த class வரை?", "expected_topics": ["12th", "RTE"]},
+        {"q": "Abroad படிக்க loan எப்படி வாங்குவது?", "expected_topics": ["education loan", "bank", "collateral"]}
+      ]
+    },
+    {
+      "category": "legal",
+      "pack": "vazhi_sattam",
+      "questions": [
+        {"q": "RTI என்றால் என்ன?", "expected_topics": ["Right to Information", "2005", "government"]},
+        {"q": "Consumer complaint எங்கே file பண்றது?", "expected_topics": ["consumer forum", "online", "district"]},
+        {"q": "FIR போட மறுத்தால் என்ன பண்றது?", "expected_topics": ["SP", "magistrate", "written complaint"]},
+        {"q": "Property registration-க்கு என்ன documents?", "expected_topics": ["sale deed", "encumbrance", "stamp duty"]},
+        {"q": "Tenant rights என்ன?", "expected_topics": ["rent control", "eviction", "notice period"]}
+      ]
+    },
+    {
+      "category": "healthcare",
+      "pack": "vazhi_maruthuvam",
+      "questions": [
+        {"q": "Government hospital-ல் free treatment கிடைக்குமா?", "expected_topics": ["yes", "health card", "emergency"]},
+        {"q": "Siddha medicine எதுக்கு நல்லது?", "expected_topics": ["chronic", "traditional", "herbs"]},
+        {"q": "Pregnancy-க்கு government scheme என்ன இருக்கு?", "expected_topics": ["PMMVY", "JSY", "maternity benefit"]},
+        {"q": "Mental health-க்கு free counselling எங்கே?", "expected_topics": ["government hospital", "iCall", "NIMHANS"]},
+        {"q": "Diabetes இருந்தா என்ன diet follow பண்ணணும்?", "expected_topics": ["sugar control", "exercise", "doctor"]}
+      ]
+    },
+    {
+      "category": "culture",
+      "pack": "vazhi_panpaadu",
+      "questions": [
+        {"q": "திருக்குறளின் முதல் குறள் என்ன?", "expected_topics": ["அகர", "முதல", "எழுத்தெல்லாம்"]},
+        {"q": "சித்தர்கள் யார்?", "expected_topics": ["18 சித்தர்கள்", "மருத்துவம்", "யோகம்"]},
+        {"q": "தஞ்சாவூர் பெரிய கோவில் யார் கட்டினார்?", "expected_topics": ["ராஜராஜ சோழன்", "1010 AD", "UNESCO"]},
+        {"q": "பொங்கல் பண்டிகை ஏன் கொண்டாடுகிறோம்?", "expected_topics": ["harvest", "Thai", "Sun god"]},
+        {"q": "Bharatanatyam எங்கே originate ஆனது?", "expected_topics": ["Tamil Nadu", "temples", "Sadir"]}
+      ]
+    }
+  ]
+}
