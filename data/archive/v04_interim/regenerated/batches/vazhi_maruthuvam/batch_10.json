@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 10,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH200_TG",
+      "instruction": "Back pain/spine problems-kku Ayurveda?",
+      "current_output": "Ayurveda effective for: Lumbar spondylosis, disc problems, sciatica, muscle spasm. Treatments: 1) Kati Basti (oil pooling on back), 2) Pinda Sweda (bolus massage), 3) Abhyanga, 4) Basti (medicated enema), 5) Internal medicines. Duration: 7-21 days depending on severity. Many avoid surgery: Through proper Ayurveda treatment. Best results: Early treatment, lifestyle changes. Kerala specialty: Spine care centers.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH208_TG",
+      "instruction": "Cold/cough-kku veetu vaithiyam enna?",
+      "current_output": "Effective remedies: 1) Chukku Kaapi - Dry ginger + pepper + palm jaggery boiled in water, 2) Turmeric milk (Manjal Paal) - Before sleep, 3) Steam inhalation with tulsi/eucalyptus, 4) Honey + ginger juice, 5) Pepper rasam, 6) Tulsi kashayam, 7) Gargle with warm salt water. Avoid: Cold water, ice cream, curd. When to see doctor: Fever >3 days, breathing difficulty, blood in phlegm.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH165_TM",
+      "instruction": "AC room-ல் இருந்தா cold வரும் - உண்மையா?",
+      "current_output": "Myth! Cold caused by: Viruses, not temperature. AC connection: 1) Dry air irritates throat, 2) Poor AC maintenance = allergens, 3) Indoor crowding = virus spread, 4) Temperature shock going in/out. Prevention: Clean AC filters, adequate humidity, proper ventilation. Cold = viral infection - spread by contact/droplets, not AC itself.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH063_TM",
+      "instruction": "Delivery-ல் mother/baby-க்கு injury - claim பண்ணலாமா?",
+      "current_output": "Yes, if negligence proved. Common claims: 1) Delayed C-section causing brain damage, 2) Birth injuries (brachial plexus), 3) Maternal death due to PPH mismanagement, 4) Infection, 5) Wrong forceps use. Proof: Partograph (labor record), CTG (fetal monitoring), timelines. Child injury: Long-term care compensation. Maternal death: Family claims. Time sensitive: Evidence deteriorates - act quickly.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH014_TG",
+      "instruction": "HIV/AIDS treatment enge free-yaa kidaikkum?",
+      "current_output": "Free at ART (Anti-Retroviral Therapy) Centres. TN has 100+ ART centres. Services: 1) HIV testing (free, confidential), 2) ART medicines (lifelong free), 3) CD4 count tests, 4) Opportunistic infection treatment, 5) Counseling, 6) PPTCT (pregnant women). Location: District hospitals, medical colleges. TANSACS: State AIDS control body. Helpline: 1097 (AIDS helpline). Confidentiality guaranteed.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH173_TG",
+      "instruction": "Government Siddha hospital Chennai-la enge irukku?",
+      "current_output": "Chennai facilities: 1) National Institute of Siddha (NIS), Tambaram - Premier institute, 200 beds, all specialties, 2) Government Siddha Medical College Hospital, Arumbakkam - Oldest college, teaching hospital, 3) Arignar Anna Government Hospital of Indian Medicine - Multiple AYUSH systems. Services: Free OPD, IPD, medicines, special therapies. Timings: Usually 8 AM - 4 PM OPD.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH101_TG",
+      "instruction": "Cancer medicine-kku subsidy irukkaa?",
+      "current_output": "Yes! Options: 1) Government hospital pharmacy - free/subsidized, 2) CMCHIS covers cancer treatment including medicines, 3) Jan Aushadhi - generic cancer drugs cheaper, 4) Patient assistance programs (pharma companies), 5) NGO support (Cancer Institute, Adyar). Apply: Hospital social worker helps. Also: PM-BJKAY scheme for some cancer surgeries.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH003_TG",
+      "instruction": "CMCHIS-la ennenna treatment cover aagum?",
+      "current_output": "Covered: 1) Heart surgery, bypass, stent, 2) Cancer treatment, chemotherapy, 3) Kidney transplant, dialysis, 4) Brain surgery, 5) Joint replacement, 6) Accident/trauma surgery, 7) Maternity (complicated), 8) Eye surgery (cataract), 9) ENT procedures. Not covered: OPD consultation, dental (cosmetic), infertility (basic). Full list: cmchistn.com",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH112_TM",
+      "instruction": "Psychiatrist vs Psychologist - யாரை பார்க்கணும்?",
+      "current_output": "Psychiatrist (MD): Medical doctor, can prescribe medicines. See for: Severe depression, bipolar, schizophrenia, anxiety needing medication. Psychologist (MPhil/PhD): Non-medical, provides therapy/counseling. See for: Stress, relationship issues, mild-moderate depression/anxiety, trauma. Often work together: Psychiatrist for meds + Psychologist for therapy. First step: Can start with either, they'll refer if needed.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH103_TG",
+      "instruction": "Insulin storage eppadi? Travel-la carry pannalaamaa?",
+      "current_output": "Storage: Refrigerator (2-8°C), not freezer. In-use vial: Room temperature okay for 28 days (most). Travel: 1) Carry in hand luggage (flight), 2) Cooling pouch for long journeys, 3) Doctor letter for security check, 4) Carry extra supply. Signs of spoilage: Discoloration, particles, frosted appearance. Airport: Insulin + syringes allowed with prescription letter.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH010_TM",
+      "instruction": "ASHA worker யார்? என்ன help செய்வாங்க?",
+      "current_output": "ASHA = Accredited Social Health Activist - village level health worker. Services: 1) Pregnant women tracking and support, 2) Child vaccination reminders, 3) Health awareness, 4) Medicine distribution (TB, malaria), 5) Nutrition counseling, 6) Family planning advice, 7) Escort to hospital, 8) COVID vaccination support. Contact: Through Village Health Nurse or PHC. Free service.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH116_TG",
+      "instruction": "ECT (shock treatment) - consent venumaa?",
+      "current_output": "Yes! Strict rules under MHCA 2017. Requirements: 1) Written informed consent (patient or rep), 2) Modified ECT only (with anesthesia), 3) Documented medical necessity, 4) Cannot be given as punishment. Minors: Not allowed except life-threatening situations. Unmodified ECT: Banned. Violation: Complaint to Mental Health Review Board. Alternative treatments: Must be discussed before ECT.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH205_TM",
+      "instruction": "Ayurvedic products reliable brands எவை?",
+      "current_output": "Established brands: 1) Arya Vaidya Sala (Kottakkal), 2) Arya Vaidya Pharmacy (AVP), 3) Dabur, 4) Baidyanath, 5) Himalaya, 6) Patanjali (controversial but licensed), 7) Nagarjuna, 8) Kerala Ayurveda, 9) SNA Oushadhasala. Check: 1) AYUSH license on pack, 2) Manufacturing date/expiry, 3) Batch number. Avoid: Unbranded, loose, online unknowns. Government: IMPCOPS (TN government pharmacy) for Siddha/Ayurveda.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH156_TM",
+      "instruction": "BP tablet daily எடுக்கணுமா? Stop பண்ணலாமா?",
+      "current_output": "Usually lifelong! Why: 1) BP medicine controls, doesn't cure, 2) Stopping = BP goes up again, 3) Sudden stop can cause rebound high BP. Safe: 1) Never stop without doctor advice, 2) Regular checkups, 3) Lifestyle changes may reduce dose (weight loss, diet, exercise). Myth: \"I feel fine, so I don't need\" - BP is silent killer, symptoms come late. Monitoring: Home BP monitor useful.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH132_TM",
+      "instruction": "Abortion refuse பண்றாங்க (unmarried) - rights?",
+      "current_output": "Illegal to refuse! MTP Act 2021: Explicitly includes unmarried women. If refused: 1) Ask for written reason, 2) Escalate to hospital administration, 3) Complaint to DHS, 4) Court (urgent petition). Marital status: Not relevant for abortion right. Judgment questions: Doctor should not morally judge. Alternative: Find another approved centre. Time sensitive: Don't delay - gestational limits apply.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH144_TM",
+      "instruction": "Newborn-க்கு free screening tests என்ன?",
+      "current_output": "Newborn screening at government hospitals: 1) Hearing screening, 2) Heart defect screening (pulse oximetry), 3) Eye examination (for retinopathy if premature), 4) Hip examination, 5) Thyroid screening (heel prick blood test). Rashtriya Bal Swasthya Karyakram (RBSK): Regular health checkup for children 0-18 years. Follow-up: If abnormality found, referred to higher centre - treatment free.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH155_TM",
+      "instruction": "Sugar patient - என்ன food சாப்பிடலாம்?",
+      "current_output": "Eat freely: 1) Most vegetables (leafy greens, bitter gourd, lady finger), 2) Whole grains (millets, brown rice - portion control), 3) Lean protein (fish, chicken, dal), 4) Nuts (limited). Limit: 1) White rice, maida, 2) Sweets, 3) Sugary drinks, 4) Fruits (portion control - 1 small fruit). Avoid: 1) Refined sugar, 2) Packaged juices, 3) Deep fried. Tip: Eat regularly, don't skip meals. Dietitian consultation: Free at government hospitals.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH098_TG",
+      "instruction": "Fake medicine kidaichadhu - complain enge?",
+      "current_output": "Serious offence! Complaint: 1) Drug Inspector (District Drug Control Office), 2) State Drugs Control Department, 3) FDA helpline, 4) Police (criminal case possible). Evidence: Keep medicine, bill, pack with batch number. Verification: Check authenticity - company website, QR code (some have), call company. Punishment: Up to life imprisonment for spurious drugs causing death. CDSCO: Central regulator.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH222_TM",
+      "instruction": "Fasting therapy (Upvas) safe-ஆ? எப்படி செய்றது?",
+      "current_output": "Therapeutic fasting types: 1) Fruit fast - only fruits, 2) Juice fast - fresh juices, 3) Water fast - only water (supervised only), 4) Intermittent fasting - 16:8 popular. Benefits: Detox, weight loss, digestive rest, autophagy (cell cleaning). Safe fasting: 1) Start slow (intermittent), 2) Stay hydrated, 3) Break fast gently (not heavy food), 4) Medical conditions - consult doctor. Avoid: Diabetes (uncontrolled), pregnancy, children, underweight.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH073_TG",
+      "instruction": "Hospital bill adhigamaa pottaanga, enna seivathu?",
+      "current_output": "Steps: 1) Itemized bill kelunga, 2) Each item verify - MRP check for medicines, tests actually done verify, 3) Duplicate charges check, 4) Compare with displayed rates, 5) Written complaint to hospital administrator, 6) No response: Consumer Forum. Evidence: Bill copy, displayed rates photo, admission estimate. Overcharging = Unfair trade practice.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH021_TG",
+      "instruction": "Government hospital-la waiting time adhigamaa irukku, tips?",
+      "current_output": "Tips: 1) Go early morning (6-7 AM for token), 2) Weekdays better than Monday, 3) Avoid month-end, 4) Use online appointment if available, 5) Get referral from PHC for direct specialist access, 6) Emergency = no waiting (use emergency entrance), 7) Follow-up visits - ask for specific date/time. Seniors/pregnant: Priority queue usually available. Avoid: Public holidays, exam result days.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH188_TM",
+      "instruction": "Daily immunity-க்கு Siddha tips என்ன?",
+      "current_output": "Daily practices: 1) Nilavembu Kudineer (immune booster), 2) Chukku Kaapi (dry ginger coffee), 3) Turmeric milk, 4) Kabasura Kudineer (respiratory immunity), 5) Oil pulling (Gandusha), 6) Sesame oil application on head, 7) Pranayama. Seasonal: Different recipes for different seasons. Government: Distributed free during dengue, COVID seasons. Home preparation: Simple recipes available online from authentic sources.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH190_TG",
+      "instruction": "Ayurveda endraal enna? Siddha-vida verupaadu enna?",
+      "current_output": "Ayurveda = Sanskrit origin, 5000+ years old, pan-Indian system. Principle: Vata, Pitta, Kapha doshas balance. Difference from Siddha: 1) Language - Sanskrit vs Tamil, 2) Origin - Kerala/North vs Tamil Nadu, 3) Some unique medicines, 4) Emphasis - Siddha uses more metals/minerals. Similarities: Both holistic, natural medicines, similar principles. Recognition: Both government recognized AYUSH systems.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH106_TG",
+      "instruction": "Mental illness-kku treatment rights enna?",
+      "current_output": "Mental Healthcare Act 2017 rights: 1) Access to mental healthcare, 2) Community-based treatment (not just hospitals), 3) Informed consent, 4) Humane treatment, 5) No discrimination, 6) Confidentiality, 7) Legal aid, 8) Complaint mechanism, 9) Advance directive right. Government duty: Provide affordable mental healthcare. Insurance: Must cover mental illness like physical illness.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH075_TG",
+      "instruction": "Unnecessary tests/procedures solraanga - refuse pannalaamaa?",
+      "current_output": "Yes! Your body, your choice. Rights: 1) Ask why each test needed, 2) Get written justification, 3) Refuse non-essential tests, 4) Second opinion for major procedures. Red flags: 1) Full body checkup push, 2) Expensive test for minor issue, 3) Surgery suggestion without trying medicine first. If pressured: Change doctor/hospital. Complaint: If unethical push - Medical Council.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

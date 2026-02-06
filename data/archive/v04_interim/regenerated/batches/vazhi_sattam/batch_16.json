@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 16,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PROP023_TM",
+      "instruction": "Apartment Association-ல் என்ன rights இருக்கு?",
+      "current_output": "TN Apartment Ownership Act படி: 1) AGM-ல் vote செய்ய, 2) Committee member ஆக, 3) Accounts inspect செய்ய, 4) Common area use செய்ய, 5) Decisions-ல் participate. Arbitrary rules-க்கு object செய்யலாம். Discrimination-க்கு legal action எடுக்கலாம்.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL021_TG",
+      "instruction": "Company PF kattala, complaint podanumaa? (Chennai style)",
+      "current_output": "First salary slip check pannunga - PF deduction irukkaa paarunga. Deduct panni kattalnna serious offence. EPFO portal-la EPFiGMS complaint podunga. Regional PF office-lum pogalam. Company-kku heavy penalty + criminal case aagalam.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE014_TG",
+      "instruction": "Copyright registration eppadi seivathu?",
+      "current_output": "Online: copyright.gov.in. Categories: Literary, artistic, musical, cinematograph, sound recording. Fee: Rs.500-5,000 (work type based). Process: Application → Diary number → Objection period (30 days) → Registration. Note: Copyright automatic - registration = evidence.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE010_TM",
+      "instruction": "Will contest பண்ணலாமா?",
+      "current_output": "ஆம். Grounds: Undue influence, fraud, forgery, unsound mind, improper execution. Contest: Probate Court. Time: Before probate granted-க்கு எதிர்ப்பு, after = revocation suit. Evidence: Medical records, witnesses, handwriting expert. Burden of proof: Contestant.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP025_TG",
+      "instruction": "Acid attack victim-kku enna rights/compensation?",
+      "current_output": "Rights: 1) Free medical treatment (government hospitals), 2) Compensation: Rs.3 lakhs minimum (state victim compensation), 3) Disability pension, 4) Acid sale regulation - ID proof mandatory, 5) Fast track court trial. TN: CM's Public Relief Fund additional support. Accused: 10 years to life imprisonment. NGO support: Stop Acid Attacks, Chhanv Foundation.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM002_TM",
+      "instruction": "Police FIR போட மறுத்தால் என்ன செய்வது?",
+      "current_output": "Options: 1) Written complaint கொடுத்து acknowledgment வாங்குங்க, 2) SP/DSP-க்கு complaint, 3) Judicial Magistrate-க்கு complaint (Section 156(3) CrPC), 4) State Human Rights Commission, 5) Online: tnpolice.gov.in. FIR மறுப்பது offence - police-க்கு action ஆகும்.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP023_TG",
+      "instruction": "Streedhan (woman's property) - husband eduthukalaamaa?",
+      "current_output": "Streedhan = Woman's exclusive property (gifts at marriage, inheritance, earnings). Husband cannot: 1) Take without consent, 2) Sell or mortgage, 3) Claim ownership. Misuse: Criminal breach of trust (IPC 406) + Dowry Act violation if demand. Recovery: Civil suit + criminal complaint. Keep receipts, photos of jewelry. Joint locker: Inventory maintain pannunga.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS013_TG",
+      "instruction": "Flash sale-la order confirm aanadhu, piragu cancel pannitaanga - legal-aa?",
+      "current_output": "Unilateral cancellation after confirmation unfair trade practice aagum. Consumer forum-la complaint podalam. Price difference + compensation ketkalam. 'Out of stock' excuse valid alla - stock management seller responsibility.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF019_TM",
+      "instruction": "Two-wheeler-க்கு pillion rider helmet கட்டாயமா?",
+      "current_output": "ஆம். Driver மற்றும் pillion rider இருவருக்கும் ISI marked helmet கட்டாயம். Fine: Rs.1,000 + 3 months license suspension (repeat offence). Children-க்கும் helmet வேண்டும். Fashion helmets not acceptable.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP026_TM",
+      "instruction": "Senior citizen-ஐ பிள்ளைகள் பார்க்கல, maintenance கேட்கலாமா?",
+      "current_output": "Maintenance and Welfare of Parents and Senior Citizens Act 2007: 1) Children/relatives maintenance தரணும், 2) Tribunal: SDM/Collector level, 3) Max: Rs.10,000/month per child, 4) Non-compliance: 1 month jail + fine. Property transfer-க்கு பின் neglect: Transfer cancel பண்ணலாம். Free legal aid: District Legal Services Authority. Helpline: 14567 (Elder helpline).",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI007_TG",
+      "instruction": "Mutual consent divorce evvalavu time aagum?",
+      "current_output": "Minimum 6 months, maximum 18 months. Process: 1) Joint petition file, 2) 6 months cooling-off period, 3) Second motion, 4) Decree. 2023 Supreme Court ruling: Genuine cases-la 6 months waive aagalam. Contested divorce: 2-5 years.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF007_TG",
+      "instruction": "Drunk driving-kku enna punishment?",
+      "current_output": "Blood alcohol limit: 30mg/100ml. First offence: Rs.10,000 fine + 6 months imprisonment. Second offence (3 years-la): Rs.15,000 + 2 years imprisonment. License suspension: 3 months - 1 year. Accident caused: Additional charges - up to 10 years imprisonment.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP014_TG",
+      "instruction": "Insurance claim reject aachu, appeal eppadi?",
+      "current_output": "Steps: 1) Rejection reason writing-la kelunga, 2) Grievance to Insurance Company (Grievance Officer), 3) 15 days-kkul response illa = IRDAI IGMS portal (igms.irda.gov.in), 4) Still no resolution = Insurance Ombudsman (free, no lawyer needed), 5) Final option: Consumer Forum. Health insurance: TPA issues common - escalate to insurer directly.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM010_TM",
+      "instruction": "Bail bond amount எவ்வளவு இருக்கும்?",
+      "current_output": "Offence severity based - Rs.10,000 to lakhs வரை. Court discretion. Surety (guarantor) same amount-க்கு guarantee கொடுக்கணும். Poor accused-க்கு personal bond (surety இல்லாம) கிடைக்கும். Excessive bail unconstitutional.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP010_TM",
+      "instruction": "Lock-out period-ல் rent கட்டணுமா?",
+      "current_output": "Lock-in period (not lock-out): Agreement-ல் specify பண்ணிருக்கும். During lock-in: 1) Tenant vacate பண்ணினால் - remaining months rent pay பண்ணணும், 2) Owner evict பண்ண முடியாது. After lock-in: Normal notice period applies (usually 1-2 months). Negotiate: Lock-in waiver possible with mutual consent. Always read agreement before signing!",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA022_TM",
+      "instruction": "Rent Authority-ல் complaint எப்படி கொடுப்பது?",
+      "current_output": "District Collectorate office-ல் written application கொடுக்கணும். Required documents: 1) Rental agreement copy, 2) Rent receipts, 3) Communication proof (notices, messages), 4) ID proof. Online-லும் e-district portal மூலம் apply செய்யலாம். Fee: Nominal (Rs.100-500).",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE017_TM",
+      "instruction": "Tree cut பண்ண permission வேணுமா?",
+      "current_output": "ஆம். TN Forest Act + TN Preservation of Private Forests Act. Permission: District Forest Officer (forest land), Corporation/Municipality (urban area). Violations: Fine + imprisonment. Protected species: Sandalwood, Rosewood - strict restrictions. Compensatory plantation required.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL016_TM",
+      "instruction": "Shop employee rights என்ன?",
+      "current_output": "TN Shops and Establishments Act: 1) 8 hours work/day, 48 hours/week, 2) Weekly off mandatory, 3) Leave: 12 days earned + 12 days sick + 5 casual, 4) Overtime double wages, 5) No child labour (<14 years). Violation: Labour Inspector complaint.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC015_TG",
+      "instruction": "Hospital body thara marukkiradhu - death case",
+      "current_output": "Bill non-payment-kkaaga body thara marukka mudiyaadhu - Supreme Court ruling. Contact: Police, District Collector, Human Rights Commission. Hospital against action possible. MLC case-la police formalities undu - legitimate delay. But payment reason illegal.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS011_TG",
+      "instruction": "COD order reject pannalaamaa? Penalty irukkaa?",
+      "current_output": "Product open pannama reject pannalam - penalty illa. Aanaal repeated COD rejection seydhaal account block aagalam. Product damaged/wrong na kandippaaga reject pannunga, delivery person munnaal video edunga.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE011_TM",
+      "instruction": "Spam calls/SMS stop பண்ண என்ன செய்யணும்?",
+      "current_output": "DND registration: 1909 call/SMS அல்லது TRAI DND app. Complaint: 1909-ல் spam report. DND-க்குப் பிறகும் spam வந்தால் company-க்கு Rs.1,000/violation fine. Truecaller-type apps-ல் report. Bank/company opt-out options use பண்ணுங்க.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP007_TG",
+      "instruction": "Subletting pannalaamaa? Owner-kku theriyaama pannina enna aagum?",
+      "current_output": "Agreement check pannunga - usually subletting prohibited. Without permission subletting: 1) Agreement breach, 2) Immediate eviction ground, 3) Deposit forfeit possibility. Commercial property: Subletting common but written permission venum. Safe approach: Owner consent in writing vaangunga before subletting.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL009_TG",
+      "instruction": "Employer notice illaama terminate pannalaamaa?",
+      "current_output": "Mudiyaadhu (except gross misconduct). Notice period: Agreement-la ullapadiye (usually 1-3 months). Notice illaattal notice pay kodukkanum. Probation period-lum reasonable notice venum. Termination reason writing-la kelunga.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE008_TG",
+      "instruction": "Mediation vs Arbitration enna difference?",
+      "current_output": "Mediation: Neutral person facilitates, parties decide, non-binding. Arbitration: Arbitrator decides, binding like court order, faster. Pre-litigation mediation: Compulsory for some cases. Arbitration agreement: Contract-la clause irukkanum. Both: Court-ai vida faster, cheaper.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE020_TM",
+      "instruction": "Court-ல case போட பயமா இருக்கு, வேற option இல்லையா?",
+      "current_output": "Alternatives: 1) Lok Adalat - free, quick, 2) Mediation centre - court-attached, 3) Consumer forum - simple procedure, 4) Labour Commissioner - workplace issues, 5) Legal Services Authority - free guidance. எல்லாமே Court-ஐ விட easy-யும் cheap-உம்.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

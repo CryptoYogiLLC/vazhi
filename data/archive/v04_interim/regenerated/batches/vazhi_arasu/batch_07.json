@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 7,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "BGP014",
+      "instruction": "Pudhiya driving license eppadi peruvadhu?",
+      "current_output": "1. parivahan.gov.in la slot book pannunga 2. First Learner's License (LLR) vaangunga: Age: Two-wheeler 18+, Car 18+ (gear), Commercial 20+. Aadhaar, address proof, medical certificate vendum. Fee: ₹200-500 3. 30 days kazhichu DL test ezhudhunga",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB002T",
+      "instruction": "Nagarathula Restaurant thodanga ennenna license vendum?",
+      "current_output": "**Restaurant Licenses Required:**\n\n**Must Have:**\n1. **FSSAI License** - fssai.gov.in, ₹100-7,500/year\n2. **Trade License** - Corporation, ₹2,000-25,000\n3. **Shop & Establishment** - tnlabour.tn.gov.in\n4. **Fire Safety NOC** - Fire Dept (50+ seating)\n5. **GST** - If turnover ₹20L+\n6. **Health License** - Corporation\n\n**Optional:**\n7. Liquor License - TASMAC\n8. Signage License - Corporation\n9. Music License - Police\n10. Pollution NOC - TNPCB\n\n**Staff:** PF (20+ employees), ESI (10+ employees)\n\n**Timeline:** 2-3 months total\n\n**Warning:** Heavy fines for non-compliance!",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR015",
+      "instruction": "Driving License apply pannanum - LLR to DL full process?",
+      "current_output": "Step 1 - Learner's License (LLR):\n\nApply Online:\n1. parivahan.gov.in → 'Online Services' → Tamil Nadu\n2. 'Apply for Learner's License'\n3. Fill Form 1 (Application)\n4. Fill Form 2 (Medical - self declaration)\n5. Upload: Age proof, Address proof, Photo, Signature\n6. Pay: ₹200-350\n\nAge Requirements: Scooty (no gear) 16, Bike/Car 18, Transport 20\n\nBook Slot: Select RTO, Choose date, Go for test\n\nLLR Test: Computer-based, 15 questions on road signs/rules, Pass: 9/15, Result: Same day, Valid: 6 months\n\nStep 2 - Driving Test for DL:\n\nWait Period: 30 days after LLR\n\nBook DL Slot:\n1. parivahan.gov.in → 'Apply for Driving License'\n2. Enter LLR number\n3. Fill Form 4\n4. Pay: ₹500-700\n5. Book slot\n\nTest Day:\n- Bring own vehicle (or rent near RTO)\n- Documents: LLR, Aadhaar, Photos\n- Tests: 8 formation (parking/reverse), Slope driving, Traffic signals, Road driving\n\nPass: Biometric capture → DL number → Card mailed\nFail: Re-test after 7 days + additional fee\n\nTimeline: LLR same day, DL test after 30 days, DL card 7-15 days after test",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNREF004",
+      "instruction": "TN Helpline Numbers enna enna?",
+      "current_output": "Important TN Helplines: 1967 (Ration complaints), 1077 (CM Helpline), 108 (Emergency Ambulance), 104 (Health Helpline), 100 (Police), 101 (Fire), 1091 (Women Helpline), 1098 (Child Helpline - Childline), 181 (Women Helpline - central), 1912 (Anti-Corruption), 155300 (Cyber Crime), 14461 (Kisan Call Centre), 1800-180-1111 (Pensioners). Free: Most are toll-free 24x7.",
+      "category": "tn_reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA017T",
+      "instruction": "EC enga peruvadhu?",
+      "current_output": "Online at tnreginet.gov.in (records from 1987 onwards) - instant download. Offline at Sub-Registrar Office - 3-5 days. Fee: ₹15 per year. Essential for property verification - shows if property has any legal dues or mortgages.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNSW004",
+      "instruction": "TN Differently Abled pension/assistance enna?",
+      "current_output": "TN benefits for differently abled. Pension: ₹1,500/month (40%+ disability). Aids: Free wheelchair, hearing aid, artificial limbs, crutches. Education: Free education + special hostels. Employment: 4% reservation in govt jobs. Bus: Free travel (ordinary buses). Loan: Subsidy loan for self-employment. UDID Card: Unique Disability ID - mandatory for all benefits. Apply: Social Welfare dept/Taluk office.",
+      "category": "tn_social_welfare",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA006",
+      "instruction": "புதிய PAN Card எப்படி பெறுவது?",
+      "current_output": "Easiest: Instant e-PAN at eportal.incometax.gov.in using Aadhaar - FREE and instant! Alternative: Apply at onlineservices.nsdl.com or pan.utiitsl.com - ₹107 for physical card, 15-20 days. Need ID proof, address proof, DOB proof, photo, and signature.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA018T",
+      "instruction": "Patta maatram eppadi seyvadhu?",
+      "current_output": "After property registration at SRO, apply for Patta transfer at Taluk Office or eservices.tn.gov.in. Documents: Registered document, EC, ID proof, tax receipts. Field inspection by VAO/RI. Time: 30-45 days. Essential for proving ownership.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR008",
+      "instruction": "Soil Health Card endraal enna? Eppadi peruvadhu?",
+      "current_output": "To know soil nutrient status. Card Info: N, P, K levels, pH value, micro nutrients, organic carbon. Testing: Once in 3 years (Govt-free). Benefit: Use right fertilizers, reduce cost, increase yield. Get it: Village Agriculture Officer/Krishi Vigyan Kendra. Check status: soilhealth.dac.gov.in. Sample collection: Agriculture officer collects soil from field.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNE004",
+      "instruction": "SC/ST/BC Scholarship TN-la enna ulladhu?",
+      "current_output": "Community-wise Scholarships. SC Students: Post-matric scholarship (₹550-1,200/month), Free education (all levels), Hostel stipend. ST Students: Similar to SC + extra coaching. BC/MBC/DNC: Post-matric (₹300-700/month), higher for MBC within BC. Apply: bcmbcmw.tn.gov.in (BC), adwb.tn.gov.in (SC/ST). Documents: Community certificate, Income certificate, Institution bonafide, Aadhaar. Hostel: Free accommodation + food in govt hostels.",
+      "category": "tn_education_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR002",
+      "instruction": "Pradhan Mantri Fasal Bima Yojana (PMFBY) endraal enna?",
+      "current_output": "Crop insurance scheme for farmers. Premium: Kharif 2%, Rabi 1.5%, Commercial crops 5% only - rest paid by Government. Coverage: Natural calamities, pest attack, disease, post-harvest 14 days. Apply: Bank/CSC/Insurance Portal. Documents: Land records, Aadhaar, Bank details. Claim: Report loss within 72 hours. Loss calculated through Crop Cutting Experiments.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC002",
+      "instruction": "IGNOAPS (Indira Gandhi National Old Age Pension Scheme) endraal enna?",
+      "current_output": "Monthly pension for BPL senior citizens. Central: ₹200/month (60-79 years), ₹500/month (80+ years). TN State: Additional ₹1,000/month. Total in TN: ₹1,200-1,500/month. Eligibility: 60+ years, BPL family. Apply: Village Panchayat/Taluk office. Documents: Age proof, Aadhaar, BPL card/Income certificate, Bank account. Payment: DBT through bank account.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA011",
+      "instruction": "Income Certificate எப்படி பெறுவது?",
+      "current_output": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Aadhaar, ration card, self-declaration of income, salary slip (if employed). VAO enquiry at home possible. Time: 7-15 days. Fee: ₹20. Valid for 6 months to 1 year.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC013",
+      "instruction": "Senior Citizens-க்கு Travel Concession என்ன உள்ளது?",
+      "current_output": "Railways: Men 60+ 40% discount, Women 58+ 50% discount, Sleeper/AC classes. Booking: Counters-ல் age proof காட்டவும். Airlines: Some airlines offer 50% discount (varies). State Buses: TN-ல் 50% discount (65+ years) ordinary buses. Metro: Some cities 25-50% discount. Documents: Age proof (Aadhaar/Voter ID) carry பண்ணுங்கள்.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA008T",
+      "instruction": "Birth certificate eppadi peruvadhu?",
+      "current_output": "Register within 21 days at hospital location's Municipality/Panchayat - FREE! After 21 days: ₹50 late fee + affidavit. Documents: Hospital discharge summary, parents' Aadhaar. Online at tnreginet.gov.in or crsorgi.gov.in. Certificate in 3-5 days.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS024",
+      "instruction": "PM Vidya Lakshmi Portal endraal enna?",
+      "current_output": "Education loan portal. Website: vidyalakshmi.co.in. Features: 40+ Banks, 125+ loan schemes, Apply to multiple banks with one application, Scholarship info available. Loan types: Up to ₹4 lakh - No collateral, ₹4-7.5 lakh - Co-borrower needed, Above ₹7.5 lakh - Collateral needed. Interest Subsidy: Govt pays interest during moratorium for EWS students",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB002",
+      "instruction": "நகரத்தில் Restaurant தொடங்க என்னென்ன license வேண்டும்?",
+      "current_output": "**Restaurant தொடங்க தேவையான Licenses:**\n\n**1. FSSAI License (கட்டாயம்)**\n- Website: fssai.gov.in\n- Types:\n  - Basic (₹12L turnover வரை): ₹100/year\n  - State (₹12L-₹20Cr): ₹2,000-5,000/year\n  - Central (₹20Cr+): ₹7,500/year\n- Time: 7-60 days\n\n**2. Trade License**\n- எங்கே: Corporation/Municipality\n- Fee: ₹2,000-25,000 (area based)\n- Renewal: Yearly\n\n**3. Shop & Establishment**\n- எங்கே: tnlabour.tn.gov.in\n- Fee: ₹500-2,000\n- Within 30 days of opening\n\n**4. Fire Safety NOC**\n- எங்கே: Fire Department\n- Seating 50+ கட்டாயம்\n- Fire extinguishers required\n- Annual renewal\n\n**5. GST Registration**\n- Turnover ₹20L+ (Service)\n- gst.gov.in\n- Free registration\n\n**6. Health/Eating House License**\n- Corporation Health Dept\n- Kitchen inspection\n- Staff health checkup\n- Annual renewal\n\n**7. Liquor License (if serving)**\n- TASMAC permission\n- Very strict process\n- Additional fees\n\n**8. Signage License**\n- Corporation\n- Board size limits\n- Fee based on size\n\n**9. Music/Entertainment License**\n- Live music/DJ இருந்தால்\n- Police permission\n- Noise regulations\n\n**10. Pollution NOC (if needed)**\n- Kitchen exhaust\n- Waste management\n- TNPCB\n\n**Staff Requirements:**\n- PF Registration (20+ employees)\n- ESI Registration (10+ employees)\n- Minimum Wages compliance\n\n**Timeline:**\n- FSSAI: 7-60 days\n- Trade License: 7-15 days\n- Fire NOC: 15-30 days\n- Total setup: 2-3 months\n\n**Common Mistakes:**\n- Opening without FSSAI\n- No fire safety\n- Staff without health cards\n- Non-compliance fines heavy!",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC007",
+      "instruction": "Scholarship application reject ஆனது. Reason என்ன?",
+      "current_output": "Common reasons: income certificate issue, caste certificate problem, document mismatch, duplicate application. NSP portal-ல் rejection reason பாருங்கள். திருத்தி re-apply செய்யலாம்.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR002",
+      "instruction": "என் நிலத்தில் புதிய ஆழ்துளை கிணறு (Borewell) அமைக்க என்ன permission வேண்டும்?",
+      "current_output": "Borewell permission process:\n\n**Step 1: Permission வாங்குதல்**\n- எங்கே: PWD Ground Water Wing / District Collector Office\n- Online: tnpwd.gov.in\n\n**Step 2: தேவையான ஆவணங்கள்**\n- நில ஆவணம் (Patta/Chitta)\n- FMB Extract\n- Location sketch\n- Adjacent borewell details (500m சுற்றளவில்)\n- Aadhaar, Photo\n\n**Step 3: கட்டணம்**\n- Application fee: ₹100-500\n- NOC fee: ₹500-1,000\n\n**Step 4: Inspection**\n- PWD officer visit\n- Ground water level check\n- Spacing norms verification (Minimum 200m from other borewells)\n\n**Step 5: Approval**\n- காலம்: 15-30 நாட்கள்\n- Depth restriction இருக்கலாம்\n\n**Free Electricity Connection:**\n- Borewell complete-ஆன பின் TANGEDCO-ல் apply\n- Agricultural free connection\n\n**முக்கியம்:**\n- Permission இல்லாமல் borewell போட்டால் legal action\n- Over-exploited areas-ல் permission கிடைக்காது",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA029",
+      "instruction": "Jan Aushadhi-ல் மருந்து ஏன் மலிவு?",
+      "current_output": "Jan Aushadhi sells generic medicines with same quality as branded (WHO-GMP certified) at 50-90% lower price. No brand premium. Find stores at janaushadhi.gov.in. Example: Metformin 500mg - Market ₹25, Jan Aushadhi ₹3.50. Great for long-term medications.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB003T",
+      "instruction": "Pudhiya kadaikku Commercial Electricity Connection eppadi vaanguvadhu?",
+      "current_output": "**Commercial Electricity Connection:**\n\n**Step 1:** Apply at nsc.tnebnet.org\n\n**Step 2: Documents**\n- Ownership: Sale Deed/Rent Agreement\n- Aadhaar + PAN\n- Trade License/GST\n- Building Certificate\n\n**Step 3:** Calculate load (AC, Fridge, etc.)\n\n**Step 4:** TANGEDCO inspection\n\n**Step 5: Payment**\n- Deposit: ₹1,500-15,000\n- Service: ₹500-2,000\n- Meter: ₹1,000-3,000\n\n**Step 6:** Connection in 7-15 days\n\n**Commercial Tariff:** Higher than domestic, slab based\n\n**Complaint:** 94987-94987, TANGEDCO App",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC015",
+      "instruction": "Scholarship apply செய்ய last date எப்போது?",
+      "current_output": "NSP portal-ல் fresh application: August-November, renewal: July-October (approximate). State scholarships-க்கு different dates. Deadline-க்கு முன்பே apply செய்யுங்கள், last minute rush தவிர்க்கவும்.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA004T",
+      "instruction": "Aadhaar tholaindhuvidadhu - enna seyvadhu?",
+      "current_output": "Download e-Aadhaar from eaadhaar.uidai.gov.in using Aadhaar number or Enrollment ID + OTP. It's FREE and legally valid. For PVC card, order at uidai.gov.in for ₹50. If forgot Aadhaar number, retrieve at myaadhaar.uidai.gov.in → Retrieve Lost UID.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNW008",
+      "instruction": "Dr. Muthulakshmi Maternity Benefit Scheme endraal enna?",
+      "current_output": "₹18,000 assistance for pregnant women. 3 installments: ₹6,000 (at 12 weeks), ₹6,000 (at delivery), ₹6,000 (baby 9 months vaccines). Eligibility: 1 year TN resident, delivery at govt/govt-aided hospital. Amma Baby Kit: Additional ₹5,000 worth baby care items. Apply: PHC/Govt hospital/ICDS. Documents: Aadhaar, MCP card, Bank account.",
+      "category": "tn_women_welfare",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC009",
+      "instruction": "Girl students-க்கு special scholarship உண்டா?",
+      "current_output": "CBSE Single Girl Child scholarship, Pragati scholarship (AICTE), Indira Gandhi scholarship for single girl child உண்டு. State-level-லும் girl students-க்கு special schemes இருக்கின்றன.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

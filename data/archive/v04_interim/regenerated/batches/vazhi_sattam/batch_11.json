@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 11,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SUPP002_TM",
+      "instruction": "Cheque bounce ஆனால் என்ன case வரும்?",
+      "current_output": "Negotiable Instruments Act Section 138: 1) Cheque bounce = criminal offence, 2) Payee demand notice அனுப்பணும் (15 days-க்குள்), 3) 15 days-க்குள் pay பண்ணல = complaint file பண்ணலாம், 4) Punishment: 2 years jail + double amount fine, 5) Time limit: Cause of action-ல் இருந்து 1 month-க்குள் case போடணும்.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI016_TM",
+      "instruction": "Domestic violence complaint எங்கே கொடுப்பது?",
+      "current_output": "Options: 1) Police station - FIR (498A IPC), 2) Protection Officer (District Social Welfare Office), 3) Women's helpline - 181, 4) Mahila Court, 5) Family Court. DV Act 2005 கீழ் protection order, residence order, monetary relief, custody order எல்லாம் கேட்கலாம்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA029_TM",
+      "instruction": "Commercial property-க்கும் same rules-ஆ?",
+      "current_output": "Basic principles same. ஆனால் commercial tenancy-க்கு: 1) Advance limit 6 months (residential-க்கு 3 months), 2) Rent increase நியாயமாக இருக்கணும், 3) Goodwill compensation கேட்கலாம் (long-term tenants), 4) Business loss-க்கு compensation கேட்கலாம்.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI018_TM",
+      "instruction": "In-laws against DV case போடலாமா?",
+      "current_output": "ஆம். DV Act-ன் கீழ் 'respondent' includes husband + his relatives who abuse. 498A IPC-ன் கீழ் husband மற்றும் relatives against criminal case போடலாம். ஆனால் specific allegations + evidence வேண்டும் - general accusation not enough.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM016_TG",
+      "instruction": "Theft vs Robbery enna vithiyaasam?",
+      "current_output": "Theft (IPC 379/BNS 303): Secretly taking property - 3 years imprisonment. Robbery (IPC 392/BNS 309): Theft + force/fear - 10 years imprisonment. Dacoity (5+ persons): 10 years to life. House breaking: Additional charges. Recovery of property possible.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP005_TG",
+      "instruction": "Patta endraal enna? Patta peyar maatruvathu eppadi?",
+      "current_output": "Patta = Revenue record showing land ownership. Transfer: 1) Apply at Taluk office/eservices.tn.gov.in, 2) Submit: Sale deed, old patta, EC, ID proof, 3) Revenue Inspector verification, 4) Tahsildar approval. Time: 30-45 days. Online status track pannalam.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI020_TM",
+      "instruction": "Legal adoption எப்படி செய்வது?",
+      "current_output": "CARA (Central Adoption Resource Authority) through only - cara.wcd.gov.in. Register → Home study → Child matching → Pre-adoption fostering → Court order. Hindu Adoption Act-ன் கீழ் deed registration-உம் valid. Private adoption risky - legal complications வரலாம்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL002_TG",
+      "instruction": "PF withdrawal eppadi seivathu?",
+      "current_output": "Online: EPFO portal → Online Services → Claim. Conditions: Retirement (58 years), 2 months unemployment, medical emergency (partial), home loan (partial), marriage (partial). Full withdrawal: Job quit + 2 months gap. Aadhaar linked UAN venum. 5-10 days-la amount varum.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_011_TM",
+      "instruction": "Ration card complaint எங்கே கொடுப்பது?",
+      "current_output": "Options: 1) Ration shop-ல் complaint book, 2) Taluk Supply Officer, 3) District Supply Officer, 4) Food helpline: 1967, 5) TNCSC website. Issues: Fake entries, quantity shortage, quality issues, dealer misbehavior. Aadhaar seeding problems: UIDAI + DSO.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM022_TG",
+      "instruction": "Social media-la abuse/threat vandhaal enna seivathu?",
+      "current_output": "Steps: 1) Screenshot edunga (URL visible-aa), 2) Report to platform, 3) Cyber Crime portal-la complaint, 4) Women-kku 181 helpline. Applicable laws: IT Act 66A (struck down), 67 (obscene content), IPC 506 (criminal intimidation), 509 (insult to modesty).",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF001_TG",
+      "instruction": "Driving license eppadi peruvathu?",
+      "current_output": "Steps: 1) Learner's License (LL) - parivahan.gov.in online apply, 2) 30 days wait, 3) Driving test - RTO, 4) Permanent License issue. Age: Two-wheeler - 18 years, Car - 18 years, Commercial - 20 years. Documents: Aadhaar, address proof, medical certificate (commercial).",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM002_TG",
+      "instruction": "Police FIR poda maruthal enna seivathu?",
+      "current_output": "Options: 1) Written complaint koduthu acknowledgment vaangunga, 2) SP/DSP-kku complaint, 3) Judicial Magistrate-kku complaint (Section 156(3) CrPC), 4) State Human Rights Commission, 5) Online: tnpolice.gov.in. FIR maruppathu offence - police-kku action aagum.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_015_TM",
+      "instruction": "Water supply complaint எங்கே கொடுப்பது?",
+      "current_output": "Chennai: CMWSSB - 044-28454455, cmwssb.tn.gov.in. Other cities: Municipal/Corporation office. Rural: TWAD Board - Local Panchayat. Issues: No supply, contamination, billing, new connection. Response: 24-48 hours for emergency.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA007_TG",
+      "instruction": "Veedu kaali seyyum bodhu advance thirumba tharuvaangala?",
+      "current_output": "Aama, kattaayam thara venum. Veetukku damage irundhaal repair cost kazhichu meedhi thara venum. Normal wear and tear-kku kazhikka mudiyaadhu. Owner tharaattal Rent Authority or Civil Court-la case podalam.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC004_TM",
+      "instruction": "பொதுப் பாதையை block பண்ணிட்டாங்க - யாரை approach பண்றது?",
+      "current_output": "Public road block: Corporation/Panchayat complaint. Right of way dispute: Tahsildar. Private encroachment on public land: Police + Revenue Department. Court: Easement right case. Documents: Old survey records, photos of traditional path use.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI005_TG",
+      "instruction": "Divorce endha court-la file seyyanum?",
+      "current_output": "Family Court-la file seyyanum. Jurisdiction: 1) Kadaisiyaaga serndhu vaazntha idam, 2) Marriage nadandha idam, 3) Wife tharpodhhu vasikkum idam, 4) Husband tharpodhhu vasikkum idam. District Family Court-la petition podunga.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE012_TG",
+      "instruction": "Life insurance claim reject aanaal appeal enge?",
+      "current_output": "Steps: 1) Company grievance cell, 2) IRDAI IGMS portal (igms.irda.gov.in), 3) Insurance Ombudsman (Rs.30 lakh varai), 4) Consumer forum, 5) Civil Court. Common rejection reasons: Non-disclosure, policy lapse, suicide clause. Documents: Policy, medical records, rejection letter.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI004_TG",
+      "instruction": "Court marriage eppadi seivathu?",
+      "current_output": "Steps: 1) Marriage Registrar office-la form submit (30 days before), 2) Notice board-la display, 3) Objection period (30 days), 4) Marriage ceremony (Registrar mun), 5) Certificate issue. Witnesses: 3 per. Documents: Birth certificate, address proof, photos, affidavit.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS018_TG",
+      "instruction": "Gym/Coaching centre refund thara marukkiraargal - sattapadi ketkalaamaa?",
+      "current_output": "Service not availed-kku pro-rata refund ketkalam. 'No refund' policy unfair trade practice aagalam. Lock-in period reasonable-aa irukkanum. Consumer forum-la complaint podalam. Covid pola force majeure cases-la full refund kidaikkum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP016_TM",
+      "instruction": "Affidavit எப்படி எழுதுவது? எங்கே notarize பண்றது?",
+      "current_output": "Affidavit format: 1) Title (I, [Name], do hereby solemnly affirm...), 2) Personal details (age, address, occupation), 3) Statement of facts (numbered paragraphs), 4) Verification (true to knowledge and belief), 5) Deponent signature. Notarize: Any Notary Public - Rs.50-200 fee. Stamp paper: Rs.10-100 (depends on purpose). E-stamp available at banks.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS026_TG",
+      "instruction": "Builder flat thara delay pannuraar - enna seyyalam?",
+      "current_output": "RERA (Real Estate Regulatory Authority)-la complaint podunga. tnrera.in - Tamil Nadu RERA portal. Delay-kku interest (SBI lending rate + 2%) ketkalam. Full refund with interest-um ketkalam. Consumer forum-lum parallel-aa case podalam.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF007_TM",
+      "instruction": "Drunk driving-க்கு என்ன punishment?",
+      "current_output": "Blood alcohol limit: 30mg/100ml. First offence: Rs.10,000 fine + 6 months imprisonment. Second offence (3 years-ல்): Rs.15,000 + 2 years imprisonment. License suspension: 3 months - 1 year. Accident caused: Additional charges - up to 10 years imprisonment.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_015_TG",
+      "instruction": "Water supply complaint enge koduppadhu?",
+      "current_output": "Chennai: CMWSSB - 044-28454455, cmwssb.tn.gov.in. Other cities: Municipal/Corporation office. Rural: TWAD Board - Local Panchayat. Issues: No supply, contamination, billing, new connection. Response: 24-48 hours for emergency.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE020_TG",
+      "instruction": "Court-la case poda bayamaa irukku, vera option illaiyaa? (Chennai casual)",
+      "current_output": "Alternatives: 1) Lok Adalat - free, quick, 2) Mediation centre - court-attached, 3) Consumer forum - simple procedure, 4) Labour Commissioner - workplace issues, 5) Legal Services Authority - free guidance. Ellamae Court-ai vida easy-yum cheap-um.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP018_TG",
+      "instruction": "Property document lost aanaal enna seivathu?",
+      "current_output": "Steps: 1) Police complaint (FIR), 2) Newspaper advertisement (lost notice), 3) Sub-Registrar office-la certified copy apply, 4) Affidavit notarize. Certified copy original-kku samam. Online: tnreginet.gov.in-la post-2009 documents download pannalam.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

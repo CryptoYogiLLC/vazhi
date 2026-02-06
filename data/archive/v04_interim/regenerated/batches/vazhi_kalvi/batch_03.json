@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 3,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PRAC018_TG",
+      "instruction": "Campus placement-ku eppadi prepare aavadhu?",
+      "current_output": "Placement preparation: 1) Aptitude - RS Aggarwal, IndiaBix daily 2) Technical - Core subjects revision 3) Coding - HackerRank, LeetCode (for IT) 4) Resume - 1 page, achievement focused 5) Communication - Mock interviews practice 6) GD - Current affairs, articulation 7) HR questions - self-intro, strengths, goals. Timeline: Start 6 months before placement season. CGPA matters - maintain above 7 minimum. Internships boost resume significantly.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE007_TG",
+      "instruction": "Therkku maavatta maanavarkalukku special scholarship ethavathu irukka?",
+      "current_output": "Aama. BC/MBC scholarship, first graduate scholarship, merit scholarship ellam apply pannalam. Tirunelveli, Thoothukudi, Kanyakumari district students-kku special priority irukku some schemes la.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM001_TG",
+      "instruction": "10th public exam-ku eppadi prepare aavadhu? Topper tips enna?",
+      "current_output": "Topper strategies: 1) Textbook muzhmaiyaaga padiyunga - 80% questions textbook-lirundhu 2) Previous 5 years question papers practice 3) Blue print padi chapter-wise weightage kavaniyunga 4) Maths & Science: daily problem solving 5) Tamil/English: grammar + essay practice 6) Social: Map pointing + dates memorize. Time: Daily 6-8 hours. Last month: Revision only. TN Government question bank: www.dge.tn.gov.in",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM029_TM",
+      "instruction": "Mock test எத்தனை முறை எழுதணும்? எப்படி analyze பண்றது?",
+      "current_output": "Mock test frequency: Last 2 months - weekly 2-3. Last month - daily. Analysis steps: 1) Check answers immediately 2) Category-wise error (silly mistake, concept gap, time issue) 3) Track weak areas 4) Revise mistakes same day 5) Redo wrong questions after 3 days 6) Score tracking graph maintain 7) Time per question analysis 8) Attempt strategy review. Sources: Official previous papers, coaching test series, free online (Testbook, Gradeup). Quality > quantity of mocks.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO019_TG",
+      "instruction": "Rural students-ku enna special schemes irukku?",
+      "current_output": "**Rural Student Benefits:**\n\n**1. PMSSS:** Full fee + maintenance for meritorious\n\n**2. Eklavya Schools:** Free residential (tribal) - emrs.tribal.gov.in\n\n**3. KGBV:** Rural girls Class 6-12 residential\n\n**4. Free Hostels:** BC/MBC/SC/ST hostels in all districts\n\n**5. Transport Allowance:** ₹500-1,000/month\n\n**6. Special Coaching:**\n- TNSF rural NEET\n- Block-level centers\n\n**7. Agri Education:** Special quota in TNAU\n\n**8. Distance Education:** IGNOU/TNOU in rural areas\n\n**How to Get:**\n- Rural certificate from VAO\n- Apply through school\n- Contact BEO",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_011_TM",
+      "instruction": "NEET/JEE coaching-க்கு லட்சக்கணக்கில் செலவாகும், எங்களால் afford பண்ண முடியாது. Chance இல்லையா?",
+      "current_output": "Hope உள்ளது! Free/Low-cost options: 1) Government free NEET/JEE coaching centres 2) School-based free coaching (apply through HM) 3) YouTube: Physics Wallah complete course free 4) NPTEL, SWAYAM free courses 5) Scholarship-based coaching: FIITJEE, Allen poor student schemes 6) Library resources - reference books available. Success stories: Many toppers from poor families using free resources. Key: Self-discipline and hard work. Money doesn't guarantee success.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_008_TM",
+      "instruction": "Sports-ல் interest இருக்கு, படிப்பும் sports-ம் combine பண்ண முடியுமா?",
+      "current_output": "Absolutely yes! Benefits: 1) Sports quota admission in colleges 2) Government jobs-ல் extra marks 3) Scholarships for sportspersons 4) Health and discipline. How: 1) Join school sports team 2) District sports coaching centres - free 3) SAI (Sports Authority of India) training 4) Balance: Morning sports, evening study. Careers: Sports quota → College → Job OR Professional sports. Many IAS officers, doctors are sportspersons. Time management key.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM024_TM",
+      "instruction": "உண்மையா பொய்யா: Myth: SC/ST reservation = undeserving students getting seats",
+      "current_output": "உண்மை: Fact: Reservation = Equalizing historical disadvantage. SC/ST students also clear cutoffs, just in their category. Many top performers are from reserved categories. Reservation doesn't mean zero merit - minimum marks required. Social mobility happening due to reservation - breaking caste barriers in education. Focus on your preparation, not others' category.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM031A_TG",
+      "instruction": "NEET-ku prepare aaga enna pannanum-pa? Free coaching irukkuma?",
+      "current_output": "NCERT Biology, Physics, Chemistry - line by line read pannu/pannunga. Free coaching: Government centres-la apply pannu through school. Online free: YouTube (Physics Wallah), SWAYAM. 7.5% reservation govt school students-ku. Daily 6-8 hours padikka venum. Previous year papers practice important.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE012_TG",
+      "instruction": "Agriculture education padikka enna vazhi?",
+      "current_output": "TNAU (Tamil Nadu Agricultural University) Coimbatore-la BSc Agriculture, Horticulture, Forestry courses irukku. 12th Biology group padichirundha TNAU counselling moolam seralam. Government job opportunities niraiya.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM019_TM",
+      "instruction": "TNPSC Pothu Tamil எப்படி படிப்பது?",
+      "current_output": "Pothu Tamil sections: 1) Ilakkanam (Grammar) - Ezhuthiyial, Solliyal, Porulathigaram 2) Ilakkiyam - Sangam to Modern literature 3) Tamil culture and heritage. Books: 6th-12th Tamil textbooks, TNPSC previous papers. High scoring: Grammar rules, author-work matching, literary periods. Daily practice: 50 questions. Ilakkanam: Vinaigal, Pechu vazhakku, Ezhuthuvazhi rules. Tamil literature: Thirukkural mandatory (1330 kurals meanings).",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC014_TG",
+      "instruction": "College-la stress athigamaa irukku. Handle panrathu eppadi?",
+      "current_output": "Stress management: 1) Sleep 7-8 hours - non-negotiable 2) Exercise 30 min daily - even walking helps 3) Healthy food - avoid junk during stress 4) Break big tasks into small 5) Talk to friends, family 6) College counsellor - free service 7) Hobbies continue - music, sports, art 8) Social media break 9) Deep breathing when overwhelmed 10) Professional help if severe - no shame. Remember: Grades ≠ Self-worth. You matter more than marks.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO027_TG",
+      "instruction": "Scholarship endha websites-la theduvadhu?",
+      "current_output": "Important websites: 1) scholarships.gov.in (NSP) - Government schemes 2) buddy4study.com - All scholarships aggregator 3) vidyalakshmi.co.in - Education loans + scholarships 4) respective state welfare department sites 5) University websites. Apps: Buddy4Study app, ScholarPlus. Set Google alerts for 'scholarship Tamil Nadu [year]'. Follow scholarship pages on social media.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO010_TM",
+      "instruction": "10th முடித்த பிறகு என்னென்ன courses இருக்கு?",
+      "current_output": "**10th-க்குப் பிறகு Pathways:**\n\n**1. Plus Two (+2) / Higher Secondary:**\n- Duration: 2 years\n- Streams: Science, Commerce, Arts, Vocational\n- Board: TN State Board / CBSE\n\n**2. Diploma (Polytechnic):**\n- Duration: 3 years\n- Branches: Civil, Mechanical, ECE, EEE, Computer, etc.\n- Lateral entry to Engineering 2nd year possible\n- Apply: tnpolytechnic.org\n\n**3. ITI (Industrial Training Institute):**\n- Duration: 6 months - 2 years\n- Trades: Electrician, Fitter, Welder, Mechanic, COPA\n- Direct employment opportunity\n- Apply: itidata.tn.gov.in\n\n**4. Paramedical Courses:**\n- ANM (Auxiliary Nurse Midwife)\n- Lab Technician\n- X-Ray Technician\n- Duration: 1-2 years\n\n**5. Skill Development Courses:**\n- NSDC certified courses\n- Free under PMKVY\n- Duration: 3-6 months\n- Job placement support\n\n**6. Open Schooling (NIOS):**\n- For those who can't attend regular school\n- Same validity as regular +2\n- nios.ac.in\n\n**Comparison Table:**\n\n| Course | Duration | Entry | Job/Higher Studies |\n|--------|----------|-------|-------------------|\n| +2 | 2 years | 10th pass | UG admission |\n| Diploma | 3 years | 10th pass | Job / Lateral entry |\n| ITI | 6m-2y | 8th/10th | Direct job |\n| Paramedical | 1-2 years | 10th pass | Healthcare jobs |\n\n**எந்த option best?**\n- Higher studies interest: +2\n- Quick job: ITI\n- Technical job: Diploma",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA009_TM",
+      "instruction": "Sandwich pattern diploma என்ன? Regular-இலிருந்து என்ன வித்தியாசம்?",
+      "current_output": "Sandwich Diploma: Theory + Industrial training combined. Pattern: 1st year theory → 2nd year industry (6 months paid training) → 3rd year theory. Benefits: 1) Real work experience 2) Stipend during training ₹5,000-8,000/month 3) Job placement better 4) Industry connections. Offered at: NTTF, Central Polytechnics, select government colleges. Duration: Same 3 years. Highly recommended for practical learning.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH016_TG",
+      "instruction": "CA (Chartered Accountant) padippu eppadi aarambippathu?",
+      "current_output": "ICAI nadathum padippu. Levels: 1) Foundation (after 10th or +2) 2) Intermediate 3) Final. 3 year Articleship compulsory. Total duration: 4-5 years. Fee: Foundation ₹11,000, Inter ₹27,000, Final ₹32,000. Chennai-la ICAI coaching centers irukku. Work while studying possible.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE010_TG",
+      "instruction": "Madurai-la MBBS padikka government college-la seat kidaikkuma?",
+      "current_output": "Madurai Medical College-la 7.5% government school quota, OBC/BC/MBC reservation irukku. NEET-la 550+ vaangina government seat kedaikka chance irukku. Theni Medical College-layum try pannalam.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_014_TG",
+      "instruction": "NEET-la seat kidaikkal, drop year edukkalaama? Waste aagumaa?",
+      "current_output": "Drop year = Strategic decision, not waste. When good idea: 1) Close to cutoff - improvement chances high 2) Strong determination 3) Clear preparation plan. When risky: 1) First attempt poor score by big margin 2) No structured plan 3) Family pressure only. Statistics: Many successful doctors took 2-3 attempts. Alternative: Join backup course (B.Sc) + prepare NEET simultaneously. Drop year plan: Join test series, daily 8-10 hours, monthly assessment. One year invested wisely = lifetime career.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA026_TG",
+      "instruction": "School dropout-aagi vitten, padippai continue seiya enna vazhi?",
+      "current_output": "Options: 1) NIOS (National Institute of Open Schooling) - 10th/12th complete 2) TN State Open School - Tamil medium available 3) Private appearance through Distance Education 4) Skill training + later education. NIOS: www.nios.ac.in, exams twice a year, study at own pace. Age no bar. After 10th/12th: Regular college admission possible. Many successful people are NIOS students.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE023_TG",
+      "instruction": "En paiyan engineering vendaamnu solran - enna panrathu?",
+      "current_output": "Paiyanoda interest ennannu purinjukonga. Arts, Commerce, Vocational, Creative fields-layum nalla career opportunities irukku. Aptitude test edunga. Career counsellor-kitta pesunga. Force pannaadheenga.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM023_TM",
+      "instruction": "உண்மையா பொய்யா: Myth: 30 வயசு கடந்தால் படிக்க late",
+      "current_output": "உண்மை: Fact: Learning has no age limit! Distance education: IGNOU, TNOU - no age bar. Success stories: People completing degrees at 40, 50, even 60. Benefits: Career switch, personal satisfaction, promotion eligibility. Government job age limit = only restriction (up to 35-40 for many). Skill courses: No age limit. Your motivation to learn > Your age. Start today!",
+      "category": "common_questions",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HIGH042_TG",
+      "instruction": "Free coaching enge kidaikkum? Government schemes irukkiradha?",
+      "current_output": "Free coaching options: 1) Tamil Nadu Government Free Coaching Centres - UPSC, TNPSC, SSC-ku major cities-la 2) BC/MBC Welfare Dept coaching 3) Adi Dravidar Welfare free coaching (SC/ST) 4) District Employment Office coaching 5) TNSDC skill centers. Online: NPTEL, SWAYAM, Unacademy free tier. Apply through respective department websites. Selection based on marks and income.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP001_TG",
+      "instruction": "NEET Exam endraal enna? Yaar ezhudhalaam?",
+      "current_output": "**NEET Exam:**\n\n**What:** Medical entrance exam by NTA\n\n**Courses:** MBBS, BDS, BAMS, BHMS, Nursing, Veterinary\n\n**Eligibility:**\n- Age: 17+ (Dec 31)\n- Education: 12th PCB\n- Marks: General 50%, OBC/SC/ST 40%\n\n**Attempts:** Unlimited\n\n**Languages:** Tamil, English, Hindi + 10 more\n\n**Apply:** neet.nta.nic.in (Dec-Jan)\n**Fee:** ₹1,700 (General), ₹1,000 (SC/ST)\n\n**TN Special:** 7.5% Govt school reservation",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA017_TM",
+      "instruction": "Hardware and Networking course படிக்கலாமா?",
+      "current_output": "Good career option. Courses: 1) CCNA (Cisco) - Networking 2) CompTIA A+ - Hardware 3) MCSE (Microsoft) - Server admin 4) Hardware & Networking diploma. Duration: 3-12 months. Jobs: 1) Network administrator 2) System support 3) Hardware technician 4) IT helpdesk. Salary: ₹15,000-30,000. Demand: Every company needs IT support. NIELIT offers recognized courses. Self-employment: Computer repair shop.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM015_TG",
+      "instruction": "Community certificate eppadi vaanguvadhu? Time evvalavu aagum?",
+      "current_output": "Process: 1) Apply at Tahsildar office or e-Sevai 2) Documents: Aadhaar, parent community certificate, school TC mentioning community, family photo 3) Verification by RI 4) Issue by Tahsildar. Time: 15-30 days. One-time: Permanent certificate for lifetime. Required for: Reservation benefits, scholarships, government jobs. Tip: Get parents' certificate first, then children's easier. Online tracking: tnedistrict.tn.gov.in.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 20,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SCHO011_TG",
+      "instruction": "INSPIRE scholarship enna? Science students-ku eppadi apply seivathu?",
+      "current_output": "Innovation in Science Pursuit for Inspired Research (INSPIRE): DST scheme for science students. 3 components: 1) INSPIRE Award - Class 6-10, ₹5,000 one-time 2) SHE (Scholarship for Higher Education) - BSc/BS/Int MSc, ₹80,000/year 3) INSPIRE Fellowship - PhD, ₹31,000-35,000/month. SHE eligibility: Top 1% in 12th OR KVPY/JEE top 10,000. Apply: www.online-inspire.gov.in.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO001_TG",
+      "instruction": "Tamil Nadu govt-oda BC/MBC students-ku scholarship enna?",
+      "current_output": "BC/MBC Welfare Department Scholarships: 1) Post-matric scholarship - ₹1,000-3,000/year 2) Professional course scholarship - ₹10,000-50,000 3) Foreign study scholarship - up to ₹20 lakh 4) Free laptop 5) Free bicycle (school students). Eligibility: BC/MBC community certificate, income ₹2.5 lakh/year kizha. Apply: www.bcmbcmw.tn.gov.in. Deadline: Usually September-October.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH034_TG",
+      "instruction": "Government job-ku endha padippu siranthidhu?",
+      "current_output": "Padippu wise jobs: 1) Any Degree - TNPSC Group 2/4, SSC CGL, Banking 2) Engineering - PSU, SSC JE, RRB 3) Law - Judicial services 4) Medical - Government hospitals 5) B.Ed - TET, Government teacher. Endha padippum sari, preparation mukkiyam. Age limit kavaniung (32-40 vara depends on category). Current affairs daily padiyunga.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_021_TM",
+      "instruction": "என் பையன் 10th படிக்கிறான். Future planning எப்படி பண்றது? Wrong decision எடுக்க கூடாது.",
+      "current_output": "Balanced approach: 1) Child's interest observe பண்ணுங்கள் - Science/Arts/Sports 2) Aptitude test - free online available 3) Career counselling - school/district level 4) Multiple options explore - don't fix one path early 5) Financial planning start - education costs rising. Avoid: 1) Forcing your dreams on child 2) Neighbour's child comparison 3) One exam = end of world mentality. Support: Encourage exploration, failure tolerance, self-discovery. Best investment = supportive environment. Trust your child!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM011_TG",
+      "instruction": "Exam-la wrong answer ezhudhitten, cut pannalaamaa?",
+      "current_output": "Yes, cutting allowed. Method: Single line through wrong text, write correct above/below. Don't: Overwrite, scribble, use whitener (some exams prohibit). For MCQ/OMR: Circle filling rules strict - follow instructions exactly. If OMR mistake: Some allow correction with specific method. Essay type: Neat cutting = no penalty. Messy = bad impression. Time management: Better to continue, cut later if time permits. Rough work: Designated area only.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO017_TG",
+      "instruction": "Pen students-ku enna special schemes irukku?",
+      "current_output": "**Girl Students Special Schemes:**\n\n**1. CM Girl Child Protection:** ₹50,000 FD at birth, ₹1.5L+ at 18\n\n**2. Free Education:** Up to PG in Govt institutions\n\n**3. Moovalur Ramamirtham:** ₹1,000/month for UG girls\n\n**4. Free Bicycle:** Class 11-12 girls\n\n**5. CBSE Udaan:** Free engineering prep for girls\n\n**6. Pragati (AICTE):** ₹50,000/year for tech education\n\n**7. Begum Hazrat Mahal:** Minority girls - ₹5,000-12,000\n\n**8. Free Bus Travel:** All women free in ordinary buses\n\n**Apply:** tneservices.tn.gov.in or through school/college",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_012_TG",
+      "instruction": "Board exam-la fail aayitten. Life waste aayiduchu endru feel aagudhu. Enna seivathu?",
+      "current_output": "First: You are NOT a failure! Exam failure ≠ Life failure. Many successful people failed exams: Abdul Kalam, Dhirubhai Ambani. Immediate steps: 1) Supplementary exam-ku prepare - 3 months time 2) Talk to parents/teacher openly 3) If severe stress - school counsellor or helpline iCALL: 9152987821. Future: Many paths to success - ITI, Diploma, NIOS, Skill training. One exam doesn't define you. Rise again stronger!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH026_TG",
+      "instruction": "Tamil Nadu govt vellinaadu padippuku scholarship tharugiradha?",
+      "current_output": "Aam, BC/MBC/SC/ST students-ku: 1) BC/MBC Welfare Department - up to ₹20 lakh 2) Adi Dravidar Welfare - SC students-ku full scholarship 3) CM's Special Scholarship. Central schemes: 1) National Overseas Scholarship (SC/ST) 2) MOMA Scholarship (Minorities). Apply through respective department websites. Merit-based selection.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM030_TG",
+      "instruction": "Exam mundhina naal enna seiyanum? Enna seiyakkoodaadhu?",
+      "current_output": "Do: 1) Light revision - formula sheet, key points only 2) Organize hall ticket, pens, watch 3) Check exam centre route 4) Early dinner, light food 5) Sleep by 10 PM (7-8 hours) 6) Positive thoughts 7) Relaxation - music, walk. Don't: 1) New topics - creates confusion 2) Heavy study - exhaustion 3) Late night - affects performance 4) Junk food, caffeine excess 5) Negative friends/news 6) Panic discussions with peers 7) Social media overthinking. Trust your preparation!",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA012_TM",
+      "instruction": "Apprenticeship training எப்படி join ஆவது? Stipend கிடைக்குமா?",
+      "current_output": "National Apprenticeship Promotion Scheme (NAPS): ITI/Diploma முடித்தவர்களுக்கு. Register: www.apprenticeshipindia.gov.in. Duration: 1-3 years depending on trade. Stipend: ₹8,000-15,000/month (govt subsidy உள்ளது). Companies: TCS, L&T, Hyundai, Railways, BHEL - all hire apprentices. Benefits: Real experience, permanent job chance 70%+. Documents: ITI certificate, Aadhaar, bank account.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP007_TG",
+      "instruction": "JEE vs TNEA - TN-la Engineering-ku edhu better?",
+      "current_output": "**JEE vs TNEA:**\n\n**TNEA:**\n- 12th marks based (No exam!)\n- TN colleges only\n- Score = Maths×50 + Phy×25 + Chem×25 = 200\n- tneaonline.org\n\n**JEE:**\n- Exam based\n- All India (IIT, NIT, IIIT)\n- Tough competition\n\n**Choose TNEA if:**\n- Want TN college\n- Limited coaching\n- Strong in boards\n\n**Choose JEE if:**\n- Target IIT/NIT\n- Can do coaching\n- Want All India options\n\n**Best:** Prepare JEE + Apply both!",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM030_TM",
+      "instruction": "Exam முந்தின நாள் என்ன செய்யணும்? என்ன செய்யக்கூடாது?",
+      "current_output": "Do: 1) Light revision - formula sheet, key points only 2) Organize hall ticket, pens, watch 3) Check exam centre route 4) Early dinner, light food 5) Sleep by 10 PM (7-8 hours) 6) Positive thoughts 7) Relaxation - music, walk. Don't: 1) New topics - creates confusion 2) Heavy study - exhaustion 3) Late night - affects performance 4) Junk food, caffeine excess 5) Negative friends/news 6) Panic discussions with peers 7) Social media overthinking. Trust your preparation!",
+      "category": "exam_preparation",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SUPP028_TM",
+      "instruction": "Government job salary ranges",
+      "current_output": "TNPSC Group 1: ₹56,100-1,77,500 (DSP, DC level). Group 2: ₹35,400-1,12,400 (Assistant level). Group 4: ₹19,500-62,000 (Clerk level). Banking PO: ₹40,000-80,000+. SSC CGL: ₹35,000-1,50,000. Teaching (TRB): ₹35,000-70,000. Note: Includes DA, HRA, benefits.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP018_TG",
+      "instruction": "Juvenile home-la irundhen. Ippo padikka chance irukkaa?",
+      "current_output": "Yes, absolutely! Rehabilitation includes education: 1) Continuation of education during detention 2) NIOS for school completion 3) Skill training provided 4) After release: Regular school/college admission possible 5) No mandatory disclosure of juvenile record. Support: Juvenile Justice Board, NGOs, Social Welfare Department. Records sealed - fresh start possible. Many have rebuilt lives through education. You deserve a second chance!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH034_TM",
+      "instruction": "Government job-க்கு எந்த படிப்பு சிறந்தது?",
+      "current_output": "படிப்பு வாரியாக jobs: 1) Any Degree - TNPSC Group 2/4, SSC CGL, Banking 2) Engineering - PSU, SSC JE, RRB 3) Law - Judicial services 4) Medical - Government hospitals 5) B.Ed - TET, Government teacher. எந்த படிப்பும் சரி, preparation முக்கியம். Age limit கவனியுங்கள் (32-40 வரை depends on category). Current affairs daily படியுங்கள்.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM009_TM",
+      "instruction": "Hall ticket missing, exam-க்கு போக முடியுமா?",
+      "current_output": "Emergency solutions: 1) Download duplicate from exam portal (DigiLocker link) 2) Contact exam centre - they have candidate list 3) Carry Aadhaar + Photo ID as backup 4) School/College principal letter 5) Reach early, explain to centre supervisor. For board exams: School coordinator can help. For competitive exams: Most allow with ID proof + declaration. Prevention: Download multiple copies, keep in phone, email to self. Last resort: Exam board helpline.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO019_TM",
+      "instruction": "HDFC Bank Parivartan's ECSS scholarship என்ன?",
+      "current_output": "Educational Crisis Scholarship Support (ECSS): Financial crisis-ல் உள்ள students-க்கு. Amount: Up to ₹75,000. Eligibility: Family crisis (death, illness, job loss), income ₹6 lakh கீழ், 55%+ marks. Covers: School/College fee. Apply: www.hdfcbankecss.com. Documents: Crisis proof, income proof, marks, Aadhaar. One-time emergency support.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC004_TG",
+      "instruction": "Government hostel-la seat eppadi kidaikkum?",
+      "current_output": "Process: 1) Apply through college/department 2) Priority: Distance from home, family income, caste category 3) Documents: Income certificate, nativity, distance proof 4) BC/MBC/SC/ST welfare hostels - apply through respective departments 5) Working women's hostel - separate application. Fees: Government hostel very subsidized (₹100-500/month). Free for eligible SC/ST. Apply early - seats limited. Waiting list exists.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP010_TG",
+      "instruction": "TNPSC Group 4 Exam-ku eppadi prepare seyvadhu?",
+      "current_output": "**TNPSC Group 4 Preparation:**\n\n**Eligibility:** 10th pass, Age 18-32\n\n**Exam Pattern:**\n- GK: 50 questions - 150 marks\n- Tamil: 50 questions - 150 marks\n- Total: 300 marks, 3 hours\n- Negative: 1/3 mark\n\n**GK Syllabus:**\nHistory, Geography, Polity, Economy, Science, Current Affairs\n\n**Tamil Syllabus:**\nGrammar, Literature, General Tamil, Translation\n\n**Books:**\n- Tamil: 6th-12th TN Books, Pothu Tamil guides\n- GK: NCERT + TN Textbooks\n- Current: Tamil Hindu daily\n\n**6-Month Plan:**\n- Month 1-2: Textbook basics\n- Month 3-4: Deep study\n- Month 5: Revision\n- Month 6: Mock tests\n\n**Tips:**\n1. Tamil medium advantage\n2. 10th books = 60% syllabus\n3. Previous 10 years papers must",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA029A_TG",
+      "instruction": "ITI join aaga enna pannanum-pa? Free-vaa irukkuma?",
+      "current_output": "10th/8th pass pannirukkanum. www.skilltraining.tn.gov.in-la apply pannu/pannunga. Government ITI full free - fee illai, tools, books ellam free. Documents: TC, marks card, community certificate, Aadhaar. June-July-la admission start aagum.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP008_TG",
+      "instruction": "JEE Main & Advanced-ku eppadi prepare seyvadhu?",
+      "current_output": "**JEE Preparation:**\n\n**Class 11:** Foundation - NCERT mastery, Concepts clear\n\n**Class 12:** Intensive - Complete by Dec, Mock tests from March\n\n**Books:**\n- Maths: NCERT → RD Sharma → Cengage\n- Physics: NCERT → HC Verma → DC Pandey\n- Chemistry: NCERT (Must!) → MS Chouhan → OP Tandon\n\n**Daily Routine:**\n- 5:30 AM: Maths (Best time)\n- Afternoon: Physics\n- Evening: Chemistry + Revision\n\n**Weekly:**\n- Sunday: Full mock test\n- Mistake analysis\n- Weak topic revision\n\n**JEE Advanced:** After Main, 2-month intensive, Complex problems",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP008_TG",
+      "instruction": "Fine Arts padichaa future enna?",
+      "current_output": "BFA (Bachelor of Fine Arts): 4 years. Specializations: Painting, Sculpture, Applied Art, Graphic Design. Colleges: Govt College of Fine Arts Chennai, Kumbakonam. Jobs: Art galleries, Advertising agencies, Film industry (Art director), Teaching, Freelance artist. Digital art growing field. Salary varies widely: ₹15,000-1 lakh+ based on skill and reputation. Portfolio and networking crucial.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO001_TM",
+      "instruction": "தமிழ்நாடு அரசின் BC/MBC மாணவர்களுக்கான scholarship என்ன?",
+      "current_output": "BC/MBC Welfare Department Scholarships: 1) Post-matric scholarship - ₹1,000-3,000/ஆண்டு 2) Professional course scholarship - ₹10,000-50,000 3) Foreign study scholarship - ₹20 lakh வரை 4) Free laptop 5) Free bicycle (school students). தகுதி: BC/MBC community certificate, income ₹2.5 lakh/ஆண்டு கீழ். Apply: www.bcmbcmw.tn.gov.in. Deadline: Usually September-October.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP013_TM",
+      "instruction": "IBPS PO/Clerk Exam Pattern என்ன? எப்படி prepare செய்வது?",
+      "current_output": "**IBPS PO/Clerk Exam Pattern:**\n\n**IBPS PO:**\n\n**Prelims (1 hour):**\n| Section | Questions | Marks |\n|---------|-----------|-------|\n| English | 30 | 30 |\n| Quantitative | 35 | 35 |\n| Reasoning | 35 | 35 |\n| **Total** | **100** | **100** |\n\n**Mains (3 hours):**\n| Section | Questions | Marks |\n|---------|-----------|-------|\n| Reasoning + Computer | 45 | 60 |\n| English | 35 | 40 |\n| Data Analysis | 35 | 60 |\n| General/Banking Awareness | 40 | 40 |\n| **Total** | **155** | **200** |\n\n**Interview:** 100 marks\n\n**IBPS Clerk:**\n\n**Prelims:** Same as PO (100 marks, 1 hour)\n\n**Mains (2 hrs 40 min):**\n| Section | Questions | Marks |\n|---------|-----------|-------|\n| General English | 40 | 40 |\n| Reasoning + Computer | 50 | 60 |\n| Quantitative | 50 | 50 |\n| GK/Banking | 50 | 50 |\n| **Total** | **190** | **200** |\n\n**No Interview for Clerk!**\n\n**Preparation Books:**\n\n| Subject | Book |\n|---------|------|\n| Quantitative | RS Aggarwal, Arun Sharma |\n| Reasoning | RS Aggarwal, MK Pandey |\n| English | Wren & Martin, SP Bakshi |\n| Banking | Arihant Banking Awareness |\n| GK | Lucent GK, Pratiyogita Darpan |\n\n**Preparation Strategy:**\n\n**Month 1-2:**\n- Basics of Quant, Reasoning\n- English grammar\n- Daily current affairs\n\n**Month 3-4:**\n- Advanced topics\n- Speed building\n- Banking knowledge\n\n**Month 5-6:**\n- Mock tests daily\n- Previous papers\n- Time management\n\n**Daily Routine:**\n- 2 hours Quant\n- 2 hours Reasoning\n- 1 hour English\n- 1 hour GK/Current Affairs\n- 1 hour Mock test analysis",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM024_TG",
+      "instruction": "Myth or Fact: Myth: SC/ST reservation = undeserving students getting seats",
+      "current_output": "Fact: Fact: Reservation = Equalizing historical disadvantage. SC/ST students also clear cutoffs, just in their category. Many top performers are from reserved categories. Reservation doesn't mean zero merit - minimum marks required. Social mobility happening due to reservation - breaking caste barriers in education. Focus on your preparation, not others' category.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 5,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT047_TG",
+      "instruction": "'Aakkam izhandhaemenru' - tholvi patriya kural enna solludhu?",
+      "current_output": "Kural: 'Aakkam izhandhaemenru allaaVaar ookkam oruvandam kaiththudai yaar'. Artham: Selvam izhandhaalum 'izhandhuVittom' endru azhuvaar alla, ookkam ullavargal. Setbacks-kku cry panravargal weak. Strong people bounce back. Resilience is wealth!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT049_TG",
+      "instruction": "'Selvarkku azhagu sezhundhootti' - selvandharkku azhagu enna?",
+      "current_output": "Kural related meaning: Panakkaarargalukkku azhagu ennavendral pirarukku uthavuvadhu. Ezhaigalukkku azhagu ennavendral ketkaamal iruppadu. True wealth = giving, True dignity = self-respect even in poverty.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT123_TG",
+      "instruction": "Siddhargal jaadhi, madham patri enna solkirargal?",
+      "current_output": "Siddhargal jaadhi, madha verupaadugalai kadumayaga ethirththargal: 1) 'Ondre kulam oruvane devan' - Thirumoolar, 2) 'Jaadhiyum illai samayamum illai' - Siva Vaakkiyar, 3) Ella siddhargalum vevveru jaadhi backgrounds-lirundhu vandhavargal. Padiththavargal mattumalla, idaiyar, nesavaalar ellaarum siddhargalaaga aanaargal. True spirituality-kku jaadhi thadai illai enbadhu avargal message.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT198_TG",
+      "instruction": "Kuzhanthaigalukkku Tamil saints patri eppadi karpikkalam?",
+      "current_output": "Kuzhanthaigalukkku karpikka: 1) Aathichudi memorize pannunga - school-la karpikiraargal, 2) Kadhai sollungga - Kannappar, Avvaiyar kathaigal interesting, 3) Amar Chitra Katha comics - Tamil saints series, 4) YouTube videos - animated stories, 5) Kovil visit - samaadhigal kaattunga, 6) Thiruppaavai paadunga - Margazhiyil daily oru paasuram, 7) Periya Puranam children's version books. Make it story-based, not lecture-based!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT193_TG",
+      "instruction": "Sekkizhaar yaar? Periya Puranam endraal enna?",
+      "current_output": "Sekkizhaar - Chozha mannan Kulothunga II-oda amaichar. 12th century. 'Periya Puranam' ezhuthiyavar - 63 Nayanmaargaloda varalaaru. 4286 paadalgal. 12-vadhu Thirumurai endru azhaikkapadugiradhu. Mannan Jain ilakkiyam padikka, Sekkizhaar 'idhai vida sirandha Saiva ilakkiyam ezhudhugiren' endru solli Periya Puranam padaiththaar endru kadhai. Tamil literary masterpiece!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT186_TG",
+      "instruction": "Aandaal yaar? Thiruppaavai endraal enna?",
+      "current_output": "Aandaal - 12 Azhvaargalil ore penn. Srivilliputhooril Periyaazhvaaraal valarkkappattavar. Ranganatharai (Srirangam) kanavaragaa karudhi, avaraiye manandhaar endru nambappadugiradhu. Thiruppaavai - 30 paasurangal, Margazhi maadhaththil paadappduvathu. 'Margazhith thingal madhiniraindha nannaalaal' endru thodangum. Kovilgal, veedugalil Margazhiyil dhinamum oru paasuram paaduvathu tradition. Naachiyar Thirumozhi matroru padaippu.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT195_TG",
+      "instruction": "Ramana Maharishi yaar?",
+      "current_output": "Ramana Maharishi (1879-1950) - Thiruvannamalayoda gnaani. 16 vayathil death experience-kkup pin Thiruvannamalai vandhu thavam seydhaar. 'Naan yaar?' (Who am I?) endra self-enquiry method karpithThavar. Arunachalam malaiyai vittu nagaravillai. Ulagengum bhakthargal vandhanar. Sri Ramana Ashram indrum active. Paul Brunton, Arthur Osborne pondror ivarai ulagirrku arimugappaduththinar. Modern-day saint!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT007_TG",
+      "instruction": "'Agara mudhala ezhuththellam' - indha kuraloda artham enna?",
+      "current_output": "Kural: 'Agara mudhala ezhuththellam aadhi bhagavan mudhatre ulagu'. Artham: Ezhuththukkal ellam 'A' endra ezhuththil thodanguvadhu pola, ulagam muzhuvathum iraivanaaal thodangiyathu. Idhu Thirukkuraloda mudhal kural. Kadavul Vaazhtthu adhigaarathil ulladhu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT018_TG",
+      "instruction": "'Pirivoora naanam thudaippadu' - pirivoda vali patriya kural enna solludhu?",
+      "current_output": "Kural: Pirivutru kannootla verullaan kannootla punarvadhu sindhippaan pondru. Artham: Kaadhalan pirindhu sendraalum, avan thirumbi varuvaan endra nambikkayil kaadhali kaaththirukkiraal. Long-distance relationship-a 2000 varudangalukkku munnabe Valluvar purindhukkondaar.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT068_TG",
+      "instruction": "Arranged marriage-kku oththukkolvadhaa vendaama?",
+      "current_output": "'Manamaatchi illaalkan illayin vaazhkkai enaimaatchith thaayinum il'. Nalla illaththarasi illaaVittaal endha selvamum payanillai. Melum: 'Pennin perunthakka yaavula' - penn enbadhu migapperiya varam. Decision ungaludayadhu - aanaal compatibility, values paarungal, external beauty mattum alla.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT057_TG",
+      "instruction": "'Thelliya vaayudaiya mannarai' - nalla leader-oda tharam enna?",
+      "current_output": "Kural: 'Solluga sollir payanudaiya sollarka sollir payanilaach sol'. Artham: Payanulla vaarthaigalaiye pesungal. Payanatra vaarthaigalai pesaadheeargal. Speak only what adds value. Avoid meaningless talk. Quality over quantity in communication!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT010_TG",
+      "instruction": "'Yaadhanum naadaamaal ooraamaal' - indha pugazh petra kural enna solludhu?",
+      "current_output": "Kural: 'Yaadhanum naadaamaal ooraamaal ennoruvan saandhunaiyum kallaadha vaaru'. Artham: Endha naadum endha oorum kalvi katravanukku sondham. Avan engu sendraalum madhippu peruvaan. Aanaal kalvi illadhavan saagum varai ondrum illaadhavanagave iruppaan. Kalviyoda avasiyathai valiyuruththum kural.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT190_TG",
+      "instruction": "Kondraivendhan endraal enna?",
+      "current_output": "Kondraivendhan - Avvaiyaaroda matroru needhi nool. Aathichudiyai vida virivaanadhu - ovvondrum irandu varigal. 'Kondrai' enbadhu oru poo - Sivanukku uriyathu. Famous examples: 1) 'Annaiyum pithavum munnarri deivam' - parents are first gods, 2) 'Eeyaar thettai theeyaar kolvar' - misers' wealth goes to bad people, 3) 'Undi surungudhal pendirkku azhagu' - modesty in eating is beauty for women. Values andha kaalathirkku etravai - sila indru discuss seiyalam.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT028_TG",
+      "instruction": "Thirukkural UN-la recognize aanadha?",
+      "current_output": "Thirukkural formally UN-aal recognize aagavillai, aanaal: 1) UN conferences-la Thirukkural quotes cite aagiyullana, 2) UNESCO Tamil-a classical language-aaga recognize panniyabodhu Thirukkural-a highlight panniyathu, 3) International scholars Thirukkural-a 'Universal ethical text' endru praise panraanga. Thirukkural-a UN officially recognize panna vendum endru campaign nadakkiradhu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT173_TG",
+      "instruction": "Thanjavur Oviyam endraal enna?",
+      "current_output": "Thanjavur Oviyam - Tamil Nadu-oda traditional painting style. 16th century-la Nayak period-la develop aanadhu. Sirappugal: 1) Gold foil work - relief, 3D effect, 2) Semi-precious stones embedded, 3) Vibrant colors, 4) Hindu gods, goddesses themes, 5) Wooden base with cloth coating. GI (Geographical Indication) tag petradhu. Prices: ₹500 (small) to ₹50,000+ (large). Thanjavur-la niraiya shops. Wedding gift-aaga popular. Museum quality pieces collectors buy panraanga.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT029_TG",
+      "instruction": "Chennai-la Thiruvalluvar thodarbaana idangal enna?",
+      "current_output": "1) Valluvar Kottam, Nungambakkam - auditorium + museum, 2) Thiruvalluvar Silai, Marina Beach - 39 feet uyaram, 3) Mylapore - pirandha idam endru nambappadugiradhu, 4) Thiruvalluvar Statue, Egmore - near museum, 5) DPI campus Thiruvalluvar statue. Ovvoru government office-lum Thiruvalluvar photo irukkum!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT130_TM",
+      "instruction": "சித்தர் பாடல்களை எங்கே கேட்கலாம்/படிக்கலாம்?",
+      "current_output": "சித்தர் பாடல்கள் access செய்ய: 1) Project Madurai - free Tamil texts online (projectmadurai.org), 2) Tamil Virtual Academy - government site, 3) YouTube - விளக்கங்களோடு பாடல்கள், 4) Books - சென்னை Higginbothams, பரி நிலையம், 5) Apps - Siddhar Paadalgal app, 6) Libraries - University of Madras, Connemara Library. Original palm leaves Saraswathi Mahal Library (Thanjavur)-ல் preserve செய்யப்பட்டுள்ளன.",
+      "category": "siddhars",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CULT021_TG",
+      "instruction": "Thirukkural pottikkal engge nadakkinrana? Parisu enna?",
+      "current_output": "1) Tamilnadu government Thirukkural potti - ovvoru varudamum January-la, 2) School/college pottikkal - Thiruvalluvar Dhinathil, 3) All India Thirukkural Competition - various organizations conduct, 4) Online quiz competitions - apps moolam. Parisugal: Panam, certificates, medals, scholarships kooda undu sila pottikkalil.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT146_TG",
+      "instruction": "Madurai Chithirai Thiruvizha eppadi nadakkum?",
+      "current_output": "Tamil Nadu-oda migapperiya thiruvizha. Oru maadham nadakkum. Mukkiya events: 1) Thirukalyanam - Meenakshi-Sundareswarar thirumanam, 2) Azhvaar Thiruveedhi purapaadu - Vishnu's brother role, 3) Therthiruvizha - huge temple car, 4) Theppathiruvizha - float festival at Mariamman Teppakulam. 1 million+ people varuvaargal. Hotels, transport early book seiya vendum. April/May-la veyil adhigam - prepare accordingly.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT116_TG",
+      "instruction": "Thirumoolar yoga patri enna solliyirukkaar?",
+      "current_output": "Thirumandhirathil yoga-vukku arppanikkappattta paguthigal ullana: 1) Ashtaanga Yogam - 8 padigal vilakkam, 2) Praanaayaamam - breathing techniques, 3) Kundalini Yogam - chakra activation, 4) Samaadhi nilai - highest state. 'Udambai valarththen uyir valarththene' - udal paenuvathum aanmeegam endru sonnavar. Hatha yoga-voda Tamil roots inge ullana!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT096_TG",
+      "instruction": "Adakkam (humility) patri enna kuralgal ullana?",
+      "current_output": "Kural: 'Adakkam amararul uykkum adangaamai aaarirul uyththu vidum'. Adakkam sorgaththukkku kondu sellum, adangaamai naragaththukkku. Melum: 'Kaakka porulaa adakkaththai aakkam adhaninnooung killai uyirkku'. Adakkaththai uyiraip pol kaappaatrungal. Humility = gateway to success!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT153_TG",
+      "instruction": "Kovil darshan timings eppadi therindhukolvathu?",
+      "current_output": "Darshan timings theriya: 1) Official temple websites - major temples maintain, 2) Dinamalar/Dinakaran temple section, 3) Temple phone numbers - call and ask, 4) Google Maps reviews - visitors update timings, 5) TN Tourism website. General pattern: Morning 6-12, Evening 4-8. Noon break (Uchchi Saandhi) 12-4pm closed. Special darshan (VIP) tickets available in big temples - book online. Festivals-la extended hours. Arrive early for popular temples!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT023_TG",
+      "instruction": "Thirukkural mental health-kku eppadi udhavum?",
+      "current_output": "1) Thunbam theerthal adhigaaram - depression-kku udhavum, 2) Ookkamudaimai - motivation loss-kku, 3) Adakkamudaimai - anger management-kku, 4) Poraiyudaimai - patience katrukolla, 5) Innaa seiyaamai - negative thoughts kuraikkA. 'Thunbam varum bodhu adhai eppadi face panradhu' endru Valluvar niraiya solliyirukkaar. Therapists kooda Thirukkural quotes payanpaduththuraanga.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT167_TM",
+      "instruction": "மதுரை மண்டபம் என்றால் என்ன? ஏன் famous?",
+      "current_output": "Chennai December Music Season - உலகின் மிகப்பெரிய cultural festival. December 15 - January 1 வரை. 1920s-ல் தொடங்கியது. சிறப்புகள்: 1) 2000+ concerts நடக்கும், 2) 100+ sabhas (cultural organizations) organize பண்றாங்க, 3) Morning 9 AM to Night 10 PM non-stop programs, 4) Free entry பல sabhas-ல், 5) World-ல் இருந்து Carnatic musicians வருவார்கள். Famous sabhas: Music Academy, Narada Gana Sabha, Mylapore Fine Arts. Culture lovers' paradise!",
+      "category": "arts_literature",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CULT184_TG",
+      "instruction": "Azhvaargal yaar? Eththanai per?",
+      "current_output": "Azhvaargal - Vaishnava bhakthi iyakkathoda 12 punithargal. 'Azhvaar' endraal 'aazhndhu arindhavar' endru porul - iraivanaai aazhamaga anubhaviththavargal. Ivargal Thirumaalai (Vishnu) paadinaargal. Nalayira Divya Prabandham ivargaloda padaippu - 4000 paasurangal. 108 Divya Desangalai (Vishnu kovilgal) paadiyullanar. Vaishnava sampradhaayathoda aadharam.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

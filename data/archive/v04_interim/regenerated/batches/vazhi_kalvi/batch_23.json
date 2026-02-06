@@ -1,0 +1,57 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 23,
+  "sample_count": 7,
+  "samples": [
+    {
+      "id": "EXTE009_TG",
+      "instruction": "Textile engineering padikka Coimbatore-thaan best-aa?",
+      "current_output": "Aamam. PSG Tech, Kumaraguru, SITRA-la textile technology courses irukku. Tirupur textile hub kitta irukradhunala internship, placement opportunities niraiya. Industry exposure kedaikum.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_010_TG",
+      "instruction": "NEET-aa JEE-aa? Doctor-aa Engineer-aa? Eppadi decide panrathu?",
+      "current_output": "Decision factors: 1) Interest - Patient care vs Problem solving 2) Study style - Memory vs Logic 3) Duration - MBBS 5.5 years vs Engineering 4 years 4) Investment - Medical costlier 5) Lifestyle - Doctor on-call vs Engineer 9-5. Self-assessment: Biology enjoy panreengala = NEET. Maths/Physics enjoy = JEE. Both attempt possible (Science stream). Shadow a doctor and engineer if possible. Final call: Your genuine interest, not family pressure.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC013_TM",
+      "instruction": "Education loan EMI கட்ட முடியல, என்ன option?",
+      "current_output": "Options available: 1) Moratorium extension request - bank will consider 2) EMI restructuring - lower EMI, longer tenure 3) Interest only payment temporarily 4) Parent co-borrower support 5) Government interest subsidy scheme check 6) Loan transfer to lower interest bank 7) Part-time income for EMI contribution. Don't do: Default silently - affects CIBIL score. Do: Communicate with bank proactively. Recovery harassment: Banking Ombudsman complaint.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO022_TM",
+      "instruction": "படிப்பை நிறுத்த நிர்பந்தமாக இருக்கிறேன், emergency scholarship உள்ளதா?",
+      "current_output": "Emergency options: 1) HDFC ECSS - crisis support ₹75,000 2) PM CARES (COVID affected) 3) Chief Minister's Public Relief Fund - apply to Collector 4) College Student Aid Fund 5) Rotary Club scholarships 6) Lions Club education support. Immediate help: District Social Welfare Officer-ஐ சந்தியுங்கள். NGOs: Pratham, Smile Foundation. Fee postponement request to college principal.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM007_TG",
+      "instruction": "TC enge pochu theriyala, duplicate eppadi vaanguvadhu?",
+      "current_output": "Duplicate TC process: 1) FIR file - nearest police station 2) Newspaper advertisement - TC lost notice 3) School application - with FIR copy, newspaper cutting, affidavit 4) School verifies records, issues duplicate 5) Fees: ₹50-200. Time: 1-2 weeks. If school closed: Contact DEO. Old schools: Check EMIS database for records. Important: Keep photocopy of all original certificates always!",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP027_TG",
+      "instruction": "Fee comparison table",
+      "current_output": "Engineering: Govt ₹50K/year, Private ₹1-2 lakh. Medical: Govt ₹13.5K/year, Private ₹10-20 lakh. Arts/Science: Govt ₹2-5K/year, Private ₹20-50K. MBA: Govt ₹30-50K/year, Private ₹2-5 lakh. ITI: Govt Free, Private ₹20-40K. Polytechnic: Govt ₹1.5-3K/year, Private ₹30-50K.",
+      "category": "supplementary_courses",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SUPP024_TM",
+      "instruction": "முக்கிய exam dates 2024-25",
+      "current_output": "Board Exams: 10th March, 12th March. NEET: May first week. JEE Main: January & April sessions. TNPSC Group 4: Throughout year. TNEA counselling: June-July. College admissions: June-August. GATE: February. CAT: November. CLAT: December.",
+      "category": "supplementary_courses",
+      "target_language": "pure_tamil"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 12,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SLE019",
+      "instruction": "என் Bank Account-ல் இருந்து OTP இல்லாமல் பணம் போய்விட்டது. Cyber fraud-க்கு என்ன செய்வது?",
+      "current_output": "உடனடியாக (Minutes matter!):\n1. Bank Helpline Call - Account freeze, Transaction dispute raise\n2. cybercrime.gov.in - Financial Fraud complaint\n3. 1930 Helpline - National Cyber Crime (24x7)\n\n24 மணி நேரத்திற்குள்:\n4. Written Bank Complaint - Acknowledgment வாங்கவும்\n5. Police FIR - Cyber Crime Police Station / eservices.tnpolice.gov.in\n\nBank Liability (RBI Rules):\n6. 3 நாட்களுக்குள் report → Full refund\n7. 4-7 நாட்கள் → Max loss ₹10,000\n8. Bank 90 நாட்களுக்குள் resolve செய்ய வேண்டும்\n\nEscalation:\n9. Banking Ombudsman - cms.rbi.org.in\n\nPrevention:\n10. SMS alerts enable, Transaction limits set\n11. Never share OTP",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA027",
+      "instruction": "BC/MBC/SC/ST Scholarship எப்படி பெறுவது?",
+      "current_output": "Apply at tneservices.tn.gov.in or scholarships.gov.in through school/college. Documents: Community certificate, income certificate, marksheet, Aadhaar, bank account. Benefits: Full fee waiver + monthly stipend ₹500-1,500. Apply within deadline each year.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE016",
+      "instruction": "Naan 65 vayasu mudhiyavar. Thaniyaa irukkiren. Ennenna benefits, safety measures peralaam?",
+      "current_output": "Monthly Income:\n1. Old Age Pension - ₹1,000-1,500/month (TN)\n2. PMVVY (LIC) - ₹9,250/month for ₹15L investment\n3. SCSS - 8.2% quarterly interest\n\nHealthcare:\n4. CMCHIS - ₹5 lakh free treatment\n5. Free aids - Walking stick, wheelchair, hearing aid\n6. Janaushadhi - Cheap medicines\n\nSafety:\n7. Elder Line - 14567 (24x7)\n8. Maintenance Tribunal - If children neglect - up to ₹10,000/month\n9. Police Senior Cell - Register for regular checks\n\nTravel: Railway 40-50% discount, Free/discounted bus\nBanking: Senior Citizen FD - Extra 0.5% interest",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HE007",
+      "instruction": "Free medicines எங்கு கிடைக்கும்?",
+      "current_output": "Government hospitals-ல் essential medicines free. Jan Aushadhi stores-ல் 90% வரை discount-ல் medicines கிடைக்கும். Doctor prescription தேவை. janaushadhi.gov.in-ல் store locations பாருங்கள்.",
+      "category": "health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC014",
+      "instruction": "Senior Citizens-ku Travel Concession enna ulladhu?",
+      "current_output": "Railways: Men 60+ get 40% discount, Women 58+ get 50% discount, Sleeper/AC classes. Booking: Show age proof at counters. Airlines: Some offer 50% discount (varies). State Buses: TN 50% discount (65+ years) ordinary buses. Metro: Some cities 25-50% discount. Documents: Carry age proof (Aadhaar/Voter ID).",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA034",
+      "instruction": "Chennai-ல் Metro Water Connection எப்படி?",
+      "current_output": "Apply at chennaimetrowater.tn.gov.in with property document, building plan, tax receipt, Aadhaar. Site inspection for feasibility. Charges: Connection ₹500-2,000, deposit ₹500-1,000, road cutting extra. Monthly bill ₹70-400 (domestic). Helpline: 044-4567 4567.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR006T",
+      "instruction": "En appa irandhuittaar. Gramathula avar peyarla nilam ulladhu. En peyarukku patta maatra enna seiyya vendum?",
+      "current_output": "**Succession Patta Transfer:**\n\n**Step 1: Death Certificate**\n- Within 21 days\n- Panchayat/Municipality\n\n**Step 2: Legal Heir Certificate**\n- Where: Taluk Office / tneservices.tn.gov.in\n- Documents: Death Certificate, Family details, All heirs' Aadhaar\n- Time: 15-30 days\n\n**Step 3: Heirs Consent**\n- If Will exists: Follow Will\n- No Will: Equal share to all heirs\n- Release Deed: If others give up share\n\n**Step 4: Patta Transfer Application**\n- Where: Taluk Office / VAO\n- Online: eservices.tn.gov.in\n\n**Documents:**\n- Death Certificate, Legal Heir Certificate\n- Original Patta, Chitta, Adangal\n- EC, Tax receipts\n- Release Deed (if applicable)\n\n**Step 5: Field Inspection**\n- VAO/RI visit and verification\n\n**Step 6: Patta Issue**\n- Time: 30-60 days\n- No registration fee for succession",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HS007",
+      "instruction": "PMAY application status எப்படி check செய்வது?",
+      "current_output": "pmaymis.gov.in-ல் 'Track Your Assessment Status' option உள்ளது. Aadhaar number அல்லது application ID கொடுத்து status பாருங்கள். Sanctioned, approved, disbursed status தெரியும்.",
+      "category": "housing_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNEM002",
+      "instruction": "TN Employment Exchange-la register eppadi seyvadhu?",
+      "current_output": "Registration for Govt job notifications. Online: Register at tnvelaivaaippu.gov.in. Age: 18-40 (relaxation for reserved categories). Eligibility: Based on educational qualification. Renewal: Renew every 3 years. Benefits: Govt job notifications, Interview calls, Unemployment assistance (some categories). Documents: Education certificates, Community certificate, Aadhaar. Priority: Seniority + Marks-based. Local Employment: Referral for private companies too.",
+      "category": "tn_employment",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR010",
+      "instruction": "Kalaignar Magalir Urimai Thittam - full details and apply process?",
+      "current_output": "Scheme Summary: ₹1,000/month for woman head of family (Since 2023)\n\nEligibility:\n✅ Woman should be family head\n✅ Age 21+\n✅ Family income < ₹2.5 lakh/year\n✅ TN resident\n\nNot Eligible:\n❌ Govt employee\n❌ Income Tax payer\n❌ Already receiving other pension\n❌ 4-wheeler owner\n❌ 750cc+ two-wheeler owner\n❌ 5+ acre agricultural land owner\n\nApply:\n\nMethod 1 - Anganwadi:\n1. Nearest Anganwadi center pogga\n2. Anganwadi worker form kudupanga\n3. Fill pannunga\n4. Documents kudungunga\n5. They will process\n\nMethod 2 - Online: kalaaboravu.tn.gov.in\n1. Register with Aadhaar\n2. Fill application\n3. Upload documents\n4. Submit\n\nDocuments: Aadhaar, Ration Card (Family Head proof), Bank Passbook, Passport photo\n\nVerification: Anganwadi worker + Door-to-door survey → Block Officer approval\n\nPayment: Monthly ₹1,000 DBT (usually 1st week)",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HE002",
+      "instruction": "Ayushman Bharat card எப்படி வாங்குவது?",
+      "current_output": "SECC (Socio-Economic Caste Census) list-ல் இருந்தால் eligible. mera.pmjay.gov.in-ல் eligibility check செய்யுங்கள். CSC centre அல்லது empaneled hospital-ல் card வாங்கலாம்.",
+      "category": "health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB009",
+      "instruction": "வீடு வாடகைக்கு கொடுக்க போகிறேன். Rent Agreement register செய்ய வேண்டுமா? Online செய்யலாமா?",
+      "current_output": "**Rent Agreement Registration:**\n\n**கட்டாயமா?**\n- 11 மாதத்திற்கு மேல்: Registration கட்டாயம்\n- 11 மாதம் வரை: Notarized போதும் (but recommended to register)\n\n**ஏன் Register செய்ய வேண்டும்?**\n- Legal validity\n- Dispute-ல் Court proof\n- Tenant eviction easier\n- Passport/Visa proof\n- Bank loan address proof\n\n**Online Registration:**\n1. tnreginet.gov.in\n2. E-stamping → Rent Agreement\n3. Enter details:\n   - Landlord info\n   - Tenant info\n   - Property address\n   - Rent amount\n   - Duration\n   - Terms & conditions\n4. Pay stamp duty online\n5. Download e-stamp paper\n6. Print agreement on e-stamp\n7. Book SRO slot\n8. Visit with both parties + witnesses\n\n**Stamp Duty:**\n- 1% of (Average Annual Rent + Advance)\n- Minimum: ₹20\n\n**Registration Fee:**\n- 1% of above\n- Maximum: ₹20,000\n\n**Example Calculation:**\n- Monthly Rent: ₹15,000\n- Advance: ₹45,000 (3 months)\n- Duration: 11 months\n- Annual Rent: ₹1,65,000\n- Stamp Duty: ₹1,650 + ₹450 = ₹2,100\n- Registration: ₹2,100\n- **Total: ~₹4,200**\n\n**Documents:**\n- Property document (Owner)\n- Aadhaar (Both parties)\n- Photos (Both + 2 witnesses)\n- Previous electricity bill\n- Property tax receipt\n\n**SRO Visit:**\n- Both parties present\n- 2 witnesses with Aadhaar\n- Biometric capture\n- Time: 30-45 minutes\n\n**Registered Agreement Copy:**\n- tnreginet.gov.in → EC Search\n- Download anytime\n\n**Model Agreement:**\n- Available at tnreginet.gov.in\n- Or lawyer draft\n- Include: Rent, Duration, Increase clause, Termination, Maintenance",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AG003",
+      "instruction": "விவசாய loan-க்கு interest subvention உண்டா?",
+      "current_output": "Rs.3 lakh வரை crop loan-க்கு 7% interest, timely repayment செய்தால் 3% effective interest (4% subsidy). KCC (Kisan Credit Card) மூலம் loan எடுக்கலாம்.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS030",
+      "instruction": "PM Employment Generation Programme (PMEGP) endraal enna?",
+      "current_output": "Subsidy for starting business. Eligibility: Above 18 years, 8th pass (Manufacturing ₹10L+, Service ₹5L+), New business only. Project Cost: Manufacturing up to ₹50 lakh, Service up to ₹20 lakh. Subsidy: General - Urban 15%/Rural 25%, SC/ST/OBC/Women/Minorities - Urban 25%/Rural 35%. Apply: kviconline.gov.in",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR010",
+      "instruction": "எங்கள் கிராமத்தில் குடிநீர் பிரச்சனை உள்ளது. அரசாங்கத்திடம் எப்படி புகார் செய்வது? என்ன திட்டங்கள் உள்ளன?",
+      "current_output": "**கிராம குடிநீர் பிரச்சனை தீர்வு:**\n\n**புகார் செய்ய:**\n\n1. **Gram Panchayat**\n   - Panchayat President / Secretary\n   - எழுத்துபூர்வமாக புகார்\n   - Gram Sabha-ல் எழுப்பவும்\n\n2. **Block Development Officer**\n   - Panchayat action எடுக்கவில்லை என்றால்\n   - எழுத்துபூர்வ புகார்\n\n3. **District Collector**\n   - Online: tndistricts.gov.in\n   - CM Cell: 1100\n   - Grievance petition\n\n4. **TWAD Board**\n   - twadboard.tn.gov.in\n   - Toll-free: 1800-425-5434\n\n**அரசு திட்டங்கள்:**\n\n1. **Jal Jeevan Mission (JJM)**\n   - Every rural household-க்கு tap water\n   - 2024 deadline\n   - 55 litres/person/day\n   - Free connection\n\n2. **Combined Water Supply Scheme**\n   - Multi-village scheme\n   - TWAD Board implementation\n\n3. **Oorani / Tank Restoration**\n   - Traditional water body repair\n   - MGNREGA funds\n\n4. **RO Plant**\n   - TDS அதிகமான areas\n   - Panchayat level RO\n\n**Individual Connection:**\n- Gram Panchayat-ல் apply\n- ₹100-500 connection charge\n- Monthly water tax\n\n**Borewell Request:**\n- Panchayat resolution\n- PWD survey\n- Ground water availability check\n\n**Water Quality Issue:**\n- Sample to District Lab\n- PHC-ல் complaint\n- Water testing free\n\n**Emergency:**\n- Tanker water request\n- Block/District level\n- Free during drought",
+      "category": "rural_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CONV004",
+      "instruction": "[Multi-turn dialogue] Senior Citizen Pension and Benefits - Full conversation guide",
+      "current_output": "User: En appa-ku 62 years aaguchu. Retire aanaar. Enna government benefits kidaikum?\n\nAssistant: 62 years-ku niraiya benefits irukku! First, siladhu clarify pannanum:\n\n1. Appa government employee-aa private-aa?\n2. Appa income tax file pannuvaaraa?\n3. BPL card / Rice card irukka?\n4. Vera pension vaanguraaraa?\n\nIndha details sollunga, exact benefits sollren.\n\nUser: Private employee, small company. Income tax illa. Rice card irukku. No pension.\n\nAssistant: Good! Appa-ku niraiya benefits eligible:\n\n**1. Old Age Pension (TN State)**\n- Amount: ₹1,000/month\n- Eligibility: 60+ years, Low income, Rice card ✓\n- Where: Taluk Office / tneservices.tn.gov.in\n\n**2. Kalaignar Magalir Urimai Thittam**\n- Wait... indha Amma-ku dhan, Appa-ku illa\n\n**3. Free/Subsidized Benefits:**\n- Free bus travel (ordinary buses)\n- Free health insurance (CMCHIS)\n- Railway ticket 40% discount\n\n**4. Banking Benefits:**\n- Senior Citizen FD - Extra 0.5% interest\n- SCSS (Senior Citizen Savings Scheme) - 8.2% interest\n\n**5. Rashtriya Vayoshri Yojana (if needed)**\n- Free: Spectacles, Walking stick, Hearing aid, etc.\n\nMudhalil Old Age Pension apply pannalaamaa?\n\nUser: Aamaa pension apply pannanum. Online mudiyumaa?\n\nAssistant: **Old Age Pension - Online Application:**\n\n**Website:** tneservices.tn.gov.in\n\n**Steps:**\n1. Go to tneservices.tn.gov.in\n2. Register: Mobile number, Create login\n3. Services → Social Security → Old Age Pension\n4. Fill application form\n5. Upload documents\n6. Submit\n7. Note: Application number\n\n**Documents to Upload:**\n1. **Age Proof:** Aadhaar / Voter ID / Birth Certificate\n2. **Address Proof:** Aadhaar / Ration Card\n3. **Income Certificate:** (Less than ₹24,000/year) - from Taluk Office\n4. **Ration Card:** Front page\n5. **Bank Passbook:** First page\n6. **Passport Photo:** Recent\n\n**Income Certificate illana mudhalil adhu vaanganum:**\n- Taluk Office / tneservices.tn.gov.in\n- VAO verification nadakkum\n- 7-15 days\n\nIncome certificate irukka Appa kitta?\n\nUser: Income certificate illa. Adhu eppadi vaanguvadhu?\n\nAssistant: **Income Certificate - Process:**\n\n**Online (Easier):**\n1. tneservices.tn.gov.in → Income Certificate\n2. Register/Login\n3. Fill: Name, Address, Family members, Income sources\n4. Upload: Aadhaar, Address proof\n5. Submit + Pay ₹20 (online)\n\n**Offline:**\n1. VAO (Village Administrative Officer) office\n2. Fill application\n3. Submit documents\n4. VAO enquiry (may visit home)\n\n**After Apply:**\n- VAO verification\n- Revenue Inspector check\n- Tahsildar approval\n- Certificate issue\n\n**Time:** 7-15 days\n\n**Documents Needed:**\n- Aadhaar Card\n- Ration Card\n- Self-declaration of income\n- If employed before: Last salary slip / relieving letter\n\n**Appa's case:** Retired, no current income, Rice card holder → Easy approval\n\n**Tip:** Apply online - faster, track status easily\n\nOnline apply pannalaamaa?\n\nUser: Okay apply panren. CMCHIS health card eppadi vaanguvadhu?\n\nAssistant: **CMCHIS Health Card (₹5 Lakh Free Treatment):**\n\n**Good News:** Rice card holder na automatic eligibility!\n\n**How to Get Card:**\n\n**Option 1: Government Hospital (Easiest)**\n1. Nearest Government Hospital poganum\n2. Ayushman Mitra / CMCHIS counter find pannunga\n3. Documents kaattunga:\n   - Aadhaar Card\n   - Ration Card\n4. They'll check eligibility online\n5. Photo capture\n6. Card print - **Same day!**\n7. **Cost: FREE**\n\n**Option 2: Online Check + Hospital**\n1. pmjay.gov.in → \"Am I Eligible\"\n2. Enter Ration Card number\n3. If eligible → Go to hospital for card\n\n**Option 3: CSC (Common Service Center)**\n- Nearest CSC\n- Same documents\n- Card issue\n\n**What's Covered:**\n- ₹5 lakh per family per year\n- 1,500+ surgeries and treatments\n- Empanelled hospitals (Govt + Private)\n- Cashless treatment\n\n**Not Covered:**\n- OPD (Outpatient)\n- Cosmetic surgery\n- Fertility treatment\n\n**Tip:** Card vaangina, list of empanelled hospitals vaangunga - emergency-ku useful.\n\nGovernment hospital near-by irukka?\n\nUser: GH irukku. Appa-ku regular medicines vendum - BP, Sugar. Cheap-aa enga vaanguvadhu?\n\nAssistant: **Cheap Medicines for Senior Citizens:**\n\n**1. Jan Aushadhi Kendra (Best Option!)**\n- **Discount:** 50-90% off MRP!\n- **Quality:** Same as branded (WHO-GMP certified)\n- **Find:** janaushadhi.gov.in → Store Locator\n- Chennai-la 100+ stores irukku\n\n**Price Comparison:**\n| Medicine | Market | Jan Aushadhi |\n|----------|--------|-------------|\n| Metformin 500mg (10 tabs) | ₹25 | ₹3.50 |\n| Amlodipine 5mg (10 tabs) | ₹30 | ₹4 |\n| Atorvastatin 10mg (10 tabs) | ₹80 | ₹12 |\n\n**2. Government Hospital Pharmacy**\n- Free medicines (with prescription)\n- GH OPD-la prescription vaangunga\n- Pharmacy-la free medicines\n\n**3. Amma Pharmacy (TN Govt)**\n- Subsidized rates\n- CMCHIS card holders - additional discount\n\n**4. Generic Medicine Shops**\n- Any pharmacy-la \"generic\" medicine kekuinga\n- Same salt, less price\n\n**For Regular BP/Sugar:**\n\n**Best Strategy:**\n1. GH-la OPD poganum (₹5-10 registration)\n2. Doctor prescription vaangunga\n3. Same hospital pharmacy - FREE medicines\n4. Illa na Jan Aushadhi store - cheap\n\n**Tip:** CMCHIS card-la OPD free, medicines free at GH!\n\nMonthly medicines list irukka? Jan Aushadhi-la kidaikuma check pannalaam.\n\nUser: Super! Bus-la free travel eppadi? Pass vaangumaa?\n\nAssistant: **Senior Citizen Free Bus Travel (TN):**\n\n**Eligibility:**\n- Age: 60+ years\n- Valid in: Ordinary buses (not AC, not Express)\n\n**No Pass Needed!**\n\n**How it Works:**\n1. Carry: **Age proof** (Aadhaar / Voter ID showing DOB)\n2. Show to conductor when asked\n3. Free travel!\n\n**What's Free:**\n- TNSTC Ordinary buses\n- Town buses (ordinary)\n- Mofussil ordinary buses\n\n**Not Free:**\n- AC buses\n- Express / Super Deluxe\n- Private buses\n\n**Optional: Senior Citizen ID Card**\n- From: District Social Welfare Office\n- Useful for: Multiple benefits at one place\n- Carry along with Aadhaar\n\n**For Women 58+:**\n- Same benefits\n- Free travel in ordinary buses\n\n**Railway Discount:**\n- Male 60+: 40% discount\n- Female 58+: 50% discount\n- Book online: irctc.co.in (auto-applied)\n- Counter: Show age proof\n\n**Pro Tip:** Voter ID best - photo + DOB clear-aa irukku, easy to show conductor.\n\nVera doubt irukka? Summary sheet tharattumaa?\n\nUser: Ella benefits-um summary pannunga please\n\nAssistant: **Senior Citizen Benefits Summary (Appa - 62 years, Rice Card Holder):**\n\n**MONTHLY INCOME:**\n| Benefit | Amount | Where to Apply |\n|---------|--------|----------------|\n| Old Age Pension | ₹1,000/month | tneservices.tn.gov.in |\n| (80+ aana) | ₹1,500/month | Auto upgrade |\n\n**HEALTH:**\n| Benefit | Value | Where |\n|---------|-------|-------|\n| CMCHIS Card | ₹5 lakh/year free treatment | Government Hospital |\n| Free Medicines | Unlimited | GH Pharmacy |\n| Cheap Medicines | 50-90% off | Jan Aushadhi Kendra |\n| Free Aids | Spectacles, Walking stick, Hearing aid | District Social Welfare |\n\n**TRAVEL:**\n| Mode | Discount | How |\n|------|----------|-----|\n| TN Ordinary Bus | 100% FREE | Show Aadhaar/Voter ID |\n| Railway | 40% discount | Auto at booking |\n| Air India | 50% (select routes) | At booking |\n\n**BANKING:**\n| Scheme | Benefit |\n|--------|--------|\n| Senior Citizen FD | Extra 0.5% interest |\n| SCSS | 8.2% interest (up to ₹30 lakh) |\n| PMVVY (LIC) | 7.4% guaranteed pension |\n\n**TO-DO LIST:**\n1. ✅ Income Certificate - tneservices.tn.gov.in\n2. ✅ Old Age Pension - tneservices.tn.gov.in\n3. ✅ CMCHIS Card - Government Hospital\n4. ✅ Find Jan Aushadhi - janaushadhi.gov.in\n\n**HELPLINE:**\n- Elder Helpline: 14567 (24x7)\n- Any abuse/neglect - call immediately\n\nPrint pannikonga! All the best to Appa!",
+      "category": "conversational_dialogues",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONV001",
+      "instruction": "[Multi-turn dialogue] Getting Birth Certificate for Newborn - Full conversation guide",
+      "current_output": "User: Hi, en wife delivery aayiruchu. Baby-ku birth certificate vaanganum. Eppadi?\n\nAssistant: Congratulations! Birth certificate vaanga indha steps follow pannunga:\n\n**Mudhalil:** Hospital-la irundhu discharge summary vaangunga - adhu la baby birth date, time, weight ellam irukkum.\n\n**Enga apply pannanum:** Neengal enga irukkeenga - hospital area municipality/panchayat or unga home area?\n\nUser: Hospital Chennai-la, but naanga Tambaram-la irukkoom\n\nAssistant: Okay, Chennai hospital-la delivery na, Chennai Corporation-la dhan register pannanum. Hospital location-based registration.\n\n**2 Options:**\n\n1. **Hospital-layae** - Periya hospitals (Govt/Big Private) la birth registration desk irukku. Avanga direct register panniduvanga.\n\n2. **Corporation Office** - Hospital register pannala na, hospital area Corporation Zonal Office-la neengal apply pannanum.\n\nUnga hospital register pannuchaa illa neengal pannumaa?\n\nUser: Hospital register pannala. Naangal dhan pannanum. Enna documents vendum?\n\nAssistant: Okay, neengal apply pannanum na indha documents ready pannunga:\n\n**Documents:**\n1. Hospital Discharge Summary (Original + Copy)\n2. Father's Aadhaar Card (Original + Copy)\n3. Mother's Aadhaar Card (Original + Copy)\n4. Marriage Certificate (Original + Copy)\n5. Address Proof\n\n**Important:** 21 days-kulla apply pannunga - FREE! Adhukku apram ₹50 late fee + Affidavit vendum.\n\nBaby birth date enna? 21 days kazhinjuchaa?\n\nUser: Illa, 10 days dhan aachu. Online apply panna mudiyumaa?\n\nAssistant: Super, time irukku! Yes, online apply pannalam:\n\n**Online Process:**\n1. **Website:** chennaicorporation.gov.in\n2. **Click:** Birth Registration\n3. **Fill:** Baby details, Parents details\n4. **Upload:** Documents scan\n5. **Submit**\n\n**Or** tnreginet.gov.in la \"Birth Certificate\" section use pannalaam.\n\n**Apram:**\n- Application number kedaikum\n- 3-5 days-la certificate ready\n- Download pannalam or office-la collect pannalam\n\nOnline try pannureengalaa, illa office-ku pogalaamaa?\n\nUser: Online try panren. Baby-ku name decide aagala, adhu problem aa?\n\nAssistant: No problem! Name illama register pannalam:\n\n**2 Options:**\n\n1. **Without Name Register:** Birth certificate \"Baby of [Mother's Name]\" nu varum. Later name add pannalam.\n\n2. **Add Name Later:** \n   - 1 year-kulla name add pannalam (No fee)\n   - Form fill panni same office-la submit\n   - Documents: Original Birth Certificate + Affidavit\n\n**Tip:** Naming ceremony / Naming date decide aana apram add pannunga. Most people 1-3 months-la name add pannuvanga.\n\nSchool admission-ku full name certificate pogum, so worry pannaadheenga!\n\nVera enna doubt irukku?\n\nUser: Thanks! Oru doubt - Aadhaar card baby-ku eppo apply pannalam?\n\nAssistant: Good question! Baby Aadhaar apply pannalam:\n\n**When:** Birth-ku apram anytime - but 5 years-kulla recommended\n\n**Baal Aadhaar (0-5 years):**\n- **Color:** Blue (Regular Aadhaar white)\n- **Biometric:** Photo only (No fingerprint/iris)\n- **Validity:** 5 years - apram mandatory update\n\n**Documents:**\n- Baby's Birth Certificate\n- Either Parent's Aadhaar (POI & POA)\n- Hospital Discharge (optional)\n\n**Where:**\n- Aadhaar Enrollment Center\n- Appointment: appointments.uidai.gov.in\n\n**Fee:** FREE (first enrollment)\n\n**Process:**\n1. Book appointment\n2. Go with baby + parent\n3. Baby photo capture\n4. Parent biometric verification\n5. 90 days-la Aadhaar varum\n\nBirth certificate ready aana apram Aadhaar apply pannunga! Anything else?",
+      "category": "conversational_dialogues",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR009",
+      "instruction": "கிராமத்தில் எங்களுக்கு சொந்த வீடு இல்லை. PMAY-Gramin மூலம் வீடு கட்ட உதவி எப்படி பெறுவது?",
+      "current_output": "**PMAY-Gramin (கிராமப்புற வீட்டு திட்டம்):**\n\n**தகுதி:**\n- SECC 2011 data-ல் வீடில்லாதவர்\n- Kutcha house / Homeless\n- Priority: SC/ST, Minorities, BPL\n\n**உதவி தொகை:**\n- Plain areas: ₹1,20,000\n- Hilly/Difficult areas: ₹1,30,000\n- MGNREGA: 90/95 days unskilled labor\n- Toilet: ₹12,000 (SBM link)\n- **Total: ₹1.5 லட்சம்+**\n\n**Payment Installments:**\n- 1st: Foundation complete - 25%\n- 2nd: Lintel level - 45%\n- 3rd: Completion - 30%\n\n**Apply Process:**\n\n**Automatic Selection (Awaas+):**\n1. SECC data based selection\n2. Gram Sabha approval\n3. No need to apply separately\n\n**Not in list? Appeal:**\n1. Gram Panchayat-ல் complaint\n2. SECC data correction request\n3. Block Development Officer\n\n**Check Eligibility:**\n- pmayg.nic.in → Stakeholder → IAY/PMAYG Beneficiary\n- Enter: State, District, Block, Panchayat\n- Search your name\n\n**Construction:**\n- Beneficiary builds own house\n- Standard design / Own design\n- Geo-tagged photos at each stage\n- Bank account DBT\n\n**Additional Benefits:**\n- MGNREGA wages for labor\n- Free LPG connection (Ujjwala)\n- Free electricity connection\n- Toilet (SBM)\n\n**Timeline:**\n- Selection to completion: 12 months\n- Delays = Gram Sabha review\n\n**Documents (if applying):**\n- Aadhaar\n- Bank Account\n- Land ownership / Patta (house site)\n- Photo\n- BPL Certificate",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNA002",
+      "instruction": "TN-la farmers-ku free electricity enna?",
+      "current_output": "Free electricity for agricultural pump-sets. Coverage: All agricultural pump connections. Timing: Designated hours (usually night/off-peak). Types: LT Agricultural service, Free. Limit: Based on HP in registration. New Connection: Apply online at TANGEDCO, land documents, farmer ID. Solar Alternative: Subsidy for solar pump via PM-KUSUM.",
+      "category": "tn_agriculture",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC004",
+      "instruction": "Engineering/Medical படிக்க scholarship எப்படி வாங்குவது?",
+      "current_output": "AICTE, state government scholarships available. Professional course-க்கு tuition fee waiver, living expenses கிடைக்கும். National Scholarship Portal-ல் deadlines check செய்து apply செய்யுங்கள்.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HS009",
+      "instruction": "Single women-க்கு housing scheme உண்டா?",
+      "current_output": "PMAY-ல் women ownership/co-ownership-க்கு preference உண்டு. Single women, widow-க்கு extra priority. State-level-லும் women-specific housing schemes இருக்கின்றன.",
+      "category": "housing_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS002",
+      "instruction": "Pradhan Mantri Jan Dhan Yojana (PMJDY) endraal enna?",
+      "current_output": "Free bank account scheme. Eligibility: Any Indian citizen. Benefits: Zero Balance Account, Free RuPay Debit Card, ₹2 lakh Accident Insurance (via RuPay), ₹30,000 Life Insurance (new accounts), Overdraft up to ₹10,000, Direct Benefit Transfer (DBT). How to open: Nearby Bank/Bank Mitra/CSC. Documents: Aadhaar or Voter ID",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HS005",
+      "instruction": "வீடு கட்ட government loan scheme உள்ளதா?",
+      "current_output": "Tamil Nadu Housing Board, HUDCO loan schemes உண்டு. Low interest rate-ல் home loan கிடைக்கும். Subsidy-யுடன் PMAY loan-ம் available. Bank-லும் home loan எடுத்து PMAY subsidy பெறலாம்.",
+      "category": "housing_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE013",
+      "instruction": "என் பையில் எல்லா documents-உம் திருடு போய்விட்டது (Aadhaar, PAN, DL, Voter ID, Bank Card). என்ன செய்வது?",
+      "current_output": "உடனடியாக செய்ய வேண்டியவை:\n1. Police FIR - eservices.tnpolice.gov.in - எல்லா documents list\n2. Bank Card Block - Helpline call (SBI: 1800-111-111)\n3. Mobile SIM Block - திருடு போனால்\n\nDocuments மறுபடியும் பெற:\n4. Aadhaar - eaadhaar.uidai.gov.in - OTP - Free instant download\n5. PAN - eportal.incometax.gov.in - Instant e-PAN - Free\n6. Driving License - parivahan.gov.in - ₹200-500\n7. Voter ID - voters.eci.gov.in / Voter Helpline App - Form 002\n8. Bank Cards - Bank branch with FIR - 7-10 days\n9. Ration Card - tnpds.gov.in - Duplicate\n\nMisuse தடுக்க:\n10. Aadhaar Biometric Lock - myaadhaar.uidai.gov.in",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC006",
+      "instruction": "IGNDPS (Indira Gandhi National Disability Pension Scheme) endraal enna?",
+      "current_output": "Pension for BPL persons with disabilities. Central: ₹300/month (18-79 years), ₹500/month (80+). TN State: Additional ₹1,000/month. Eligibility: 80%+ disability, BPL family. Apply: Taluk office/Social Welfare dept. Documents: Disability certificate (Medical Board), Aadhaar, Income proof. Disability Types: Visual, Hearing, Locomotor, Mental illness, Multiple disabilities.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

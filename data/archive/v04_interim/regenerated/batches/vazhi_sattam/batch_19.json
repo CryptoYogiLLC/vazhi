@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 19,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TENA031_TG",
+      "instruction": "Owner kooda sandai pottuten, ippa enna panradhu? (Chennai casual)",
+      "current_output": "Calm-aa irunga. Ella communication-um writing-la vachukonga - WhatsApp, SMS, email. Verbal fight-kku evidence illa. Legal action-kku written proof venum. Aduttha step-aa Rent Authority-kku complaint podunga.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA022_TG",
+      "instruction": "Rent Authority-la complaint eppadi koduppadhu?",
+      "current_output": "District Collectorate office-la written application kodukkanum. Required documents: 1) Rental agreement copy, 2) Rent receipts, 3) Communication proof (notices, messages), 4) ID proof. Online-lum e-district portal moolam apply seyyalam. Fee: Nominal (Rs.100-500).",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC007_TG",
+      "instruction": "Business partnership dispute - partner panam thara marukkiraar",
+      "current_output": "Options: 1) Partnership deed terms check, 2) Arbitration (if clause exists), 3) Civil Court suit (dissolution + accounts), 4) Criminal (if cheating proved - IPC 420). Partnership deed written illaattal proof difficult. Accounts settlement mandatory.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL005_TG",
+      "instruction": "ESI card benefits ennenna?",
+      "current_output": "Benefits: 1) Free medical care (ESI hospitals/dispensaries), 2) Sickness benefit (70% wages), 3) Maternity benefit (100% wages - 26 weeks), 4) Disability benefit, 5) Dependent benefit (death case), 6) Funeral expenses. Salary Rs.21,000/month varai ESI applicable.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI008_TM",
+      "instruction": "Divorce-ல் wife-க்கு என்ன rights இருக்கு?",
+      "current_output": "Rights: 1) Maintenance (permanent alimony), 2) Streedhan (gifts given at marriage), 3) Share in husband's property (if jointly acquired), 4) Child custody preference (especially below 5 years), 5) Residence right till divorce. Interim maintenance during case நடக்கும்போதே கிடைக்கும்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_009_TM",
+      "instruction": "e-Sevai services எங்கே available?",
+      "current_output": "Locations: Taluk offices, e-Sevai centres, Common Service Centres. Online: eservices.tn.gov.in. Services: Certificates (income, community, nativity), Patta transfer, Pension, Ration card, License renewals. Fee: Rs.30-100 (service based).",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS010_TG",
+      "instruction": "Wrong product deliver aanadhu - return policy illaiyaam, enna seivathu?",
+      "current_output": "Wrong product deliver aanaal return policy illa endru solla mudiyaadhu - idhu seller mistake. Consumer Protection Act-in keezh correct product or full refund ketkalam. Screenshots, photos eduthu complaint podunga. NCH, consumer forum - irandilum case podalam.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP013_TG",
+      "instruction": "Land survey eppadi seivathu? Cost enna?",
+      "current_output": "Apply: Taluk Surveyor office. Private licensed surveyor-aiyum hire pannalam. Government survey fee: Rs.500-2000 (area based). Private surveyor: Rs.2000-10,000. Survey sketch legally valid document - boundary disputes-kku mukkiyam.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE010_TM",
+      "instruction": "Company என் data misuse பண்ணுது - complaint எங்கே?",
+      "current_output": "DPDP Act 2023 (implementation started): Data Protection Board-க்கு complaint. Current options: 1) Company grievance officer, 2) IT Ministry, 3) Consumer forum (service deficiency), 4) Court. Data breach notification: Company inform செய்யணும். Consent withdrawal right உண்டு.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC025_TG",
+      "instruction": "Veettu owner advance-ai thiruppi thara maattengurar, agreement illa (Madurai style)",
+      "current_output": "Agreement illaatalum case podalam. Evidence: Bank transfer statement, WhatsApp messages, witness. Legal notice mudhalla anuppunga. Respond pannalnna Rent Authority complaint. Civil Court-lum money suit podalam.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM013_TM",
+      "instruction": "Cheating case-க்கு என்ன punishment?",
+      "current_output": "IPC 420 (BNS 318): Cheating and dishonestly inducing delivery of property - 7 years imprisonment + fine. Cheque bounce: Negotiable Instruments Act 138 - 2 years imprisonment + twice cheque amount fine. Civil + criminal both options உண்டு.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM014_TG",
+      "instruction": "Defamation-kku case podalaamaa?",
+      "current_output": "Civil defamation: Damages claim seyyalam. Criminal defamation (IPC 499/500, BNS 356): 2 years imprisonment + fine. Truth = defence (public interest-la sonnaal). Social media defamation-kkum apply aagum. Written complaint Magistrate Court-la file.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL004_TG",
+      "instruction": "Job maarum bodhu PF transfer eppadi?",
+      "current_output": "Same UAN continue aagum - transfer thevai illa (auto-transfer). Old account + new account merge: EPFO portal → Online Services → Transfer Request. New employer-kitta UAN kodunga. Transfer: 10-15 days. Withdrawal pannama transfer panrathu tax-efficient.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS016_TG",
+      "instruction": "Telecom/Mobile company bill dispute - enge complaint seivathu?",
+      "current_output": "Steps: 1) Company customer care (written complaint), 2) Appellate Authority (company website-la details irukum), 3) TRAI (trai.gov.in) complaint, 4) Consumer forum. Wrong billing, service failure, unauthorized charges ellaathukkum complaint podalam.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC009_TM",
+      "instruction": "Salary தர மாட்டேங்குறாங்க, 3 months pending - என்ன செய்வது?",
+      "current_output": "Options: 1) Written demand to employer, 2) Labour Inspector complaint, 3) Labour Court (if >Rs.15,000 dispute), 4) Civil Court recovery suit. Payment of Wages Act: Salary delay = interest + penalty. Documents: Appointment letter, salary slips, bank statements.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP013_TG",
+      "instruction": "Travel package ponathu worst experience, compensation kidaikkumaa?",
+      "current_output": "Yes, if: 1) Promised amenities illa (hotel downgrade, no AC bus), 2) Itinerary maatram without consent, 3) Hidden charges. Claim: 1) Package cost difference, 2) Mental agony compensation, 3) Travel Forum/Consumer Forum complaint. Evidence: Brochure, booking confirmation, photos, videos. TAAI registered agents-kitta book pannunga - better accountability.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA004_TG",
+      "instruction": "Agreement register pannama irundhaal valid-aa?",
+      "current_output": "11 months-kku kuraivana agreement-kku registration kattaayam illa, but notarize panradhu nalladu. 11 months-kku mela irundhaal registration illaamal court-la valid aagaadhu. Unregistered agreement-a evidence-aa use panna mudiyaadhu.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA011_TG",
+      "instruction": "Endha kaaranangalukkaga owner evict seyyalam?",
+      "current_output": "Valid reasons: 1) Rent thodarndhu 3 months kattaavitta, 2) Veetai damage seydhaal, 3) Illegal activity nadathinaal, 4) Agreement terms meerinal, 5) Owner sondha use-kku thevaipattal (genuine need prove pannanum), 6) Major renovation thevaipattal.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC002_TG",
+      "instruction": "Neighbour waste en veettu pakkam podugiraar - action enna?",
+      "current_output": "Corporation/Municipality complaint: Solid Waste Management Rules violation. Police: IPC 268 (public nuisance), 269 (negligent act spreading disease). Photos/videos evidence. Tahsildar complaint-um possible. Fine up to Rs.5,000 for waste dumping violation.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS016_TM",
+      "instruction": "Telecom/Mobile company bill dispute - எங்கே complaint செய்வது?",
+      "current_output": "Steps: 1) Company customer care (written complaint), 2) Appellate Authority (company website-ல் details இருக்கும்), 3) TRAI (trai.gov.in) complaint, 4) Consumer forum. Wrong billing, service failure, unauthorized charges எல்லாத்துக்கும் complaint போடலாம்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI026_TG",
+      "instruction": "Purushan adikkuraan, enna panrathu? (Chennai style)",
+      "current_output": "Udane: 1) 181 call pannunga, 2) Nearest police station-la complaint, 3) Medical-la injury report vaangunga, 4) Photos edunga. Protection order 2-3 days-la kidaikkum. Safe place-kku ponga - women's shelter undu.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE013_TG",
+      "instruction": "Health insurance cashless reject aanaal reimbursement kidaikkumaa?",
+      "current_output": "Aama. Cashless rejection ≠ claim rejection. Pay hospital, submit bills to insurer. Reimbursement claim: 15-30 days. Rejection-kku: IRDAI complaint, Ombudsman, Consumer forum. Pre-authorization issues: TPA (Third Party Administrator) contact. Network hospital outside-um claim possible.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC008_TG",
+      "instruction": "Chit fund company panam thara marukkiradhu - complaint enge?",
+      "current_output": "Registered chit: Registrar of Chits (District). Unregistered: Police (cheating), Economic Offences Wing. TN Chit Funds Act violation. Consumer forum-um possible. Documents: Chit tickets, receipts, agreement. Collective complaint stronger.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL010_TG",
+      "instruction": "Wrongful termination-kku enna seyyalam?",
+      "current_output": "Options: 1) Labour Commissioner complaint, 2) Labour Court (Industrial Disputes Act), 3) Civil Court. Remedies: Reinstatement, back wages, compensation. Document everything: Termination letter, emails, performance records. Time limit: 3 years from termination date.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC004_TG",
+      "instruction": "Podhu paathaiyai block pannitaanga - yaarai approach panrathu?",
+      "current_output": "Public road block: Corporation/Panchayat complaint. Right of way dispute: Tahsildar. Private encroachment on public land: Police + Revenue Department. Court: Easement right case. Documents: Old survey records, photos of traditional path use.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

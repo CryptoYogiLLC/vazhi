@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 6,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CONV005",
+      "instruction": "[Multi-turn dialogue] First Time Home Buyer - PMAY and Registration - Full conversation guide",
+      "current_output": "User: First time veedu vaanga porein. PMAY subsidy kidaikumaa? Process enna?\n\nAssistant: Congrats on your first home! PMAY subsidy kedaikum if you're eligible. Few questions:\n\n1. Unga annual income evvalavu?\n2. Married aa? Spouse income?\n3. Unga peyarla or spouse peyarla vera veedu/flat irukka India-la?\n4. Metro city (Chennai, etc.) or non-metro?\n5. Flat/Apartment or Individual house?\n\nIndha details sollunga, eligibility check pannalam.\n\nUser: Annual income 8 lakhs. Married, wife works - 4 lakhs. No other property. Chennai. Apartment vaanga porein.\n\nAssistant: **PMAY Eligibility Check:**\n\n**Combined Income:** ₹12 lakh (8L + 4L)\n\n**Category:** MIG-I (₹6-12 lakh annual income)\n\n**Eligible: ✓**\n\n**PMAY-Urban Benefits for You:**\n\n| Parameter | Your Eligibility |\n|-----------|------------------|\n| Interest Subsidy | 4% |\n| Max Loan | ₹9 lakh |\n| Max Subsidy | ~₹2.35 lakh |\n| Carpet Area | Up to 160 sq.m |\n\n**What this means:**\n- ₹2.35 lakh subsidy on home loan!\n- Subsidy credited upfront to loan\n- EMI reduces significantly\n\n**EMI Impact Example:**\n- Loan: ₹50 lakh, 20 years\n- Without PMAY: ~₹43,000/month\n- With PMAY: ~₹40,000/month (saves ₹3,000/month!)\n\n**Important:** Subsidy is on max ₹9 lakh, not total loan.\n\nApartment select pannitteenga? RERA check panniteengalaa?\n\nUser: Oru flat shortlist panniten. RERA enna? Check pannanum?\n\nAssistant: **RERA - Real Estate Regulatory Authority**\n\n**Why Important:**\n- Builder accountability\n- Project details transparency\n- Delivery timeline guarantee\n- Buyer protection\n- Delayed delivery compensation\n\n**RERA Check - MUST DO!**\n\n**Step 1: Get RERA Number**\n- Ask builder for RERA Registration Number\n- Format: TN/01/Building/0XXX/2024\n\n**Step 2: Verify Online**\n1. Website: rera.tn.gov.in\n2. Search → Project\n3. Enter RERA number\n4. Check:\n   - Project name matches?\n   - Builder name correct?\n   - Approved units?\n   - Completion date?\n   - Any complaints?\n\n**Red Flags:**\n- No RERA registration\n- RERA expired\n- Multiple complaints\n- Delayed projects history\n\n**Builder shortcuts-la flat sell pannalaam - RERA registration illama. Avoid pannunga!**\n\nFlat RERA number kedachcha? Check pannalaamaa?\n\nUser: RERA number irukku, verify panniten - okay irukku. Loan process eppadi? PMAY subsidy automatic aa?\n\nAssistant: Good! RERA verified. Now loan + PMAY:\n\n**Home Loan + PMAY Process:**\n\n**Step 1: Choose Bank**\n- Compare interest rates\n- Check: SBI, HDFC, ICICI, LIC Housing\n- Current rates: 8.5-9.5%\n- Use online EMI calculators\n\n**Step 2: Loan Application**\n1. Bank visit / Online apply\n2. Documents submit\n3. Income verification\n4. Property verification (Bank does this)\n5. Sanction letter\n\n**Step 3: PMAY Subsidy (Not Automatic!)**\n\n**You have to apply separately:**\n\n**Option 1: Through Bank (Easier)**\n- Tell bank: \"PMAY subsidy vendum\"\n- Bank submits to Central Nodal Agency (CNA)\n- CNA verifies eligibility\n- Subsidy credited to loan account\n\n**Option 2: Online**\n- pmay-urban.gov.in\n- Fill beneficiary form\n- Link to bank loan\n\n**Important Documents for PMAY:**\n- Aadhaar (Both husband & wife)\n- Income proof\n- Affidavit: No pucca house in India\n- Bank loan sanction letter\n\n**Timeline:**\n- Loan sanction: 1-2 weeks\n- PMAY subsidy credit: 2-3 months after disbursement\n\nBank select panniteengala?\n\nUser: SBI apply pannalaam nu irukken. Registration charges evvalavu aagum?\n\nAssistant: **Property Registration Costs (Chennai/TN):**\n\n**Your Apartment - Cost Calculation:**\n\nLet's say Flat Value: ₹60 lakhs (example)\n\n| Charge | Rate | Amount |\n|--------|------|--------|\n| Stamp Duty | 7% | ₹4,20,000 |\n| Registration Fee | 4% | ₹2,40,000 |\n| **Total** | **11%** | **₹6,60,000** |\n\n**Additional Costs:**\n| Item | Approximate |\n|------|-------------|\n| Legal charges | ₹10,000-25,000 |\n| Loan processing | 0.5-1% of loan |\n| GST (under construction) | 5% |\n| Maintenance deposit | 1-2 years advance |\n| Corpus fund | ₹50,000-2,00,000 |\n\n**GST Note:**\n- Ready-to-move: No GST (already paid)\n- Under construction: 5% GST (affordable housing) or 12%\n\n**Women Rebate:**\n- If wife is co-owner/sole owner:\n- Stamp Duty: 1% less (7% → 6%)\n- Savings: ₹60,000 on ₹60L property!\n\n**Tip:** Make wife joint owner for stamp duty savings!\n\n**Payment Breakdown:**\n- Booking: 10%\n- Agreement: 10%\n- Construction milestones: 70%\n- Registration: 10%\n\nFlat evvalavu price?\n\nUser: 55 lakhs flat. Wife-um owner-aa add pannalaam. Registration process enna?\n\nAssistant: **₹55 Lakh Flat - Registration Cost:**\n\n**With Wife as Co-Owner (1% rebate):**\n| Charge | Rate | Amount |\n|--------|------|--------|\n| Stamp Duty | 6% | ₹3,30,000 |\n| Registration Fee | 4% | ₹2,20,000 |\n| **Total** | **10%** | **₹5,50,000** |\n\n**Savings:** ₹55,000 (vs 7% stamp duty)\n\n**Registration Process:**\n\n**Step 1: Agreement Drafting**\n- Builder provides draft\n- Lawyer review (recommended - ₹5,000-10,000)\n- Negotiate terms if needed\n\n**Step 2: E-Stamping**\n- tnreginet.gov.in → E-stamping\n- Pay stamp duty online\n- Get e-stamp paper\n\n**Step 3: Book SRO Slot**\n- tnreginet.gov.in → Appointment\n- Select Sub-Registrar Office\n- Book date\n\n**Step 4: Registration Day**\n\n**Who should come:**\n- You (Buyer)\n- Wife (Co-owner)\n- Builder representative\n- 2 Witnesses (with Aadhaar)\n\n**Documents to carry:**\n- Sale Agreement (on e-stamp)\n- Builder's documents (Mother deed, EC, etc.)\n- Both Aadhaar + PAN (Original + Copy)\n- Passport photos (4 each)\n- Bank loan sanction letter\n- PMAY application copy\n- Witness Aadhaar\n\n**Step 5: At SRO**\n- Document verification\n- Biometric capture (all parties)\n- Registration complete\n- Get registered document copy\n\n**Time:** 1-2 hours at SRO\n\n**After Registration:**\n- Patta/Khata transfer (within 3 months)\n- Property tax registration\n- Society membership\n\nBuilder agreement ready aa?\n\nUser: Almost ready. Oru doubt - veetla already oru old property irukku Appa peyarla. Adhu PMAY-ku problem aa?\n\nAssistant: **Important Question! Let me clarify:**\n\n**PMAY Rule:**\n\"Beneficiary family should not own a pucca house in any part of India\"\n\n**\"Beneficiary Family\" means:**\n- Husband\n- Wife\n- Unmarried children\n\n**NOT included:**\n- Parents\n- Married siblings\n- In-laws\n\n**Your Case:**\n- Appa peyarla property = **No Problem!**\n- Appa is not \"beneficiary family\"\n- You + Wife don't own any property = **Eligible!**\n\n**But Important:**\n1. **Affidavit required:** \"We (husband + wife) don't own pucca house anywhere in India\"\n2. **Declaration is legal document** - false declaration = serious consequences\n\n**Double Check:**\n- Any property in YOUR name? Even inherited share?\n- Any property in WIFE's name?\n- Any jointly owned with siblings?\n\nIf answer is NO for all → **You're 100% eligible!**\n\nConfirm pannunga - any property unga or wife peyarla irukka?\n\nUser: Illa, enga peyarla onnum illa. Thanks for clarifying! Final checklist tharunga please.\n\nAssistant: **FIRST HOME PURCHASE - COMPLETE CHECKLIST:**\n\n**BEFORE BOOKING:**\n- [ ] RERA verification ✓\n- [ ] Builder background check\n- [ ] Visit site & model flat\n- [ ] Check CMDA/DTCP approval\n- [ ] Compare 3-4 similar properties\n\n**LOAN & PMAY:**\n- [ ] Compare bank interest rates\n- [ ] SBI/Other bank loan apply\n- [ ] Submit income documents\n- [ ] Get loan sanction letter\n- [ ] **Apply PMAY through bank** - Don't forget!\n- [ ] PMAY affidavit (no other property)\n\n**BEFORE REGISTRATION:**\n- [ ] Lawyer verify all documents\n- [ ] Check: Mother deed, EC (30 years), Tax receipts\n- [ ] Verify flat carpet area\n- [ ] Get OC/CC from builder\n- [ ] Final payment calculation\n\n**REGISTRATION:**\n- [ ] E-stamp purchase (tnreginet.gov.in)\n- [ ] Book SRO appointment\n- [ ] **Wife as co-owner** (1% saving) ✓\n- [ ] All documents ready\n- [ ] 2 witnesses arranged\n- [ ] Registration complete\n\n**AFTER REGISTRATION:**\n- [ ] Patta/Khata transfer - Taluk/Corporation\n- [ ] Property tax registration\n- [ ] Electricity connection transfer\n- [ ] Society membership\n- [ ] Home insurance (recommended)\n\n**COSTS SUMMARY (₹55L Flat):**\n| Item | Amount |\n|------|--------|\n| Stamp Duty (6%) | ₹3,30,000 |\n| Registration (4%) | ₹2,20,000 |\n| Legal | ₹10,000 |\n| Loan Processing | ₹25,000 |\n| Miscellaneous | ₹50,000 |\n| **Total Extra** | **~₹6.35 lakh** |\n\n**PMAY Subsidy:** ~₹2.35 lakh back!\n\n**Net Extra Cost:** ~₹4 lakh\n\n**IMPORTANT CONTACTS:**\n- RERA TN: rera.tn.gov.in\n- Registration: tnreginet.gov.in\n- PMAY: pmay-urban.gov.in\n- SBI Home Loan: 1800-425-3800\n\nAll the best for your new home! 🏠",
+      "category": "conversational_dialogues",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB001T",
+      "instruction": "Chennai-la Apartment vaanga porein. Ennenna check pannanum? RERA endraal enna?",
+      "current_output": "**Apartment Buying Checklist:**\n\n**1. RERA Registration (Must!)**\n- Check at: rera.tn.gov.in\n- Verify RERA Number\n- Project details, Completion date\n\n**What is RERA?**\n- Real Estate Regulatory Authority\n- Builder accountability & Buyer protection\n\n**2. Legal Documents:**\n- Mother Deed - Land ownership\n- EC (30 years) - No encumbrance\n- CMDA/DTCP Approval\n- Building Permit\n- Completion Certificate\n- Occupancy Certificate\n\n**3. Builder Check:**\n- Previous projects\n- Delivery track record\n- Legal cases\n\n**4. Costs:**\n- Price + Hidden charges\n- GST: 5-12%\n- Stamp Duty: 7% + Registration: 4%\n\n**5. PMAY Benefit:** First home = 3-6.5% interest subsidy\n\n**Red Flags:** No RERA, No approved plan, Land dispute",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP026",
+      "instruction": "FIR eppadi register seyvadhu?",
+      "current_output": "1. Nearby police station ponga 2. Written complaint kudunga 3. Zero FIR: Any police station-la register pannalam 4. Online: eservices.tnpolice.gov.in (some crimes) 5. FIR copy free-ya vaangalam (your right!) 6. If refused: Complain to SP / District Collector",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC010",
+      "instruction": "Abroad படிக்க scholarship கிடைக்குமா?",
+      "current_output": "BC/MBC overseas scholarship, Dr. Ambedkar overseas scholarship (SC), national overseas scholarship உண்டு. TOEFL/IELTS scores, admission letter தேவை. ஆண்டுக்கு Rs.15-20 lakh வரை கிடைக்கலாம்.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC005",
+      "instruction": "IGNDPS (Indira Gandhi National Disability Pension Scheme) என்றால் என்ன?",
+      "current_output": "BPL மாற்றுத்திறனாளிகளுக்கு ஓய்வூதியம். Central: ₹300/month (18-79 வயது), ₹500/month (80+). TN State: கூடுதலாக ₹1,000/month. தகுதி: 80%+ disability, BPL குடும்பம். விண்ணப்பம்: Taluk office/Social Welfare dept. Documents: Disability certificate (Medical Board), Aadhaar, Income proof. Disability Types: Visual, Hearing, Locomotor, Mental illness, Multiple disabilities.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HS002",
+      "instruction": "PMAY subsidy எவ்வளவு கிடைக்கும்?",
+      "current_output": "EWS/LIG: Rs.2.67 lakh வரை subsidy (6.5% interest subsidy). MIG-I: Rs.2.35 lakh (4% subsidy). MIG-II: Rs.2.30 lakh (3% subsidy). Home loan எடுத்தால் subsidy நேரடியாக loan account-ல் credit ஆகும்.",
+      "category": "housing_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR004",
+      "instruction": "Instant e-PAN eppadi vaanguvadhu? (Free method)",
+      "current_output": "Completely FREE - Only for Aadhaar holders:\n\n1. Go to: eportal.incometax.gov.in\n2. Click: 'Instant e-PAN'\n3. Select: 'Get New e-PAN'\n4. Enter: Aadhaar Number\n5. Accept: Terms and Conditions\n6. OTP: Aadhaar registered mobile-la varum\n7. Validate: Enter OTP\n8. Done! e-PAN PDF download ready\n\nTime: 10 minutes!\n\nConditions:\n- Aadhaar-la mobile linked irukkanum\n- Never had PAN before\n- Individual applicants only (not company)\n\nAlready PAN irukka, download seiyya:\n1. eportal.incometax.gov.in → Instant e-PAN → 'Check Status / Download'\n2. Enter PAN number\n3. OTP validate\n4. Download PDF",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA019T",
+      "instruction": "PM-KISAN scheme enna?",
+      "current_output": "Direct cash transfer of ₹6,000/year (₹2,000 x 3 installments) to land-owning farmers. Register at pmkisan.gov.in with Aadhaar, land records, bank account. Exclusions: Income tax payers, govt employees, professionals. State verification required.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA032T",
+      "instruction": "FSSAI License eppadi peruvadhu?",
+      "current_output": "Mandatory for food business. Basic (up to ₹12L turnover): ₹100/year. State (₹12L-₹20Cr): ₹2,000-5,000/year. Apply at fssai.gov.in with ID proof, address proof, business proof. Display license number on food products. Renewal annual.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA016T",
+      "instruction": "Marriage registration eppadi seyvadhu?",
+      "current_output": "Apply at tnreginet.gov.in or Sub-Registrar Office. Documents: Age proof (groom 21+, bride 18+), address proof, wedding photos/invitation, 2 witnesses with Aadhaar. Both parties must be present at SRO. Fee: ₹100-500. Same day certificate.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA031T",
+      "instruction": "GST Registration eppo kattaayam?",
+      "current_output": "Goods (intra-state): ₹40 lakh+ turnover. Services: ₹20 lakh+. E-commerce sellers: ₹0 - mandatory from first sale! Inter-state supply: Mandatory regardless of turnover. Register FREE at gst.gov.in with PAN, Aadhaar, address proof, bank details.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNE006",
+      "instruction": "TN Free Laptop Scheme endraal enna?",
+      "current_output": "Free Laptop for Govt school students. Eligibility: +2 pass (Govt school), joined UG/Diploma, Polytechnic students. Distribution: Given at college. Specs: Basic laptop with necessary software. Documents: +2 marksheet, College admission, Aadhaar. Usage: Education purpose, warranty included.",
+      "category": "tn_education_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS026",
+      "instruction": "National Scholarship Portal (NSP) eppadi payanpaduthuvadhu?",
+      "current_output": "Central Govt Scholarships in one place. Website: scholarships.gov.in. Key Scholarships: Pre-Matric SC (Class 1-10, ₹150-750/month), Post-Matric SC (Class 11+, ₹230-1,200/month), Merit-cum-Means (Technical edu, Tuition + ₹1,000/month), INSPIRE (Science top 1%, ₹80,000/year), NMMS (Class 9-12 EWS, ₹12,000/year). How to apply: scholarships.gov.in → Register, Upload Aadhaar, Income Certificate, Marksheet, Institute verification, Comes to Bank via DBT",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP006",
+      "instruction": "Patta maatram eppadi seyvadhu?",
+      "current_output": "Patta transfer-ku: 1. Sub-registrar office-la document register pannunga 2. Taluk office-la patta transfer application kudunga 3. Documents: Registered document, EC (Encumbrance Certificate), ID/Address proof, Tax paid receipt 4. Time: 30-45 days 5. Online: eservices.tn.gov.in",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS032",
+      "instruction": "PM Shram Yogi Maan-Dhan (PM-SYM) endraal enna?",
+      "current_output": "Pension for Unorganized Workers. Eligibility: 18-40 years, Monthly income below ₹15,000, Not in EPFO/ESIC/NPS, Street vendors, Domestic workers, Construction workers, etc. Contribution: ₹55-200/month (based on age). At 60: ₹3,000/month pension. Government: Equal matching contribution. Join: CSC, maandhan.in. Need Aadhaar + Savings Account",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA005",
+      "instruction": "ஆதார் பாதுகாப்பாக வைக்க என்ன செய்யலாம்?",
+      "current_output": "1) Lock biometrics at myaadhaar.uidai.gov.in - prevents unauthorized authentication. 2) Use Virtual ID (VID) - 16-digit temporary number instead of Aadhaar. 3) Use Masked Aadhaar - shows only last 4 digits. 4) Check authentication history regularly.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA009",
+      "instruction": "இறப்பு சான்றிதழ் எப்படி பெறுவது?",
+      "current_output": "Register within 21 days at place of death's Municipality/Panchayat - FREE! Documents: Medical death certificate, deceased's Aadhaar, informant's ID. After 21 days: Late fee + affidavit. Online at tnreginet.gov.in.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HE004",
+      "instruction": "Government hospital-ல் free dialysis கிடைக்குமா?",
+      "current_output": "ஆம், PM National Dialysis Programme கீழ் government hospitals-ல் free dialysis உண்டு. CMCHIS card-ல் private hospitals-லும் claim செய்யலாம். District hospital-ல் register செய்யுங்கள்.",
+      "category": "health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB004T",
+      "instruction": "Chennai-la Property Tax eppadi kattuvadhu? Assessment thavaru endraal enna seyvadhu?",
+      "current_output": "**Property Tax Payment (Chennai):**\n\n**Online:** chennaicorporation.gov.in → Property Tax → Enter Bill Number → Pay\n\n**Offline:** Corporation Zonal Office, e-Seva\n\n**Due Dates:** April & October (half-yearly)\n- Advance: 5% discount\n- Delay: 2% penalty/month\n\n**Assessment Wrong?**\n\n**Step 1:** File Objection at Zonal Office / Online (within 15 days)\n\n**Step 2: Documents**\n- Property document\n- Previous receipts\n- Building plan\n- Area measurement\n\n**Step 3:** Hearing with Revenue Officer\n\n**Step 4:** Revised assessment or Appeal to Commissioner\n\n**Appeal:** Commissioner → Small Causes Court\n\n**Common Issues:** Wrong area, Commercial rate for residential, Old building as new",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNH002",
+      "instruction": "CMCHIS (Chief Minister's Comprehensive Health Insurance Scheme) endraal enna?",
+      "current_output": "₹5 lakh health insurance per family. Coverage: 1,000+ procedures, All family members. Eligibility: TN ration card holder, Annual income below ₹1.2 lakh. Hospitals: Empanelled Govt + Private hospitals. Cashless: Show card for cashless treatment. Card: Check/download at cmchistn.com. Documents: Ration card, Aadhaar linking. Ayushman Bharat: CMCHIS + PMJAY merged in TN.",
+      "category": "tn_health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNH006",
+      "instruction": "TN-la Govt Hospital-la enna free kidaikkum?",
+      "current_output": "Everything free in TN Govt Hospitals. Free Services: OPD consultation, All tests (Blood, X-ray, CT, MRI), Medicines, Surgery, ICU, Dialysis, Cancer treatment. Specialty: Advanced treatment at Govt Medical College Hospitals. 108 Ambulance: Free for emergency. Referral: PHC → GH → Medical College Hospital chain. CGHS/ESIC: Separate for central employees.",
+      "category": "tn_health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR005T",
+      "instruction": "Engal gramathula velai illai. MGNREGA Job Card eppadi vaanguvadhu? Velai eppadi keppadu?",
+      "current_output": "**MGNREGA - 100 Days Work Guarantee:**\n\n**Getting Job Card:**\n\n**Step 1: Apply**\n- Where: Gram Panchayat Office\n- One card per family\n- 18+ members can be added\n\n**Step 2: Documents**\n- Address proof\n- Age proof\n- Family photo\n- No income proof needed!\n\n**Step 3: Card issue**\n- Within 15 days\n- Free\n\n**Demanding Work:**\n\n**Step 1: Written Application**\n- Give in writing at Panchayat\n- Ask minimum 14 days work\n- Get acknowledgment\n\n**Step 2: Work Allocation**\n- Must give work within 15 days\n- Within 5 km radius\n- Else 10% extra wage\n\n**Wage:** ₹294/day (TN 2024)\n\n**No work given:**\n- Ask for Unemployment Allowance\n- Complain to BDO\n- Online: nrega.nic.in",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE006",
+      "instruction": "Kudumbathula oruvar irandhuittaar. Ennenna formalities seiyya vendum? Enna benefits kidaikkum?",
+      "current_output": "Immediately (24-48 hours):\n1. Medical Certificate - Hospital / PHC Doctor\n\nWithin 21 days (Mandatory):\n2. Death Certificate Registration - Municipality/Panchayat (Free)\n\nWithin 1-3 months:\n3. Bank Account Claim - Death Certificate + Nominee ID\n4. Legal Heir Certificate - Taluk Office (15-30 days)\n5. Ration Card name removal - tnpds.gov.in\n6. Property Transfer - Legal Heir Certificate + Taluk Office\n\nBenefits for family:\n7. PMJJBY Claim - ₹2 lakh (if enrolled)\n8. PMSBY Claim - ₹2 lakh (accident death)\n9. EPF Claim - If employed\n10. Family Pension - Govt employees\n11. Widow Pension - ₹1,000/month (BPL)",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP016",
+      "instruction": "Driving license renew eppadi pannuradhu?",
+      "current_output": "Expiry-ku 1 year munnadi apply pannalam. Expiry aana pinna 5 years varaikkum renew pannalam. Online: parivahan.gov.in. Documents: Old DL, Aadhaar, Medical certificate (40+ age). Fee: ₹200 + smart card fee.",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR013",
+      "instruction": "First time IT Return file pannanum - eppadi seyvadhu?",
+      "current_output": "Who should file: Gross income > ₹2.5 lakh (below 60), > ₹3 lakh (60-80), > ₹5 lakh (80+), TDS refund needed\n\nBefore Filing - Collect:\n1. PAN Card (Aadhaar linked)\n2. Form 16 (from employer)\n3. Bank Statements (interest income)\n4. Investment Proofs (80C, 80D)\n5. Form 26AS (TDS details)\n6. AIS (all income sources)\n\nFiling Process:\n\nStep 1 - Register:\n1. eportal.incometax.gov.in\n2. Register with PAN\n3. Set password\n4. Link Aadhaar\n\nStep 2 - Select Form:\n- ITR-1 (Sahaj): Salary up to ₹50 lakh, one house\n- ITR-2: More than one house, capital gains\n- ITR-4: Business income (presumptive)\n\nStep 3 - Fill: Personal info → Income → Deductions → Tax calculation → Bank account\n\nStep 4 - Verify: Pre-filled data check, Form 26AS match\n\nStep 5 - Submit & e-Verify (within 30 days):\n- Aadhaar OTP (easiest)\n- Net Banking/Bank EVC/Demat\n\nDeadline: July 31 (usually)\n\nRefund: If TDS > Tax liability → Direct to bank. Track at eportal.incometax.gov.in",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

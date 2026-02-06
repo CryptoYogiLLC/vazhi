@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 2,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TNE003",
+      "instruction": "SC/ST/BC Scholarship TN-ல் என்ன உள்ளது?",
+      "current_output": "Community-வாரி Scholarships. SC Students: Post-matric scholarship (₹550-1,200/month), Free education (all levels), Hostel stipend. ST Students: Similar to SC + extra coaching. BC/MBC/DNC: Post-matric (₹300-700/month), BC-இல் MBC-க்கு higher amount. Apply: bcmbcmw.tn.gov.in (BC), adwb.tn.gov.in (SC/ST). Documents: Community certificate, Income certificate, Institution bonafide, Aadhaar. Hostel: Free accommodation + food in govt hostels.",
+      "category": "tn_education_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI016",
+      "instruction": "Government Schemes-ku apply seyyum pothu common thavarugal enna?",
+      "current_output": "Documentation Errors:\n1. ❌ Submitting expired Income Certificate → ✅ Must be issued within 6 months\n2. ❌ Aadhaar-Bank mismatch → ✅ Name, DOB must match exactly, else DBT fails\n3. ❌ Wrong bank account (inactive/closed) → ✅ Active account with correct IFSC\n4. ❌ Wrong photo size/format → ✅ Passport size, recent, white background\n\nEligibility Mistakes:\n5. ❌ Applying despite exceeding income limit → ✅ Rejection + possible blacklist\n6. ❌ Claiming same benefit in multiple schemes → ✅ DBT system catches, recovery + penalty\n7. ❌ Not mentioning family member already availed → ✅ Must declare\n\nTimeline Mistakes:\n8. ❌ Missing deadline → ✅ Academic scholarships especially strict\n9. ❌ Missing renewal → ✅ Many schemes need yearly renewal\n10. ❌ Waiting without status check → ✅ Regular check helps correct deficiencies",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP022",
+      "instruction": "Kalaignar Magalir Urimai Thittam enna?",
+      "current_output": "Monthly ₹1,000 for woman head of family. Eligibility: Family head should be woman, Family income below ₹2.5 lakhs, Should not receive any other pension. Apply: Anganwadi center / Village Administrative Officer. Documents: Aadhaar, Ration card, Bank account",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI010",
+      "instruction": "Documents sambanthamana common thavarugal enna?",
+      "current_output": "Birth Certificate:\n❌ Cannot register after 21 days\n✅ Can register, but needs late fee + Affidavit\n\nMarriage Certificate:\n❌ Cannot prove married status without it\n✅ Can prove via wedding photos, invitation, witnesses\n\nDriving License:\n❌ Can take DL test immediately after LLR\n✅ Must wait 30 days\n\nVoter ID:\n❌ Automatic when turning 18\n✅ Must apply (Form 6)\n\nPassport:\n❌ Police Verification fail = Rejection\n✅ Re-verification chance and appeal process available\n\nEC (Encumbrance Certificate):\n❌ EC clear = property is clean\n✅ EC only from 1987 onwards, manual check needed for earlier records",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS028",
+      "instruction": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY) endraal enna?",
+      "current_output": "Free Skill Training. Duration: 150-300 hours. Courses: IT, Healthcare, Construction, Retail, etc. Benefits: Free Training, Certificate (Industry recognized), Placement assistance, Up to ₹8,000 reward (if assessment passed). Join: pmkvyofficial.org → Find Training Center, Nearby PMKVY Training Center, Need Aadhaar, Photo. RPL: Certificate for those with existing skills, ₹500 assessment fee (refundable)",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR007",
+      "instruction": "நான் கிராமத்தில் உள்ள அரசு பள்ளியில் படிக்கிறேன். BC மாணவன். என்னென்ன benefits கிடைக்கும்?",
+      "current_output": "**BC மாணவர்களுக்கான அரசு நலத்திட்டங்கள்:**\n\n**பள்ளியில் (School Level):**\n\n1. **இலவச கல்வி**\n   - Tuition fee இல்லை\n   - Government/Aided schools\n\n2. **இலவச பாடப்புத்தகங்கள்**\n   - எல்லா subjects\n   - School-லேயே கொடுப்பார்கள்\n\n3. **இலவச சீருடை**\n   - 2 sets per year\n   - School-ல் distribution\n\n4. **Mid-Day Meal**\n   - காலை உணவு + மதிய உணவு\n   - Weekly: Egg, Milk, Banana\n\n5. **இலவச Bus Pass**\n   - School ID காட்டி Bus Depot-ல்\n\n6. **Scholarship (BC)**\n   - Pre-Matric: ₹150-500/month\n   - எங்கே Apply: School through, tneservices.tn.gov.in\n\n**Higher Secondary (11th-12th):**\n\n7. **இலவச Laptop**\n   - Government School students\n   - 11th-ல் கொடுப்பார்கள்\n\n8. **BC Scholarship**\n   - Tuition fee + ₹500/month stipend\n   - Income limit: ₹2 lakh/year\n\n**College Level:**\n\n9. **முதலமைச்சர் உயர்கல்வி உறுதி திட்டம்**\n   - First Generation Graduate\n   - Free education + Laptop + ₹1,000/month\n\n10. **BC Post-Matric Scholarship**\n    - Full fee waiver\n    - Hostel fee\n    - ₹500-1,500/month stipend\n\n**Apply செய்ய:**\n- School/College scholarship committee\n- tneservices.tn.gov.in\n- scholarships.gov.in (Central)\n\n**Documents:**\n- Community Certificate\n- Income Certificate\n- Aadhaar\n- Previous year marksheet\n- Bank account",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA004",
+      "instruction": "ஆதார் தொலைந்துவிட்டது - என்ன செய்வது?",
+      "current_output": "Download e-Aadhaar from eaadhaar.uidai.gov.in using Aadhaar number or Enrollment ID + OTP. It's FREE and legally valid. For PVC card, order at uidai.gov.in for ₹50. If forgot Aadhaar number, retrieve at myaadhaar.uidai.gov.in → Retrieve Lost UID.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "BGP002",
+      "instruction": "Birth certificate eppadi peruvadhu?",
+      "current_output": "Birth certificate pera: 1. Nearby municipality/panchayat office ponga 2. Form No. 1 fill pannunga 3. Documents: Hospital record, parents ID proof 4. Fee: 21 days-ku free, adha pinna ₹50 late fee 5. Online: tnreginet.gov.in la apply pannalam",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA010",
+      "instruction": "Community Certificate எப்படி பெறுவது?",
+      "current_output": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Parent's community certificate, school TC, Aadhaar, address proof. VAO verification, RI check, Tahsildar approval. Time: 15-30 days. Fee: ₹25-50. Essential for reservation benefits.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI002",
+      "instruction": "Aadhaar pattriya thavraana nambikkaigal enna?",
+      "current_output": "Wrong Beliefs vs Truth:\n\n1. ❌ Aadhaar is citizenship proof → ✅ Only identity proof, not citizenship\n2. ❌ Mobile change online possible → ✅ Must visit Aadhaar Seva Kendra\n3. ❌ School can deny admission without Aadhaar → ✅ RTE Act prohibits this\n4. ❌ Hospital can deny treatment without Aadhaar → ✅ Cannot deny emergency treatment\n5. ❌ Sharing Aadhaar number = money loss → ✅ Need Aadhaar + OTP both\n6. ❌ DOB can be changed multiple times → ✅ Only once allowed\n7. ❌ e-Aadhaar is not valid → ✅ e-Aadhaar = Physical (legally same)\n8. ❌ Enrollment center charges fee → ✅ New enrollment is free",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA026T",
+      "instruction": "Crop Insurance (PMFBY) eppadi peruvadhu?",
+      "current_output": "Apply before sowing at pmfby.gov.in, bank, or CSC. Premium: Kharif 2%, Rabi 1.5%, Commercial 5% - rest paid by govt. KCC holders auto-enrolled. Documents: Land records, Aadhaar, bank account. Report crop loss within 72 hours for claim. Helpline: 14447.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE018",
+      "instruction": "Kadum mazhaiyaal en payir muzhuvathum naasamaagividuchu. Enna compensation, help kidaikkum?",
+      "current_output": "Within 72 hours:\n1. PMFBY Claim - pmfby.gov.in / 14447 - Take photos\n2. Inform VAO - Written complaint with acknowledgment\n\nAssessment:\n3. Crop Cutting Experiment - Agri Dept + Insurance\n4. Claim Amount - Based on yield loss %\n\nOther Relief:\n5. SDRF - Natural disaster relief from District Collector\n6. Input Subsidy - ₹6,800-13,500/hectare\n7. CM Relief Fund - Severe cases\n\nLoan Relief:\n8. Loan restructuring - Apply at Bank\n9. Fresh KCC Loan - 4% interest for next season",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA026",
+      "instruction": "பயிர் காப்பீடு (PMFBY) எப்படி பெறுவது?",
+      "current_output": "Apply before sowing at pmfby.gov.in, bank, or CSC. Premium: Kharif 2%, Rabi 1.5%, Commercial 5% - rest paid by govt. KCC holders auto-enrolled. Documents: Land records, Aadhaar, bank account. Report crop loss within 72 hours for claim. Helpline: 14447.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "URB008T",
+      "instruction": "En Car 15 varusham aagividuchu. Fitness Certificate eppadi vaanguvadhu? Endha test seivanga?",
+      "current_output": "**Vehicle Fitness Certificate:**\n\n**When needed?**\n- Private: After 15 years (every 5 years)\n- Commercial: After 8 years (every year)\n\n**Apply:** parivahan.gov.in → Fitness Certificate → Book ATS slot\n\n**Documents:**\n- RC Book, Insurance, PUC\n- Previous Fitness Certificate\n- Tax receipts\n\n**Tests:**\n- Brake, Emission, Headlight\n- Suspension, Steering, Speedometer\n- Horn, Body, Tyres, Mirrors\n\n**Fee:** Testing ₹300-500 + Certificate ₹200\n\n**Process:** ATS visit → 30-45 min test → Report → Certificate\n\n**Validity:** 5 years (private 15+), 1 year (commercial)\n\n**No Certificate:** Vehicle seized, ₹500-5,000 fine",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA035T",
+      "instruction": "FIR eppadi register seyvadhu?",
+      "current_output": "Visit nearest police station with written complaint. Zero FIR: Can file at ANY station. Online for some crimes: eservices.tnpolice.gov.in. Get FIR copy FREE (your right!). If police refuse: Complain to SP/District Collector. For cyber crimes: cybercrime.gov.in or call 1930.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RD004",
+      "instruction": "PMGSY endraal enna? Endha gramangalukku salai kidaikkum?",
+      "current_output": "Pradhan Mantri Gram Sadak Yojana - Rural road scheme. Eligible villages: Hilly areas 250+ population, Plains 500+ population, without road connectivity. Road Type: All-weather road (Concrete/Bitumen). Request: Through Gram Panchayat to Block/District. PMGSY-III: Upgrade existing roads. Maintenance: Contractor responsible for 5 years.",
+      "category": "rural_development",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI006",
+      "instruction": "Ration Card pattriya thavraana purithalkal enna?",
+      "current_output": "Wrong Beliefs vs Truth:\n\n1. ❌ Can only apply in person → ✅ Online apply at tnpds.gov.in\n2. ❌ Benefits only for Rice Card → ✅ NPHH card also has some benefits\n3. ❌ Cannot get Ration in other district → ✅ One Nation One Ration Card works anywhere\n4. ❌ No Ration without Aadhaar link → ✅ Some exceptions exist, but linking is better\n5. ❌ No Ration without Smart Card → ✅ Manual entry must also be allowed\n6. ❌ Only one card per house → ✅ Separate family can get separate card\n\nCommon Mistakes:\n- Not surrendering old card during address change → Legal issue\n- Not removing deceased person's name → Ration loss",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA025T",
+      "instruction": "KCC eppadi peruvadhu?",
+      "current_output": "Apply at any bank or through pmkisan.gov.in. Documents: Aadhaar, PAN, land records (Patta/Chitta), sowing certificate. Loan up to ₹3 lakh collateral-free at only 4% interest (with subvention). Crop insurance auto-enrolled. Repay after harvest.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNE001",
+      "instruction": "முதலமைச்சர் உயர்கல்வி உதவித் தொகை என்றால் என்ன?",
+      "current_output": "First Graduate-களுக்கு உதவித்தொகை. Amount: ₹12,000/year (UG), ₹18,000/year (PG). தகுதி: குடும்பத்தில் முதல் graduate, Govt/Govt-aided college, Annual income ₹2.5 லட்சத்திற்கு கீழ். Duration: Full course period. Apply: College itself processes, Income certificate, First graduate declaration, Aadhaar. Auto-credited: Semester-wise to bank account.",
+      "category": "tn_education_schemes",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HE006",
+      "instruction": "Pregnant women-க்கு என்ன benefits உண்டு?",
+      "current_output": "Pradhan Mantri Matru Vandana Yojana: Rs.5,000 cash benefit. Dr. Muthulakshmi Maternity Benefit: Rs.18,000. Free delivery in government hospitals. Anganwadi-ல் nutrition support உண்டு.",
+      "category": "health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AG008",
+      "instruction": "Drip irrigation subsidy எவ்வளவு?",
+      "current_output": "Micro irrigation-க்கு (drip/sprinkler) 55-100% subsidy உண்டு. Small/marginal farmers-க்கு அதிக subsidy. Horticulture department மூலம் apply செய்யலாம். pmksy.gov.in-ல் details பாருங்கள்.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI014",
+      "instruction": "Property vaangum pothu common thavarugal enna?",
+      "current_output": "Before Purchase:\n1. ❌ Checking only 13 years EC → ✅ Check at least 30 years EC\n2. ❌ Patta is enough → ✅ Patta = Possession, Title = Ownership (Different)\n3. ❌ Trusting seller's word → ✅ Independent title search via Lawyer\n4. ❌ Registering at Guideline Value → ✅ Under-reporting = Black money, legal issues\n5. ❌ Buying agricultural land without verification → ✅ Check land ceiling, conversion\n\nDuring Registration:\n6. ❌ Taking anyone as witness → ✅ Only trusted persons\n7. ❌ Signing without reading document → ✅ Read every clause, sign with Lawyer present\n\nAfter Purchase:\n8. ❌ Not transferring Patta → ✅ Apply within 3 months\n9. ❌ Missing Property tax → ✅ Penalty + legal issues\n10. ❌ Not claiming PMAY subsidy → ✅ First home buyers save lakhs",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CD002",
+      "instruction": "Community certificate எப்படி பெறுவது?",
+      "current_output": "Tahsildar office-ல் apply செய்யலாம். பெற்றோர் community certificate, school TC, family card copy தேவை. Field verification நடக்கும். Online-லும் tnedistrict.tn.gov.in-ல் apply செய்யலாம்.",
+      "category": "certificates_documents",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP012",
+      "instruction": "Ration card-la per seerkka/neekka enna seyyanum?",
+      "current_output": "Seerkka: Marriage/Birth certificate + Aadhaar vendum. Neekka: Death certificate / Vera card-la serntha proof. Apply: tnpds.gov.in or Tahsildar office. Time: 15-30 days.",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PAN006",
+      "instruction": "PAN-Aadhaar Link eppadi seyvadhu? Kattaayama?",
+      "current_output": "Mandatory! If not linked, PAN becomes Inoperative. How to link: 1. Online: eportal.incometax.gov.in → Link Aadhaar 2. SMS: UIDPAN <Aadhaar> <PAN> → 567678 or 56161 3. Fee: ₹1,000 (late fee). Check status: eportal.incometax.gov.in → Link Aadhaar Status. If not linked: Cannot file ITR, Cannot do large bank transactions, Cannot open MF/Demat, Higher TDS deduction",
+      "category": "pan_card_bilingual",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 15,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "COMM012_TM",
+      "instruction": "Calculator/Mathematical tables exam-ல் allowed-ஆ?",
+      "current_output": "Depends on exam: Board exams (10th, 12th): Not allowed. NEET: Not allowed. JEE: Virtual calculator on screen only. Engineering semester: Usually allowed (non-programmable). CA/CMA: Specific models allowed. GATE: Virtual calculator. SSC/Banking: Not allowed. Mathematical tables: Some exams provide, some allow bringing. Always check: Admit card instructions. Penalty for unauthorized items: Disqualification possible.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP020_TG",
+      "instruction": "Engineering padicha piragu job kedaikkalaye, enna seiyalam?",
+      "current_output": "Kedaikkum, konjam time agum. Options: 1) Skill upgrade - Python, Data Science courses 2) GATE ezhudhu - PSU jobs, ME admission 3) Government jobs - SSC JE, RRB 4) Freelancing start pannu 5) Startup try pannu - PMEGP loan irukku. Tirupur, Coimbatore industry hub - networking pannu. Patience venum.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO003_TG",
+      "instruction": "Oru school-la irundhu innooru school-ku TC eppadi vaanguvadhu?",
+      "current_output": "**Transfer Certificate (TC) Process:**\n\n**Step 1:** Written application to Headmaster with reason\n\n**Step 2:** Clear dues - Library books, Fees, ID card\n\n**Step 3:** TC Issue\n- Govt: 3-7 days (Free)\n- Private: 7-15 days (₹100-500)\n\n**TC Contains:** Name, DOB, Class, Conduct, Medium, Community\n\n**New School Admission:** TC + Marksheets + Aadhaar + Community certificate\n\n**TC Refused?** Complain to DEO (District Education Officer)",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH032_TM",
+      "instruction": "Engineering படித்து வேலை கிடைக்கவில்லை, என்ன செய்வது?",
+      "current_output": "மாற்று வழிகள்: 1) Skill upgrade - Online courses (Coursera, NPTEL) 2) GATE எழுதி PSU/ME சேர்க்கை 3) MBA படித்து management-க்கு மாறுங்கள் 4) Government jobs - SSC JE, RRB JE 5) Startup/Freelancing 6) TNSDC free skill training 7) Entrepreneurship - PMEGP loan மூலம் சொந்த தொழில். District Employment Exchange-ல் register செய்யுங்கள்.",
+      "category": "higher_studies",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HIGH005_TG",
+      "instruction": "Law padippu (LLB) Tamil Nadu-la eppadi seruvathu?",
+      "current_output": "Two ways: 1) 5-year BA LLB (+2 passed students-ku) - CLAT/TNDALU entrance exam 2) 3-year LLB (graduates-ku). Dr. Ambedkar Law University counselling nadathum. CLAT score pala colleges-la accept aagum. Govt college fee: ₹5,000-15,000/year.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA028_TG",
+      "instruction": "Defence force join aaga training enge kidaikkum?",
+      "current_output": "Defence training options: 1) Sainik Schools - Class 6 admission (for NDA prep) 2) Army rally coaching - District soldiers boards 3) NDA coaching - Government free centers 4) Agnipath training - TNSDC centers 5) Private coaching institutes. Physical fitness: Running, pull-ups, sit-ups practice daily. Written exam: Maths, English, GK. Medical: Strict standards. Apply: www.joinindianarmy.nic.in. Age: 17.5-21 (varies by entry).",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA021_TM",
+      "instruction": "PMEGP loan-க்கு எப்படி apply செய்வது?",
+      "current_output": "Prime Minister's Employment Generation Programme: Manufacturing-க்கு ₹50 lakh, Service-க்கு ₹20 lakh வரை. Subsidy: General 15-25%, SC/ST/Women 25-35%. Process: 1) www.kviconline.gov.in-ல் register 2) Business plan submit 3) Bank verification 4) Loan sanction 5) EDP training (mandatory) 6) Disbursement. Age: 18+. Education: 8th pass (₹10 lakh+), any (₹10 lakh வரை). District Industries Centre-ல் help available.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH038_TG",
+      "instruction": "Orphan/single parent children-ku padippu udhavi enna?",
+      "current_output": "Benefits: 1) Social Welfare Department scholarship 2) Free education in government schools 3) Hostel facility free 4) PM CARES for Children scheme (COVID orphans) - ₹10 lakh insurance + monthly stipend + free education till graduation 5) NGO scholarships. Required: Death certificate of parent(s), income certificate. District Social Welfare Officer-a anugugal.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM017_TM",
+      "instruction": "TNPSC-க்கு Tamil medium vs English medium - எது better?",
+      "current_output": "Both equal opportunity. Tamil medium advantages: 1) TN textbooks Tamil-ல் படிக்கலாம் 2) Answer writing easier 3) More candidates. English medium advantages: 1) Reference books availability 2) Current affairs sources more. Reality: Language doesn't matter, content matters. Toppers in both mediums. Choose your comfortable language. Paper can be written in either, no preference given. Focus on preparation, not medium.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO023_TG",
+      "instruction": "Single parent/orphan students-ku enna scholarship?",
+      "current_output": "Support schemes: 1) AICTE Swanath Scholarship - ₹50,000/year orphans-ku 2) PM CARES for Children (COVID orphans) - full support till graduation 3) Social Welfare Department orphan scholarship 4) NGO support - SOS Children's Villages, Udayan Care. Documents: Parent death certificate, guardian affidavit. Priority in government hostel admission. Apply through respective department.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM021_TM",
+      "instruction": "உண்மையா பொய்யா: Myth: Drop year waste of time, stigma உள்ளது",
+      "current_output": "உண்மை: Fact: Drop year = Strategic investment. Many IIT/AIIMS toppers took drop. Reality: 60-70% NEET qualifiers are droppers. No employer asks about gap year for doctors/engineers. Better to take time and get right career than settle for less. Productive drop year > Rushed wrong decision. Society's opinion < Your career satisfaction.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM014_TG",
+      "instruction": "Coaching illaamal JEE crack panna mudiyumaa?",
+      "current_output": "Possible but challenging. Self-study success factors: 1) Strong self-discipline 2) Proper study plan 3) Quality resources - YouTube (Physics Wallah, Unacademy free), NPTEL 4) Regular mock tests 5) Doubt clearing - online forums, Telegram groups. Advantages: Own pace, cost saving. Challenges: Motivation, structured approach, peer competition. Hybrid approach: Free online + self-study works well. Many toppers are self-study students.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO002_TG",
+      "instruction": "SC/ST students-ku ennenna scholarships kidaikkum?",
+      "current_output": "Adi Dravidar Welfare Department: 1) Pre-matric scholarship - ₹500-1,500/year 2) Post-matric scholarship - ₹3,000-10,000/year 3) Professional course - full fee + maintenance 4) PhD scholarship 5) Foreign study - ₹20 lakh 6) Free laptop 7) Hostel free 8) Books, uniform free. Apply: www.adwelfare.tn.gov.in. Income limit: ₹2.5 lakh/year. Almost all courses-ku scholarship irukku.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA007_TM",
+      "instruction": "Polytechnic-ல் எந்த branch select செய்வது? Job opportunity எப்படி?",
+      "current_output": "Branch wise opportunities: 1) Mechanical - Manufacturing, automobile companies 2) Civil - Construction, PWD, real estate 3) Electrical - TNEB, industries, electrician 4) Electronics - IT companies, telecom 5) Computer Science - Software, IT support 6) Automobile - Service centers, companies. Highest demand: Mechanical, Civil. Growing: Computer Science. Government jobs: TNPSC Diploma level posts available.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC010_TG",
+      "instruction": "Student budget eppadi manage panrathu?",
+      "current_output": "Budget tips: 1) Monthly expenses list make 2) Essentials first - food, transport, stationery 3) Track spending - apps like Money Manager 4) Hostel food cheaper than outside 5) Second-hand books - seniors, book banks 6) Student discounts use everywhere 7) Part-time work if possible 8) Avoid peer pressure spending 9) Emergency fund small amount keep 10) Scholarship money wise use. Rule: Needs > Wants.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM005_TG",
+      "instruction": "Exam hall-la tension vandhaal enna seivathu?",
+      "current_output": "Tension relief tips: 1) Deep breathing - 10 murai moochu vidunga 2) Easy questions mudhalil attempt 3) Stuck aanaal skip, later return 4) Water kudiyunga 5) Positive self-talk: 'Naan padiththirukkiren, ezhudha mudiyum' 6) Question paper muzhuvathum mudhalil padiyunga. Before exam: Proper sleep, light food, early arrival. Severe panic: Invigilator-ku sollunga, rest room break.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH015_TM",
+      "instruction": "PhD சேர்க்கை தமிழ்நாட்டில் எப்படி நடக்கிறது?",
+      "current_output": "படிகள்: 1) PG படிப்பு 55% marks (SC/ST 50%) 2) UGC NET/CSIR NET/GATE/SLET தேர்ச்சி (fellowship-க்கு) 3) பல்கலைக்கழக entrance test + interview. Fellowship: JRF ₹31,000/மாதம், SRF ₹35,000/மாதம். Part-time PhD working professionals-க்கு available. Major universities: Anna, Madras, Bharathidasan, Bharathiar.",
+      "category": "higher_studies",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "VOCA025_TG",
+      "instruction": "Employment Exchange-la register seivathu worth-aa?",
+      "current_output": "Benefits: 1) Government job notifications 2) Seniority based on registration date 3) Free career guidance 4) Skill training opportunities 5) Private job placement 6) Self-employment scheme guidance. Register: District Employment Office with certificates. Renewal: Every year or seniority lost. Documents: Educational certificates, community certificate, Aadhaar. Online renewal available now. Some government jobs require Employment Exchange registration.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC011_TG",
+      "instruction": "Student bank account open panrathu eppadi?",
+      "current_output": "Student account: 1) Zero balance accounts - SBI, Indian Bank offer 2) Documents: Aadhaar, college ID, photo, address proof 3) Benefits: ATM card, mobile banking, UPI 4) Scholarship DBT requires bank account 5) Education loan same bank = easier 6) Joint account option with parent 7) Fixed deposit for savings. Important: Keep minimum balance if required, avoid bounce charges. Link Aadhaar for DBT.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP001_TG",
+      "instruction": "Hotel Management padippu Tamil Nadu-la enge ulladhu?",
+      "current_output": "Top institutes: 1) IHM Chennai - Central Government 2) IHM Guruvayur - Private 3) SIHM Madurai - State 4) SRM Hotel School. Admission: NCHM JEE entrance + counselling. Eligibility: 12th pass 45-50%. Duration: 3 years BSc HM. Fees: Govt ₹50,000-80,000/year, Private ₹1-3 lakh/year. Jobs: Hotels, airlines, cruise ships, resorts. Good starting salary: ₹20,000-35,000.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO004_TM",
+      "instruction": "முதல் தலைமுறை பட்டதாரி scholarship எப்படி பெறுவது?",
+      "current_output": "Scheme: பெற்றோர் யாரும் degree படிக்காத குடும்பத்தின் முதல் பட்டதாரிக்கு. Amount: ₹2,000-5,000/ஆண்டு + fee concession. தகுதி: 1) Parents non-graduate certificate (Tahsildar) 2) Income ₹2 lakh கீழ் 3) UG படிப்பு. Apply: College scholarship committee மூலம். Documents: Parents education declaration, income certificate, community certificate, Aadhaar.",
+      "category": "scholarships",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "EXAM031C_TG",
+      "instruction": "NEET exam-ku ready aaga enna seiyandumay?",
+      "current_output": "NCERT Biology, Physics, Chemistry - line by line read pannu/pannunga. Free coaching: Government centres-la apply pannu through school. Online free: YouTube (Physics Wallah), SWAYAM. 7.5% reservation govt school students-ku. Daily 6-8 hours padikka venum. Previous year papers practice important.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO005_TM",
+      "instruction": "Class 6-8 மாணவர்களுக்கு என்ன scholarship கிடைக்கும்?",
+      "current_output": "**Middle School Scholarships (Class 6-8):**\n\n**1. Pre-Matric Scholarship (SC/ST):**\n- Day Scholar: ₹150/month\n- Hosteller: ₹350/month\n- Books/Stationery: ₹750/year\n- Parent income: < ₹2.5 lakh\n- Apply: scholarships.gov.in\n\n**2. Pre-Matric Scholarship (BC/MBC/DNC):**\n- Day Scholar: ₹100/month\n- Hosteller: ₹250/month\n- Parent income: < ₹2 lakh\n\n**3. Pre-Matric Scholarship (Minorities):**\n- For Muslim, Christian, Sikh, Jain, Buddhist, Parsi students\n- ₹100/month + ₹500 yearly\n- Apply: scholarships.gov.in\n\n**4. National Means-cum-Merit Scholarship (NMMS):**\n- Class 8 students\n- ₹12,000/year (Class 9-12)\n- Selection through exam\n- Apply through school\n\n**5. INSPIRE Awards - MANAK:**\n- Science talent recognition\n- ₹10,000 project grant\n- For Class 6-10\n- Apply: inspireawards-dst.gov.in\n\n**Apply எப்படி:**\n1. School-ல் form வாங்கவும்\n2. scholarships.gov.in register\n3. Documents upload\n4. School verification\n5. Bank account-ல் credit",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH027_TG",
+      "instruction": "India-la padippuku education loan eppadi vaanguvadhu?",
+      "current_output": "Steps: 1) Admission letter vaangunga 2) Bank-la application 3) Documents submit (mark sheets, fee structure, income proof) 4) Loan sanction 5) College-ku direct disbursement. Up to ₹4 lakh - no collateral. ₹4-7.5 lakh - third party guarantee. Above ₹7.5 lakh - property collateral. Interest subsidy available for EWS.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE003_TM",
+      "instruction": "குறைபாடுள்ள மாணவர்களுக்கு competitive exam-ல் என்ன சலுகைகள் உண்டு?",
+      "current_output": "Scribe facility, extra time (1 hour), separate seating, PWD quota (4% reservation), age relaxation (10 years), fee exemption, assistive devices permission ஆகிய சலுகைகள் கிடைக்கும். NEET, JEE, TNPSC எல்லாவற்றிலும் apply ஆகும்.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

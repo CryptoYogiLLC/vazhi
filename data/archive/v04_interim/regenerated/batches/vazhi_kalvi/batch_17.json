@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 17,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SUPP008_TM",
+      "instruction": "Fine Arts படிச்சா future என்ன?",
+      "current_output": "BFA (Bachelor of Fine Arts): 4 years. Specializations: Painting, Sculpture, Applied Art, Graphic Design. Colleges: Govt College of Fine Arts Chennai, Kumbakonam. Jobs: Art galleries, Advertising agencies, Film industry (Art director), Teaching, Freelance artist. Digital art growing field. Salary varies widely: ₹15,000-1 lakh+ based on skill and reputation. Portfolio and networking crucial.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA022_TM",
+      "instruction": "Women entrepreneurs-க்கு special schemes உள்ளதா?",
+      "current_output": "Women-specific schemes: 1) Stand-Up India - ₹10 lakh to ₹1 crore (SC/ST/Women) 2) Mudra Yojana - Women priority 3) TANSIDCO - Women Entrepreneurship Programme 4) State Industries Department - 30% subsidy 5) TNCDW (Corporation for Development of Women) - interest-free loans. Training: TNSDC women skill programmes, TRYSEM. Self-help groups மூலமும் loans available. Apply: Respective department websites.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC004_TM",
+      "instruction": "Government hostel-ல் seat எப்படி கிடைக்கும்?",
+      "current_output": "Process: 1) Apply through college/department 2) Priority: Distance from home, family income, caste category 3) Documents: Income certificate, nativity, distance proof 4) BC/MBC/SC/ST welfare hostels - apply through respective departments 5) Working women's hostel - separate application. Fees: Government hostel very subsidized (₹100-500/month). Free for eligible SC/ST. Apply early - seats limited. Waiting list exists.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC007_TG",
+      "instruction": "Online resources effectively use panrathu eppadi?",
+      "current_output": "Best free resources: 1) NPTEL - IIT professors lectures 2) SWAYAM - certificate courses 3) Khan Academy - basics strong 4) YouTube - Physics Wallah, Unacademy 5) MIT OpenCourseWare - advanced topics 6) Coursera audit mode - free learning 7) Google Scholar - research papers 8) LibGen - textbooks (use responsibly). Tip: Schedule online study time, avoid distraction rabbit holes. Download for offline access.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM006_TM",
+      "instruction": "Domicile certificate vs Nativity certificate - என்ன difference?",
+      "current_output": "Nativity: Born in Tamil Nadu என்று prove. Issued by: Tahsildar. For: Reservation benefits, state quota seats. Domicile: Residing in state for specified period (usually 5+ years). For: Some central institution admissions. Both different! Don't confuse. TN admissions mostly need: Nativity OR studied in TN for specific years (varies by counselling). Documents: Birth certificate, school TC, Aadhaar showing TN address.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM014_TG",
+      "instruction": "Income certificate enge vaanguvadhu? Online-la apply pannalaamaa?",
+      "current_output": "Online apply: www.tnedistrict.tn.gov.in or e-Sevai centres. Offline: VAO → RI → Tahsildar. Documents: Aadhaar, ration card, employment proof (if any), self-declaration for non-employed. Time: 7-15 working days. Fee: ₹10-50. Validity: Usually 1 year, some schemes accept older. Types: Annual income certificate, income certificate for specific scheme. Tip: Apply in advance before scholarship deadline.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO019_TG",
+      "instruction": "HDFC Bank Parivartan's ECSS scholarship enna?",
+      "current_output": "Educational Crisis Scholarship Support (ECSS): Financial crisis-la ulla students-ku. Amount: Up to ₹75,000. Eligibility: Family crisis (death, illness, job loss), income ₹6 lakh kizha, 55%+ marks. Covers: School/College fee. Apply: www.hdfcbankecss.com. Documents: Crisis proof, income proof, marks, Aadhaar. One-time emergency support.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP019_TG",
+      "instruction": "College-ku poga budget illa da. Free-ya padikka mudiyuma?",
+      "current_output": "Mudiyum da! Government colleges-la fees romba kammi - yearly ₹1000-5000 only. Scholarship apply pannu - BC/MBC/SC/ST full scholarship kidaikkum. Distance education - IGNOU, TNOU almost free. Skill training - TNSDC 100% free. Padikka aasai irundhaa vazhi irukku!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP012_TM",
+      "instruction": "Bank Jobs-க்கு என்னென்ன exams இருக்கு? Eligibility என்ன?",
+      "current_output": "**Bank Exams Overview:**\n\n**Major Bank Exams:**\n\n**1. IBPS PO (Probationary Officer):**\n- Posts: Public Sector Banks PO\n- Eligibility: Any Degree\n- Age: 20-30 years\n- Salary: ₹52,000-67,000/month (starting)\n\n**2. IBPS Clerk:**\n- Posts: Clerical cadre in PSBs\n- Eligibility: Any Degree\n- Age: 20-28 years\n- Salary: ₹28,000-35,000/month\n\n**3. IBPS SO (Specialist Officer):**\n- Posts: IT Officer, Law Officer, HR, Marketing\n- Eligibility: Relevant Degree/PG\n- Age: 20-30 years\n\n**4. SBI PO:**\n- Posts: State Bank of India PO\n- Eligibility: Any Degree\n- Age: 21-30 years\n- Most prestigious bank exam!\n\n**5. SBI Clerk:**\n- Posts: SBI Clerical\n- Eligibility: Any Degree\n- Age: 20-28 years\n\n**6. RBI Grade B:**\n- Posts: Reserve Bank of India Officer\n- Eligibility: PG/Degree with 60%\n- Age: 21-30 years\n- Highest salary!\n\n**7. RRB (Regional Rural Banks):**\n- IBPS RRB PO\n- IBPS RRB Clerk\n- For rural area banking\n\n**Common Eligibility:**\n- Nationality: Indian\n- Computer Knowledge: Basic required\n- Language: Local language knowledge preferred\n\n**Age Relaxation:**\n| Category | Relaxation |\n|----------|------------|\n| SC/ST | +5 years |\n| OBC | +3 years |\n| PwD | +10 years |\n| Ex-Servicemen | As per rules |\n\n**Apply:** ibps.in, sbi.co.in, rbi.org.in",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO024_TM",
+      "instruction": "விவசாய குடும்ப மாணவர்களுக்கு சிறப்பு scholarship உள்ளதா?",
+      "current_output": "Agriculture family scholarships: 1) IFFCO Scholarship - ₹25,000/ஆண்டு 2) Kotak Kisan - ₹10,000-30,000 3) TNAU free education for farmers' children 4) Agriculture Department scholarships. Eligibility: Farmer certificate from VAO, small/marginal farmer category. Priority in agriculture courses. Krishi Vigyan Kendra (KVK) free training available. Apply through Agriculture office or online portals.",
+      "category": "scholarships",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "AGE_002_TM",
+      "instruction": "Free uniform, books எல்லாம் school கொடுக்குமா? Apply பண்ணணுமா?",
+      "current_output": "Government school benefits: 1) Free textbooks - எல்லா subjects 2) Free notebooks - 4-5 books 3) Free uniform - 2 sets (₹600 worth) 4) Free footwear - Class 1-5 5) Free school bag - select schools. Apply: Admission-ஆனவுடன் automatic. Documents: Birth certificate, Aadhaar, parent Aadhaar, address proof. Private aided schools-லும் books free. Distribution: June-July school opening.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA009_TG",
+      "instruction": "Sandwich pattern diploma enna? Regular-lirundhu enna viththiyaasam?",
+      "current_output": "Sandwich Diploma: Theory + Industrial training combined. Pattern: 1st year theory → 2nd year industry (6 months paid training) → 3rd year theory. Benefits: 1) Real work experience 2) Stipend during training ₹5,000-8,000/month 3) Job placement better 4) Industry connections. Offered at: NTTF, Central Polytechnics, select government colleges. Duration: Same 3 years. Highly recommended for practical learning.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM021_TM",
+      "instruction": "Bank exam-க்கு prepare ஆவது எப்படி? SBI/IBPS difference?",
+      "current_output": "Banking exams: IBPS - Public sector banks (PNB, Canara, etc). SBI - Separate recruitment. Pattern similar: Prelims + Mains + Interview. Sections: English, Reasoning, Quantitative, General Awareness, Computer. Preparation: 1) RS Aggarwal for Maths/Reasoning 2) Word Power Made Easy for English 3) Banking Awareness - Arihant 4) Daily mock tests. Difference: SBI slightly tougher, more vacancies. Start with IBPS, apply SBI also.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO029_TG",
+      "instruction": "Ore nerathula pala scholarships-ku apply seiyalama?",
+      "current_output": "Aam, aanaal rules parunga: 1) Different sources (central + state + private) - usually OK 2) Same department multiple schemes - one only 3) NSP-la one scholarship per year rule ulladhu 4) Disclose other scholarships if asked. Strategy: Government first (guaranteed), then private (competitive). Keep track of all applications in a spreadsheet. Renewal applications separate apply.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA008_TG",
+      "instruction": "Government Polytechnic college-la admission eppadi?",
+      "current_output": "DOTE counselling: 1) www.tndte.gov.in-la online registration 2) 10th marks upload 3) Choice filling - college + branch 4) Rank list based on marks 5) Counselling date - certificate verification 6) Seat allotment. Fee: Government polytechnic ₹1,500-3,000/year. Reservation applicable. Cutoff marks: Top colleges-ku 400+ (out of 500).",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM019_TG",
+      "instruction": "Myth or Fact: Myth: Arts padichaa future illai",
+      "current_output": "Fact: Fact: Arts graduates options: IAS/IPS (UPSC - Arts background preferred), Banking, Teaching, Law, Journalism, Civil Services, HR, Social Work. Many IAS toppers are Arts graduates. Salary depends on job not degree. BA + competitive exam preparation = excellent career. Arts graduates excel in UPSC due to writing skills. Don't underestimate humanities!",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA006_TG",
+      "instruction": "Polytechnic Diploma enna? ITI-lirundhu enna viththiyaasam?",
+      "current_output": "Difference: ITI = Trade training (practical focused), Diploma = Technical education (theory + practical). Diploma: 3 years after 10th. Branches: Mechanical, Civil, Electrical, Electronics, Computer Science, Automobile. Job level: Supervisor/Junior Engineer. ITI: Technician/Operator level. Salary difference: Diploma holders ₹5,000-10,000 more starting. Higher studies: Diploma → B.E. lateral entry possible.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE025_TG",
+      "instruction": "En ponnu NEET-la fail aayitta - aduthu enna vazhi?",
+      "current_output": "Discourage pannaadheenga. Options: Next year NEET retry, BSc Nursing/Allied Health Sciences, BDS (dental), BAMS/BHMS (alternative medicine), BSc Life Sciences. NEET-kku 8 attempts varai try pannalam. Age limit: 25 years.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO012_TG",
+      "instruction": "AICTE scholarship engineering students-ku enna ulladhu?",
+      "current_output": "AICTE Scholarships: 1) Pragati - Women in technical education, ₹50,000/year 2) Saksham - Differently abled students, ₹50,000/year 3) Swanath - Orphan students 4) PM's Special Scholarship - J&K students. Additional: GATE qualified students-ku ₹12,400/month scholarship ME/M.Tech-la. Apply: www.aicte-india.org. Income limit: ₹8 lakh/year.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA024_TG",
+      "instruction": "ITI/Diploma holders-ku government jobs evvalavu?",
+      "current_output": "ITI holder jobs: 1) Railway Technician 2) TNEB Wireman/Lineman 3) Defence (Technical) 4) Ordinance Factory 5) PSU technician posts. Diploma holder jobs: 1) SSC JE (Junior Engineer) 2) RRB JE 3) TNPSC JA/AE 4) PWD Junior Engineer 5) PSU engineers. Salary: ITI ₹20,000-35,000, Diploma ₹35,000-60,000. Prepare: Technical subjects + General knowledge. Many vacancies yearly.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO012_TG",
+      "instruction": "11th Admission eppadi? Online counselling process enna?",
+      "current_output": "**11th Admission Process:**\n\n**Step 1:** Online registration at tnschools.gov.in (May-June)\n\n**Step 2:** 10th marks auto-fetch\n\n**Step 3:** Select 10-15 school preferences\n\n**Step 4:** Seat allotment based on marks + reservation:\n- SC 18%, ST 1%, MBC 20%, BC 26.5%\n\n**Step 5:** Report to school with documents\n\n**Stream Options:**\n- Science-Maths → Engineering\n- Science-Bio → Medicine\n- Commerce → CA\n- Arts → Law\n\n**Documents:** 10th Mark, TC, Community, Income, Aadhaar, Photos\n\n**Fees:** Govt FREE, Aided minimal, Matric higher",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC007_TM",
+      "instruction": "Online resources effectively use பண்றது எப்படி?",
+      "current_output": "Best free resources: 1) NPTEL - IIT professors lectures 2) SWAYAM - certificate courses 3) Khan Academy - basics strong 4) YouTube - Physics Wallah, Unacademy 5) MIT OpenCourseWare - advanced topics 6) Coursera audit mode - free learning 7) Google Scholar - research papers 8) LibGen - textbooks (use responsibly). Tip: Schedule online study time, avoid distraction rabbit holes. Download for offline access.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO030C_TG",
+      "instruction": "Scholarship-ku apply panna enna document vendumay?",
+      "current_output": "Aadhaar, bank passbook (student name-la), income certificate, community certificate, marks card, photo, bonafide - ipdi ellam venum. Original + xerox + scan ready-a vechikko/vechikunga.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP011_TM",
+      "instruction": "Coimbatore-ல் textile/fashion industry-related courses உள்ளதா?",
+      "current_output": "Coimbatore textile hub courses: 1) PSG Tech - B.Tech Textile Technology 2) Kumaraguru - Textile courses 3) NIFT Coimbatore - Fashion (opening soon) 4) Government Polytechnic - Textile 5) ITI - Textile trades. Industry connect: Internships in mills, design houses. Job placement: Tirupur garment cluster nearby = excellent opportunities. Specialized: Knitwear technology, Apparel production.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO029_TM",
+      "instruction": "ஒரே நேரத்தில் பல scholarships-க்கு apply செய்யலாமா?",
+      "current_output": "ஆம், ஆனால் rules பாருங்கள்: 1) Different sources (central + state + private) - usually OK 2) Same department multiple schemes - one only 3) NSP-ல் one scholarship per year rule உள்ளது 4) Disclose other scholarships if asked. Strategy: Government first (guaranteed), then private (competitive). Keep track of all applications in a spreadsheet. Renewal applications separate apply.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

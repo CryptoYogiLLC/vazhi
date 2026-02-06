@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 12,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CRIM013_TG",
+      "instruction": "Cheating case-kku enna punishment?",
+      "current_output": "IPC 420 (BNS 318): Cheating and dishonestly inducing delivery of property - 7 years imprisonment + fine. Cheque bounce: Negotiable Instruments Act 138 - 2 years imprisonment + twice cheque amount fine. Civil + criminal both options undu.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP009_TM",
+      "instruction": "Tenant union form பண்ணலாமா? Collective bargaining legal-ஆ?",
+      "current_output": "Legal! Tenant associations/unions form பண்ணலாம். Benefits: 1) Collective voice against unfair practices, 2) Negotiate with owner associations, 3) Legal aid pooling, 4) Information sharing. Registration: Societies Registration Act-ன் கீழ். Apartment complexes: Resident Welfare Association (RWA) common. Protect yourselves through unity.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI011_TG",
+      "instruction": "Maintenance kodukkaavittaal enna action edukkalam?",
+      "current_output": "Options: 1) Execution petition - salary attachment, property attachment, 2) Contempt of court - imprisonment up to 3 months, 3) Section 125 CrPC - Magistrate can order payment + imprisonment. Arrears + future maintenance ketkalam. Don't delay - act immediately.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE006_TG",
+      "instruction": "Affidavit enge panradhu? Cost enna?",
+      "current_output": "Notary Public office (court complex nearby). Cost: Rs.50-200 (stamp paper) + Rs.100-500 (notary fee). Documents: ID proof, matter details. Self-drafted allowed. Notarized affidavit = legal document. e-Stamp paper available at banks.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE007_TG",
+      "instruction": "Morphed photos upload pannitaanga - enna action?",
+      "current_output": "Serious offence: IT Act 66E (privacy violation), 67/67A (obscene/sexually explicit content), IPC 500 (defamation), 509 (insult to modesty). Steps: 1) Platform report (takedown), 2) cybercrime.gov.in, 3) Police FIR. Women: Additional protection under POCSO (if minor), DV Act.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI023_TG",
+      "instruction": "Streedhan-kkum Dowry-kkum enna vithiyaasam?",
+      "current_output": "Streedhan = Woman's personal property (gifts from parents, relatives - voluntarily given). Dowry = Demand-aa kettu vaangiyathu (illegal). Streedhan wife's absolute property - husband touch panna mudiyaadhu. Streedhan claim divorce-la pannalam.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP011_TG",
+      "instruction": "Neighbour en land-la aakkramippu seigiraar - enna seivathu?",
+      "current_output": "Steps: 1) Survey seydhu boundary verify pannunga, 2) Written notice anuppunga, 3) Tahsildar-kku complaint, 4) Civil Court-la injunction + possession suit. Documents: Patta, Survey sketch, Photos, EC. Forceful removal try pannaadheenga.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL022_TG",
+      "instruction": "Velayila irundhu nirutitaanga, F&F eppa kidaikkum? (Madurai style)",
+      "current_output": "Full and Final settlement: 30-45 days-la kidaikkanum. Include: Salary, leave encashment, bonus, gratuity (if eligible), notice pay, reimbursements. Delay aanaa Labour Commissioner-kku complaint. Documents: Relieving letter, experience letter, salary slip, Form 16 - ellam kelunga.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF021_TG",
+      "instruction": "Accident aayidutchu, insurance company sariyaa settle pannala (Coimbatore style)",
+      "current_output": "Steps: 1) Written complaint insurance company-kku, 2) IRDAI grievance portal (igms.irda.gov.in), 3) Insurance Ombudsman (free, Rs.30 lakh varai), 4) Consumer forum. Documents ready-aa vachukonga - FIR, medical bills, repair estimate, photos.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE011_TM",
+      "instruction": "Succession certificate எப்போது வேண்டும்?",
+      "current_output": "When needed: Bank accounts, shares, securities claim செய்ய. Will இல்லாத cases-க்கு. Apply: District Court. Documents: Death certificate, legal heir proof, asset details. Fee: Asset value based. Time: 3-6 months. Alternative: Nominee-ஆக இருந்தால் தேவையில்லை.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE014_TM",
+      "instruction": "Copyright registration எப்படி செய்வது?",
+      "current_output": "Online: copyright.gov.in. Categories: Literary, artistic, musical, cinematograph, sound recording. Fee: Rs.500-5,000 (work type based). Process: Application → Diary number → Objection period (30 days) → Registration. Note: Copyright automatic - registration = evidence.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI017_TG",
+      "instruction": "Physical violence illaamal DV complaint podalaamaa?",
+      "current_output": "Aama. DV Act covers: 1) Physical abuse, 2) Sexual abuse, 3) Emotional/verbal abuse (insults, humiliation), 4) Economic abuse (money control, property denial). Dowry harassment, threat, intimidation - ellam DV. Evidence: Recordings, messages, witnesses.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA021_TG",
+      "instruction": "Rent Authority endraal enna? Enge irukku?",
+      "current_output": "2017 Act-in keezh uruvakkappatta dispute resolution body. Ovvoru district-lum District Collector thalaimayil Rent Authority irukku. Rent disputes, eviction issues, deposit refund problems ivattrai handle seivaanga. Court-ai vida faster resolution.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC013_TM",
+      "instruction": "College/University degree certificate தர delay பண்றாங்க",
+      "current_output": "Steps: 1) Controller of Examinations complaint, 2) University Grievance Cell, 3) UGC Grievance portal, 4) RTI (status enquiry), 5) Court writ petition (if excessive delay). Provisional certificate-உடன் job apply பண்ணலாம். Employer-க்கு explain பண்ணுங்க.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP009_TM",
+      "instruction": "Will எப்படி எழுதுவது? Register பண்ணணுமா?",
+      "current_output": "Will writing: Clear language, all properties list, beneficiaries பெயர், date, signature, 2 witnesses signature. Registration கட்டாயம் இல்லை ஆனால் recommended - disputes avoid. Registered will Sub-Registrar office-ல் safe custody-ல் இருக்கும்.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP002_TG",
+      "instruction": "Cheque bounce aanaal enna case varum?",
+      "current_output": "Negotiable Instruments Act Section 138: 1) Cheque bounce = criminal offence, 2) Payee demand notice anuppanum (15 days-kkul), 3) 15 days-kkul pay pannala = complaint file pannalam, 4) Punishment: 2 years jail + double amount fine, 5) Time limit: Cause of action-la irundhu 1 month-kkul case podanum.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS032_TM",
+      "instruction": "Expired product விற்றால் என்ன complaint செய்யலாம்?",
+      "current_output": "FSSAI complaint: fssai.gov.in அல்லது Food Safety Officer (District)-க்கு. Consumer forum-ல் compensation case. Police complaint (IPC 273 - selling adulterated food). Seller-க்கு fine + license cancellation ஆகலாம். Product, bill வைத்திருங்க.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI027_TG",
+      "instruction": "Varadatchanai kekkuraanga, enga poi solrathu? (Madurai style)",
+      "current_output": "Recording vachukonga - phone calls, conversations. Messages screenshot edunga. Women helpline 181, or All Women Police Station-la complaint. Dowry Prohibition Act-la case podalam. 5 years jail + fine - kekkuravangalukkum kodukuravangalukkum.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS018_TM",
+      "instruction": "Gym/Coaching centre refund தர மறுக்கிறார்கள் - சட்டப்படி கேட்கலாமா?",
+      "current_output": "Service not availed-க்கு pro-rata refund கேட்கலாம். 'No refund' policy unfair trade practice ஆகலாம். Lock-in period reasonable-ஆ இருக்கணும். Consumer forum-ல் complaint போடலாம். Covid போன்ற force majeure cases-ல் full refund கிடைக்கும்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP004_TG",
+      "instruction": "Credit card bill pay panna mudiyala, harassment varudhu, enna seivathu?",
+      "current_output": "RBI Fair Practice Code: 1) Recovery agents 7AM-7PM only contact pannalam, 2) Office/relatives-kitta poga koodaadhu (without permission), 3) Threaten, abuse panna koodaadhu, 4) Violation: Bank-kku + RBI-kku complaint, 5) Settlement option kelunga - usually 50-70% pay panni close pannalam. Police complaint-um podalam harassment-kku.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE012_TM",
+      "instruction": "Right to be forgotten என்றால் என்ன?",
+      "current_output": "Online-ல் உள்ள personal information delete செய்ய request பண்ணும் right. DPDP Act 2023-ல் provision உண்டு. Google search results remove: Google legal removal request. Social media: Platform privacy settings. Court orders மூலமும் removal possible.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC001_TG",
+      "instruction": "Neighbour satham pottu thollai tharugiraar - enna seivathu?",
+      "current_output": "Steps: 1) Friendly talk mudhalil, 2) Written complaint to RWA/Association, 3) Police complaint (IPC 290 - public nuisance), 4) Civil Court injunction. Night 10PM-6AM noise: Noise Pollution Rules violation. Decibel limit: Residential area 55dB day, 45dB night.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE001_TG",
+      "instruction": "UPI fraud aanaal udane enna seyyanum?",
+      "current_output": "Golden hour (first 24 hours mukkiyam): 1) Bank-kku immediately call - transaction block, 2) 1930 helpline (cyber fraud), 3) cybercrime.gov.in-la complaint, 4) UPI app-la report, 5) Nearby police station FIR. Amount recover chance: 24 hours-la report = higher chance.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL007_TM",
+      "instruction": "Gratuity-க்கு eligibility என்ன?",
+      "current_output": "Minimum 5 years continuous service வேண்டும். 10+ employees உள்ள establishment-க்கு applicable. Death/disability case-ல் 5 years வேண்டாம். Calculation: Last drawn salary × 15/26 × years of service. Maximum: Rs.20 lakhs.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP007_TG",
+      "instruction": "Penn kuzhanthaikalukku property right irukkaa?",
+      "current_output": "Aama. 2005 Hindu Succession Amendment Act padi magalkalukku magankalukku samamaana right undu - ancestral property-lum, self-acquired property-lum. Married/unmarried difference illa. Idhu retrospective-aa apply.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

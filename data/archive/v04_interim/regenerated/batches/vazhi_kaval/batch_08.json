@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 8,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "AS014",
+      "instruction": "'SBI technical team la irundhu pesuren ayya, unga account la security issue, AnyDesk install pannunga remote la fix pannidurom' nu call vandhudhu. Bank officer nu sonnaan, nambalam aa?",
+      "current_output": "NEVER install AnyDesk ayya! Bank technical team ipdi call pannave pannaadhu. AnyDesk install pannina unga phone/computer full aa paappaanga - banking app open panni all money transfer panniduvaanga. Immediately cut pannunga. Bank branch ku complaint pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS072",
+      "instruction": "SMS vandhuchu 'Fire safety certificate renewal. 5000 online payment or inspection failed.' Fire safety matter serious, pay pannidlama?",
+      "current_output": "Fire safety NOC through Tamil Nadu Fire and Rescue Services department. Inspection and certification has proper procedure and official fees. Never pay through SMS for 'instant clearance'. Apply through official channels or district fire office.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS005",
+      "instruction": "Call vandhuchu 'This is Infosys IT security team. We detected unauthorized access from your credentials. Share OTP to verify your identity.' Naanum Infosys la dhaan velai paakkuren, genuine call aa?",
+      "current_output": "Real IT security teams use internal communication, never ask OTP over phone. They can verify you through company systems. Call your manager or security team directly using known numbers. Internal breach attempts often come disguised as security calls.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS021",
+      "instruction": "ரம்ஜான் - 'Zakat collection online - transfer to this account for sadaqah' message வந்துச்சு. Genuine collection-ஆ?",
+      "current_output": "Verify பண்ணுங்க! Ramadan-ல fake zakat collection scams அதிகம். Unknown account-க்கு transfer பண்ணாதீங்க. Local mosque treasurer-கிட்ட directly கொடுங்க. Online collection-னா mosque official handle verify பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS069",
+      "instruction": "Email vandhudhu - 'Congratulations! Selected for XYZ Scholarship 50,000, processing fee 2000 required.'",
+      "current_output": "Legitimate scholarships processing fee kekaadhu. 'Selected' without application - impossible. Email links phishing sites. NSP (National Scholarship Portal), university official scholarships apply pannunga - all free process.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RF004",
+      "instruction": "'உங்கள் Aadhaar money laundering-ல் use ஆகிறது' என்று call வந்தது. True-ஆ இருக்குமா?",
+      "current_output": "False claim. 'Money laundering', 'drug case', 'arrest warrant' என்று phone-ல் சொன்னால் scam. Real cases-க்கு official notice வரும், phone call அல்ல.",
+      "category": "red_flag_phrases",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS058",
+      "instruction": "WhatsApp message 'Nursing abroad recruitment - Canada/UK. Pay 50,000 registration, guaranteed placement.' Abroad job chance, apply pannalama?",
+      "current_output": "Legitimate foreign nursing recruitment through licensed agencies (check POE list at mea.gov.in). 50,000 upfront for 'guarantee' is scam pattern. Real process involves exams (NCLEX, IELTS), credential verification. Many nurses cheated by fake abroad job promises. Verify agency registration before any payment.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS031",
+      "instruction": "Exam time - 'TNPSC question paper leaked! Buy for 10000 Rs' WhatsApp message. Real leak-ஆ?",
+      "current_output": "100% scam and illegal! Paper leak என்றெல்லாம் இல்ல. Exam time-ல இந்த fraud peak. Money வாங்கி fake paper தருவாங்க. Plus legal trouble for you. Report to cyber crime. Study properly, shortcuts வேண்டாம்.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS001",
+      "instruction": "Phone vandhudhu, 'Namaskaaram, Treasury la irundhu pesuren, ungalukku pension arrears 50,000 pending irukku. Process panna Aadhaar number, bank account details sollunga' nu romba polite aa pesunaan. Genuine government officer aa?",
+      "current_output": "Illa ayya, fraud dhaan. Treasury office phone la personal details kekaadhu. Pension arrears irundhaa written intimation varum. Phone la Aadhaar, bank details kuduthaa account la irundhu kaasu thirudiduvaanga. Treasury office ku neenga direct aa ponga, phone la yaarkum details kudukkaadhenga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS037",
+      "instruction": "Extra income ku 'Amazon/Flipkart product listing work - daily 2 hours, earn 20,000/month, registration 5,000' nu ad paathen.",
+      "current_output": "Amazon/Flipkart ipdi outsource pannaadhu. Registration fee = scam. Initial la small tasks, small payments kuduppaanga. Then 'premium access' ku more investment keppanga. Task-based work from home offers 99% scam.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS060",
+      "instruction": "Phone vandhudhu 'Construction workers welfare board scheme. Pay 1000 registration for 50,000 marriage benefit.' Marriage varappodhu benefit kedaikum aa?",
+      "current_output": "TN Construction Workers Welfare Board registration free through labour department. Benefits require continuous membership and proper application. No 'pay 1000 get 50,000' scheme exists. Register through district labour office or BOCW portal. Genuine benefits take time, not instant.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS031",
+      "instruction": "Email vandhudhu 'Bar Council license renewal overdue. Pay 25,000 immediately or practice suspended.' License very important for practice, urgent aa pay pannanum?",
+      "current_output": "Bar Council renewal done through State Bar Council office, not email payments. Check actual renewal date in your enrollment certificate. Bar Council sends official notices through post. Large amounts like 25,000 never asked via email - visit council office directly.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS070",
+      "instruction": "Call vandhudhu 'FSSAI license renewal urgent. 8000 fee or restaurant sealed tomorrow.' FSSAI license irukku, urgent aa renew pannanum?",
+      "current_output": "FSSAI renewal through foscos.fssai.gov.in with fixed government fees (max 5000 for highest category). Sealing needs proper legal notice, not overnight. Check license validity and renew 30 days before expiry. Never pay phone callers claiming to be FSSAI.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS044",
+      "instruction": "BharatMatrimony la profile match aachhu - 'Software engineer in US, coming to India next month.' Now 'visa emergency, 50,000 need, will return personally.'",
+      "current_output": "NRI matrimonial scams very common. 'Coming next month' keeps hope alive. Emergency always before meeting. Video call insist pannunga - excuses vandhaa red flag. Never send money before meeting in person with family verification.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS044",
+      "instruction": "Email vandhuchu 'Export license opportunity from DGFT. Pay 1 lakh processing for special quota allocation.' Export business start panna chance, apply pannalama?",
+      "current_output": "DGFT doesn't offer special quotas via email solicitation. IEC (Import Export Code) registration is straightforward online process with minimal fees. 'Special quota allocation' is not how trade licensing works. Apply through dgft.gov.in for legitimate export registration.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS046",
+      "instruction": "SMS vandhuchu 'RTO license renewal online. Click link, pay 500 convenience fee.' License renew pannanum, online easy aa irukum nu nenaikkiren.",
+      "current_output": "RTO renewals through parivahan.gov.in only. Official fees fixed by government, no extra 'convenience fee'. Never click SMS links for license renewal. Visit RTO office or use official portal. Scammers collect card details through fake renewal sites.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS011",
+      "instruction": "Phone vandhuchu 'Namaskaaram doctor, IMA meeting registration urgent. Pay 5000 now, tomorrow deadline. UPI ID sollunga.' IMA meeting genuine aa, pay pannalama?",
+      "current_output": "IMA registrations go through official website and branch offices, not random phone calls. Call your local IMA branch directly to verify any meeting. Scammers use professional association names to target doctors knowing they'll respond to medical authority.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS012",
+      "instruction": "'Amma, naan Priya pesuren, US la passport stolen, embassy la stuck, urgent aa $2000 vendum Western Union la anuppu' nu call vandhudhu. En ponnu US la dhaan irukka, genuine aa?",
+      "current_output": "Ayya, overseas emergency scam idhu. Voice similar aa irundhaalum, verify pannunga. Daughter original number ku WhatsApp video call pannunga. Real embassy situations la different procedures irukkum. Western Union immediate transfer request - big red flag. Verify first, send later.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS066",
+      "instruction": "SMS vandhuchu 'ESI card renewal for domestic workers. Pay 300 processing fee.' ESI card renew pannanum aa?",
+      "current_output": "ESI for domestic workers depends on employer registration. Renewal/registration through ESIC office, minimal official fees. Processing fee via SMS is scam. If employer provides ESI, they handle registration. Check esic.nic.in for genuine process.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS023",
+      "instruction": "Call vandhuchu 'Samacheer kalvi book distribution issue. Teacher contribution 1500 for additional copies.' School books ku teacher pay pannumaa?",
+      "current_output": "Textbook distribution is government responsibility, never requires teacher payment. Samacheer kalvi books distributed through education department. Contact BEO/DEO if any book shortage. This targets teachers' dedication to students - emotional manipulation.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS018",
+      "instruction": "'Post Office Super Senior Citizen Scheme - Double your money in 3 years' nu pamphlet vandhudhu. Post office safe la, join pannalama ayya?",
+      "current_output": "Post Office schemes money double pannave pannaadhu ayya - 3 years la impossible. Official schemes - SCSS, MIS - fixed returns only. Fake pamphlets senior citizens ku target pannuvaanga. Post office branch ku poi verify pannunga - random pamphlets trust pannaadheenga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR009",
+      "instruction": "PhonePe/GPay/Paytm la fraud report eppidi pannuradhu?",
+      "current_output": "PhonePe: App → Help → Report an Issue, or call 080-68727374, email support@phonepe.com. Google Pay: App → Help → 'Money sent to wrong person/scam', or call 1800-419-0157. Paytm: App → 24×7 Help → Fraud/Scam report, call 0120-4456456, email care@paytm.com. Amazon Pay: App → Help → 'Report unauthorized transaction', call 1800-3000-9009. BHIM: App → Profile → Help → Report Issue. For all UPI disputes: NPCI at npci.org.in for resolution if app doesn't help.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT009",
+      "instruction": "Oru call vandhuchchi saami - 'Unga account block aairum, KYC update pannunga urgent aa' nu. OTP kekkuraanga. Enna seyyanum?",
+      "current_output": "Fraud saami idhu. Bank phone la OTP kekkave kekaadhu. 'Urgent' 'block aairum' nu bayamudhudhuraanga parunga. Branch ku neenga poi pesunganna. Phone la details kudukkaadhenga. Gandhipuram la businessmen ipdi maatikirukkanga.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT025",
+      "instruction": "New customer WhatsApp la contact panninaan yi - '10 lakh order, advance transfer pannuren' nu QR anuppinaan. Scan pannalaama yi?",
+      "current_output": "Pannaadheyyi! QR scan panna nee KUDUKKA dhaan mudiyum yi, vaanga mudiyaadhu. Erode textile hub aachhu la, scammers specifically target pannuraanga yi. 'Big order' excitement la maatikkaadhe. LC through illana cash verify panni dhaan deal pannu yi.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS043",
+      "instruction": "Tinder/Bumble la match aanaen - 2 months pesinom, 'stuck abroad, wallet stolen, 20,000 need for hotel, will return when back.' Photos, video calls - genuine feel aagudhu.",
+      "current_output": "Classic romance scam pattern. Video calls - pre-recorded or accomplice. 'Emergency abroad' - untraceable request. 2 months investment creates emotional bond - hard to say no. NEVER send money to people you haven't met in person. If genuine, they have other options - embassy, family.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

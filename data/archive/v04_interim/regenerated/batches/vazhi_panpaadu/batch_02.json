@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 2,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT147_TG",
+      "instruction": "Mamallapuram monuments patri sollungal?",
+      "current_output": "Mamallapuram (Mahabalipuram) - UNESCO World Heritage Site (1984). Pallavar kaalathil (7th century) kattappattathu. Mukkiya monuments: 1) Kadarkarai Kovil (Shore Temple) - sea-facing, 2) Aindhu Rathangal (Pancha Rathas) - single rock-la sedhukkappattathu, 3) Arjunan Tapasu / Gangai Irangudhall - world's largest bas-relief (96 feet x 43 feet), 4) Krishna Butter Cave, Mahishasuramardhini mandapa. Chennai-lirundhu 60 km. Beach + heritage combo destination.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT095_TG",
+      "instruction": "Poiyaamai-yoda palan enna?",
+      "current_output": "Kural: 'Poiyaamai aatrin arampira seiyaamai nandru'. Poi sollaamal irundhaalae podhum, vera endha aramum seiya vendaam. Melum: 'Puralthoongal eydhuvar meyyae puralthookkaap poiyaay solli nindravaar'. Unmai pesupavargal pugazh adaivaargal. Truth = ultimate dharma!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT053_TG",
+      "instruction": "'Thaamveezhvar menrol' - thunaiviyoda azhagu patriya kural enna?",
+      "current_output": "Kural: 'Thaamveezhvar menrol thuyilin inidhukol thaamaraik kannaan ulagu'. Artham: Nammai nesippavar melliya tholil thoonguvadhu, Thirumaaloda (thaamaraik kannaan) sorgatthai vida inimaiyaanadhu. True love is heaven on earth! Romance-kku Valluvaroda azhagaana expression.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT028_TM",
+      "instruction": "Thirukkural UN-ல் recognize ஆனதா?",
+      "current_output": "Thirukkural formally UN-ஆல் recognize ஆகவில்லை, ஆனால்: 1) UN conferences-ல் Thirukkural quotes cite ஆகியுள்ளன, 2) UNESCO Tamil-ஐ classical language-ஆக recognize பண்ணியபோது Thirukkural-ஐ highlight பண்ணியது, 3) International scholars Thirukkural-ஐ 'Universal ethical text' என்று praise பண்றாங்க. Thirukkural-ஐ UN officially recognize பண்ண வேண்டும் என்று campaign நடக்கிறது.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT191_TG",
+      "instruction": "Avvaiyaarum Muruganum - enna kadhai?",
+      "current_output": "Avvaiyar naaval pazham saappida oru maraththadiyil amarndhirundhaar. Oru siruvan (Murugan) marathil irundhaan. 'Sutta pazham venuma, sudaadha pazham venuma?' endru kettaan. 'Sudaadha pazham' endraar Avvai. Siruvan kilaiyai kulukka, pazhangal manalil vizhundhana. Avvai oodhi saappida, siruvan siriththaan - 'Oodhinaal sudaadha pazham aagividuma?' endru. Siruvanidamum katrukkolalam endru unarndhaar Avvai. Andha siruvan Murugan!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT078_TG",
+      "instruction": "Yaaro irandhu vittargal - grief handle panna udhavum kural?",
+      "current_output": "'Nillaadhavatrai nilaiyina endrunarum pullari vaanmai kadai'. Nilaiyattravai (udal, uyir) nilaiyaanavai endru ninaippadu ariyaamai. Life is temporary - grieve, but understand impermanence. Melum: 'Pirappennm pedaimai neengach sirappendum semporul kaanba thaRivu'. Birth and death are natural - soul continues. Remember them with love.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT079_TG",
+      "instruction": "Health problem vandhuVittathu - mentally strong-aa irukka enna kural?",
+      "current_output": "'Marundhena vendaavaam yaakkaiku arundhiyadhu atrradhu potri unin'. Sariyaana unavae marundhu. Melum: 'Udambhar azhiyin uyiraar azhivar' - udalai paenungal. Physical health-kku treatment edungal, mental health-kku positive thoughts maintain pannungal. Body is a temple - take care of it!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT104_TG",
+      "instruction": "Padhinen Siddhargal (18 Siddhars) yaar yaar?",
+      "current_output": "Padhinen Siddhargal: 1) Nandeesar, 2) Agathiyar, 3) Thirumoolar, 4) Punnakkisar, 5) Pulippaani, 6) Kaalaanginaathar, 7) Azhuguni Siddhar, 8) Agappey Siddhar, 9) Theraiyar, 10) Kudhambai Siddhar, 11) Karuvoorar, 12) Idaikaadar, 13) Kamalamuni, 14) Valmiki, 15) Bogar, 16) Machchamuni, 17) Konganar, 18) Sattaimuni. (Pattiyal maarupadalam - vera versions-um ullana).",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT145_TG",
+      "instruction": "Tamil Nadu-oda mukkiya kovil thiruvizhakkal enna?",
+      "current_output": "Mukkiya thiruvizhakkal: 1) Chithirai Thiruvizha - Madurai (April/May) - 1 month, 2) Karthigai Deepam - Thiruvannamalai (Nov/Dec), 3) Panguni Uthiram - Srirangam, 4) Thaipusam - Pazhani, 5) Navarathri - Tanjore area, 6) Vaikunta Ekadasi - Srirangam, 7) Aarudhra Darisanam - Chidambaram, 8) Thirukalyanam - all major temples. Temple car (Ratham) Therthiruvizha spectacular!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT002_TG",
+      "instruction": "Thiruvalluvaroda manaivi yaar? Avangala pathi enna theriyum?",
+      "current_output": "Thiruvalluvaroda manaivi Vasuki. Avar oru karpu karasiyagavum, kanavanukkku muzhu panivudan irundhadhagavum potrappadugirar. 'Illaraviyal' adhigaarangalil Vasukiyoda gunangaloda thaakkam theriyudhu-nu solvar. Avar eppothum kanavar solradha mudhalil seivaar, thanni kooda kanavar ketkum mun kondu varuvaar-nu kadhaigal ullana.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT036_TG",
+      "instruction": "'Manaththukkan maaasilan' - indha kuraloda artham enna?",
+      "current_output": "Kural: 'Manaththukkan maaasilan aadhal anaiththaran aagula neera pira'. Artham: Manam thooimaiyaaga iruppadhae aram. Matra ella sadangugalum, aasaarangalum velippadaiyaana show. Ullam suththamaga irundhaal podhum. External rituals-a vida internal purity mukkiyam enkiraar Valluvar.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT132_TG",
+      "instruction": "Gopuram, Vimanam irandukum enna viththiyaasam?",
+      "current_output": "Gopuram: Koviloda entrance gate tower. Piramaandamaga irukkum. Veliye theriyum. Sirpangal niraiya irukkum. Pirkala kovilkalil gopuram miga uyaram. Vimanam: Karuvrai (sanctum sanctorum) mel ulla tower. Moolavar meedhu neradiyaga irukkum. Aaramba kaala kovilkalil (Chozhar kaalam) vimanam miga uyaram - example: Thanjai Periya Kovil. Pirkaalathil gopuram uyaramanadhu, vimanam siriyathanadhu.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT015_TG",
+      "instruction": "'Enni thunika karumam' - decision making patri enna solludhu?",
+      "current_output": "Kural: 'Ennith thunika karumam thunindhapin ennuvam enbadhu izhukku'. Artham: Oru kaariyathai seiya mudivedukkum mun nandraga yosikka vendum. Mudivedutha pin meendum yosippadhu thavaru. 'Think before you act, don't act before you think' - idhai 2000 varudangalukkku munnabe Valluvar sonnaar.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT033_TG",
+      "instruction": "Thiruvalluvar Dhinam eppodhu kondadapadugiradhu?",
+      "current_output": "Thai maadham 2-m thedhi (January 15 or 16). Pongalukku aduththa naal. Tamil Nadu-la government holiday. Schools-la Thirukkural competitions nadakkum.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT024_TM",
+      "instruction": "Social media-வில் Thirukkural எப்படி popular ஆனது?",
+      "current_output": "1) #Thirukkural hashtag Twitter/X-ல் trending ஆகிறது, 2) Instagram-ல் artistic kural posts popular, 3) WhatsApp status-ல் குறள்கள் share ஆகின்றன, 4) YouTube-ல் விளக்க videos millions of views பெறுகின்றன, 5) Reels-ல் quick kural explanations viral ஆகின்றன. Gen Z கூட Thirukkural-ஐ 'ancient wisdom' என்று appreciate பண்றாங்க. Memes கூட இருக்கு - 'Valluvar said it 2000 years ago' format!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT115_TG",
+      "instruction": "'Ondre kulam oruvane devan' - idhoda artham enna?",
+      "current_output": "'Ondre kulam oruvane devan'. Artham: Ella manithargalum ore kulam - jaadhi bedham illai. Kadavulum oruvare - ella madhangalum ore unmayai solkindrana. 2000 varudangalukkku munnbae jaadhi ozhippu, madha nallinakkam pesiya progressive thinker Thirumoolar!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT019_TG",
+      "instruction": "Thirukkuralai dhinasari vaazhkaiyil eppadi payanpaduththalam?",
+      "current_output": "1) Kaalai oru kural padikkalam - motivation kidaikkum, 2) Prachananai varum bodhu sambandhapattta adhigaarathai padikkalam, 3) Kuzhanthaigalukkku ovvoru naalum oru kural katrukodukalam, 4) Office-la decision edukkum bodhu Porutpaal kuralgal udhavum, 5) Thirukkural apps download seiyalam - Tamil, English explanation kidaikkum.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT178_TG",
+      "instruction": "Kalki, Sandilyan pondra naavalaasiriyargal patri sollungal?",
+      "current_output": "Kalki Krishnamurthy (1899-1954) - 'Ponniyin Selvan', 'Sivagamiyin Sabadham', 'Parthiban Kanavu' ezhuthiyavar. Chozhar varalaaru novel-kalaaga. Sandilyan - 'Kadal Pura', 'Yavana Rani' ezhuthiyavar. Varalatru naavalgal popular. Kalki magazine indrum run aagudhu. Ponniyin Selvan - 2022 Mani Ratnam film, 2-part blockbuster! Tamil historical fiction pioneers.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT162_TG",
+      "instruction": "Thevaram endraal enna? Yaar paadinaargal?",
+      "current_output": "Thevaram - Saiva bhakthi ilakkiyam. Moovar endru azhaikkapadum moondru Nayanmaargal paadiyathu: 1) Thirugnana Sambandhar - mudhal moondru Thirumuraigal, 2) Thirunavukkarasar (Appar) - 4, 5, 6 Thirumuraigal, 3) Sundarar - 7-vadhu Thirumurai. Moththam 4,000+ paadalgal. 274 Sivan kovilgalai (Paadal petra thalangal) ivargal paadiyirukiraargal. Indrum kovilkalil paadappadugiradhu.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT165_TG",
+      "instruction": "Carnatic isai endraal enna?",
+      "current_output": "Carnatic isai - South Indian classical music. Features: 1) Raagam - melody framework, 2) Thaalam - rhythm, 3) Keerthanai - composition. Thrithuvam (Trinity) - Thyagaraja, Muthuswamy Dikshitar, Syama Sastri - 18th-19th century-la isaiyai valarththavargal. Instruments: Veenai, Mridangam, Violin, Pullanguzhal. Chennai December Season - world's largest music festival. Tamil Nadu-oda pride!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT003_TG",
+      "instruction": "Thiruvalluvar silai engge irukku? Adhoda sirappu enna?",
+      "current_output": "Kanyakumari-la ulla Thiruvalluvar silai 133 adi uyaram kondadhu - ovvoru adiyum oru adhigaarathai kurikkiradhu (133 adhigaarangal). Idhu 38 adi uyara peedathil mela nikkudhu - 38 adi enbadhu Araththuppaal-oda 38 adhigaarangalai kurikkiradhu. Motha uyaram 171 adi. 2000-m aandu January 1-la thirakkapattathu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT177_TG",
+      "instruction": "Bharathidasan yaar? Yaen 'Puratchi Kavi' endru azhaikkappadugiraar?",
+      "current_output": "Bharathidasan (1891-1964) - 'Puratchi Kavi' endru azhaikkappadubavar. Sirappugal: 1) Tamil mozhi patru - 'Tamizhukku amudhenru per', 2) Samooga seerthiruththam - jaadhi ethirppu, moodanambikkai ethirppu, 3) Pen urimai - 'Kudumba Vilakku', 4) Dravidian movement poet, 5) Bharathiyaaroda seedar. 'Irupadhu Nootraandu', 'Pandiyan Parisu', 'Kudumba Vilakku' famous padaippugal. Schools-la paadappadugiradhu.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT157_TG",
+      "instruction": "Aindhinai endraal enna?",
+      "current_output": "Aindhinai - Tamil ilakkiyathoda unique concept. Aindhu nilapagudhigalum avattrodan thodarpudaiya unarvugalum: 1) Kurinji (malai) - punarchi (union), 2) Mullai (kaadu) - iruththal (waiting), 3) Marudham (vayal) - oodal (sulking), 4) Neydhal (kadaloram) - irangal (pining), 5) Paalai (paalaivanam) - piridhal (separation). Iyarkaiyum manidha unarvum inaindha azhagaana concept. Ulaga ilakkiyathil thanithuvam!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT148_TG",
+      "instruction": "Krishnavoda vennai urundai (Krishna's Butterball) enna?",
+      "current_output": "Mamallapurathil ulla oru piramaanda paarai. 250 ton edai. Slope-la nirkkiradhu - aanaal vizhadu! Gravity-a meeruvathu pola therikiradhu. 1200+ varudangalaaga appadiye nirkkiradhu. Pallavar kaalathilaye attraction. Elephants kondu thalla muyarchiththum nagaravillai endru kadhai. 'Vaan Irai Kal' endru Tamilil peyar. Perfect photo spot - tourists favorite!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT134_TG",
+      "instruction": "Periya Kovil (Thanjavur) patri sollungal?",
+      "current_output": "Brihadeeswara Kovil (Periya Kovil) Thanjavur-la ulladhu. Rajaraja Chozhan 1010 CE-la kattinaan. Features: 1) Vimanam 216 adi uyaram - India-vilaiye uyaramaana vimanam, 2) Mel ulla kal 80 ton edai - eppadi thookinaargal enbadhu mystery, 3) Gopuratthai vida vimanam uyaram - unique, 4) Nandi - 25 ton edai, ore kallil sedhukkappattathu. UNESCO World Heritage Site (2004).",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

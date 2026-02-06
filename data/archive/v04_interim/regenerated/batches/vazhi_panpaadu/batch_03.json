@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 3,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT037_TG",
+      "instruction": "'Seiyaamal seidha uthavikku' - nandri patriya kural enna solludhu?",
+      "current_output": "Kural: 'Seiyaamal seidha uthavikku vaiyagamum vaanagamum aattral aridhu'. Artham: Naam endha uthaviyum seiyaamal irukkum bodhu, yaaro oruvar namakku uthavi seidhaal, andha uthavikku indha bhoomiyum sorgamum kooda eedaagaadhu. Unexpected kindness-oda mathippu alavida mudiyaadhadu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT091_TG",
+      "instruction": "Porumaiyoda palan enna?",
+      "current_output": "Kural: 'Unnaadhu norpaar periyar pirarsollum innaachol norpaarin pin'. Kadunchorkkalai poRuppavargal viradham iruppavargalai vida periyavargal. Melum: 'Oruththaarai ondraaga vaiyaarae vaippar poruththaaraip pondraga vaippar'. Revenge eduppavarai makkal madhikka maattaargal, poRuppavarai madhippaargal. Patience earns respect!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT102_TG",
+      "instruction": "Siddhargal yaar? Avargaloda sirappu enna?",
+      "current_output": "Siddhargal enbavargal Tamil naattoda gnaanigal, yogigal, maruththuvargal, rasavaathigal (alchemists). 'Siddhi' endraal supernatural power. Ivargal 8 vagaiyaana siddhigalai (Ashta Siddhi) adaindavargal. Maruththuvam, yoga, dhiyaanam, aanmeegam, rasavaadham aagiyavartril masters. 18 Siddhargal migavum pugazh petravargal - 'Padhinen Siddhargal' endru azhaikkapadugirar.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT139_TG",
+      "instruction": "Chidambaram Nataraja koviloda sirappu enna?",
+      "current_output": "Chidambaram Nataraja Kovil - Sivan Ananda Thandavam aadiya idam. Sirappugal: 1) Chidambara Ragasiyam - karuvraiyil vettridam (empty space) - formless God concept, 2) Pon Sabhai - gold-plated roof, 3) Nataraja bronze - Chola bronze masterpiece, 4) 5 sabhaigal - Chit Sabha, Kanaka Sabha, Nritta Sabha, Deva Sabha, Raja Sabha, 5) Aakaya Lingam - one of Pancha Bhoota Sthalams. Dikshitars (special priests) nadaththugiraargal.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT122_TG",
+      "instruction": "Siddhargal udal patri enna solkirargal?",
+      "current_output": "'Udambhar azhiyin uyiraar azhivar' - udal azhindhal aanmaavum munnera mudiyaadhu. 'Udambinai munnam izhukkenru irundhen, udambinukku ulle uruporul kanden' - Thirumoolar. Udalai neglect seiyaamal, adhai karuviyaaga payanpaduththi aanmeega munnetram adaiyalam enbadhu siddhar thaththuvam. Yoga, maruththuvam idhoda adippadaiyilaye.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT070_TG",
+      "instruction": "Lazy-aa feel aagum bodhu motivation-kku enna kural?",
+      "current_output": "'Madiyilaa mannavan eidhum adiyalandhaan thaavith thalarinum vellum'. Sombal illadhavan vetri peruvaan. Melum: 'Ookkamadhu kaividel' (Aathichudi). 'Udaiyar enappaduvadhu ookkam' - motivation-thaan real wealth. Start small, build momentum. Action creates motivation, not the other way!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT001_TG",
+      "instruction": "Thiruvalluvar yaar? Avar eppo vaazhndhar?",
+      "current_output": "Thiruvalluvar ulagap pugazh petra Tamilk kavignar, gnaani. Tamil marabinpadi avar 3000+ aandugalukkku mun vaazhndavar. Avar Mylapore-la pirandhadhagavum, nesavu thozhil seidhadhagavum korapadugiradhu. Ovvoru varudamum Thai 2-m thedhi (January 15/16) Thiruvalluvar Dhinamaga kondadapadugiradhu. Tamil naatkattiyinpadi Thiruvalluvar Aandu kanakkeedu seiyappadugiradhu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT182_TG",
+      "instruction": "Manikkavasagar yaar?",
+      "current_output": "Manikkavasagar - 'Thiruvasagam' ezhuthiya Saiva punidhiar. Pandiya mannaroda amaichcharaaga irundhavar. Thirupperunduraiyil Sivanai sandhiththu ellavattraiyum vittu bhakthan aanaar. 'Thiruvasagaththukku urugaadhaar oru vaasagaththukkum urugaar' enbadhu famous pazhamozhi. Chidambarathil Sivanidm aikyamaanaar endru nambappadugiradhu. 8-vadhu Thirumurai Thiruvasagam. Unarchi miguntha bhakthi poetry.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT030_TG",
+      "instruction": "Valluvar Kottam endraal enna? Angge enna irukkudhu?",
+      "current_output": "Valluvar Kottam Chennai Nungambakkathil ulla Thiruvalluvar ninaividam. 1976-la thirakkapattathu. Ulle: 1) 133 adi uyara gopuram (133 adhigaarangal), 2) 1330 kuralgalum granite-la porikappattuLLana, 3) Auditorium - 4000 per amaralam, 4) Temple chariot replica, 5) Azhagiya thottam. Entry free. Morning 8 AM - Evening 6 PM thirandhirukkum.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT064_TG",
+      "instruction": "Colleague ennai backstab panninaal enna seiya vendum?",
+      "current_output": "'Piranpazhi kooruvan thanpazhi yullum thirantherindhu koorap padum'. Pirarai pazhippavan than kuraigalaiyum expose pannikolvaan. Karma works! Don't retaliate - stay dignified. 'Theeyavai theeya payaththalaal' - bad actions bring bad results to them. Focus on your work.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT006_TG",
+      "instruction": "Thirukkuralukku vera enna peyargal ullana?",
+      "current_output": "Thirukkuralukku pala peyargal undu: 1) Muppaal - moondru pirivugal iruppathaal, 2) Utthara Vedam - therkku-oda vedam, 3) Deiva Nool - deiveega nool, 4) Podhu Marai - ella madhangalukkum podhuvana nool, 5) Tamil Marai - Tamilar-oda punidha nool, 6) Poiyaa Mozhi - unmaiyaana vaarthaikaal.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT106_TG",
+      "instruction": "Agathiyar ezhuthiya noolgal enna?",
+      "current_output": "Agathiyar peyaril ulla noolgal: 1) Agathiyar Gnaanam - aanmeega gnaanam, 2) Agathiyar Vaiththiyam - maruththuvam, 3) Agathiyar Karma Kaandam - astrology, 4) Agathiyar Yogam - yoga practices, 5) Agathiyar Naadi - palm leaf predictions, 6) Agathiyar Rathna Soothiram - gemology. 'Agathiyar 12000' endra periya noolum ulladhu. Moththam 200-kkum merppatta noolgal avar peyaril ullana.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT152_TM",
+      "instruction": "கோயிலுக்கு போகும்போது என்ன dress code follow பண்ணணும்?",
+      "current_output": "Dress code guidelines: 1) Men - வேட்டி/துண்டு preferred, lungdi ok, shorts allowed in some temples, 2) Women - saree/churidar preferred, dress with dupatta ok, 3) No sleeveless, revealing clothes, 4) Remove footwear at entrance, 5) Big temples may rent dhotis if needed. Specific temples like Padmanabhaswamy (Kerala) strict - only traditional dress. Tirumala moderately strict. Most TN temples flexible but modest dress respectful. Carry plastic bag for footwear.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT009_TG",
+      "instruction": "'Anbilaar ellam thamakkuriyar' - idhoda vilakkam enna?",
+      "current_output": "Kural: 'Anbilaar ellam thamakkuriyar anbudaiyaar enbum uriyar pirarkkuk'. Artham: Anbu illadhavargal ellavattraiyum thangalukkae vaithukkolvaargal. Aanaal anbu ullavargal thangal udalayum uyiraiyum pirarukkaaga tharuvaargal. Anboda sirappai indha kural kaattukkiradhu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT172_TG",
+      "instruction": "Bommalattam (Puppet show) patri sollungal?",
+      "current_output": "Bommalattam - Tamil Nadu-oda traditional puppet theatre. Vagaigal: 1) Thol Bommalattam - leather shadow puppets (Andhra border areas), 2) Nool Bommalattam - string marionettes (Thanjavur area), 3) Kambu Bommalattam - rod puppets, 4) Kai Bommalattam - hand/glove puppets. Ramayana, Mahabharata kathaigal popular. Thanjavur puppets UNESCO recognized. Handicraft shops-la decorative puppets kidaikkum. Revival efforts nadakkinrana.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT150_TG",
+      "instruction": "Tamil Nadu-oda heritage cities ennenna?",
+      "current_output": "Mukkiya heritage cities: 1) Thanjavur - Chozhar thalainagaram, kalai maiyam, 2) Madurai - 2500+ years old, Nayakkar kaalam, 3) Kanchipuram - Pallavar thalainagaram, 1000+ temples, 4) Trichy - Rock Fort, historical city, 5) Kumbakonam - Temple town, 6) Karaikudi - Chettinad architecture, 7) Mamallapuram - Pallava sculptures, 8) Puducherry - French colonial. Each city unique character!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT149_TG",
+      "instruction": "Nilgiri Mountain Railway (UNESCO) patri sollungal?",
+      "current_output": "Nilgiri Mountain Railway - UNESCO World Heritage Site (2005). 1899-la British-gal kattinaargal. Mettupalayam-lirundhu Ooty varai 46 km. Sirappugal: 1) Rack and pinion system - steep gradient-la climb seiya, 2) Steam locomotive - indrum odugiradhu, 3) 16 tunnels, 250 bridges, 4) 208 curves, 5) Max altitude 2203 meters. 5 hours journey - scenic beauty arumai. Morning train popular. Book in advance - IRCTC.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT200_TM",
+      "instruction": "தேவாரம், திவ்யப்பிரபந்தம் எங்கே கேட்கலாம்/படிக்கலாம்?",
+      "current_output": "கேட்க/படிக்க வழிகள்: 1) கோயில்களில் - daily ஓதுவார்கள் பாடுவார்கள், 2) YouTube - Sirkali Govindarajan, DKJ, Bombay Sisters versions famous, 3) Spotify, Gaana apps - playlists உள்ளன, 4) Project Madurai - free text online, 5) Tamil Virtual Academy, 6) Books - Giri Trading, Higginbothams, 7) Apps - Thevaram app, Divya Prabandham app. Morning/evening கேட்டால் peaceful feeling. Margazhi month-ல் திருப்பாவை daily radio-ல் வரும்!",
+      "category": "saints_sages",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CULT166_TG",
+      "instruction": "Tamil Isai Iyakkam endraal enna?",
+      "current_output": "Tamil Isai Iyakkam - 1940s-la thodangiya iyakkam. Carnatic isayil Tamil paadalgalukkku mukkiyaththuvam kodukka vendum endru poraadiyathu. Mukkiya napargal: Annamalai Chettiar, Papanasam Sivan, Dandapani Desigar. Tamil Isai Sangam (1943) aarambikkappattathu. Chennai Music Academy-la Tamil paadalgal paaduvathu ippodhuu saadhaaranam. Iyakkam vetri petradhu!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT055_TG",
+      "instruction": "'Ninaiththirundhu nokkinum' - pirivoda vali patriya kural enna?",
+      "current_output": "Kural meaning: Kaadhali pirindhu irukkum bodhu, avalai ninaithhu ninaiththe iruppen. Ovvoru nimidamum oru yugam pol theriyum. Missing someone makes time feel longer. Long-distance love-oda pain!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT117_TG",
+      "instruction": "Theraiyar Siddhar yaar? Avar specialty enna?",
+      "current_output": "Theraiyar Siddha medicine-oda founding fathers-la oruvar. 'Noi Naadal' (diagnosis) matrum 'Noi Mudhal Naadal' (finding root cause)-la expert. Theraiyar Vaiththiya Kaandam, Theraiyar Karukkidai Vaiththiyam pondra noolgal ezhuthiyavar. Noiyoda 8 vagai diagnosis methods (Envagai Thervu) ivar formulate seidhathaaga korappadugiradhu.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT016_TG",
+      "instruction": "'Insolaal eeram alaai' - nalla pechoda sakthi enna?",
+      "current_output": "Kural: 'Insolaal eeram alaai padirilavam semplorul kandaarvaych sol'. Artham: Inimaiyaana sorkkal anbodu kalandhu, vanjanai illaamal unmayaip pesuvadhae nalla pecchu. Communication skills patriya kural idhu. Words + Love + Truth = Perfect communication.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT103_TG",
+      "instruction": "Ashta Siddhi (ettu siddhigal) endraal enna?",
+      "current_output": "Ettu amaanushya sakthigal: 1) Anima - anu alavu siriyathaagudhal, 2) Mahima - migapperiyathaagudhal, 3) Laghima - miga ilaesaagudhal, kaatril paratthal, 4) Garima - miga kanamaagudhal, 5) Praapthi - edhaiyum adaidhal, 6) Praakaamyam - ella aasaigalaiyum niraivettrudhal, 7) Eesaththuvam - ellavattraiyum kattuppaduththudhal, 8) Vasiththuvam - ellavattraiyum vasappaduththudhal.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT128_TG",
+      "instruction": "Siddhar Peedangal endraal enna?",
+      "current_output": "Siddhar Peedangal enbavai siddhargal thavam seidha, samaadhi adaindha idangalil amaindha aasiramangal. Ingge: 1) Siddha maruththuvam karpikkapadum, 2) Yoga, meditation classes nadakkum, 3) Siddhar noolgal preserved seiyapadum, 4) Traditional treatments kidaikkum. Gnana Boomi Trust, Siddhar Sabai pondra organizations ivattrai maintain panraanga. Serious seekers ingge study panraanga.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT085_TG",
+      "instruction": "Makkal nalam / public welfare patri enna kuralgal ullana?",
+      "current_output": "Kural: 'Kudipuram kaakkum oruvanai makkal adipuram kaapparul vaippar'. Makkalai kaappaatrrum arasanai makkal madhippaargal. Melum: 'Iraikkaakkum vaiyagam ellam avanai muraikkaakkum muttach seyin'. Arasan neeyaamaaga aandaal, ulagamae avanai kaakkum. Leader who serves people = people protect leader. Public service = ultimate duty!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

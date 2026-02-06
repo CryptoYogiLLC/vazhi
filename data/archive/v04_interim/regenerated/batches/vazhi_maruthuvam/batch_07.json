@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 7,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH115_TM",
+      "instruction": "Mental hospital-ல் abuse நடக்குது - complain எங்கே?",
+      "current_output": "Complaint options: 1) State Mental Health Authority, 2) Mental Health Review Board (district level), 3) Human Rights Commission (SHRC/NHRC), 4) Police (if physical/sexual abuse), 5) Health Department. Types of abuse: Physical restraints misuse, no consent treatment, inhumane conditions, denial of communication with family. Evidence: Photos if possible, witness statements, medical records.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH046_TM",
+      "instruction": "Mentally ill person treatment-க்கு யார் consent தரணும்?",
+      "current_output": "Mental Healthcare Act 2017 rules: 1) Nominated representative (patient designates when competent), 2) Family members (spouse, parents, sibling - in order), 3) No one available: Hospital board decision. Advance directive: Patient can write treatment preferences when competent. Involuntary admission: Only if danger to self/others - magistrate approval needed within 24 hours.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH218_TG",
+      "instruction": "Tulsi plant benefits enna? Eppadi use panradhu?",
+      "current_output": "Tulsi (Holy Basil) benefits: 1) Immunity booster, 2) Respiratory health (cough, cold, asthma), 3) Stress relief (adaptogen), 4) Blood sugar regulation, 5) Antibacterial, 6) Heart health. Uses: 1) Fresh leaves - 3-5 daily (chew), 2) Tulsi tea - leaves boiled in water, 3) Tulsi drops - available commercially, 4) Tulsi honey - cold remedy. Note: Avoid during pregnancy (in large amounts), blood thinner users. Grow at home: Easy, brings positive energy (traditional belief).",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH002_TM",
+      "instruction": "CMCHIS card எப்படி apply பண்றது?",
+      "current_output": "Apply process: 1) Taluk office / Primary Health Centre visit, 2) Documents: Ration card, Aadhar, income certificate, photos, 3) Biometric enrollment, 4) Card delivery: 15-30 days. Online check: cmchistn.com. Already rice card holder: Automatic enrollment - check status online. Missing card: Duplicate apply at same office.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH032_TM",
+      "instruction": "Emergency-ல் hospital admission refuse பண்ணலாமா?",
+      "current_output": "NO! Illegal to refuse emergency. Law: Every hospital (government/private) must provide emergency care. Stabilization mandatory before transfer. Cannot ask for: 1) Advance payment, 2) Police clearance (accident), 3) ID proof. MLC cases: Treatment first, formalities later. Violation: Criminal prosecution + license cancellation. Report: 108, police, Health Department.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH220_TG",
+      "instruction": "Naturopathy centres TN-la enge irukku?",
+      "current_output": "Government: 1) Government Yoga and Naturopathy Medical College, Chennai, 2) District AYUSH hospitals (Naturo units). Private: 1) Jindal Naturecure Institute, Bangalore (near TN), 2) Nature Cure Hospital, Chennai, 3) Various wellness resorts. Services: Hydrotherapy, mud therapy, massage, diet therapy, yoga. Duration: 7-21 days programs. Cost: Government free/nominal, Private Rs.2,000-8,000/day. Good for: Diabetes, BP, obesity, stress, detox.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH047_TG",
+      "instruction": "Coma patient-kku yaar decisions edukkalam?",
+      "current_output": "Decision hierarchy: 1) Advance directive (if patient made one), 2) Nominated healthcare proxy, 3) Spouse, 4) Adult children, 5) Parents, 6) Siblings. Life support removal: Supreme Court guidelines - medical board + High Court approval for passive euthanasia. Best interest: Decisions must be in patient's best interest - not family's convenience.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH083_TG",
+      "instruction": "ICU-la patient paarkka vidala - rights irukkaa?",
+      "current_output": "Limited visiting is normal, but complete denial is not. Rights: 1) Regular updates from doctor (minimum once daily), 2) Brief visits allowed (usually 2-3 times/day, 10-15 mins), 3) One attendant may stay (not inside ICU). If denied: 1) Request meeting with treating doctor, 2) Escalate to hospital admin, 3) Get updates in writing. Exception: Highly infectious cases - isolation needed.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH047_TM",
+      "instruction": "Coma patient-க்கு யார் decisions எடுக்கலாம்?",
+      "current_output": "Decision hierarchy: 1) Advance directive (if patient made one), 2) Nominated healthcare proxy, 3) Spouse, 4) Adult children, 5) Parents, 6) Siblings. Life support removal: Supreme Court guidelines - medical board + High Court approval for passive euthanasia. Best interest: Decisions must be in patient's best interest - not family's convenience.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH153_TM",
+      "instruction": "Lab test results abnormal-ஆ வந்துருச்சு - panic ஆகணுமா?",
+      "current_output": "Don't panic! First: 1) Consult doctor who ordered test - they know context, 2) Slightly abnormal ≠ disease, 3) Reference ranges vary by lab, 4) Single test may not be conclusive, 5) Repeat test may be needed. Common false positives: Dehydration, recent food, medications. Important: Don't Google and self-diagnose. Doctor will: Correlate with symptoms, order confirmatory tests if needed, explain significance.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH024_TG",
+      "instruction": "Mukkiya health helplines ennenna?",
+      "current_output": "Emergency: 108 (ambulance), 102 (pregnant women). Health info: 104 (general health helpline), 1075 (COVID - still active). Disease specific: 1097 (HIV/AIDS), 1800-599-0019 (TB). Mental health: 9152987821 (iCALL), 1800-599-0019 (NIMHANS). Poison: 1066 (Chennai). Child: 1098 (Childline). Women: 181 (women helpline). All 24x7 and free.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH087_TM",
+      "instruction": "Diagnostic lab report-ல் doubt - retest கேட்கலாமா?",
+      "current_output": "Yes! Your right. Options: 1) Same lab - request repeat test (may charge or free depending), 2) Different NABL-accredited lab, 3) Hospital lab if admission. Red flags: 1) Result doesn't match symptoms, 2) Drastic change from previous, 3) Clerical errors visible. Lab liability: Wrong report causing harm = negligence. Verify: NABL accreditation for reliability.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH137_TG",
+      "instruction": "Emergency contraceptive pill - eppadi use panradhu?",
+      "current_output": "When: After unprotected sex to prevent pregnancy. Time: Within 72 hours (3 days) - earlier = more effective. Available: 1) Pharmacy (no prescription for most), 2) Government hospitals - free. Brands: I-pill, Unwanted-72, etc. How: Single dose or two doses 12 hours apart. Not for: Regular use (regular contraception better). Side effects: Nausea, period changes - temporary. NOT an abortion pill.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH173_TM",
+      "instruction": "Government Siddha hospital Chennai-ல் எங்கே இருக்கு?",
+      "current_output": "Chennai facilities: 1) National Institute of Siddha (NIS), Tambaram - Premier institute, 200 beds, all specialties, 2) Government Siddha Medical College Hospital, Arumbakkam - Oldest college, teaching hospital, 3) Arignar Anna Government Hospital of Indian Medicine - Multiple AYUSH systems. Services: Free OPD, IPD, medicines, special therapies. Timings: Usually 8 AM - 4 PM OPD.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH219_TM",
+      "instruction": "Naturopathy என்றால் என்ன? Ayurveda-விட வேறுபாடு?",
+      "current_output": "Naturopathy = Treatment using nature's elements. Methods: Water (hydrotherapy), mud, air, sun, diet, fasting, yoga. Difference from Ayurveda: 1) No medicines (mostly), 2) Focus on lifestyle correction, 3) More recent system, 4) Emphasizes fasting/detox. Combined: Often practiced with Yoga. Qualification: BNYS (Bachelor of Naturopathy and Yogic Sciences). Good for: Lifestyle diseases, prevention, detoxification.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH121_TM",
+      "instruction": "Child-க்கு ADHD/autism - treatment எங்கே?",
+      "current_output": "Assessment: 1) Child psychiatrist, 2) Developmental pediatrician, 3) Clinical psychologist. Government: 1) Institute of Child Health (Chennai), 2) District Early Intervention Centres (DEIC), 3) Medical college child psychiatry. Services: Diagnosis, therapy (occupational, speech, behavioral), medicines if needed. Free: Government facilities. Schools: Special needs provisions mandatory. UDID: Apply for benefits if certified.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH210_TG",
+      "instruction": "Digestive problems-kku home remedy?",
+      "current_output": "Indigestion: 1) Jeera (cumin) water, 2) Ajwain (omam) water, 3) Buttermilk with curry leaves, ginger, 4) Ginger + lemon + salt before meals. Acidity: 1) Cold milk, 2) Banana, 3) Coconut water. Constipation: 1) Triphala powder at night, 2) Isabgol (psyllium), 3) Warm water in morning. Gas/bloating: 1) Hing (asafoetida) in warm water, 2) Fennel seeds after meal. Diet: Eat on time, chew well, avoid late dinner.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH071_TG",
+      "instruction": "Private hospital rate display pannanumaa?",
+      "current_output": "Yes! Mandatory under Clinical Establishments Act. Display: 1) Room charges (all categories), 2) ICU charges, 3) OT charges, 4) Common procedure rates, 5) Consultation fees, 6) Emergency charges. Where: Reception area, website. Not displayed: Complaint to DHS. Rate revision: Must give notice. Hidden charges: Consumer Forum complaint.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH111_TG",
+      "instruction": "Counseling/therapy enge kidaikkum? Cost enna?",
+      "current_output": "Options: 1) Government hospitals - free (limited slots), 2) NGOs - free/subsidized (iCall, Snehi, etc.), 3) Private practitioners - Rs.500-3000/session, 4) Online platforms - Rs.300-1500/session (Practo, Amaha, YourDOST). Types: Clinical psychologist, counselor, psychiatrist (for medicines). Verify: RCI registration for psychologists. Tip: Many offer sliding scale fees based on income.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH066_TG",
+      "instruction": "Cosmetic surgery gone wrong - refund/compensation kidaikkumaa?",
+      "current_output": "Trickier than medical treatment cases. Issues: 1) Subjective expectations, 2) Inherent risks, 3) No guaranteed outcomes. Claim if: 1) Promised results not delivered, 2) Complications due to negligence, 3) Unqualified surgeon, 4) No proper consent. Proof: Before/after photos, advertisements/promises made, consent form, expert opinion. Consumer Forum: Deficiency in service.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH196_TG",
+      "instruction": "Panchakarma endraal enna? 5 treatments enna?",
+      "current_output": "Panchakarma = 5 purification/detoxification procedures. 1) Vamana - Therapeutic vomiting (Kapha disorders), 2) Virechana - Purgation (Pitta disorders), 3) Basti - Medicated enema (Vata disorders), 4) Nasya - Nasal administration (head/neck disorders), 5) Raktamokshana - Blood letting (blood disorders). Pre-procedures: Snehapanam (oil intake), Swedanam (sweating). Post: Specific diet restrictions. Duration: 14-21 days ideally.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH119_TM",
+      "instruction": "Friend/family member suicidal-ஆ இருக்காங்க - என்ன செய்வது?",
+      "current_output": "Dos: 1) Listen without judgment, 2) Take them seriously, 3) Stay with them, 4) Remove means (medicines, sharp objects), 5) Encourage professional help, 6) Call helpline together. Don'ts: 1) Don't leave alone if immediate risk, 2) Don't promise secrecy, 3) Don't argue or lecture, 4) Don't dare them. Emergency: Take to hospital emergency if attempt made or imminent risk. You're not alone - helplines guide you too.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH176_TG",
+      "instruction": "CCRS (Central Council for Research in Siddha) enna seigiradhu?",
+      "current_output": "CCRS Chennai: Siddha research organization under Ministry of AYUSH. Functions: 1) Clinical research on Siddha formulations, 2) Drug standardization, 3) Documentation of manuscripts, 4) Clinical trials, 5) Publication of research. OPD: Research centres have OPD - free. Important work: Validated many traditional formulations. Location: Arumbakkam, Chennai. Publications: Siddha research journals, textbooks.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH207_TG",
+      "instruction": "Ayurveda-padi enna food combinations avoid pannanum?",
+      "current_output": "Viruddha Ahara (incompatible foods): 1) Milk + fruit (except banana, mango), 2) Milk + fish/meat, 3) Honey + hot water, 4) Curd at night, 5) Cold water after meals, 6) Fruit after meals (eat separately), 7) Milk + sour foods. Why: Causes Ama (toxins), indigestion, diseases. Good combinations: Rice + dal, bread + vegetables. Rule: Eat warm, freshly cooked food. Avoid: Refrigerated/reheated food regularly.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH147_TG",
+      "instruction": "Stroke symptoms enna? FAST endraal enna?",
+      "current_output": "FAST test: F - Face drooping (one side), A - Arm weakness (can't raise one arm), S - Speech difficulty (slurred), T - Time to call emergency. Other symptoms: Sudden confusion, vision problem, severe headache, walking difficulty. Action: 1) Call 108, 2) Note time symptoms started (important for treatment), 3) Don't give food/water (swallowing problem possible). Window: 3-4.5 hours for clot-busting treatment.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

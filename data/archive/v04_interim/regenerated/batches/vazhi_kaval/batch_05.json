@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 5,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "OS047",
+      "instruction": "WhatsApp group add pannidaanga 'Auto union membership bonus. Pay 1000 get 5000 benefit.' Union membership laam genuine aa?",
+      "current_output": "Genuine unions have physical offices and membership process. 'Pay 1000 get 5000' is classic Ponzi scheme language. Real union benefits are insurance, legal help - not cash returns. Verify union from transport department or police if legitimate.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS004",
+      "instruction": "LIC bonus ready irukkuappa nu call vandhirukkappa. Bank details kekkuraangappa. Kudukkalaamappa?",
+      "current_output": "Kudukkaadheengappa! LIC phone la bank details kekkaadhuappa. Branch ku poi verify pannungappa. Phone la kuduthaa paisa pogumappa.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS048",
+      "instruction": "Machan, crypto bot la friend profit pannaan nu sonnan, try pannalama?",
+      "current_output": "Bro, initial profit trap da. Friend own money dhaan return varudhu. More invest panna solluvaanga, then ghost. Binance, CoinDCX - legit exchanges use pannu, Instagram bots scam da.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS030",
+      "instruction": "WhatsApp message 'NPS withdrawal issue detected. Pay 5000 for account rectification or pension affected.' NPS la money invest pannirukkene, serious aa?",
+      "current_output": "NPS issues resolved through NSDL/CRA portal or nodal officer in your office. No 'rectification fee' exists. Check your NPS statement through official app. Government pension systems don't ask arbitrary payments. Contact your PAO for genuine issues.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS051",
+      "instruction": "SMS vandhuchu 'Crop insurance claim settlement ready. Pay 1000 processing fee for direct transfer.' Claim pending irundhuchu, pay pannidlama?",
+      "current_output": "Crop insurance claims processed through bank and agriculture department - no processing fee. PMFBY settlements go directly to bank account. Check claim status at pmfby.gov.in. Insurance settlements never need payment from farmer.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS053",
+      "instruction": "'HDFC Credit Card - Limit increase 3 lakhs approved, OTP confirm pannunga' nu call vandhudhu. Increase useful aa irukkum, proceed pannalama?",
+      "current_output": "Banks OTP kekaadhu limit increase ku. OTP kuduthaa - transactions unauthorized aagidum. Limit increase app through apply pannalam, auto-approved based on usage. Phone calls la OTP - NEVER share. Cut pannu, HDFC app check pannu.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG003",
+      "instruction": "Telegram la daily income nu group invite vandhudhu - join aagalama?",
+      "current_output": "Famous scam ithu. Mudhal la konjam panam koduppanga, apram investment nu kettuppanga. Latcham ellam poirum. Join aagaadheenga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS068",
+      "instruction": "Email vandhuchu 'Gold testing certification course. 15,000 for BIS approved tester certificate.' Idhu useful certification aa?",
+      "current_output": "BIS Hallmarking centre recognition has specific requirements and process. 'BIS approved tester certificate' through email course is not legitimate certification. Actual assayer training through recognized assaying centres. Check bis.gov.in for genuine training and recognition process.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS013",
+      "instruction": "'Ayya, naan unga relative Murugan friend, Murugan daughter wedding ku shortage, 30,000 urgent loan vendum, direct aa kekka kovama irukkum nu en kitta sonnaru' nu call vandhudhu.",
+      "current_output": "Ayya, 'relative friend' scam idhu. Murugan ku DIRECT call pannunga verify panna. Real shortage irundhaa Murugan own aa kepparu. 'Direct aa kekka kovama' excuse - verify panna vidama irukkuraanga. Unknown callers through money anuppaadhenga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS066",
+      "instruction": "'10,000 Instagram followers 500 only' nu website paathen. Growth ku useful aa irukkum.",
+      "current_output": "Purchased followers - bots or inactive accounts. Instagram purge regularly - followers drop. Engagement rate drop = algorithm punishment. Account credentials kuduthaa - account steal possibility. Organic growth focus pannunga, shortcuts backfire.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR020",
+      "instruction": "Email/social media account hack aaiduchu, scammer friends kitta kaasu kekuraan. Recovery process?",
+      "current_output": "Immediate - Warn contacts: Call/SMS friends 'My account hacked, don't send money'. Platform recovery: Gmail - accounts.google.com/signin/recovery, Facebook - facebook.com/hacked (24-72 hours), Instagram - Help → Login → 'Can't log in' (video selfie verification), WhatsApp - Login with OTP kicks out hacker, enable 2-step. Post-recovery: Change ALL passwords, enable 2FA everywhere, check connected apps, check email forwarding rules, inform contacts about scam messages. If friends lost money: They file complaint, your account takeover FIR helps their case.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS039",
+      "instruction": "Father's Day - 'Win smartwatch for dad! Fill survey' link வந்துச்சு. Fill பண்ணலாமா?",
+      "current_output": "Survey scam! Personal info collect பண்றாங்க. Father's Day-ல இது common. 'Win' என்று attract பண்ணி data theft. Survey forms-ல sensitive info கொடுக்காதீங்க. No survey gives genuine prizes.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT001",
+      "instruction": "Da, oru call vandhuchu - 'Sir unga account block aaidum tonight ku munnadhi KYC update pannunga' nu. Aadhaar OTP ellam kekkuraanga. Legit aa bro?",
+      "current_output": "Scam da idhu. Bank laam phone la OTP kekkave kekaadhu. 'Tonight block' nu pressure poduraanga paaru, classic tactic. Branch ku direct aa po, phone la yaarkum details kudukkaadha. Ivanga dalla gang da.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS021",
+      "instruction": "'Ayya, unga horoscope la Shani dosham irukku, next 6 months ku danger. Special puja 11,000 ku pannina dosham pogum' nu astrologer call pannaan.",
+      "current_output": "Fear-based scam ayya idhu. Random astrologers phone la panni scare pannuvaanga. 'Danger' solliruvaanga, 'puja' ku kaasu vaanguvaanga - nothing will happen. Trusted family astrologer irundhaa consult pannunga. Unknown callers ignore pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS063",
+      "instruction": "'BGMI/FF unlimited UC hack - Download APK' nu YouTube video paathen. Free UC kedaikuma?",
+      "current_output": "'Hack APKs' malware contain pannum - phone data steal, banking apps access. UC/diamonds server-side - hacking impossible. Account ban guaranteed if detected. Game integrity maintain pannunga - play fair or pay official.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS053",
+      "instruction": "Call vandhudhu 'Fertilizer subsidy direct transfer scheme. Register with 2000 for 10,000 annual benefit.' Fertilizer cost romba, subsidy genuine aa?",
+      "current_output": "Fertilizer subsidy already included in MRP - you already get it! No separate registration needed. DBT for fertilizer is point-of-sale, not farmer registration. This is exploiting farmers' input cost concerns. All genuine schemes through agriculture department.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS049",
+      "instruction": "WhatsApp message 'CNG subsidy scheme for auto drivers. Register with 2000, get 10000 subsidy.' Fuel cost save aagum, apply pannalama?",
+      "current_output": "Government subsidies announced through transport department, not WhatsApp. CNG pricing is regulated, doesn't need personal registration. 'Pay 2000 get 10000' is scam pattern. Actual schemes come through unions or RTO announcements. Don't pay strangers for 'subsidies'.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS077",
+      "instruction": "Instagram DM - 'We love your content! Become brand ambassador, free products + commission. Just pay 500 shipping for starter kit.'",
+      "current_output": "Real brand deals - they pay you, you don't pay. 'Shipping for free products' contradiction. 500 pay pannina - cheap products or nothing. Real influencer deals through proper contracts, not random DMs to small accounts.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS019",
+      "instruction": "'Tirupati TTD la irundhu pesuren ayya, special Hundi donation ku select aairukkeenga, 5000 contribution pannina VIP darshan + prasadam' nu call vandhudhu.",
+      "current_output": "TTD random calls panni donation kekaadhu ayya. 'VIP darshan for donation' official scheme illa. Phone donation scam - money pogum, darshan varaadhu. ttdevasthanams.ap.gov.in - official website only. Phone calls ignore pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT008",
+      "instruction": "Meenakshi Amman kovil la donation QR scan potten, 100 rupees donate panna 10,000 debit aaiduchu! Kovil QR dhaan da, enna aachhu?",
+      "current_output": "Aiyooo! Fraudu gang original QR mela fake QR sticker ottirukkaanga da. Higher amount ku redirect aagirum. PIN enter pannumbodhu amount verify pannaama pottiye. Kovil la, temple la - ivanga vida maatanga. Ippo bank ku complaint pannu, cyber crime ku poi FIR podu.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS026",
+      "instruction": "Daughter engineering mudichaa, 'TCS/Infosys direct hiring, training fee 25,000' nu email vandhudhu. Placement kedaikala, idhu genuine opportunity aa?",
+      "current_output": "TCS, Infosys training fee kekaadhu - they PAY stipend during training. 'Direct hiring' emails fake. Company career pages la apply pannunga. Training fee kekkura 'IT companies' 100% scam. Daughter ku solla - legitimate companies candidate kitta fee kekaadhu.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS032",
+      "instruction": "Old house tenant vacate aagum time, 'Tenant rights lawyer' call pannaan - 'Tenant ku extra compensation vendum, 20,000 legal fee pay pannunga handle pannuren' nu.",
+      "current_output": "Random 'lawyers' calling = scam. Tenant disputes Rent Control court la handle aagum. Legitimate lawyers office la meet pannuvaanga, random calls pannaadhu. 'Legal fee advance' vaangitu nothing pannuvaanga. Known lawyers consult pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS054",
+      "instruction": "WhatsApp forward 'Free tractor scheme government. Register with Aadhaar and 5000 token.' Tractor kedaikum aa really?",
+      "current_output": "No 'free tractor' scheme from central or state government. Tractor subsidies exist but through proper bank loan and agriculture department process. 'Free' anything with 'token money' is always scam. Check official government websites, not WhatsApp forwards.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR006",
+      "instruction": "cybercrime.gov.in la complaint eppidi file pannuradhu?",
+      "current_output": "Website: cybercrime.gov.in. Step 1: Click 'File a Complaint', register with mobile, OTP verification. Step 2: Select category - Online Financial Fraud, Social Media Crime, Job Fraud, Crypto Fraud, etc. Step 3: Fill details - incident date/time, amount lost, mode (UPI/Card/NetBanking), scammer details, upload evidence (max 10 files, 5MB each). Step 4: Submit and note ACKNOWLEDGMENT NUMBER, screenshot confirmation. Status check: Login → 'Track Your Complaint'. Escalation if no response 30 days: State Cyber Cell, DGP Cyber Crime.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR004",
+      "instruction": "Card details leak aaiduchu, transactions nadandhuruchu. Recovery process enna?",
+      "current_output": "Immediate (within 1 hour): Call bank - BLOCK CARD, note last 4 legitimate transactions, report unauthorized ones. Within 24 hours: Written complaint at branch, request new card, file chargeback for each transaction. RBI Rules: Zero liability if reported within 3 days, max ₹10,000 if reported 4-7 days, full liability after 7 days. Documents needed: Card block confirmation, list of unauthorized transactions, FIR copy, cyber crime complaint acknowledgment. Recovery timeline: 7-90 days for credit card chargeback.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

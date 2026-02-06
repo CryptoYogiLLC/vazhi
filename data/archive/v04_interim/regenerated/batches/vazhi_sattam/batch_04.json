@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 4,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CYBE013_TM",
+      "instruction": "Social media-ல் fake account என் பேர்ல - complaint எப்படி?",
+      "current_output": "Platform report: Impersonation report (ID proof upload). Legal: IT Act 66D (identity theft), IPC 419 (cheating by personation). cybercrime.gov.in complaint. Platform response: 24-72 hours. Multiple platforms: Each platform-லும் separately report.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF003_TM",
+      "instruction": "International Driving Permit (IDP) எப்படி பெறுவது?",
+      "current_output": "Apply: RTO office (not online). Documents: Valid Indian DL, passport, visa, photos. Fee: Rs.1,000. Validity: 1 year or Indian DL validity - எது குறைவோ அது. IDP alone not valid - Indian DL-உடன் carry பண்ணணும்.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP020_TM",
+      "instruction": "விவசாய நிலம் யார் வாங்கலாம்?",
+      "current_output": "Tamil Nadu-ல் agricultural land ceiling laws உள்ளன. Farmer அல்லது farmer family member மட்டுமே wet land (15 acres limit) வாங்கலாம். Dry land-க்கு liberal rules. Company/Non-farmer வாங்க District Collector permission வேண்டும்.",
+      "category": "property_land",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CONS027_TM",
+      "instruction": "Builder specification மாத்தி flat தந்தார் - complaint போடலாமா?",
+      "current_output": "ஆம். Agreement/Brochure-ல் சொன்ன specification மாறினால் RERA complaint போடலாம். Options: 1) Specification match செய்ய order, 2) Price reduction, 3) Compensation, 4) Full refund. Photos, videos, original brochure evidence-ஆ வைங்க.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP029_TG",
+      "instruction": "Oruthan kadan vaangittu thirumba tharala, enna panradhu? (Chennai style)",
+      "current_output": "Steps: 1) Written reminder anuppunga, 2) Legal notice (registered post), 3) Response illa = court case. Evidence: Cheque/transfer proof, WhatsApp messages, witnesses. Rs.20 lakh-kkul: Summary suit (faster). Criminal: Cheque bounce aana Section 138 case. Limitation: 3 years. Pro tip: Promissory note vaangiyirundhaa strong case.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM004_TM",
+      "instruction": "False FIR போட்டால் என்ன ஆகும்?",
+      "current_output": "IPC 182 (BNS 213): False information to public servant - 6 months imprisonment + fine. IPC 211 (BNS 248): False charge with intent to injure - 2-7 years imprisonment. Defamation case-உம் வரும். Accused can file counter case. Think twice before filing.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP022_TG",
+      "instruction": "Maternity leave rights ennenna?",
+      "current_output": "Maternity Benefit Act 2017: 1) 26 weeks paid leave (first 2 children), 2) 12 weeks (3rd child onwards), 3) 12 weeks (adoption/surrogacy), 4) Work from home option (post leave), 5) Creche facility (50+ employees). Cannot terminate during pregnancy/leave. ESI: Maternity benefit through ESI if covered. Miscarriage: 6 weeks leave.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP017_TM",
+      "instruction": "Legal notice எப்படி அனுப்புவது? Lawyer வேணுமா?",
+      "current_output": "Self அனுப்பலாம், but lawyer recommended for proper drafting. Format: 1) From/To addresses, 2) Subject, 3) Facts, 4) Legal grounds, 5) Demand/relief sought, 6) Time limit (usually 15-30 days), 7) Consequence warning. Send: Registered post AD (Acknowledgement Due). Keep copy + postal receipt. Reply not mandatory but advisable.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS028_TG",
+      "instruction": "Builder pona loan EMI kattikittu irukken, possession tharala - enna option?",
+      "current_output": "RERA-la complaint podunga. Builder EMI interest compensate seyyanum endru order vaangalam. Parallel-aa bank-kitta loan restructure/moratorium kelunga. Extreme case: Full refund + EMI interest compensation kidaikkum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE008_TG",
+      "instruction": "Cyber stalking-kku enna law irukku?",
+      "current_output": "IPC 354D (stalking) - 3 years imprisonment (first offence), 5 years (repeat). IT Act 66D (cheating by personation). Evidence collect: Screenshots, call logs, messages. Platform block + police complaint. Women: Protection order under DV Act-um peralaam.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS030_TG",
+      "instruction": "Misleading advertisement-kku complaint podalaamaa?",
+      "current_output": "Aama. ASCI (Advertising Standards Council of India)-kku complaint podalam - ascionline.in. Consumer forum-lum case podalam. Celebrity endorsement false claims-kkum celebrity liable. Compensation + advertisement withdraw order kidaikkum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI017_TM",
+      "instruction": "Physical violence இல்லாமல் DV complaint போடலாமா?",
+      "current_output": "ஆம். DV Act covers: 1) Physical abuse, 2) Sexual abuse, 3) Emotional/verbal abuse (insults, humiliation), 4) Economic abuse (money control, property denial). Dowry harassment, threat, intimidation - எல்லாம் DV. Evidence: Recordings, messages, witnesses.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS001_TM",
+      "instruction": "Consumer-ஆக எனக்கு என்னென்ன rights இருக்கு?",
+      "current_output": "Consumer Protection Act 2019-ன் கீழ் 6 முக்கிய rights: 1) Safety right - unsafe products-இல் இருந்து பாதுகாப்பு, 2) Information right - product details தெரிந்துகொள்ள, 3) Choice right - alternatives select செய்ய, 4) Hearing right - complaint கொடுக்க, 5) Redressal right - compensation பெற, 6) Education right - consumer awareness.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS031_TM",
+      "instruction": "Hidden charges வசூலித்தால் என்ன செய்யலாம்?",
+      "current_output": "Hidden charges unfair trade practice. E-commerce Rules 2020-ன் கீழ் all charges upfront display கட்டாயம். Complaint: Consumer forum, NCH helpline. Refund of hidden charges + compensation கேட்கலாம். Bank service charges-க்கு Banking Ombudsman.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE017_TG",
+      "instruction": "SIM swap fraud-la irundhu eppadi protect panradhu?",
+      "current_output": "Prevention: 1) SIM lock enable, 2) Don't share personal details, 3) Unusual network loss-kku alert, 4) Bank OTP to email (if available). If happened: Telecom provider + bank + police immediately. New SIM block request pannunga.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP020_TM",
+      "instruction": "Court case எத்தனை வருஷம் ஓடும்? Fast track வழி இருக்கா?",
+      "current_output": "Average: Civil case 5-10 years, Criminal 3-7 years. Fast options: 1) Lok Adalat (one-day settlement), 2) Mediation centres (free, court-annexed), 3) Arbitration (private, faster), 4) Consumer Forum (6 months-1 year), 5) Fast track courts (specific cases). Tips: Avoid adjournments, complete documentation, experienced lawyer. E-courts app-ல் case status track பண்ணலாம்.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC022_TG",
+      "instruction": "Birth certificate illai - late registration eppadi?",
+      "current_output": "Within 1 year: Normal fee at Registrar. 1-5 years: Late fee + affidavit. 5+ years: Court order required (Magistrate). Apply: Corporation/Municipality/Panchayat. Documents: Hospital records, school records, affidavit, ID proofs of parents. TN: e-Sevai centre-lum available.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM008_TM",
+      "instruction": "Police torture செய்தால் என்ன செய்வது?",
+      "current_output": "Complaint options: 1) SP/DIG-க்கு written complaint, 2) Judicial Magistrate-க்கு complaint, 3) State Human Rights Commission, 4) National Human Rights Commission, 5) High Court writ petition. Medical report, photos, witnesses - evidence வாங்குங்க. Custodial torture serious offence.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_004_TG",
+      "instruction": "RTI reply ethanai naalil kidaikkum?",
+      "current_output": "Normal: 30 days. Life/liberty matter: 48 hours. Third party information: 40 days. Transfer to other department: 35 days (5 days transfer + 30 days). Reply illaattal deemed refusal - First Appeal podalam.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP019_TG",
+      "instruction": "Agricultural land-ai non-agricultural use-kku convert pannalaamaa?",
+      "current_output": "Land Use Conversion permission venum. Apply: District Collector/DTCP. Natham land-aaga convert seydhaal construction pannalam. Wet land (nanjai) conversion kadinam. Conversion fee + stamp duty difference kattanum. Illegal conversion-kku penalty + demolition.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC010_TG",
+      "instruction": "Employer experience letter/relieving letter thara marukkiraar",
+      "current_output": "Steps: 1) Written request (email/letter), 2) HR head escalation, 3) Labour Commissioner complaint, 4) Civil Court mandatory injunction. Documents rightfully yours. Background verification-la issue varum - previous employer-kku new employer-kitta explain pannunga.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE001_TM",
+      "instruction": "UPI fraud ஆனால் உடனே என்ன செய்யணும்?",
+      "current_output": "Golden hour (first 24 hours முக்கியம்): 1) Bank-க்கு immediately call - transaction block, 2) 1930 helpline (cyber fraud), 3) cybercrime.gov.in-ல் complaint, 4) UPI app-ல் report, 5) Nearby police station FIR. Amount recover chance: 24 hours-ல் report = higher chance.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS001_TG",
+      "instruction": "Consumer-aaga enakku ennenna rights irukku?",
+      "current_output": "Consumer Protection Act 2019-in keezh 6 mukkiya rights: 1) Safety right - unsafe products-la irundhu protection, 2) Information right - product details therinjukka, 3) Choice right - alternatives select seyya, 4) Hearing right - complaint kodukka, 5) Redressal right - compensation pera, 6) Education right - consumer awareness.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM016_TM",
+      "instruction": "Theft vs Robbery என்ன வித்தியாசம்?",
+      "current_output": "Theft (IPC 379/BNS 303): Secretly taking property - 3 years imprisonment. Robbery (IPC 392/BNS 309): Theft + force/fear - 10 years imprisonment. Dacoity (5+ persons): 10 years to life. House breaking: Additional charges. Recovery of property possible.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP005_TM",
+      "instruction": "Bank account freeze ஆச்சு, ஏன்? என்ன செய்வது?",
+      "current_output": "Freeze reasons: 1) Court order (loan default, legal case), 2) IT department notice, 3) Suspicious transactions (PMLA), 4) KYC not updated. Steps: 1) Bank-கிட்ட freeze reason கேளுங்க (writing-ல), 2) Court order = lawyer consult, 3) IT matter = CA consult, 4) KYC = documents update பண்ணுங்க. Wrongful freeze: Banking Ombudsman complaint.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

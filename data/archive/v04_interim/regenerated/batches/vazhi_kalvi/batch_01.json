@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 1,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PRAC019_TG",
+      "instruction": "Internship eppadi kidaikkum? Apply enge?",
+      "current_output": "Internship sources: 1) College placement cell - company tie-ups 2) Internshala.com - largest platform 3) LinkedIn - direct apply 4) Company websites - careers page 5) Professor reference - industry contacts 6) Alumni network 7) Government internships - NITI Aayog, ministries. Tips: Apply early (6 months before), customize resume for each application. Unpaid internship: Experience valuable, accept if good company. Stipend: Negotiate politely.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM005_TG",
+      "instruction": "Age limit government college admission-ku irukkiradhaa?",
+      "current_output": "UG courses: Generally no upper age limit for most courses. Exceptions: Medical (25 for general, 30 for reserved), Law integrated (20), NDA (19.5). Minimum age: 17 years usually. PG courses: No age limit mostly. PhD: No limit. Government jobs: Age limits apply (varies by post). Reality: Complete your education at any age - many successful late starters. Distance education: No age restrictions at all.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP013_TG",
+      "instruction": "Salem/Erode region-la agriculture courses enge?",
+      "current_output": "Agriculture education Salem/Erode: 1) Vanavarayar Institute Pollachi - B.Sc Agriculture 2) Agricultural College & Research Institute Madurai (affiliated) 3) Horticultural College Periyakulam 4) KVK - Short courses. TNAU affiliated colleges admission through TNAU counselling. Farmers' children priority. Practical training in farms included. Jobs: Agriculture department, banks, own farming with modern techniques.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE020_TG",
+      "instruction": "NEET answer key-la mistake irundhal challenge panna mudiyuma?",
+      "current_output": "Mudiyum. NTA official website-la answer key challenge window open aagum. Rs.200 per question pay panni challenge pannalam. Valid challenge-aa irundha money refund aagum, marks adjust aagum.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM008_TG",
+      "instruction": "NEET Biology eppadi padippathu? NCERT enough-aa?",
+      "current_output": "Biology strategy: NCERT = Bible for NEET Biology. 90%+ questions NCERT-lirundhu direct/indirect. How to study: 1) Line by line reading 2) Diagrams by hand draw 3) Tables, flowcharts memorize 4) Previous year questions practice 5) NCERT exemplar problems. Additional: MTG, Trueman's for extra practice. Botany vs Zoology: Equal weightage. High scoring: Human Physiology, Genetics, Ecology.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM018_TG",
+      "instruction": "TNPSC Current Affairs eppadi prepare aavadhu?",
+      "current_output": "Current Affairs strategy: 1) Daily newspaper - The Hindu/Indian Express Tamil 2) Monthly magazines - Shankar IAS, Vision 3) PIB daily bulletin 4) TN Government press releases 5) YouTube - free CA classes. Focus areas: TN government schemes, India-international relations, sports, awards, science. Weightage: 25-30% in TNPSC. Last 6 months - most important. Make short notes daily. Revision: Weekly once previous weeks review.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC011_TM",
+      "instruction": "Student bank account open பண்றது எப்படி?",
+      "current_output": "Student account: 1) Zero balance accounts - SBI, Indian Bank offer 2) Documents: Aadhaar, college ID, photo, address proof 3) Benefits: ATM card, mobile banking, UPI 4) Scholarship DBT requires bank account 5) Education loan same bank = easier 6) Joint account option with parent 7) Fixed deposit for savings. Important: Keep minimum balance if required, avoid bounce charges. Link Aadhaar for DBT.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO014_TM",
+      "instruction": "Defence personnel children-க்கு Prime Minister's Scholarship scheme என்ன?",
+      "current_output": "PM's Scholarship Scheme for RPF/CAPF/Assam Rifles: Professional degree courses-க்கு. Amount: Boys - ₹2,500/மாதம் (₹30,000/ஆண்டு), Girls - ₹3,000/மாதம் (₹36,000/ஆண்டு). Duration: Full course. Eligibility: Children of serving/retired/deceased personnel. Apply: www.ksb.gov.in (Kendriya Sainik Board). Separate scheme for Ex-servicemen through Ministry of Defence - ₹5,000/மாதம்.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_005_TG",
+      "instruction": "Tamil medium-la padichaa future-la problem varumaa? English medium better-aa?",
+      "current_output": "Reality check: Tamil medium = Mother tongue strong, concepts clear. English medium = Language advantage. Both work! Important: 1) Foundation subjects (Maths, Science) any medium OK 2) English can be learned later 3) Many Tamil medium toppers in competitive exams 4) Government jobs no medium preference. Advice: Choose based on child comfort. Tamil medium + English tuition = balanced approach. Focus on learning, not medium.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM017_TG",
+      "instruction": "TNPSC-ku Tamil medium vs English medium - edhu better?",
+      "current_output": "Both equal opportunity. Tamil medium advantages: 1) TN textbooks Tamil-la padikkalaam 2) Answer writing easier 3) More candidates. English medium advantages: 1) Reference books availability 2) Current affairs sources more. Reality: Language doesn't matter, content matters. Toppers in both mediums. Choose your comfortable language. Paper can be written in either, no preference given. Focus on preparation, not medium.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH041_TM",
+      "instruction": "Competitive exam preparation-க்கு daily routine எப்படி இருக்க வேண்டும்?",
+      "current_output": "Ideal routine: 5:00 AM - எழுந்து, fresh topics படிப்பு (2-3 hrs). 8:00 AM - breakfast, current affairs. 9:00 AM - Practice/mock tests. 12:00 PM - lunch, short rest. 2:00 PM - revision, notes making. 5:00 PM - exercise/break. 6:00 PM - optional subjects. 9:00 PM - light revision, daily news. 10:00 PM - sleep. Weekly: 1 full mock test. Monthly: syllabus completion target வையுங்கள்.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE018_TG",
+      "instruction": "Exam hall ticket tholaindhuviduthu - enna seiyvathu?",
+      "current_output": "Panic vendaam. School/College-la duplicate hall ticket vaangalam. Board exam-kku DGE website-la download pannalam. Exam centre-la ID proof kaatti emergency admit card peralaam. Principal letter-um udhavum.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE012_TM",
+      "instruction": "விவசாயக் கல்வி படிக்க என்ன வழி?",
+      "current_output": "TNAU (Tamil Nadu Agricultural University) Coimbatore-ல் BSc Agriculture, Horticulture, Forestry courses உள்ளன. 12th Biology group-ல படித்தால் TNAU counselling மூலம் சேரலாம். Government job opportunities அதிகம்.",
+      "category": "extended_topics",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SCHO023_TM",
+      "instruction": "ஒற்றை பெற்றோர்/அநாதை மாணவர்களுக்கு என்ன scholarship?",
+      "current_output": "Support schemes: 1) AICTE Swanath Scholarship - ₹50,000/ஆண்டு orphans-க்கு 2) PM CARES for Children (COVID orphans) - full support till graduation 3) Social Welfare Department orphan scholarship 4) NGO support - SOS Children's Villages, Udayan Care. Documents: Parent death certificate, guardian affidavit. Priority in government hostel admission. Apply through respective department.",
+      "category": "scholarships",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "AGE_017_TG",
+      "instruction": "Degree mudinjachu. Job search panradhaa, PG padikkiradhaa? Confused-aa irukken.",
+      "current_output": "Decision framework: Job now if: 1) Financial need urgent 2) Work experience wanted 3) Industry-specific UG sufficient. PG if: 1) Academic/Research interest 2) Specific career needs PG (MBA for management) 3) Higher salary jump. Middle path: Job + Distance PG (IGNOU, University) OR Work 2-3 years → PG. Reality: Both paths successful. No 'wrong' choice. Career isn't linear. Many do job → PG → better job. Decide based on YOUR goals, not others' opinions.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM011_TM",
+      "instruction": "Exam-ல் wrong answer எழுதிட்டேன், cut பண்ணலாமா?",
+      "current_output": "Yes, cutting allowed. Method: Single line through wrong text, write correct above/below. Don't: Overwrite, scribble, use whitener (some exams prohibit). For MCQ/OMR: Circle filling rules strict - follow instructions exactly. If OMR mistake: Some allow correction with specific method. Essay type: Neat cutting = no penalty. Messy = bad impression. Time management: Better to continue, cut later if time permits. Rough work: Designated area only.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM027_TG",
+      "instruction": "School/College complaint enge koduppudhu?",
+      "current_output": "Complaint hierarchy: School: 1) Class teacher → Headmaster → DEO. College: 1) HOD → Principal → University Registrar → UGC. Online: 1) CM Cell - www.cm.tn.gov.in 2) MHRD grievance portal 3) Anti-ragging: www.antiragging.in. Fee issues: Fee Committee. Documents: Keep written complaints, get acknowledgment. Serious cases: Police, Women's Commission (harassment).",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA023_TM",
+      "instruction": "10th/12th pass-க்கு எந்தெந்த government jobs apply செய்யலாம்?",
+      "current_output": "10th pass jobs: 1) Railway Group D 2) SSC MTS (Multi-Tasking Staff) 3) TNPSC Group 4 4) Police constable 5) Post office GDS. 12th pass jobs: 1) SSC CHSL (LDC, DEO) 2) TNPSC Group 4 (higher posts) 3) Bank clerk (some) 4) Railway NTPC 5) Defence - Army, Navy, Air Force. Age: 18-30 (varies). Apply: Respective recruitment websites. Free coaching available through Employment Exchange.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM003_TM",
+      "instruction": "Counselling-ல் seat confirm ஆனா, பிறகு change பண்ண முடியுமா?",
+      "current_output": "Options: 1) Tentative allotment - wait for next round, better college possible 2) Self-reporting - confirm seat, can still upgrade in subsequent rounds 3) Final allotment - must join or forfeit. Upgrade: Each round, vacant seats filled. Your higher choices reconsidered. Risk: If you reject and don't get better, no seat. Safe: Confirm in hand, upgrade if available. Fees paid = refundable if upgraded officially.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM007_TG",
+      "instruction": "NEET-ku class 11 irundhae prepare aaganuumaa?",
+      "current_output": "Ideal: Class 11 start. Why? NEET syllabus = 11th + 12th. Class 11 weightage: 45-50%. Strategy: 1) 11th: Concepts strong, NCERT master 2) 12th: Revision + new topics + mock tests 3) After 12th: Full revision + test series. Late starter (12th)? Focus 50% important topics, daily 10-12 hours. Dropper year: Structured coaching + self-study balance. Never too late - many crack in 2nd/3rd attempt.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM025_TM",
+      "instruction": "Online application submit ஆகல, error வருது",
+      "current_output": "Common fixes: 1) Clear browser cache, try incognito mode 2) Different browser (Chrome/Firefox) 3) Check file size limits (usually <200KB photos, <500KB docs) 4) PDF/JPG format correct? 5) All mandatory fields filled? 6) Internet stable? 7) Deadline passed? 8) Server busy - try late night. Still failing: Screenshot error, contact helpline. Alternative: Try from e-Sevai centre - they have dedicated lines.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO016_TG",
+      "instruction": "NEET/JEE-ku Free Coaching enga kidaikkum?",
+      "current_output": "**Free NEET/JEE Coaching:**\n\n**1. TN Government:**\n- Naan Mudhalvan Program: naanmudhalvan.tn.gov.in\n- District Collector free coaching\n\n**2. TNSF:** Free residential for rural - tnsf.org.in\n\n**3. Super 30 Programs:** NGOs, Free everything for SC/ST/EWS\n\n**4. Scholarship Exams:**\n- ANTHE (Aakash): Up to 100% off\n- TALLENTEX (Allen): Up to 90% off\n\n**5. Online Free:**\n- SWAYAM, Khan Academy\n- Physics Wallah, Kalvi TV\n\n**6. SC/ST/BC Specific:**\n- Dr. Ambedkar Free Coaching\n- BC/MBC Scheme: bcmbcmw.tn.gov.in\n\n**How to Find:**\n- School HM, Collector Office\n- Social Welfare Dept\n- Local MLA sponsorship",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP010_TG",
+      "instruction": "Madurai region-la top engineering colleges evai?",
+      "current_output": "Top engineering colleges Madurai region: 1) Thiagarajar College of Engineering (TCE) - Autonomous, top ranked 2) Government College of Engineering Tirunelveli 3) National Engineering College Kovilpatti 4) Mepco Schlenk Madurai 5) PSNA College of Engineering Dindigul. Admission: TNEA counselling. TCE cutoff high - 195+ for popular branches. Government colleges affordable - ₹50,000/year approx.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA029B_TG",
+      "instruction": "ITI-la admission-ku enna procedure-nga? Fees evlo?",
+      "current_output": "10th/8th pass pannirukkanum. www.skilltraining.tn.gov.in-la apply pannu/pannunga. Government ITI full free - fee illai, tools, books ellam free. Documents: TC, marks card, community certificate, Aadhaar. June-July-la admission start aagum.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP002_TM",
+      "instruction": "NEET Exam Pattern என்ன? Marks எப்படி calculate ஆகும்?",
+      "current_output": "**NEET Exam Pattern 2024:**\n\n**Exam Details:**\n- Mode: Offline (Pen & Paper)\n- Duration: 3 hours 20 minutes\n- Total Questions: 200 (180 to attempt)\n- Total Marks: 720\n\n**Subject-wise Distribution:**\n\n| Subject | Section A | Section B | Total |\n|---------|-----------|-----------|-------|\n| Physics | 35 | 15 (10 attempt) | 45 |\n| Chemistry | 35 | 15 (10 attempt) | 45 |\n| Botany | 35 | 15 (10 attempt) | 45 |\n| Zoology | 35 | 15 (10 attempt) | 45 |\n\n**Marking Scheme:**\n- Correct Answer: +4 marks\n- Wrong Answer: -1 mark (Negative marking!)\n- Unattempted: 0 marks\n\n**Marks Calculation:**\n```\nTotal = (Correct × 4) - (Wrong × 1)\n```\n\n**Example:**\n- Correct: 150, Wrong: 20, Unattempted: 10\n- Score = (150 × 4) - (20 × 1) = 600 - 20 = 580\n\n**Cut-off (Approximate):**\n| Category | Marks (out of 720) |\n|----------|-------------------|\n| General | 600+ (Top colleges) |\n| OBC | 550+ |\n| SC | 450+ |\n| ST | 400+ |\n| Govt Medical (General) | 550+ |\n\n**Important Tips:**\n- Don't guess randomly (negative marking)\n- Section B gives choice - attempt easier ones\n- Time management crucial",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

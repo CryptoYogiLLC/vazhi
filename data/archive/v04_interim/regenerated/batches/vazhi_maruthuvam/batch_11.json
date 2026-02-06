@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 11,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH228_TG",
+      "instruction": "Online natural remedy videos/tips - trust pannalaamaa?",
+      "current_output": "Be careful! Red flags: 1) \"Cure for everything\" claims, 2) No credentials shown, 3) Extreme claims without evidence, 4) Asking to stop doctor's medicines, 5) Selling expensive products. Trust: 1) Government AYUSH websites, 2) Established medical institutions, 3) Registered practitioners, 4) Research-backed information. Verify: Cross-check with multiple sources. Best: Consult qualified practitioner in person for treatment.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH067_TG",
+      "instruction": "Hospital pogum podhu enna precaution edukkanum?",
+      "current_output": "Before: 1) Research hospital/doctor credentials, 2) Get referral if possible, 3) Carry complete medical history. During: 1) Ask questions - understand treatment, 2) Get written estimates, 3) Read consent forms fully, 4) Keep copies of everything, 5) Have family member present, 6) Note staff names. After: 1) Take discharge summary, 2) Clarify follow-up, 3) Keep medicines/bills safely.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH101_TM",
+      "instruction": "Cancer medicine-க்கு subsidy இருக்கா?",
+      "current_output": "Yes! Options: 1) Government hospital pharmacy - free/subsidized, 2) CMCHIS covers cancer treatment including medicines, 3) Jan Aushadhi - generic cancer drugs cheaper, 4) Patient assistance programs (pharma companies), 5) NGO support (Cancer Institute, Adyar). Apply: Hospital social worker helps. Also: PM-BJKAY scheme for some cancer surgeries.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH127_TM",
+      "instruction": "High-risk pregnancy என்றால் என்ன? Special care எங்கே?",
+      "current_output": "High-risk factors: 1) Age <18 or >35, 2) Previous C-section/complications, 3) Multiple pregnancy (twins), 4) Diabetes/BP/heart disease, 5) Rh negative blood, 6) Previous stillbirth/miscarriage. Care: 1) Referred to district hospital/medical college, 2) More frequent monitoring, 3) Specialist care. Identification: During ANC visits. Don't hide history - affects baby's safety.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH138_TG",
+      "instruction": "Infertility treatment government hospital-la available-aa?",
+      "current_output": "Limited but available. Government: 1) Basic infertility workup - free at medical college hospitals, 2) Some IUI facilities, 3) Counseling. IVF: 1) Limited government centres (Institute of Obstetrics - Chennai), 2) Subsidized at some, 3) Mostly private (expensive). CMCHIS: Covers some infertility procedures. PM-PMSBY: Assisted reproduction not fully covered yet. Cost: IVF privately Rs.1-3 lakhs per cycle.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH057_TG",
+      "instruction": "Hospital medical records thara marukkthu - enna seivathu?",
+      "current_output": "Patient's right - cannot refuse. Actions: 1) Written demand with delivery acknowledgment, 2) RTI (if government hospital), 3) Consumer Forum application for production of records, 4) Police complaint (if suspicious tampering), 5) Court application for preservation order. Tampering: Serious offence - evidence destruction. Hospital must provide within 72 hours of written request.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH048_TM",
+      "instruction": "Clinical trial-ல் participate பண்ணலாமா? Risks என்ன?",
+      "current_output": "Voluntary participation. Requirements: 1) Ethics Committee approval, 2) Detailed informed consent, 3) Insurance coverage for participants, 4) Right to withdraw anytime, 5) Compensation for injury. Risks: Unknown side effects, may receive placebo. Benefits: Access to new treatments, free care during trial, compensation. Verify: CTRI registration (ctri.nic.in). Never feel pressured.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH155_TG",
+      "instruction": "Sugar patient - enna food saappidalaam?",
+      "current_output": "Eat freely: 1) Most vegetables (leafy greens, bitter gourd, lady finger), 2) Whole grains (millets, brown rice - portion control), 3) Lean protein (fish, chicken, dal), 4) Nuts (limited). Limit: 1) White rice, maida, 2) Sweets, 3) Sugary drinks, 4) Fruits (portion control - 1 small fruit). Avoid: 1) Refined sugar, 2) Packaged juices, 3) Deep fried. Tip: Eat regularly, don't skip meals. Dietitian consultation: Free at government hospitals.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH098_TM",
+      "instruction": "Fake medicine கிடைச்சது - complain எங்கே?",
+      "current_output": "Serious offence! Complaint: 1) Drug Inspector (District Drug Control Office), 2) State Drugs Control Department, 3) FDA helpline, 4) Police (criminal case possible). Evidence: Keep medicine, bill, pack with batch number. Verification: Check authenticity - company website, QR code (some have), call company. Punishment: Up to life imprisonment for spurious drugs causing death. CDSCO: Central regulator.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH224_TG",
+      "instruction": "Enna disease-kku endha yoga?",
+      "current_output": "Condition-specific yoga: 1) Diabetes - Surya Namaskar, twists, Pranayama, 2) BP - Shavasana, forward bends, slow breathing, 3) Back pain - Cat-cow, child's pose, sphinx, 4) Anxiety/stress - Pranayama, meditation, restorative poses, 5) Obesity - Power yoga, Surya Namaskar, 6) Asthma - Pranayama, chest opening poses, 7) Insomnia - Yoga Nidra, legs up wall. Important: Learn from qualified teacher, start slow, inform about conditions.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH168_TM",
+      "instruction": "Generic medicine weak, branded strong - உண்மையா?",
+      "current_output": "MYTH! Same active ingredient, same dose = same effect. Why generic cheaper: No brand marketing cost, no patent royalty. Quality: Government-approved generics meet same standards. Proof: Government hospitals use generic - same results. Jan Aushadhi: WHO-GMP certified, 50-90% cheaper. Don't fall for: Marketing claims, fancy packaging. Ask pharmacist: Generic alternative for any branded medicine.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH087_TG",
+      "instruction": "Diagnostic lab report-la doubt - retest ketkalaamaa?",
+      "current_output": "Yes! Your right. Options: 1) Same lab - request repeat test (may charge or free depending), 2) Different NABL-accredited lab, 3) Hospital lab if admission. Red flags: 1) Result doesn't match symptoms, 2) Drastic change from previous, 3) Clerical errors visible. Lab liability: Wrong report causing harm = negligence. Verify: NABL accreditation for reliability.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH189_TM",
+      "instruction": "Seasonal diseases-க்கு Siddha prevention?",
+      "current_output": "Monsoon (Kaar kaalam): Nilavembu, avoid raw foods, warm water. Winter (Munpani): Chukku preparations, oil massage. Summer (Mudhuvenil): Cooling preparations, Nannari, tender coconut. Flu/dengue season: Papaya leaf juice, Nilavembu Kudineer. Government distribution: During epidemics, free Siddha immunity medicines distributed through PHC. Lifestyle: Seasonal diet (Paruva Unavugal) as per traditional calendar.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH061_TM",
+      "instruction": "Doctor-மேல் criminal case போடலாமா?",
+      "current_output": "Yes, for: 1) Death due to negligence (Section 304A IPC / Section 106 BNS), 2) Grievous hurt (Section 338 IPC), 3) Hurt (Section 337 IPC). Punishment: 304A - 2 years imprisonment + fine. Requirement: Gross negligence, not just error. Supreme Court: Doctors shouldn't be arrested for bona fide errors. But criminal recklessness = liable. FIR: Police can register on complaint.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH013_TG",
+      "instruction": "TB (Tuberculosis) treatment free-yaa kidaikkumaa?",
+      "current_output": "Yes! National TB Elimination Program - completely FREE. Services: 1) Diagnosis (sputum test, X-ray), 2) Medicines (6-9 months course), 3) Follow-up tests, 4) DOTS therapy supervision, 5) Nutrition support (Rs.500/month), 6) Transport allowance. Where: Government hospitals, designated TB centres. Private diagnosis: Government will still provide free treatment. Nikshay Poshan Yojana: DBT nutrition support.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH140_TM",
+      "instruction": "Cervical/breast cancer screening free-யா?",
+      "current_output": "Yes! Population-based screening program. Available: PHC, government hospitals. Cervical: VIA (Visual Inspection with Acetic Acid) - simple, painless. Breast: Clinical breast examination. Age: 30+ years, every 3-5 years. HPV vaccine: Available for cervical cancer prevention (9-26 years ideal). Early detection: Curable. Camps: Regular screening camps conducted. Ask at PHC.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH051_TG",
+      "instruction": "Operation-la scissors/gauze ulle vittuttaanga - enna seivathu?",
+      "current_output": "Classic negligence case (Res Ipsa Loquitur - thing speaks for itself). Steps: 1) Get X-ray/CT evidence, 2) Medical records collect, 3) Complaint to hospital, 4) Consumer Forum case, 5) Criminal complaint (Section 338 IPC - grievous hurt). Compensation: Cost of removal surgery + damages + mental agony + loss of income. Hospital cannot deny - clear negligence.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH199_TM",
+      "instruction": "Abhyanga massage vs regular massage - difference?",
+      "current_output": "Abhyanga = Ayurvedic whole body oil massage. Difference: 1) Medicated oils specific to condition/Prakriti, 2) Specific direction strokes (towards heart), 3) Marma points included, 4) Part of treatment protocol (not just relaxation), 5) Followed by steam bath typically. Benefits: Toxin removal, circulation, joint lubrication, skin health, relaxation. Self-Abhyanga: Daily oil massage at home recommended in Ayurveda. Professional: For treatment purposes.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH126_TG",
+      "instruction": "Delivery government hospital-la free-yaa?",
+      "current_output": "Yes! Completely free. Includes: 1) Normal delivery, 2) C-section if needed, 3) Anesthesia, 4) Medicines, 5) Post-delivery care, 6) Baby care. Additional: 1) 102 ambulance free transport, 2) JSY cash incentive for institutional delivery, 3) Dr. Muthulakshmi scheme Rs.18,000. Private: CMCHIS covers complicated deliveries. Register: PHC for referral chain.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH220_TM",
+      "instruction": "Naturopathy centres TN-ல் எங்கே இருக்கு?",
+      "current_output": "Government: 1) Government Yoga and Naturopathy Medical College, Chennai, 2) District AYUSH hospitals (Naturo units). Private: 1) Jindal Naturecure Institute, Bangalore (near TN), 2) Nature Cure Hospital, Chennai, 3) Various wellness resorts. Services: Hydrotherapy, mud therapy, massage, diet therapy, yoga. Duration: 7-21 days programs. Cost: Government free/nominal, Private Rs.2,000-8,000/day. Good for: Diabetes, BP, obesity, stress, detox.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH123_TG",
+      "instruction": "Mental illness reason-aa job reject panninaanga - action?",
+      "current_output": "Illegal discrimination! RPD Act + MHCA protection. Action: 1) Written reason kelunga, 2) State Commissioner for Disabilities complaint, 3) Labour court if existing job, 4) Court (writ petition). Exceptions: Very limited safety-critical jobs with specific requirements. Proof: Email/written rejection citing mental health. Remedy: Reinstatement, compensation, policy change order.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH119_TG",
+      "instruction": "Friend/family member suicidal-aa irukaanga - enna seivathu?",
+      "current_output": "Dos: 1) Listen without judgment, 2) Take them seriously, 3) Stay with them, 4) Remove means (medicines, sharp objects), 5) Encourage professional help, 6) Call helpline together. Don'ts: 1) Don't leave alone if immediate risk, 2) Don't promise secrecy, 3) Don't argue or lecture, 4) Don't dare them. Emergency: Take to hospital emergency if attempt made or imminent risk. You're not alone - helplines guide you too.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH035_TG",
+      "instruction": "Body hospital-la detain panraanga bill kattum varai - legal-aa?",
+      "current_output": "ILLEGAL! Dead body detention prohibited. Supreme Court + High Court orders: 1) Body cannot be held for bill payment, 2) Hospital can pursue legal recovery of dues, 3) Detention = criminal offence. Action: 1) Police complaint, 2) Magistrate petition, 3) Human Rights Commission. Bill dispute: Settle later through legal means - body must be released. Report: DHS, State Medical Council.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH014_TM",
+      "instruction": "HIV/AIDS treatment எங்கே free-யா கிடைக்கும்?",
+      "current_output": "Free at ART (Anti-Retroviral Therapy) Centres. TN has 100+ ART centres. Services: 1) HIV testing (free, confidential), 2) ART medicines (lifelong free), 3) CD4 count tests, 4) Opportunistic infection treatment, 5) Counseling, 6) PPTCT (pregnant women). Location: District hospitals, medical colleges. TANSACS: State AIDS control body. Helpline: 1097 (AIDS helpline). Confidentiality guaranteed.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH183_TM",
+      "instruction": "Siddha medicine-ல் heavy metals இருக்குமா? Safe-ஆ?",
+      "current_output": "Some Siddha medicines use: Metals (பாஷாணம்), mercury (ரசம்), arsenic (பாடாணம்) - after purification (சுத்தி). Licensed products: Processed as per traditional methods, tested for safety limits. Risk: Unregulated products, improper preparation. Safety: 1) Buy only licensed products, 2) Consult qualified doctor, 3) Inform if taking other medicines, 4) Follow dosage strictly. Research: CCRS validates safety of traditional preparations.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

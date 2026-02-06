@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 16,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH038_TM",
+      "instruction": "Family member-க்கு patient condition சொல்லலாமா?",
+      "current_output": "Only with patient consent (if patient is conscious/competent). Rules: 1) Adult patient decides who gets information, 2) Unconscious patient: Next of kin informed, 3) Minor: Parents/guardians informed, 4) Psychiatric patient: Rules vary. Sensitive info (HIV, mental health): Extra careful - patient must specifically consent. Nominated person: Patient can designate specific family member for communication.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH011_TG",
+      "instruction": "Free vaccination schedule enna? Enge poganum?",
+      "current_output": "Universal Immunization Program - FREE for all children. Schedule: Birth - BCG, OPV, Hep B; 6 weeks - DPT, OPV, Hep B; 10 weeks - DPT, OPV; 14 weeks - DPT, OPV, Hep B; 9 months - Measles, Vitamin A; 16-24 months - DPT booster, OPV, Measles. Where: PHC, Government hospital, Anganwadi. Carry: Child's health card. Missed dose: Can catch up - consult ANM.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH202_TM",
+      "instruction": "Hair fall/hair problems-க்கு Ayurveda?",
+      "current_output": "Effective treatments: 1) Shirodhara, 2) Shiro Abhyanga (head massage), 3) Nasya (nasal drops), 4) Internal medicines - Bhringraj, Brahmi, 5) Specialized hair oils - Neelibringadi. Conditions: Hair fall, premature greying, dandruff, baldness (early stages). Duration: 3-6 months for visible results. Diet: Important - protein, iron rich. Underlying causes: Stress, hormones, nutrition - all addressed. Products: Branded Ayurvedic hair oils available widely.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH229_TG",
+      "instruction": "Enga paatti sonna sali vaithiyam - ore naalil sariyaagum-nu, nambalaamaa? (Rural style)",
+      "current_output": "Paatti vaithiyam pala nalladhu! Chukku kaapi, manjal paal, pepper rasam - ellaam effective. Aana \"ore naal\" expectation vendaam - 2-3 days patience venum. Severe-aa irundhaa, fever higher than 103, breathing problem irundhaa - doctor ponga. Simple cold-kku home remedy try pannunga first. Combination: Rest + warm liquids + remedy = faster recovery.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH031_TM",
+      "instruction": "Doctor எங்க native language-ல் explain பண்ணணுமா?",
+      "current_output": "Yes! Right to information in understandable language. Includes: 1) Diagnosis explanation, 2) Treatment options, 3) Risks and benefits, 4) Consent form explanation, 5) Medicine instructions. If doctor doesn't speak Tamil: Hospital should arrange translator. Written materials: Should be in local language. Complaint: If communication barrier causes harm - negligence claim possible.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH197_TM",
+      "instruction": "Panchakarma யாருக்கு நல்லது? யாருக்கு வேண்டாம்?",
+      "current_output": "Good for: 1) Chronic diseases (arthritis, skin, digestive), 2) Lifestyle disorders (obesity, stress), 3) Preventive detox (healthy people - yearly), 4) Pre-conception purification, 5) Anti-aging. Avoid: 1) Acute illness/fever, 2) Pregnancy, 3) Very old/weak, 4) Children (<12), 5) Certain heart conditions, 6) During menstruation (some procedures). Consultation: Doctor will assess suitability based on strength, condition.",
+      "category": "ayurveda",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HLTH076_TG",
+      "instruction": "Estimate-ai vida bill adhigamaa vandhadhu - refuse pannalaamaa?",
+      "current_output": "Estimate must be reasonable. Rights: 1) Written estimate before planned admission, 2) Significant variation needs explanation, 3) Complications = valid reason for increase, 4) No complication + major increase = dispute. Rule of thumb: 10-15% variation acceptable. More: Ask itemized justification. Still disputed: 1) Pay under protest (written), 2) Consumer Forum for refund. Keep estimate copy!",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH094_TG",
+      "instruction": "Doctor prescription evvalavu naal valid?",
+      "current_output": "General rule: 1) Acute illness prescription - use immediately, 2) Chronic medicines - usually for prescribed duration (30-90 days), 3) Controlled substances - single use only. Refills: Some pharmacies refill for chronic conditions (diabetes, BP) without new prescription. Best practice: Regular doctor checkup for chronic medicines. Expired prescription: Pharmacist discretion, usually won't dispense.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH012_TG",
+      "instruction": "School health program-la enna check panraanga?",
+      "current_output": "School Health Program services: 1) Height/weight monitoring, 2) Eye checkup (vision), 3) Dental checkup, 4) Hearing test, 5) General physical examination, 6) Deworming tablets, 7) Iron supplements, 8) Referral for issues found. Who: Government school students - free. Frequency: Usually once a year. Issues found: Referred to PHC/hospital. Spectacles: Free for poor students.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH100_TM",
+      "instruction": "Wrong medicine கொடுத்துட்டாங்க - action என்ன?",
+      "current_output": "Pharmacy negligence! Actions: 1) Don't use if noticed, 2) Return with bill, 3) If used and harm occurred - medical treatment first, 4) Complaint: Drug Inspector, Consumer Forum. Compensation: Medical expenses + damages if harm. Severe harm/death: Criminal case possible (Section 304A). Evidence: Wrong medicine pack, prescription, bill. Pharmacist license: Can be cancelled.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH192_TG",
+      "instruction": "Prakriti (body constitution) endraal enna?",
+      "current_output": "Prakriti = Your natural body type/constitution. Types: 1) Vata (air+space) - thin, active, anxious, 2) Pitta (fire+water) - medium build, sharp intellect, irritable, 3) Kapha (earth+water) - heavy, calm, slow. Most people: Combination (Vata-Pitta, Pitta-Kapha, etc.). Importance: Treatment personalized based on Prakriti. Diagnosis: Pulse examination (Nadi Pariksha), physical examination, questionnaire. Treatment: Balances your specific imbalances.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH146_TM",
+      "instruction": "Heart attack symptoms என்ன? என்ன செய்யணும்?",
+      "current_output": "Symptoms: 1) Chest pain/pressure (elephant sitting on chest feeling), 2) Left arm/jaw pain, 3) Breathlessness, 4) Sweating, 5) Nausea. Women: May have different symptoms - fatigue, back pain. Action: 1) Call 108 immediately, 2) Chew aspirin if available (not allergic), 3) Loosen tight clothes, 4) Don't drive yourself. Golden hour: Treatment within 1 hour saves heart muscle. Don't ignore 'gas' feeling!",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH058_TM",
+      "instruction": "Medical negligence-க்கு எவ்வளவு compensation கிடைக்கும்?",
+      "current_output": "Depends on: 1) Severity of injury/death, 2) Age of victim, 3) Earning capacity, 4) Future medical needs, 5) Mental agony. Components: 1) Medical expenses (past + future), 2) Loss of income, 3) Pain and suffering, 4) Disability compensation, 5) Loss of consortium (spouse), 6) Punitive damages (gross negligence). Range: Rs.5 lakhs to Rs.5+ crores. Death: Multiplier method based on age and income.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH090_TG",
+      "instruction": "MRP-kku mela charge panraanga - complain eppadi?",
+      "current_output": "Illegal! Legal Metrology Act violation. MRP = Maximum Retail Price (inclusive of all taxes). Action: 1) Point out MRP printed on pack, 2) Refuse to pay excess, 3) Complaint: Weights and Measures Department (Legal Metrology), 4) Consumer helpline: 1800-11-4000. Evidence: Bill + photo of MRP on pack. Penalty: Fine on seller. Hospital pharmacy also bound by MRP.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH042_TM",
+      "instruction": "Hospital-ல் complaint எப்படி போடுவது?",
+      "current_output": "Internal: 1) Grievance cell (every hospital must have), 2) Hospital administrator, 3) Medical superintendent. External: 1) District Health Department (DHS), 2) State Medical Council (for doctors), 3) Clinical Establishment Authority, 4) Consumer Forum (for deficiency in service). Written complaint: Keep copy with acknowledgment. Timeline: Response within 15-30 days typically.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH028_TG",
+      "instruction": "Informed consent endraal enna? Edhukkellam consent venum?",
+      "current_output": "Informed consent = Patient understanding and agreeing to treatment. Required for: 1) Any surgery, 2) Anesthesia, 3) Blood transfusion, 4) Invasive procedures, 5) Clinical trials, 6) HIV testing. Must explain: Procedure, risks, alternatives, success rate. Language: Patient's language (Tamil). Without consent: Medical negligence. Exception: Life-threatening emergency - implied consent.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH158_TG",
+      "instruction": "Hospital-la bill romba pottaanga, enna panradhu? (Madurai style)",
+      "current_output": "First - itemized bill kelunga. Medicine MRP check pannunga - MRP-kku mela charge panna koodaadhu. Estimate irundhaa compare pannunga. Reasonable illanna: 1) Hospital manager-kitta complaint, 2) Consumer Forum, 3) DHS complaint. CMCHIS card irundhaa - pala treatment free. Bill dispute = pay under protest (writing-la) and then fight.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH179_TM",
+      "instruction": "Diabetes-க்கு Siddha medicine இருக்கா?",
+      "current_output": "Yes! Siddha for Madhumegam (diabetes): Medicines: 1) Seenthil Choornam, 2) Neermulli Kudineer, 3) Nilavembu Kudineer, 4) Aavarai Pattai, 5) Sirukurinjan. Research: CCRS has validated formulations. Important: 1) Don't stop allopathic suddenly, 2) Regular monitoring essential, 3) Integrated approach best, 4) Diet + lifestyle crucial. Complication prevention: Siddha foot care for diabetic foot.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH143_TM",
+      "instruction": "Sexual assault-க்கு பிறகு medical help எங்கே?",
+      "current_output": "Immediate: 1) Any hospital emergency (government or private), 2) One-Stop Centre (OSC) at district hospitals. Services: 1) Free medical examination, 2) Emergency contraception, 3) STI prevention, 4) Forensic evidence collection, 5) Counseling. Rights: 1) Treatment cannot be refused, 2) Female doctor if requested (if available), 3) Privacy maintained. Police: Hospital can help file FIR. Time: Evidence best collected within 72 hours.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH091_TG",
+      "instruction": "Medicine-la side effect vandhaal enna seivathu?",
+      "current_output": "Actions: 1) Stop medicine immediately (unless doctor says continue), 2) Contact prescribing doctor, 3) Go to hospital if severe, 4) Report: PvPI (Pharmacovigilance Program of India) - pvpi.gov.in or helpline 1800-180-3024. Severe ADR (Adverse Drug Reaction): Life-threatening = emergency. Compensation: If due to manufacturing defect - Consumer Forum. Keep medicine pack as evidence.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH069_TM",
+      "instruction": "Private hospital registration check பண்றது எப்படி?",
+      "current_output": "Check: 1) TN Clinical Establishments Registration (mandatory), 2) Display: Registration certificate must be displayed, 3) NABH accreditation (optional but quality indicator), 4) Fire safety certificate, 5) Bio-medical waste authorization. Verify: Directorate of Medical Services (DMS) website or office. Unregistered hospital: Illegal - report to DHS. Also check: Doctor registrations displayed.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH022_TG",
+      "instruction": "Jan Aushadhi store endraal enna? Medicines cheap-aa kidaikkumaa?",
+      "current_output": "Jan Aushadhi = Government generic medicine stores. Prices: 50-90% cheaper than branded. Quality: Same as branded (WHO-GMP certified). Available: 1,800+ medicines, 280+ surgical items. Locations: Major hospitals, standalone stores. Find: janaushadhi.gov.in or app. Example: Paracetamol 500mg (10 tablets) - Rs.2-3 vs branded Rs.15-20. Prescription needed for schedule drugs.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH091_TM",
+      "instruction": "Medicine-ல் side effect வந்தால் என்ன செய்வது?",
+      "current_output": "Actions: 1) Stop medicine immediately (unless doctor says continue), 2) Contact prescribing doctor, 3) Go to hospital if severe, 4) Report: PvPI (Pharmacovigilance Program of India) - pvpi.gov.in or helpline 1800-180-3024. Severe ADR (Adverse Drug Reaction): Life-threatening = emergency. Compensation: If due to manufacturing defect - Consumer Forum. Keep medicine pack as evidence.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH133_TM",
+      "instruction": "Sex determination test legal-ஆ? Punishment என்ன?",
+      "current_output": "ILLEGAL! PCPNDT Act 1994. Prohibited: 1) Sex determination of fetus, 2) Disclosure of sex, 3) Advertisement for sex selection. Punishment: 3-5 years jail + Rs.10,000-1 lakh fine. Who's punished: Doctor, lab, pregnant woman (if complicit), person who seeks test. Ultrasound: Must NOT reveal sex - if revealed, report to authorities. Female feticide: Serious crime - declining sex ratio issue.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH003_TM",
+      "instruction": "CMCHIS-ல் என்னென்ன treatment cover ஆகும்?",
+      "current_output": "Covered: 1) Heart surgery, bypass, stent, 2) Cancer treatment, chemotherapy, 3) Kidney transplant, dialysis, 4) Brain surgery, 5) Joint replacement, 6) Accident/trauma surgery, 7) Maternity (complicated), 8) Eye surgery (cataract), 9) ENT procedures. Not covered: OPD consultation, dental (cosmetic), infertility (basic). Full list: cmchistn.com",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

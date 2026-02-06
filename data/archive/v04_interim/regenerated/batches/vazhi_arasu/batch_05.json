@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 5,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CGS014",
+      "instruction": "PM-KISAN scheme enna?",
+      "current_output": "Direct cash support for farmers. Amount: ₹6,000/year (₹2,000 x 3 installments). Eligibility: Land-owning farmers. Exclusions: Government employees, Income Tax payers, Registered professionals, Those getting ₹10,000+ pension. Registration: pmkisan.gov.in, CSC/Agriculture Office. Need Aadhaar, Land Records, Bank Account. Status: pmkisan.gov.in → Beneficiary Status",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA040T",
+      "instruction": "PMAY-Gramin eppadi peruvadhu?",
+      "current_output": "House construction assistance for rural poor. Amount: ₹1.20 lakh (plain) / ₹1.30 lakh (hilly). Selection from SECC 2011 data. Check eligibility at pmayg.nic.in. If not in list: Appeal at Gram Panchayat. Additional: MGNREGA wages, toilet under SBM. Total: ₹1.5 lakh+",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "REF006",
+      "instruction": "Important Central Government websites enna?",
+      "current_output": "All Services: services.india.gov.in, Aadhaar: uidai.gov.in / myaadhaar.uidai.gov.in, PAN: incometax.gov.in, Scholarships: scholarships.gov.in, Pension: maandhan.in, PM-KISAN: pmkisan.gov.in, Ayushman Bharat: pmjay.gov.in, PMAY Housing: pmay-urban.gov.in, Education Loan: vidyalakshmi.co.in, Skill Training: pmkvyofficial.org, MUDRA Loan: mudra.org.in, Street Vendor: pmsvanidhi.mohua.gov.in, LPG: mylpg.in, DigiLocker: digilocker.gov.in",
+      "category": "reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PAN004",
+      "instruction": "PAN Card-la thavaru irukku - eppadi sari seyvadhu?",
+      "current_output": "To correct: 1. onlineservices.nsdl.com → 'Changes or Correction in PAN Data' 2. Fill form 3. Upload correct documents 4. Fee: ₹107. Can correct: Name, DOB, Father's name, Address, Photo/Signature. Important: If PAN-Aadhaar linked, details must match in both",
+      "category": "pan_card_bilingual",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE020",
+      "instruction": "En Bank Account-la irundhu OTP illaama panam poyiduchu. Cyber fraud-ku enna seyvadhu?",
+      "current_output": "Immediately (Minutes matter!):\n1. Call Bank - Freeze account, raise dispute\n2. cybercrime.gov.in - File complaint online\n3. 1930 Helpline - National Cyber Crime (24x7)\n\nWithin 24 hours:\n4. Written Bank Complaint - Get acknowledgment\n5. Police FIR - With all details + screenshots\n\nBank Liability (RBI Rules):\n6. Report within 3 days → Full refund\n7. 4-7 days → Max loss ₹10,000\n8. Bank must resolve in 90 days\n\nEscalation:\n9. Banking Ombudsman - cms.rbi.org.in\n\nPrevention:\n10. Enable SMS alerts, set transaction limits\n11. Never share OTP",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB008",
+      "instruction": "என் Car 15 வருடம் ஆகிவிட்டது. Fitness Certificate எப்படி வாங்குவது? எந்த test செய்வார்கள்?",
+      "current_output": "**Vehicle Fitness Certificate:**\n\n**எப்போது தேவை?**\n- Private Vehicle: 15 வருடத்திற்கு பின் (every 5 years)\n- Commercial Vehicle: 8 வருடத்திற்கு பின் (every year)\n- Transport Vehicle: Every year\n\n**Online Application:**\n1. parivahan.gov.in → Online Services → TN\n2. Fitness Certificate\n3. RC number enter\n4. Book slot at Authorized Testing Station (ATS)\n5. Pay fee online\n\n**Documents:**\n- Original RC Book\n- Insurance (valid)\n- PUC Certificate\n- Previous Fitness Certificate (if any)\n- Tax paid receipts\n\n**Testing Parameters:**\n\n| Test | What they check |\n|------|----------------|\n| Brake Test | Efficiency, Balance |\n| Emission Test | Smoke, CO, HC levels |\n| Headlight | Alignment, Intensity |\n| Suspension | Shock absorbers, Springs |\n| Steering | Play, Alignment |\n| Speedometer | Accuracy |\n| Horn | Sound level |\n| Body | Rust, Damage, Safety |\n| Tyres | Condition, Tread depth |\n| Mirrors | Condition, Position |\n\n**Fee:**\n- Testing: ₹300-500\n- Certificate: ₹200\n- Re-test (if failed): ₹100-200\n\n**Process:**\n1. Reach ATS with appointment\n2. Document verification\n3. Automated testing (30-45 mins)\n4. Report generation\n5. Pass: Certificate issued\n6. Fail: Rectify → Re-test\n\n**Validity:**\n- Private (15+ years): 5 years\n- Commercial: 1 year\n- Transport: 1 year\n\n**Fail ஆனால்:**\n- Defects rectify within 7 days\n- Re-test at same station\n- Partial fee\n\n**No Fitness Certificate:**\n- Vehicle seized\n- Fine: ₹500-5,000\n- Insurance claim rejected in accident\n\n**Authorized Testing Stations (Chennai):**\n- RTO premises\n- Private ATS (ARAI approved)\n- List at: parivahan.gov.in",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA022",
+      "instruction": "கலைஞர் மகளிர் உரிமைத் திட்டம் என்றால் என்ன?",
+      "current_output": "₹1,000/month for woman head of family in TN. Eligibility: 21+ age, family income below ₹2.5 lakh, not govt employee/tax payer, no other pension. Apply through Anganwadi or kalaaboravu.tn.gov.in with Aadhaar, ration card, bank account.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "TNE005",
+      "instruction": "TN இலவச Laptop திட்டம் என்றால் என்ன?",
+      "current_output": "Govt school மாணவர்களுக்கு இலவச Laptop. தகுதி: +2 pass (Govt school), UG/Diploma சேர்ந்தவர்கள், Polytechnic students. Distribution: College-ல் கொடுப்பார்கள். Specs: Basic laptop with necessary software. Documents: +2 marksheet, College admission, Aadhaar. Usage: Education purpose, warranty உண்டு.",
+      "category": "tn_education_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP010",
+      "instruction": "Pudhiya ration card eppadi peruvadhu?",
+      "current_output": "1. tnpds.gov.in website-la apply pannunga 2. Or nearby ration shop-la form vaangunga 3. Documents: Family members Aadhaar, Income certificate, Address proof, Photos 4. Types: PHH (₹1 rice), AAY (free rice), NPHH",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNEM001",
+      "instruction": "TN Employment Exchange-ல் பதிவு செய்வது எப்படி?",
+      "current_output": "Govt job notification-க்கு Registration. Online: tnvelaivaaippu.gov.in-ல் register. Age: 18-40 (reservation-க்கு relaxation உண்டு). தகுதி: Educational qualification-க்கு ஏற்ப. Renewal: ஒவ்வொரு 3 வருடமும் renew. Benefits: Govt job notifications, Interview call, Unemployment assistance (some categories). Documents: Education certificates, Community certificate, Aadhaar. Priority: Seniority + Marks-based. Local Employment: Private companies-க்கும் referral.",
+      "category": "tn_employment",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AG007",
+      "instruction": "Organic farming-க்கு support உண்டா?",
+      "current_output": "Paramparagat Krishi Vikas Yojana (PKVY) கீழ் organic farming support உண்டு. Rs.50,000/hectare 3 years-க்கு கிடைக்கும். Cluster formation, certification support உண்டு.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB007",
+      "instruction": "Chennai-ல் புதிய Metro Water Connection எப்படி வாங்குவது? Online apply செய்யலாமா?",
+      "current_output": "**CMWSSB (Chennai Metro Water) - New Connection:**\n\n**Online Application:**\n1. Website: chennaimetrowater.tn.gov.in\n2. Online Services → New Connection\n3. Register / Login\n4. Fill application\n5. Upload documents\n6. Pay fee online\n\n**Offline Application:**\n- Area Engineer Office\n- CMWSSB Head Office\n\n**Documents Required:**\n- Property document (Patta / Sale Deed)\n- Building Approval Plan\n- Property Tax Receipt\n- Aadhaar Card\n- Passport Photo\n- Existing water bill (if any)\n\n**Types of Connection:**\n\n| Type | Monthly Charge |\n|------|---------------|\n| Domestic | ₹70-400 (based on usage) |\n| Commercial | Higher rates |\n| Industrial | Highest |\n\n**Process:**\n\n**Step 1:** Application Submit\n\n**Step 2:** Site Inspection\n- Feasibility check\n- Pipeline proximity\n- Road cutting requirement\n\n**Step 3:** Estimate\n- Connection charge\n- Road cutting charge (if any)\n- Deposit\n\n**Approximate Costs:**\n| Item | Amount |\n|------|--------|\n| Connection Charge | ₹500-2,000 |\n| Security Deposit | ₹500-1,000 |\n| Road Cutting | ₹5,000-20,000 (if needed) |\n\n**Step 4:** Payment\n\n**Step 5:** Connection\n- Time: 15-30 days (normal)\n- Road cutting: 1-2 months\n\n**No Water Supply Area:**\n- Tanker request: chennaimetrowater.tn.gov.in\n- Borewell permission from CMWSSB\n\n**Complaints:**\n- Helpline: 044-4567 4567\n- App: CMWSSB Mobile App\n- Email: customercare@cmwssb.tn.gov.in\n\n**Bill Payment:**\n- Online: chennaimetrowater.tn.gov.in\n- PayTM, PhonePe, etc.\n- Area Office\n- Due: Monthly\n- Delay penalty applies",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNEM004",
+      "instruction": "NEEDS (New Entrepreneur-cum-Enterprise Development Scheme) endraal enna?",
+      "current_output": "Self-employment loan for youth. Amount: Up to ₹5 lakh (25% subsidy on project cost). Eligibility: 21-35 years (up to 45 for SC/ST/Women), 8th pass, TN resident. Sectors: Manufacturing, Service, Trading. Subsidy: General 25%, SC/ST/Women 30%. Training: Free mandatory EDP training. Apply: DIC (District Industries Centre). Documents: Project report, Education proof, Community certificate, Bank no-objection. Repayment: 3-7 years.",
+      "category": "tn_employment",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA001",
+      "instruction": "புதிய ஆதார் அட்டை எப்படி பெறுவது?",
+      "current_output": "Visit nearest Aadhaar Enrollment Center (find at uidai.gov.in), carry identity proof (Voter ID/PAN/Passport), address proof (Ration Card/EB Bill), and age proof (Birth Certificate/SSLC). Biometric capture will be done. First enrollment is FREE. Aadhaar delivered within 90 days.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CMI012",
+      "instruction": "Banking and Financial matters-la common thavarugal enna?",
+      "current_output": "Bank Account:\n❌ Jan Dhan needs minimum balance → ✅ Zero balance account\n❌ Nomination = Legal Heir → ✅ Nominee is trustee, not owner\n❌ Joint holder has automatic rights → ✅ Check Either or Survivor clause\n\nInsurance:\n❌ PMJJBY/PMSBY auto-renews → ✅ Must renew by June 1, need balance\n❌ PMJJBY covers suicide → ✅ First year not covered\n❌ PMSBY covers all accidents → ✅ Only permanent disability\n\nTax:\n❌ Senior Citizens don't pay tax → ✅ Only up to ₹3 lakh exempt (60-80)\n❌ Agricultural income fully exempt → ✅ State tax may apply\n❌ PPF interest is taxable → ✅ Fully exempt (EEE status)\n\nLoan:\n❌ Education loan needs collateral → ✅ Up to ₹7.5 lakh collateral-free\n❌ KCC interest is always 4% → ✅ Only for timely repayment",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE015",
+      "instruction": "நான் 65 வயது முதியவர். தனியாக இருக்கிறேன். என்னென்ன benefits, safety measures பெறலாம்?",
+      "current_output": "Monthly Income/Pension:\n1. Old Age Pension (TN) - ₹1,000/month (60-79), ₹1,500 (80+)\n2. PMVVY (LIC) - ₹15 லட்சம் → ₹9,250/month\n3. SCSS (Post Office) - 8.2% interest quarterly\n\nHealthcare:\n4. CMCHIS/Ayushman Bharat - ₹5 லட்சம் free treatment\n5. Rashtriya Vayoshri Yojana - Free walking stick, wheelchair, hearing aid\n6. PM Janaushadhi - 50-90% மலிவான மருந்துகள்\n\nSafety & Legal:\n7. Elder Line - 14567 (24x7)\n8. Maintenance Tribunal - பிள்ளைகள் பராமரிக்கவில்லை என்றால் - ₹10,000/month order\n9. Police Senior Citizen Cell - Regular check-ups\n\nTravel: Railway 40-50% discount, TN Bus free\nBanking: Senior Citizen FD - Extra 0.5% interest",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE014",
+      "instruction": "En bag-la ella documents-um thirudu poyiduchu (Aadhaar, PAN, DL, Voter ID, Bank Card). Enna seyvadhu?",
+      "current_output": "Immediately:\n1. Police FIR - List all documents, get FIR copy\n2. Block Bank Cards - Call helpline immediately (SBI: 1800-111-111)\n3. Block SIM - If phone stolen\n\nGet duplicate documents:\n4. Aadhaar - eaadhaar.uidai.gov.in (Free instant download)\n5. PAN - eportal.incometax.gov.in (Free e-PAN)\n6. Driving License - parivahan.gov.in (₹200-500)\n7. Voter ID - voters.eci.gov.in or Voter Helpline App\n8. Bank Cards - Bank branch with FIR (7-10 days)\n9. Ration Card - tnpds.gov.in\n\nImportant: Lock Aadhaar biometrics at myaadhaar.uidai.gov.in",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR016",
+      "instruction": "Voter ID - New registration, address change, name correction - full process?",
+      "current_output": "New Registration:\n\nEligibility: Indian citizen, 18 years on Jan 1 (qualifying date), Ordinary resident\n\nApply Online:\n1. voters.eci.gov.in OR Voter Helpline App\n2. 'New Voter Registration' → Form 6\n3. Fill: Personal info, Address (where you want to vote), Family/Neighbor reference (existing voter)\n4. Upload: Age proof, Address proof, Passport photo\n5. Submit\n\nVerification: BLO (Booth Level Officer) visit → Verify residence → May ask neighbors (2-4 weeks)\n\nCollection: SMS notification → Download e-EPIC (Voter Helpline App) → Physical card from BLO/Election Office\n\nAddress Change (Within State):\n1. voters.eci.gov.in → Form 6 (new address)\n2. Upload new address proof\n3. BLO verification → Old entry deleted automatically\n\nAddress Change (Different State):\n- Apply Form 6 in new state → Added to new constituency → Deleted from old automatically\n\nName/DOB/Photo Correction:\n1. voters.eci.gov.in → Form 8\n2. Select correction type\n3. Upload supporting document\n4. Submit → Correction in 15-30 days\n\nDelete Entry (Shifted/Deceased): Form 7\n\nImportant: Jan 1 qualifying date, Electoral Roll revision Oct-Nov yearly",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CD008",
+      "instruction": "Legal heir certificate எப்போது தேவை?",
+      "current_output": "இறந்த நபரின் property, bank balance, insurance claim செய்ய legal heir certificate தேவை. Tahsildar office-ல் apply செய்யலாம். Death certificate, family members details, ID proof தேவை.",
+      "category": "certificates_documents",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE012",
+      "instruction": "En pillai 12th mudichuttaar. College admission, scholarship, education loan ellam eppadi?",
+      "current_output": "Admission:\n1. Entrance Exams - NEET, JEE, TNEA\n2. Counselling - tneaonline.org / josaa.nic.in\n\nScholarships:\n3. BC/MBC/SC/ST - tneservices.tn.gov.in (Full fee waiver)\n4. CM Higher Education Scheme - First gen graduates - Free education + Laptop + ₹1,000/month\n5. NSP - scholarships.gov.in\n\nEducation Loan:\n6. Vidya Lakshmi - vidyalakshmi.co.in - 40+ banks\n7. Up to ₹7.5 lakh - No collateral\n8. Interest Subsidy - EWS students\n\nFree Laptop: Govt school/college students\nFree Hostel: BC/MBC/SC/ST",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RD005",
+      "instruction": "DDU-GKY (Deen Dayal Upadhyaya Grameen Kaushalya Yojana) என்றால் என்ன?",
+      "current_output": "கிராம இளைஞர்களுக்கு Skill Training + Placement. தகுதி: 15-35 வயது (SC/ST-க்கு 45 வரை), BPL/Low income குடும்பம், கிராமப்புற. Training: 576 hours minimum, Residential (உணவு/தங்குமிடம் free). Sectors: IT, Healthcare, Retail, Hospitality, Automotive. Placement: 70% mandatory placement, ₹6,000+ salary. Incentive: Training முடிந்த 3 மாதம் employment-க்கு bonus. Apply: Gram Panchayat, Block office, ddugky.gov.in",
+      "category": "rural_development",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR008T",
+      "instruction": "Payir kadan (Crop Loan) kuraintha vattiyil eppadi vaanguvadhu? KCC endraal enna?",
+      "current_output": "**Kisan Credit Card (KCC) - Crop Loan:**\n\n**What is KCC?**\n- Credit Card for farmers\n- Loan for crop expenses\n- Low interest\n- Withdraw anytime\n\n**Interest Rate:**\n- Normal: 7%\n- Central Subvention: -3%\n- State Incentive: -3%\n- **Effective: Only 4%!**\n\n**Eligibility:**\n- Land owning farmer\n- Tenant farmer (Oral Lessee included)\n- SHG/JLG members\n- Fishermen, Animal husbandry\n\n**Loan Amount:**\n- Up to ₹3 lakh: Collateral-free\n- Up to ₹1.6 lakh: 4% interest\n\n**Apply:**\n1. Bank directly OR\n2. pmkisan.gov.in → KCC tab\n\n**Documents:**\n- Aadhaar, PAN\n- Land Records\n- Sowing Certificate\n- Photos\n\n**Repayment:** End of crop season, timely = 4%",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "REF001",
+      "instruction": "முக்கிய அரசு இணையதளங்கள் என்ன?",
+      "current_output": "All e-Services: tneservices.tn.gov.in, Property Registration: tnreginet.gov.in, Ration Card: tnpds.gov.in, Vehicle/DL: parivahan.gov.in, Pension: pensionschemes.tn.gov.in, Police: eservices.tnpolice.gov.in, Employment: tnvelaivaaippu.gov.in, Electricity: nsc.tnebnet.org, Land Records: eservices.tn.gov.in/landrecords",
+      "category": "reference_directory",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA011T",
+      "instruction": "Income Certificate eppadi peruvadhu?",
+      "current_output": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Aadhaar, ration card, self-declaration of income, salary slip (if employed). VAO enquiry at home possible. Time: 7-15 days. Fee: ₹20. Valid for 6 months to 1 year.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNA001",
+      "instruction": "TN-ல் விவசாயிகளுக்கு இலவச மின்சாரம் என்ன?",
+      "current_output": "விவசாய pump-sets-க்கு இலவச மின்சாரம். Coverage: All agricultural pump connections. Timing: Designated hours (usually night/off-peak). Types: LT Agricultural service, Free. Limit: Registration-ல் உள்ள HP-க்கு ஏற்ப. New Connection: TANGEDCO online apply, land documents, farmer ID. Solar Alternative: PM-KUSUM மூலம் solar pump-க்கு subsidy.",
+      "category": "tn_agriculture",
+      "target_language": "pure_tamil"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

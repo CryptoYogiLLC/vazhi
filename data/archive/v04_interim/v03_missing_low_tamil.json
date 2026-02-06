@@ -1,0 +1,354 @@
+[
+  {
+    "instruction": "Neighbour waste en veettu pakkam podugiraar - action enna?",
+    "output": "Corporation/Municipality complaint: Solid Waste Management Rules violation. Police: IPC 268 (public nuisance), 269 (negligent act spreading disease). Photos/videos evidence. Tahsildar complaint-um possible. Fine up to Rs.5,000 for waste dumping violation.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "practical_scenarios",
+    "id": "PRAC002_TG"
+  },
+  {
+    "instruction": "Agriculture padikkanum, endha college nalladhu?",
+    "output": "TNAU (Tamil Nadu Agricultural University) best-pa. Coimbatore main campus, Thanjavur, Madurai-layum colleges irukku. Admission: 12th Biology marks basis counselling. Fees kammi - ₹5000-10000/year. Farmers pillaikku priority irukku. Scholarship, hostel free. Modern farming techniques learn pannalam. Own land irundha double benefit.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP021_TM"
+  },
+  {
+    "instruction": "'தெள்ளிய வாயுடைய மன்னரை' - நல்ல leader-ன் தரம் என்ன?",
+    "output": "குறள்: 'சொல்லுக சொல்லிற் பயனுடைய சொல்லற்க சொல்லிற் பயனிலாச் சொல்'. அர்த்தம்: பயனுள்ள வார்த்தைகளையே பேசுங்கள். பயனற்ற வார்த்தைகளை பேசாதீர்கள். Speak only what adds value. Avoid meaningless talk. Quality over quantity in communication!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT057_TM"
+  },
+  {
+    "instruction": "Health insurance cashless reject aanaal reimbursement kidaikkumaa?",
+    "output": "Aama. Cashless rejection ≠ claim rejection. Pay hospital, submit bills to insurer. Reimbursement claim: 15-30 days. Rejection-kku: IRDAI complaint, Ombudsman, Consumer forum. Pre-authorization issues: TPA (Third Party Administrator) contact. Network hospital outside-um claim possible.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "extended_topics",
+    "id": "EXTE013_TG"
+  },
+  {
+    "instruction": "Democracy / ஜனநாயகம் concept திருக்குறளில் உள்ளதா?",
+    "output": "நேரடியாக 'democracy' இல்லை, ஆனால் concepts உள்ளன: 'இறைமாட்சி' - நல்ல ஆட்சியின் அடையாளங்கள். 'குடிசெயல்வகை' - மக்கள் பங்கேற்பு. மேலும்: 'செவிக்குண வில்லாத போழ்து சிறிதும் இவக்கும் இராச்சியம் இல்'. மக்கள் குரல் கேட்காத அரசு வீழும். Accountability to people - democratic principle in ancient text!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT086_TM"
+  },
+  {
+    "instruction": "Building demolish panra maadiri solraanga, poganuuma?",
+    "output": "Demolition notice vandhaal: 1) Genuine notice-aa verify pannunga (municipal records), 2) Owner alternative accommodation or compensation taranum, 3) Reasonable notice period (usually 6 months), 4) Fake notice = harassment case podalam. Rights: Relocation assistance, advance rent return, shifting cost compensation. Don't vacate without proper documentation.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "supplementary",
+    "id": "SUPP008_TG"
+  },
+  {
+    "instruction": "Salary தர மாட்டேங்குறாங்க, 3 months pending - என்ன செய்வது?",
+    "output": "Options: 1) Written demand to employer, 2) Labour Inspector complaint, 3) Labour Court (if >Rs.15,000 dispute), 4) Civil Court recovery suit. Payment of Wages Act: Salary delay = interest + penalty. Documents: Appointment letter, salary slips, bank statements.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "practical_scenarios",
+    "id": "PRAC009_TM"
+  },
+  {
+    "instruction": "Spam calls/SMS stop பண்ண என்ன செய்யணும்?",
+    "output": "DND registration: 1909 call/SMS அல்லது TRAI DND app. Complaint: 1909-ல் spam report. DND-க்குப் பிறகும் spam வந்தால் company-க்கு Rs.1,000/violation fine. Truecaller-type apps-ல் report. Bank/company opt-out options use பண்ணுங்க.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "cyber_laws",
+    "id": "CYBE011_TM"
+  },
+  {
+    "instruction": "PM Krishi Sinchayee Yojana (PMKSY) endraal enna?",
+    "output": "Water irrigation expansion scheme. Components: Har Khet Ko Pani (water availability), Per Drop More Crop (Micro irrigation - Drip/Sprinkler, 55% subsidy), Watershed Development. Benefit: 55% subsidy for drip irrigation, 30-50% water saving, 20-40% yield increase. Apply: Agriculture Department/Horticulture Department. Micro Irrigation Fund: ₹5,000 crore for states. Water Sources: Bore well, farm pond, check dam support.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "agriculture_schemes",
+    "id": "AGR014"
+  },
+  {
+    "instruction": "Siddha treatment-la enna vagaigal ullana?",
+    "output": "Treatment types: 1) Internal medicines - Choornam (powder), Lehyam (paste), Kasayam (decoction), Thailam (oil), Maathirai (pills), 2) External - Pattru (poultice), Ottradam (fomentation), Nasiyam (nasal), Kattu (bandage), 3) Surgical - Siddha surgery, 4) Special therapies - Thokkanam (massage), Varmam, Yoga. Panchagavya: Cow products based. Kayakalpa: Rejuvenation therapy.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "siddha_medicine",
+    "id": "HLTH171_TG"
+  },
+  {
+    "instruction": "Important helpline numbers enna?",
+    "output": "Emergency: 112, Women Helpline: 181, Child Helpline: 1098, CM Cell: 1100, Legal Aid: 15100, Consumer: 1915, Electricity: 94987-94987, Water: 1916, Ration Card: 1967",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "reference_directory",
+    "id": "REF004"
+  },
+  {
+    "instruction": "Telecom/Mobile company bill dispute - எங்கே complaint செய்வது?",
+    "output": "Steps: 1) Company customer care (written complaint), 2) Appellate Authority (company website-ல் details இருக்கும்), 3) TRAI (trai.gov.in) complaint, 4) Consumer forum. Wrong billing, service failure, unauthorized charges எல்லாத்துக்கும் complaint போடலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS016_TM"
+  },
+  {
+    "instruction": "Bail bond amount எவ்வளவு இருக்கும்?",
+    "output": "Offence severity based - Rs.10,000 to lakhs வரை. Court discretion. Surety (guarantor) same amount-க்கு guarantee கொடுக்கணும். Poor accused-க்கு personal bond (surety இல்லாம) கிடைக்கும். Excessive bail unconstitutional.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "criminal_basics",
+    "id": "CRIM010_TM"
+  },
+  {
+    "instruction": "Sexual harassment face பண்றேன். யாரை approach பண்றது?",
+    "output": "Report to: 1) Internal Complaints Committee (ICC) - mandatory in every college 2) Women Helpline: 181 3) Police: Women's cell 4) National Commission for Women: ncw.nic.in 5) UGC grievance cell. Evidence: Screenshot messages, note incidents. Support: Counselling available. Legal: Sexual Harassment at Workplace Act protects students too. Confidentiality maintained. Don't blame yourself. Speak up - silence enables harassers.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC016_TM"
+  },
+  {
+    "instruction": "Jan Dhan Account என்றால் என்ன?",
+    "output": "FREE zero-balance bank account for any Indian. Benefits: Free RuPay card, ₹2 lakh accident insurance, ₹30,000 life insurance (new accounts), overdraft up to ₹10,000, DBT transfer enabled. Open at any bank/Bank Mitra with just Aadhaar or Voter ID.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA037"
+  },
+  {
+    "instruction": "GPA (General Power of Attorney) moolam property sale valid-aa?",
+    "output": "Supreme Court ruling (2011): GPA moolam property sale NOT valid. GPA holder sale deed execute pannalam, but final ownership transfer Principal neril vandhu sign seyyanum or properly registered Special Power of Attorney venum.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "property_land",
+    "id": "PROP025_TG"
+  },
+  {
+    "instruction": "Thirukkural UN-ல் recognize ஆனதா?",
+    "output": "Thirukkural formally UN-ஆல் recognize ஆகவில்லை, ஆனால்: 1) UN conferences-ல் Thirukkural quotes cite ஆகியுள்ளன, 2) UNESCO Tamil-ஐ classical language-ஆக recognize பண்ணியபோது Thirukkural-ஐ highlight பண்ணியது, 3) International scholars Thirukkural-ஐ 'Universal ethical text' என்று praise பண்றாங்க. Thirukkural-ஐ UN officially recognize பண்ண வேண்டும் என்று campaign நடக்கிறது.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT028_TM"
+  },
+  {
+    "instruction": "Shop employee rights என்ன?",
+    "output": "TN Shops and Establishments Act: 1) 8 hours work/day, 48 hours/week, 2) Weekly off mandatory, 3) Leave: 12 days earned + 12 days sick + 5 casual, 4) Overtime double wages, 5) No child labour (<14 years). Violation: Labour Inspector complaint.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "employment_labor",
+    "id": "EMPL016_TM"
+  },
+  {
+    "instruction": "e-Sevai services எங்கே available?",
+    "output": "Locations: Taluk offices, e-Sevai centres, Common Service Centres. Online: eservices.tn.gov.in. Services: Certificates (income, community, nativity), Patta transfer, Pension, Ration card, License renewals. Fee: Rs.30-100 (service based).",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "rti_government",
+    "id": "RTI_009_TM"
+  },
+  {
+    "instruction": "Project/Thesis work எப்படி approach பண்றது?",
+    "output": "Project success: 1) Choose topic early - guide consultation 2) Literature review first - Google Scholar, journals 3) Weekly meetings with guide - progress show 4) Documentation parallel - don't wait till end 5) Plagiarism check - Turnitin/iThenticate 6) Presentation practice - viva preparation 7) Backup data - multiple locations 8) Deadline buffer - submit before last day. Tip: Original contribution expected, not just copy. Industry internship projects valuable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC009_TM"
+  },
+  {
+    "instruction": "Pharmacy prescription illaama antibiotic kodukkalaama?",
+    "output": "NO! Most antibiotics = Schedule H - prescription mandatory. Reason: Antibiotic resistance is serious health threat. Pharmacy violation: Drug Inspector complaint, license action. Exception: Some topical antibiotics (creams) may be OTC. Good practice: Complete prescribed course, don't share antibiotics, don't use leftover. Doctor: Can prescribe over phone in genuine emergency.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "pharmacy_medicines",
+    "id": "HLTH093_TG"
+  },
+  {
+    "instruction": "மதுரையில MBBS படிக்க government college-ல seat கிடைக்குமா?",
+    "output": "மதுரை Medical College-ல் 7.5% government school quota, OBC/BC/MBC reservation இருக்கு. NEET-ல் 550+ வாங்கினால் government seat கிடைக்க chance இருக்கு. Theni Medical College-லும் apply பண்ணலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE010_TM"
+  },
+  {
+    "instruction": "Farmer family-la pirandhavangalukku admission-la preference unda?",
+    "output": "Aama. TNAU-la farmer quota irukku. Farmer certificate vachchu apply pannalam. Rural area students-kku weightage kedaikum. KVK (Krishi Vigyan Kendra)-la free training-um undu.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE013_TG"
+  },
+  {
+    "instruction": "மதுரை மண்டபம் என்றால் என்ன? ஏன் famous?",
+    "output": "Chennai December Music Season - உலகின் மிகப்பெரிய cultural festival. December 15 - January 1 வரை. 1920s-ல் தொடங்கியது. சிறப்புகள்: 1) 2000+ concerts நடக்கும், 2) 100+ sabhas (cultural organizations) organize பண்றாங்க, 3) Morning 9 AM to Night 10 PM non-stop programs, 4) Free entry பல sabhas-ல், 5) World-ல் இருந்து Carnatic musicians வருவார்கள். Famous sabhas: Music Academy, Narada Gana Sabha, Mylapore Fine Arts. Culture lovers' paradise!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "arts_literature",
+    "id": "CULT167_TM"
+  },
+  {
+    "instruction": "Workplace-ல் sexual harassment, POSH Act என்ன சொல்லுது?",
+    "output": "POSH Act 2013 (Prevention of Sexual Harassment): 1) Every office with 10+ employees - Internal Committee (IC) இருக்கணும், 2) Complaint: IC-க்கு 3 months-க்குள், 3) Inquiry: 90 days-க்குள் complete, 4) Action: Transfer, warning, termination. No IC: Local Committee-க்கு complaint. Retaliation protection உண்டு. Anonymous complaint-உம் valid.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "supplementary",
+    "id": "SUPP021_TM"
+  },
+  {
+    "instruction": "Hostel mess sappaadu othhuvarala. Enna panrathu?",
+    "output": "Solutions: 1) Initially stomach upset common - adjust period 2) Mess committee-la complaint raise 3) Healthy snacks keep - fruits, biscuits 4) Weekend home food bring 5) Nearby canteen/restaurants (budget friendly) 6) Cooking allowed rooms-la simple items prepare 7) Mess rebate apply if eating outside regularly. Health: Don't skip meals, drink boiled water, maintain hygiene.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC002_TG"
+  },
+  {
+    "instruction": "Divorce-ல் wife-க்கு என்ன rights இருக்கு?",
+    "output": "Rights: 1) Maintenance (permanent alimony), 2) Streedhan (gifts given at marriage), 3) Share in husband's property (if jointly acquired), 4) Child custody preference (especially below 5 years), 5) Residence right till divorce. Interim maintenance during case நடக்கும்போதே கிடைக்கும்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI008_TM"
+  },
+  {
+    "instruction": "Will contest பண்ணலாமா?",
+    "output": "ஆம். Grounds: Undue influence, fraud, forgery, unsound mind, improper execution. Contest: Probate Court. Time: Before probate granted-க்கு எதிர்ப்பு, after = revocation suit. Evidence: Medical records, witnesses, handwriting expert. Burden of proof: Contestant.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "extended_topics",
+    "id": "EXTE010_TM"
+  },
+  {
+    "instruction": "Siddhar paadalgalai engge ketkalaam/padikkalaam?",
+    "output": "Siddhar paadalgal access seiya: 1) Project Madurai - free Tamil texts online (projectmadurai.org), 2) Tamil Virtual Academy - government site, 3) YouTube - vilakkanagalodu paadalgal, 4) Books - Chennai Higginbothams, Pari Nilayam, 5) Apps - Siddhar Paadalgal app, 6) Libraries - University of Madras, Connemara Library. Original palm leaves Saraswathi Mahal Library (Thanjavur)-la preserve seiyappattuLLana.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT130_TG"
+  },
+  {
+    "instruction": "Birth certificate eppadi peruvadhu?",
+    "output": "Register within 21 days at hospital location's Municipality/Panchayat - FREE! After 21 days: ₹50 late fee + affidavit. Documents: Hospital discharge summary, parents' Aadhaar. Online at tnreginet.gov.in or crsorgi.gov.in. Certificate in 3-5 days.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA008T"
+  },
+  {
+    "instruction": "Health problem வந்துவிட்டது - mentally strong-ஆக இருக்க என்ன குறள்?",
+    "output": "'மருந்தென வேண்டாவாம் யாக்கைக்கு அருந்தியது அற்றது போற்றி உணின்'. சரியான உணவே மருந்து. மேலும்: 'உடம்பார் அழியின் உயிரார் அழிவர்' - உடலை பேணுங்கள். Physical health-க்கு treatment எடுங்கள், mental health-க்கு positive thoughts maintain பண்ணுங்கள். Body is a temple - take care of it!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT079_TM"
+  },
+  {
+    "instruction": "புதிய PAN Card எப்படி பெறுவது?",
+    "output": "Easiest: Instant e-PAN at eportal.incometax.gov.in using Aadhaar - FREE and instant! Alternative: Apply at onlineservices.nsdl.com or pan.utiitsl.com - ₹107 for physical card, 15-20 days. Need ID proof, address proof, DOB proof, photo, and signature.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA006"
+  },
+  {
+    "instruction": "Rent Authority-la complaint eppadi koduppadhu?",
+    "output": "District Collectorate office-la written application kodukkanum. Required documents: 1) Rental agreement copy, 2) Rent receipts, 3) Communication proof (notices, messages), 4) ID proof. Online-lum e-district portal moolam apply seyyalam. Fee: Nominal (Rs.100-500).",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "tenant_rights",
+    "id": "TENA022_TG"
+  },
+  {
+    "instruction": "Fine Arts padichaa future enna?",
+    "output": "BFA (Bachelor of Fine Arts): 4 years. Specializations: Painting, Sculpture, Applied Art, Graphic Design. Colleges: Govt College of Fine Arts Chennai, Kumbakonam. Jobs: Art galleries, Advertising agencies, Film industry (Art director), Teaching, Freelance artist. Digital art growing field. Salary varies widely: ₹15,000-1 lakh+ based on skill and reputation. Portfolio and networking crucial.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP008_TG"
+  },
+  {
+    "instruction": "TNEB electricity complaint எப்படி போடுவது?",
+    "output": "Options: 1) TANGEDCO helpline: 1912, 2) Online: tangedco.gov.in, 3) TNEB app, 4) Local section office. Issues: Billing errors, connection delay, power cut, meter fault. Escalation: AE → EE → SE → CE. Consumer Grievance Redressal Forum (CGRF) for unresolved issues.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "rti_government",
+    "id": "RTI_014_TM"
+  },
+  {
+    "instruction": "Live-in relationship legal-aa?",
+    "output": "Aama, adult consenting partners-kku legal. Supreme Court recognized. DV Act protection apply aagum. Aanaal marriage benefits (inheritance, maintenance as spouse) automatic illa. Long-term live-in partners-kku certain rights undu.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI024_TG"
+  },
+  {
+    "instruction": "Divorce-kku ennenna grounds irukku?",
+    "output": "Hindu Marriage Act grounds: 1) Adultery, 2) Cruelty (physical/mental), 3) Desertion (2+ years), 4) Conversion to another religion, 5) Unsound mind, 6) Venereal disease, 7) Renunciation (sanyasa), 8) Not heard alive for 7 years. Wife additional ground: Husband has another wife.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "family_law",
+    "id": "FAMI006_TG"
+  },
+  {
+    "instruction": "Minimum wages Tamil Nadu-la evvalavu?",
+    "output": "Varies by industry and skill level. Unskilled: Rs.410-450/day, Semi-skilled: Rs.430-500/day, Skilled: Rs.480-600/day (approximate, 2024). Labour Department website-la exact rates. Less koduthal Labour Inspector-kku complaint.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "employment_labor",
+    "id": "EMPL012_TG"
+  },
+  {
+    "instruction": "Fake product விற்ற e-commerce site-க்கு case போடலாமா?",
+    "output": "ஆம். Counterfeit/fake products விற்பது illegal. Consumer forum-ல் compensation claim செய்யலாம். Trademark owner-க்கும் report பண்ணலாம். Police complaint (IPC 420 - cheating) போடலாம். E-commerce platform-உம் liable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS012_TM"
+  },
+  {
+    "instruction": "Medical negligence case-kku enna evidence venum?",
+    "output": "Required: 1) All medical records (hospital bound to give), 2) Prescriptions, 3) Test reports, 4) Bills, 5) Expert medical opinion (another doctor's opinion), 6) Death certificate (if applicable). RTI moolam government hospital records peralaam.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "consumer_protection",
+    "id": "CONS024_TG"
+  },
+  {
+    "instruction": "Medicine MRP-க்கு மேல் விற்றால் complaint எங்கே?",
+    "output": "Complaint: Drug Inspector (District), State Drug Control. Legal Metrology Department-உம் complaint எடுக்கும். Pharmacy license suspend/cancel ஆகலாம். Consumer forum-ல் compensation. Evidence: Bill with MRP comparison. Toll-free: 1800-11-4000.",
+    "language": "pure_tamil",
+    "pack": "vazhi_sattam",
+    "category": "practical_scenarios",
+    "id": "PRAC016_TM"
+  },
+  {
+    "instruction": "Women-ku special ITI courses ulladha?",
+    "output": "Aam, Women ITI-gal ullana. Special trades: 1) Dress Making 2) Embroidery & Needle Work 3) Hair & Skin Care 4) Stenography 5) Desktop Publishing 6) Data Entry Operator 7) Secretarial Practice. Chennai, Coimbatore, Madurai-la exclusive Women ITIs. Regular ITI-layum co-ed batches ullana. Hostel facility free. Employment: Garment industry, salons, corporate offices.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "vocational_training",
+    "id": "VOCA005_TG"
+  },
+  {
+    "instruction": "Insurance claim reject aanaal enna seivathu?",
+    "output": "Steps: 1) Rejection reason written-aa kelunga, 2) Insurance company grievance cell, 3) Insurance Ombudsman (igms.irda.gov.in), 4) Consumer forum, 5) MACT (accident claims). Common rejection reasons: Policy lapse, drunk driving, unlicensed driver. Documentation mukkiyam.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "traffic_vehicles",
+    "id": "TRAF013_TG"
+  },
+  {
+    "instruction": "Vehicle insurance types ennenna?",
+    "output": "Types: 1) Third-party (mandatory) - others-kku damage cover, 2) Comprehensive - own vehicle + third party, 3) Own damage - only own vehicle. Third-party minimum kattaayam (MV Act). Without insurance driving: Rs.2,000 fine + vehicle seizure.",
+    "language": "tanglish",
+    "pack": "vazhi_sattam",
+    "category": "traffic_vehicles",
+    "id": "TRAF012_TG"
+  }
+]

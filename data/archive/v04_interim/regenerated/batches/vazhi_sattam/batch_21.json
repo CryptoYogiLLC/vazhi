@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 21,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TRAF015_TG",
+      "instruction": "RC transfer eppadi seivathu?",
+      "current_output": "Vehicle sale-kkup piragu: 1) Form 29, 30 fill, 2) Both buyer & seller sign, 3) NOC from financer (if loan), 4) Insurance transfer, 5) RTO submit + fee pay. Time: 30 days-kkul. Delay: Fine + legal issues. Online: parivahan.gov.in partially available.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP020_TG",
+      "instruction": "Court case ethanai varusham oodum? Fast track vazhi irukkaa?",
+      "current_output": "Average: Civil case 5-10 years, Criminal 3-7 years. Fast options: 1) Lok Adalat (one-day settlement), 2) Mediation centres (free, court-annexed), 3) Arbitration (private, faster), 4) Consumer Forum (6 months-1 year), 5) Fast track courts (specific cases). Tips: Avoid adjournments, complete documentation, experienced lawyer. E-courts app-la case status track pannalam.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS025_TM",
+      "instruction": "Medical negligence-க்கு எவ்வளவு compensation கேட்கலாம்?",
+      "current_output": "Claim include: 1) Medical expenses incurred, 2) Future treatment cost, 3) Loss of income, 4) Pain and suffering (mental agony), 5) Loss of life expectancy, 6) Punitive damages. Lakhs to Crores வரை - case severity-ஐ பொறுத்தது. Expert lawyer consult பண்ணுங்க.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL001_TG",
+      "instruction": "PF account balance eppadi check panradhu?",
+      "current_output": "Methods: 1) EPFO portal: epfindia.gov.in (UAN login), 2) UMANG app, 3) SMS: EPFOHO UAN ENG to 7738299899, 4) Missed call: 011-22901406. UAN (Universal Account Number) venum. Employer-kitta kettu activate pannunga.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP004_TG",
+      "instruction": "EC (Encumbrance Certificate) endraal enna?",
+      "current_output": "Property-kku loan, mortgage, legal dispute irukkaa endru kaattum certificate. Vaangum mun 30 years EC check pannanum. Online: tnreginet.gov.in-la apply. Fee: Rs.120/year. 'Nil EC' = clear property.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC009_TG",
+      "instruction": "Salary thara maattengaraanga, 3 months pending - enna seivathu?",
+      "current_output": "Options: 1) Written demand to employer, 2) Labour Inspector complaint, 3) Labour Court (if >Rs.15,000 dispute), 4) Civil Court recovery suit. Payment of Wages Act: Salary delay = interest + penalty. Documents: Appointment letter, salary slips, bank statements.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI009_TG",
+      "instruction": "Divorce case pending-la irukkum bodhu remarry pannalaamaa?",
+      "current_output": "Mudiyaadhu - Bigamy (IPC 494) aagividum. Decree kidaitha piragu 90 days appeal period undu. Appeal period mudinja piragae remarry pannalam. Bigamy-kku 7 years imprisonment.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI003_TG",
+      "instruction": "Inter-caste/Inter-religion marriage register eppadi seivathu?",
+      "current_output": "Special Marriage Act 1954-in keezh register seyyalam. 30 days notice period undu. Any religion/caste manamaakkal register pannalam. Parents consent not required (if major). Inter-caste marriage-kku TN government Rs.50,000 incentive scheme undu.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE004_TM",
+      "instruction": "Lawyer fees எவ்வளவு reasonable?",
+      "current_output": "Varies: Junior lawyer - Rs.5,000-25,000 per case, Senior - Rs.50,000-5 lakhs+, Supreme Court - Rs.2 lakhs+. Fee agreement writing-ல் வாங்குங்க. Excessive fee: Bar Council complaint. Free legal aid: DLSA (income <Rs.3 lakh). Legal fee insurance available.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP019_TG",
+      "instruction": "Power of Attorney ethanai types? Edhu safe?",
+      "current_output": "Types: 1) General POA - all acts (risky), 2) Special POA - specific acts only (safer), 3) Durable POA - continues even if principal incapacitated. Registration: Property transactions - compulsory registration. Revocation: Written revocation + newspaper publication. Safe practice: Special POA with specific purpose + time limit. Never give blank POA!",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_014_TM",
+      "instruction": "TNEB electricity complaint எப்படி போடுவது?",
+      "current_output": "Options: 1) TANGEDCO helpline: 1912, 2) Online: tangedco.gov.in, 3) TNEB app, 4) Local section office. Issues: Billing errors, connection delay, power cut, meter fault. Escalation: AE → EE → SE → CE. Consumer Grievance Redressal Forum (CGRF) for unresolved issues.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP014_TM",
+      "instruction": "Poramboke land என்றால் என்ன? அதை வாங்கலாமா?",
+      "current_output": "Poramboke = Government reserved land (roads, water bodies, grazing land). இதை யாரும் own பண்ண முடியாது, sell/buy பண்ண முடியாது. Poramboke land-ல் construction illegal - demolish ஆகும். Land classification: eservices.tn.gov.in-ல் check பண்ணுங்க.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI024_TG",
+      "instruction": "Live-in relationship legal-aa?",
+      "current_output": "Aama, adult consenting partners-kku legal. Supreme Court recognized. DV Act protection apply aagum. Aanaal marriage benefits (inheritance, maintenance as spouse) automatic illa. Long-term live-in partners-kku certain rights undu.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM017_TM",
+      "instruction": "Free legal aid எப்படி பெறுவது?",
+      "current_output": "Eligible: Women, children, SC/ST, disabled, victims of trafficking, industrial workers, custody persons, income < Rs.3 lakh/year. Apply: District Legal Services Authority (DLSA), Taluk Legal Services Committee. Court-லும் request பண்ணலாம். Toll-free: 15100.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS005_TG",
+      "instruction": "Defective product vaangiten - enna seyyalam?",
+      "current_output": "Options: 1) Replacement - same product pudhiyathaa, 2) Refund - full amount thirumba, 3) Repair - free of cost sari seyya, 4) Compensation - loss-kku extra amount. Mudhalil seller-kitta written complaint kodunga. Response illaattal consumer forum ponga.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI006_TM",
+      "instruction": "Divorce-க்கு என்னென்ன grounds இருக்கு?",
+      "current_output": "Hindu Marriage Act grounds: 1) Adultery, 2) Cruelty (physical/mental), 3) Desertion (2+ years), 4) Conversion to another religion, 5) Unsound mind, 6) Venereal disease, 7) Renunciation (sanyasa), 8) Not heard alive for 7 years. Wife additional ground: Husband has another wife.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP018_TM",
+      "instruction": "Small claims court-ல் case போடலாமா? Procedure என்ன?",
+      "current_output": "Consumer disputes-க்கு: District Consumer Forum (Rs.1 crore வரை). Civil disputes: Regular civil court. Small Causes Court: Chennai-ல் available - Rs.1 lakh-க்குள் claims, fast track. Procedure: 1) Complaint draft, 2) Court fee pay (nominal), 3) Filing, 4) Hearing dates, 5) Judgment. Lawyer optional for small claims. E-filing: ecourts.gov.in",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP029_TM",
+      "instruction": "ஒருத்தன் கடன் வாங்கிட்டு திரும்ப தரல, என்ன பண்றது?",
+      "current_output": "Steps: 1) Written reminder அனுப்புங்க, 2) Legal notice (registered post), 3) Response இல்ல = court case. Evidence: Cheque/transfer proof, WhatsApp messages, witnesses. Rs.20 lakh-க்குள்: Summary suit (faster). Criminal: Cheque bounce ஆனா Section 138 case. Limitation: 3 years. Pro tip: Promissory note வாங்கியிருந்தா strong case.",
+      "category": "supplementary",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "FAMI006_TG",
+      "instruction": "Divorce-kku ennenna grounds irukku?",
+      "current_output": "Hindu Marriage Act grounds: 1) Adultery, 2) Cruelty (physical/mental), 3) Desertion (2+ years), 4) Conversion to another religion, 5) Unsound mind, 6) Venereal disease, 7) Renunciation (sanyasa), 8) Not heard alive for 7 years. Wife additional ground: Husband has another wife.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC010_TM",
+      "instruction": "Employer experience letter/relieving letter தர மறுக்கிறார்",
+      "current_output": "Steps: 1) Written request (email/letter), 2) HR head escalation, 3) Labour Commissioner complaint, 4) Civil Court mandatory injunction. Documents rightfully yours. Background verification-ல் issue வரும் - previous employer-க்கு new employer-கிட்ட explain பண்ணுங்க.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM020_TG",
+      "instruction": "Statement record seyyum bodhu enna kavanikkannum?",
+      "current_output": "Tips: 1) Truth mathum sollunga, 2) Theriyaadhatha theriyaadhu endru sollunga, 3) Guess pannaadheenga, 4) Statement padithu sign pannunga, 5) Copy kelunga. 161 CrPC statement court-la evidence aagaadhu, 164 statement (Magistrate mun) aagum.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL012_TG",
+      "instruction": "Minimum wages Tamil Nadu-la evvalavu?",
+      "current_output": "Varies by industry and skill level. Unskilled: Rs.410-450/day, Semi-skilled: Rs.430-500/day, Skilled: Rs.480-600/day (approximate, 2024). Labour Department website-la exact rates. Less koduthal Labour Inspector-kku complaint.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_012_TG",
+      "instruction": "Government officer lancham kettaal enna seivathu?",
+      "current_output": "Options: 1) Vigilance and Anti-Corruption (DVAC): 1064 helpline, 2) Lokayukta, 3) CBI (central government). Trap operation request pannalam. Evidence: Recording (legal in TN), witnesses. Bribe giver-kkum protection undu (if reports).",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE005_TG",
+      "instruction": "Loan app harassment - illegal collection practices",
+      "current_output": "RBI unregistered apps = illegal. Complaint: 1) RBI Sachet portal, 2) cybercrime.gov.in, 3) Police FIR (extortion, harassment). Harassment includes: Contact list access, morphed photos, threatening calls. Do NOT install unknown loan apps. Legal apps: RBI registered NBFC list check.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS012_TM",
+      "instruction": "Fake product விற்ற e-commerce site-க்கு case போடலாமா?",
+      "current_output": "ஆம். Counterfeit/fake products விற்பது illegal. Consumer forum-ல் compensation claim செய்யலாம். Trademark owner-க்கும் report பண்ணலாம். Police complaint (IPC 420 - cheating) போடலாம். E-commerce platform-உம் liable.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

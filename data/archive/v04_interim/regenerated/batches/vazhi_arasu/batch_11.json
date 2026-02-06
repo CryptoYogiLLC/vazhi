@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 11,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TNREF003",
+      "instruction": "TN Helpline Numbers என்னென்ன?",
+      "current_output": "முக்கிய TN Helplines: 1967 (Ration complaints), 1077 (CM Helpline), 108 (Emergency Ambulance), 104 (Health Helpline), 100 (Police), 101 (Fire), 1091 (Women Helpline), 1098 (Child Helpline - Childline), 181 (Women Helpline - central), 1912 (Anti-Corruption), 155300 (Cyber Crime), 14461 (Kisan Call Centre), 1800-180-1111 (Pensioners). Free: Most are toll-free 24x7.",
+      "category": "tn_reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNH005",
+      "instruction": "TN-ல் Govt Hospital-ல் என்ன இலவசமாக கிடைக்கும்?",
+      "current_output": "TN Govt Hospitals-ல் அனைத்தும் இலவசம். Free Services: OPD consultation, All tests (Blood, X-ray, CT, MRI), Medicines, Surgery, ICU, Dialysis, Cancer treatment. Specialty: Govt Medical College Hospitals-ல் advanced treatment. 108 Ambulance: Emergency-க்கு இலவசம். Referral: PHC → GH → Medical College Hospital chain. CGHS/ESIC: Central employees-க்கு separate.",
+      "category": "tn_health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RD006",
+      "instruction": "DDU-GKY (Deen Dayal Upadhyaya Grameen Kaushalya Yojana) endraal enna?",
+      "current_output": "Skill Training + Placement for rural youth. Eligibility: 15-35 years (up to 45 for SC/ST), BPL/Low income family, rural. Training: Minimum 576 hours, Residential (food/stay free). Sectors: IT, Healthcare, Retail, Hospitality, Automotive. Placement: 70% mandatory placement, ₹6,000+ salary. Incentive: Bonus for employment within 3 months of training. Apply: Gram Panchayat, Block office, ddugky.gov.in",
+      "category": "rural_development",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNA003",
+      "instruction": "UZHAVAN App என்றால் என்ன? என்ன services உள்ளது?",
+      "current_output": "TN விவசாயிகளுக்கான ஒரே App. Services: Crop insurance apply, KCC loan status, Subsidy schemes apply, Weather updates, Market prices (UZHAVAR SANDHAI rates), Expert advice. Download: Play Store - UZHAVAN. Registration: Aadhaar + farmer ID. Alerts: SMS/notification for govt schemes, weather warning. Offline: Basic info works offline. Language: Tamil + English.",
+      "category": "tn_agriculture",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR009",
+      "instruction": "Old Age Pension TN-la eppadi apply pannuvadhu?",
+      "current_output": "Eligibility: Age 60+, BPL/Low income, No other pension, TN resident\n\nAmount: 60-79 years: ₹1,000/month | 80+: ₹1,500/month\n\nApply:\n\nMethod 1 - Online:\n1. tneservices.tn.gov.in → 'Social Security Pension'\n2. Register with mobile\n3. Select: Old Age Pension\n4. Fill application\n5. Upload documents\n6. Submit\n\nMethod 2 - Offline:\n1. Taluk/Block Office pogga\n2. Application form vaangunga\n3. Fill pannunga\n4. Documents attach\n5. Submit with acknowledgment\n\nDocuments:\n- Age Proof (Aadhaar/Voter ID/Birth Certificate)\n- Address Proof\n- Income Certificate (< ₹24,000/year)\n- Ration Card\n- Bank Passbook (first page)\n- 2 Passport photos\n\nProcess: Application → Field verification (VAO/RI) → Tahsildar approval → Sanction → Monthly DBT\n\nTime: 30-60 days\nStatus: tneservices.tn.gov.in → Track Application",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA003",
+      "instruction": "ஆதார் - மொபைல் எண் மாற்றம் எப்படி?",
+      "current_output": "Cannot be done online for security reasons. Must visit Aadhaar Seva Kendra (ASK) with original Aadhaar and new active SIM. Biometric verification required. Fee: ₹50. Update is immediate with SMS confirmation.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CGS027",
+      "instruction": "பிரதான் மந்திரி கௌசல் விகாஸ் யோஜனா (PMKVY) என்றால் என்ன?",
+      "current_output": "இலவச Skill Training. காலம்: 150-300 மணி நேரம். Courses: IT, Healthcare, Construction, Retail, etc. நன்மைகள்: இலவச Training, Certificate (Industry recognized), Placement assistance, ₹8,000 வரை reward (assessment pass செய்தால்). சேர: pmkvyofficial.org → Find Training Center, அருகிலுள்ள PMKVY Training Center, Aadhaar, Photo தேவை. RPL: ஏற்கனவே skill உள்ளவர்களுக்கு Certificate, ₹500 assessment fee (refundable)",
+      "category": "central_govt_schemes",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CONV006",
+      "instruction": "[Multi-turn dialogue] Cyber Fraud Recovery Process - Full conversation guide",
+      "current_output": "User: Ennoda account-la irundhu 25,000 online-la poyiduchu. Enna pannanum?\n\nAssistant: **URGENT! Immediately pannunga:**\n\n**RIGHT NOW (Next 5 minutes):**\n\n1. **Bank-ku Call:**\n   - SBI: 1800-111-111\n   - HDFC: 1800-202-3344\n   - ICICI: 1800-102-4242\n   - Tell: \"Unauthorized transaction, block my account\"\n\n2. **Note down:**\n   - Transaction date & time\n   - Amount\n   - Transaction ID (SMS-la irukkum)\n\nBank call panniteengala? Enna bank?\n\nUser: SBI. Call pannitein, account freeze pannittanga\n\nAssistant: Good! Fast action. Now next steps:\n\n**Next 30 Minutes - Cyber Crime Report:**\n\n**Step 1: Online Complaint (Fastest)**\n1. Website: **cybercrime.gov.in**\n2. Click: \"Report Cyber Crime\"\n3. Select: \"Financial Fraud\"\n4. Fill:\n   - Your details\n   - Bank details\n   - Transaction details\n   - Suspect details (if any)\n5. Upload: Bank SMS screenshot\n6. Submit\n7. **Note: Complaint Number**\n\n**Step 2: Call 1930**\n- National Cyber Crime Helpline\n- 24x7 available\n- They'll also register complaint\n- Helps freeze suspect's account faster!\n\n**Why urgency matters:**\n- Within 24 hours = 70-80% recovery chance\n- After 48 hours = Drops to 30-40%\n- After 1 week = Very difficult\n\ncybercrime.gov.in complaint panniteengala?\n\nUser: Complaint panniten, number kedaichuchu. Ippo enna pannanum?\n\nAssistant: **Complaint Number - KEEP SAFE!**\n\n**Next Steps:**\n\n**Step 1: Written Bank Complaint (Within 24 hours)**\n1. Go to your SBI branch\n2. Write complaint letter:\n   - \"Unauthorized transaction of ₹25,000 on [date]\"\n   - Transaction ID\n   - Cyber complaint number\n   - Request: \"Reverse transaction and investigate\"\n3. Get acknowledgment with date stamp\n4. Keep copy\n\n**Step 2: Police FIR (Within 24 hours)**\n\n**Online:** eservices.tnpolice.gov.in → Cyber Crime\n\n**Or Visit:** \n- Cyber Crime Police Station\n- Any Police Station (they'll transfer)\n\n**Documents for FIR:**\n- Bank statement showing fraud transaction\n- SMS screenshots\n- Cyber crime complaint number\n- ID proof\n\n**Step 3: Email to Bank Nodal Officer**\n- SBI Nodal Officer: cms.gm@sbi.co.in\n- Subject: \"Cyber Fraud - Urgent - ₹25,000\"\n- Attach: Cyber complaint, Transaction details\n\nBank branch pogureengala ippo?\n\nUser: Poittu vandhutein. FIR-um panniten. Panam thirumba varum?\n\nAssistant: Good work! Recovery chances:\n\n**RBI Rules - Bank's Liability:**\n\n| Reporting Time | Your Loss (Max) |\n|----------------|----------------|\n| Within 3 days | ₹0 (Full refund if not your fault) |\n| 4-7 days | ₹10,000 max |\n| After 7 days | Bank's discretion |\n\n**Your Case:**\n- Reported same day ✓\n- You should get **FULL REFUND** if:\n  - You didn't share OTP\n  - You didn't share password\n  - No negligence from your side\n\n**Bank Investigation Process:**\n1. Bank has **10 working days** to investigate\n2. They'll check: Was it system failure or user error?\n3. **90 days maximum** to resolve\n\n**If Bank Denies:**\n1. First Appeal: Branch Manager\n2. Second: Bank's Grievance Officer\n3. Third: **Banking Ombudsman** (cms.rbi.org.in)\n4. Final: Consumer Court\n\n**Track Your Case:**\n- Bank complaint status: Call branch\n- Cyber complaint: cybercrime.gov.in → Track\n\n**Question:** Eppadi panam poachu? OTP share panneenga? Link click panneenga?\n\nUser: Link click pannitein - SBI update nu message vandhuchu, adha click pannein\n\nAssistant: Ah, **Phishing Scam** - Very common!\n\n**What Happened:**\n- Fake SBI SMS\n- Fake website (looks real)\n- You entered details\n- They used it to transfer money\n\n**Impact on Refund:**\n\n**Honest Assessment:**\n- Bank may argue \"customer negligence\"\n- But still fight for refund!\n- Many cases - bank still refunds 50-100%\n\n**Strengthen Your Case:**\n\n**Argument 1:** \"Sophisticated scam\"\n- SMS looked genuine\n- Website looked real\n- Not obvious fraud\n\n**Argument 2:** \"Bank's responsibility too\"\n- Why did bank allow suspicious transaction?\n- Why no OTP for large amount? (Wait - OTP vandhucha?)\n\n**Argument 3:** \"Immediate reporting\"\n- You reported within hours\n- Shows you're genuine victim\n\n**What to Write in Bank Complaint:**\n\"I was victim of sophisticated phishing scam using fake bank communication. Despite being a careful customer, the fraudulent website was indistinguishable from genuine SBI website. I reported immediately upon discovering fraud. As per RBI circular, bank should credit the amount within 10 days.\"\n\nOTP message vandhucha? Enter panneenga?\n\nUser: OTP vandhuchi, enter pannitten nu nenaikkuren. Full details nenaivila illa tension-la\n\nAssistant: **Understandable. Let's document everything:**\n\n**For Your Records (Write down now):**\n\n1. **Timeline:**\n   - Date: ?\n   - Time of SMS received: ?\n   - Time you clicked link: ?\n   - Time you noticed money gone: ?\n   - Time you called bank: ?\n\n2. **What you entered on fake site:**\n   - Card number? (Probably yes)\n   - CVV? (Maybe)\n   - OTP? (Yes)\n   - Net banking password? (Maybe)\n\n**Immediate Security Actions:**\n\n**Do RIGHT NOW:**\n1. **Change SBI Net Banking Password**\n   - onlinesbi.sbi.co.in → Forgot Password\n   \n2. **Change ATM PIN**\n   - Call SBI or use SBI YONO app\n\n3. **Request New Debit Card**\n   - Old card details compromised\n   - Block old card, request new\n\n4. **Check Other Accounts**\n   - Same password used elsewhere?\n   - Change those too!\n\n5. **Enable Transaction Alerts**\n   - SMS + Email alerts ON\n   - Transaction limit set\n\n**Fraudsters may try again!** - Common pattern\n\nNet banking password change panniteengala?\n\nUser: Pannitten. Bank eppo reply pannuvanga? Vera enna pannanum?\n\nAssistant: **Bank Timeline & Next Steps:**\n\n**Bank Response Timeline:**\n| Stage | Time |\n|-------|------|\n| Acknowledgment | 24-48 hours |\n| Investigation | 10 working days |\n| Resolution | Up to 90 days |\n| Credit (if approved) | Within 10 days of decision |\n\n**What to Do Now:**\n\n**Week 1:**\n- [ ] Follow up call to branch (after 3 days)\n- [ ] Get written acknowledgment if not received\n- [ ] Check cyber complaint status: cybercrime.gov.in\n\n**Week 2:**\n- [ ] If no response, email escalation:\n  - Branch Manager\n  - cms.gm@sbi.co.in (Nodal Officer)\n- [ ] Reference: RBI Circular on Limiting Liability\n\n**Week 3-4:**\n- [ ] If rejected/no response: Banking Ombudsman\n- [ ] cms.rbi.org.in → Lodge Complaint\n- [ ] Free service, usually effective\n\n**Keep Ready:**\n- All complaint numbers\n- Bank acknowledgments\n- FIR copy\n- SMS/Email screenshots\n- Timeline document\n\n**Realistic Expectation:**\n- Phishing with OTP = Partial to Full refund possible\n- Fight ka laga - don't give up!\n- Ombudsman usually sides with customer\n\nVera doubt?\n\nUser: Thanks! Future-la eppadi safe-aa irukkuradhu?\n\nAssistant: **Cyber Safety Tips - MUST FOLLOW:**\n\n**SMS/Email Safety:**\n| Red Flag | What to Do |\n|----------|------------|\n| \"Click urgent link\" | NEVER click - Go to official app/website directly |\n| \"Your account blocked\" | Call bank directly, don't use number in SMS |\n| \"Update KYC immediately\" | Banks never ask via SMS link |\n| Shortened URLs (bit.ly) | Never click from unknown source |\n\n**OTP Rules:**\n- **NEVER share OTP with anyone** - Even if they say \"bank officer\"\n- OTP valid for YOUR transactions only\n- Bank staff will NEVER ask OTP\n\n**Banking Safety:**\n\n1. **SBI YONO App** - Use app, not website\n   - Genuine app from Play Store/App Store\n   - Biometric login\n\n2. **Transaction Limits**\n   - Set daily limit (₹25,000 for example)\n   - UPI limit separate\n\n3. **Alerts**\n   - SMS + Email both ON\n   - Immediate notification\n\n4. **Two Accounts Strategy**\n   - Savings account: Large amounts (no net banking)\n   - Current/separate: Daily use (limited balance)\n\n**Mobile Safety:**\n- Don't install apps from links\n- Keep phone updated\n- Use official banking apps only\n\n**If Suspicious Call:**\n- Hang up\n- Call bank official number\n- Report to 1930\n\n**Quick Reference Card:**\n```\n✓ Official app only\n✓ Never share OTP\n✓ Never click SMS links\n✓ Set transaction limits\n✓ When in doubt - CALL BANK\n```\n\n**Emergency Numbers:**\n- Cyber Crime: 1930\n- SBI: 1800-111-111\n- RBI Ombudsman: 14448\n\nStay safe! Anything else?",
+      "category": "conversational_dialogues",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONV003",
+      "instruction": "[Multi-turn dialogue] Farmer Applying for PM-KISAN and Crop Insurance - Full conversation guide",
+      "current_output": "User: Naan vivasaayi. PM-KISAN scheme-la register aagala. Eppadi pannuvadhu?\n\nAssistant: PM-KISAN register panna simple process. First few questions:\n\n1. Unga peyarla land irukka? (Patta unga name-la?)\n2. Evvalavu land irukku?\n3. Neengal income tax file pannuveengalaa?\n\nIndha details sollunga, eligibility check pannalam.\n\nUser: Aamaa, 3 acre peyarla irukku. Income tax file pannala.\n\nAssistant: Perfect! Neengal eligible:\n\n**PM-KISAN Eligibility ✓**\n- Land owner: ✓\n- Not Income Tax payer: ✓\n\n**Benefits:** ₹6,000/year (₹2,000 x 3 installments)\n\n**Registration Options:**\n\n**Option 1: Online (Self)**\n1. pmkisan.gov.in\n2. \"New Farmer Registration\"\n3. State: Tamil Nadu\n4. Aadhaar number enter\n5. Fill details\n6. Upload: Patta/Chitta\n7. Submit\n\n**Option 2: CSC / Agriculture Office**\n- Nearest Common Service Center\n- Agriculture Officer office\n- Avanga free-ya register pannuvanga\n\nOnline try pannuveengalaa? Documents ready irukka?\n\nUser: Online try panren. Enna documents scan pannanum?\n\nAssistant: **PM-KISAN Registration Documents:**\n\n**Mandatory:**\n1. **Aadhaar Card** - Front & Back scan\n2. **Bank Passbook** - First page (Name, Account No, IFSC)\n3. **Land Records:**\n   - Patta (latest)\n   - Chitta\n   - OR Adangal extract\n\n**Details you need:**\n- Aadhaar Number\n- Mobile Number (Aadhaar linked better)\n- Bank Account Number\n- IFSC Code\n- Survey Numbers (land)\n- Land area (hectares)\n\n**Important:**\n- Bank account unga name-la irukkanum\n- Aadhaar-Bank name match aaganum\n- Mobile number active irukkanum\n\nEllaam ready aa?\n\nUser: Documents ready. Oru doubt - crop insurance-um pannanum. Adhukku separate aa apply pannumaa?\n\nAssistant: Good question! Yes, Crop Insurance (PMFBY) separate application:\n\n**PM-KISAN vs PMFBY:**\n| | PM-KISAN | PMFBY |\n|--|----------|-------|\n| What | Direct cash | Crop Insurance |\n| Amount | ₹6,000/year fixed | Claim based on loss |\n| Apply | Once (auto-renew) | Every season |\n\n**PMFBY Apply:**\n- **When:** Before sowing - deadline irukku\n- **Where:** Bank / CSC / pmfby.gov.in / UZHAVAN App\n\n**Premium (You pay):**\n- Kharif crops: 2% of Sum Insured\n- Rabi crops: 1.5%\n- Commercial crops: 5%\n\n**Example:** 3 acres paddy\n- Sum Insured: ~₹1,50,000\n- Your Premium: ₹3,000 (2%)\n- Govt pays rest\n\n**Claim:** Natural calamity, pest attack la loss na compensation\n\nNeengal enna crop poda porreenga? Deadline check pannalam.\n\nUser: Paddy podalaam nu irukken. Deadline eppo?\n\nAssistant: **Paddy (Samba/Thaladi) - Kharif Season:**\n\n**Deadline:** Usually August-September (exact date varies yearly)\n\n**Check Current Deadline:**\n1. pmfby.gov.in → Crop Insurance tab\n2. Select: State (TN) → District → Season → Crop\n3. Shows: Last date, Premium, Sum Insured\n\n**Or:** UZHAVAN App la notification varum\n\n**Apply Process:**\n\n**Option 1: Through Bank (Easiest)**\n- KCC (Kisan Credit Card) irukka?\n- KCC loan vaangunavanga-ku auto-enrollment\n- Premium loan-layae deduct aagum\n\n**Option 2: Online Self**\n1. pmfby.gov.in → \"Farmer Corner\"\n2. Register with mobile\n3. Fill crop details\n4. Upload: Land records, Sowing certificate\n5. Pay premium online\n\n**Option 3: CSC / Agriculture Office**\n- Documents kondu poganum\n- Avanga apply pannuvanga\n\nKCC irukka ungakitta?\n\nUser: KCC illa. Vaangalaamaa? Interest evvalavu?\n\nAssistant: **KCC (Kisan Credit Card) - Must Have for Farmers!**\n\n**Benefits:**\n- **Interest:** Only 4% (Normal 7% - 3% Govt subsidy)\n- **Collateral Free:** Up to ₹1.6 lakh\n- **Flexible:** Withdraw anytime, pay after harvest\n- **Crop Insurance:** Auto-enrolled\n- **PM-KISAN link:** Easy processing\n\n**Eligibility:**\n- Land owner ✓ (You qualify!)\n- Tenant farmers - also eligible\n- Even oral lessees can apply\n\n**KCC Loan Amount:**\n- Based on: Crop + Area + Scale of Finance\n- 3 acres paddy: ~₹60,000-90,000 per season\n\n**Apply:**\n\n**Option 1: Bank**\n- Nearest Commercial Bank / Co-operative Bank\n- Documents: Aadhaar, Patta, Chitta, Photos\n- Time: 7-14 days\n\n**Option 2: Through PM-KISAN**\n- pmkisan.gov.in → KCC tab\n- Auto-forward to bank\n- Easier process for PM-KISAN beneficiaries\n\n**My Suggestion:** Apply KCC first, then:\n- PM-KISAN registration easier\n- Crop insurance auto\n- 4% interest loan ready\n\nBank pogalaamaa? Cooperative irukka near-by?\n\nUser: Okay, KCC first apply panren. Complete process sollunga\n\nAssistant: **KCC Application - Complete Process:**\n\n**Step 1: Choose Bank**\n- Primary Agricultural Credit Society (PACS) - Easiest for farmers\n- Co-operative Bank\n- Any Commercial Bank (SBI, Indian Bank, etc.)\n\n**Step 2: Collect Documents**\n1. Aadhaar Card (Original + 2 copies)\n2. PAN Card (if available)\n3. Patta (Original + copy)\n4. Chitta & Adangal (from VAO)\n5. Sowing Certificate (from VAO) - optional initially\n6. Passport Photos - 4\n7. Bank passbook (if existing account)\n\n**Step 3: Visit Bank**\n- Ask for \"KCC Application Form\"\n- Fill the form\n- Attach documents\n- Submit\n\n**Step 4: Bank Process**\n- Document verification\n- Land record check\n- Credit limit calculation\n- Field visit (sometimes)\n\n**Step 5: Sanction**\n- Sanction letter\n- KCC card issue\n- Cheque book (optional)\n- **Time:** 7-14 days\n\n**Step 6: Disbursement**\n- Go to bank\n- Withdraw as needed\n- Repay after harvest\n- **Interest:** 4% if timely repayment!\n\n**After KCC Ready:**\n- PM-KISAN auto-link\n- PMFBY premium auto-deduct\n- Soil Health Card link\n\n**One tip:** Sowing certificate VAO kitta vaangunga - multiple uses irukku.\n\nAll clear aa? Vendum na summary sheet tharattumaa?\n\nUser: Thanks! Oru last doubt - Soil Health Card enna? Free aa?\n\nAssistant: **Soil Health Card - Free & Very Useful!**\n\n**What is it?**\n- Unga nilathoda soil test report\n- Nutrients (N, P, K, etc.) evvalavu irukku\n- pH level, Organic carbon\n- Enna fertilizer evvalavu podanum - recommendation\n\n**Benefits:**\n- Right fertilizer = Less cost\n- Better yield\n- Soil damage prevent\n\n**How to Get (FREE):**\n\n**Option 1: Online Request**\n1. soilhealth.dac.gov.in\n2. Register with Aadhaar\n3. Enter land details\n4. Request soil testing\n5. Sample collection by Agri Dept\n6. Report online + Card by post\n\n**Option 2: Agriculture Office**\n- Visit Block Agriculture Office\n- Give land details\n- They'll collect soil sample\n- Report in 2-3 weeks\n\n**Option 3: KVK (Krishi Vigyan Kendra)**\n- Nearby KVK-la free testing\n- Plus free advice\n\n**When to Test:**\n- Before sowing season\n- Every 3 years recommended\n\n**Pro Tip:** Soil test result based-la fertilizer vaangunga - waste avoid, yield increase!\n\n**Summary ungalukku:**\n1. KCC Apply → Bank\n2. PM-KISAN Register → pmkisan.gov.in\n3. Crop Insurance → Auto with KCC or pmfby.gov.in\n4. Soil Health Card → soilhealth.dac.gov.in\n\nAll the best for your farming! Vendum na kekuinga.",
+      "category": "conversational_dialogues",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE017",
+      "instruction": "கடும் மழையால் என் பயிர் முழுவதும் நாசமாகிவிட்டது. என்ன compensation, help கிடைக்கும்?",
+      "current_output": "உடனடியாக (72 மணி நேரத்திற்குள்):\n1. PMFBY Claim - pmfby.gov.in / 14447 - Photos எடுத்து வைக்கவும்\n2. VAO/Agriculture Officer-க்கு Written complaint\n\nAssessment:\n3. Crop Cutting Experiment - Agriculture Dept + Insurance\n4. Claim Amount - Yield loss % படி\n\nOther Relief:\n5. SDRF - District Collector - இயற்கை பேரிடர் relief\n6. Input Subsidy - ₹6,800/hectare (Rainfed), ₹13,500 (Irrigated)\n7. CM Relief Fund - Severe cases\n\nLoan Relief:\n8. Loan restructuring - Bank apply\n9. Fresh KCC Loan - 4% interest - அடுத்த season-க்கு",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "REF004",
+      "instruction": "Important helpline numbers enna?",
+      "current_output": "Emergency: 112, Women Helpline: 181, Child Helpline: 1098, CM Cell: 1100, Legal Aid: 15100, Consumer: 1915, Electricity: 94987-94987, Water: 1916, Ration Card: 1967",
+      "category": "reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RD008",
+      "instruction": "PM-AJAY grama sugadhara thittam endraal enna?",
+      "current_output": "Pradhan Mantri Ayushman Arogya Yojana - Rural healthcare. Components: Health & Wellness Centres (HWC) - Primary healthcare, Teleconsultation. Services: 12 essential services - Maternal care, Child health, Communicable diseases, NCD screening (Diabetes, BP), Mental health, Dental, Eye care. Free: All services free at HWC. Location: Sub-centre/PHC within 30 min travel. Access: Aadhaar/ration card enough, registration required.",
+      "category": "rural_development",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNSW002",
+      "instruction": "TN Old Age Pension evvalavu? Eppadi peruvadhu?",
+      "current_output": "Monthly pension for 60+ years. Amount: ₹1,000/month (State) + ₹200-500 (Central IGNOAPS) = ₹1,200-1,500. Eligibility: 60+ years, annual income below ₹72,000, BPL preferred. Destitute: ₹1,500/month for destitute elderly. Apply: Panchayat/Taluk office. Documents: Age proof, Income certificate, Aadhaar, Bank account. Dearness Allowance: Periodic increases announced.",
+      "category": "tn_social_welfare",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC016",
+      "instruction": "Maintenance and Welfare of Parents and Senior Citizens Act endraal enna?",
+      "current_output": "Law for care of parents/elders. Children's Duty: Legal obligation to maintain parents. Maintenance Amount: Tribunal decides (max ₹10,000/month). Tribunal: In every district, order within 90 days. Property: Transfer to children can be void if neglected after transfer. Old Age Homes: Government run, at least one per district. Penalty: ₹5,000 fine / 3 months imprisonment. Complaint: Maintenance Tribunal/SDM office.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB010",
+      "instruction": "நான் Tuition Center / Coaching Institute தொடங்க விரும்புகிறேன். என்ன permission வேண்டும்?",
+      "current_output": "**Coaching Center / Tuition Classes - Permissions:**\n\n**Basic Requirements:**\n\n**1. Shop & Establishment Registration**\n- எங்கே: tnlabour.tn.gov.in\n- Fee: ₹500-1,500\n- 30 நாட்களுக்குள் opening-க்கு பின்\n\n**2. Trade License**\n- எங்கே: Corporation / Municipality\n- Category: Educational Services\n- Fee: ₹1,000-5,000\n\n**3. Fire Safety NOC**\n- 50+ students கட்டாயம்\n- Fire extinguishers\n- Emergency exit\n- Fire Dept inspection\n\n**4. Building Safety**\n- Structural stability certificate\n- Rent agreement (if rented)\n- No residential area violation\n\n**Large Institute-க்கு கூடுதல்:**\n\n**5. Society/Trust/Company Registration**\n- Trust: Registrar of Trusts\n- Society: Registrar of Societies\n- Company: MCA (LLP/Pvt Ltd)\n\n**6. GST Registration**\n- Turnover > ₹20 lakh\n- Or: If franchising\n\n**7. PF/ESI (if employees)**\n- PF: 20+ employees\n- ESI: 10+ employees\n\n**Specific Coaching:**\n\n**Competitive Exam Coaching (IAS/JEE/NEET):**\n- Standard permissions enough\n- No special license\n\n**Foreign Language:**\n- No special permission\n- Certification from foreign body (optional)\n\n**Driving School:**\n- RTO approval mandatory\n- Special license\n\n**Computer Training:**\n- Standard permissions\n- IT company as optional\n\n**Staff Requirements:**\n- Qualified teachers\n- Background verification (recommended)\n- PF/ESI for permanent staff\n\n**Infrastructure:**\n- Proper ventilation\n- Clean drinking water\n- Toilet facilities\n- Adequate space per student\n\n**Insurance:**\n- Public liability (recommended)\n- Fire insurance\n\n**Advertising:**\n- No false claims\n- Success rate proof\n- Corporation permission for banners\n\n**Timeline:**\n- Basic setup: 2-4 weeks\n- Large institute: 1-2 months",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA021",
+      "instruction": "MUDRA Loan எப்படி வாங்குவது?",
+      "current_output": "Collateral-free business loan from any bank. Shishu: up to ₹50,000, Kishore: up to ₹5 lakh, Tarun: up to ₹10 lakh. Apply at bank or mudra.org.in with business plan, ID proof, address proof. Interest: 8-12%. Good for starting/expanding small business.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR004",
+      "instruction": "நான் கிராமத்தில் பெண்கள் சுய உதவிக் குழு (SHG) ஆரம்பிக்க விரும்புகிறேன். எப்படி பதிவு செய்வது?",
+      "current_output": "**SHG துவக்குதல் - படிப்படியாக:**\n\n**Step 1: குழு அமைத்தல்**\n- 10-20 பெண்கள் (ஒரே கிராமம்/பகுதி)\n- ஒத்த சிந்தனை உடையவர்கள்\n- வயது: 18-60\n\n**Step 2: Meetings தொடங்குதல்**\n- வாரம் ஒரு முறை கூட்டம்\n- சிறிய தொகை சேமிப்பு (₹50-100/week)\n- Minutes book maintain\n\n**Step 3: Bank Account திறத்தல்**\n- 3 மாத meeting records காட்டி\n- Joint account (President + Secretary)\n- Nationalized Bank / Co-operative Bank\n\n**Step 4: Mahalir Thittam பதிவு**\n- எங்கே: Block Development Office\n- TNSRLM (Tamil Nadu State Rural Livelihoods Mission)\n- Website: tnrd.gov.in\n\n**தேவையான ஆவணங்கள்:**\n- உறுப்பினர்கள் Aadhaar\n- குழு தீர்மானம் (Resolution)\n- Member list with photos\n- Savings passbook\n- Minutes book\n\n**Benefits after registration:**\n1. **Revolving Fund:** ₹15,000 (grant)\n2. **Community Investment Fund:** ₹50,000-1,00,000\n3. **Bank Loan:** Up to ₹10 lakh (low interest)\n4. **Training:** Free skill training\n5. **Market access:** Exhibition, Melas\n\n**Loan வாங்குதல்:**\n- 6 மாத savings record\n- Regular meetings\n- Good credit history\n- Interest: 4-7%",
+      "category": "rural_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA008",
+      "instruction": "பிறப்பு சான்றிதழ் எப்படி பெறுவது?",
+      "current_output": "Register within 21 days at hospital location's Municipality/Panchayat - FREE! After 21 days: ₹50 late fee + affidavit. Documents: Hospital discharge summary, parents' Aadhaar. Online at tnreginet.gov.in or crsorgi.gov.in. Certificate in 3-5 days.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "RUR003T",
+      "instruction": "En vivasaaya nilaththa veettu manaiyaaga maatra enna seiyya vendum?",
+      "current_output": "**Agricultural Land Conversion:**\n\n**Where to Apply:**\n- District Collector Office\n- Online: eservices.tn.gov.in\n\n**Types:**\n1. **NA Conversion** - Agri to Residential/Commercial\n2. **Layout Approval** - Multiple plots, need DTCP\n\n**Documents:**\n- Patta (your name)\n- Chitta & Adangal\n- FMB\n- EC (30 years)\n- Tax receipts\n- Location sketch\n- Agriculture Dept NOC (some cases)\n\n**Fee:** 1-3% of land value + stamp duty difference\n\n**Time:** 2-6 months\n\n**Restrictions:**\n- Wet land = difficult\n- Prime agri zone = not allowed\n- Above 2 acres = special permission",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB001",
+      "instruction": "Chennai-ல் Apartment வாங்க போகிறேன். என்னென்ன சரிபார்க்க வேண்டும்? RERA என்றால் என்ன?",
+      "current_output": "**Apartment வாங்கும் முன் Checklist:**\n\n**1. RERA Registration (கட்டாயம்!)**\n- Website: rera.tn.gov.in\n- RERA Number verify செய்யவும்\n- Project details, Completion date பாருங்க\n- Complaint history check\n\n**RERA என்றால் என்ன?**\n- Real Estate Regulatory Authority\n- Builder accountability\n- Buyer protection\n- Delayed delivery compensation\n\n**2. Legal Documents Check:**\n\n| Document | என்ன பார்க்கணும் |\n|----------|------------------|\n| Mother Deed | Land ownership chain |\n| EC (30 years) | Encumbrance இல்லை |\n| Approved Plan | CMDA/DTCP approval |\n| Building Permit | Corporation approval |\n| Completion Certificate | Building complete |\n| Occupancy Certificate | Stay permission |\n\n**3. CMDA/DTCP Approval**\n- Approved layout verify\n- FSI/FAR compliance\n- Setback rules followed\n- cmdachennai.gov.in\n\n**4. Builder Check:**\n- Previous projects visit\n- Delivery track record\n- Legal cases check\n- RERA complaints\n\n**5. Financial Check:**\n- All inclusive price\n- Hidden charges (Parking, Club, etc.)\n- GST: 5% (affordable) / 12% (luxury)\n- Stamp Duty: 7%\n- Registration: 4%\n\n**6. Home Loan:**\n- Bank approved project?\n- Easier loan if approved\n- PMAY benefit (First home): 3-6.5% subsidy\n\n**7. Society/Association:**\n- Association formed?\n- Common area ownership\n- Maintenance charges\n\n**Red Flags:**\n- No RERA registration\n- No approved plan\n- Unapproved deviation\n- Multiple legal cases\n- Land dispute",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC008",
+      "instruction": "PMVVY (Pradhan Mantri Vaya Vandana Yojana) endraal enna?",
+      "current_output": "LIC Pension scheme for 60+ years. Investment: ₹1,62,162 to ₹15 lakh. Pension: 7.4% guaranteed return (subject to change). Payment: Monthly/Quarterly/Half-yearly/Yearly. Term: 10 years. Loan: Can take 75% loan after 3 years. Premature Exit: 98% return for serious illness. Buy: LIC website/branch, need Aadhaar, Age proof.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HS008",
+      "instruction": "Rental housing scheme ஏதாவது உள்ளதா?",
+      "current_output": "Affordable Rental Housing Complex (ARHC) scheme urban poor-க்கு உண்டு. Industrial workers, migrants-க்கு subsidized rent-ல் வீடு. State urban development department-ல் விசாரிக்கவும்.",
+      "category": "housing_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB003",
+      "instruction": "புதிய கடைக்கு Commercial Electricity Connection எப்படி வாங்குவது?",
+      "current_output": "**Commercial Electricity Connection (TANGEDCO):**\n\n**Step 1: Online Application**\n- Website: nsc.tnebnet.org\n- Select: LT Commercial / HT Commercial\n- Fill application form\n\n**Step 2: Documents Upload**\n- Ownership proof:\n  - Own building: Sale Deed / Patta\n  - Rent: Registered Rent Agreement\n- Identity: Aadhaar + PAN\n- Trade License / GST (if available)\n- Building Completion Certificate\n- Passport photo\n\n**Step 3: Load Calculation**\n- AC, Refrigerator, Lights, etc.\n- Select appropriate load (kW)\n- Higher load = Higher deposit\n\n**Step 4: Inspection**\n- TANGEDCO engineer visit\n- Wiring check\n- Meter location finalize\n- Earthing check\n\n**Step 5: Payment**\n\n| Item | Amount (Approx) |\n|------|----------------|\n| Security Deposit | ₹1,500-15,000 |\n| Service Connection | ₹500-2,000 |\n| Meter Cost | ₹1,000-3,000 |\n| Test Fee | ₹200-500 |\n\n**Step 6: Connection**\n- Meter installation\n- Supply start\n- **Time: 7-15 days**\n\n**Tariff (Commercial LT):**\n- Slab based\n- Higher than domestic\n- ToD (Time of Day) metering option\n\n**HT Connection (Large Shops/Malls):**\n- Load > 112 kW\n- Separate application\n- Transformer may be needed\n- Higher deposit\n\n**Tips:**\n- Apply load slightly higher than need\n- Load enhancement later is tedious\n- Temporary connection available for construction\n\n**Complaints:**\n- 94987-94987\n- TANGEDCO App\n- EB Office visit",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR014",
+      "instruction": "PM Krishi Sinchayee Yojana (PMKSY) endraal enna?",
+      "current_output": "Water irrigation expansion scheme. Components: Har Khet Ko Pani (water availability), Per Drop More Crop (Micro irrigation - Drip/Sprinkler, 55% subsidy), Watershed Development. Benefit: 55% subsidy for drip irrigation, 30-50% water saving, 20-40% yield increase. Apply: Agriculture Department/Horticulture Department. Micro Irrigation Fund: ₹5,000 crore for states. Water Sources: Bore well, farm pond, check dam support.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS020",
+      "instruction": "Pradhan Mantri Awas Yojana (PMAY) - TN-la eppadi peruvadhu?",
+      "current_output": "PMAY-Urban: Eligibility - EWS (income up to ₹3 lakh), LIG (₹3-6 lakh), MIG-I (₹6-12 lakh), MIG-II (₹12-18 lakh). Benefit: Interest subsidy 3-6.5%. Apply: pmay-urban.gov.in/CSC/Bank. PMAY-Gramin: Houseless as per SECC data. Assistance: ₹1.20 lakh (Plain)/₹1.30 lakh (Hilly). Apply: Gram Panchayat/Block Office. TN: Can also apply through TNHB",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

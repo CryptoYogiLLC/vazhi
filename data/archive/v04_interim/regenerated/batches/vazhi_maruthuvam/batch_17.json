@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 17,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH032_TG",
+      "instruction": "Emergency-la hospital admission refuse pannalaamaa?",
+      "current_output": "NO! Illegal to refuse emergency. Law: Every hospital (government/private) must provide emergency care. Stabilization mandatory before transfer. Cannot ask for: 1) Advance payment, 2) Police clearance (accident), 3) ID proof. MLC cases: Treatment first, formalities later. Violation: Criminal prosecution + license cancellation. Report: 108, police, Health Department.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH213_TG",
+      "instruction": "Minor burns/wounds-kku first aid natural remedy?",
+      "current_output": "Burns (minor): 1) Cool water (not ice) 10-20 mins, 2) Aloe vera gel (fresh), 3) Honey application (antibacterial), 4) Coconut oil after cooling, 5) Turmeric paste (wound healing). Wounds: 1) Clean with water, 2) Turmeric powder (traditional antiseptic), 3) Neem paste (antibacterial), 4) Honey. Don't use: Toothpaste, egg white, butter on burns - myths! Major burns/wounds: Hospital immediately.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH104_TM",
+      "instruction": "Ayurveda/Siddha medicine safe-ஆ? Regulation இருக்கா?",
+      "current_output": "Regulated under AYUSH Ministry. Safety: Licensed products from registered manufacturers = regulated. Risks: 1) Heavy metals in some (lead, mercury), 2) Unlicensed products dangerous, 3) Interactions with allopathy. Verify: 1) AYUSH license number on pack, 2) Manufacturing license, 3) Batch number, expiry. Government: AYUSH hospitals provide regulated treatment. Caution: Inform allopathic doctor if taking AYUSH medicines.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH162_TM",
+      "instruction": "Annual health checkup எத்தனை வயசுல இருந்து பண்ணணும்?",
+      "current_output": "Guidelines: 1) 30+ years: Basic checkup (sugar, BP, cholesterol), 2) 40+ years: Add cardiac screening, eye check, 3) 50+ years: Add cancer screening (colon, prostate/breast). Women: Cervical/breast screening from 30+. Family history: Start earlier. Government camps: Free checkups periodically - avail. Don't wait for symptoms - preventive checkups save lives.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH113_TM",
+      "instruction": "De-addiction centre-ல் treatment எப்படி?",
+      "current_output": "Government centres: Free treatment at district/medical college hospitals. Services: 1) Detoxification (medical supervision), 2) Rehabilitation (21-90 days), 3) Counseling, 4) Family therapy, 5) Aftercare. TN: Alcohol/drug de-addiction centres in major hospitals. Private: Verify registration with State Mental Health Authority. Helpline: De-addiction helpline for guidance. Forced admission: Only if danger to self/others.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH085_TG",
+      "instruction": "Home healthcare service legal-aa? Reliable-aa?",
+      "current_output": "Legal, but verify. Check: 1) Company registration, 2) Nurse/attendant credentials, 3) Doctor supervision (for nursing care), 4) Agreement/contract terms, 5) Emergency protocols, 6) Insurance/liability coverage. Services: Nursing care, physiotherapy, doctor visits, sample collection. Caution: Verify ID of persons coming home. Complaint: If fraud/negligence - police + Consumer Forum.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH070_TG",
+      "instruction": "NABH accreditation endraal enna? Important-aa?",
+      "current_output": "NABH = National Accreditation Board for Hospitals. Means: Hospital meets quality standards in - patient safety, infection control, infrastructure, staff qualifications, processes. Benefits: 1) Quality assurance, 2) Insurance companies prefer NABH hospitals, 3) CGHS/ECHS empanelment, 4) Patient safety protocols. Levels: Entry level, Progressive, Full accreditation. Check: nabh.co website for list.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH007_TG",
+      "instruction": "108 Ambulance service eppadi use panradhu?",
+      "current_output": "Dial 108 - Free emergency ambulance. Services: 1) BLS (Basic Life Support) ambulance, 2) ALS (Advanced Life Support) for critical cases, 3) Trained paramedics, 4) GPS tracking, 5) Hospital coordination. Response time: 15-20 minutes (urban), 20-30 minutes (rural). Free: No charges for transport. Alternative: 102 for pregnant women transport.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH114_TG",
+      "instruction": "Family member-ai mental hospital-la admit panna mudiyumaa?",
+      "current_output": "Voluntary admission: Person consents - preferred method. Supported admission: Person lacks capacity but nominated rep consents (10 days max without review). Independent admission (involuntary): Only if - 1) High risk of self-harm/harm to others, 2) Needs immediate treatment, 3) Two psychiatrists certify, 4) Magistrate approval within 24 hours. Rights: Review by Mental Health Review Board. Cannot just lock someone up.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH184_TM",
+      "instruction": "Siddha medicine quality check எப்படி பண்றது?",
+      "current_output": "Check on pack: 1) AYUSH License number, 2) Manufacturing license, 3) Batch number, 4) Expiry date, 5) Manufacturer name and address, 6) GMP certification (if available). Buy from: 1) Licensed pharmacies, 2) Hospital pharmacies, 3) Government AYUSH stores. Avoid: 1) Loose medicines without label, 2) Online from unknown sources, 3) Unregistered practitioners' preparations. Complaint: State Drug Controller for spurious products.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH027_TG",
+      "instruction": "Medical records copy ketkalaamaa? Hospital thara marukkalaama?",
+      "current_output": "Patient's absolute right! Records include: 1) Discharge summary, 2) Investigation reports, 3) Operation notes, 4) Prescription copies, 5) Bills. Hospital must provide within 72 hours of request. Cannot refuse. Charges: Nominal photocopying charges only. Digital records: Soft copy also must provide. Retention: Hospital must keep records 3 years minimum. Missing records: Hospital liable.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH029_TM",
+      "instruction": "Treatment refuse பண்ணலாமா? Doctor force பண்ணலாமா?",
+      "current_output": "Yes, can refuse! Patient autonomy respected. Conditions: 1) Must be mentally competent, 2) Must understand consequences, 3) Must sign refusal form (LAMA - Leave Against Medical Advice). Doctor cannot force treatment (except psychiatric emergency). Blood transfusion refusal: Allowed (Jehovah's Witness cases). Children: Parents decide, but court can override for life-saving. Emergency: Implied consent applies.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH080_TG",
+      "instruction": "Pre-existing disease claim eppodhu kidaikkum?",
+      "current_output": "Waiting period: Usually 2-4 years (policy varies). Pre-existing = condition before policy started. Rules: 1) Must declare at proposal, 2) Non-disclosure = claim rejection + policy cancellation, 3) After waiting period, fully covered, 4) IRDAI: Max 4 years waiting period. Tip: Disclose honestly, buy policy early when healthy, continuous renewal maintains benefits.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH026_TG",
+      "instruction": "Hospital bill puriyala, itemized bill ketkalaamaa?",
+      "current_output": "Yes! Right to detailed bill. Must include: 1) Room charges (per day), 2) Doctor fees, 3) Surgery/procedure charges, 4) Medicines (with MRP), 5) Consumables, 6) Lab tests, 7) Nursing charges, 8) Any other charges. Hospital must provide: Written estimate before admission (planned), final itemized bill. Overcharging: Consumer Forum complaint. Compare: Check medicine MRP, verify tests done.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH083_TM",
+      "instruction": "ICU-ல் patient பார்க்க விடல - rights இருக்கா?",
+      "current_output": "Limited visiting is normal, but complete denial is not. Rights: 1) Regular updates from doctor (minimum once daily), 2) Brief visits allowed (usually 2-3 times/day, 10-15 mins), 3) One attendant may stay (not inside ICU). If denied: 1) Request meeting with treating doctor, 2) Escalate to hospital admin, 3) Get updates in writing. Exception: Highly infectious cases - isolation needed.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH145_TG",
+      "instruction": "Anganwadi-la children-kku enna services?",
+      "current_output": "ICDS (Integrated Child Development Services): 1) Supplementary nutrition (hot meal/take home), 2) Growth monitoring (weight/height), 3) Immunization support, 4) Health referral, 5) Pre-school education (3-6 years), 6) Nutrition education for mothers. Beneficiaries: Children 0-6 years, pregnant/lactating women. Free: All services. Location: Every village/urban ward has Anganwadi centre.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH116_TM",
+      "instruction": "ECT (shock treatment) - consent வேணுமா?",
+      "current_output": "Yes! Strict rules under MHCA 2017. Requirements: 1) Written informed consent (patient or rep), 2) Modified ECT only (with anesthesia), 3) Documented medical necessity, 4) Cannot be given as punishment. Minors: Not allowed except life-threatening situations. Unmodified ECT: Banned. Violation: Complaint to Mental Health Review Board. Alternative treatments: Must be discussed before ECT.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH019_TG",
+      "instruction": "Chennai-la major government hospitals evai?",
+      "current_output": "Major GH Chennai: 1) Rajiv Gandhi Government General Hospital (GH), 2) Government Stanley Medical College Hospital, 3) Government Kilpauk Medical College, 4) Government Omandurar Estate Hospital, 5) Institute of Obstetrics & Gynaecology (Egmore), 6) Institute of Child Health (Egmore), 7) Cancer Institute (Adyar - autonomous), 8) RGGGH trauma centre. Specialties vary - check before going.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH120_TM",
+      "instruction": "Depression-க்கு disability certificate கிடைக்குமா?",
+      "current_output": "Yes, if severe. RPD Act 2016: Mental illness included as disability. Requirements: 1) Benchmark disability (40%+), 2) Certified by medical board (district hospital), 3) UDID card application. Benefits: 1) Reservation in education/jobs, 2) Income tax exemption, 3) Travel concession, 4) Scholarship eligibility. Process: Apply at district hospital disability assessment camp or SADAREM.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH041_TM",
+      "instruction": "Transgender patient-க்கு சரியான treatment கிடைக்குமா?",
+      "current_output": "Legal right! Transgender Persons Act 2019 + NALSA judgment. Rights: 1) Treatment in preferred gender ward (with certificate), 2) No discrimination, 3) Respectful treatment, 4) SRS (Sex Reassignment Surgery) available at government hospitals (Chennai, limited centres). TN: Progressive policies, transgender welfare board. Complaint: Social Welfare Department, Human Rights Commission.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH152_TM",
+      "instruction": "Doctor prescription படிக்க முடியல - என்ன செய்வது?",
+      "current_output": "Options: 1) Ask doctor to write clearly/print, 2) Request pharmacist to explain, 3) Ask doctor to explain each medicine - when, how many, how long, 4) Take photo and ask family member/friend, 5) Pharmacy apps can help identify. Rights: Doctor should explain medicines in your language. Tip: Ask doctor to write in capital letters. Important: Understand dosage, timing, food relation (before/after meals).",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH181_TG",
+      "instruction": "Piles/hemorrhoids-kku Siddha treatment?",
+      "current_output": "Effective Siddha treatment! Moola Noi (piles) treatments: 1) Internal - Chitramutti Lehyam, Abhaya Arishtam, 2) External - Elathi Choornam application, Sitz bath with herbal decoction, 3) Agni karma (cauterization) for advanced, 4) Kshara application. Diet crucial: High fiber, avoid spicy. Duration: 1-2 months for mild, longer for severe. Surgery alternative: Siddha procedures for Grade 2-3 piles.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH175_TM",
+      "instruction": "National Institute of Siddha (NIS) special treatments என்ன?",
+      "current_output": "NIS Tambaram specialties: 1) Noi Naadal (diagnostics), 2) Maruthuvam (general medicine), 3) Kuzhanthai Maruthuvam (pediatrics), 4) Sirappu Maruthuvam (specialties), 5) Nanju Nool (toxicology), 6) Gunapadam (pharmacology), 7) Pothu Maruthuvam. Special: 1) Varmam unit, 2) Panchakarma therapies, 3) Yoga therapy, 4) Research wing. Referral: Complex cases from all over India. Contact: 044-22411611.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH154_TM",
+      "instruction": "Medicine missed dose - double dose எடுக்கலாமா?",
+      "current_output": "Generally NO! Rules vary: 1) Most medicines - take when remembered, skip if close to next dose, 2) Never double dose unless doctor says, 3) Blood pressure/diabetes - specific rules, 4) Antibiotics - complete course important. Dangerous to double: Blood thinners, heart medicines, insulin. Safe practice: 1) Set reminders, 2) Pill boxes, 3) Ask pharmacist/doctor specific instructions. If unsure: Call doctor before taking.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH109_TM",
+      "instruction": "Employer-கிட்ட mental health issue சொல்லணுமா?",
+      "current_output": "Not mandatory to disclose. Rights: 1) No termination for mental illness (disability discrimination), 2) Reasonable accommodation (flexible hours, WFH), 3) Medical leave like any illness, 4) Confidentiality if disclosed. When to consider: If need accommodation, if affecting work significantly. Protection: RPD Act 2016 + MHCA 2017. Termination for mental illness: Challenge in labor court.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

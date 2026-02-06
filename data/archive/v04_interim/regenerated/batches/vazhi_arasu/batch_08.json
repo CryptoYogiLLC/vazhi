@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 8,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SLE010",
+      "instruction": "Naan nilam / veedu vaanga porein. Ennenna check pannanum? Registration eppadi seyvadhu?",
+      "current_output": "Before buying - Verify:\n1. Title - 30 years chain, Lawyer verify\n2. EC - tnreginet.gov.in, 30 years\n3. Patta & Chitta - Seller name correct?\n4. FMB - Land measurement correct?\n5. Tax Receipts - No dues?\n6. Approved Layout - DTCP/CMDA/RERA\n7. Land Use - Agricultural/Residential?\n\nRegistration:\n8. Stamp Duty - 7% + 4% = ~11%\n9. Sale Deed - Prepare with Lawyer\n10. Sub-Registrar - Both parties + witnesses\n11. Post-Registration - Patta transfer at Taluk Office\n\nPMAY Benefit: First home buyers - 3-6.5% interest subsidy",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA024",
+      "instruction": "முதியோருக்கு Bus/Train சலுகை என்ன?",
+      "current_output": "TN State Bus: FREE travel in ordinary buses for 60+ (just show age proof). Railway: 40% discount for men 60+, 50% for women 58+ (auto-applied on IRCTC). Air India: 50% on select routes for 63+. Always carry age proof.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP004",
+      "instruction": "Death certificate-ku enna documents vendum?",
+      "current_output": "Deceased Aadhaar card, Hospital death certificate / Postmortem report, Applicant ID proof vendum. 21 days-kulla register pannanum.",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNH004",
+      "instruction": "Amma Baby Care Kit endraal enna?",
+      "current_output": "Free kit for newborn baby. Value: ₹5,000+. Contents: Baby clothes (6 sets), Mosquito net, Baby bed, Towels, Diapers, Baby oil/soap/powder, Blanket, Toys. Eligibility: Govt hospital delivery, Dr. Muthulakshmi scheme beneficiary. Given: At hospital during discharge. Documents: MCP card, Delivery details.",
+      "category": "tn_health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR002T",
+      "instruction": "En nilathula pudhiya borewell amaikkka enna permission vendum?",
+      "current_output": "Borewell permission process:\n\n**Step 1: Get Permission**\n- Where: PWD Ground Water Wing / District Collector\n- Online: tnpwd.gov.in\n\n**Step 2: Documents**\n- Land document (Patta/Chitta)\n- FMB Extract\n- Location sketch\n- Adjacent borewell details (within 500m)\n- Aadhaar, Photo\n\n**Step 3: Fee**\n- Application: ₹100-500\n- NOC: ₹500-1,000\n\n**Step 4: Inspection**\n- PWD officer visit\n- Ground water check\n- Spacing norms (Min 200m from others)\n\n**Step 5: Approval**\n- Time: 15-30 days\n- Depth restriction possible\n\n**Important:** Without permission = legal action",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AG006",
+      "instruction": "Solar pump scheme யாருக்கு கிடைக்கும்?",
+      "current_output": "PM-KUSUM scheme கீழ் solar pump subsidy உண்டு. 60% government subsidy, 30% loan, 10% farmer share. Agriculture department-ல் online apply செய்யலாம். 3HP-10HP pumps available.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC004",
+      "instruction": "IGNWPS (Indira Gandhi National Widow Pension Scheme) endraal enna?",
+      "current_output": "Pension for BPL widows. Central: ₹300/month. TN State: Additional ₹1,000/month. Eligibility: 40-79 years widow, BPL family. 80+ years: Transferred to IGNOAPS. Apply: Taluk/Panchayat office. Documents: Death certificate of husband, Age proof, Aadhaar, Income certificate, Bank account. Remarried: Not eligible.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP036",
+      "instruction": "New electricity connection eppadi peruvadhu?",
+      "current_output": "Apply: nsc.tnebnet.org. Documents: Property document / Rental agreement, Aadhaar. Fee: ₹500-2000 (depends on load). Time: 7-15 days. Complaint: 94987-94987",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP020",
+      "instruction": "Voter ID eppadi peruvadhu?",
+      "current_output": "1. voters.eci.gov.in or Voter Helpline App use pannunga 2. Form 6 fill pannunga 3. Documents: Age proof (must be 18+), Address proof, Passport size photo 4. BLO will visit your home for verification 5. Time: 30-45 days",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC013",
+      "instruction": "Private college students-க்கு government scholarship கிடைக்குமா?",
+      "current_output": "AICTE/UGC approved private colleges-ல் படிக்கும் students-க்கு government scholarships applicable. College recognition verify செய்யுங்கள். Self-finance college-க்கும் சில schemes உண்டு.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNHO004",
+      "instruction": "TNHB (Tamil Nadu Housing Board) veedu eppadi vaanguvadhu?",
+      "current_output": "TNHB affordable housing. Types: EWS (Economic Weaker Section), LIG, MIG, HIG flats/plots. Apply: Online at tnhb.tn.gov.in. Selection: Lottery/First-come-first-serve (based on scheme). Cost: Lower than market price. Loan: Bank tie-ups, easy EMI. Documents: Income proof, Aadhaar, Address proof. Projects: Chennai, Coimbatore, Madurai, other cities. Rental Housing: TNHB rental schemes for low-income.",
+      "category": "tn_housing",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP024",
+      "instruction": "Mudhiyor pension eppadi peruvadhu?",
+      "current_output": "Eligibility: 60+ years, BPL family. Amount: Monthly ₹1,000. Apply: Online: pensionschemes.tn.gov.in, Offline: Tahsildar / Taluk office. Documents: Age proof, Income certificate, Aadhaar, Bank passbook",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA012",
+      "instruction": "புதிய ரேஷன் அட்டை எப்படி பெறுவது?",
+      "current_output": "Apply at tnpds.gov.in or Taluk Office. Documents: All family members' Aadhaar, address proof, income certificate, gas connection details, photos. Types: PHH (₹1 rice), AAY (free rice), NPHH. RI inspection, 30-45 days processing.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA036T",
+      "instruction": "Free legal aid enga peruvadhu?",
+      "current_output": "TNSLSA (Tamil Nadu State Legal Services Authority) provides free legal aid. Eligibility: BPL, SC/ST, women, differently-abled, senior citizens, victims of trafficking. Helpline: 15100 (24x7). Legal Aid Cell at every district court. Lok Adalat for quick settlements.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS038",
+      "instruction": "Sukanya Samriddhi Yojana (SSY) endraal enna?",
+      "current_output": "Savings scheme for girl children. Age: Can open account before 10 years. Deposit: Minimum ₹250, Maximum ₹1.5 lakh/year. Interest: 8.2% (2024) - Very high! Duration: 21 years or marriage (above 18). Tax Benefits: Section 80C deduction (up to ₹1.5 lakh), Interest tax-free, Maturity tax-free (EEE status). Open: Post Office/Bank, Birth Certificate, Parent's ID proof. Partial Withdrawal: 50% at 18 (Higher education/Marriage)",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS025",
+      "instruction": "National Scholarship Portal (NSP) எப்படி பயன்படுத்துவது?",
+      "current_output": "Central Govt Scholarships ஒரே இடத்தில். Website: scholarships.gov.in. முக்கிய Scholarships: Pre-Matric SC (Class 1-10, ₹150-750/month), Post-Matric SC (Class 11+, ₹230-1,200/month), Merit-cum-Means (Technical edu, Tuition fee + ₹1,000/month), INSPIRE (Science top 1%, ₹80,000/year), NMMS (Class 9-12 EWS, ₹12,000/year). விண்ணப்பிக்க: scholarships.gov.in → Register, Aadhaar, Income Certificate, Marksheet upload, Institute verification, DBT மூலம் Bank-ல் வரும்",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC010",
+      "instruction": "Senior Citizen Savings Scheme (SCSS) endraal enna?",
+      "current_output": "Best savings for 60+ years. Interest: 8.2% (2024 - very high!). Deposit: ₹1,000 to ₹30 lakh. Term: 5 years (extendable by 3 years). Tax: Section 80C deduction, Interest taxable but TDS threshold ₹50,000. Open: Post Office/Bank (SBI, ICICI, etc.). Early closure: Possible after 1 year, penalty applies. Nomination: Mandatory.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA030",
+      "instruction": "Employment Exchange-ல் பதிவு எப்படி செய்வது?",
+      "current_output": "Online at tnvelaivaaippu.gov.in → OTR (One Time Registration). Documents: Educational certificates, community certificate, Aadhaar, photo. Benefits: Govt job notifications, private opportunities, skill training. Renew every 3 years. Also available at District Employment Office.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA023T",
+      "instruction": "Old Age Pension eppadi peruvadhu?",
+      "current_output": "TN State: ₹1,000/month (60-79 years), ₹1,500/month (80+). Eligibility: BPL/low income, no other pension. Apply at tneservices.tn.gov.in or Taluk Office with age proof, income certificate, Aadhaar, bank account. VAO verification. Time: 30-60 days.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA014",
+      "instruction": "புதிய ஓட்டுநர் உரிமம் எப்படி பெறுவது?",
+      "current_output": "Step 1: Apply for Learner's License (LLR) at parivahan.gov.in - age proof, address proof, medical declaration. Pass computer test. Step 2: After 30 days, apply for DL. Take driving test at RTO. Fee: ₹200-700. Age: 18+ for car/bike, 16+ for without gear.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "URB004",
+      "instruction": "Chennai-ல் Property Tax எப்படி கட்டுவது? Assessment தவறு என்றால் என்ன செய்வது?",
+      "current_output": "**Property Tax Payment (Chennai Corporation):**\n\n**Online Payment:**\n1. Website: chennaicorporation.gov.in\n2. Click: Property Tax\n3. Enter: Zone Number + Division + Bill Number\n4. Or: Property Tax Assessment Number\n5. View bill details\n6. Pay: Net Banking / UPI / Card\n7. Download receipt\n\n**Offline Payment:**\n- Corporation Zonal Office\n- e-Seva Centers\n- Common Service Centers\n\n**Due Dates:**\n- Half-yearly: April & October\n- Advance payment: 5% discount\n- Delay: 2% penalty per month\n\n**Assessment Calculation:**\n- Annual Rental Value (ARV) method\n- Factors: Location, Area, Age, Usage\n- Residential vs Commercial rates different\n\n**Assessment தவறு என்றால்:**\n\n**Step 1: Objection Filing**\n- எங்கே: Zonal Office / Online\n- Within 15 days of assessment\n- Form + Supporting documents\n\n**Step 2: Documents for Objection**\n- Property document\n- Previous tax receipts\n- Building plan (approved)\n- Area measurement proof\n- Usage proof (Residential/Commercial)\n\n**Step 3: Hearing**\n- Revenue Inspector verification\n- Assistant Revenue Officer hearing\n- Your explanation\n\n**Step 4: Revised Assessment**\n- If accepted: New assessment\n- If rejected: Appeal to Commissioner\n\n**Appeal Process:**\n- First Appeal: Commissioner\n- Second Appeal: Small Causes Court\n- Time limit: 30 days each stage\n\n**Common Issues:**\n- Wrong plinth area\n- Commercial rate for residential\n- Old building shown as new\n- Vacant land taxed as building\n\n**Tips:**\n- Keep all tax receipts\n- Update ownership after purchase\n- Inform about demolition/modification\n- Check assessment every revision cycle",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA006T",
+      "instruction": "Pudhiya PAN Card eppadi peruvadhu?",
+      "current_output": "Easiest: Instant e-PAN at eportal.incometax.gov.in using Aadhaar - FREE and instant! Alternative: Apply at onlineservices.nsdl.com or pan.utiitsl.com - ₹107 for physical card, 15-20 days. Need ID proof, address proof, DOB proof, photo, and signature.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNE008",
+      "instruction": "TN Free Bus Pass for students enna?",
+      "current_output": "Free bus travel for all students. Coverage: School students - Govt/Private, College students - UG/PG/Professional. Type: Free travel in ordinary buses. Process: Apply at School/College, get ID card. Documents: Bonafide certificate, Photo, Aadhaar. Validity: Academic year. Not for: AC buses, special buses.",
+      "category": "tn_education_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS018",
+      "instruction": "PM Janaushadhi Kendra endraal enna?",
+      "current_output": "Affordable medicines store. 50-90% less than MRP. 1,800+ medicines + 285+ Surgical items. Quality: NABL tested, WHO-GMP certified. Find: janaushadhi.gov.in → Store Locator. 1,000+ stores in Tamil Nadu. Example: Paracetamol 500mg (10 tabs) - Market ₹15, Janaushadhi ₹2.50; Metformin 500mg - Market ₹25, Janaushadhi ₹3.50",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS031",
+      "instruction": "PM Shram Yogi Maan-Dhan (PM-SYM) என்றால் என்ன?",
+      "current_output": "Unorganized Workers-க்கு Pension. தகுதி: 18-40 வயது, மாத வருமானம் ₹15,000-க்கு கீழ், EPFO/ESIC/NPS இல் இல்லாதவர், Street vendors, Domestic workers, Construction workers, etc. Contribution: ₹55-200/month (வயது பொறுத்து). 60 வயதில்: ₹3,000/month pension. Government: Equal matching contribution. சேர: CSC (Common Service Center), maandhan.in. Aadhaar + Savings Account தேவை",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

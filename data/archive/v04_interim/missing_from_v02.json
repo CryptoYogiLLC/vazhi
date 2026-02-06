@@ -1,0 +1,522 @@
+[
+  {
+    "instruction": "'தாம்வீழ்வார் மென்றோள்' - துணைவியின் அழகு பற்றிய குறள் என்ன?",
+    "output": "குறள்: 'தாம்வீழ்வார் மென்றோள் துயிலின் இனிதுகொல் தாமரைக் கண்ணான் உலகு'. அர்த்தம்: நம்மை நேசிப்பவர் மெல்லிய தோளில் தூங்குவது, திருமாலின் (தாமரைக் கண்ணான்) சொர்க்கத்தை விட இனிமையானது. True love is heaven on earth! Romance-க்கு வள்ளுவரின் அழகான expression.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT053_TM"
+  },
+  {
+    "instruction": "Recently widowed lady-க்கு call - 'உங்கள் husband insurance claim-க்கு processing fee கட்டுங்கள், மீதி paisa வரும்'.",
+    "output": "Insurance claim-க்கு advance fee கிடையாது. Grieving families-ஐ exploit செய்யும் கொடூர scam. Insurance company branch-ல் நேரடியாக விசாரியுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT013"
+  },
+  {
+    "instruction": "'அறிவினான் ஆகுவது உண்டோ' - அறிவின் மதிப்பு என்ன?",
+    "output": "குறள்: 'அறிவினான் ஆகுவது உண்டோ பிறிதினோய் தன்செய் வினையான் வரும்'. அர்த்தம்: அறிவால் எல்லாம் அடையலாம். ஆனால் அறிவில்லாமை என்ற நோய், நம் செயல்களாலேயே வரும். Ignorance is a self-inflicted disease. Knowledge is the cure - and it's up to you to acquire it!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT060_TM"
+  },
+  {
+    "instruction": "'ஒன்றே குலம் ஒருவனே தேவன்' - இதன் அர்த்தம் என்ன?",
+    "output": "திருமூலரின் மிகப் புகழ்பெற்ற வரி: 'ஒன்றே குலம் ஒருவனே தேவன்'. அர்த்தம்: எல்லா மனிதர்களும் ஒரே குலம் - சாதி பேதம் இல்லை. கடவுளும் ஒருவரே - எல்லா மதங்களும் ஒரே உண்மையை சொல்கின்றன. 2000 வருடங்களுக்கு முன்பே சாதி ஒழிப்பு, மத நல்லிணக்கம் பேசிய progressive thinker திருமூலர்!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT115_TM"
+  },
+  {
+    "instruction": "அப்பாவுக்கு (retired) போன் வந்தது - 'Pension arrears கிடைக்கும், processing-க்கு advance கட்டுங்கள்' என்று.",
+    "output": "Pension department advance கேட்காது. Treasury-ல் நேரடியாக விசாரியுங்கள். Retired employees-ஐ target செய்யும் common scam இது.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT003"
+  },
+  {
+    "instruction": "சித்தர்கள் meditation பற்றி என்ன சொல்கிறார்கள்?",
+    "output": "சித்தர்களின் meditation techniques: 1) அந்தர் மௌனம் - inner silence, 2) மந்திர ஜபம் - mantra repetition, 3) ஒளி தியானம் - light meditation, 4) சுவாச கவனிப்பு - breath awareness, 5) குண்டலினி தியானம் - chakra meditation. 'மனம் ஒடுங்கினால் அனைத்தும் ஒடுங்கும்' என்பது core teaching. Daily practice-க்கு even 10 minutes போதும் என்று சொல்கிறார்கள். நவீன mindfulness-ன் தமிழ் மூலம் இதுவே!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT125_TM"
+  },
+  {
+    "instruction": "Job interview-க்கு போகும்போது courage-க்கு என்ன குறள் படிக்கலாம்?",
+    "output": "'அச்சமே கீழ்களது ஆசாரம் அஃதால் எச்சம் ஏமாப்பு உடைத்து'. பயம் என்பது தாழ்ந்தவர்களுக்கே உரியது. Confident-ஆக இருங்கள். மேலும்: 'ஊக்கமது கைவிடேல்' - enthusiasm-ஐ விடாதீர்கள். Believe in yourself, prepare well, and face it boldly!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT062_TM"
+  },
+  {
+    "instruction": "கொங்கணர் pulse diagnosis-ஐ எப்படி explain பண்ணியிருக்கிறார்?",
+    "output": "கொங்கணர் 'நாடி பரிட்சை' (pulse diagnosis) பற்றி விரிவாக எழுதியுள்ளார். மூன்று விரல்களால் மணிக்கட்டில் நாடியை உணர்வது - வாத நாடி, பித்த நாடி, கப நாடி. 'எந்த நாடி எப்படி அடிக்கிறது, என்ன நோய்' என்று formulas கொடுத்துள்ளார். Modern doctors-ம் appreciate பண்றாங்க இந்த ancient technique-ஐ. Without any equipment-ல் diagnosis செய்ய முடியும்!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT113_TM"
+  },
+  {
+    "instruction": "காதலி/காதலன் கோபமாக இருக்கும்போது என்ன குறள் நினைக்கலாம்?",
+    "output": "'ஊடலின் தோன்றும் சிறுதுனி நல்லளி வாடினும் பாடு பெறும்'. சிறிய ஊடல் (fight) காதலை இன்னும் இனிமையாக்கும். Normal-தான்! மேலும்: 'தணிந்தமை செல்லாது உலகம் தளர்ந்தமை ஊடுவது எல்லார்க்கும் வரும்'. Cool down, then talk. Love grows after reconciliation!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT065_TM"
+  },
+  {
+    "instruction": "கொங்கணர் சித்தர் யார்? அவர் contributions என்ன?",
+    "output": "கொங்கணர் (கொங்கண சித்தர்) போகரின் சிஷ்யர். கொங்கு நாட்டைச் சேர்ந்தவர் என்பதால் இந்த பெயர். Siddha medicine-ல் மிக முக்கியமான contributions செய்தவர். நோய்களின் diagnosis methods, மருந்து தயாரிப்பு முறைகள் பற்றி விரிவாக எழுதியவர். 'கொங்கணர் வைத்திய சூத்திரம்' மிகவும் famous.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT112_TM"
+  },
+  {
+    "instruction": "போகர் சித்தர் யார்? அவர் சிறப்பு என்ன?",
+    "output": "போகர் சித்தர் மிகவும் புகழ்பெற்ற சித்தர்களில் ஒருவர். இரசவாதத்தில் (alchemy) expert. பழனி முருகன் கோயிலில் உள்ள மூலவர் சிலையை நவபாஷாணம் (9 வகை விஷங்கள்) கொண்டு செய்ததாக நம்பப்படுகிறது. சீனாவுக்கும் சென்று தாவோ தத்துவத்தை கற்றதாகவும், அங்கே 'Lao Tzu' என்று அழைக்கப்பட்டதாகவும் சிலர் நம்புகிறார்கள் (controversial claim).",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT108_TM"
+  },
+  {
+    "instruction": "Life-ல் எல்லாமே wrong ஆகிக்கிட்டு இருக்கு - என்ன செய்வது?",
+    "output": "'இடுக்கண் வருங்கால் நகுக அதனை அடுத்தூர்வது அஃதொப்ப தில்'. கஷ்ட காலத்தில் சிரியுங்கள் - அதுவே best remedy. மேலும்: 'ஊழையும் உப்பக்கம் காண்பர் உலைவின்றித் தாழாது உஞற்று பவர்'. தொடர்ந்து முயற்சி செய்பவர்கள் fate-ஐயும் மாற்றுவார்கள். This too shall pass!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT077_TM"
+  },
+  {
+    "instruction": "அகத்தியர் யார்? அவர் ஏன் முக்கியமானவர்?",
+    "output": "அகத்தியர் (அகஸ்தியர்) சித்தர்களின் தலைவர், 'குரு மூர்த்தி' என்று அழைக்கப்படுபவர். தமிழ் மொழிக்கு இலக்கணம் எழுதியவர் என்று நம்பப்படுகிறது (அகத்தியம்). சிவபெருமான் இவருக்கு நேரடியாக ஞானம் அளித்ததாக நம்பிக்கை. தென்னிந்தியாவுக்கு வடக்கிலிருந்து வந்தவர். பொதிகை மலையில் இன்றும் இருப்பதாக நம்பப்படுகிறது. Siddha medicine-ன் founding father.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT105_TM"
+  },
+  {
+    "instruction": "Office-ல் boss unfair-ஆக நடந்துகொண்டால் என்ன குறள் உதவும்?",
+    "output": "'பொறையுடைமை பொருளுடைமை போற்றிச் சிறந்தான் செறிவுடைமை அவ்விரன் என'. பொறுமை என்பது மிகப்பெரிய செல்வம். Unfair situation-ல் பொறுமையாக இருந்து, right time-ல் action எடுக்கவும். Emotional reaction avoid பண்ணுங்க. Document everything, stay professional.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT061_TM"
+  },
+  {
+    "instruction": "பொதிகை மலை ஏன் சித்தர்களுக்கு முக்கியம்?",
+    "output": "பொதிகை மலை (Agastyamalai) Western Ghats-ல் உள்ளது. அகத்தியர் இங்கே தவம் செய்ததாக நம்பப்படுகிறது. Rare herbs நிறைய கிடைக்கும். இன்றும் அகத்தியர் இங்கே இருப்பதாக சிலர் நம்புகிறார்கள். Spiritual seekers இங்கே யாத்திரை செல்கிறார்கள். Courtallam (குற்றாலம்) அருகே. Dense forest என்பதால் trekking permits தேவை. Biodiversity hotspot-ஆகவும் declared.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT127_TM"
+  },
+  {
+    "instruction": "இடைக்காடர் சித்தர் பற்றி என்ன தெரியும்?",
+    "output": "இடைக்காடர் ஆடு மேய்க்கும் இடையர் சமூகத்தைச் சேர்ந்தவர் என்று நம்பப்படுகிறது - அதனால் இந்த பெயர். சாதி பேதமின்றி எவரும் சித்தராகலாம் என்பதற்கு example. 'இடைக்காடர் ஞானம்', 'இடைக்காடர் வைத்தியம்' போன்ற நூல்கள் அவர் பெயரில் உள்ளன. எளிய மொழியில் ஆன்மீகத்தை explain பண்ணியவர்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT118_TM"
+  },
+  {
+    "instruction": "'Processing fee கட்டுங்கள், loan/prize/refund வரும்' என்கிறார்கள். கட்டலாமா?",
+    "output": "'Processing fee', 'registration fee', 'advance payment' - இவை scam signals. பணம் வர பணம் கட்ட வேண்டியதில்லை.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF005"
+  },
+  {
+    "instruction": "பெற்றோர்களுடன் misunderstanding இருந்தால் என்ன செய்வது?",
+    "output": "'அன்னையும் பிதாவும் முன்னறி தெய்வம்' (கொன்றைவேந்தன்). பெற்றோரே முதல் கடவுள். மேலும்: 'ஈன்றபொழுதின் பெரிதுவக்கும் தன்மகனை சான்றோன் எனக்கேட்ட தாய்'. தாய் தந்தை நம் நல்லதற்கே சொல்கிறார்கள். Patience-உடன் explain பண்ணுங்கள், respect maintain பண்ணுங்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT067_TM"
+  },
+  {
+    "instruction": "நவபாஷாணம் என்றால் என்ன? பழனி சிலை எப்படி செய்யப்பட்டது?",
+    "output": "நவபாஷாணம் என்பது 9 வகையான minerals/poisons கலந்த கலவை: 1) வெள்ளை பாஷாணம், 2) கல் பாஷாணம், 3) மனோசிலை, 4) காவி, 5) கந்தகம், 6) இரசம் (mercury), 7) வெடி உப்பு, 8) இலிங்கம், 9) பூரம். இவற்றை குறிப்பிட்ட விகிதத்தில் கலந்து, heat செய்து, பழனி முருகன் சிலை செய்யப்பட்டது என்று நம்பப்படுகிறது. அபிஷேகம் செய்யும்போது இது medicinal water ஆகிறது என்று பக்தர்கள் நம்புகிறார்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT110_TM"
+  },
+  {
+    "instruction": "பொங்கல் offer-ன்னு WhatsApp message வந்துச்சு - 'Reliance பொங்கல் பம்பர், LED TV FREE! Link click பண்ணுங்க' - genuine-ஆ?",
+    "output": "இது பொங்கல் special scam! Reliance இப்படி WhatsApp forward அனுப்பாது. பொங்கல் excitement-ல மக்கள் எளிதா மாட்டிக்குறாங்க. Official app/website-ல மட்டும் offer பாருங்க. Forward link click பண்ணாதீங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS001"
+  },
+  {
+    "instruction": "'யாருக்கும் சொல்லாதீர்கள், secret offer' என்று caller insist பண்றாங்க.",
+    "output": "Secrecy demand scam sign. 'Family-கிட்ட சொல்லாதீர்கள்', 'confidential' என்று சொன்னால் - அவர்கள் உங்களை isolate பண்ண try பண்றாங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF007"
+  },
+  {
+    "instruction": "Pregnant lady-க்கு call - 'Pradhan Mantri Matru Vandana Yojana-ல் extra benefit, registration-க்கு Aadhaar OTP கொடுங்கள்'.",
+    "output": "PMMVY registration-க்கு OTP தேவையில்லை. Anganwadi center அல்லது hospital-ல் direct apply செய்யலாம். Pregnant women-ஐ target செய்யும் scam. OTP கொடுக்காதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT012"
+  },
+  {
+    "instruction": "அகத்தியர் நாடி ஜோதிடம் என்றால் என்ன?",
+    "output": "அகத்தியர் palm leaves-ல் எழுதிய predictions. ஒவ்வொரு மனிதரின் கடந்த காலம், நிகழ்காலம், எதிர்காலம் பற்றிய தகவல்கள் இதில் உள்ளன என்று நம்பப்படுகிறது. Vaitheeswaran Koil (நாகப்பட்டினம்) இதற்கு famous. Thumb impression கொடுத்து உங்கள் leaf-ஐ கண்டுபிடிப்பார்கள். நம்பிக்கை இருப்பவர்களுக்கு ஆறுதலாக இருக்கும். Scientific proof இல்லை என்று critics சொல்வார்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT107_TM"
+  },
+  {
+    "instruction": "Newly married couple-க்கு - 'Free honeymoon package வென்றீர்கள்! Booking fee 10000 மட்டும் கட்டுங்கள்' என்று Instagram ad.",
+    "output": "Free package-க்கு booking fee என்பது contradiction. Newly married couples-ஐ target செய்யும் travel scam. பணம் கட்டினால் போய்விடும், trip கிடைக்காது.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT014"
+  },
+  {
+    "instruction": "நண்பன் துரோகம் செய்தால் என்ன செய்வது?",
+    "output": "'நட்பிற்கு வீற்றிருக்கை யாதெனின் கொட்பின்றி ஒல்லுவ தொல்யாக்க'. நல்ல நட்பு என்பது எந்த சூழ்நிலையிலும் support பண்றது. துரோகம் செய்தவன் உண்மையான நண்பன் இல்லை. 'பழைமையிற் கேண்மை செய்தார் உடையார்' - பழைய நட்பு மதிப்பானது, ஆனால் toxic friendship விட்டு விலகுவது wise.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT066_TM"
+  },
+  {
+    "instruction": "'OTP சொல்லுங்கள், verify பண்றோம்' என்று caller கேட்கிறார். Safe-ஆ?",
+    "output": "OTP யாருக்கும் சொல்லக்கூடாது - bank, police, government யாராக இருந்தாலும். 'OTP sollunga' என்பது #1 red flag phrase.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF002"
+  },
+  {
+    "instruction": "Loan கொடுக்கலாமா வேண்டாமா?",
+    "output": "'ஈயாத செல்வத்தின் ஈயும் பசி' - கொடுக்காத செல்வம் பயனில்லை. ஆனால்: 'கொடுப்பது ஆற்றாமை கூறுவது அழகல்ல' - கொடுக்க முடியாதபோது 'இல்லை' சொல்வது தவறில்லை. Assess carefully - உங்கள் financial stability பார்த்து, திரும்ப கிடைக்கும் என்று நம்பிக்கை இருந்தால் மட்டும் கொடுங்கள். Afford பண்ண முடியாததை loan கொடுக்காதீர்கள்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT075_TM"
+  },
+  {
+    "instruction": "NRI relative-க்கு call வந்தது - 'உங்கள் India property-ல் problem, online-ல் fee கட்டினால் solve ஆகும்' என்று.",
+    "output": "Property issues-க்கு online fee கட்ட வேண்டியதில்லை. NRIs-ஐ target செய்யும் scam - India-ல் வருவது கஷ்டம் என்று தெரிந்து exploit செய்கிறார்கள். Lawyer consult செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT010"
+  },
+  {
+    "instruction": "என் தாத்தாவுக்கு call வந்தது - 'உங்கள் பேரன் accident, hospital bill-க்கு urgent money transfer பண்ணுங்கள்' என்று.",
+    "output": "இது grandparent scam. மூத்தவர்களின் அன்பை misuse செய்யும் மோசடி. உடனே பேரனை நேரடியாக call செய்து verify செய்யுங்கள். Panic-ல் பணம் அனுப்பாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT002"
+  },
+  {
+    "instruction": "Anger control பண்ண முடியவில்லை - எந்த குறள் உதவும்?",
+    "output": "'சினம்என்னும் சேர்ந்தாரைக் கொல்லி இனம்என்னும் ஏமப்புணையை சுடும்'. கோபம் என்பது நம்மை சேர்ந்தவர்களையே (குடும்பம், நண்பர்கள்) அழிக்கும். மேலும்: 'ஆறுவது சினம்' (ஆத்திசூடி) - கோபத்தை ஆறவிடுங்கள். Count to 10, take deep breaths, walk away. Anger hurts YOU more than others.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT069_TM"
+  },
+  {
+    "instruction": "Rich ஆக ஆசை - ஆனால் shortcut வேண்டாம். என்ன வழி?",
+    "output": "'அருளொடும் அன்பொடும் வாராப் பொருளாக்கம் புல்லார் புரள விடல்'. அருள், அன்பு இல்லாமல் சம்பாதிக்கும் பணத்தை விட்டுவிடுங்கள். மேலும்: 'தீயவை செய்தார் கெடுதல்' - wrong ways-ல் earn பண்ணினால் கெட்டுப்போவீர்கள். Hard work + smart work + integrity = sustainable wealth. Shortcuts lead to downfall!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT076_TM"
+  },
+  {
+    "instruction": "'நயனிலன் என்பது சொல்லும்' - selfish person பற்றிய குறள் என்ன?",
+    "output": "குறள்: 'நயனிலன் என்பது சொல்லும் பயனில சொல்லிழுக் குற்றவர் நட்பு'. அர்த்தம்: பயனற்ற பேச்சு பேசுபவர்களின் நட்பு, 'இவர் selfish' என்று காட்டிவிடும். Quality of friendship shows character. Your friends reflect who you are!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT059_TM"
+  },
+  {
+    "instruction": "பணம் சேமிக்க முடியவில்லை - என்ன குறள் உதவும்?",
+    "output": "'அளவறிந்து வாழாதான் வாழ்க்கை உளபோல இல்லாகித் தோன்றாக் கெடும்'. வரவுக்கு தகுந்தபடி செலவு செய்யாதவன் வாழ்க்கை கெடும். மேலும்: 'ஆகாறு அளவறிந்து ஈக' - income அறிந்து செலவழியுங்கள். Budget maintain பண்ணுங்கள். Needs vs Wants பிரியுங்கள். 50-30-20 rule follow பண்ணுங்கள்!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT074_TM"
+  },
+  {
+    "instruction": "மருத்துவர் என்று அழைத்து 'உங்கள் உறவினர் விபத்தில் அனுமதி, அவசர சிகிச்சைக்கு 50,000 உடனே அனுப்புங்கள்' என்றார்கள்.",
+    "output": "முதலில் அமைதியாக இருங்கள். உறவினரை நேரடியாக அழைத்து சரிபார்க்கவும். மருத்துவமனை பெயர், முகவரி கேளுங்கள், அழைத்து உறுதி செய்யுங்கள். மோசடிக்காரர்கள் அவசரத்தை பயன்படுத்தி பணம் திருடுவார்கள். சரிபார்க்காமல் பணம் அனுப்பாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "pure_tamil_scam_detection",
+    "id": "DC001_ta"
+  },
+  {
+    "instruction": "பட்டினத்தார் யார்? அவர் கதை என்ன?",
+    "output": "பட்டினத்தார் காவேரிப்பூம்பட்டினத்தில் பெரிய வணிகர். மிகவும் செல்வந்தர். ஒரு நாள் அவர் மகன் ஒரு packet தந்தார் - உள்ளே பார்த்தால் ஊசியும் நூலும். 'இதுவும் உனக்கு வேண்டாம்' என்று சொல்லி சென்றுவிட்டார் மகன். இதை உணர்ந்த பட்டினத்தார் எல்லா செல்வத்தையும் விட்டு துறவி ஆனார். 'என்ன புண்ணியம் செய்தனை நெஞ்சமே' என்ற பாடல் famous.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT120_TM"
+  },
+  {
+    "instruction": "போகர் எழுதிய நூல்கள் என்ன?",
+    "output": "போகரின் முக்கிய நூல்கள்: 1) போகர் 7000 - மிகப்பெரிய நூல், 7000 பாடல்கள், 2) போகர் கற்ப சூத்திரம் - rejuvenation medicine, 3) போகர் வைத்தியம் - மருத்துவம், 4) போகர் ஞானம் - ஆன்மீகம், 5) போகர் 12000 - விரிவான version, 6) போகர் சூத்திரம் - formulas. இரசவாதம், மருத்துவம், yoga எல்லாம் இதில் உள்ளன.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT109_TM"
+  },
+  {
+    "instruction": "Social media comparison-ல் jealous feel ஆகிறேன் - என்ன செய்வது?",
+    "output": "'அழுக்காறு உடையாரை ஆக்கம் தேடும் ஒழுக்காறு' - பொறாமை உள்ளவனை செல்வம் தேடி வராது. மேலும்: 'அவ்வித்து அழுக்காறு உடையானை செய்யவள் தவ்வையை காட்டி விடும்'. Jealousy-ஐ let go பண்ணுங்கள். Focus on YOUR journey. Others' highlight reel vs your behind-the-scenes - don't compare!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT071_TM"
+  },
+  {
+    "instruction": "First-time home buyer-க்கு - 'PMAY subsidy guaranteed, agent commission கட்டுங்கள், subsidy arrange பண்றோம்' என்கிறார்கள்.",
+    "output": "PMAY subsidy bank மூலமே வரும், agent தேவையில்லை. Commission கேட்பவர்கள் fraud. pmaymis.gov.in official website-ல் நேரடியாக apply செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT015"
+  },
+  {
+    "instruction": "என் அம்மாவுக்கு (60+) 'Ayushman Bharat card-ல் problem, OTP கொடுங்கள் fix பண்ணுவோம்' என்று call வந்தது.",
+    "output": "Ayushman Bharat team OTP கேட்காது. Senior citizens-ஐ target செய்யும் health scheme scam. OTP கொடுக்காதீர்கள். 14555 helpline-ல் verify செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT008"
+  },
+  {
+    "instruction": "யாரோ என்னைப் பற்றி gossip பண்றாங்க - எப்படி handle பண்றது?",
+    "output": "'கண்ணின்று கண்ணறச் சொல்லினும் சொல்லற்க முன்னின்று பின்நோக்காச் சொல்'. முன்னால் நல்லது பேசி, பின்னால் கெட்டது பேசுவதை avoid பண்ணுங்கள். Gossip பண்றவர்கள் own credibility இழப்பார்கள். Ignore them. 'மன்த்துக்கண் மாசிலன் ஆதல்' - உங்கள் மனம் clean-ஆக இருந்தால் போதும். Their words can't hurt you.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT073_TM"
+  },
+  {
+    "instruction": "பதினெண் சித்தர்கள் (18 Siddhars) யார் யார்?",
+    "output": "பதினெண் சித்தர்கள்: 1) நந்தீசர், 2) அகத்தியர், 3) திருமூலர், 4) புண்ணாக்கீசர், 5) புலிப்பாணி, 6) காலாங்கிநாதர், 7) அழுகுணி சித்தர், 8) அகப்பேய் சித்தர், 9) தேரையர், 10) குதம்பை சித்தர், 11) கருவூரார், 12) இடைக்காடர், 13) கமலமுனி, 14) வால்மீகி, 15) போகர், 16) மச்சமுனி, 17) கொங்கணர், 18) சட்டைமுனி. (பட்டியல் மாறுபடலாம் - வேறு versions-ம் உள்ளன).",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT104_TM"
+  },
+  {
+    "instruction": "திருமூலர் யார்? திருமந்திரம் என்றால் என்ன?",
+    "output": "திருமூலர் சைவ சித்தாந்தத்தின் founder-களில் ஒருவர். 'திருமந்திரம்' என்ற மகத்தான நூலை எழுதியவர் - 3000 பாடல்கள். இது 10-வது திருமுறை. 'ஒன்றே குலம், ஒருவனே தேவன்' என்ற famous quote இவரது. Yoga, tantra, சைவ சித்தாந்தம், ஆன்மீகம் எல்லாம் இதில் உள்ளன. ஒரு பசுவின் உடலில் புகுந்து அதன் கன்றை காப்பாற்றிய கதை famous - அதனால் 'மூலர்' என்ற பெயர் வந்தது.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT114_TM"
+  },
+  {
+    "instruction": "'இன்றே கட்டுங்கள், இல்லனா offer போய்விடும்' என்கிறார்கள். Trust பண்ணலாமா?",
+    "output": "Urgency create செய்வது scammer technique. 'இன்றே', 'உடனே', 'last chance' என்று சொன்னால் யோசியுங்கள். Legitimate offers-க்கு time இருக்கும்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF001"
+  },
+  {
+    "instruction": "சிவ வாக்கியர் யார்? அவரது பாடல்கள் சிறப்பு என்ன?",
+    "output": "சிவ வாக்கியர் மிகவும் controversial சித்தர். சமய சடங்குகளை, பூஜைகளை கடுமையாக விமர்சித்தவர். 'சாதி இல்லை, சமயம் இல்லை' என்று பேசியவர். 'நட்ட கல்லை தெய்வம் என்று நாலு பூ சாத்தியே, சுற்றி வந்து முணுமுணுத்தால் சொல்லுமோ முந்தை வினை?' - idol worship-ஐ கேள்வி கேட்கும் வரி. Rational thinking-ஐ 1000 வருடங்களுக்கு முன்பே பேசியவர்!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT119_TM"
+  },
+  {
+    "instruction": "Business fail ஆனால் என்ன குறள் motivate பண்ணும்?",
+    "output": "'ஆக்கம் இழந்தேமென்று அல்லாவார் ஊக்கம் ஒருவந்தம் கைத்துடை யார்'. செல்வம் போனாலும் cry பண்ணாதவர்களே உண்மையான வலிமையானவர்கள். மேலும்: 'இடுக்கண் வருங்கால் நகுக' - கஷ்டத்தில் சிரியுங்கள். Failure is temporary, your spirit is permanent. Try again!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT063_TM"
+  },
+  {
+    "instruction": "'AnyDesk/TeamViewer install பண்ணுங்கள், help பண்றோம்' என்று tech support சொல்கிறது.",
+    "output": "Remote access apps install பண்ண சொன்னால் 100% scam. 'AnyDesk', 'TeamViewer', 'Quick Support' - இவை danger words. Phone-ஐ control எடுத்துவிடுவார்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF003"
+  },
+  {
+    "instruction": "'QR scan பண்ணுங்கள், பணம் வரும்' என்று stranger சொல்கிறார்.",
+    "output": "QR scan = பணம் போகும், வராது. 'QR scan பண்ணுங்கள்' என்று பணம் receive பண்ண சொன்னால் reverse scam. Never scan stranger QR.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF008"
+  },
+  {
+    "instruction": "என் wife-க்கு WhatsApp வந்தது - 'Work from home, தினமும் 1000 சம்பாதியுங்கள், housewives special offer' என்று.",
+    "output": "Housewives-ஐ target செய்யும் task scam. ஆரம்பத்தில் சிறிய payment தருவார்கள், பின்பு investment கேட்டு ஏமாற்றுவார்கள். Join ஆகாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT004"
+  },
+  {
+    "instruction": "கயகல்பம் (Rejuvenation) என்றால் என்ன?",
+    "output": "கயகல்பம் என்பது உடலை புத்துணர்ச்சியாக்கி, வயதை தாமதப்படுத்தும் முறை. சித்தர்கள் நீண்ட ஆயுளோடு வாழ்ந்ததாக கூறப்படுவதற்கு இதுவே காரணம். இதில் அடங்கும்: 1) குறிப்பிட்ட herbs உட்கொள்ளல், 2) Detox செய்தல், 3) Yoga மற்றும் பிராணாயாமம், 4) Diet restrictions, 5) மனதை சுத்தப்படுத்துதல். Modern anti-aging research-ல் சில சித்தர் herbs study செய்யப்படுகின்றன!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT124_TM"
+  },
+  {
+    "instruction": "Job hunting செய்கிறேன். LinkedIn-ல் 'MNC company HR' என்று contact வந்து interview-க்கு training kit வாங்க 3000 கட்ட சொல்கிறார்.",
+    "output": "Legitimate companies training kit-க்கு பணம் கேட்காது. LinkedIn-ல் fake HR scams அதிகம். Company official website-ல் HR-ஐ verify செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT006"
+  },
+  {
+    "instruction": "Single parent-க்கு WhatsApp - 'குழந்தைகளுக்கு special scholarship, form fill பண்ண meeting-க்கு வாங்க' என்று unknown person message.",
+    "output": "Unknown persons-ஐ நம்பாதீர்கள். குழந்தைகள் safety முக்கியம். Official school அல்லது government website மூலமே scholarship apply செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT011"
+  },
+  {
+    "instruction": "'நுணுக்கமின்றித் தானும்' - micro-management பற்றி என்ன சொல்கிறார்?",
+    "output": "குறள்: 'பொய்யாமை பொய்யாமை ஆற்றின் அறம்பிற செய்யாமை செய்யாமை நன்று'. அர்த்தம்: பொய் சொல்லாமல் இருப்பதே தர்மம். மற்ற அறங்களை செய்யாவிட்டாலும் பரவாயில்லை. Truth is the foundation of all virtues. One who never lies needs no other dharma!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT058_TM"
+  },
+  {
+    "instruction": "Exam முடிந்த student-க்கு call வந்தது - 'Scholarship guaranteed, application fee 5000' என்று.",
+    "output": "Legitimate scholarships-க்கு application fee கிடையாது. NSP (National Scholarship Portal) மூலமே apply செய்யுங்கள். Private calls நம்பாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT007"
+  },
+  {
+    "instruction": "போகர் சமாதி எங்கே உள்ளது?",
+    "output": "போகர் சமாதி பழனி முருகன் கோயிலுக்குள்ளேயே உள்ளது. Sanctum sanctorum-க்கு கீழே underground-ல் போகர் இன்றும் தியானத்தில் இருப்பதாக நம்பப்படுகிறது. அந்த இடத்தில் darshan செய்யலாம். 'Bogar' என்ற 2020 Tamil movie இதைப் பற்றியது. பழனிக்கு போனால் போகர் சமாதியை தரிசிக்க மறக்காதீர்கள்!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT111_TM"
+  },
+  {
+    "instruction": "'ஊடலின் தோன்றும் சிறுதுனி' - ஊடல் பற்றிய குறள் என்ன சொல்கிறது?",
+    "output": "குறள்: 'ஊடலின் தோன்றும் சிறுதுனி நல்லளி வாடினும் பாடு பெறும்'. அர்த்தம்: சிறிய ஊடல் (love fight) காதலை மேலும் இனிமையாக்கும். சிறிய வருத்தம் வந்தாலும், அது மன்னிப்பின் போது இன்னும் ஆழமான அன்பாக மாறும். Healthy arguments strengthen relationships!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT054_TM"
+  },
+  {
+    "instruction": "பொங்கல் சமயம் 'Free gas cylinder for Pongal' link வந்துச்சு. Aadhaar number கேக்குது - fill பண்ணலாமா?",
+    "output": "ஆபத்து! Free cylinder scheme இல்ல, Aadhaar திருட scheme இது. பொங்கல்-ல 'free offer' scams peak-ல இருக்கும். Government scheme-னா official portal-ல தான் apply பண்ணணும். Random link-ல Aadhaar போடாதீங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS003"
+  },
+  {
+    "instruction": "நான் farmer. 'PM Kisan extra subsidy கிடைக்கும், apply பண்ண link-ல் click செய்யுங்கள்' என்று SMS வந்தது.",
+    "output": "PM Kisan portal (pmkisan.gov.in) மூலமே subsidy வரும். SMS link போலியானது. Bank, Aadhaar details கொடுத்தால் பணம் திருடப்படும். Official website மட்டுமே நம்புங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT005"
+  },
+  {
+    "instruction": "'Bank verification-க்கு CVV, expiry date சொல்லுங்கள்' என்று call வந்தது.",
+    "output": "CVV, expiry date, full card number யாருக்கும் சொல்லக்கூடாது. Bank-ம் இவற்றை கேட்காது. Card details கேட்டால் scam.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF010"
+  },
+  {
+    "instruction": "Fear of failure இருக்கிறது - எப்படி overcome பண்றது?",
+    "output": "'ஒல்வது அறிவது அறிந்ததன் கண் தங்கிச் செல்வார் பெரு நிலத்து நீடு வாழ்வார்'. உங்கள் திறமையை அறிந்து, அதில் focus செய்யுங்கள். மேலும்: 'உள்ளுவது எல்லாம் உயர்வுள்ளல்' - always think positive. Failure is just feedback! Learn and try again. 'தோற்றாலும் முயற்சி செய்' - effort matters more than outcome.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT072_TM"
+  },
+  {
+    "instruction": "'இடுக்கண் வருங்கால் நகுக' - கஷ்ட காலத்தில் என்ன செய்ய வேண்டும்?",
+    "output": "குறள்: 'இடுக்கண் வருங்கால் நகுக அதனை அடுத்துஊர்வது அஃதொப்ப தில்'. அர்த்தம்: கஷ்டம் வரும்போது சிரிக்க வேண்டும். அந்த கஷ்டத்தை வெல்ல இதை விட நல்ல வழி இல்லை. Smile through difficulties - best medicine for tough times. Positive attitude wins!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT056_TM"
+  },
+  {
+    "instruction": "'Video call-ல் இருங்கள், disconnect பண்ணாதீர்கள்' என்று officer சொல்கிறார்.",
+    "output": "Digital arrest scam. Real police video call-ல் investigation செய்யாது. 'Call cut பண்ணாதீர்கள்' என்று insist பண்ணினால் 100% fraud.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF009"
+  },
+  {
+    "instruction": "'பொங்கல் போனஸ் credited! 5000 ரூபாய் claim பண்ண OTP சொல்லுங்க' - government message-ஆ இது?",
+    "output": "Fake message! Government போனஸ் directly account-ல வரும், OTP கேக்காது. பொங்கல் time-ல இந்த scam அதிகம். 'Bonus claim' message வந்தா ignore பண்ணுங்க. Cyber crime-ல report பண்ணுங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS002"
+  },
+  {
+    "instruction": "அருணகிரிநாதர் யார்? திருப்புகழ் என்றால் என்ன?",
+    "output": "அருணகிரிநாதர் திருவண்ணாமலையில் பிறந்தவர். இளமையில் கெட்ட வாழ்க்கை வாழ்ந்து, பின் முருகன் அருளால் மாறியவர். 'திருப்புகழ்' என்ற அற்புதமான நூலை எழுதியவர் - 16000+ பாடல்கள் முருகன் மீது! தாள (beat) structure மிகவும் unique - இசை உலகில் மிகப்பெரிய contribution. 'முத்தைத்தரு பத்தித்திருநகை' போன்ற பாடல்கள் இன்றும் popular.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT121_TM"
+  },
+  {
+    "instruction": "Small business owner-க்கு call - 'MSME loan sanction ஆனது, disbursement-க்கு GST registration fee முன்கூட்டியே கட்டுங்கள்'.",
+    "output": "Bank loan disbursement-க்கு advance fee கேட்காது. GST registration free (gst.gov.in). MSME portal-ல் நேரடியாக check செய்யுங்கள். Business owners-ஐ target செய்யும் scam.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT009"
+  },
+  {
+    "instruction": "சித்தர் சமாதிகள் எங்கெல்லாம் உள்ளன?",
+    "output": "முக்கிய சித்தர் சமாதிகள்: 1) போகர் - பழனி, 2) அகத்தியர் - பொதிகை மலை, அணுவி (Courtallam அருகே), 3) திருமூலர் - சிதம்பரம், 4) கொங்கணர் - திருப்பதி அருகே, 5) சட்டைமுனி - சிறுவாச்சூர், 6) கருவூரார் - கருவூர் (கரூர்), 7) இடைக்காடர் - திருவண்ணாமலை. ஒவ்வொரு சமாதியிலும் special energy இருப்பதாக நம்பப்படுகிறது.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT126_TM"
+  }
+]

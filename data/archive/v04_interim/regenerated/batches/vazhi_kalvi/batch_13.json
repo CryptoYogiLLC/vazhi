@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 13,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SCHO012_TM",
+      "instruction": "11th Admission எப்படி? Online counselling process என்ன?",
+      "current_output": "**11th Admission Process (TN):**\n\n**Step 1: Online Registration**\n- Website: tnschools.gov.in\n- Period: Usually May-June (after 10th results)\n- Fill personal details, school preferences\n\n**Step 2: 10th Marks Entry**\n- Results auto-fetch from board\n- Verify correctness\n\n**Step 3: School Selection**\n- Select up to 10-15 schools (preference order)\n- Government / Aided / Matriculation\n\n**Step 4: Seat Allotment**\n- Based on marks & preference\n- Reservation rules apply:\n  - SC: 18%\n  - ST: 1%\n  - MBC/DNC: 20%\n  - BC: 26.5%\n  - BCM: 3.5%\n  - General: 31%\n\n**Step 5: Reporting**\n- Go to allotted school\n- Submit documents\n- Pay fees (if applicable)\n\n**Stream Selection:**\n- Choose based on career goal\n- Science (Maths): Engineering\n- Science (Bio): Medicine\n- Commerce: CA, Business\n- Arts: Law, Civil Services\n\n**Documents Needed:**\n- 10th Marksheet (Original + 3 copies)\n- TC (Transfer Certificate)\n- Community Certificate\n- Income Certificate (for fee concession)\n- Aadhaar Card\n- Passport photos - 6\n\n**Important:**\n- Govt schools: FREE\n- Aided schools: Minimal fees\n- Matriculation: Higher fees\n\n**Helpline:** DGE helpline number (varies each year)",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC025_TM",
+      "instruction": "என் பிள்ளை career choice-ஐ accept பண்ண முடியல. என்ன செய்வது?",
+      "current_output": "Generation gap bridge: 1) Listen to their reasons - genuinely try to understand 2) Research that field - income potential, growth, stability 3) Meet professionals in that career - get real picture 4) Trial period suggestion - internship, shadowing 5) Your fears express - but don't impose 6) Compromise explore - related but acceptable field 7) Remember: It's their life to live. Reality: Many non-traditional careers successful today. Trust your upbringing - they'll be fine!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA013_TG",
+      "instruction": "Computer courses free-ya enge padikkalaam?",
+      "current_output": "Free computer training: 1) TNSDC IT courses - Web, Data entry, Tally 2) NIELIT (Government) - CCC, O Level 3) Digital India Programme - Basic computer 4) CSC (Common Service Centre) - Digital literacy 5) Library-based free classes. Online free: SWAYAM, NPTEL, Coursera (audit mode). Employment exchange computer labs free practice available. Apply through respective websites.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM021_TG",
+      "instruction": "Myth or Fact: Myth: Drop year waste of time, stigma ulladhu",
+      "current_output": "Fact: Fact: Drop year = Strategic investment. Many IIT/AIIMS toppers took drop. Reality: 60-70% NEET qualifiers are droppers. No employer asks about gap year for doctors/engineers. Better to take time and get right career than settle for less. Productive drop year > Rushed wrong decision. Society's opinion < Your career satisfaction.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM019_TM",
+      "instruction": "உண்மையா பொய்யா: Myth: Arts படிச்சா future இல்லை",
+      "current_output": "உண்மை: Fact: Arts graduates options: IAS/IPS (UPSC - Arts background preferred), Banking, Teaching, Law, Journalism, Civil Services, HR, Social Work. Many IAS toppers are Arts graduates. Salary depends on job not degree. BA + competitive exam preparation = excellent career. Arts graduates excel in UPSC due to writing skills. Don't underestimate humanities!",
+      "category": "common_questions",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "EXTE019_TG",
+      "instruction": "Exam day-la udambu sariyilla - enna option irukku?",
+      "current_output": "Medical certificate vaangi submit pannunga. Board exams-kku supplementary exam ezhuthalaam. University exams-kku medical re-exam apply pannalam. NEET/JEE-kku next attempt try pannalam. Documents maintain pannunga.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH033_TM",
+      "instruction": "Data Science/AI படிக்க என்ன வழி?",
+      "current_output": "வழிகள்: 1) B.Tech CS/IT + elective courses 2) Online certifications - Coursera, edX (Google, IBM certificates) 3) IIT/IISc online programs 4) NPTEL free courses 5) M.Tech Data Science - IITs, NITs. Prerequisites: Python, Statistics, Linear Algebra. Chennai-ல் பல institutes coaching தருகின்றன. Kaggle competitions-ல் participate செய்யுங்கள். Portfolio build பண்ணுங்கள்.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA020_TM",
+      "instruction": "சொந்த தொழில் ஆரம்பிக்க என்ன training இருக்கிறது?",
+      "current_output": "Entrepreneurship training: 1) MSME-DI (District Industries Centre) - free EDP (Entrepreneurship Development Programme) 2) TNSDC business skills 3) NIESBUD courses 4) PMEGP training before loan 5) Startup TN programmes. Duration: 1-4 weeks. Topics: Business plan, finance, marketing, legal compliance. DIC-ல் register பண்ணினால் subsidies, loans easier. Free mentorship available.",
+      "category": "vocational_training",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "EXAM008_TM",
+      "instruction": "NEET Biology எப்படி படிப்பது? NCERT enough-ஆ?",
+      "current_output": "Biology strategy: NCERT = Bible for NEET Biology. 90%+ questions NCERT-இலிருந்து direct/indirect. How to study: 1) Line by line reading 2) Diagrams by hand draw 3) Tables, flowcharts memorize 4) Previous year questions practice 5) NCERT exemplar problems. Additional: MTG, Trueman's for extra practice. Botany vs Zoology: Equal weightage. High scoring: Human Physiology, Genetics, Ecology.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP003_TG",
+      "instruction": "NEET-ku eppadi prepare seyvadhu? Endha books padikkanum?",
+      "current_output": "**NEET Preparation:**\n\n**2-Year Plan:**\n- Class 11: NCERT foundation, Concepts\n- Class 12: NCERT revision, Mock tests, Previous papers\n\n**Books:**\n\n**Physics:**\n- NCERT (Must!)\n- HC Verma, DC Pandey\n\n**Chemistry:**\n- NCERT (Read multiple times!)\n- MS Chouhan (Organic)\n- N Awasthi (Physical)\n\n**Biology:**\n- NCERT (90% questions!)\n- Trueman's, MTG Guide\n\n**Daily Routine:**\n- 5:30 AM: Physics/Chemistry\n- Afternoon: Biology\n- Evening: Weak subject\n- Night: Revision/MCQs\n\n**Tips:**\n1. NCERT 5-6 times\n2. Bio diagrams daily\n3. Physics numericals daily\n4. 50-100 MCQs daily\n5. Weekly full test",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO021_TM",
+      "instruction": "Foundation for Excellence (FFE) scholarship என்ன?",
+      "current_output": "FFE Scholarship: Engineering மற்றும் Medical students-க்கு. Amount: ₹20,000-60,000/ஆண்டு. Eligibility: JEE/NEET cleared, family income ₹6 lakh கீழ். Selection: Application review + verification. Benefits: Full tuition support + mentoring. Apply: www.ffe.org. Tamil Nadu-ல் 1000+ students benefitted. Deadline: Usually July-August.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO009_TG",
+      "instruction": "National Scholarship Portal (NSP) moolam endhendha scholarships kidaikkum?",
+      "current_output": "NSP scholarships: 1) Pre-matric SC/ST/OBC 2) Post-matric SC/ST/OBC 3) MHRD Merit scholarship 4) PM scholarship for defence personnel wards 5) Minority scholarships 6) Top class education scholarship. Apply: www.scholarships.gov.in. One portal for 100+ schemes. Documents: Aadhaar, bank account, income certificate, caste certificate, marks. Deadline: October-November usually.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM012_TG",
+      "instruction": "Calculator/Mathematical tables exam-la allowed-aa?",
+      "current_output": "Depends on exam: Board exams (10th, 12th): Not allowed. NEET: Not allowed. JEE: Virtual calculator on screen only. Engineering semester: Usually allowed (non-programmable). CA/CMA: Specific models allowed. GATE: Virtual calculator. SSC/Banking: Not allowed. Mathematical tables: Some exams provide, some allow bringing. Always check: Admit card instructions. Penalty for unauthorized items: Disqualification possible.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA003_TM",
+      "instruction": "ITI படித்த பிறகு என்ன வேலை கிடைக்கும்? சம்பளம் எவ்வளவு?",
+      "current_output": "Job opportunities: 1) Government - Railways, TNEB, PWD, Ordinance factories 2) Private - Hyundai, TVS, Ashok Leyland, L&T 3) Gulf countries - high demand 4) Self-employment - own workshop. Starting salary: ₹12,000-18,000/month. With experience: ₹25,000-40,000. Apprenticeship முதலில் செய்யுங்கள் - stipend ₹8,000-12,000/month + experience.",
+      "category": "vocational_training",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HIGH018_TG",
+      "instruction": "CMA (Cost Accountant) padippu pathi sollunga?",
+      "current_output": "ICMAI nadathum padippu. Levels: 1) Foundation 2) Intermediate 3) Final. 3 year practical training. Total duration: 3-4 years. Fee: Foundation ₹6,000, Inter ₹23,000, Final ₹25,000. Manufacturing companies-la athiga demand. Costing, budgeting expertise.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE016_TG",
+      "instruction": "Bharatanatyam, Carnatic music padikka government institution irukka?",
+      "current_output": "Tamil Nadu Music and Fine Arts University, Kalakshetra Foundation (Chennai), Government Music Colleges irukku. Diploma, Degree courses available. Fee miga koraivau. Talented students-kku scholarship undu.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO013_TM",
+      "instruction": "UGC scholarship MA/MSc/PhD students-க்கு என்ன?",
+      "current_output": "UGC Scholarships: 1) Non-NET Fellowship - ₹8,000/மாதம் MPhil/PhD 2) JRF (through NET) - ₹31,000/மாதம் 3) SRF (2 years after JRF) - ₹35,000/மாதம் 4) Rajiv Gandhi National Fellowship (SC/ST PhD) - ₹31,000-35,000/மாதம் 5) Maulana Azad National Fellowship (Minorities PhD). Apply: www.ugc.ac.in. NET தேர்வு pass ஆனால் automatic JRF.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC016_TG",
+      "instruction": "Sexual harassment face panren. Yaarai approach panrathu?",
+      "current_output": "Report to: 1) Internal Complaints Committee (ICC) - mandatory in every college 2) Women Helpline: 181 3) Police: Women's cell 4) National Commission for Women: ncw.nic.in 5) UGC grievance cell. Evidence: Screenshot messages, note incidents. Support: Counselling available. Legal: Sexual Harassment at Workplace Act protects students too. Confidentiality maintained. Don't blame yourself. Speak up - silence enables harassers.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE015_TG",
+      "instruction": "SDAT coaching centre-la sera enna seyyanum?",
+      "current_output": "SDAT (Sports Development Authority of Tamil Nadu) ovvoru district-layum coaching centres vaichirikku. Age: 8-14 years. Selection trials nadakkum. Free coaching, kit, diet allowance kedaikum. District Sports Officer-a contact pannunga.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH003_TG",
+      "instruction": "MBBS/BDS admission-ku Tamil Nadu-la enna seiya venum?",
+      "current_output": "NEET exam compulsory. Steps: 1) NEET ezhuthunga 2) TN Medical Selection Committee counselling-ku apply pannunga 3) Online choice filling 4) Govt/Private medical college allotment. Govt college fee: Yearly ₹13,500. 7.5% govt school students-ku separate reservation.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP003_TM",
+      "instruction": "Fashion Design படிக்க தமிழ்நாட்டில் எங்கே போவது?",
+      "current_output": "Top institutes: 1) NIFT Chennai - National level 2) AIFD Chennai 3) JD Institute of Fashion. Admission: NIFT - entrance exam (January). Courses: B.Des Fashion Design (4 years), Diploma (1-2 years). Eligibility: 12th any stream. Fees: NIFT ₹2-3 lakh/year, Private ₹50,000-1.5 lakh/year. Jobs: Fashion houses, Garment industry, Freelance designer. Chennai = garment hub = good placement.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA012_TG",
+      "instruction": "Apprenticeship training eppadi join aavadhu? Stipend kidaikkuma?",
+      "current_output": "National Apprenticeship Promotion Scheme (NAPS): ITI/Diploma mudithavargalukku. Register: www.apprenticeshipindia.gov.in. Duration: 1-3 years depending on trade. Stipend: ₹8,000-15,000/month (govt subsidy ulladhu). Companies: TCS, L&T, Hyundai, Railways, BHEL - all hire apprentices. Benefits: Real experience, permanent job chance 70%+. Documents: ITI certificate, Aadhaar, bank account.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC016_TM",
+      "instruction": "Sexual harassment face பண்றேன். யாரை approach பண்றது?",
+      "current_output": "Report to: 1) Internal Complaints Committee (ICC) - mandatory in every college 2) Women Helpline: 181 3) Police: Women's cell 4) National Commission for Women: ncw.nic.in 5) UGC grievance cell. Evidence: Screenshot messages, note incidents. Support: Counselling available. Legal: Sexual Harassment at Workplace Act protects students too. Confidentiality maintained. Don't blame yourself. Speak up - silence enables harassers.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP009_TM",
+      "instruction": "TNPSC என்றால் என்ன? என்னென்ன exams நடத்துவாங்க?",
+      "current_output": "**TNPSC (Tamil Nadu Public Service Commission):**\n\n**என்ன இது?**\n- TN அரசு வேலைகளுக்கான தேர்வு நடத்தும் அமைப்பு\n- Group 1, 2, 2A, 4 exams\n- Technical, Non-technical posts\n\n**Major Exams:**\n\n**1. Group 1 (CSSE):**\n- Posts: Deputy Collector, DSP, AD, RDO\n- Eligibility: Any Degree\n- Salary: ₹56,100-1,77,500\n- Toughest TNPSC exam\n\n**2. Group 2 (CCSE-II):**\n- Posts: Sub-Registrar, Assistant, Audit Inspector\n- Eligibility: Degree\n- Salary: ₹35,400-1,12,400\n\n**3. Group 2A:**\n- Posts: Junior Assistant, Bill Collector, Typist\n- Eligibility: Degree (most posts)\n- Salary: ₹19,500-62,000\n\n**4. Group 4 (CCSE-IV):**\n- Posts: Junior Assistant, Typist, Village Admin Officer\n- Eligibility: 10th/12th pass\n- Salary: ₹19,500-62,000\n- Most vacancies!\n\n**5. Group 3 (Technical):**\n- Posts: Junior Engineer, Surveyor\n- Eligibility: Diploma/Degree\n- Department-wise recruitment\n\n**Exam Pattern (General):**\n\n| Stage | Marks | Papers |\n|-------|-------|--------|\n| Prelims | 200 | GS + Aptitude |\n| Mains | 300 | GS + Language |\n| Interview | 40 (Group 1 only) | - |\n\n**Age Limit:**\n- General: 21-32 years\n- BC/MBC: +5 years\n- SC/ST: No limit\n\n**Apply:** tnpsc.gov.in",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO007_TG",
+      "instruction": "Class 8-ku appuram enna padikkalam? Endha stream select seyvadhu?",
+      "current_output": "**After Class 8 Options:**\n\n**Option 1: Regular School (9-12)**\n- Class 9-10: Same for all\n- Class 11-12: Choose stream\n\n**Streams:**\n| Stream | Subjects | Career |\n|--------|----------|--------|\n| Science-Maths | PCM | Engineering |\n| Science-Bio | PCB | Medicine |\n| Commerce | Accounts | CA, Banking |\n| Arts | History | Law, Civil Services |\n\n**Option 2: ITI** - After 8th/10th, 1-2 years, Direct jobs\n\n**Option 3: Polytechnic** - After 10th, 3 years diploma\n\n**How to Decide:**\n1. Your interest\n2. 10th marks\n3. Career goal\n4. Family situation\n\n**Guidance:** School counselor, tnsdc.in",
+      "category": "school_education",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

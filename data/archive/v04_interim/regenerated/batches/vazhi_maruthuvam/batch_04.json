@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 4,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH006_TM",
+      "instruction": "Government hospital-ல் free-யா treatment கிடைக்குமா?",
+      "current_output": "Yes! Government hospitals = Free treatment for all. Free services: 1) OPD consultation, 2) Basic tests (blood, urine, X-ray), 3) Medicines (available stock), 4) Surgery (non-cosmetic), 5) Emergency care, 6) Delivery, 7) Vaccinations. Paid: Special rooms, specific tests (MRI/CT in some), outside medicines. Quality: Varies - GH Chennai, Madurai Medical College = good facilities.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH093_TG",
+      "instruction": "Pharmacy prescription illaama antibiotic kodukkalaama?",
+      "current_output": "NO! Most antibiotics = Schedule H - prescription mandatory. Reason: Antibiotic resistance is serious health threat. Pharmacy violation: Drug Inspector complaint, license action. Exception: Some topical antibiotics (creams) may be OTC. Good practice: Complete prescribed course, don't share antibiotics, don't use leftover. Doctor: Can prescribe over phone in genuine emergency.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH107_TG",
+      "instruction": "Advance directive for mental health endraal enna?",
+      "current_output": "Advance directive = When mentally well, write down treatment preferences for future crisis. Includes: 1) Preferred treatment methods, 2) Treatments to avoid, 3) Nominated representative, 4) Hospital preferences, 5) ECT consent/refusal. How: Register with Mental Health Review Board. Benefits: Your wishes respected even when unable to communicate. Can modify when competent. Legal document.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH080_TM",
+      "instruction": "Pre-existing disease claim எப்போது கிடைக்கும்?",
+      "current_output": "Waiting period: Usually 2-4 years (policy varies). Pre-existing = condition before policy started. Rules: 1) Must declare at proposal, 2) Non-disclosure = claim rejection + policy cancellation, 3) After waiting period, fully covered, 4) IRDAI: Max 4 years waiting period. Tip: Disclose honestly, buy policy early when healthy, continuous renewal maintains benefits.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH052_TM",
+      "instruction": "Wrong side surgery (wrong leg, wrong kidney) - legal action?",
+      "current_output": "Serious negligence! \"Never event\" in medical terms. Action: 1) Document immediately (photos, records), 2) Consumer Forum - high compensation, 3) Criminal case (Section 338), 4) Medical Council complaint. Protocols violated: WHO surgical safety checklist. Hospitals have: Marking protocols, time-out procedures. Failure = gross negligence. Compensation: Significant damages awarded in such cases.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH031_TG",
+      "instruction": "Doctor enga native language-la explain pannanumaa?",
+      "current_output": "Yes! Right to information in understandable language. Includes: 1) Diagnosis explanation, 2) Treatment options, 3) Risks and benefits, 4) Consent form explanation, 5) Medicine instructions. If doctor doesn't speak Tamil: Hospital should arrange translator. Written materials: Should be in local language. Complaint: If communication barrier causes harm - negligence claim possible.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH161_TM",
+      "instruction": "மூட்டு வலி ஆறு மாசமா இருக்கு, scan எடுக்கணுமா?",
+      "current_output": "6 months joint pain - orthopedic consultation needed. Tests: 1) X-ray first (usually sufficient), 2) MRI if X-ray normal but pain persists, 3) Blood tests (RA, uric acid). Government: Orthopedic OPD - free consultation and basic tests. Common causes: Osteoarthritis (wear and tear), rheumatoid arthritis. Treatment: 1) Medicines, 2) Physiotherapy (free at government), 3) Joint replacement if severe (CMCHIS covers). Self-care: Weight control, walking, avoid squatting.",
+      "category": "practical_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HLTH085_TM",
+      "instruction": "Home healthcare service legal-ஆ? Reliable-ஆ?",
+      "current_output": "Legal, but verify. Check: 1) Company registration, 2) Nurse/attendant credentials, 3) Doctor supervision (for nursing care), 4) Agreement/contract terms, 5) Emergency protocols, 6) Insurance/liability coverage. Services: Nursing care, physiotherapy, doctor visits, sample collection. Caution: Verify ID of persons coming home. Complaint: If fraud/negligence - police + Consumer Forum.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH223_TG",
+      "instruction": "Yoga therapy enge learn pannalaam?",
+      "current_output": "Free options: 1) Government Yoga centres (every district), 2) AYUSH hospitals - yoga unit, 3) Parks - morning free sessions (many cities), 4) Schools/colleges - yoga programs. Paid: 1) Private yoga studios, 2) Art of Living, Isha centres, 3) Online courses (after basics learned). Certification: If want to teach - AYUSH certified courses. Therapy: For specific conditions - consult yoga therapist (BNYS or certified).",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH034_TM",
+      "instruction": "Golden hour என்றால் என்ன? அதுல hospital போகணுமா?",
+      "current_output": "Golden hour = First 60 minutes after trauma/heart attack. Critical because: 1) Brain damage starts in minutes without oxygen, 2) Bleeding control crucial, 3) Heart attack - early treatment = more heart saved, 4) Trauma - internal bleeding stops. Action: 1) Call 108 immediately, 2) Don't move spine injury victims, 3) CPR if no pulse (if trained), 4) Control visible bleeding. Nearest hospital first - don't travel far.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH102_TM",
+      "instruction": "Rare disease medicine எப்படி கிடைக்கும்?",
+      "current_output": "Challenges: Expensive, not always available in India. Options: 1) Government policy: Free treatment for some rare diseases (up to Rs.50 lakhs), 2) Crowdfunding platforms, 3) Pharma company compassionate access programs, 4) Import license for unavailable drugs, 5) Clinical trials. Centers: AIIMS, CMC Vellore have rare disease programs. Apply: Through treating hospital's rare disease cell.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH183_TG",
+      "instruction": "Siddha medicine-la heavy metals irukkumaa? Safe-aa?",
+      "current_output": "Some Siddha medicines use: Metals (Paashanam), mercury (Rasam), arsenic (Paadaanam) - after purification (Suththi). Licensed products: Processed as per traditional methods, tested for safety limits. Risk: Unregulated products, improper preparation. Safety: 1) Buy only licensed products, 2) Consult qualified doctor, 3) Inform if taking other medicines, 4) Follow dosage strictly. Research: CCRS validates safety of traditional preparations.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH001_TM",
+      "instruction": "முதலமைச்சர் காப்பீட்டு திட்டம் (CMCHIS) என்றால் என்ன?",
+      "current_output": "CMCHIS = Free health insurance for TN families. Coverage: Rs.5 lakh per family per year. Eligibility: Annual income below Rs.72,000 (rice card holders automatic). Benefits: 1,027 procedures covered - surgeries, treatments, follow-up. Cashless treatment at empanelled hospitals. Card: Family smart card issued. Renewal: Automatic for eligible families.",
+      "category": "government_schemes",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HLTH078_TG",
+      "instruction": "Insurance claim reject aanaal enna seivathu?",
+      "current_output": "Rejection reasons: 1) Pre-existing disease (waiting period), 2) Excluded treatment, 3) Document missing, 4) Non-network hospital, 5) Fraud suspected. Appeal: 1) Written grievance to insurer (30 days), 2) IRDAI IGMS portal, 3) Insurance Ombudsman (free, up to Rs.30 lakhs), 4) Consumer Forum. Success tip: Get rejection reason in writing, provide complete documents, cite policy terms.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH182_TG",
+      "instruction": "Respiratory problems-kku (asthma, bronchitis) Siddha?",
+      "current_output": "Siddha for Swasakasam (respiratory): Asthma, bronchitis, allergic rhinitis, sinusitis. Medicines: 1) Thalisathi Choornam, 2) Adathodai Kudineer, 3) Kantharasam, 4) Poorna Chandrodayam. Therapies: 1) Steam inhalation with herbs, 2) Nasiyam (nasal drops), 3) Chest application with specific oils. Preventive: Build immunity, avoid triggers. Works well: For chronic management, reducing frequency of attacks.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH026_TM",
+      "instruction": "Hospital bill புரியல, itemized bill கேட்கலாமா?",
+      "current_output": "Yes! Right to detailed bill. Must include: 1) Room charges (per day), 2) Doctor fees, 3) Surgery/procedure charges, 4) Medicines (with MRP), 5) Consumables, 6) Lab tests, 7) Nursing charges, 8) Any other charges. Hospital must provide: Written estimate before admission (planned), final itemized bill. Overcharging: Consumer Forum complaint. Compare: Check medicine MRP, verify tests done.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH121_TG",
+      "instruction": "Child-kku ADHD/autism - treatment enge?",
+      "current_output": "Assessment: 1) Child psychiatrist, 2) Developmental pediatrician, 3) Clinical psychologist. Government: 1) Institute of Child Health (Chennai), 2) District Early Intervention Centres (DEIC), 3) Medical college child psychiatry. Services: Diagnosis, therapy (occupational, speech, behavioral), medicines if needed. Free: Government facilities. Schools: Special needs provisions mandatory. UDID: Apply for benefits if certified.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH106_TM",
+      "instruction": "Mental illness-க்கு treatment rights என்ன?",
+      "current_output": "Mental Healthcare Act 2017 rights: 1) Access to mental healthcare, 2) Community-based treatment (not just hospitals), 3) Informed consent, 4) Confidentiality, 5) No discrimination, 6) Humane treatment, 7) Legal aid, 8) Complaint mechanism, 9) Advance directive right. Government duty: Provide affordable mental healthcare. Insurance: Must cover mental illness like physical illness.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH062_TG",
+      "instruction": "Postmortem report eppadi challenge panradhu?",
+      "current_output": "Challenge options: 1) Second opinion from forensic expert, 2) Exhumation and re-autopsy (court order needed), 3) Cross-examination of autopsy doctor, 4) Expert witness contradiction. Grounds: 1) Incomplete examination, 2) Wrong conclusions, 3) Procedural violations, 4) Bias. Important: Video recording of autopsy now mandatory in many cases. Evidence: Preserve body photos if possible.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH128_TG",
+      "instruction": "Dr. Muthulakshmi Maternity Benefit Scheme enna?",
+      "current_output": "TN government scheme: Rs.18,000 cash assistance. Eligibility: 1) TN resident, 2) Family income limit, 3) First two live births, 4) Institutional delivery, 5) Age 19+. Payment: 3 installments - during pregnancy, after delivery, after vaccination completion. Apply: PHC/Government hospital during registration. Documents: Ration card, Aadhar, bank account. Working women: Separate maternity benefit also applicable.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH185_TM",
+      "instruction": "Siddha + Allopathy together எடுக்கலாமா?",
+      "current_output": "Possible with precautions! Important: 1) Inform BOTH doctors about all medicines, 2) Gap of 30-60 minutes between different system medicines, 3) Some interactions possible, 4) Don't stop allopathy suddenly for chronic diseases. Integration: Many hospitals practice integrated medicine. Best: Consult at integrated AYUSH-allopathy clinics. Examples: Diabetes, BP - can take both under supervision. Never self-combine without medical advice.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH118_TG",
+      "instruction": "Suicidal thoughts irukku - yaarai contact panradhu?",
+      "current_output": "Helplines (24x7): 1) iCall: 9152987821, 2) Vandrevala Foundation: 1860-2662-345, 3) AASRA: 9820466726, 4) Snehi: 044-24640050 (Chennai), 5) NIMHANS: 080-46110007. Immediate danger: Call 108 or go to nearest hospital emergency. Talk to: Trusted family/friend. Remember: Feelings are temporary, help is available. Professional help: Psychiatrist can help with treatment.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH136_TG",
+      "instruction": "Tubectomy/Vasectomy - rights enna? Compensation?",
+      "current_output": "Rights: 1) Completely voluntary - no forced sterilization, 2) Informed consent mandatory, 3) Cooling-off period before surgery, 4) Minimum age 22 (women), 21 (men). Compensation: TN scheme - cash incentive after surgery. Complications: Government covers treatment, additional compensation. Failure: Pregnancy after sterilization - compensation scheme exists. Never sign blank forms - read consent fully.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH174_TG",
+      "instruction": "Mattra districts-la Siddha hospital irukkaa?",
+      "current_output": "Yes! TN Siddha infrastructure: 1) Government Siddha Medical Colleges - Palayamkottai, Tirunelveli (oldest), 2) District AYUSH hospitals - Every district, 3) Taluk level Siddha dispensaries, 4) PHC attached Siddha units. Major colleges: Tirunelveli, Chennai (2), Palani. All services free. Find: tnhealth.tn.gov.in or AYUSH department website. Total: 100+ government Siddha facilities in TN.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH170_TG",
+      "instruction": "Siddha doctor qualification enna? Verify eppadi?",
+      "current_output": "Qualification: BSMS (Bachelor of Siddha Medicine and Surgery) - 5.5 years. Higher: MD (Siddha). Registration: State Medical Council mandatory. Verify: 1) TN Siddha Medical Council register, 2) Display of registration certificate, 3) BSMS degree certificate. Unqualified practice: Report to council, police. Titles: Siddha Maruthuvam, Vaidhiyar - verify registration before consulting.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

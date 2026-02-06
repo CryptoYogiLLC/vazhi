@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 1,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH052_TG",
+      "instruction": "Wrong side surgery (wrong leg, wrong kidney) - legal action?",
+      "current_output": "Serious negligence! \"Never event\" in medical terms. Action: 1) Document immediately (photos, records), 2) Consumer Forum - high compensation, 3) Criminal case (Section 338), 4) Medical Council complaint. Protocols violated: WHO surgical safety checklist. Hospitals have: Marking protocols, time-out procedures. Failure = gross negligence. Compensation: Significant damages awarded in such cases.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH115_TG",
+      "instruction": "Mental hospital-la abuse nadakkuthu - complain enge?",
+      "current_output": "Complaint options: 1) State Mental Health Authority, 2) Mental Health Review Board (district level), 3) Human Rights Commission (SHRC/NHRC), 4) Police (if physical/sexual abuse), 5) Health Department. Types of abuse: Physical restraints misuse, no consent treatment, inhumane conditions, denial of communication with family. Evidence: Photos if possible, witness statements, medical records.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH092_TG",
+      "instruction": "Prescription illaama endha medicine vaangalaam?",
+      "current_output": "OTC (Over The Counter) medicines: 1) Pain relievers (Paracetamol, Ibuprofen), 2) Cough syrups (non-codeine), 3) Antacids, 4) Antihistamines, 5) Vitamins, 6) Antiseptic creams, 7) Cold medicines. Schedule H/H1/X: Prescription mandatory. Antibiotics: Prescription required (mostly). Pharmacist advice: Can help with minor ailments. Self-medication: Risky for serious conditions.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH200_TM",
+      "instruction": "Back pain/spine problems-க்கு Ayurveda?",
+      "current_output": "Ayurveda effective for: Lumbar spondylosis, disc problems, sciatica, muscle spasm. Treatments: 1) Kati Basti (oil pooling on back), 2) Pinda Sweda (bolus massage), 3) Abhyanga, 4) Basti (medicated enema), 5) Internal medicines. Duration: 7-21 days depending on severity. Many avoid surgery: Through proper Ayurveda treatment. Best results: Early treatment, lifestyle changes. Kerala specialty: Spine care centers.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH186_TM",
+      "instruction": "Thokkanam massage எங்கே கிடைக்கும்?",
+      "current_output": "Thokkanam = Traditional Siddha massage therapy. Types: 9 types including Thattal, Irukkal, Pidithal, etc. Where: 1) NIS Tambaram - specialized unit, 2) Government Siddha hospitals, 3) Private Siddha clinics (verify registration). For: Muscular problems, paralysis, rehabilitation, stress relief. Sessions: Usually 7-14 day course. Cost: Free at government, Rs.300-1000 per session private. Trained: Only by certified Thokkanam therapists.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH089_TG",
+      "instruction": "Medicine expiry aanaa use pannalaamaa?",
+      "current_output": "NO! Expired medicine risks: 1) May not work (lost potency), 2) May become toxic, 3) Can cause adverse reactions. Law: Selling expired medicine = criminal offence. Check: Expiry date on strip/bottle before purchase. If sold expired: 1) Return to pharmacy, 2) Drug Inspector complaint, 3) Consumer Forum. Storage: Keep as per instructions - some need refrigeration.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH107_TM",
+      "instruction": "Advance directive for mental health என்றால் என்ன?",
+      "current_output": "Advance directive = When mentally well, write down treatment preferences for future crisis. Includes: 1) Preferred treatment methods, 2) Treatments to avoid, 3) Nominated representative, 4) Hospital preferences, 5) ECT consent/refusal. How: Register with Mental Health Review Board. Benefits: Your wishes respected even when unable to communicate. Can modify when competent. Legal document.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH221_TM",
+      "instruction": "Hydrotherapy treatments என்னென்ன?",
+      "current_output": "Water treatments: 1) Hip bath (pelvic area) - digestive, urinary issues, 2) Spinal bath - spine problems, stress, 3) Arm/foot bath - circulation, 4) Steam bath - detox, skin, 5) Enema - colon cleansing, 6) Wet pack - fever, inflammation, 7) Hot and cold compress. Home: Alternate hot-cold shower, foot bath. Centre: Full treatments under supervision. Benefits: Circulation, toxin removal, pain relief. Caution: Heart patients, BP - consult before.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH146_TG",
+      "instruction": "Heart attack symptoms enna? Enna seyyanum?",
+      "current_output": "Symptoms: 1) Chest pain/pressure (elephant sitting on chest feeling), 2) Left arm/jaw pain, 3) Breathlessness, 4) Sweating, 5) Nausea. Women: May have different symptoms - fatigue, back pain. Action: 1) Call 108 immediately, 2) Chew aspirin if available (not allergic), 3) Loosen tight clothes, 4) Don't drive yourself. Golden hour: Treatment within 1 hour saves heart muscle. Don't ignore 'gas' feeling!",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH118_TM",
+      "instruction": "Suicidal thoughts இருக்கு - யாரை contact பண்றது?",
+      "current_output": "Helplines (24x7): 1) iCall: 9152987821, 2) Vandrevala Foundation: 1860-2662-345, 3) AASRA: 9820466726, 4) Snehi: 044-24640050 (Chennai), 5) NIMHANS: 080-46110007. Immediate danger: Call 108 or go to nearest hospital emergency. Talk to: Trusted family/friend. Remember: Feelings are temporary, help is available. Professional help: Psychiatrist can help with treatment.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH197_TG",
+      "instruction": "Panchakarma yaarukku nalladhu? Yaarukku vendaam?",
+      "current_output": "Good for: 1) Chronic diseases (arthritis, skin, digestive), 2) Lifestyle disorders (obesity, stress), 3) Preventive detox (healthy people - yearly), 4) Pre-conception purification, 5) Anti-aging. Avoid: 1) Acute illness/fever, 2) Pregnancy, 3) Very old/weak, 4) Children (<12), 5) Certain heart conditions, 6) During menstruation (some procedures). Consultation: Doctor will assess suitability based on strength, condition.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH178_TM",
+      "instruction": "Arthritis/joint pain-க்கு Siddha treatment என்ன?",
+      "current_output": "Effective for: Osteoarthritis (Moottu Vaatham), Rheumatoid arthritis (Ama Vaatham), Gout (Vali Azhal Keel Vayu). Treatments: 1) Internal - Rasagandhi Mezhugu, Sallaki, 2) External - Kottamchukkadi Thailam, Pinda Thailam, 3) Thokkanam (specialized massage), 4) Varmam therapy, 5) Ottradam (fomentation), 6) Kizhi (poultice massage). Diet: Avoid sour, cold foods. Duration: 1-3 months typically.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH045_TM",
+      "instruction": "Minor child-க்கு யார் consent கொடுக்கணும்?",
+      "current_output": "Parents/legal guardians. Rules: 1) Both parents equal right (married), 2) Single parent: That parent, 3) Guardian: Court-appointed guardian, 4) Emergency: Hospital can proceed without consent (life-saving), 5) Mature minor doctrine: 16+ may consent to some treatments. Conflict between parents: Court decides best interest of child. Orphan/abandoned: Child Welfare Committee.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH068_TM",
+      "instruction": "Doctor credentials எப்படி verify பண்றது?",
+      "current_output": "Verify: 1) NMC website (nmc.org.in) - Indian Medical Register, 2) State Medical Council register, 3) Specialist registration (for specialists), 4) Hospital website - doctor profile. Check: 1) MBBS registration number, 2) PG degree registration, 3) Disciplinary actions if any. Fake doctor: Report to police + Medical Council. Important: Any doctor must display registration number.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH044_TM",
+      "instruction": "Consumer Forum-ல் hospital-மேல் case போடலாமா?",
+      "current_output": "Yes! Medical service = consumer service. Grounds: 1) Medical negligence, 2) Deficiency in service, 3) Overcharging, 4) Wrong treatment, 5) Denial of service. Claim: 1) Rs.1 crore வரை - District Forum, 2) Rs.1-10 crore - State Commission, 3) Above Rs.10 crore - National Commission. Fee: Nominal (Rs.100-5000). Limitation: 2 years from incident. Lawyer: Optional but recommended.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH044_TG",
+      "instruction": "Consumer Forum-la hospital-mela case podalaamaa?",
+      "current_output": "Yes! Medical service = consumer service. Grounds: 1) Medical negligence, 2) Deficiency in service, 3) Overcharging, 4) Wrong treatment, 5) Denial of service. Claim: 1) Rs.1 crore varai - District Forum, 2) Rs.1-10 crore - State Commission, 3) Above Rs.10 crore - National Commission. Fee: Nominal (Rs.100-5000). Limitation: 2 years from incident. Lawyer: Optional but recommended.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH025_TG",
+      "instruction": "Patient-kku ennenna rights irukku?",
+      "current_output": "Charter of Patient Rights (NMC): 1) Right to information (diagnosis, treatment options), 2) Right to records, 3) Right to emergency care, 4) Right to informed consent, 5) Right to confidentiality, 6) Right to second opinion, 7) Right to choose treatment/refuse treatment, 8) Right to non-discrimination, 9) Right to safe treatment, 10) Right to complaint redressal. Display: Hospitals must display patient rights.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH142_TM",
+      "instruction": "Menstrual hygiene products free-யா கிடைக்குமா?",
+      "current_output": "Government schemes: 1) TN: Subsidized sanitary napkins at fair price shops, 2) School girls: Free sanitary napkins through schools, 3) Anganwadi: Distribution to adolescent girls. Jan Aushadhi: Cheap sanitary napkins (Rs.1/pad). NGOs: Many distribute free. Machines: Napkin vending machines in some government offices, colleges. Menstrual leave: Some TN government offices have period leave policy.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH023_TM",
+      "instruction": "TNMSC pharmacy stores எங்கே இருக்கு?",
+      "current_output": "TNMSC = Tamil Nadu Medical Services Corporation. Stores: All government hospitals, standalone Fair Price Medicine Shops. Prices: 20-50% cheaper. Quality: Government-procured, tested. Items: Medicines, surgical items, consumables. Location: tnmsc.com for store locator. Government hospital patients: Medicines from TNMSC pharmacy often free (in-patient).",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH099_TG",
+      "instruction": "Pharmacy license illaama operate panraanga - report?",
+      "current_output": "Illegal! Every pharmacy needs: 1) Drug License (displayed), 2) Registered Pharmacist (during operating hours). Report: Drug Inspector, State Drugs Control, local police. Check: License number displayed, pharmacist name displayed. Risk: Unlicensed pharmacy may sell fake/expired/wrong medicines. Online: E-pharmacy also needs license - check before ordering.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH185_TG",
+      "instruction": "Siddha + Allopathy together edukkalaamaa?",
+      "current_output": "Possible with precautions! Important: 1) Inform BOTH doctors about all medicines, 2) Gap of 30-60 minutes between different system medicines, 3) Some interactions possible, 4) Don't stop allopathy suddenly for chronic diseases. Integration: Many hospitals practice integrated medicine. Best: Consult at integrated AYUSH-allopathy clinics. Examples: Diabetes, BP - can take both under supervision. Never self-combine without medical advice.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH056_TM",
+      "instruction": "Expert witness எப்படி arrange பண்றது?",
+      "current_output": "Expert = Doctor in same specialty who can opine on standard of care. Finding: 1) Through medical-legal lawyer, 2) Retired senior doctors, 3) Medical college professors. Cost: Fee for opinion + court appearance. Report: Written opinion on whether standard of care met. Court: May be cross-examined. Important: Expert from same specialty (surgeon for surgery case).",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH048_TG",
+      "instruction": "Clinical trial-la participate pannalaamaa? Risks enna?",
+      "current_output": "Voluntary participation. Requirements: 1) Ethics Committee approval, 2) Detailed informed consent, 3) Insurance coverage for participants, 4) Right to withdraw anytime, 5) Compensation for injury. Risks: Unknown side effects, may receive placebo. Benefits: Access to new treatments, free care during trial, compensation. Verify: CTRI registration (ctri.nic.in). Never feel pressured.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH123_TM",
+      "instruction": "Mental illness reason-ஆ job reject பண்ணினாங்க - action?",
+      "current_output": "Illegal discrimination! RPD Act + MHCA protection. Action: 1) Written reason கேளுங்க, 2) State Commissioner for Disabilities complaint, 3) Labour court if existing job, 4) Court (writ petition). Exceptions: Very limited safety-critical jobs with specific requirements. Proof: Email/written rejection citing mental health. Remedy: Reinstatement, compensation, policy change order.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH136_TM",
+      "instruction": "Tubectomy/Vasectomy - rights என்ன? Compensation?",
+      "current_output": "Rights: 1) Completely voluntary - no forced sterilization, 2) Informed consent mandatory, 3) Cooling-off period before surgery, 4) Minimum age 22 (women), 21 (men). Compensation: TN scheme - cash incentive after surgery. Complications: Government covers treatment, additional compensation. Failure: Pregnancy after sterilization - compensation scheme exists. Never sign blank forms - read consent fully.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

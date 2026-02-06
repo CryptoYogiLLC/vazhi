@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 13,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH153_TG",
+      "instruction": "Lab test results abnormal-aa vandhurucchu - panic aaganumaa?",
+      "current_output": "Don't panic! First: 1) Consult doctor who ordered test - they know context, 2) Slightly abnormal ≠ disease, 3) Reference ranges vary by lab, 4) Single test may not be conclusive, 5) Repeat test may be needed. Common false positives: Dehydration, recent food, medications. Important: Don't Google and self-diagnose. Doctor will: Correlate with symptoms, order confirmatory tests if needed, explain significance.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH117_TM",
+      "instruction": "Suicide attempt criminal offence-ஆ?",
+      "current_output": "NO! Decriminalized under MHCA 2017. Old: Section 309 IPC punished attempt. Now: Person attempting suicide presumed to be under severe stress - needs care, not punishment. Police: Cannot arrest or prosecute. Government duty: Provide care, rehabilitation. Family: Support, not blame. Hospital: Must treat without police formality. Exception: Abetment of suicide still criminal.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH105_TM",
+      "instruction": "Siddha treatment government hospital-ல் free-யா கிடைக்குமா?",
+      "current_output": "Yes! TN has strong Siddha infrastructure. Free at: 1) Government Siddha Medical Colleges (Chennai, Palayamkottai, etc.), 2) District AYUSH hospitals, 3) Taluk level Siddha dispensaries, 4) PHC attached Siddha units. Services: OPD, IPD, medicines. National Institute of Siddha (Tambaram): Specialized centre. Research: Central Council for Research in Siddha (Chennai).",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH225_TG",
+      "instruction": "Pranayama types and benefits enna?",
+      "current_output": "Main Pranayamas: 1) Anulom-Vilom (alternate nostril) - balance, calm, 2) Kapalbhati - energizing, weight loss, detox, 3) Bhramari (bee breath) - stress, sleep, 4) Ujjayi - focus, warmth, 5) Sheetali - cooling, BP reduction. Benefits: Lung capacity, stress relief, concentration, immunity. Start: 5-10 minutes daily. Precautions: 1) Empty stomach, 2) No forcing, 3) Heart/BP patients - gentle only, 4) Pregnancy - specific guidance needed.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH151_TM",
+      "instruction": "Fever 3 days ஆச்சு, hospital போகணுமா?",
+      "current_output": "Go to hospital if: 1) Fever >103°F (39.4°C), 2) Fever with rash, 3) Severe headache/stiff neck, 4) Difficulty breathing, 5) Persistent vomiting, 6) Confusion, 7) Not responding to paracetamol, 8) Underlying conditions (diabetes, heart), 9) Children/elderly - earlier threshold. Dengue season: Blood test after day 3 of fever. Self-care: Hydration, rest, paracetamol (not aspirin for dengue suspected).",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH043_TG",
+      "instruction": "Doctor-mela complaint poda enge poganum?",
+      "current_output": "Tamil Nadu Medical Council (TNMC): For registered doctors. Address: 914, EVR Periyar Salai, Kilpauk, Chennai-10. Process: 1) Written complaint with evidence, 2) Inquiry by Council, 3) Hearing, 4) Action: Warning, suspension, removal from register. Timeline: 6 months - 2 years. Alternative: Consumer Forum for compensation. Criminal: Police if criminal negligence.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH042_TG",
+      "instruction": "Hospital-la complaint eppadi poduvadhu?",
+      "current_output": "Internal: 1) Grievance cell (every hospital must have), 2) Hospital administrator, 3) Medical superintendent. External: 1) District Health Department (DHS), 2) State Medical Council (for doctors), 3) Clinical Establishment Authority, 4) Consumer Forum (for deficiency in service). Written complaint: Keep copy with acknowledgment. Timeline: Response within 15-30 days typically.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH156_TG",
+      "instruction": "BP tablet daily edukkanuumaa? Stop pannalaamaa?",
+      "current_output": "Usually lifelong! Why: 1) BP medicine controls, doesn't cure, 2) Stopping = BP goes up again, 3) Sudden stop can cause rebound high BP. Safe: 1) Never stop without doctor advice, 2) Regular checkups, 3) Lifestyle changes may reduce dose (weight loss, diet, exercise). Myth: \"I feel fine, so I don't need\" - BP is silent killer, symptoms come late. Monitoring: Home BP monitor useful.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH143_TG",
+      "instruction": "Sexual assault-kku piragu medical help enge?",
+      "current_output": "Immediate: 1) Any hospital emergency (government or private), 2) One-Stop Centre (OSC) at district hospitals. Services: 1) Free medical examination, 2) Emergency contraception, 3) STI prevention, 4) Forensic evidence collection, 5) Counseling. Rights: 1) Treatment cannot be refused, 2) Female doctor if requested (if available), 3) Privacy maintained. Police: Hospital can help file FIR. Time: Evidence best collected within 72 hours.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH030_TM",
+      "instruction": "Second opinion கேட்கலாமா? Doctor கோபப்படுவாரா?",
+      "current_output": "Absolutely your right! Benefits: 1) Verify diagnosis, 2) Explore treatment options, 3) Confirm surgery necessity, 4) Peace of mind. How: 1) Ask for medical records, 2) Consult another specialist, 3) Get written opinion. Ethical doctors welcome this. Major decisions: Cancer, surgery, chronic illness - always get second opinion. Online: Telemedicine second opinions available.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH218_TM",
+      "instruction": "Tulsi plant benefits என்ன? எப்படி use பண்றது?",
+      "current_output": "Tulsi (Holy Basil) benefits: 1) Immunity booster, 2) Respiratory health (cough, cold, asthma), 3) Stress relief (adaptogen), 4) Blood sugar regulation, 5) Antibacterial, 6) Heart health. Uses: 1) Fresh leaves - 3-5 daily (chew), 2) Tulsi tea - leaves boiled in water, 3) Tulsi drops - available commercially, 4) Tulsi honey - cold remedy. Note: Avoid during pregnancy (in large amounts), blood thinner users. Grow at home: Easy, brings positive energy (traditional belief).",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH097_TG",
+      "instruction": "Pain killers addiction aagumaa? Control enna?",
+      "current_output": "Some can! Opioids (Tramadol, Codeine, Morphine): High addiction potential - Schedule H/X. NSAIDs (Ibuprofen, Diclofenac): Lower risk but long-term issues (stomach, kidney). Paracetamol: Relatively safe but liver damage if overdose. Rules: Opioids = strict prescription, register entry. Chronic pain: Doctor supervision essential. Addiction help: De-addiction centres, psychiatrist.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH054_TG",
+      "instruction": "Blood transfusion-la wrong blood koduthaanga - action enna?",
+      "current_output": "Serious negligence! Life-threatening error. Blood bank + hospital liable. Action: 1) Medical records + blood bank records collect, 2) Consumer Forum, 3) Criminal case if death/serious injury, 4) Blood bank license complaint (State Blood Transfusion Council). Protocols violated: Blood matching, cross-matching, identification. Compensation: High - can be fatal mistake.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH016_TM",
+      "instruction": "Diabetes, BP-க்கு free medicine கிடைக்குமா?",
+      "current_output": "Yes! NCD (Non-Communicable Disease) Program. Free at: PHC, CHC, Government hospitals. Services: 1) Screening camps, 2) Blood sugar/BP check, 3) Basic medicines (Metformin, Amlodipine, etc.), 4) Diet counseling, 5) Regular monitoring. NCD clinics: Dedicated clinics at larger centres. Insulin: Available at district hospitals. Register: Health ID (ABHA) helps track records.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH007_TM",
+      "instruction": "108 Ambulance service எப்படி use பண்றது?",
+      "current_output": "Dial 108 - Free emergency ambulance. Services: 1) BLS (Basic Life Support) ambulance, 2) ALS (Advanced Life Support) for critical cases, 3) Trained paramedics, 4) GPS tracking, 5) Hospital coordination. Response time: 15-20 minutes (urban), 20-30 minutes (rural). Free: No charges for transport. Alternative: 102 for pregnant women transport.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH159_TG",
+      "instruction": "Amma-vukku sugar adhigam, kaal la pun, enna doctor paarkanum? (Coimbatore style)",
+      "current_output": "Diabetic foot ulcer - serious! Immediately: 1) General surgery or 2) Vascular surgery specialist. Don't delay - infection spread fast, amputation risk. Government: District hospital, medical college. Treatment: 1) Sugar control, 2) Wound care (daily dressing), 3) Antibiotics, 4) Maybe surgery. Prevention: 1) Daily foot check, 2) Proper footwear, 3) No walking barefoot, 4) Cut nails carefully. Coimbatore: CMC, GH has good diabetic foot care.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH226_TG",
+      "instruction": "Home remedies eppodhu avoid pannanum?",
+      "current_output": "Avoid home remedies when: 1) Serious symptoms (high fever, breathing difficulty, chest pain), 2) Symptoms lasting >2-3 days, 3) Children under 2 (many remedies not safe), 4) Pregnancy (many herbs contraindicated), 5) Taking prescription medicines (interactions), 6) Known allergies to ingredients, 7) Wounds with signs of infection (pus, spreading redness), 8) Chronic disease flare-up. Rule: Home remedies for minor, acute issues. Anything serious = doctor.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH059_TM",
+      "instruction": "Doctor death case-ல் என்ன compensation கிடைக்கும்?",
+      "current_output": "Death case compensation: 1) Lost income (future earnings multiplied), 2) Funeral expenses, 3) Medical expenses before death, 4) Loss of consortium (spouse), 5) Loss of parental care (children), 6) Mental agony to family. Calculation: Age, income, dependents, life expectancy. Young earning member death: Higher compensation. Ceiling: No fixed limit - based on facts. Criminal: Separate from compensation.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH055_TG",
+      "instruction": "Medical negligence prove panna enna evidence venum?",
+      "current_output": "Essential evidence: 1) Complete medical records (admission to discharge), 2) Prescription copies, 3) Test reports, 4) Bills (shows what was done), 5) Consent forms, 6) Photos if applicable, 7) Witness statements (family who were present), 8) Expert medical opinion. Preserve: Original documents, don't alter. Timeline: Note dates, times of events. Digital: Screenshots of online communications.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH086_TM",
+      "instruction": "Telemedicine consultation legal-ஆ? Prescription valid-ஆ?",
+      "current_output": "Legal! Telemedicine Practice Guidelines 2020. Valid for: 1) First consultation for non-emergency, 2) Follow-up consultations, 3) Second opinion. Prescription: Valid if signed digitally, has registration number. Limitations: 1) No controlled substances via telemedicine, 2) Physical exam needed cases - refer for in-person, 3) Emergency - not appropriate. Platforms: Practo, Tata 1mg, Apollo 247, government eSanjeevani.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH016_TG",
+      "instruction": "Diabetes, BP-kku free medicine kidaikkumaa?",
+      "current_output": "Yes! NCD (Non-Communicable Disease) Program. Free at: PHC, CHC, Government hospitals. Services: 1) Screening camps, 2) Blood sugar/BP check, 3) Basic medicines (Metformin, Amlodipine, etc.), 4) Diet counseling, 5) Regular monitoring. NCD clinics: Dedicated clinics at larger centres. Insulin: Available at district hospitals. Register: Health ID (ABHA) helps track records.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH221_TG",
+      "instruction": "Hydrotherapy treatments ennenna?",
+      "current_output": "Water treatments: 1) Hip bath (pelvic area) - digestive, urinary issues, 2) Spinal bath - spine problems, stress, 3) Arm/foot bath - circulation, 4) Steam bath - detox, skin, 5) Enema - colon cleansing, 6) Wet pack - fever, inflammation, 7) Hot and cold compress. Home: Alternate hot-cold shower, foot bath. Centre: Full treatments under supervision. Benefits: Circulation, toxin removal, pain relief. Caution: Heart patients, BP - consult before.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH054_TM",
+      "instruction": "Blood transfusion-ல் wrong blood கொடுத்தாங்க - action என்ன?",
+      "current_output": "Serious negligence! Life-threatening error. Blood bank + hospital liable. Action: 1) Medical records + blood bank records collect, 2) Consumer Forum, 3) Criminal case if death/serious injury, 4) Blood bank license complaint (State Blood Transfusion Council). Protocols violated: Blood matching, cross-matching, identification. Compensation: High - can be fatal mistake.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH217_TM",
+      "instruction": "Kitchen herbs-ன் medicinal uses என்ன?",
+      "current_output": "Common kitchen medicines: 1) Turmeric - Antiseptic, anti-inflammatory, immunity, 2) Ginger - Digestion, nausea, cold, 3) Pepper - Cold, metabolism, 4) Cumin - Digestion, iron source, 5) Coriander - Cooling, digestion, 6) Curry leaves - Diabetes, hair health, 7) Fenugreek - Blood sugar, lactation, 8) Garlic - Heart, infection, 9) Tulsi - Immunity, respiratory, 10) Neem - Skin, blood purifier. Daily use: Prevention better than cure!",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH045_TG",
+      "instruction": "Minor child-kku yaar consent kodukkanum?",
+      "current_output": "Parents/legal guardians. Rules: 1) Both parents equal right (married), 2) Single parent: That parent, 3) Guardian: Court-appointed guardian, 4) Emergency: Hospital can proceed without consent (life-saving), 5) Mature minor doctrine: 16+ may consent to some treatments. Conflict between parents: Court decides best interest of child. Orphan/abandoned: Child Welfare Committee.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

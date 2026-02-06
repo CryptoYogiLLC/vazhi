@@ -1,0 +1,38 @@
+{
+  "total_samples": 3180,
+  "keep": {
+    "count": 421,
+    "percentage": 13.2,
+    "by_pack": {
+      "vazhi_arasu": 21,
+      "vazhi_panpaadu": 305,
+      "vazhi_kaval": 86,
+      "vazhi_kalvi": 7,
+      "vazhi_sattam": 2
+    }
+  },
+  "review": {
+    "count": 394,
+    "percentage": 12.4,
+    "by_pack": {
+      "vazhi_kaval": 115,
+      "vazhi_arasu": 118,
+      "vazhi_panpaadu": 57,
+      "vazhi_kalvi": 38,
+      "vazhi_sattam": 65,
+      "vazhi_maruthuvam": 1
+    }
+  },
+  "regenerate": {
+    "count": 2365,
+    "percentage": 74.4,
+    "by_pack": {
+      "vazhi_maruthuvam": 459,
+      "vazhi_kalvi": 557,
+      "vazhi_panpaadu": 211,
+      "vazhi_kaval": 267,
+      "vazhi_arasu": 328,
+      "vazhi_sattam": 543
+    }
+  }
+}

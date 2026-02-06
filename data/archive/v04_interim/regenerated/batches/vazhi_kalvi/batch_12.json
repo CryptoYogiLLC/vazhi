@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 12,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HIGH028_TG",
+      "instruction": "Education loan meethana vatti subsidy scheme enna?",
+      "current_output": "Central Sector Interest Subsidy Scheme: Padikkum bodhu + 1 year moratorium-la vatti muzhuvathum govt kattum. Eligibility: Family income ₹4.5 lakh/year kizha, Technical/Professional courses. Apply: Vidya Lakshmi Portal moolam. TN State Loan: SC/ST students-ku interest-free education loan available through Adi Dravidar Welfare.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE007_TM",
+      "instruction": "தெற்கு மாவட்ட மாணவர்களுக்கு special scholarship ஏதாவது இருக்கா?",
+      "current_output": "ஆம். BC/MBC scholarship, first graduate scholarship, merit scholarship எல்லாம் apply பண்ணலாம். Tirunelveli, Thoothukudi, Kanyakumari மாவட்ட மாணவர்களுக்கு Sadras scheme-ல் priority உண்டு.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH001_TG",
+      "instruction": "Tamil Nadu Engineering Admission (TNEA) counselling eppadi nadakkum?",
+      "current_output": "TNEA counselling steps: 1) www.tneaonline.org-la register pannunga 2) +2 marks basis-la rank 3) Online choice filling 4) Allotment result 5) College-la join. Fee: ₹500 (SC/ST free). Important: Cut-off mark parunga, popular colleges-ku high marks venum.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP025_TG",
+      "instruction": "Cutoff marks quick guide",
+      "current_output": "NEET 2024 (approx): General OC 720-137, BC 136-107, MBC 136-107, SC/ST 136-107. JEE Main: 90+ percentile for NITs. TNEA: Top colleges 195+, average 180+, minimum 150+. TNPSC Group 4: 80+ marks out of 150 safe. Engineering cutoff = Maths + Physics + Chemistry (max 200).",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP015_TG",
+      "instruction": "I am transgender. College admission-la discrimination face pannuren. Enna pannalaam?",
+      "current_output": "Your rights: 1) Transgender Persons Act 2019 - Equal education rights 2) Reservation for transgender in TN - 1% in education 3) Scholarship: Tamil Nadu Transgender Welfare Board scholarships 4) Discrimination complaint: National/State Human Rights Commission, UGC grievance. Support: Transgender welfare board, NGOs like Sangama, Nirangal. Legal help available. Don't give up - education is your right!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE006_TG",
+      "instruction": "Enga pasangalukku free laptop eppa kidaikkum?",
+      "current_output": "11th class la serndhadhum government school students-kku laptop kidaikkum. Private school students-kkum income certificate kaattina kidaikkum. September-October la distribute aagum.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA001_TM",
+      "instruction": "ITI-ல் என்னென்ன trades படிக்கலாம்? எது popular?",
+      "current_output": "Popular ITI trades: 1) Electrician - மிகவும் demand 2) Fitter - manufacturing jobs 3) Welder - construction, shipyard 4) Motor Mechanic - automobile industry 5) COPA (Computer Operator) - IT support 6) Electronics Mechanic 7) Plumber - house construction 8) Turner - machine shop. Duration: 1-2 years. TN-ல் 130+ trades available. Government ITI free-யாக படிக்கலாம்.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_016_TG",
+      "instruction": "Engineering-la 5 arrears irukku. Parents-kitta solla bayamaa irukku. Enna panrathu?",
+      "current_output": "First: Panic vendaam, solve pannalam. Steps: 1) Anna University arrear exam schedule check - multiple attempts available 2) Subject-wise weak areas identify 3) Previous year papers - pattern same 4) Senior notes, YouTube tutorials 5) Group study effective. Parents-ku: Honest-aa sollunga - support kidaikkum. Clearing strategy: Easy subjects first, confidence build. Max arrears allowed: 12 (can continue). Final year placement-ku clear pannanum. Time irukku.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP016_TM",
+      "instruction": "En appa construction worker, veru veru place-ku porom. School admission eppadi?",
+      "current_output": "Migrant children rights: 1) RTE Act - Free education anywhere in India 2) Admission without TC - Self-declaration accepted 3) Mid-year admission allowed 4) Age-appropriate class placement 5) SSA (Sarva Shiksha Abhiyan) support. Contact: Nearest government school, District Education Officer. Documents: Aadhaar (if any), parent ID. Free: Books, uniform, mid-day meal. Language support provided for transition.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA020_TG",
+      "instruction": "Sondha thozhil aarambikka enna training irukkudhu?",
+      "current_output": "Entrepreneurship training: 1) MSME-DI (District Industries Centre) - free EDP (Entrepreneurship Development Programme) 2) TNSDC business skills 3) NIESBUD courses 4) PMEGP training before loan 5) Startup TN programmes. Duration: 1-4 weeks. Topics: Business plan, finance, marketing, legal compliance. DIC-la register panninaal subsidies, loans easier. Free mentorship available.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC023_TG",
+      "instruction": "En paiyan/ponnu college-la veliyoor poraanga. Eppadi support panrathu?",
+      "current_output": "Parent support tips: 1) Regular communication - but not controlling 2) Visit once in first month - help settle 3) Emergency contact with warden establish 4) Bank account with adequate funds 5) UPI/GPay teach for daily expenses 6) Health insurance ensure 7) Trust them - allow independence 8) Listen without judging when they share problems 9) Homesickness normal - patience. Balance: Support without helicopter parenting. They're growing up!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM025_TG",
+      "instruction": "Online application submit aagala, error varudhu",
+      "current_output": "Common fixes: 1) Clear browser cache, try incognito mode 2) Different browser (Chrome/Firefox) 3) Check file size limits (usually <200KB photos, <500KB docs) 4) PDF/JPG format correct? 5) All mandatory fields filled? 6) Internet stable? 7) Deadline passed? 8) Server busy - try late night. Still failing: Screenshot error, contact helpline. Alternative: Try from e-Sevai centre - they have dedicated lines.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE011_TG",
+      "instruction": "Madurai Kamaraj University-la distance education nalladha?",
+      "current_output": "MKU distance education UGC approved, widely recognized. BA, BCom, BBA, MA, MCom courses available. Study centre city-layae irukku. Fees affordable. Contact classes weekend-la nadakkum.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC014_TM",
+      "instruction": "College-ல் stress அதிகமா இருக்கு. Handle பண்றது எப்படி?",
+      "current_output": "Stress management: 1) Sleep 7-8 hours - non-negotiable 2) Exercise 30 min daily - even walking helps 3) Healthy food - avoid junk during stress 4) Break big tasks into small 5) Talk to friends, family 6) College counsellor - free service 7) Hobbies continue - music, sports, art 8) Social media break 9) Deep breathing when overwhelmed 10) Professional help if severe - no shame. Remember: Grades ≠ Self-worth. You matter more than marks.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA016_TM",
+      "instruction": "DCA/PGDCA course என்ன? Value இருக்கா?",
+      "current_output": "DCA (Diploma in Computer Applications): 6 months - 1 year. PGDCA (Post Graduate): 1 year after graduation. Contents: MS Office, Internet, Basic programming, Database. Value: Government jobs-ல் DCA mandatory சில posts-க்கு. Private sector: Entry level IT support, data entry. Better alternative: BCA degree or specific skill courses (Python, Web development). DCA sufficient for basic computer operator roles.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO015_TG",
+      "instruction": "KVPY scholarship enna? Science students eppadi apply seivathu?",
+      "current_output": "Kishore Vaigyanik Protsahan Yojana (KVPY): IISc Bangalore nadathum science aptitude test. Streams: SA (Class 11), SX (Class 12), SB (1st year BSc). Scholarship: ₹5,000-7,000/month + annual contingency grant. Selection: Aptitude test + Interview. Benefits: IISc/IISERs admission priority. 2022 onwards INSPIRE SHE-aaga merge aanadhu, but similar benefits continue through INSPIRE.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP007_TM",
+      "instruction": "JEE vs TNEA - TN-ல் Engineering-க்கு எது better?",
+      "current_output": "**JEE vs TNEA Comparison:**\n\n**TNEA (Tamil Nadu Engineering Admissions):**\n- Based on: 12th marks only (Maths, Physics, Chemistry)\n- No entrance exam!\n- For: TN Engineering colleges only\n- Website: tneaonline.org\n\n**JEE Main:**\n- Based on: Entrance exam score\n- For: NITs, IIITs, GFTIs + TN colleges (optional)\n- All India level competition\n\n**Comparison Table:**\n\n| Factor | TNEA | JEE |\n|--------|------|-----|\n| Basis | 12th Marks | Exam Score |\n| Difficulty | Easy (marks based) | Tough exam |\n| Colleges | TN only | All India |\n| Competition | TN students | All India |\n| Preparation | Board focus | Extra coaching |\n| Cost | Low | Coaching expensive |\n\n**TNEA Mark Calculation:**\n```\nTNEA Score = (Maths × 50) + (Physics × 25) + (Chemistry × 25)\nTotal: 200 marks\n```\n\n**Which is Better?**\n\n**Choose TNEA if:**\n- Want TN college (Anna Univ, Govt colleges)\n- Not interested in IIT/NIT\n- Limited coaching access\n- Strong in 12th boards\n\n**Choose JEE if:**\n- Target IIT/NIT/IIIT\n- Ready for competitive exam\n- Can afford coaching\n- Want All India opportunities\n\n**Best Strategy:**\n- Prepare for JEE → Automatically strong in boards\n- Apply for both TNEA and JEE counselling\n- More options = Better chances\n\n**Top Colleges via TNEA:**\n- CEG (Anna University)\n- MIT (Anna University)\n- GCT Coimbatore\n- TCE Madurai",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH033_TG",
+      "instruction": "Data Science/AI padikka enna vazhi?",
+      "current_output": "Options: 1) B.Tech CS/IT + elective courses 2) Online certifications - Coursera, edX (Google, IBM certificates) 3) IIT/IISc online programs 4) NPTEL free courses 5) M.Tech Data Science - IITs, NITs. Prerequisites: Python, Statistics, Linear Algebra. Chennai-la pala institutes coaching tharukindrana. Kaggle competitions-la participate pannunga. Portfolio build pannunga.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC019_TM",
+      "instruction": "Internship எப்படி கிடைக்கும்? Apply எங்கே?",
+      "current_output": "Internship sources: 1) College placement cell - company tie-ups 2) Internshala.com - largest platform 3) LinkedIn - direct apply 4) Company websites - careers page 5) Professor reference - industry contacts 6) Alumni network 7) Government internships - NITI Aayog, ministries. Tips: Apply early (6 months before), customize resume for each application. Unpaid internship: Experience valuable, accept if good company. Stipend: Negotiate politely.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_020_TM",
+      "instruction": "10 வருஷமா same job பண்றேன், career change பண்ணணும், new skill learn பண்ண எங்கே போவது?",
+      "current_output": "Career change options: 1) TNSDC free courses - 100+ skills 2) NSDC skill centers - PMKVY scheme 3) Online: Coursera, edX certificates (many free) 4) Coding: freeCodeCamp, Codecademy 5) Digital marketing: Google certifications free 6) MBA distance - career shift. Trending skills: Data Science, Digital Marketing, Cloud computing, Python. Strategy: Learn while working → Build portfolio → Apply new roles OR Entrepreneurship. Age no barrier - many successful career changes at 35-45.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM014_TM",
+      "instruction": "Income certificate எங்கே வாங்குவது? Online-ல் apply பண்ணலாமா?",
+      "current_output": "Online apply: www.tnedistrict.tn.gov.in or e-Sevai centres. Offline: VAO (Village Administrative Officer) → RI → Tahsildar. Documents: Aadhaar, ration card, employment proof (if any), self-declaration for non-employed. Time: 7-15 working days. Fee: ₹10-50. Validity: Usually 1 year, some schemes accept older. Types: Annual income certificate, income certificate for specific scheme. Tip: Apply in advance before scholarship deadline.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP017_TM",
+      "instruction": "Naanga Sri Lankan Tamil refugee. En pillaikku education kidaikkuma?",
+      "current_output": "Sri Lankan Tamil refugee education: 1) Government schools - Free admission for refugee camp children 2) Special coaching provided 3) TN Government scholarship for refugee students 4) UNHCR education support 5) Higher education: Special quota in some colleges. Documents: Camp registration, UNHCR certificate. Support organizations: READ, OFERR. Many refugee children have succeeded - IIT, Medical, Government jobs. Don't lose hope!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC010_TM",
+      "instruction": "Student budget எப்படி manage பண்றது?",
+      "current_output": "Budget tips: 1) Monthly expenses list make 2) Essentials first - food, transport, stationery 3) Track spending - apps like Money Manager 4) Hostel food cheaper than outside 5) Second-hand books - seniors, book banks 6) Student discounts use everywhere 7) Part-time work if possible 8) Avoid peer pressure spending 9) Emergency fund small amount keep 10) Scholarship money wise use. Rule: Needs > Wants.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC024_TG",
+      "instruction": "En pillai marks kurainju padikkudhu. Pressure kodukkanumaa?",
+      "current_output": "Approach wisely: 1) Understand reason first - health, interest, teaching quality, personal issues 2) Comparison avoid - every child different 3) Effort appreciate, not just results 4) Tutoring arrange if academic gap 5) Career alternatives discuss - marks ≠ only path 6) Mental health priority - pressure causes anxiety 7) Realistic expectations set. Reality: Many successful people were average students. Support > Pressure. Love unconditionally.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC012_TM",
+      "instruction": "Part-time job student-ஆக இருக்கும்போது செய்யலாமா?",
+      "current_output": "Part-time options: 1) Tuition teaching - ₹200-500/hour 2) Content writing - freelance 3) Data entry - weekend work 4) Campus jobs - library, canteen assistance 5) Internships - stipend based 6) Online tutoring - Chegg, Vedantu 7) Weekend coaching classes assistant. Rules: College permission may be needed. Balance: Studies first priority. Tax: Above ₹2.5 lakh/year - tax applicable. Skills: Communication, time management develop.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 10,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PROP021_TG",
+      "instruction": "Uzhavar number endraal enna?",
+      "current_output": "Unique farmer ID for TN government schemes. Registration: Primary Agricultural Cooperative Bank or eservices.tn.gov.in. Benefits: Crop insurance, subsidies, PM-KISAN, crop loan eligibility. Required documents: Patta, Chitta, Aadhaar, Bank account.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC024_TG",
+      "instruction": "Kadaiyila vaanguna product defective, kadaikkaaran maathi thara maattenguran (Chennai style)",
+      "current_output": "Bill irukkaa? Bill vachu Consumer helpline 1800-11-4000 call pannunga. WhatsApp complaint: 8800001915. Consumer forum-la case podalam - Rs.5 lakh varai free. Warranty period check pannunga. Photos eduthu vachukonga.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE013_TG",
+      "instruction": "Social media-la fake account en perla - complaint eppadi?",
+      "current_output": "Platform report: Impersonation report (ID proof upload). Legal: IT Act 66D (identity theft), IPC 419 (cheating by personation). cybercrime.gov.in complaint. Platform response: 24-72 hours. Multiple platforms: Each platform-lum separately report.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA027_TG",
+      "instruction": "Owner irandhuvittal agreement enna aagum?",
+      "current_output": "Agreement valid-aaga continue aagum. Legal heirs-kku property rights transfer aagum. Heirs-udan pudhu agreement seyyalam or existing agreement continue seyyalam. Heirs arbitrary-aaga evict seyya mudiyaadhu.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE014_TM",
+      "instruction": "WhatsApp group-ல் defamatory message - admin liable-ஆ?",
+      "current_output": "Admin liability: Controversial. Recent judgments: Admin not automatically liable, but may be liable if: 1) Aware of content, 2) Didn't remove after notice, 3) Promoted/endorsed content. Original poster primarily liable. Group rules + moderation important.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP027_TG",
+      "instruction": "En thaatha perla irukkura nilatha en perla maathrathu eppadi? (Madurai style)",
+      "current_output": "Thaatha uyiroda irundhaa: Gift deed or Sale deed register pannanum. Irandhuttaa: Legal heir certificate vaangi, Will irundhaa probate vaangi, Patta transfer apply pannanum. Ella heirs consent venum.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC014_TM",
+      "instruction": "Hospital excessive bill போட்டாங்க - dispute எப்படி செய்வது?",
+      "current_output": "Steps: 1) Itemized bill demand (கட்டாயம் தரணும்), 2) Rate list compare (display mandatory), 3) Hospital grievance officer, 4) District Health Authority, 5) Consumer forum. Clinical Establishments Act: Rate display, itemized bill compulsory. Overcharging = unfair trade practice.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_002_TG",
+      "instruction": "RTI application eppadi ezhuthuvathu?",
+      "current_output": "Format: 1) To: Public Information Officer (PIO), 2) Subject: RTI application under RTI Act 2005, 3) Applicant details (name, address), 4) Questions/Information required - specific-aa kelunga, 5) Period (from date to date), 6) Format preference (copy/inspection), 7) Fee payment details, 8) Signature, date.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI023_TM",
+      "instruction": "Streedhan-க்கும் Dowry-க்கும் என்ன வித்தியாசம்?",
+      "current_output": "Streedhan = Woman's personal property (gifts from parents, relatives - voluntarily given). Dowry = Demand-ஆக கேட்டு வாங்கியது (illegal). Streedhan wife's absolute property - husband touch பண்ண முடியாது. Streedhan claim divorce-ல் பண்ணலாம்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP001_TG",
+      "instruction": "Property registration eppadi seivathu?",
+      "current_output": "Steps: 1) TNREGINET (tnreginet.gov.in)-la document draft, 2) E-stamp purchase, 3) Appointment book, 4) Sub-Registrar office visit (buyer, seller, 2 witnesses), 5) Biometric verification, 6) Document scan & registration. Required: Sale deed, EC, Patta, ID proofs, photos.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA017_TG",
+      "instruction": "Rent increase accept panna maruthal enna aagum?",
+      "current_output": "Owner agreement renew seyya marukkalam. Proper notice koduthu vacate seyyach sollalam. But agreement period mudiyum varai existing rent-la continue seyyalam. Forceful eviction illegal.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE003_TM",
+      "instruction": "Case status online-ல் எப்படி check பண்றது?",
+      "current_output": "Websites: ecourts.gov.in (all courts), highcourtmadras.gov.in (Madras HC), sci.gov.in (Supreme Court). Search by: CNR number, party name, case number, advocate name. e-Courts app-உம் available. Cause list (daily hearing list) check பண்ணலாம்.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL001_TM",
+      "instruction": "PF account balance எப்படி check பண்றது?",
+      "current_output": "Methods: 1) EPFO portal: epfindia.gov.in (UAN login), 2) UMANG app, 3) SMS: EPFOHO UAN ENG to 7738299899, 4) Missed call: 011-22901406. UAN (Universal Account Number) வேணும். Employer-கிட்ட கேட்டு activate பண்ணுங்க.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_013_TG",
+      "instruction": "Whistleblower protection irukkaa?",
+      "current_output": "Whistleblower Protection Act 2014: Corruption, misuse of power report pannuravarkalukku protection. Apply: Competent Authority (state level). Identity protection, victimization protection undu. Retaliation-kku penalty. Anonymous complaints-um accept.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP013_TM",
+      "instruction": "Land survey எப்படி செய்வது? Cost என்ன?",
+      "current_output": "Apply: Taluk Surveyor office. Private licensed surveyor-ஐயும் hire பண்ணலாம். Government survey fee: Rs.500-2000 (area based). Private surveyor: Rs.2000-10,000. Survey sketch legally valid document - boundary disputes-க்கு முக்கியம்.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP023_TM",
+      "instruction": "Streedhan (woman's property) - husband எடுத்துக்கலாமா?",
+      "current_output": "Streedhan = Woman's exclusive property (gifts at marriage, inheritance, earnings). Husband cannot: 1) Take without consent, 2) Sell or mortgage, 3) Claim ownership. Misuse: Criminal breach of trust (IPC 406) + Dowry Act violation if demand. Recovery: Civil suit + criminal complaint. Keep receipts, photos of jewelry. Joint locker: Inventory maintain பண்ணுங்க.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP007_TM",
+      "instruction": "Subletting பண்ணலாமா? Owner-க்கு தெரியாம பண்ணினா என்ன ஆகும்?",
+      "current_output": "Agreement check பண்ணுங்க - usually subletting prohibited. Without permission subletting: 1) Agreement breach, 2) Immediate eviction ground, 3) Deposit forfeit possibility. Commercial property: Subletting common but written permission வேணும். Safe approach: Owner consent in writing வாங்குங்க before subletting.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP018_TG",
+      "instruction": "Small claims court-la case podalaamaa? Procedure enna?",
+      "current_output": "Consumer disputes-kku: District Consumer Forum (Rs.1 crore varai). Civil disputes: Regular civil court. Small Causes Court: Chennai-la available - Rs.1 lakh-kkul claims, fast track. Procedure: 1) Complaint draft, 2) Court fee pay (nominal), 3) Filing, 4) Hearing dates, 5) Judgment. Lawyer optional for small claims. E-filing: ecourts.gov.in",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI016_TG",
+      "instruction": "Domestic violence complaint enge koduppadhu?",
+      "current_output": "Options: 1) Police station - FIR (498A IPC), 2) Protection Officer (District Social Welfare Office), 3) Women's helpline - 181, 4) Mahila Court, 5) Family Court. DV Act 2005 keezh protection order, residence order, monetary relief, custody order ellam ketkalam.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE016_TM",
+      "instruction": "Pollution complaint எங்கே கொடுப்பது?",
+      "current_output": "TNPCB (Tamil Nadu Pollution Control Board): tnpcb.gov.in. NGT (National Green Tribunal): Chennai bench. District Environment Engineer. Complaint types: Air, water, noise, hazardous waste. Evidence: Photos, videos, test reports. Public interest litigation-உம் possible.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE016_TM",
+      "instruction": "Password hack ஆனால் என்ன செய்யணும்?",
+      "current_output": "Immediate: 1) Password change (all linked accounts), 2) Enable 2FA, 3) Check login history, 4) Bank accounts verify, 5) Linked devices remove. If money lost: 1930 + bank + cybercrime.gov.in. Recovery email/phone verify பண்ணுங்க.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL013_TM",
+      "instruction": "Overtime pay எவ்வளவு கொடுக்கணும்?",
+      "current_output": "Factories Act: Normal working hours = 8 hours/day, 48 hours/week. Overtime = Double wages (2x normal rate). Maximum overtime: 50 hours/quarter. Overtime refuse பண்ணலாம் (reasonable grounds). Forced overtime illegal.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE014_TG",
+      "instruction": "WhatsApp group-la defamatory message - admin liable-aa?",
+      "current_output": "Admin liability: Controversial. Recent judgments: Admin not automatically liable, but may be liable if: 1) Aware of content, 2) Didn't remove after notice, 3) Promoted/endorsed content. Original poster primarily liable. Group rules + moderation important.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_002_TM",
+      "instruction": "RTI application எப்படி எழுதுவது?",
+      "current_output": "Format: 1) To: Public Information Officer (PIO), 2) Subject: RTI application under RTI Act 2005, 3) Applicant details (name, address), 4) Questions/Information required - specific-ஆ கேளுங்க, 5) Period (from date to date), 6) Format preference (copy/inspection), 7) Fee payment details, 8) Signature, date.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL017_TM",
+      "instruction": "Appointment letter கொடுக்கல - சட்டவிரோதமா?",
+      "current_output": "ஆம். Written employment contract கொடுக்கணும். Appointment letter contents: Designation, salary, probation period, notice period, duties. Oral appointment-உம் valid ஆனால் prove பண்றது கஷ்டம். Always insist on written letter + copy வாங்குங்க.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

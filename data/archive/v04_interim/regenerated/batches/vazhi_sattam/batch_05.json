@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 5,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PROP008_TG",
+      "instruction": "Legal Heir Certificate eppadi peruvathu?",
+      "current_output": "Apply: Tahsildar office or eservices.tn.gov.in. Documents: Death certificate, Ration card, ID proofs of all heirs, Affidavit. Field verification nadakkum. Time: 15-30 days. Fee: Rs.50. Bank account, pension, insurance claim-kku avasiyam.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS006_TG",
+      "instruction": "Bill illaama vaangina product-kku complaint podalaamaa?",
+      "current_output": "Bill illaatalum complaint podalam. Alternative proofs: 1) Bank/card statement, 2) Online payment screenshot, 3) Warranty card, 4) Packaging with shop name, 5) Witness statement. Aanaal bill irundhaal case strong aagum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE010_TG",
+      "instruction": "Company en data misuse pannuthu - complaint enge?",
+      "current_output": "DPDP Act 2023 (implementation started): Data Protection Board-kku complaint. Current options: 1) Company grievance officer, 2) IT Ministry, 3) Consumer forum (service deficiency), 4) Court. Data breach notification: Company inform seyyanum. Consent withdrawal right undu.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC026_TM",
+      "instruction": "ஆன்லைன்ல order பண்ணேன், வேற product வந்துடுச்சு",
+      "current_output": "Steps: 1) Delivery போது video எடுங்க (unboxing), 2) App-ல் return/refund request, 3) Email complaint (company grievance officer), 4) NCH portal complaint. Evidence upload பண்ணுங்க. 7 days-ல் response இல்லன்னா consumer forum.",
+      "category": "practical_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "PROP011_TM",
+      "instruction": "Neighbour என் land-ல் ஆக்கிரமிப்பு செய்கிறார் - என்ன செய்வது?",
+      "current_output": "Steps: 1) Survey செய்து boundary verify பண்ணுங்க, 2) Written notice அனுப்புங்க, 3) Tahsildar-க்கு complaint, 4) Civil Court-ல் injunction + possession suit. Documents: Patta, Survey sketch, Photos, EC. Forceful removal try பண்ணாதீங்க.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF003_TG",
+      "instruction": "International Driving Permit (IDP) eppadi peruvathu?",
+      "current_output": "Apply: RTO office (not online). Documents: Valid Indian DL, passport, visa, photos. Fee: Rs.1,000. Validity: 1 year or Indian DL validity - edhu koraivo adhu. IDP alone not valid - Indian DL-udan carry pannanum.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI010_TG",
+      "instruction": "Wife maintenance evvalavu ketkalaamaa?",
+      "current_output": "Fixed formula illa. Consider: 1) Husband income, 2) Wife income/earning capacity, 3) Standard of living, 4) Children custody, 5) Liabilities. Rough guide: Husband income-in 25-30%. Interim maintenance: 20-25%. Court discretion based on facts.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI018_TG",
+      "instruction": "In-laws against DV case podalaamaa?",
+      "current_output": "Aama. DV Act-in keezh 'respondent' includes husband + his relatives who abuse. 498A IPC-in keezh husband and relatives against criminal case podalam. Aanaal specific allegations + evidence venum - general accusation not enough.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP021_TM",
+      "instruction": "Uzhavar number என்றால் என்ன?",
+      "current_output": "Unique farmer ID for TN government schemes. Registration: Primary Agricultural Cooperative Bank அல்லது eservices.tn.gov.in. Benefits: Crop insurance, subsidies, PM-KISAN, crop loan eligibility. Required documents: Patta, Chitta, Aadhaar, Bank account.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE004_TG",
+      "instruction": "Lawyer fees evvalavu reasonable?",
+      "current_output": "Varies: Junior lawyer - Rs.5,000-25,000 per case, Senior - Rs.50,000-5 lakhs+, Supreme Court - Rs.2 lakhs+. Fee agreement writing-la vaangunga. Excessive fee: Bar Council complaint. Free legal aid: DLSA (income <Rs.3 lakh). Legal fee insurance available.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE009_TG",
+      "instruction": "Lok Adalat-la enna cases settle aagum?",
+      "current_output": "Cases: Motor accident claims, labour disputes, matrimonial (except divorce), electricity bills, telephone bills, cheque bounce, bank loan recovery, compoundable criminal offences. Benefits: No court fee, no appeal, quick settlement. Permanent Lok Adalat: Public utility services.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP027_TM",
+      "instruction": "Property பிள்ளைகளுக்கு transfer பண்ணிட்டேன், இப்போ வெளியேத்துறாங்க, என்ன செய்வது?",
+      "current_output": "Senior Citizens Act protection: Property transfer-க்கு பிறகு neglect/eviction = transfer cancel பண்ணலாம். Steps: 1) Tribunal application (Collector office), 2) Prove neglect/ill-treatment, 3) Order for property return. Time limit: None specified - apply anytime. Evidence: Witnesses, medical records (if abuse), communication records. Preventive: Transfer with life interest retention safer.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE016_TG",
+      "instruction": "Password hack aanaal enna seyyanum?",
+      "current_output": "Immediate: 1) Password change (all linked accounts), 2) Enable 2FA, 3) Check login history, 4) Bank accounts verify, 5) Linked devices remove. If money lost: 1930 + bank + cybercrime.gov.in. Recovery email/phone verify pannunga.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL020_TM",
+      "instruction": "Swiggy/Zomato delivery partner-க்கு labour laws apply ஆகுமா?",
+      "current_output": "Gig workers classified as 'independent contractors' - traditional labour laws fully apply ஆகாது. Code on Social Security 2020: Gig workers-க்கு social security provisions (implementation pending). Accident/injury-க்கு company insurance check பண்ணுங்க. Union formation possible.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC019_TG",
+      "instruction": "Important helpline numbers ennenna?",
+      "current_output": "Emergency: 112. Police: 100. Fire: 101. Ambulance: 108. Women helpline: 181, 1091. Child helpline: 1098. Cyber crime: 1930. Consumer: 1800-11-4000. Senior citizen: 14567. Anti-corruption: 1064. CM helpline: 1100. Railway: 139.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA023_TG",
+      "instruction": "Rent Authority order-kku edhiraga appeal seyyalaamaa?",
+      "current_output": "Aama. Rent Authority order-kku edhiraga Rent Court (District Court)-la 30 days-kkul appeal seyyalam. Rent Court order-kku edhiraga High Court-la appeal seyyalam. Vazhakkamana civil procedure follow aagum.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE018_TG",
+      "instruction": "Online child abuse report eppadi seivathu?",
+      "current_output": "Report: 1) cybercrime.gov.in (select child-related crime), 2) NCPCR helpline: 1098, 3) Police. POCSO Act: Strict punishment for child exploitation. Platforms: Report + block. Evidence preserve pannunga. Don't forward content - possess panradhe illegal.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC026_TG",
+      "instruction": "Online-la order pannen, vera product vandhudutchu (Coimbatore style)",
+      "current_output": "Steps: 1) Delivery podhu video edunga (unboxing), 2) App-la return/refund request, 3) Email complaint (company grievance officer), 4) NCH portal complaint. Evidence upload pannunga. 7 days-la response illanna consumer forum.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC021_TG",
+      "instruction": "PAN card-la mistake irukku - correct panradhu eppadi?",
+      "current_output": "Online: tin-nsdl.com or onlineservices.nsdl.com. Form: Correction form + supporting documents. Fee: Rs.110 (Indian address) / Rs.1,020 (foreign). Documents: ID proof, address proof with correct details. Time: 15-20 days. Status track: UTI/NSDL websites.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS020_TM",
+      "instruction": "Consumer case-க்கு fees எவ்வளவு?",
+      "current_output": "District Forum: Rs.5 lakh வரை - Nil fee, Rs.5-10 lakh - Rs.200, Rs.10-20 lakh - Rs.400, Rs.20-50 lakh - Rs.1000, Rs.50 lakh-1 crore - Rs.2000. State Commission: Rs.2500-5000. National Commission: Rs.5000. SC/ST/Women-க்கு 50% concession.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP008_TM",
+      "instruction": "Legal Heir Certificate எப்படி பெறுவது?",
+      "current_output": "Apply: Tahsildar office அல்லது eservices.tn.gov.in. Documents: Death certificate, Ration card, ID proofs of all heirs, Affidavit. Field verification நடக்கும். Time: 15-30 days. Fee: Rs.50. Bank account, pension, insurance claim-க்கு அவசியம்.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC011_TG",
+      "instruction": "Kaaranam sollaama job-la irundhu remove pannitaanga",
+      "current_output": "Wrongful termination: 1) Written explanation demand, 2) Labour Commissioner, 3) Labour Court/Industrial Tribunal. Remedies: Reinstatement, back wages, compensation. Standing Orders: Company rules check pannunga. Workmen vs Manager: Different procedures apply.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP009_TG",
+      "instruction": "Will eppadi ezhuthuvathu? Register pannanuumaa?",
+      "current_output": "Will writing: Clear language, all properties list, beneficiaries name, date, signature, 2 witnesses signature. Registration kattaayam illa but recommended - disputes avoid. Registered will Sub-Registrar office-la safe custody-la irukum.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM018_TM",
+      "instruction": "Lok Adalat என்றால் என்ன?",
+      "current_output": "Alternative dispute resolution forum - Court fee இல்லை, compromise மூலம் settlement. Motor accident claims, labour disputes, matrimonial (except divorce), cheque bounce, compoundable offences - இவற்றை handle செய்வார்கள். Award final - appeal இல்லை.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI015_TG",
+      "instruction": "Child custody order maatra mudiyumaa?",
+      "current_output": "Aama, circumstances maarinaal. Modification petition file pannalam. Grounds: Custodial parent neglect, child's preference change, better opportunity with other parent, relocation. Court child's welfare basis-la decide seyyum.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "instruction": "Siddha treatment-la enna vagaigal ullana?",
+    "output": "Treatment types: 1) Internal medicines - Choornam (powder), Lehyam (paste), Kasayam (decoction), Thailam (oil), Maathirai (pills), 2) External - Pattru (poultice), Ottradam (fomentation), Nasiyam (nasal), Kattu (bandage), 3) Surgical - Siddha surgery, 4) Special therapies - Thokkanam (massage), Varmam, Yoga. Panchagavya: Cow products based. Kayakalpa: Rejuvenation therapy.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "siddha_medicine",
+    "id": "HLTH171_TG"
+  },
+  {
+    "instruction": "Pharmacy prescription illaama antibiotic kodukkalaama?",
+    "output": "NO! Most antibiotics = Schedule H - prescription mandatory. Reason: Antibiotic resistance is serious health threat. Pharmacy violation: Drug Inspector complaint, license action. Exception: Some topical antibiotics (creams) may be OTC. Good practice: Complete prescribed course, don't share antibiotics, don't use leftover. Doctor: Can prescribe over phone in genuine emergency.",
+    "language": "tanglish",
+    "pack": "vazhi_maruthuvam",
+    "category": "pharmacy_medicines",
+    "id": "HLTH093_TG"
+  }
+]

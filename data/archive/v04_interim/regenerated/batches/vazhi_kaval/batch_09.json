@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 9,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "OS003",
+      "instruction": "WhatsApp message vandhuchu 'Your GitHub account reported for copyright violation. Verify identity within 24 hours or account suspended. Click link.' GitHub account work ku important, verify pannalama?",
+      "current_output": "GitHub sends violations to registered email, not WhatsApp! Check github.com directly for any notifications. This phishing attempt wants your GitHub credentials - once stolen, attackers can access all your repositories and inject malicious code.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS047",
+      "instruction": "Instagram ad - 'Made 10 lakhs in 3 months with crypto trading bot, DM for access.' Friend um try pannaan, initial la profit vandhudhu nu sonnaan.",
+      "current_output": "Initial profits = their own money returning, creates trust. 'Trading bot' access ku investment keppanga. Friend um eventually lose pannuvaan - Ponzi structure. Crypto invest pannanum na - Binance, WazirX legitimate exchanges use pannunga, 'bots' and 'signals' avoid.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS020",
+      "instruction": "Tirupati darshan ku donation pannunga nu call vandhuchchi ayyaa. TTD la irundhu nu sonnanga ayyaa.",
+      "current_output": "TTD phone la donation kekkaadhu ayyaa! Official website la mattum pannunga. Phone call scam ayyaa, paisa pogum.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT002",
+      "instruction": "Machan, PhonePe la issue, Google la number search panni call potten. AnyDesk install pannu remote la fix pannidurom nu solraanga. Panna okay va?",
+      "current_output": "Dai NO! Google la fake numbers ad la varum da. AnyDesk kuduthaa unga phone full aa paappaanga - banking app open panni kaasu thookiduvaanga. Customer care number app la irundhu dhaan edukanam. Google search result trust pannaadhada.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS015",
+      "instruction": "SMS vandhudhu 'Drug license renewal pending. Pay 8000 online to avoid clinic seal.' Drug license matter serious, pay pannidlama?",
+      "current_output": "Drug licenses renewed through State Drug Control department, not SMS links. Check actual renewal date in your license. Visit drug controller office or official portal. Scammers know doctors fear drug license issues - exploiting regulatory anxiety.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS078",
+      "instruction": "WhatsApp message 'PIB card renewal urgent. 5000 processing for continued access.' PIB card irukku, renew pannanum aa?",
+      "current_output": "PIB accreditation renewal through official PIB website, process is free. Media organization applies on behalf of journalist. No WhatsApp-based renewal or 'processing fee'. Contact PIB regional office for genuine process. Scammers know journalists need PIB access.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS061",
+      "instruction": "SMS vandhuchu 'Free cement scheme for house construction. Register with 2000 for 50 bag cement.' Cement kedaikum aa free la?",
+      "current_output": "Government housing schemes provide materials through proper application and verification. No 'free cement' scheme with cash registration. Housing subsidies through PMAY/CM housing scheme with extensive documentation. Scammers target construction workers' building material needs.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS016",
+      "instruction": "WhatsApp group add pannidaanga 'Hospital accreditation assistance. We help with NABH/NABL. 1 lakh consultation fee, 100% success.' Clinic ku accreditation venum, join pannalama?",
+      "current_output": "Real accreditation consultants work through proper contracts and meetings. WhatsApp groups promising 'guaranteed accreditation' are scams. NABH/NABL accreditation requires genuine compliance, no shortcuts. Contact official empaneled consultants from NABH website only.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS006",
+      "instruction": "Veetuku oru van vandhudhu, 'Free health checkup, Ayushman Bharat registration' nu. Aadhaar card kuduthen, fingerprint machine la vachanga. Aprom bank la irundhu kaasu poiduchu. Eppidi possible?",
+      "current_output": "Aiyyo ayya! Ivanga Aadhaar fingerprint capture panni AEPS (Aadhaar Enabled Payment System) la unga bank account la irundhu kaasu eduthirukkanga. Ayushman Bharat door-to-door biometric collect pannaadhu. Immediately bank ku ponga, AEPS disable pannunga, police complaint kudungal.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS054",
+      "instruction": "SMS - 'Income Tax Refund Rs.23,450 approved. Update bank account: [link] to receive refund.' Refund expect pannuren, click pannalama?",
+      "current_output": "IT department refund registered bank account ku automatic credit aagum - link update vendaam. SMS links phishing sites. Login details enter pannina - real IT account hacked, bank details stolen. incometax.gov.in direct login panni check pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR015",
+      "instruction": "Crypto/Stock trading scam la lakhs poachu. Recovery possible aa?",
+      "current_output": "Report to: SEBI (stock related) at scores.sebi.gov.in, ED Economic Offences (>10 lakhs) through Police escalation, cybercrime.gov.in, Platform fraud team (Binance, WazirX). Recovery channels: Bank reversal (within 24-48 hours), Crypto tracing (blockchain traceable, specialized cyber cells), Civil suit if scammer identified, Collective action with other victims. Recovery reality: Crypto 5-10%, Stock scams 10-20% if SEBI acts, Ponzi depends on assets seized.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG019",
+      "instruction": "Income tax refund pending-nu email vandhudhu, bank details update pannanum-nu link irukku",
+      "current_output": "Phishing email ithu! IT department email-la bank details kettuka maattaanga. incometax.gov.in-la direct-a login pannunga. Link click pannaadheenga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS062",
+      "instruction": "Instagram la 'Valorant account with rare skins, 2000 only (worth 10,000)' nu post paathen. Buy pannalama?",
+      "current_output": "Account selling - game ToS violation, ban risk anyway. Payment pannina - account credentials varaadhu or credentials vandhu password change panniduvaanga. Skins officially game store la vaangunga. Third-party account sales almost always scam.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS029",
+      "instruction": "Call vandhudhu 'CGHS card renewal urgent. Pay 2000 online or medical benefits stopped.' CGHS card medical ku use pannuren, renew pannidlama?",
+      "current_output": "CGHS renewal done through CGHS portal with minimal official fee. Never pay through phone call instructions. Check cghs.gov.in for actual renewal process. Scammers know government employees depend on CGHS for medical - exploiting healthcare anxiety.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT007",
+      "instruction": "EB office la irundhu call vandhudhu - '2 hour la current poirum, immediately pay pannunga link la' nu. Current pona enna pannuradhu, pay pannalaamaa?",
+      "current_output": "Oy summa irudhaa! EB 2 hour la current cut pannaadhu da, proper notice tharum. Official app la illana EB office la dhaan pay pannanum. Ivanga anuppura link click panninae - card details thirudiruvaanga. Meenakshi Amman kovil pakkathu la oru thatha ipdi 50,000 lose pannittaan.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS026",
+      "instruction": "Email vandhuchu 'Service record verification required. Submit documents with 5000 processing fee for pension eligibility.' Pension important, submit pannalama?",
+      "current_output": "Service record verification is internal department process, no fees involved. Pension processed through AG office, not email requests. All government employees have service books maintained by departments. Contact your establishment section, not random emails.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG005",
+      "instruction": "Facebook la friend emergency-nu panam ketkaraanga - send pannalama?",
+      "current_output": "Account hack aayirukalam. Phone la call pannunga first - avanga thaan-a confirm pannunga. Message mathiri panam kettaa always verify pannunga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG004",
+      "instruction": "Enna madam, police station-la irunndhu call - unga Aadhaar-la problem, fine kattanum-nu solraanga",
+      "current_output": "Fake call ithu! Real police phone-la fine kettuka maattaanga. Station-ku vara solluvanga. Bayapadaadheenga, phone cut pannunga. 1930-la report pannunga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS002",
+      "instruction": "'EPFO la irundhu pesuren ayya, Life Certificate submit pannanum, illa na pension stop aaidum. Video call la face verification pannanum' nu sonnanga. Enna pannanum?",
+      "current_output": "EPFO video call la verification pannaadhu ayya. Jeevan Pramaan app use pannalam, illa bank la submit pannalam, illa postman door la varuvaaru. 'Pension stop aaidum' nu bayamudhuthuraanga. Video call pannina face data misuse aagum. EPFO office ku direct ponga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS045",
+      "instruction": "Phone vandhudhu 'Ola/Uber premium driver program. Pay 5000 registration for higher earning zones.' Income increase aagum nu solluraanga, join pannalama?",
+      "current_output": "Ola/Uber premium programs announced through official app only. No external 'registration fee' for driver programs. Higher earning depends on location and time, not paid programs. Scammers target drivers' income improvement hopes. Check official app for any programs.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS056",
+      "instruction": "Suddenly phone 'No Network' for hours. Network vandra time - bank OTPs went somewhere, 2 lakhs transferred. OTP yaarkum sollala, eppidi?",
+      "current_output": "SIM swap fraud - your data (Aadhaar, phone, bank) leaked/bought, scammers duplicate SIM vaanguvaanga telecom store la with fake ID. Your SIM deactivates, OTPs go to them. Immediately when network lost - call bank, call telecom. Enable SIM lock, app-based 2FA use pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR005",
+      "instruction": "SIM swap fraud la account empty aaiduchu. Special procedure irukka?",
+      "current_output": "Step 1 (FIRST): Call telecom - Airtel: 121/1800-103-4444, Jio: 198/1800-889-9999, Vi: 199/1800-119-1199, BSNL: 1800-180-1503. Say: 'Unauthorized SIM swap happened, block my number immediately.' Step 2: Call ALL banks simultaneously, freeze accounts, disable mobile/UPI banking. Step 3: Visit telecom store with original ID and police complaint, get new SIM. Step 4: FIR mentioning IT Act Section 66C (Identity Theft), Section 420 IPC (Cheating). Recovery chance: 30-50% if acted within 2-3 hours.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS069",
+      "instruction": "WhatsApp message 'GST special scheme for jewellers. 5000 registration for reduced compliance.' GST compliance easy aagum aa?",
+      "current_output": "GST rules same for all jewellers - no 'special scheme' with reduced compliance. Composition scheme exists but through official GST portal. Anyone offering 'easy compliance' for payment is likely offering illegal shortcuts. Follow proper GST rules through gst.gov.in.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT027",
+      "instruction": "Call vandhuchchu nga - 'Unga account block aagum nga, KYC update pannunga' nu. OTP kekkuraanga nga. Enna pannurathu?",
+      "current_output": "Fraud nga idhu! Bank phone la OTP kekkaadhu nga. 'Block aagum' nu bayamudhuthuraanga. Branch ku neenga poi pesunga. Palani, Oddanchatram la ipdi cases irukku nga. Phone la details kudukkaadhenga.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS055",
+      "instruction": "SMS vandhuchu 'Agricultural loan waiver verification. Send Aadhaar and bank details to confirm eligibility.' Loan waiver list la iruppena, verify pannalama?",
+      "current_output": "Loan waiver lists published officially by government, verification through banks. Never send Aadhaar/bank details via SMS. Check with your loan-giving bank directly. Scammers use loan waiver hopes to collect sensitive data. Government has your details already through bank.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

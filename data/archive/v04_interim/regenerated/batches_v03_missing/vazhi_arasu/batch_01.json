@@ -1,0 +1,42 @@
+[
+  {
+    "instruction": "PM Krishi Sinchayee Yojana (PMKSY) endraal enna?",
+    "output": "Water irrigation expansion scheme. Components: Har Khet Ko Pani (water availability), Per Drop More Crop (Micro irrigation - Drip/Sprinkler, 55% subsidy), Watershed Development. Benefit: 55% subsidy for drip irrigation, 30-50% water saving, 20-40% yield increase. Apply: Agriculture Department/Horticulture Department. Micro Irrigation Fund: ₹5,000 crore for states. Water Sources: Bore well, farm pond, check dam support.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "agriculture_schemes",
+    "id": "AGR014"
+  },
+  {
+    "instruction": "Important helpline numbers enna?",
+    "output": "Emergency: 112, Women Helpline: 181, Child Helpline: 1098, CM Cell: 1100, Legal Aid: 15100, Consumer: 1915, Electricity: 94987-94987, Water: 1916, Ration Card: 1967",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "reference_directory",
+    "id": "REF004"
+  },
+  {
+    "instruction": "Jan Dhan Account என்றால் என்ன?",
+    "output": "FREE zero-balance bank account for any Indian. Benefits: Free RuPay card, ₹2 lakh accident insurance, ₹30,000 life insurance (new accounts), overdraft up to ₹10,000, DBT transfer enabled. Open at any bank/Bank Mitra with just Aadhaar or Voter ID.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA037"
+  },
+  {
+    "instruction": "Birth certificate eppadi peruvadhu?",
+    "output": "Register within 21 days at hospital location's Municipality/Panchayat - FREE! After 21 days: ₹50 late fee + affidavit. Documents: Hospital discharge summary, parents' Aadhaar. Online at tnreginet.gov.in or crsorgi.gov.in. Certificate in 3-5 days.",
+    "language": "tanglish",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA008T"
+  },
+  {
+    "instruction": "புதிய PAN Card எப்படி பெறுவது?",
+    "output": "Easiest: Instant e-PAN at eportal.incometax.gov.in using Aadhaar - FREE and instant! Alternative: Apply at onlineservices.nsdl.com or pan.utiitsl.com - ₹107 for physical card, 15-20 days. Need ID proof, address proof, DOB proof, photo, and signature.",
+    "language": "pure_tamil",
+    "pack": "vazhi_arasu",
+    "category": "comprehensive_qa",
+    "id": "CQA006"
+  }
+]

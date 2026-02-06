@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 20,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CYBE019_TM",
+      "instruction": "Children-க்கு safe internet usage tips என்ன?",
+      "current_output": "Parents: 1) Parental controls enable, 2) Screen time limits, 3) Open communication, 4) Monitor (not spy) activity, 5) Teach about online dangers. Children: Don't share personal info, stranger-கிட்ட chat வேண்டாம், uncomfortable content-ஐ parents-கிட்ட சொல்லுங்க.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM018_TG",
+      "instruction": "Lok Adalat endraal enna?",
+      "current_output": "Alternative dispute resolution forum - Court fee illa, compromise moolam settlement. Motor accident claims, labour disputes, matrimonial (except divorce), cheque bounce, compoundable offences - ivattrai handle seivaargal. Award final - appeal illa.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF001_TM",
+      "instruction": "Driving license எப்படி பெறுவது?",
+      "current_output": "Steps: 1) Learner's License (LL) - parivahan.gov.in online apply, 2) 30 days wait, 3) Driving test - RTO, 4) Permanent License issue. Age: Two-wheeler - 18 years, Car - 18 years, Commercial - 20 years. Documents: Aadhaar, address proof, medical certificate (commercial).",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS008_TG",
+      "instruction": "Second-hand product-kku consumer rights apply aagumaa?",
+      "current_output": "Seller condition honestly disclose seyyanum. Hidden defects maraithu vitraal consumer rights apply aagum. 'As-is' condition-la vaanginaal limited rights. Dealer-idam vaanginaal full protection, private seller-idam vaanginaal limited.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI020_TG",
+      "instruction": "Legal adoption eppadi seivathu?",
+      "current_output": "CARA (Central Adoption Resource Authority) through only - cara.wcd.gov.in. Register → Home study → Child matching → Pre-adoption fostering → Court order. Hindu Adoption Act-in keezh deed registration-um valid. Private adoption risky - legal complications varalam.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP016_TG",
+      "instruction": "Chitta endraal enna? Patta-vida vithiyaasam enna?",
+      "current_output": "Patta = Owner details, survey number, area. Chitta = Same info + land classification (wet/dry), soil type, cultivation details. Chitta is more detailed. Agriculture land-kku Chitta mukkiyam. Both available at Taluk office or online.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS033_TM",
+      "instruction": "Restaurant-ல் food poisoning ஆனால் case போடலாமா?",
+      "current_output": "ஆம். 1) Medical report வாங்குங்க (treatment evidence), 2) Food Safety Officer-க்கு complaint, 3) Consumer forum case, 4) Serious case - Police complaint (IPC 269, 270). Medical expenses + compensation கிடைக்கும். Restaurant license suspend/cancel ஆகலாம்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP020_TG",
+      "instruction": "Vivasaaya nilam yaar vaangalaam?",
+      "current_output": "Tamil Nadu-la agricultural land ceiling laws ullan. Farmer or farmer family member mathume wet land (15 acres limit) vaangalam. Dry land-kku liberal rules. Company/Non-farmer vaanga District Collector permission venum.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA020_TG",
+      "instruction": "Association maintenance fee yaar kattanum?",
+      "current_output": "Podhuvaaga tenant kattuvathu practice. But agreement-la enna solliyirukko adhuthaan valid. Corpus fund, sinking fund pola one-time payments owner responsibility. Monthly maintenance tenant kattuvathu common.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP008_TM",
+      "instruction": "Building demolish பண்ற மாதிரி சொல்றாங்க, போகணுமா?",
+      "current_output": "Demolition notice வந்தால்: 1) Genuine notice-ஆ verify பண்ணுங்க (municipal records), 2) Owner alternative accommodation or compensation தரணும், 3) Reasonable notice period (usually 6 months), 4) Fake notice = harassment case போடலாம். Rights: Relocation assistance, advance rent return, shifting cost compensation. Don't vacate without proper documentation.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP008_TG",
+      "instruction": "Building demolish panra maadiri solraanga, poganuuma?",
+      "current_output": "Demolition notice vandhaal: 1) Genuine notice-aa verify pannunga (municipal records), 2) Owner alternative accommodation or compensation taranum, 3) Reasonable notice period (usually 6 months), 4) Fake notice = harassment case podalam. Rights: Relocation assistance, advance rent return, shifting cost compensation. Don't vacate without proper documentation.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP015_TM",
+      "instruction": "Packaged food-ல் foreign object கிடைச்சது, action என்ன?",
+      "current_output": "Serious matter! Steps: 1) Product preserve பண்ணுங்க (don't throw), 2) Photos/videos எடுங்க, 3) Batch number, manufacturing date note பண்ணுங்க, 4) Company complaint + social media, 5) Food Safety Officer complaint (local municipal office), 6) Consumer Forum - compensation claim. FSSAI: Manufacturer license cancel ஆகலாம். Health affected: Medical bills + additional compensation.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE021_TG",
+      "instruction": "Lawyer konjam expensive-aa irukku, free-yaa yaaraavadhu help pannuvaangalaa? (Rural Tamil)",
+      "current_output": "Free legal aid: DLSA (District Legal Services Authority) - income <Rs.3 lakh, women, SC/ST, disabled ellarkkum free lawyer. Toll-free: 15100. Taluk Legal Services Committee-lum apply pannalam. Court-la directly legal aid request pannalam.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL008_TG",
+      "instruction": "Gratuity thara maruthal enna seivathu?",
+      "current_output": "Steps: 1) Written application to employer, 2) 30 days-kkul pay pannanum, 3) Refuse pannaal Controlling Authority (Labour Commissioner)-kku complaint, 4) Labour Court appeal. Delay-kku 10% interest kidaikkum. Forfeiture: Only if dismissed for serious misconduct.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP027_TG",
+      "instruction": "Property pillaigalukku transfer pannitten, ippo veliyethuraanga, enna seivathu?",
+      "current_output": "Senior Citizens Act protection: Property transfer-kku piragu neglect/eviction = transfer cancel pannalam. Steps: 1) Tribunal application (Collector office), 2) Prove neglect/ill-treatment, 3) Order for property return. Time limit: None specified - apply anytime. Evidence: Witnesses, medical records (if abuse), communication records. Preventive: Transfer with life interest retention safer.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_009_TG",
+      "instruction": "e-Sevai services enge available?",
+      "current_output": "Locations: Taluk offices, e-Sevai centres, Common Service Centres. Online: eservices.tn.gov.in. Services: Certificates (income, community, nativity), Patta transfer, Pension, Ration card, License renewals. Fee: Rs.30-100 (service based).",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP017_TM",
+      "instruction": "A-Register என்றால் என்ன?",
+      "current_output": "Village-level land record maintained by VAO. Contains: All survey numbers, owners, area, classification. Public document - anyone can inspect. Patta transfer, mutation எல்லாம் A-Register-ல் update ஆகணும். Discrepancy இருந்தால் Tahsildar-க்கு complaint.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI024_TM",
+      "instruction": "Live-in relationship legal-ஆ?",
+      "current_output": "ஆம், adult consenting partners-க்கு legal. Supreme Court recognized. DV Act protection apply ஆகும். ஆனால் marriage benefits (inheritance, maintenance as spouse) automatic இல்லை. Long-term live-in partners-க்கு certain rights உண்டு.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE018_TM",
+      "instruction": "Online child abuse report எப்படி செய்வது?",
+      "current_output": "Report: 1) cybercrime.gov.in (select child-related crime), 2) NCPCR helpline: 1098, 3) Police. POCSO Act: Strict punishment for child exploitation. Platforms: Report + block. Evidence preserve பண்ணுங்க. Don't forward content - possess பண்றதே illegal.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM003_TM",
+      "instruction": "Cognizable vs Non-cognizable offence என்ன வித்தியாசம்?",
+      "current_output": "Cognizable: Serious crimes (murder, rape, theft, assault) - Police FIR போட்டு warrant இல்லாம arrest பண்ணலாம். Non-cognizable: Minor crimes (defamation, cheating under Rs.500) - Court permission வேண்டும். NC case-க்கு NCR (Non-Cognizable Report) பதிவு செய்வார்கள்.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP002_TG",
+      "instruction": "Stamp duty evvalavu kattanum?",
+      "current_output": "Tamil Nadu-la: Stamp duty 7%, Registration fee 4% = Total 11% of property value (guideline value or sale value - edhu adhigamo adhu). Women single owner-kku stamp duty 1% concession. Agricultural land-kku lower rates.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS021_TG",
+      "instruction": "Consumer case evvalavu naal aagum?",
+      "current_output": "Sattapadi 3-5 months-la mudiikkanum. Aanaal practical-aa 6 months - 2 years aagalam. Simple cases faster. Mediation option irundhaal 30-60 days-la settle aagalam. e-Filing cases faster-aa process aagum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM001_TG",
+      "instruction": "FIR endraal enna? Eppadi poduvadhu?",
+      "current_output": "FIR = First Information Report - cognizable offence pattrina mudhal thagaval. Any police station-la podalam (Zero FIR). Written/oral complaint kodukkalam. Police written-aa ezhudhi ungal sign vaanguvaargal. Free copy kidaikkum. Online: tnpolice.gov.in.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA003_TG",
+      "instruction": "Stamp paper evvalavu mathippulladhu vaanganum?",
+      "current_output": "Tamil Nadu-la rental agreement-kku oru varusha rent-oda 1% or Rs.20,000 - idhula edhu koraivo adhu stamp duty. Example: Monthly rent Rs.15,000 na, yearly rent Rs.1,80,000. 1% = Rs.1,800 stamp paper venum.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA009_TG",
+      "instruction": "Owner advance-la painting charge, cleaning charge kazhikkuraar - sariyaa?",
+      "current_output": "Normal wear and tear-kku tenant responsible illa. Paint fading, minor scratches idhukku kazhikka mudiyaadhu. But tenant potta holes, major damage-kku kazhikkalam. Move-in bodhu photos eduthu vaichirupathu nalladhu.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

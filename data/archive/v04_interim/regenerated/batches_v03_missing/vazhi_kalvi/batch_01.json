@@ -1,0 +1,66 @@
+[
+  {
+    "instruction": "Agriculture padikkanum, endha college nalladhu?",
+    "output": "TNAU (Tamil Nadu Agricultural University) best-pa. Coimbatore main campus, Thanjavur, Madurai-layum colleges irukku. Admission: 12th Biology marks basis counselling. Fees kammi - ₹5000-10000/year. Farmers pillaikku priority irukku. Scholarship, hostel free. Modern farming techniques learn pannalam. Own land irundha double benefit.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP021_TM"
+  },
+  {
+    "instruction": "Sexual harassment face பண்றேன். யாரை approach பண்றது?",
+    "output": "Report to: 1) Internal Complaints Committee (ICC) - mandatory in every college 2) Women Helpline: 181 3) Police: Women's cell 4) National Commission for Women: ncw.nic.in 5) UGC grievance cell. Evidence: Screenshot messages, note incidents. Support: Counselling available. Legal: Sexual Harassment at Workplace Act protects students too. Confidentiality maintained. Don't blame yourself. Speak up - silence enables harassers.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC016_TM"
+  },
+  {
+    "instruction": "Project/Thesis work எப்படி approach பண்றது?",
+    "output": "Project success: 1) Choose topic early - guide consultation 2) Literature review first - Google Scholar, journals 3) Weekly meetings with guide - progress show 4) Documentation parallel - don't wait till end 5) Plagiarism check - Turnitin/iThenticate 6) Presentation practice - viva preparation 7) Backup data - multiple locations 8) Deadline buffer - submit before last day. Tip: Original contribution expected, not just copy. Industry internship projects valuable.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC009_TM"
+  },
+  {
+    "instruction": "மதுரையில MBBS படிக்க government college-ல seat கிடைக்குமா?",
+    "output": "மதுரை Medical College-ல் 7.5% government school quota, OBC/BC/MBC reservation இருக்கு. NEET-ல் 550+ வாங்கினால் government seat கிடைக்க chance இருக்கு. Theni Medical College-லும் apply பண்ணலாம்.",
+    "language": "pure_tamil",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE010_TM"
+  },
+  {
+    "instruction": "Farmer family-la pirandhavangalukku admission-la preference unda?",
+    "output": "Aama. TNAU-la farmer quota irukku. Farmer certificate vachchu apply pannalam. Rural area students-kku weightage kedaikum. KVK (Krishi Vigyan Kendra)-la free training-um undu.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "extended_topics",
+    "id": "EXTE013_TG"
+  },
+  {
+    "instruction": "Hostel mess sappaadu othhuvarala. Enna panrathu?",
+    "output": "Solutions: 1) Initially stomach upset common - adjust period 2) Mess committee-la complaint raise 3) Healthy snacks keep - fruits, biscuits 4) Weekend home food bring 5) Nearby canteen/restaurants (budget friendly) 6) Cooking allowed rooms-la simple items prepare 7) Mess rebate apply if eating outside regularly. Health: Don't skip meals, drink boiled water, maintain hygiene.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "practical_guide",
+    "id": "PRAC002_TG"
+  },
+  {
+    "instruction": "Fine Arts padichaa future enna?",
+    "output": "BFA (Bachelor of Fine Arts): 4 years. Specializations: Painting, Sculpture, Applied Art, Graphic Design. Colleges: Govt College of Fine Arts Chennai, Kumbakonam. Jobs: Art galleries, Advertising agencies, Film industry (Art director), Teaching, Freelance artist. Digital art growing field. Salary varies widely: ₹15,000-1 lakh+ based on skill and reputation. Portfolio and networking crucial.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "supplementary_courses",
+    "id": "SUPP008_TG"
+  },
+  {
+    "instruction": "Women-ku special ITI courses ulladha?",
+    "output": "Aam, Women ITI-gal ullana. Special trades: 1) Dress Making 2) Embroidery & Needle Work 3) Hair & Skin Care 4) Stenography 5) Desktop Publishing 6) Data Entry Operator 7) Secretarial Practice. Chennai, Coimbatore, Madurai-la exclusive Women ITIs. Regular ITI-layum co-ed batches ullana. Hostel facility free. Employment: Garment industry, salons, corporate offices.",
+    "language": "tanglish",
+    "pack": "vazhi_kalvi",
+    "category": "vocational_training",
+    "id": "VOCA005_TG"
+  }
+]

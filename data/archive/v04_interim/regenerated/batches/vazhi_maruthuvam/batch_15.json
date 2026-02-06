@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 15,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH033_TM",
+      "instruction": "Accident case-ல் police இல்லாம treat பண்றாங்களா?",
+      "current_output": "Yes! Supreme Court ruling - treat first. Good Samaritan Law: 1) Bystanders can help without legal hassle, 2) Hospital must treat without police clearance, 3) MLC formalities = AFTER stabilization, 4) No detention of patient/helper. Police role: Come to hospital for statement - not a condition for treatment. Refusal to treat: Report to police, Health Department, media.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH224_TM",
+      "instruction": "என்ன disease-க்கு எந்த yoga?",
+      "current_output": "Condition-specific yoga: 1) Diabetes - Surya Namaskar, twists, Pranayama, 2) BP - Shavasana, forward bends, slow breathing, 3) Back pain - Cat-cow, child's pose, sphinx, 4) Anxiety/stress - Pranayama, meditation, restorative poses, 5) Obesity - Power yoga, Surya Namaskar, 6) Asthma - Pranayama, chest opening poses, 7) Insomnia - Yoga Nidra, legs up wall. Important: Learn from qualified teacher, start slow, inform about conditions.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH174_TM",
+      "instruction": "மற்ற districts-ல் Siddha hospital இருக்கா?",
+      "current_output": "Yes! TN Siddha infrastructure: 1) Government Siddha Medical Colleges - Palayamkottai, Tirunelveli (oldest), 2) District AYUSH hospitals - Every district, 3) Taluk level Siddha dispensaries, 4) PHC attached Siddha units. Major colleges: Tirunelveli, Chennai (2), Palani. All services free. Find: tnhealth.tn.gov.in or AYUSH department website. Total: 100+ government Siddha facilities in TN.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH086_TG",
+      "instruction": "Telemedicine consultation legal-aa? Prescription valid-aa?",
+      "current_output": "Legal! Telemedicine Practice Guidelines 2020. Valid for: 1) First consultation for non-emergency, 2) Follow-up consultations, 3) Second opinion. Prescription: Valid if signed digitally, has registration number. Limitations: 1) No controlled substances via telemedicine, 2) Physical exam needed cases - refer for in-person, 3) Emergency - not appropriate. Platforms: Practo, Tata 1mg, Apollo 247, government eSanjeevani.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH067_TM",
+      "instruction": "Hospital போகும் போது என்ன precaution எடுக்கணும்?",
+      "current_output": "Before: 1) Research hospital/doctor credentials, 2) Get referral if possible, 3) Carry complete medical history. During: 1) Ask questions - understand treatment, 2) Get written estimates, 3) Read consent forms fully, 4) Keep copies of everything, 5) Have family member present, 6) Note staff names. After: 1) Take discharge summary, 2) Clarify follow-up, 3) Keep medicines/bills safely.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH109_TG",
+      "instruction": "Employer-kitta mental health issue sollanumaa?",
+      "current_output": "Not mandatory to disclose. Rights: 1) No termination for mental illness (disability discrimination), 2) Reasonable accommodation (flexible hours, WFH), 3) Medical leave like any illness, 4) Confidentiality if disclosed. When to consider: If need accommodation, if affecting work significantly. Protection: RPD Act 2016 + MHCA 2017. Termination for mental illness: Challenge in labor court.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH076_TM",
+      "instruction": "Estimate-ஐ விட bill அதிகமா வந்தது - refuse பண்ணலாமா?",
+      "current_output": "Estimate must be reasonable. Rights: 1) Written estimate before planned admission, 2) Significant variation needs explanation, 3) Complications = valid reason for increase, 4) No complication + major increase = dispute. Rule of thumb: 10-15% variation acceptable. More: Ask itemized justification. Still disputed: 1) Pay under protest (written), 2) Consumer Forum for refund. Keep estimate copy!",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH203_TG",
+      "instruction": "Paralysis/stroke rehabilitation Ayurveda-la?",
+      "current_output": "Ayurveda rehabilitation: Complements physiotherapy well. Treatments: 1) Abhyanga with specific oils, 2) Pinda Sweda (Navarakizhi), 3) Basti (medicated enema - key treatment), 4) Nasya, 5) Internal medicines. Best time: Post-acute phase (after stabilization). Duration: 21-90 days intensive. Outcomes: Improved mobility, speech, daily activities. Combination: Ayurveda + Physiotherapy + Yoga gives best results. Where: Specialized centers in Kerala, some TN facilities.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH073_TM",
+      "instruction": "Hospital bill அதிகமா போட்டாங்க, என்ன செய்வது?",
+      "current_output": "Steps: 1) Itemized bill கேளுங்க, 2) Each item verify - MRP check for medicines, tests actually done verify, 3) Duplicate charges check, 4) Compare with displayed rates, 5) Written complaint to hospital administrator, 6) No response: Consumer Forum. Evidence: Bill copy, displayed rates photo, admission estimate. Overcharging = Unfair trade practice.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH159_TM",
+      "instruction": "Amma-வுக்கு sugar அதிகம், கால் ல புண், என்ன doctor பார்க்கணும்?",
+      "current_output": "Diabetic foot ulcer - serious! Immediately: 1) General surgery or 2) Vascular surgery specialist. Don't delay - infection spread fast, amputation risk. Government: District hospital, medical college. Treatment: 1) Sugar control, 2) Wound care (daily dressing), 3) Antibiotics, 4) Maybe surgery. Prevention: 1) Daily foot check, 2) Proper footwear, 3) No walking barefoot, 4) Cut nails carefully. Coimbatore: CMC, GH has good diabetic foot care.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH137_TM",
+      "instruction": "Emergency contraceptive pill - எப்படி use பண்றது?",
+      "current_output": "When: After unprotected sex to prevent pregnancy. Time: Within 72 hours (3 days) - earlier = more effective. Available: 1) Pharmacy (no prescription for most), 2) Government hospitals - free. Brands: I-pill, Unwanted-72, etc. How: Single dose or two doses 12 hours apart. Not for: Regular use (regular contraception better). Side effects: Nausea, period changes - temporary. NOT an abortion pill.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH005_TG",
+      "instruction": "Ayushman Bharat vera, CMCHIS veraa?",
+      "current_output": "TN has CMCHIS (state scheme) - Ayushman Bharat (central) illa. CMCHIS advantages: 1) Higher coverage (Rs.5 lakh vs Rs.5 lakh), 2) More procedures covered, 3) State-specific hospitals, 4) Better implementation. Other states: Ayushman Bharat applicable. TN residents: Use CMCHIS only. Traveling outside TN: Limited coverage - check empanelled hospitals.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH092_TM",
+      "instruction": "Prescription இல்லாம எந்த medicine வாங்கலாம்?",
+      "current_output": "OTC (Over The Counter) medicines: 1) Pain relievers (Paracetamol, Ibuprofen), 2) Cough syrups (non-codeine), 3) Antacids, 4) Antihistamines, 5) Vitamins, 6) Antiseptic creams, 7) Cold medicines. Schedule H/H1/X: Prescription mandatory. Antibiotics: Prescription required (mostly). Pharmacist advice: Can help with minor ailments. Self-medication: Risky for serious conditions.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH002_TG",
+      "instruction": "CMCHIS card eppadi apply panradhu?",
+      "current_output": "Apply process: 1) Taluk office / Primary Health Centre visit, 2) Documents: Ration card, Aadhar, income certificate, photos, 3) Biometric enrollment, 4) Card delivery: 15-30 days. Online check: cmchistn.com. Already rice card holder: Automatic enrollment - check status online. Missing card: Duplicate apply at same office.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH227_TM",
+      "instruction": "Natural = Safe என்பது correct-ஆ?",
+      "current_output": "NOT always! Natural doesn't mean: 1) No side effects (many herbs have), 2) No interactions (herb-drug interactions real), 3) Safe for everyone (allergies, conditions), 4) Any amount is okay (overdose possible). Examples: 1) Neem - excess can harm liver, 2) Turmeric - blood thinner interaction, 3) Aloe - not for pregnant, 4) Some herbs toxic in large doses. Safe approach: 1) Moderate amounts, 2) Inform doctors, 3) Buy quality products, 4) Watch for reactions.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH114_TM",
+      "instruction": "Family member-ஐ mental hospital-ல் admit பண்ண முடியுமா?",
+      "current_output": "Voluntary admission: Person consents - preferred method. Supported admission: Person lacks capacity but nominated rep consents (10 days max without review). Independent admission (involuntary): Only if - 1) High risk of self-harm/harm to others, 2) Needs immediate treatment, 3) Two psychiatrists certify, 4) Magistrate approval within 24 hours. Rights: Review by Mental Health Review Board. Cannot just lock someone up.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH018_TM",
+      "instruction": "Mental illness treatment government hospital-ல் கிடைக்குமா?",
+      "current_output": "Yes! Free psychiatric services available. Where: 1) Institute of Mental Health (Kilpauk - Chennai), 2) District Mental Health Program (DMHP) centres, 3) Medical college psychiatry OPD. Services: 1) Consultation, 2) Medicines, 3) Counseling, 4) Admission if needed. DMHP: Every district has mental health team. Helpline: iCALL - 9152987821, Vandrevala - 1860-2662-345. Stigma-free treatment encouraged.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH029_TG",
+      "instruction": "Treatment refuse pannalaamaa? Doctor force pannalaamaa?",
+      "current_output": "Yes, can refuse! Patient autonomy respected. Conditions: 1) Must be mentally competent, 2) Must understand consequences, 3) Must sign refusal form (LAMA - Leave Against Medical Advice). Doctor cannot force treatment (except psychiatric emergency). Blood transfusion refusal: Allowed (Jehovah's Witness cases). Children: Parents decide, but court can override for life-saving. Emergency: Implied consent applies.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH205_TG",
+      "instruction": "Ayurvedic products reliable brands evai?",
+      "current_output": "Established brands: 1) Arya Vaidya Sala (Kottakkal), 2) Arya Vaidya Pharmacy (AVP), 3) Dabur, 4) Baidyanath, 5) Himalaya, 6) Patanjali (controversial but licensed), 7) Nagarjuna, 8) Kerala Ayurveda, 9) SNA Oushadhasala. Check: 1) AYUSH license on pack, 2) Manufacturing date/expiry, 3) Batch number. Avoid: Unbranded, loose, online unknowns. Government: IMPCOPS (TN government pharmacy) for Siddha/Ayurveda.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH152_TG",
+      "instruction": "Doctor prescription padikka mudiyala - enna seivathu?",
+      "current_output": "Options: 1) Ask doctor to write clearly/print, 2) Request pharmacist to explain, 3) Ask doctor to explain each medicine - when, how many, how long, 4) Take photo and ask family member/friend, 5) Pharmacy apps can help identify. Rights: Doctor should explain medicines in your language. Tip: Ask doctor to write in capital letters. Important: Understand dosage, timing, food relation (before/after meals).",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH065_TM",
+      "instruction": "Hospital infection (hospital-acquired infection) - claim?",
+      "current_output": "HAI claim possible if: 1) Infection clearly hospital-acquired, 2) Poor hygiene/sterilization, 3) Contaminated equipment, 4) Staff didn't follow protocols. Common HAI: Surgical site infection, catheter infection, ventilator pneumonia. Proof: Culture reports, timing of infection, hospital records. Defense: Some HAI unavoidable despite best practices. Key: Was protocol followed?",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH081_TM",
+      "instruction": "Employer insurance போனா personal insurance வேணுமா?",
+      "current_output": "Yes, recommended! Reasons: 1) Job change = coverage gap, 2) Corporate cover usually basic (Rs.3-5 lakhs), 3) Family may not be covered, 4) Age increases premium later, 5) Pre-existing conditions develop. Strategy: 1) Corporate as primary, 2) Personal as top-up, 3) Super top-up for high coverage. Start early: Lower premium, no waiting period issues later.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH040_TG",
+      "instruction": "HIV/AIDS patient-ai hospital refuse pannalaamaa?",
+      "current_output": "ILLEGAL! HIV/AIDS Act 2017 + Supreme Court judgments. Hospital must: 1) Provide all necessary treatment, 2) Not segregate discriminatorily, 3) Follow standard precautions (for all patients anyway), 4) Maintain confidentiality. Refusal = criminal offence + license action. Report: TANSACS, State Medical Council, police. Private hospitals also bound by this law.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH210_TM",
+      "instruction": "Digestive problems-க்கு home remedy?",
+      "current_output": "Indigestion: 1) Jeera (cumin) water, 2) Ajwain (omam) water, 3) Buttermilk with curry leaves, ginger, 4) Ginger + lemon + salt before meals. Acidity: 1) Cold milk, 2) Banana, 3) Coconut water. Constipation: 1) Triphala powder at night, 2) Isabgol (psyllium), 3) Warm water in morning. Gas/bloating: 1) Hing (asafoetida) in warm water, 2) Fennel seeds after meal. Diet: Eat on time, chew well, avoid late dinner.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH088_TG",
+      "instruction": "Generic medicine vs Branded - quality same-aa?",
+      "current_output": "Yes! Same active ingredient, same dose, same effect. Difference: Brand name vs chemical name. Why cheaper: No advertising cost, no brand royalty. Quality: WHO-GMP certified generics = equal quality. Example: Paracetamol (generic) = Crocin/Dolo (branded). Verify: ISI mark, batch number, expiry date. Jan Aushadhi: Government generic stores - same quality, 50-90% cheaper.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

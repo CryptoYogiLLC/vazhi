@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 8,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH148_TM",
+      "instruction": "Snake bite ஆனால் என்ன செய்யணும்? என்ன கூடாது?",
+      "current_output": "DO: 1) Stay calm, 2) Immobilize bitten limb (don't move), 3) Remove jewelry (swelling), 4) Call 108/go to hospital immediately, 5) Note snake appearance if possible. DON'T: 1) Cut/suck wound, 2) Apply tourniquet tightly, 3) Apply ice/electric shock, 4) Give alcohol/traditional remedies, 5) Waste time catching snake. Antivenom: Available free at government hospitals. All snake bites need hospital evaluation.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH162_TG",
+      "instruction": "Annual health checkup ethanai vayasula irundhu pannanum?",
+      "current_output": "Guidelines: 1) 30+ years: Basic checkup (sugar, BP, cholesterol), 2) 40+ years: Add cardiac screening, eye check, 3) 50+ years: Add cancer screening (colon, prostate/breast). Women: Cervical/breast screening from 30+. Family history: Start earlier. Government camps: Free checkups periodically - avail. Don't wait for symptoms - preventive checkups save lives.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH172_TM",
+      "instruction": "Varmam therapy என்றால் என்ன?",
+      "current_output": "Varmam = Vital points in body (108 main points). Uses: 1) Treatment of pain, paralysis, injuries, 2) Martial arts (Varma Kalai), 3) Emergency first aid. How: Pressure, manipulation on specific points. Conditions treated: Back pain, joint problems, neurological issues, sports injuries. Training: Requires specialized Varmam training. Caution: Wrong application can be harmful - only trained practitioners.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH064_TG",
+      "instruction": "Anesthesia-la problem aachu - claim?",
+      "current_output": "Anesthesia complications: 1) Awareness during surgery, 2) Brain damage from hypoxia, 3) Allergic reaction (if not checked), 4) Nerve damage, 5) Death. Liability: 1) Anesthesiologist (primary), 2) Surgeon (team), 3) Hospital. Evidence: Anesthesia chart, monitoring records, drug records. Pre-op assessment: Should identify risks. Informed consent: Specific to anesthesia needed.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH176_TM",
+      "instruction": "CCRS (Central Council for Research in Siddha) என்ன செய்கிறது?",
+      "current_output": "CCRS Chennai: Siddha research organization under Ministry of AYUSH. Functions: 1) Clinical research on Siddha formulations, 2) Drug standardization, 3) Documentation of manuscripts, 4) Clinical trials, 5) Publication of research. OPD: Research centres have OPD - free. Important work: Validated many traditional formulations. Location: Arumbakkam, Chennai. Publications: Siddha research journals, textbooks.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH191_TM",
+      "instruction": "Ayurveda doctor qualification என்ன?",
+      "current_output": "Qualification: BAMS (Bachelor of Ayurvedic Medicine and Surgery) - 5.5 years. Higher: MD (Ayurveda), MS (Ayurveda surgery). Registration: Central/State Ayurveda Council. Verify: CCIM register online, displayed certificate. In TN: Fewer Ayurveda practitioners than Siddha. Colleges: Limited in TN - most trained elsewhere. Practice: Registered practitioners can practice across India.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH122_TG",
+      "instruction": "Dementia patient-kku legal protection enna?",
+      "current_output": "Protections: 1) Guardianship: Court can appoint guardian for person/property, 2) Power of Attorney: Execute while still competent, 3) Senior Citizens Act: Protection from exploitation, 4) RPD Act: Disability rights. Financial: 1) Joint account with trusted person, 2) Nomination in all accounts, 3) Will execution early. Healthcare: Advance directive possible. Abuse: Report to police, Senior Citizens Tribunal.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH065_TG",
+      "instruction": "Hospital infection (hospital-acquired infection) - claim?",
+      "current_output": "HAI claim possible if: 1) Infection clearly hospital-acquired, 2) Poor hygiene/sterilization, 3) Contaminated equipment, 4) Staff didn't follow protocols. Common HAI: Surgical site infection, catheter infection, ventilator pneumonia. Proof: Culture reports, timing of infection, hospital records. Defense: Some HAI unavoidable despite best practices. Key: Was protocol followed?",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH036_TM",
+      "instruction": "என் medical information யாருக்கும் share பண்ண கூடாது - right இருக்கா?",
+      "current_output": "Yes! Doctor-patient confidentiality. Protected info: 1) Diagnosis, 2) Test results, 3) Treatment details, 4) HIV status, 5) Mental health records, 6) Reproductive health. Exceptions: 1) Patient consent, 2) Court order, 3) Public health (notifiable diseases), 4) Harm to others. Breach: Medical Council complaint + civil damages. Employer: Cannot demand medical records without consent.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH019_TM",
+      "instruction": "Chennai-ல் major government hospitals எவை?",
+      "current_output": "Major GH Chennai: 1) Rajiv Gandhi Government General Hospital (GH), 2) Government Stanley Medical College Hospital, 3) Government Kilpauk Medical College, 4) Government Omandurar Estate Hospital, 5) Institute of Obstetrics & Gynaecology (Egmore), 6) Institute of Child Health (Egmore), 7) Cancer Institute (Adyar - autonomous), 8) RGGGH trauma centre. Specialties vary - check before going.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH033_TG",
+      "instruction": "Accident case-la police illaama treat panraangalaa?",
+      "current_output": "Yes! Supreme Court ruling - treat first. Good Samaritan Law: 1) Bystanders can help without legal hassle, 2) Hospital must treat without police clearance, 3) MLC formalities = AFTER stabilization, 4) No detention of patient/helper. Police role: Come to hospital for statement - not a condition for treatment. Refusal to treat: Report to police, Health Department, media.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH072_TG",
+      "instruction": "COVID pola emergency-la price capping irukkumaa?",
+      "current_output": "Government can cap prices in emergencies. COVID example: TN government capped - room charges, oxygen, medicines, CT scan rates. Authority: Epidemic Diseases Act, Disaster Management Act. Violation: License suspension, heavy fines. Current: Some COVID caps may still apply. Check: DHS notifications. Overcharging complaint: DHS, Consumer Forum.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH130_TG",
+      "instruction": "Abortion-kku husband consent venumaa?",
+      "current_output": "NO! Woman's decision alone. MTP Act: Only woman's consent required (if adult). Husband cannot: 1) Force abortion, 2) Prevent abortion, 3) His consent not legally required. Minor: Parent/guardian consent needed. Confidentiality: Doctor cannot inform husband without woman's consent. Hospital asking husband consent: Wrong - complain.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH201_TM",
+      "instruction": "Weight loss-க்கு Ayurveda treatment?",
+      "current_output": "Ayurveda approach: Not just weight loss - metabolic correction. Treatments: 1) Udvartana (herbal powder massage), 2) Vamana/Virechana (detox), 3) Lekhana Basti (specific enema), 4) Internal medicines (Triphala, Guggulu), 5) Diet as per Prakriti, 6) Lifestyle modifications. Duration: 3-6 months for sustainable results. Benefit: Addresses root cause, prevents regain. Not: Quick fix - gradual healthy weight loss.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH211_TM",
+      "instruction": "Headache-க்கு natural remedy?",
+      "current_output": "Remedies: 1) Ginger tea, 2) Clove paste on temples, 3) Peppermint oil on forehead, 4) Cold/warm compress (depends on type), 5) Rest in dark room, 6) Hydration (dehydration causes headache), 7) Inhale ajwain steam. Pressure points: Press between thumb and index finger. Lifestyle: Regular sleep, avoid screen strain, stress management. Migraine: See doctor - may need proper treatment.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH017_TM",
+      "instruction": "Dialysis free-யா செய்யலாமா?",
+      "current_output": "Yes! Pradhan Mantri National Dialysis Program. Free dialysis: Government hospitals, empanelled private centres. Eligibility: BPL/low income patients. Sessions: Usually 2-3 per week. CMCHIS: Also covers dialysis. Kidney transplant: Covered under CMCHIS (Rs.5 lakh). Location: District hospitals, medical colleges. Registration: Through nephrologist referral. Medicines: EPO injections also subsidized.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH189_TG",
+      "instruction": "Seasonal diseases-kku Siddha prevention?",
+      "current_output": "Monsoon (Kaar kaalam): Nilavembu, avoid raw foods, warm water. Winter (Munpani): Chukku preparations, oil massage. Summer (Mudhuvenil): Cooling preparations, Nannari, tender coconut. Flu/dengue season: Papaya leaf juice, Nilavembu Kudineer. Government distribution: During epidemics, free Siddha immunity medicines distributed through PHC. Lifestyle: Seasonal diet (Paruva Unavugal) as per traditional calendar.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH163_TG",
+      "instruction": "Endha vaccines adults-kku venum?",
+      "current_output": "Recommended: 1) Influenza (flu) - yearly (especially elderly, diabetics), 2) Pneumococcal - 65+ years, 3) Tetanus booster - every 10 years, 4) Hepatitis B - if not taken earlier, 5) HPV - up to 26 years, 6) COVID - as per current guidelines. Pregnancy: Tetanus, Pertussis. Travel: Yellow fever, etc. based on destination. Cost: Some free at government, others subsidized. Consult doctor for personalized schedule.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH160_TG",
+      "instruction": "Graamathula delivery pannalaamaa? Hospital poganumaa? (Rural style)",
+      "current_output": "Hospital delivery best! Why: 1) Emergency handling (bleeding, cord problem), 2) C-section if needed, 3) Baby complications - immediate care. Government: PHC level delivery (normal cases), higher centre referral. 102 ambulance: Free transport - call early when labour starts. Incentive: JSY + Muthulakshmi scheme - Rs.18,000+ for hospital delivery. Dai (TBA): Not trained for emergencies. Register PHC early - they plan delivery place based on risk.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH190_TM",
+      "instruction": "Ayurveda என்றால் என்ன? Siddha-விட வேறுபாடு என்ன?",
+      "current_output": "Ayurveda = Sanskrit origin, 5000+ years old, pan-Indian system. Principle: Vata, Pitta, Kapha doshas balance. Difference from Siddha: 1) Language - Sanskrit vs Tamil, 2) Origin - Kerala/North vs Tamil Nadu, 3) Some unique medicines, 4) Emphasis - Siddha uses more metals/minerals. Similarities: Both holistic, natural medicines, similar principles. Recognition: Both government recognized AYUSH systems.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH196_TM",
+      "instruction": "Panchakarma என்றால் என்ன? 5 treatments என்ன?",
+      "current_output": "Panchakarma = 5 purification/detoxification procedures. 1) Vamana - Therapeutic vomiting (Kapha disorders), 2) Virechana - Purgation (Pitta disorders), 3) Basti - Medicated enema (Vata disorders), 4) Nasya - Nasal administration (head/neck disorders), 5) Raktamokshana - Blood letting (blood disorders). Pre-procedures: Snehapanam (oil intake), Swedanam (sweating). Post: Specific diet restrictions. Duration: 14-21 days ideally.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH117_TG",
+      "instruction": "Suicide attempt criminal offence-aa?",
+      "current_output": "NO! Decriminalized under MHCA 2017. Old: Section 309 IPC punished attempt. Now: Person attempting suicide presumed to be under severe stress - needs care, not punishment. Police: Cannot arrest or prosecute. Government duty: Provide care, rehabilitation. Family: Support, not blame. Hospital: Must treat without police formality. Exception: Abetment of suicide still criminal.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH112_TG",
+      "instruction": "Psychiatrist vs Psychologist - yaarai paarkanum?",
+      "current_output": "Psychiatrist (MD): Medical doctor, can prescribe medicines. See for: Severe depression, bipolar, schizophrenia, anxiety needing medication. Psychologist (MPhil/PhD): Non-medical, provides therapy/counseling. See for: Stress, relationship issues, mild-moderate depression/anxiety, trauma. Often work together: Psychiatrist for meds + Psychologist for therapy. First step: Can start with either, they'll refer if needed.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH195_TG",
+      "instruction": "Arya Vaidya Sala, Kottakkal branch TN-la irukkaa?",
+      "current_output": "Yes! AVS Kottakkal branches in TN: 1) Chennai - Multiple clinics, 2) Coimbatore, 3) Madurai. Services: 1) OPD consultation, 2) Panchakarma, 3) Pharmacy. Other Kerala chains in TN: 1) Arya Vaidya Pharmacy (AVP), Coimbatore, 2) Nagarjuna, 3) SNA Oushadhasala. Authentic: These are established, registered organizations. Products: Available in many pharmacies.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH150_TM",
+      "instruction": "Child choking - என்ன செய்யணும்?",
+      "current_output": "If can cough: Encourage coughing. If can't cough/breathe: Infant (<1 year) - 5 back blows + 5 chest thrusts. Child (>1 year) - Heimlich maneuver: Stand behind, fist above navel, quick upward thrusts. Unconscious: Start CPR, call 108. Prevention: No small objects, cut food into small pieces, supervise eating. Learn CPR: Red Cross, hospitals conduct training.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

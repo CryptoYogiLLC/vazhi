@@ -1,0 +1,29 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 14,
+  "sample_count": 3,
+  "samples": [
+    {
+      "id": "CQA013",
+      "instruction": "ரேஷன் அட்டையில் பெயர் சேர்க்க என்ன செய்வது?",
+      "current_output": "For birth: Apply at tnpds.gov.in with birth certificate + baby's Aadhaar. For marriage: Marriage certificate + spouse's Aadhaar. Remove old card entry if transferring. Taluk Office verification. Time: 15-30 days.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "BGP040",
+      "instruction": "PMAY (Pradhan Mantri Awas Yojana) eppadi peruvadhu?",
+      "current_output": "Eligibility: Family without own house, EWS/LIG/MIG. Assistance: Up to ₹1.5-2.67 lakhs. Apply: pmay-urban.gov.in / Common Service Center. Documents: Aadhaar, Income certificate, Land document. Interest subsidy on bank loan available.",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RD007",
+      "instruction": "PM-AJAY கிராம சுகாதார திட்டம் என்றால் என்ன?",
+      "current_output": "Pradhan Mantri Ayushman Arogya Yojana - கிராம சுகாதாரம். Components: Health & Wellness Centres (HWC) - Primary healthcare, Teleconsultation facility. Services: 12 essential services - Maternal care, Child health, Communicable diseases, NCD screening (Diabetes, BP), Mental health, Dental, Eye care. Free: All services free at HWC. Location: Sub-centre/PHC within 30 min travel. Access: Aadhaar/ration card போதும், registration required.",
+      "category": "rural_development",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

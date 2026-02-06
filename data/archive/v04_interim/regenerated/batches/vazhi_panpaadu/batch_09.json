@@ -1,0 +1,85 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 9,
+  "sample_count": 11,
+  "samples": [
+    {
+      "id": "CULT017_TG",
+      "instruction": "'Anangukkol aaimayil kollo' - kaadhaloda mudhal paarvai patriya kural enna?",
+      "current_output": "Kural: 'Anangukkol aaimayil kollo kanangkuzhai maatharkkol maalum en nenju'. Artham: Ival devadhaya, azhagiya mayila, penna? En manam kuzhambugiradu. Love at first sight-a azhagaga vivarikkum kural. Kaadhaloda dhigaippai idhu kaattugiradu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT167_TG",
+      "instruction": "Chennai Music Season endraal enna? Yaen famous?",
+      "current_output": "Chennai December Music Season - ulagin migapperiya cultural festival. December 15 - January 1 varai. 1920s-la thodangiyathu. Sirappugal: 1) 2000+ concerts nadakkum, 2) 100+ sabhas (cultural organizations) organize panraanga, 3) Morning 9 AM to Night 10 PM non-stop programs, 4) Free entry pala sabhas-la, 5) World-la irundhu Carnatic musicians varuvaargal. Famous sabhas: Music Academy, Narada Gana Sabha, Mylapore Fine Arts. Culture lovers' paradise!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT185_TG",
+      "instruction": "12 Azhvaargal yaar yaar?",
+      "current_output": "12 Azhvaargal: 1) Poigaiyazhvar, 2) Boodhaththaazhvar, 3) Peyaazhvar - immovaruum 'Mudhalazhvaargal', 4) Thirumazhisaiyaazhvar, 5) Nammaazhvar - Thiruvaaimozhi paadiyavar, miga mukkiyamaanavar, 6) Madhurakaviyaazhvar, 7) Kulasekaraazhvar, 8) Periyaazhvar, 9) Aandaal - ore penn Azhvaar, Thiruppaavai paadiyavar, 10) Thondaradippodiyaazhvar, 11) Thiruppaanaazhvar, 12) Thirumangaiyaazhvar.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT149_TM",
+      "instruction": "நீலகிரி மலை ரயில் (UNESCO) பற்றி சொல்லுங்கள்?",
+      "current_output": "நீலகிரி மலை ரயில் - UNESCO World Heritage Site (2005). 1899-ல் British-கள் கட்டினார்கள். Mettupalayam-லிருந்து Ooty வரை 46 km. சிறப்புகள்: 1) Rack and pinion system - steep gradient-ல் climb செய்ய, 2) Steam locomotive - இன்றும் ஓடுகிறது, 3) 16 tunnels, 250 bridges, 4) 208 curves, 5) Max altitude 2203 meters. 5 hours journey - scenic beauty அருமை. Morning train popular. Book in advance - IRCTC.",
+      "category": "temples_heritage",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CULT169_TG",
+      "instruction": "Kalakshetra endraal enna?",
+      "current_output": "Kalakshetra - 1936-la Rukmini Devi Arundale Chennai-la niruviya arts institution. Bharatanatyam matrum Carnatic music-a revive panniya maiyam. Sirappugal: 1) Traditional Bharatanatyam style, 2) Weaving centre - Kalakshetra sarees famous, 3) Periya campus - Thiruvanmiyur beach area, 4) Annual dance festival. Deemed University status. Ulagengum graduates irukiraargal. Tamil cultural renaissance-oda symbol!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT071_TG",
+      "instruction": "Social media comparison-la jealous feel aagiren - enna seivadhu?",
+      "current_output": "'Azhukkaaru udaiyaarai aakkam thaedum ozhukkaarau' - poraamai ullavanai selvam thaedi varaadhu. Melum: 'Avviththu azhukkaaru udaiyaanai seiyaval thavvaiyai kaatti vidum'. Jealousy-a let go pannungal. Focus on YOUR journey. Others' highlight reel vs your behind-the-scenes - don't compare!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT045_TG",
+      "instruction": "'Perumai udaiyavar aatruvar' - perumai patriya kural enna solludhu?",
+      "current_output": "Kural: 'Perumai udaiyavar aatruvar aatrin arumai udaiya seyal'. Artham: Perumai udaiyavargal kashtamaana seyalgalai sadhippaargal. Greatness enbadhu easy tasks seivathu alla - difficult things accomplish panradhu. 'Go big or go home' - Valluvar version!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT056_TG",
+      "instruction": "'Idukkan varungaal naguga' - kashta kaalathil enna seiya vendum?",
+      "current_output": "Kural: 'Idukkan varungaal naguga adhanai aduththu oorvadhu aqdhoppa thil'. Artham: Kashtam varum bodhu sirikka vendum. Andha kashtathai vella idhai vida nalla vazhi illai. Smile through difficulties - best medicine for tough times. Positive attitude wins!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT032_TG",
+      "instruction": "Thirukkuraloda moondru pirivugal enna?",
+      "current_output": "1) Araththuppaal (Virtue) - 38 adhigaarangal, 2) Porutpaal (Wealth) - 70 adhigaarangal, 3) Kaamaththuppaal (Love) - 25 adhigaarangal. Ninaivil vaikka: A-Po-Ka (APK - like Android APK file!).",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT119_TG",
+      "instruction": "Siva Vaakkiyar yaar? Avaradhu paadalgal sirappu enna?",
+      "current_output": "Siva Vaakkiyar migavum controversial siddhar. Samaya sadangukalai, poojaikkalai kadumayaga vimarsithavar. 'Jaadhi illai, samayam illai' endru pesiyavar. 'Natta kallai deivam endru naalu poo saaththiye, sutri vandhu munumunutthaal sollumO mundhai vinai?' - idol worship-a kelvi ketkum vari. Rational thinking-a 1000 varudangalukkku munnbae pesiyavar!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT129_TG",
+      "instruction": "Siddhar gnaanam indraiya kaalathukku eppadi relevant?",
+      "current_output": "Siddhar gnaanathoda modern relevance: 1) Siddha medicine - AYUSH ministry recognize panniyathu, 2) Yoga - worldwide popular, 3) Herbal remedies - organic trend-la demand, 4) Meditation - mental health-kku, 5) Jaadhi ethirppu - social equality message, 6) Environment protection - iyarkaiyodu inaindhu vaazhththal. WHO kooda traditional medicine-a promote panradhu. Siddhargal 'ahead of their time' endru sollalam!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

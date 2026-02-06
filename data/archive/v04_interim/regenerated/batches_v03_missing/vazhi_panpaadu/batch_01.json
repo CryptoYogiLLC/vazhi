@@ -1,0 +1,50 @@
+[
+  {
+    "instruction": "'தெள்ளிய வாயுடைய மன்னரை' - நல்ல leader-ன் தரம் என்ன?",
+    "output": "குறள்: 'சொல்லுக சொல்லிற் பயனுடைய சொல்லற்க சொல்லிற் பயனிலாச் சொல்'. அர்த்தம்: பயனுள்ள வார்த்தைகளையே பேசுங்கள். பயனற்ற வார்த்தைகளை பேசாதீர்கள். Speak only what adds value. Avoid meaningless talk. Quality over quantity in communication!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT057_TM"
+  },
+  {
+    "instruction": "Democracy / ஜனநாயகம் concept திருக்குறளில் உள்ளதா?",
+    "output": "நேரடியாக 'democracy' இல்லை, ஆனால் concepts உள்ளன: 'இறைமாட்சி' - நல்ல ஆட்சியின் அடையாளங்கள். 'குடிசெயல்வகை' - மக்கள் பங்கேற்பு. மேலும்: 'செவிக்குண வில்லாத போழ்து சிறிதும் இவக்கும் இராச்சியம் இல்'. மக்கள் குரல் கேட்காத அரசு வீழும். Accountability to people - democratic principle in ancient text!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT086_TM"
+  },
+  {
+    "instruction": "Thirukkural UN-ல் recognize ஆனதா?",
+    "output": "Thirukkural formally UN-ஆல் recognize ஆகவில்லை, ஆனால்: 1) UN conferences-ல் Thirukkural quotes cite ஆகியுள்ளன, 2) UNESCO Tamil-ஐ classical language-ஆக recognize பண்ணியபோது Thirukkural-ஐ highlight பண்ணியது, 3) International scholars Thirukkural-ஐ 'Universal ethical text' என்று praise பண்றாங்க. Thirukkural-ஐ UN officially recognize பண்ண வேண்டும் என்று campaign நடக்கிறது.",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT028_TM"
+  },
+  {
+    "instruction": "மதுரை மண்டபம் என்றால் என்ன? ஏன் famous?",
+    "output": "Chennai December Music Season - உலகின் மிகப்பெரிய cultural festival. December 15 - January 1 வரை. 1920s-ல் தொடங்கியது. சிறப்புகள்: 1) 2000+ concerts நடக்கும், 2) 100+ sabhas (cultural organizations) organize பண்றாங்க, 3) Morning 9 AM to Night 10 PM non-stop programs, 4) Free entry பல sabhas-ல், 5) World-ல் இருந்து Carnatic musicians வருவார்கள். Famous sabhas: Music Academy, Narada Gana Sabha, Mylapore Fine Arts. Culture lovers' paradise!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "arts_literature",
+    "id": "CULT167_TM"
+  },
+  {
+    "instruction": "Siddhar paadalgalai engge ketkalaam/padikkalaam?",
+    "output": "Siddhar paadalgal access seiya: 1) Project Madurai - free Tamil texts online (projectmadurai.org), 2) Tamil Virtual Academy - government site, 3) YouTube - vilakkanagalodu paadalgal, 4) Books - Chennai Higginbothams, Pari Nilayam, 5) Apps - Siddhar Paadalgal app, 6) Libraries - University of Madras, Connemara Library. Original palm leaves Saraswathi Mahal Library (Thanjavur)-la preserve seiyappattuLLana.",
+    "language": "tanglish",
+    "pack": "vazhi_panpaadu",
+    "category": "siddhars",
+    "id": "CULT130_TG"
+  },
+  {
+    "instruction": "Health problem வந்துவிட்டது - mentally strong-ஆக இருக்க என்ன குறள்?",
+    "output": "'மருந்தென வேண்டாவாம் யாக்கைக்கு அருந்தியது அற்றது போற்றி உணின்'. சரியான உணவே மருந்து. மேலும்: 'உடம்பார் அழியின் உயிரார் அழிவர்' - உடலை பேணுங்கள். Physical health-க்கு treatment எடுங்கள், mental health-க்கு positive thoughts maintain பண்ணுங்கள். Body is a temple - take care of it!",
+    "language": "pure_tamil",
+    "pack": "vazhi_panpaadu",
+    "category": "thirukkural",
+    "id": "CULT079_TM"
+  }
+]

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 4,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "EXTE025_TM",
+      "instruction": "என் பொண்ணு NEET-ல் fail ஆயிட்டா - அடுத்து என்ன வழி?",
+      "current_output": "Discourage பண்ணாதீங்க. Options: Next year NEET retry, BSc Nursing/Allied Health Sciences, BDS (dental), BAMS/BHMS (alternative medicine), BSc Life Sciences. NEET-க்கு 8 attempts வரை try பண்ணலாம். Age limit: 25 years.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO018_TG",
+      "instruction": "LIC Golden Jubilee Scholarship enna?",
+      "current_output": "LIC Golden Jubilee Foundation Scholarship: Economically weaker section students-ku. Amount: ₹10,000-20,000/year. Eligibility: 10th 60%+ marks, family income ₹2 lakh kizha. Special quota: LIC employees' children. Apply: Through LIC branch or www.buddy4study.com. Covers: School fees, books, uniform. Renewable annually based on marks.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_007_TM",
+      "instruction": "Tuition போகணுமா? School படிப்பு மட்டும் போதாதா?",
+      "current_output": "Depends on: 1) School quality - Government/Private 2) Child's self-study ability 3) Parent support at home 4) Specific subject weakness. Tuition alternatives: 1) Free government coaching centres 2) YouTube educational videos 3) Khan Academy, BYJU'S free tier 4) Group study with friends 5) Senior students help. When needed: Maths, Science weak subjects, competitive exam preparation. Cost: ₹500-2000/month for tuition. Self-study skill develop = best investment.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM028_TM",
+      "instruction": "Multiple subjects எப்படி manage பண்றது?",
+      "current_output": "Multi-subject strategy: 1) Timetable with specific slots 2) Alternate between easy/hard subjects 3) Active recall - test yourself 4) Spaced repetition - revise at intervals 5) Priority: Weak subjects more time 6) Daily targets: 2-3 subjects 7) Weekly review all subjects 8) Morning: Fresh topics, Evening: Revision 9) Sunday: Full revision + mock test 10) Track progress in journal. Don't study one subject for 5+ hours continuously - brain needs variety.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH038_TM",
+      "instruction": "Orphan/single parent children-க்கு படிப்பு உதவி என்ன?",
+      "current_output": "சலுகைகள்: 1) Social Welfare Department scholarship 2) Free education in government schools 3) Hostel facility free 4) PM CARES for Children scheme (COVID orphans) - ₹10 lakh insurance + monthly stipend + free education till graduation 5) NGO scholarships. Required: Death certificate of parent(s), income certificate. District Social Welfare Officer-ஐ அணுகுங்கள்.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM015_TM",
+      "instruction": "Community certificate எப்படி வாங்குவது? Time எவ்வளவு ஆகும்?",
+      "current_output": "Process: 1) Apply at Tahsildar office or e-Sevai 2) Documents: Aadhaar, parent community certificate, school TC mentioning community, family photo 3) Verification by RI (Revenue Inspector) 4) Issue by Tahsildar. Time: 15-30 days. One-time: Permanent certificate for lifetime. Required for: Reservation benefits, scholarships, government jobs. Tip: Get parents' certificate first, then children's easier. Online tracking: tnedistrict.tn.gov.in.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO003_TG",
+      "instruction": "Pen maanavar-kalukkaana Moovalur Ramamirtham Ammaiyar scheme enna?",
+      "current_output": "Scheme details: 6th-12th padikkum pen students-ku monthly stipend. Amount: ₹1,000/month (₹12,000/year). Eligibility: Government/Aided school student, family income ₹2.5 lakh kizha. 18 years aanavudan ₹25,000 one-time panam (graduation-ku). Apply: School moolam automatic. Bank account theva.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO011_TM",
+      "instruction": "ITI Course பற்றி full details தருங்க. Free-யா படிக்கலாமா?",
+      "current_output": "**ITI (Industrial Training Institute) - Complete Guide:**\n\n**என்ன ITI?**\n- Technical skill training\n- Industry-ready workforce preparation\n- NCVT/SCVT certified\n\n**Eligibility:**\n- 8th pass: Some trades (Welder, Wireman)\n- 10th pass: Most trades (Electrician, Fitter, Turner)\n\n**Duration:**\n- 6 months to 2 years (trade based)\n\n**Popular Trades:**\n\n| Trade | Duration | Job Prospects |\n|-------|----------|---------------|\n| Electrician | 2 years | High demand |\n| Fitter | 2 years | Manufacturing |\n| COPA (Computer) | 1 year | Office jobs |\n| Mechanic (Motor Vehicle) | 2 years | Automobile |\n| Welder | 1 year | Construction |\n| Plumber | 1 year | Building sector |\n| Electronics Mechanic | 2 years | Electronics |\n\n**Fees:**\n- Govt ITI: FREE! (Only nominal ₹100-500)\n- Private ITI: ₹10,000-50,000/year\n\n**Free Training Schemes:**\n- SC/ST: Full free + Stipend ₹500-1,000/month\n- BC/MBC: Free tuition\n- EWS: Free in Govt ITI\n\n**Admission Process:**\n1. Website: itidata.tn.gov.in\n2. Online application\n3. Merit list based on 10th marks\n4. Counselling & Seat allotment\n\n**Timing:** Apply: May-June\n\n**After ITI:**\n- Apprenticeship (1 year) - Earn while learn\n- Direct job in factories, companies\n- Self-employment\n- Higher studies: Diploma (Lateral)\n\n**Apprenticeship Sites:**\n- apprenticeshipindia.gov.in\n- Stipend: ₹5,000-9,000/month",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC025_TG",
+      "instruction": "En pillai career choice-a accept panna mudiyala. Enna seivathu?",
+      "current_output": "Generation gap bridge: 1) Listen to their reasons - genuinely try to understand 2) Research that field - income potential, growth, stability 3) Meet professionals in that career - get real picture 4) Trial period suggestion - internship, shadowing 5) Your fears express - but don't impose 6) Compromise explore - related but acceptable field 7) Remember: It's their life to live. Reality: Many non-traditional careers successful today. Trust your upbringing - they'll be fine!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP001_TM",
+      "instruction": "Hotel Management படிப்பு தமிழ்நாட்டில் எங்கே உள்ளது?",
+      "current_output": "Top institutes: 1) IHM Chennai - Central Government 2) IHM Guruvayur - Private 3) SIHM Madurai - State 4) SRM Hotel School. Admission: NCHM JEE entrance + counselling. Eligibility: 12th pass 45-50%. Duration: 3 years BSc HM. Fees: Govt ₹50,000-80,000/year, Private ₹1-3 lakh/year. Jobs: Hotels, airlines, cruise ships, resorts. Good starting salary: ₹20,000-35,000.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO007_TM",
+      "instruction": "மீனவர் குடும்ப மாணவர்களுக்கு scholarship உள்ளதா?",
+      "current_output": "ஆம், Fisheries Department Scholarships: 1) Pre-matric - ₹500-1,500/ஆண்டு 2) Post-matric - ₹2,000-5,000/ஆண்டு 3) Professional courses - ₹10,000-30,000 4) Higher education abroad - ₹10 lakh. தகுதி: Fishermen community certificate, registered fisherman's child. Apply: www.fisheries.tn.gov.in. Special quota in Anna University marine courses.",
+      "category": "scholarships",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "COMM006_TG",
+      "instruction": "Domicile certificate vs Nativity certificate - enna difference?",
+      "current_output": "Nativity: Born in Tamil Nadu endru prove. Issued by: Tahsildar. For: Reservation benefits, state quota seats. Domicile: Residing in state for specified period (usually 5+ years). For: Some central institution admissions. Both different! Don't confuse. TN admissions mostly need: Nativity OR studied in TN for specific years (varies by counselling). Documents: Birth certificate, school TC, Aadhaar showing TN address.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM002_TM",
+      "instruction": "12th exam-ல் centum வாங்க முடியுமா? எப்படி?",
+      "current_output": "Centum possible subjects: Maths, Physics, Chemistry, Computer Science, Accountancy. Tips: 1) NCERT concepts தெளிவாக புரிந்துகொள்ளுங்கள் 2) Formula sheet தயாரியுங்கள் 3) Numerical problems: 50+ types practice 4) Diagram neat-ஆக draw பண்ணுங்கள் 5) Answer writing: Steps முழுமையாக 6) Time management: 3 hours mock tests. Centum scorers: 6 AM study, revision before sleep, doubt clearing same day.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE013_TG",
+      "instruction": "Farmer family-la pirandhavangalukku admission-la preference unda?",
+      "current_output": "Aama. TNAU-la farmer quota irukku. Farmer certificate vachchu apply pannalam. Rural area students-kku weightage kedaikum. KVK (Krishi Vigyan Kendra)-la free training-um undu.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO010_TG",
+      "instruction": "10th mudicha appuram ennenna courses irukku?",
+      "current_output": "**After 10th Options:**\n\n**1. Plus Two (+2):** 2 years, Science/Commerce/Arts\n\n**2. Diploma (Polytechnic):** 3 years, Engineering branches, Lateral entry to degree\n\n**3. ITI:** 6 months-2 years, Trades like Electrician, Fitter - Direct job\n\n**4. Paramedical:** 1-2 years, ANM, Lab Tech, X-Ray Tech\n\n**5. Skill Courses (PMKVY):** 3-6 months, Free, Job placement\n\n**6. NIOS:** Open schooling, Same validity\n\n**Choice Depends On:**\n- Higher studies → +2\n- Quick job → ITI\n- Technical job → Diploma",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP007_TM",
+      "instruction": "Journalism/Mass Communication படிக்க சிறந்த college?",
+      "current_output": "Top colleges: 1) Asian College of Journalism Chennai 2) Loyola College MA Journalism 3) Stella Maris 4) Anna University Media Sciences 5) SRM Mass Comm. Courses: BA/B.Sc Mass Comm (3 years), PG Diploma (1 year), MA Journalism (2 years). Jobs: TV channels, Newspapers, Digital media, PR agencies, Advertising. Skills: Writing, communication, current affairs knowledge. Internships important.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM005_TM",
+      "instruction": "Age limit government college admission-க்கு இருக்கிறதா?",
+      "current_output": "UG courses: Generally no upper age limit for most courses. Exceptions: Medical (25 for general, 30 for reserved), Law integrated (20), NDA (19.5). Minimum age: 17 years usually. PG courses: No age limit mostly. PhD: No limit. Government jobs: Age limits apply (varies by post). Reality: Complete your education at any age - many successful late starters. Distance education: No age restrictions at all.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO009_TM",
+      "instruction": "10th படிக்கும் மாணவர்களுக்கு என்ன scholarship இருக்கு?",
+      "current_output": "**Class 9-10 Scholarships:**\n\n**1. Post-Matric Scholarship (SC/ST):**\n- Wait - இது 11th-க்கு பிறகு!\n\n**2. Pre-Matric Scholarship (Continues from Class 8):**\n\n**SC/ST Students:**\n- Day Scholar: ₹150/month\n- Hosteller: ₹350/month\n- Ad-hoc grant: ₹750/year\n\n**BC/MBC Students:**\n- Day Scholar: ₹100/month\n- Hosteller: ₹250/month\n\n**Minorities:**\n- ₹100/month + ₹500/year\n\n**3. NMMS Continuation:**\n- Class 8-ல் qualify ஆனவர்கள்\n- ₹12,000/year continues\n\n**4. State Merit Scholarship:**\n- Class 9 entrance based\n- Merit students select\n- Monthly stipend\n\n**5. Private Scholarships:**\n- Tata Trust\n- Reliance Foundation\n- L&T Educational Trust\n- Apply: respective websites\n\n**6. Sitaram Jindal Foundation:**\n- ₹750/month (Class 9-10)\n- Income < ₹2 lakh\n- Apply: sjfounation.in\n\n**Apply Process:**\n1. Check eligibility\n2. Get documents ready (Income, Community, Marks)\n3. Apply through scholarships.gov.in\n4. School verification\n5. Submit before deadline\n\n**Deadlines:** Usually September-October",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA015_TM",
+      "instruction": "Tally course படித்தால் என்ன job கிடைக்கும்?",
+      "current_output": "Tally jobs: 1) Accountant - small/medium businesses 2) Billing operator 3) Inventory manager 4) GST filing assistant 5) Bank data entry. Salary: ₹10,000-20,000 starting. Course duration: 2-3 months. Government centres: NIELIT, TNSDC. Private: Tally Academy (authorized). Certification: Tally.ERP 9 / TallyPrime. Combined with GST knowledge = better opportunities. Self-employment: Freelance accounting services.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_009_TM",
+      "instruction": "Friends எல்லாரும் phone use பண்றாங்க, study time waste ஆகுது, என்ன செய்வது?",
+      "current_output": "Phone/Social media management: 1) Study time-ல் phone வேற room-ல் வையுங்கள் 2) App blockers use (Forest, Freedom) 3) Scheduled screen time - 1 hour/day 4) Study group with serious friends 5) Parents-கிட்ட phone control கொடுங்கள். Reality: Toppers also use phones - difference is discipline. Educational use OK: BYJU'S, Khan Academy, Doubt clearing. Self-control = life skill. Start with small goals.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH031_TG",
+      "instruction": "Arts padiththaal enna velai kidaikkum?",
+      "current_output": "Arts padippin job opportunities: 1) Government jobs - TNPSC, SSC, Banking 2) Teaching - B.Ed seithu teacher 3) Journalism/Media 4) Civil Services - IAS, IPS 5) Law - LLB sernthu lawyer 6) Social work 7) HR/Administration. NET exam ezhudhi Professor aagalam. UPSC-ku Arts background siranthidhu.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO030B_TG",
+      "instruction": "Scholarship-ku apply panna enna document venum-nga?",
+      "current_output": "Aadhaar, bank passbook (student name-la), income certificate, community certificate, marks card, photo, bonafide - ipdi ellam venum. Original + xerox + scan ready-a vechikko/vechikunga.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA004_TG",
+      "instruction": "ITI padicha piragu engineering seralaamaa?",
+      "current_output": "Aam, Lateral Entry scheme ulladhu. ITI + 2 years relevant work experience or ITI + 1 year apprenticeship = Diploma 2nd year direct admission. Diploma mudicha piragu = B.E./B.Tech 2nd year. LEET (Lateral Entry Entrance Test) sila states-la ulladhu. TN-la marks basis lateral entry available. Career ladder: ITI → Diploma → B.E. → M.Tech.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO014_TG",
+      "instruction": "12th Board Exam-ku eppadi centum vaanguvadhu?",
+      "current_output": "**12th Centum Strategy:**\n\n**6 Month Plan:**\n\n**Month 1-2:** Complete syllabus, Notes, Formula sheets\n\n**Month 3-4:** Deep study, Important questions, Diagrams, Numericals\n\n**Month 5:** Previous papers, Model exams, Weak areas\n\n**Month 6:** Quick revision, Mock exams, Exam practice\n\n**Subject Tips:**\n- Physics: Daily numericals, Derivations\n- Chemistry: Equations, Named reactions\n- Maths: 30 problems/day\n- Biology: Neat diagrams, Flow charts\n\n**General:**\n1. 5 AM study time\n2. Take breaks\n3. 7 hours sleep\n4. No new topics in last week\n5. Neat writing\n\n**Resources:** Kalvi TV, DIKSHA App, dge.tn.gov.in",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC001_TG",
+      "instruction": "College hostel-la mudhal murai stay panren. Enna eduthukkannum?",
+      "current_output": "Essential items: 1) Bedding - mattress, pillow, blanket 2) Bucket, mug, toiletries 3) Clothes + hangers 4) Study materials, stationery 5) Lock for cupboard 6) Electric kettle (if allowed) 7) First aid basics 8) Important documents photocopies 9) Passport size photos 10) Emergency contact numbers. Don't bring: Costly items, too many clothes initially. Adjust first, buy locally if needed.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

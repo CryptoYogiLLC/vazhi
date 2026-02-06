@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 7,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT164_TG",
+      "instruction": "Nalayira Divya Prabandham endraal enna?",
+      "current_output": "Nalayira Divya Prabandham - 12 Azhvaargalaal paadappatta Vaishnava bhakthi ilakkiyam. 4,000 paasurangal (paadalgal). 108 Divya Desangalai (Vishnu kovilgal) paadiyathu. Naadhamunikal thoguthThaar. Mukkiya paguthigal: Thiruppaavai (Aandaal), Thiruvaaimozhi (Nammazhvaar), Periya Thirumozhi (Thirumangai Azhvaar). 'Tamil Vedam' endru azhaikkapadugiradhu.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT140_TG",
+      "instruction": "Thiruvannamalai koviloda sirappu enna?",
+      "current_output": "Arunachaleswarar Kovil - Agni Lingam (Pancha Bhoota Sthalams-la ondru). Sirappugal: 1) Karthigai Deepam - malai uchchiyil periya deepam, lakhs of people varuvaargal, 2) Girivalam - malaiyai sutri nadappadu (14 km) - full moon-la latchakkanakkaaanor, 3) Ramana Maharishi Ashram arugil, 4) 4 gopurangal - kizhakku Rajagopuram 217 adi. Spiritual capital of Tamil Nadu endru sollalam.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT187_TG",
+      "instruction": "Nammaazhvar yaar? Thiruvaaimozhi endraal enna?",
+      "current_output": "Nammaazhvar - Azhvaargalil miga mukkiyamaanavar. Azhvaar Thirunagari (Tirunelveli) pirandha idam. Puliya maraththadiyil 16 aandugal dhiyaanathil irundhathaaga kadhai. Thiruvaaimozhi - 1102 paasurangal, 'Tamil Vedam' endru azhaikkapadugiradhu. Vaishnava thaththuvathoda aazham idhil ulladhu. 'Thaaye thandhaiye' endra paasuram migavum famous. Vaikunda Ekaadasiyil ivaradhu uruvam sorgavaasal vazhiyaaga sellum nigazhchi Srirangam-la nadakkum.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT043_TG",
+      "instruction": "'Ulluvadhu ellam uyarvullal' - sindhhanai patriya kural enna?",
+      "current_output": "Kural: 'Ulluvadhu ellam uyarvullal matradhu thalinum thallaamai neerthu'. Artham: Eppodhum uyarndha ennangalaiye ninaikkA vendum. Nadakkaaviittaalum paravaayillai, uyarvaga ninaippadu nalladhu. Think big even if you fail! Positive thinking-a 2000 aandugalukkku munnbae sonnaar.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT065_TG",
+      "instruction": "Kaadhali/Kaadhalan kobamaa irukkum bodhu enna kural ninaikkalam?",
+      "current_output": "'Oodalin thondrum siruthuni nallali vaadinum paadu perum'. Siriya oodal (fight) kaadhalai innum inimaiyaakkum. Normal-thaan! Melum: 'Thanindhamai sellaadhu ulagam thalarnDhamai ooduvadhu ellaarkum varum'. Cool down, then talk. Love grows after reconciliation!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT196_TG",
+      "instruction": "Kanchi Periyavar yaar?",
+      "current_output": "Kanchi Periyavar (Chandrasekarendra Saraswati, 1894-1994) - Kanchi Kamakoti Peedathoda 68-vadhu Sankaracharyar. 13 vayathil sanniyaasam. 100 aandugal vaazhndaar. 'Walking God' endru azhaikkapattavar. India muzhuvathum nadanthe payanam seydhaar. Vedam, Saasthram, Dharmam ellavatrilum expert. 'Deivathin Kural' (Voice of God) - ivar pechugaloda collection, pala volumes. Hindu renaissance leader!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT097_TG",
+      "instruction": "Adakkamai-yoda vilaivuu enna?",
+      "current_output": "Kural: 'Uyarvu udaiyavar yaaro udalodu neerthu viyaththalaagaa melavarku'. Uyarndhavargal yaar endraal, thangalai uyarththik kolladhavargal. Melum: 'Niraiyudaimai neengaamai vendin poraiyudaimai potri ozhugap padum'. Ego-a vittaal madhippu kidaikkum. Pride goes before a fall!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT084_TG",
+      "instruction": "Oozhal / corruption patri enna solludhu Thirukkural?",
+      "current_output": "Kural: 'Kalavinaal aagiya aakkam alavirandhu aavadhu polak kedum'. Thiruttal (corruption) vandha selvam peruginaalum azhiyum. Melum: 'Venmai enappaduvadhu yaadhenin onmai udaiyaan udaiyaaraip paarkkAdhu'. Suththamaana arasu enbadhu baarapatchamindri nadappadu. Anti-corruption message from ancient times!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT200_TG",
+      "instruction": "Thevaram, Divyaprabandham engge ketkalaam/padikkalaam?",
+      "current_output": "Ketka/padikka vazhigal: 1) Kovilkalil - daily odhuvaargal paaduvaargal, 2) YouTube - Sirkali Govindarajan, DKJ, Bombay Sisters versions famous, 3) Spotify, Gaana apps - playlists ullana, 4) Project Madurai - free text online, 5) Tamil Virtual Academy, 6) Books - Giri Trading, Higginbothams, 7) Apps - Thevaram app, Divya Prabandham app. Morning/evening kettaal peaceful feeling. Margazhi month-la Thiruppaavai daily radio-la varum!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT141_TG",
+      "instruction": "Rameswaram koviloda sirappu enna?",
+      "current_output": "Ramanathaswamy Kovil - 12 Jyotirlingam-kalil ondru. Sirappugal: 1) Neelamaana corridor - 1200+ meters (longest in India), 2) 22 theerthangal (sacred wells) - ellavatrilum kulippadu tradition, 3) Ramar kattiya kovil endra nambikkai, 4) Agni Theertham - kadalil kulippadu, 5) Sethu Bandhanam - Adam's Bridge nearby. Char Dham-la ondru. Varanasi-kku povatharkku mun inge varuvaargal.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT152_TG",
+      "instruction": "Kovilukku pogum bodhu enna dress code follow pannanum?",
+      "current_output": "Dress code guidelines: 1) Men - veshti/thundu preferred, lungi ok, shorts allowed in some temples, 2) Women - saree/churidar preferred, dress with dupatta ok, 3) No sleeveless, revealing clothes, 4) Remove footwear at entrance, 5) Big temples may rent dhotis if needed. Specific temples like Padmanabhaswamy (Kerala) strict - only traditional dress. Tirumala moderately strict. Most TN temples flexible but modest dress respectful. Carry plastic bag for footwear.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT199_TG",
+      "instruction": "Nayanmaar, Azhvaar samaadhigalai engge visit seiyalam?",
+      "current_output": "Mukkiya samaadhigal: Nayanmars: 1) Thirugnana Sambandhar - Nalloor, 2) Appar - Thiruvaamoor, 3) Sundarar - Thiruvanchaikalam, 4) Manikkavasagar - Chidambaram, 5) Karaikkal Ammaiyar - Karaikkal. Azhvars: 1) Aandaal - Srivilliputhoor, 2) Nammaazhvar - Azhvaarthirunagari, 3) Periyaazhvar - Srivilliputhoor. Temple visit-la samaadhi darshan common practice.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT066_TG",
+      "instruction": "Nanban thurOgam seidhaal enna seivadhu?",
+      "current_output": "'Natpirkku veetrirukkAi yaadhEnin kotpindri olluvadhu olYaakka'. Nalla natpu enbadhu endha soozhnilaiyilum support panradhu. Thurogam seidhavan unmaiyaana nanban illai. 'Pazhamaiyir kenmai seidhar udaiyaar' - pazhaiya natpu mathippaanaadhu, aanaal toxic friendship vittu vilaguvathu wise.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT052_TG",
+      "instruction": "'Kan tharum kaadhal kamazhnerr kodu' - kaadhaloda aarambam patriya kural enna?",
+      "current_output": "Kural: 'Kannodu kanninai nokkokkin vaaichchorkkal enna payanum ila'. Artham: Kangalodu kangal pesinaal podhum, vaai vaarthaigal thevaiyillai. Eye contact-la unarvugal theriyum. Love-la words-a vida looks powerful. 'Eyes speak louder than words' - Valluvar version!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT063_TG",
+      "instruction": "Business fail ஆனால் என்ன குறள் motivate பண்ணும்?",
+      "current_output": "'Aakkam izhandhaemenru allaaVaar ookkam oruvandam kaiththudai yaar'. Selvam ponaalum cry pannadhavargaLae unmaiyaana valimaiyaanavargal. Melum: 'Idukkan varungaal naguga' - kashtathil siriyungal. Failure is temporary, your spirit is permanent. Try again!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT107_TG",
+      "instruction": "Agathiyar Naadi Jothidam endraal enna?",
+      "current_output": "Agathiyar palm leaves-la ezhuthiya predictions. Ovvoru manidharoda kadandha kaalam, nigazhkaalam, ethirkaalam patriya thagavalgal idhil ullana endru nambappadugiradhu. Vaitheeswaran Koil (Nagapattinam) idharkku famous. Thumb impression koduththu ungal leaf-a kandupidipaargal. Nambikkai iruppavargalukkku aarudhalaga irukkum. Scientific proof illai endru critics solvaargal.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT080_TG",
+      "instruction": "Nalla arasanin / leader-oda gunangal enna endru Valluvar solkiraar?",
+      "current_output": "Kural: 'Muraiseidhu kaappaatrum mannavan makkadku iraiyendru vaikkap padum'. Neeyaamaaga nadandhu, makkalai kaappaatrum arasan kadavulukkku samam. Melum: 'Kodaiyali sengol kudiyombal naangum udaiyaanaam vendharkku oli'. Kodai, arul, needhi, makkal nalam - indha naangum ulla leader sirandhavar.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT168_TG",
+      "instruction": "Bharatanatyam endraal enna?",
+      "current_output": "Bharatanatyam - Tamil Nadu-oda classical dance form. 2000+ aandugal pazhamaiyaanadhu. Temple-kalil Devadasis aadiyathu - 'Sadhir' endru azhaikkapattathu. 1930s-la Rukmini Devi Arundale revive panninar. Elements: 1) Niruththam - pure dance, 2) Niruththiyam - expressive dance, 3) Naattiyam - dramatic. Margam - traditional sequence: Alarippu, Jathiswaram, Sabdam, Varnam, Padam, Thillana. UNESCO Intangible Heritage.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT058_TG",
+      "instruction": "'Nunukkamindri thaanum' - micro-management patri enna solkiRaar?",
+      "current_output": "Kural: 'Poiyaamai poiyaamai aatrin arampira seiyaamai seiyaamai nandru'. Artham: Poi sollaamal iruppadhae dharmam. Matra arangalai seiyaaVittaalum paravaayillai. Truth is the foundation of all virtues. One who never lies needs no other dharma!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT081_TG",
+      "instruction": "Ketta aatchiyalar / corrupt leader patri enna solkiraar?",
+      "current_output": "Kural: 'Iyalpulik kolochchum mannavan naattai peyalum vilaiyulum thokku'. Needhiyillaadha aatchiyil mazhaiyum vilaichchalum illai. Melum: 'Kolaiyir kodiyaarai vendhoruththal paingkuzh kalaikatt adhanodu ner'. Kodiyavargalai thandikkaadha arasan vivasaayathil kalai edukkaadhadhu pondravaN. Corrupt leaders destroy nations!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT154_TG",
+      "instruction": "Kovilil photography anumadhi unda?",
+      "current_output": "Photography rules: 1) Karuvrai ulle - almost always prohibited, 2) Outer areas - usually allowed, 3) Special ticket for camera - some temples charge (₹50-100), 4) Mobile phones - generally ok for selfies outside, 5) Video - often extra charge or prohibited. Major temples: Meenakshi - ₹50 camera fee, Srirangam - limited areas, Thanjai - allowed outside. Flash photography usually not allowed. Drones - strictly prohibited. Ask at entrance if unsure. Respect the space - worship first, photos second!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT022_TG",
+      "instruction": "Kuzhanthaigalukkku Thirukkural eppadi suvarasiyamaga karpikkalam?",
+      "current_output": "1) Ovvoru kuralkkum oru sinna kadhai sollalam, 2) Padangal pottu explain pannalam, 3) Paattaaga paadalam - YouTube-la niraiya videos ullana, 4) Role play seiyalam, 5) 'Thirukkural for Kids' apps payanpaduththalam, 6) Daily challenge - oru kural kettu avargale artham solla vaikkalam. Siruvayathilaye pazhaginaal lifetime remember pannuvaargal.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT121_TG",
+      "instruction": "Arunagirinaathar yaar? Thiruppugazh endraal enna?",
+      "current_output": "Arunagirinaathar Thiruvannamalayil pirandhavar. Ilamaiyil ketta vazhkai vaazhnthu, pin Murugan arulaal maariyavar. 'Thiruppugazh' endra arputhamaana noolai ezhuthiyavar - 16000+ paadalgal Murugan meedhu! Thaala (beat) structure migavum unique - isai ulagil migapperiya contribution. 'Muththaiththaru paththiththirunagai' pondra paadalgal indrum popular.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT142_TG",
+      "instruction": "Tirupathi Thirumalai kovil Tamil Nadu-la ulladha?",
+      "current_output": "Tirupathi tharpodhU Andhra Pradesh-la ulladhu, aanaal Tamil thodarppu miga aazhamanadhu: 1) Azhvaargal inge paadiyirukiraargal, 2) Tamil inscriptions niraiya ullana, 3) Pala nootraandugal Tamizaga aatchiyil irundhadu, 4) Indrum Tamil devotees miga adhigam. TTD (Tirumala Tirupati Devasthanams) nadaththugiradhu. World's richest temple - daily donation ₹3-4 crore! Tamil Nadu border-lirundhu 2-3 hours.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT163_TG",
+      "instruction": "Thiruvasagam patri sollungal?",
+      "current_output": "Thiruvasagam - Manikkavasagar paadiyathu. 8-vadhu Thirumurai. 'Thiruvasagaththukku urugaadhaar oru vaasagaththukkum urugaar' enbadhu famous pazhamozhi. Sivaperumaaanoda arulai unarndu paadiya bhakthi uchcham. Thirupperundurai, Thiruvannamalai, Chidambaram kovilkalil paadappattathu. 'Sivapuraanam' endra paguthi migavum famous. Unarchi poorvamaana Tamil kavithai.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 8,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SCHO008_TG",
+      "instruction": "Sports quota scholarship Tamil Nadu-la ulladha?",
+      "current_output": "Sports Development Authority of TN (SDAT) Scholarships: 1) State level players - ₹10,000-25,000/year 2) National level - ₹25,000-50,000 3) International level - ₹1-5 lakh 4) Olympic participants - special pension. College admission: 5% sports quota. Free coaching, equipment, diet allowance. Apply: www.sfrtn.tn.gov.in. Sports certificate from recognized association theva.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM025_TM",
+      "instruction": "SSC CHSL என்ன post கிடைக்கும்? 12th pass-க்கு best option?",
+      "current_output": "SSC CHSL (Combined Higher Secondary Level): 12th pass Central Govt jobs. Posts: LDC (Lower Division Clerk), DEO (Data Entry Operator), Postal Assistant, Sorting Assistant. Salary: ₹20,000-60,000. Exam: Tier 1 (CBT) + Tier 2 (Descriptive). Syllabus: English, Maths, Reasoning, GK. Typing test required. Age: 18-27. Best option for 12th pass - stable central govt job. Apply: www.ssc.nic.in.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH024_TG",
+      "instruction": "Vellinaadu padippuku ennenna thervugal ezhudha venum?",
+      "current_output": "Important exams: 1) IELTS/TOEFL - English proficiency 2) GRE - MS/PhD (USA, Canada) 3) GMAT - MBA 4) SAT - UG (USA) 5) PTE - Australia, UK. IELTS: 6.5+ score theva mostly. GRE: 300+ nalla score. Chennai-la pala coaching centers irukku. British Council, IDP IELTS nadathukindrana.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA027_TM",
+      "instruction": "Evening college-ல் படிக்கலாமா? Working people-க்கு option?",
+      "current_output": "Evening college options: 1) University of Madras evening courses 2) Annamalai University distance + contact 3) IGNOU weekend classes 4) Polytechnic evening batches (limited). Timings: Usually 6-9 PM. Courses: BA, B.Com, BBA, LLB. Benefits: Work + study together, degree = regular degree value. Alternative: Distance education from TNOU, IGNOU - study anytime. Some employers sponsor employee education.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO001_TG",
+      "instruction": "Govt school-la LKG/UKG-ku admission eppadi? Enna vayasu vendum?",
+      "current_output": "**Govt School Admission:**\n\n**Age Rules:**\n- LKG: 3+ years (as on June 1)\n- UKG: 4+ years\n- Class 1: 5+ years\n\n**Admission Time:** May-June\n\n**Documents:**\n- Birth Certificate\n- Child Aadhaar (optional)\n- Parents Aadhaar\n- Address proof\n- Photos - 4\n- Community Certificate\n\n**Where:** School directly or emis.tnschools.gov.in\n\n**Fee:** FREE!\n\n**RTE:** 25% seats in private schools for EWS - Apply at rte.tnschools.gov.in",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO011_TM",
+      "instruction": "INSPIRE scholarship என்ன? Science students-க்கு எப்படி apply செய்வது?",
+      "current_output": "Innovation in Science Pursuit for Inspired Research (INSPIRE): DST scheme for science students. 3 components: 1) INSPIRE Award - Class 6-10, ₹5,000 one-time 2) SHE (Scholarship for Higher Education) - BSc/BS/Int MSc, ₹80,000/ஆண்டு 3) INSPIRE Fellowship - PhD, ₹31,000-35,000/மாதம். SHE eligibility: Top 1% in 12th OR KVPY/JEE top 10,000. Apply: www.online-inspire.gov.in.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO007_TM",
+      "instruction": "Class 8-க்கு பிறகு என்ன படிக்கலாம்? எந்த stream select செய்வது?",
+      "current_output": "**Class 8-க்கு பிறகு Options:**\n\n**Option 1: Regular Schooling (Class 9-12)**\n\n**Class 9-10:** General curriculum (same for all)\n- Tamil/English, Maths, Science, Social Science\n- 10th Board Exam முக்கியம்!\n\n**Class 11-12 Streams:**\n\n| Stream | Subjects | Career Path |\n|--------|----------|-------------|\n| Science (Maths) | Phy, Chem, Maths, Bio/CS | Engineering, Architecture |\n| Science (Bio) | Phy, Chem, Bio, Maths | Medicine, Pharmacy, Nursing |\n| Commerce | Accounts, Economics, Commerce | CA, Banking, Business |\n| Arts | History, Economics, Pol Science | Law, Civil Services, Teaching |\n| Vocational | Trade-specific | Direct employment |\n\n**Option 2: ITI (Industrial Training Institute)**\n- After Class 8/10\n- Trades: Electrician, Fitter, Mechanic, etc.\n- Duration: 1-2 years\n- Direct job opportunity\n\n**Option 3: Polytechnic (Diploma)**\n- After Class 10\n- Engineering diploma\n- Duration: 3 years\n- Lateral entry to engineering\n\n**எப்படி decide செய்வது?**\n1. Interest என்ன?\n2. 10th marks based eligibility\n3. Career goal என்ன?\n4. Family situation consider\n\n**Guidance:**\n- School counselor\n- Career guidance centers\n- tnsdc.in for skill courses",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA026_TM",
+      "instruction": "School dropout-ஆகிவிட்டேன், படிப்பை continue செய்ய என்ன வழி?",
+      "current_output": "Options: 1) NIOS (National Institute of Open Schooling) - 10th/12th complete 2) TN State Open School - Tamil medium available 3) Private appearance through Distance Education 4) Skill training + later education. NIOS: www.nios.ac.in, exams twice a year, study at own pace. Age no bar. After 10th/12th: Regular college admission possible. Many successful people are NIOS students.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM010_TM",
+      "instruction": "Exam day-ல் sick ஆயிட்டேன், alternative option இருக்கா?",
+      "current_output": "Options vary by exam: Board exams - No re-exam, arrear attempt only. Competitive exams - Generally no re-test. College internal - Medical certificate submit, re-test possible. Medical emergency: 1) Get doctor certificate immediately 2) Inform exam authority same day 3) Apply for special consideration. Some exams: PWD/Medical emergency provisions exist. NEET/JEE: One attempt lost, next year continue. Prevention: Health priority before exams, insurance coverage.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO020_TG",
+      "instruction": "Infosys Foundation scholarship students-ku kidaikkuma?",
+      "current_output": "Infosys Foundation Programs: 1) Merit scholarships through partner NGOs 2) Rural education support 3) Research grants for PhD students 4) Infosys Prize - established researchers. Direct student scholarship: Through Buddy4Study partner programs. Engineering students: Campus recruitment preference. Apply: Check www.infosys.org annually for specific programs.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM009_TG",
+      "instruction": "Hall ticket missing, exam-ku poga mudiyumaa?",
+      "current_output": "Emergency solutions: 1) Download duplicate from exam portal (DigiLocker link) 2) Contact exam centre - they have candidate list 3) Carry Aadhaar + Photo ID as backup 4) School/College principal letter 5) Reach early, explain to centre supervisor. For board exams: School coordinator can help. For competitive exams: Most allow with ID proof + declaration. Prevention: Download multiple copies, keep in phone, email to self. Last resort: Exam board helpline.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH041_TG",
+      "instruction": "Competitive exam preparation-ku daily routine eppadi irukka venum?",
+      "current_output": "Ideal routine: 5:00 AM - wake up, fresh topics study (2-3 hrs). 8:00 AM - breakfast, current affairs. 9:00 AM - Practice/mock tests. 12:00 PM - lunch, short rest. 2:00 PM - revision, notes making. 5:00 PM - exercise/break. 6:00 PM - optional subjects. 9:00 PM - light revision, daily news. 10:00 PM - sleep. Weekly: 1 full mock test. Monthly: syllabus completion target vaiyunga.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE024_TG",
+      "instruction": "Coaching centre-kku anuppanuma, self-study poduma?",
+      "current_output": "Paiyan/ponnoda learning style paarunga. Self-disciplined-aa irundha self-study + online resources podhum. Otherwise coaching udhavum. Free government coaching (Naan Mudhalvan, TNPSC free coaching) try pannunga mudhalla.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM013_TM",
+      "instruction": "Scholarship apply பண்ணேன், status எப்படி check பண்றது?",
+      "current_output": "Status check methods: 1) NSP login - dashboard shows status 2) PFMS portal - payment tracking 3) State portal - respective department 4) SMS alerts (if registered) 5) College scholarship cell. Common statuses: Pending verification, Under process, Sanctioned, Disbursed, Rejected. Rejected: Check defect list, re-apply with correct documents. Timeline: 2-6 months from application. Grievance: Portal helpdesk option.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH026_TM",
+      "instruction": "தமிழ்நாடு அரசு வெளிநாடு படிப்புக்கு scholarship தருகிறதா?",
+      "current_output": "ஆம், BC/MBC/SC/ST மாணவர்களுக்கு: 1) BC/MBC Welfare Department - ₹20 lakh வரை 2) Adi Dravidar Welfare - SC மாணவர்களுக்கு full scholarship 3) CM's Special Scholarship. Central schemes: 1) National Overseas Scholarship (SC/ST) 2) MOMA Scholarship (Minorities). Apply through respective department websites. Merit-based selection.",
+      "category": "higher_studies",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SCHO028_TG",
+      "instruction": "Scholarship status eppadi check seivathu?",
+      "current_output": "Status check options: 1) NSP portal login - application status tab 2) PFMS portal (Public Financial Management System) - payment tracking 3) State scholarship portal - individual login 4) SMS alerts (registered mobile) 5) College scholarship cell. Payment delay: 2-3 months normal. Rejected aanaal: Defect list paarthu correct documents upload. Grievance: helpdesk on portal.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA025_TM",
+      "instruction": "Employment Exchange-ல் register செய்வது worth-ஆ?",
+      "current_output": "Benefits: 1) Government job notifications 2) Seniority based on registration date 3) Free career guidance 4) Skill training opportunities 5) Private job placement 6) Self-employment scheme guidance. Register: District Employment Office with certificates. Renewal: Every year or seniority lost. Documents: Educational certificates, community certificate, Aadhaar. Online renewal available now. Some government jobs require Employment Exchange registration.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO002_TM",
+      "instruction": "SC/ST மாணவர்களுக்கு என்னென்ன scholarships கிடைக்கும்?",
+      "current_output": "Adi Dravidar Welfare Department: 1) Pre-matric scholarship - ₹500-1,500/ஆண்டு 2) Post-matric scholarship - ₹3,000-10,000/ஆண்டு 3) Professional course - full fee + maintenance 4) PhD scholarship 5) Foreign study - ₹20 lakh 6) Free laptop 7) Hostel free 8) Books, uniform free. Apply: www.adwelfare.tn.gov.in. Income limit: ₹2.5 lakh/ஆண்டு. ஏறக்குறைய எல்லா படிப்புகளுக்கும் scholarship உள்ளது.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH022_TM",
+      "instruction": "IGNOU-ல் என்னென்ன படிப்புகள் உள்ளன?",
+      "current_output": "228+ programmes available. Popular ones: BA, B.Com, BCA, MBA, MCA, MA, M.Com, B.Ed, Certificate courses. சேர்க்கை: July & January batch. Online application: www.ignou.ac.in. Regional centre Chennai-ல் இருக்கிறது. Credit transfer facility உள்ளது. Government jobs-க்கு recognized degree.",
+      "category": "higher_studies",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "EXTE004_TM",
+      "instruction": "படிப்பை பாதியில் நிறுத்தியவர்கள் மீண்டும் படிக்க என்ன வழி?",
+      "current_output": "NIOS (National Institute of Open Schooling) மூலம் 10th, 12th படிக்கலாம். Tamil Nadu Open University-ல் degree பெறலாம். Bridge course, evening colleges, distance education options உள்ளன. வயது வரம்பு இல்லை.",
+      "category": "extended_topics",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SCHO017_TM",
+      "instruction": "Reliance Foundation Scholarship எப்படி வாங்குவது?",
+      "current_output": "Reliance Foundation Undergraduate Scholarship: UG 1st year students-க்கு ₹2 lakh over 4 years. Eligibility: Family income ₹2.5 lakh கீழ், JEE/NEET rank holders, 12th 60%+. Selection: Application + Interview. Apply: www.reliancefoundation.org. Scholarship Plus program: Leadership development, mentoring, internships included.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM028_TM",
+      "instruction": "Marks card-ல் name/DOB wrong, correct பண்ண எப்படி?",
+      "current_output": "Correction process: 1) Apply to examination board (DGE for board exams) 2) Documents: Original marks card, Aadhaar, birth certificate, school bonafide 3) Affidavit (court/notary) 4) Newspaper advertisement (name change) 5) Processing fee ₹100-500. Time: 15-30 days. Portal: Online application available on DGE website. For university: Controller of Examinations. Gazette notification: For legal name change.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_018_TG",
+      "instruction": "Final year-la irukken. Government job prepare pannanum. Campus placement-a vidalaamaa?",
+      "current_output": "Don't skip placement! Reasons: 1) Government job = uncertain timeline (1-3 years) 2) Private job = income while preparing 3) Age limit allows both 4) Financial independence. Strategy: Campus placement attend + clear any job → Join → Prepare TNPSC/SSC evenings/weekends → Clear govt exam → Resign → Join government. Many success stories of working professionals clearing exams. Private job experience also valued. Safety net important - family shouldn't struggle while you prepare.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA004_TM",
+      "instruction": "ITI படித்த பிறகு engineering சேரலாமா?",
+      "current_output": "ஆம், Lateral Entry scheme உள்ளது. ITI + 2 years relevant work experience அல்லது ITI + 1 year apprenticeship = Diploma 2nd year direct admission. Diploma முடித்த பிறகு = B.E./B.Tech 2nd year. LEET (Lateral Entry Entrance Test) சில states-ல் உள்ளது. TN-ல் marks basis lateral entry available. Career ladder: ITI → Diploma → B.E. → M.Tech.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM008_TM",
+      "instruction": "Board exam-ல் Re-totalling vs Re-valuation - என்ன difference?",
+      "current_output": "Re-totalling: Marks கூட்டுதல் மட்டும் check. Answer sheet re-read இல்லை. Cost: ₹50/subject. Time: 10-15 days. Success rate: Low. Re-valuation: Full paper re-evaluation by new examiner. Cost: ₹300-500/subject. Time: 30-45 days. Success rate: Higher if genuine mistake. Apply within: 15 days of result. Portal: DGE website. Choose wisely - re-valuation for major doubt only.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

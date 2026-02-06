@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 16,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PRAC015_TM",
+      "instruction": "Ragging face பண்றேன். என்ன செய்யணும்?",
+      "current_output": "Immediate action: 1) Don't comply with unreasonable demands 2) Note names, time, place 3) Report to Anti-Ragging Committee (every college has) 4) Online complaint: www.antiragging.in 5) Helpline: 1800-180-5522 (toll-free) 6) College principal/warden 7) Police if physical harm 8) UGC complaint portal. Protection: Your identity can be kept confidential. Punishment: Expulsion, criminal case against raggers. Don't suffer silently!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP002_TG",
+      "instruction": "Animation/VFX padippu career-ku nalladha?",
+      "current_output": "Growing industry! Courses: 1) B.Sc Animation 2) Diploma (Arena, MAAC, Frameboxx) 3) Certificate courses. Duration: 6 months - 3 years. Skills: Maya, 3ds Max, After Effects, Photoshop. Jobs: Animation studios, Game companies, Ad agencies, Film industry (VFX). Chennai: Major hub for animation studios. Salary: ₹15,000-40,000 starting. Freelancing possible. Portfolio = key to jobs.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE001_TG",
+      "instruction": "Kuraipaaduulla kuzhanthaikalukkana sirappu pallikal Tamil Naattil engu ullan?",
+      "current_output": "Ovvoru maavattathilum arasu sirappu pallikal ullan. NIEPMD (Adyar), hearing impaired schools, visually impaired schools, mentally challenged schools ellam irukku. Ellame free.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO018_TM",
+      "instruction": "LIC Golden Jubilee Scholarship என்ன?",
+      "current_output": "LIC Golden Jubilee Foundation Scholarship: Economically weaker section students-க்கு. Amount: ₹10,000-20,000/ஆண்டு. Eligibility: 10th 60%+ marks, family income ₹2 lakh கீழ். Special quota: LIC employees' children. Apply: Through LIC branch or www.buddy4study.com. Covers: School fees, books, uniform. Renewable annually based on marks.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP001_TM",
+      "instruction": "NEET Exam என்றால் என்ன? யார் எழுதலாம்?",
+      "current_output": "**NEET (National Eligibility cum Entrance Test):**\n\n**என்ன இது?**\n- Medical படிப்புகளுக்கான நுழைவுத் தேர்வு\n- NTA (National Testing Agency) நடத்துகிறது\n- ஒரே தேர்வு - All India + State quota\n\n**எந்த படிப்புக்கு?**\n- MBBS\n- BDS (Dental)\n- BAMS (Ayurveda)\n- BHMS (Homeopathy)\n- BUMS (Unani)\n- BSMS (Siddha)\n- BVSc (Veterinary)\n- B.Sc Nursing\n\n**தகுதி (Eligibility):**\n- Age: 17 years as on Dec 31 of admission year\n- No upper age limit (as of 2024)\n- Education: 12th pass with PCB (Physics, Chemistry, Biology)\n- Marks: General - 50%, OBC/SC/ST - 40%, PwD - 45%\n\n**Attempts:**\n- No limit on attempts\n\n**Medium:**\n- English, Hindi, Tamil உட்பட 13 languages\n\n**Application:**\n- Website: neet.nta.nic.in\n- Usually: December-January (for May exam)\n- Fee: ₹1,700 (General), ₹1,000 (SC/ST/PwD)\n\n**TN Specific:**\n- 7.5% reservation for Govt school students\n- State quota: 85% seats\n- All India quota: 15% seats",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA003_TG",
+      "instruction": "ITI padicha piragu enna velai kidaikkum? Salary evvalavu?",
+      "current_output": "Job opportunities: 1) Government - Railways, TNEB, PWD, Ordinance factories 2) Private - Hyundai, TVS, Ashok Leyland, L&T 3) Gulf countries - high demand 4) Self-employment - own workshop. Starting salary: ₹12,000-18,000/month. With experience: ₹25,000-40,000. Apprenticeship mudhalil seiyunga - stipend ₹8,000-12,000/month + experience.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP014_TM",
+      "instruction": "SSC Exams என்றால் என்ன? TN students apply பண்ணலாமா?",
+      "current_output": "**SSC (Staff Selection Commission) Exams:**\n\n**என்ன இது?**\n- Central Government jobs recruitment\n- All India level competition\n- TN students definitely apply பண்ணலாம்!\n\n**Major SSC Exams:**\n\n**1. SSC CGL (Combined Graduate Level):**\n- Posts: Inspector, Auditor, Tax Assistant\n- Eligibility: Any Degree\n- Age: 18-32 years\n- Salary: ₹44,900-1,42,400\n\n**2. SSC CHSL (Combined Higher Secondary Level):**\n- Posts: DEO, LDC, PA/SA\n- Eligibility: 12th pass\n- Age: 18-27 years\n- Salary: ₹25,500-81,100\n\n**3. SSC MTS (Multi Tasking Staff):**\n- Posts: Peon, Safaiwala, Gardener\n- Eligibility: 10th pass\n- Age: 18-25 years\n- Salary: ₹18,000-56,900\n\n**4. SSC GD Constable:**\n- Posts: BSF, CISF, CRPF, SSB, ITBP\n- Eligibility: 10th pass\n- Age: 18-23 years\n- Physical test required\n\n**5. SSC Stenographer:**\n- Posts: Stenographer Grade C & D\n- Eligibility: 12th pass\n- Skill test required\n\n**TN Students Advantage:**\n- Chennai posting preference possible\n- South zone vacancies\n- Tamil Nadu region allocation\n\n**Exam Pattern (CGL Tier-1):**\n| Section | Questions | Marks |\n|---------|-----------|-------|\n| Reasoning | 25 | 50 |\n| GK | 25 | 50 |\n| Quantitative | 25 | 50 |\n| English | 25 | 50 |\n| **Total** | **100** | **200** |\n\n- Duration: 1 hour\n- Negative: 0.5 marks\n- Online exam\n\n**Apply:** ssc.nic.in\n**TN Region:** SSC Southern Region, Chennai",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO024_TG",
+      "instruction": "Farmer family students-ku special scholarship ulladha?",
+      "current_output": "Agriculture family scholarships: 1) IFFCO Scholarship - ₹25,000/year 2) Kotak Kisan - ₹10,000-30,000 3) TNAU free education for farmers' children 4) Agriculture Department scholarships. Eligibility: Farmer certificate from VAO, small/marginal farmer category. Priority in agriculture courses. Krishi Vigyan Kendra (KVK) free training available. Apply through Agriculture office or online portals.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM002_TM",
+      "instruction": "Engineering counselling-ல் random number என்ன? எப்படி work ஆகும்?",
+      "current_output": "Random number: Same marks students-க்கு tie-breaker. System generated, not controllable. Priority: 1st - Cutoff marks, 2nd - Random number (if same marks). Example: You 195 cutoff, random 50000. Another person 195 cutoff, random 10000. They get priority. Impact: Matters only when competing for last few seats in popular colleges. Strategy: Higher marks = random number irrelevant. Focus on marks, not luck.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP006_TM",
+      "instruction": "Aviation/Pilot training எங்கே படிப்பது? Cost எவ்வளவு?",
+      "current_output": "Options: 1) Commercial Pilot License (CPL) - Flying schools 2) B.Sc Aviation 3) Air hostess/Cabin crew training. CPL institutes: Madras Flying Club, Rajiv Gandhi Aviation Academy. CPL cost: ₹25-40 lakh (high investment). Duration: 18 months - 2 years. Alternative: IAF through AFCAT/NDA (free training). Cabin crew: 6 months course, ₹1-2 lakh. Jobs with airlines after training.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA013_TM",
+      "instruction": "Computer courses free-யாக எங்கே படிக்கலாம்?",
+      "current_output": "Free computer training: 1) TNSDC IT courses - Web, Data entry, Tally 2) NIELIT (Government) - CCC, O Level 3) Digital India Programme - Basic computer 4) CSC (Common Service Centre) - Digital literacy 5) Library-based free classes. Online free: SWAYAM, NPTEL, Coursera (audit mode). Employment exchange computer labs free practice available. Apply through respective websites.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA024_TM",
+      "instruction": "ITI/Diploma holders-க்கு government jobs எவ்வளவு?",
+      "current_output": "ITI holder jobs: 1) Railway Technician 2) TNEB Wireman/Lineman 3) Defence (Technical) 4) Ordinance Factory 5) PSU technician posts. Diploma holder jobs: 1) SSC JE (Junior Engineer) 2) RRB JE 3) TNPSC JA/AE 4) PWD Junior Engineer 5) PSU engineers. Salary: ITI ₹20,000-35,000, Diploma ₹35,000-60,000. Prepare: Technical subjects + General knowledge. Many vacancies yearly.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP009_TM",
+      "instruction": "Chennai-ல் free coaching centres எங்கே இருக்கு?",
+      "current_output": "Free coaching Chennai: 1) Government Free Coaching Centre - Nungambakkam (UPSC, TNPSC) 2) Adi Dravidar Welfare coaching - Saidapet 3) BC/MBC coaching - Egmore 4) IAS Academy free batches - Anna Salai 5) Employment Exchange coaching - various locations. Apply: Respective department websites. Selection: Merit + income based. Also: Marina Library study hall, Connemara Library resources free.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP015_TM",
+      "instruction": "Naanu transgender. College admission-la discrimination face pannuren. Enna pannalaam?",
+      "current_output": "Your rights: 1) Transgender Persons Act 2019 - Equal education rights 2) Reservation for transgender in TN - 1% in education 3) Scholarship: Tamil Nadu Transgender Welfare Board scholarships 4) Discrimination complaint: National/State Human Rights Commission, UGC grievance. Support: Transgender welfare board, NGOs like Sangama, Nirangal. Legal help available. Don't give up - education is your right!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO027_TM",
+      "instruction": "Scholarship எந்த websites-ல் தேடுவது?",
+      "current_output": "முக்கிய websites: 1) scholarships.gov.in (NSP) - Government schemes 2) buddy4study.com - All scholarships aggregator 3) vidyalakshmi.co.in - Education loans + scholarships 4) respective state welfare department sites 5) University websites. Apps: Buddy4Study app, ScholarPlus. Set Google alerts for 'scholarship Tamil Nadu [year]'. Follow scholarship pages on social media.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_013_TM",
+      "instruction": "12th முடிஞ்சாச்சு, வீட்ல college வேண்டாம், கல்யாணம் பண்ணிக்கோன்னு சொல்றாங்க. நான் படிக்கணும்.",
+      "current_output": "Your education is your RIGHT! Support available: 1) Moovalur Ramamirtham - financial support for girl education 2) Free government college education 3) Women helpline: 181 4) District Women Protection Officer 5) NGOs: Pratham, CRY support. Convince family: Show scholarship opportunities, free education costs, earning potential after degree. Legal: Child Marriage Prevention Act (below 18 illegal). Study brings independence and better life. Don't give up your dreams!",
+      "category": "age_group_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SUPP018_TM",
+      "instruction": "Juvenile home-la irundhen. Ippo padikka chance irukkaa?",
+      "current_output": "Yes, absolutely! Rehabilitation includes education: 1) Continuation of education during detention 2) NIOS for school completion 3) Skill training provided 4) After release: Regular school/college admission possible 5) No mandatory disclosure of juvenile record. Support: Juvenile Justice Board, NGOs, Social Welfare Department. Records sealed - fresh start possible. Many have rebuilt lives through education. You deserve a second chance!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO004_TG",
+      "instruction": "First generation graduate scholarship eppadi peruvathu?",
+      "current_output": "Scheme: Parents yarumae degree padikkaadha family-oda mudhal graduate-ku. Amount: ₹2,000-5,000/year + fee concession. Eligibility: 1) Parents non-graduate certificate (Tahsildar) 2) Income ₹2 lakh kizha 3) UG course. Apply: College scholarship committee moolam. Documents: Parents education declaration, income certificate, community certificate, Aadhaar.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM010_TG",
+      "instruction": "Government school student NEET crack panna mudiyumaa?",
+      "current_output": "Absolutely yes! 7.5% reservation + determination = success. Resources: 1) Free coaching - Government NEET centres (apply through school) 2) Online free - NPTEL, SWAYAM, YouTube 3) NCERT books sufficient for Biology 4) Previous year papers - NTA website free. Success stories: Many govt school students top NEET. Challenges: English medium switch, lab exposure. Solutions: Tamil medium NEET option available, virtual labs online. Believe in yourself!",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC008_TG",
+      "instruction": "Semester exam-ku last minute preparation tips?",
+      "current_output": "Last week strategy: 1) Previous year papers - pattern identify 2) Important questions list make 3) Short notes revise, not new topics 4) Formula sheets ready 5) Sleep properly - memory consolidation 6) Light food, hydration 7) Morning revision of previous day 8) Group discussion for doubt clearing 9) Hall ticket, stationery ready. Avoid: All-night study, new topics, junk food, negative people. Trust your preparation!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_001_TG",
+      "instruction": "Madhiya Unavu Thittam (Mid-day Meal) pathi sollunga. En paiyan saappiduvana?",
+      "current_output": "Mid-day Meal Scheme: Government school students-ku free healthy lunch. Class 1-8 varai anaivarukum. Menu: Rice, dal, vegetables, egg (weekly 3 times), fruit. Cooking school-layae. Quality food - district officials inspect pannuvanga. Children grow healthy. Attendance increases. School-la serthaal automatic-aa kidaikkum.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO005_TG",
+      "instruction": "Free laptop scheme-ku eppadi apply seivathu?",
+      "current_output": "TN Government Free Laptop Scheme: College 1st year students-ku. Auto-selection based on: 1) Government/Aided college admission 2) +2 marks 3) Community (SC/ST/BC/MBC priority). Process: College alikkum list adippadiyil distribution. Thaniya apply seiya thevayillai. Laptop worth: ₹15,000-20,000. Pre-loaded educational software irukkum. Service warranty 3 years.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA011_TG",
+      "instruction": "PMKVY scheme enna?",
+      "current_output": "Central Government skill scheme. Features: 1) Free training - 200+ job roles 2) Certification - NSDC recognized 3) ₹500-2,000 reward on certification 4) Placement support 5) Recognition of Prior Learning (RPL) - existing skills-ku certificate. Duration: 150-300 hours. Training centers: Skill India centres across TN. Register: www.pmkvyofficial.org. Age: 15-45 years. 10th pass preferred.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM016_TG",
+      "instruction": "TNPSC Group 1/2/4 - enna viththiyaasam? Edhu easy?",
+      "current_output": "Groups comparison: Group 4 - 10th/12th pass, Clerk/Typist posts, easiest. Group 2/2A - Degree, Assistant/Accountant posts, medium. Group 1 - Degree, DSP/Deputy Collector, hardest. Exam pattern: All MCQ. Syllabus: 6th-12th TN textbooks + Current affairs. Group 4: 1.5 lakh+ applicants, 5000+ posts. Group 1: 50,000 applicants, 50-100 posts. Start with Group 4, then progress. Same preparation works for all.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP011_TM",
+      "instruction": "TNPSC-க்கு Free Coaching எங்கே கிடைக்கும்?",
+      "current_output": "**TNPSC Free Coaching Centers:**\n\n**1. Government Free Coaching:**\n\n**a) TNSF (TN Science Forum):**\n- Free TNPSC coaching\n- Residential programs\n- For SC/ST/MBC students\n- Apply: tnsf.org.in\n\n**b) Dr. Ambedkar Free Coaching:**\n- For SC/ST students\n- All TNPSC groups\n- District-level centers\n- Apply: adwelfare.tn.gov.in\n\n**c) BC/MBC Free Coaching:**\n- BC Welfare Department\n- All districts available\n- Apply: bcmbcmw.tn.gov.in\n\n**d) Minorities Free Coaching:**\n- Muslim, Christian students\n- Apply: tamilnaduminoritywelfare.org\n\n**2. University Free Coaching:**\n\n- Anna University\n- Madras University\n- Bharathiar University\n- Alagappa University\n- For students & alumni\n\n**3. District Collector Coaching:**\n- Free coaching in every district\n- Weekend classes\n- Apply through Collectorate\n\n**4. NGO/Trust Coaching:**\n\n| Organization | For |\n|--------------|-----|\n| Chanakya IAS Academy (Free) | Selected students |\n| Ravi IAS Academy (Scholarship) | Merit based |\n| Vetrii IAS (Free batches) | EWS students |\n\n**5. Online Free Resources:**\n\n| Platform | Content |\n|----------|--------|\n| tnpsc.gov.in | Official materials |\n| TNSF YouTube | Video classes |\n| Unacademy Free | Basic content |\n| Target TNPSC Channel | Full syllabus |\n\n**How to Apply:**\n1. Check respective website\n2. Meet eligibility criteria\n3. Submit documents (Community, Income)\n4. Selection test (some programs)\n5. Join batch\n\n**Documents Needed:**\n- Community Certificate\n- Income Certificate (< ₹2-3 lakh usually)\n- Educational certificates\n- Aadhaar\n- Photos",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

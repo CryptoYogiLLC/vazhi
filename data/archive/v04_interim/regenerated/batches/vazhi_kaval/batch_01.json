@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 1,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TG017",
+      "instruction": "Part time job-nu YouTube video like panna panam kidaikkum-nu Telegram group irukku",
+      "current_output": "Task-based scam ithu. Mudhal la 50-100 rupees kuduppanga, apram 'upgrade' panna investment kettuppanga. Thousands poirum. Join aagaadheenga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR026",
+      "instruction": "Scam la maatindhadu ku romba guilty feel aagudhu, family ku sollala. Emotional support eppidi get pannuradhu?",
+      "current_output": "Understanding: Scam victims experience real trauma - guilt, shame, anxiety, depression common. You are NOT stupid: Scammers are professionals, doctors/IIT/IAS officers get scammed, psychological manipulation is sophisticated. Steps: 1) Tell someone you trust (sharing reduces shame), 2) Join support groups (Facebook 'Cyber Crime Victims India', Reddit r/Scams), 3) Professional help - iCall 9152987821, Vandrevala 1860-2662-345, NIMHANS 080-46110007, Snehi Chennai 044-24640050, 4) Focus on action (complaints give control), 5) Forgive yourself (you trusted, that's not wrong). Family talk: Choose calm moment, focus on facts not self-blame, discuss recovery plan together.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS023",
+      "instruction": "Veetuku oru aalu vandhaan, 'SBI la irundhu ayya, senior citizen account verification, Aadhaar xerox, passbook, ATM card photo edukanum' nu. ID card kaatinaan, kudukkalama?",
+      "current_output": "Bank employees verification ku veetuku varaadhu ayya! ID card fake aa irukkum. Documents kuduthaa account takeover panniduvaanga. 'Verification' bank branch la nadakkum. Door la vara 'bank employees' avoid pannunga. SBI branch ku call panni verify pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS081",
+      "instruction": "WhatsApp message 'Reality show audition fee 2000. Selected get 1 lakh signing amount.' Reality show la chance irukka?",
+      "current_output": "Legitimate reality shows don't charge audition fees - they invest in production. Auditions at announced venues, not through random WhatsApp payments. 'Signing amount' promise is bait. Famous shows announce through official channels. Paid auditions are scams.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR007",
+      "instruction": "Tamil Nadu la cyber crime report panna specific contacts enna?",
+      "current_output": "State Cyber Crime Cell: DGP Office Complex, Mylapore, Chennai-4, Phone: 044-28512440, Email: ccps.tnpol@nic.in. District Cells: Chennai 044-28512440, Coimbatore 0422-2300106, Madurai 0452-2531500, Trichy 0431-2418717, Salem 0427-2211001, Tirunelveli 0462-2501500. Online: eservices.tnpolice.gov.in (Online FIR), Kavalan SOS App (Emergency). Special Cells: Women Cyber Crime 044-28592750, Child Online Safety 1098/childlineindia.org.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS059",
+      "instruction": "SMS vandhuchu 'COVID duty allowance pending. Send bank details for immediate transfer.' Allowance varalai, idhu genuine aa?",
+      "current_output": "COVID allowances processed through your hospital/health department payroll. Government has your bank details through salary account. Never send bank details via SMS for 'pending amounts'. Check with your accounts section for any arrears. Scammers exploiting healthcare workers' COVID service.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS008",
+      "instruction": "LinkedIn premium DM vandhuchu 'We need urgent freelancer for US project, 5000 USD/month. Share bank details for advance payment.' Too good to be true aa?",
+      "current_output": "Legitimate clients use proper freelancing platforms or company contracts. 'Advance payment needing bank details' is money mule recruitment. You could become complicit in money laundering. Real projects have clear scope, contracts, payment milestones.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS017",
+      "instruction": "Call vandhuchu 'Ministry of Health survey about clinic facilities. Need your registration number, PAN, bank account for incentive payment.' Government survey aa?",
+      "current_output": "Government surveys done through official department visits, not random calls asking bank details. Health Ministry uses NIC portals, not phone calls for data collection. Survey incentives never need bank account upfront. Verify from district health office.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT006",
+      "instruction": "Enna da, call vandhudhu - 'Unga SBI account block aairum innaiku raathiriku munnadhi KYC update pannunga' nu. OTP ellam keppanga. Enna pannuradhu?",
+      "current_output": "Fraudu da idhu! Bank kaaran phone la OTP keppaanaa? Keppaane keppaane! 'Innaiku block' nu bayamudhuthuvaanga paaru. Branch ku nee poi pesu, phone la enna details um kudukkaadhe. Fraudu gang da ivanga ellam.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS040",
+      "instruction": "Email vandhuchu 'MSME registration expiring. Renew with 15,000 fee or lose all benefits.' MSME certificate important for tenders, urgent aa?",
+      "current_output": "MSME registration (now Udyam) doesn't expire - it's permanent. Updation is free through udyamregistration.gov.in. Government registration never costs 15,000. Scammers know MSME benefits importance - exploiting business owners' compliance anxiety.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT021",
+      "instruction": "Call vannille - 'Ningade account block aakum, KYC update pannulle' nu. OTP choikkunnu. Entha cheyyum?",
+      "current_output": "Fraud alle idhu! Bank phone la OTP choikkillalle! 'Block aakum' nu bayappeduthunnu. Branch ku neeye poi pesu. Nagercoil, Marthandam la aalukal ipdi maatikittanga. Phone la details kodukkaadhe.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS028",
+      "instruction": "'Medical seat available - NRI quota remaining! Pay 50 lakh by tomorrow' urgent call வந்துச்சு. Genuine opportunity-ஆ?",
+      "current_output": "99% scam! Medical admission-ல crores fraud நடக்குது. 'Urgent payment' pressure தரும் scam tactic. NEET counselling மட்டும் official route. Unknown callers trust பண்ணாதீங்க. Police-க்கு report பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS079",
+      "instruction": "Call vandhudhu 'Media insurance special scheme from Press Club. 3000 annual for comprehensive coverage.' Insurance edukalama?",
+      "current_output": "Verify with your actual Press Club for any group insurance schemes. Independent 'media insurance' calls likely scams. Check PMJJBY/PMSBY for basic coverage at Rs 330-430. Real press clubs have proper membership processes, not cold calls.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS074",
+      "instruction": "Discord la someone 'trade skins' offer pannaan. I go first nu sonnaan since 'I have more reputation.'",
+      "current_output": "'I have reputation, you go first' classic scam line. Trade pannina - they block you, items gone. Use official trading systems with protection. Discord/random trades = high scam risk. If seems unfair, don't trade.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS045",
+      "instruction": "Matrimony site la US ponnu, visa problem nu 50K kekkudhu saami. Genuine aa?",
+      "current_output": "Scam saami! Meet pannama, family verify pannama money anuppaadheenga. 'Visa emergency' classic excuse. Video call request pannunga - avoid pannaa scam confirm.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS050",
+      "instruction": "Phone vandhuchu 'PM Kisan installment problem. Pay 500 service charge to fix account issue.' PM Kisan money varalai, idhu genuine call aa?",
+      "current_output": "PM Kisan payments through DBT - no service charge. Check status at pmkisan.gov.in with Aadhaar. If payment delayed, contact agriculture department. Government schemes never need 'service charges'. Scammers target farmers knowing they depend on these payments.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS002",
+      "instruction": "LinkedIn la oru IT recruiter message pannirukku 'Senior Developer role at Microsoft, $150K package. Send resume and current company credentials for background verification.' Legit recruiter aa?",
+      "current_output": "Never share company credentials for 'background check'! Real recruiters ask for resume, not passwords. Microsoft recruits through official channels with @microsoft.com emails. This is credential harvesting disguised as recruitment.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR019",
+      "instruction": "Video call screenshot eduthu blackmail pannuraanga. Report panna bayam - video spread aagumaa?",
+      "current_output": "Critical understanding: Paying NEVER stops blackmail - increases it. Reporting DOES NOT spread content. Scammers rarely actually share (want money, not revenge). You're VICTIM, not criminal. Immediate: DO NOT PAY, DO NOT ENGAGE, document everything, secure accounts (change passwords, 2FA). Reporting: cybercrime.gov.in → 'Cyber Crime Against Women' (anonymous option), Women Helpline 181/1091, Platform report to remove content. FIR Sections: 384 IPC (Extortion), 506 IPC (Intimidation), 67A IT Act. Support: IT for Change, Cyber Peace Foundation. Your image is YOUR property.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS036",
+      "instruction": "Father passed away, LIC claim file panrom. 'LIC claim specialist' call pannaan - 'Fast processing, documents handle pannuren, 5% commission' nu.",
+      "current_output": "LIC claim process straightforward - specialist vendaam. 5% of 10 lakhs = 50,000 - significant amount. Claim agents documents misuse pannalam. LIC branch la direct submit pannunga - they guide for free. 'Specialists' mostly scammers.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT010",
+      "instruction": "WhatsApp group la add aanaen - stock tips kuduppaanga. Admin profit screenshots post pannuvaar, members ellam 'thanks anna 50K profit' nu solluvaanga. Invest pannalaama saami?",
+      "current_output": "'Pig butchering' scam saami idhu. Screenshots fake, 'members' ellam gang part dhaan. Small withdrawal allow pannuvaanga first - trust build panna. Big amount pottaa - 'technical issue', 'tax pay pannunga' nu mudiyaadha loop. SEBI registered brokers mattum use pannunga - Zerodha, Groww. RS Puram la oru textile merchant ipdi 15 lakh lose pannitaar.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS033",
+      "instruction": "Call vandhuchu 'Legal aid society registration mandatory for all advocates. Pay 3000 registration fee.' Idhu genuine requirement aa?",
+      "current_output": "Legal aid registration through District Legal Services Authority (DLSA), free of cost. Advocate registration only needed once with Bar Council. Legal Services Authority never charges fees from advocates. Visit your district court's legal services authority for genuine enrollment.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR001",
+      "instruction": "Scam la maatikitten nu realize aana udane enna pannanum?",
+      "current_output": "GOLDEN HOUR - First 1 hour most critical! Step 1 (0-5 min): STOP all communication, block scammer. Step 2 (5-15 min): Call BANK 24/7 helpline, freeze account, report unauthorized transaction. Step 3 (15-30 min): Call Cyber Crime Helpline 1930. Step 4 (30-60 min): File FIR at cybercrime.gov.in. Within 24 hours action = 40-50% recovery chance. 72 hours later = only 10-15% chance.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS033",
+      "instruction": "Property register panna porren. 'Sub-registrar office agent' call pannaan - 'Fast track registration, avoid queue, 10,000 extra' nu.",
+      "current_output": "Sub-registrar office la official 'agents' kidaiyaadhu. 'Fast track' bribe implication - illegal. Money vaangitu normal queue la nikka veppanga or kaanama poiruvaanga. Official slot booking through appointment vaangunga. 'Agents' avoid pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS024",
+      "instruction": "NEET result varaadhu, panicked aa irukken. 'Management quota seat guaranteed - MBBS 50 lakhs, no donation receipt' nu call vandhudhu. Desperate aa irukken, trust pannalama?",
+      "current_output": "'Guaranteed seat without proper process' impossible. Management quota transparent fees irukkum with receipts. 'No receipt' = illegal = scam. 50 lakhs vaangitu seat varaadhu, complain panna mudiyaadhu (no receipt). Desperation exploit pannuvaanga - official counselling wait pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS016",
+      "instruction": "SMS vandhudhu - 'Dear Customer, your SBI account will be blocked. Update KYC immediately: [link]'. Reading glasses illa, pera kitta padikka sonneen, genuine aa?",
+      "current_output": "Fake SMS ayya! SBI official SMS la suspicious links anuppaadhu. 'Account blocked' bayamudhuthal tactic. Link click pannina fake website - login details enter pannina account empty aagum. Ignore pannunga. Doubt irundhaa SBI branch ku ponga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

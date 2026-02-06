@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 9,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH061_TG",
+      "instruction": "Doctor-mela criminal case podalaamaa?",
+      "current_output": "Yes, for: 1) Death due to negligence (Section 304A IPC / Section 106 BNS), 2) Grievous hurt (Section 338 IPC), 3) Hurt (Section 337 IPC). Punishment: 304A - 2 years imprisonment + fine. Requirement: Gross negligence, not just error. Supreme Court: Doctors shouldn't be arrested for bona fide errors. But criminal recklessness = liable. FIR: Police can register on complaint.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH177_TM",
+      "instruction": "Skin diseases-க்கு Siddha effective-ஆ?",
+      "current_output": "Yes! Siddha strong for skin: Psoriasis (Kalanjaga Padai), Eczema (Karappan), Vitiligo (Venpulli), Fungal infections, Acne. Treatments: 1) Internal medicines - blood purifiers, 2) External - specialized oils (Karappan Thailam, Punga Thailam), 3) Pattru (poultice), 4) Diet modifications. Duration: Chronic conditions need 3-6 months. Advantage: Treats root cause, not just symptoms. NIS: Special skin clinic.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH094_TM",
+      "instruction": "Doctor prescription எவ்வளவு நாள் valid?",
+      "current_output": "General rule: 1) Acute illness prescription - use immediately, 2) Chronic medicines - usually for prescribed duration (30-90 days), 3) Controlled substances - single use only. Refills: Some pharmacies refill for chronic conditions (diabetes, BP) without new prescription. Best practice: Regular doctor checkup for chronic medicines. Expired prescription: Pharmacist discretion, usually won't dispense.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH138_TM",
+      "instruction": "Infertility treatment government hospital-ல் available-ஆ?",
+      "current_output": "Limited but available. Government: 1) Basic infertility workup - free at medical college hospitals, 2) Some IUI facilities, 3) Counseling. IVF: 1) Limited government centres (Institute of Obstetrics - Chennai), 2) Subsidized at some, 3) Mostly private (expensive). CMCHIS: Covers some infertility procedures. PM-PMSBY: Assisted reproduction not fully covered yet. Cost: IVF privately Rs.1-3 lakhs per cycle.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH150_TG",
+      "instruction": "Child choking - enna seyyanum?",
+      "current_output": "If can cough: Encourage coughing. If can't cough/breathe: Infant (<1 year) - 5 back blows + 5 chest thrusts. Child (>1 year) - Heimlich maneuver: Stand behind, fist above navel, quick upward thrusts. Unconscious: Start CPR, call 108. Prevention: No small objects, cut food into small pieces, supervise eating. Learn CPR: Red Cross, hospitals conduct training.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH178_TG",
+      "instruction": "Arthritis/joint pain-kku Siddha treatment enna?",
+      "current_output": "Effective for: Osteoarthritis (Moottu Vaatham), Rheumatoid arthritis (Ama Vaatham), Gout (Vali Azhal Keel Vayu). Treatments: 1) Internal - Rasagandhi Mezhugu, Sallaki, 2) External - Kottamchukkadi Thailam, Pinda Thailam, 3) Thokkanam (specialized massage), 4) Varmam therapy, 5) Ottradam (fomentation), 6) Kizhi (poultice massage). Diet: Avoid sour, cold foods. Duration: 1-3 months typically.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH102_TG",
+      "instruction": "Rare disease medicine eppadi kidaikkum?",
+      "current_output": "Challenges: Expensive, not always available in India. Options: 1) Government policy: Free treatment for some rare diseases (up to Rs.50 lakhs), 2) Crowdfunding platforms, 3) Pharma company compassionate access programs, 4) Import license for unavailable drugs, 5) Clinical trials. Centers: AIIMS, CMC Vellore have rare disease programs. Apply: Through treating hospital's rare disease cell.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH050_TG",
+      "instruction": "Doctor wrong treatment koduthaanga, sue pannalaamaa?",
+      "current_output": "Yes, if negligence proved. Options: 1) Consumer Forum (compensation), 2) Civil court (damages), 3) Criminal court (if death/grievous hurt), 4) Medical Council (disciplinary action). Proof needed: Medical records, expert opinion, treatment protocol violation. Not every bad outcome = negligence. Consult medical-legal expert before proceeding. Time limit: 2-3 years.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH056_TG",
+      "instruction": "Expert witness eppadi arrange panradhu?",
+      "current_output": "Expert = Doctor in same specialty who can opine on standard of care. Finding: 1) Through medical-legal lawyer, 2) Retired senior doctors, 3) Medical college professors. Cost: Fee for opinion + court appearance. Report: Written opinion on whether standard of care met. Court: May be cross-examined. Important: Expert from same specialty (surgeon for surgery case).",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH193_TM",
+      "instruction": "Tamil Nadu-ல் Ayurveda hospital எங்கே இருக்கு?",
+      "current_output": "TN Ayurveda facilities: 1) Arignar Anna Government Hospital of Indian Medicine, Chennai - Multi-AYUSH, 2) District AYUSH hospitals - Ayurveda unit available in most, 3) Selected Taluk dispensaries. Private: Many Kerala-based chains have branches (Arya Vaidya Sala, AVP). Note: TN has stronger Siddha infrastructure - Ayurveda less than Kerala. Integrated: Some allopathic hospitals have AYUSH wings with Ayurveda.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH139_TM",
+      "instruction": "Surrogacy legal-ஆ? Rules என்ன?",
+      "current_output": "Surrogacy Act 2021 rules: 1) Only altruistic surrogacy (no payment beyond expenses), 2) Commercial surrogacy banned, 3) Surrogate: Married woman, own child, related to couple, 4) Couple: Indian, married 5 years, medical need, 5) Single women/men: Not allowed. Registration: Surrogacy clinics must register. Certificate: National/State Surrogacy Board certification needed. International: Surrogacy for foreigners banned.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH225_TM",
+      "instruction": "Pranayama types and benefits என்ன?",
+      "current_output": "Main Pranayamas: 1) Anulom-Vilom (alternate nostril) - balance, calm, 2) Kapalbhati - energizing, weight loss, detox, 3) Bhramari (bee breath) - stress, sleep, 4) Ujjayi - focus, warmth, 5) Sheetali - cooling, BP reduction. Benefits: Lung capacity, stress relief, concentration, immunity. Start: 5-10 minutes daily. Precautions: 1) Empty stomach, 2) No forcing, 3) Heart/BP patients - gentle only, 4) Pregnancy - specific guidance needed.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH131_TM",
+      "instruction": "Safe abortion எங்கே கிடைக்கும்? Cost என்ன?",
+      "current_output": "Safe facilities: 1) Government hospitals - free, 2) Approved private clinics (check registration), 3) Medical college hospitals. Cost: Government = free. Private = Rs.3,000-15,000 (depends on weeks, method). Method: 1) Medical (pills) - early pregnancy, 2) Surgical - later stage. Unsafe abortion risks: Infection, hemorrhage, infertility, death. Never go to unregistered places.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH142_TG",
+      "instruction": "Menstrual hygiene products free-yaa kidaikkumaa?",
+      "current_output": "Government schemes: 1) TN: Subsidized sanitary napkins at fair price shops, 2) School girls: Free sanitary napkins through schools, 3) Anganwadi: Distribution to adolescent girls. Jan Aushadhi: Cheap sanitary napkins (Rs.1/pad). NGOs: Many distribute free. Machines: Napkin vending machines in some government offices, colleges. Menstrual leave: Some TN government offices have period leave policy.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH133_TG",
+      "instruction": "Sex determination test legal-aa? Punishment enna?",
+      "current_output": "ILLEGAL! PCPNDT Act 1994. Prohibited: 1) Sex determination of fetus, 2) Disclosure of sex, 3) Advertisement for sex selection. Punishment: 3-5 years jail + Rs.10,000-1 lakh fine. Who's punished: Doctor, lab, pregnant woman (if complicit), person who seeks test. Ultrasound: Must NOT reveal sex - if revealed, report to authorities. Female feticide: Serious crime - declining sex ratio issue.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH089_TM",
+      "instruction": "Medicine expiry ஆனா use பண்ணலாமா?",
+      "current_output": "NO! Expired medicine risks: 1) May not work (lost potency), 2) May become toxic, 3) Can cause adverse reactions. Law: Selling expired medicine = criminal offence. Check: Expiry date on strip/bottle before purchase. If sold expired: 1) Return to pharmacy, 2) Drug Inspector complaint, 3) Consumer Forum. Storage: Keep as per instructions - some need refrigeration.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH060_TM",
+      "instruction": "Case எத்தனை years ஓடும்? Settlement பண்ணலாமா?",
+      "current_output": "Timeline: Consumer Forum 1-3 years, Civil court 5-10 years, Criminal 3-7 years. Settlement: 1) Lok Adalat (mutually agreed), 2) Mediation (court-annexed), 3) Direct negotiation. Benefits: Faster resolution, certain outcome, lower legal costs. Caution: Don't settle too low - get legal opinion on fair amount. Hospital insurance: Usually pushes for settlement.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH058_TG",
+      "instruction": "Medical negligence-kku evvalavu compensation kidaikkum?",
+      "current_output": "Depends on: 1) Severity of injury/death, 2) Age of victim, 3) Earning capacity, 4) Future medical needs, 5) Mental agony. Components: 1) Medical expenses (past + future), 2) Loss of income, 3) Pain and suffering, 4) Disability compensation, 5) Loss of consortium (spouse), 6) Punitive damages (gross negligence). Range: Rs.5 lakhs to Rs.5+ crores. Death: Multiplier method based on age and income.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH216_TM",
+      "instruction": "Kabasura Kudineer - COVID-க்கு effective-ஆ?",
+      "current_output": "Government approved: For COVID prevention and mild symptoms. Ingredients: 15 herbs including Kabasuram, Adathodai, Chukku, etc. Benefits: Respiratory immunity, cough, cold. Preparation: Same as Nilavembu - boil powder, strain. Dosage: 60ml twice daily. Research: CCRS conducted clinical trials. Note: 1) Not substitute for COVID vaccine, 2) Severe COVID = hospital treatment, 3) Prevention + mild symptoms only. Available: Government free distribution, pharmacies.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH006_TG",
+      "instruction": "Government hospital-la free-yaa treatment kidaikkumaa?",
+      "current_output": "Yes! Government hospitals = Free treatment for all. Free services: 1) OPD consultation, 2) Basic tests (blood, urine, X-ray), 3) Medicines (available stock), 4) Surgery (non-cosmetic), 5) Emergency care, 6) Delivery, 7) Vaccinations. Paid: Special rooms, specific tests (MRI/CT in some), outside medicines. Quality: Varies - GH Chennai, Madurai Medical College = good facilities.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH062_TM",
+      "instruction": "Postmortem report எப்படி challenge பண்றது?",
+      "current_output": "Challenge options: 1) Second opinion from forensic expert, 2) Exhumation and re-autopsy (court order needed), 3) Cross-examination of autopsy doctor, 4) Expert witness contradiction. Grounds: 1) Incomplete examination, 2) Wrong conclusions, 3) Procedural violations, 4) Bias. Important: Video recording of autopsy now mandatory in many cases. Evidence: Preserve body photos if possible.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH134_TM",
+      "instruction": "Doctor sex சொன்னார்/கேட்டார் - complain எங்கே?",
+      "current_output": "Report immediately! Complaint to: 1) District Appropriate Authority (Collector office), 2) State Supervisory Board (DHS), 3) Police FIR, 4) Medical Council. Evidence: If possible, record/witness. Confidential complaint: Identity protected. Reward: Some states offer reward for reporting. Action: Center sealed, license cancelled, criminal prosecution. Even asking = offence for both parties.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH154_TG",
+      "instruction": "Medicine missed dose - double dose edukkalaamaa?",
+      "current_output": "Generally NO! Rules vary: 1) Most medicines - take when remembered, skip if close to next dose, 2) Never double dose unless doctor says, 3) Blood pressure/diabetes - specific rules, 4) Antibiotics - complete course important. Dangerous to double: Blood thinners, heart medicines, insulin. Safe practice: 1) Set reminders, 2) Pill boxes, 3) Ask pharmacist/doctor specific instructions. If unsure: Call doctor before taking.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH072_TM",
+      "instruction": "COVID போல emergency-ல் price capping இருக்குமா?",
+      "current_output": "Government can cap prices in emergencies. COVID example: TN government capped - room charges, oxygen, medicines, CT scan rates. Authority: Epidemic Diseases Act, Disaster Management Act. Violation: License suspension, heavy fines. Current: Some COVID caps may still apply. Check: DHS notifications. Overcharging complaint: DHS, Consumer Forum.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH230_TM",
+      "instruction": "Weight loss-க்கு natural-ஆ என்ன பண்ணலாம்? Gym போக time இல்ல",
+      "current_output": "No gym needed! Natural weight loss: 1) Morning warm water + lemon + honey, 2) Green tea/Jeera water instead of tea/coffee, 3) Dinner before 7 PM, 4) Walk 30 mins daily (morning/evening), 5) Reduce rice, increase vegetables, 6) No packaged snacks - nuts, fruits instead, 7) Intermittent fasting (16:8) if suitable. Apps: Step counter helps. Consistency: 1-2 kg/month loss is healthy and sustainable. Quick fix: Usually temporary and unhealthy.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

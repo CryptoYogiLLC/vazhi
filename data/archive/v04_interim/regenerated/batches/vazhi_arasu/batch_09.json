@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 9,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SC002",
+      "instruction": "BC/MBC மாணவர்களுக்கு என்ன scholarship உண்டு?",
+      "current_output": "Tamil Nadu BC/MBC scholarship: Tuition fee, maintenance allowance கிடைக்கும். தமிழ்நாடு scholarship portal-ல் apply செய்யவும். Caste certificate, income certificate தேவை.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR014",
+      "instruction": "Passport first time apply pannanum - complete process enna?",
+      "current_output": "Step 1 - Online Registration:\n1. passportindia.gov.in → 'New User Registration'\n2. Create account\n3. Login\n\nStep 2 - Fill Application:\n1. 'Apply for Fresh Passport'\n2. Select: Normal/Tatkaal\n3. Fill: Personal, Family, Address, Emergency contact\n4. Save and continue\n\nStep 3 - Book Appointment:\n1. Select PSK (Passport Seva Kendra)\n2. Choose date/time\n3. Pay: Normal 36 pages ₹1,500, 60 pages ₹2,000, Tatkaal +₹2,000\n4. Print Application Receipt\n\nStep 4 - PSK Visit:\nDocuments: Printed application, Aadhaar, PAN, Voter ID/DL, Birth Certificate/SSLC, Address proof (EB bill/Bank statement)\n\nAt PSK: Token → Document verification → Biometric → Photo → Final verification → Acknowledgment\n\nStep 5 - Police Verification:\n- Police visit address (1-2 weeks)\n- Keep documents ready\n- Neighbors may be asked\n\nStep 6 - Delivery:\n- Speed Post\n- Track: passportindia.gov.in\n- Normal: 15-30 days\n- Tatkaal: 1-7 days\n\nTips: Same name spelling in all docs, Recent address proof, Reach PSK 15 mins early",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS016",
+      "instruction": "Ayushman Bharat (PM-JAY) endraal enna?",
+      "current_output": "₹5 lakh free treatment. Coverage: ₹5 lakh per family per year. Eligibility: BPL families as per SECC 2011 data. Treatments: 1,500+ procedures covered. Check eligibility: pmjay.gov.in → Am I Eligible, Enter Aadhaar/Ration Card number. Get card: Ayushman Mitra/Government Hospital, Need Aadhaar + Ration Card + Photo, Free. In TN: Integrated with CMCHIS",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PAN010",
+      "instruction": "Ondrukku merpatta PAN irundhaal enna seyvadhu?",
+      "current_output": "Illegal! ₹10,000 penalty possible. To surrender duplicate PAN: 1. onlineservices.nsdl.com → 'Request for New PAN Card or/and Changes' 2. In Item 11, write PAN numbers to surrender 3. Send original PAN Cards 4. Fee: ₹107. Keep only one PAN",
+      "category": "pan_card_bilingual",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS036",
+      "instruction": "Pradhan Mantri Matru Vandana Yojana (PMMVY) endraal enna?",
+      "current_output": "Support for pregnant women. Amount: ₹5,000 (in 3 installments) - ₹1,000 pregnancy registration (within 150 days), ₹2,000 - 6 month checkup, ₹2,000 - birth registration + vaccination. Eligibility: Women having first child. Apply: Nearby Anganwadi/Government Hospital. Need MCP Card, Aadhaar, Bank Account. In TN: Additional Dr. Muthulakshmi Maternity Benefit Scheme (₹18,000)",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNHO006",
+      "instruction": "TN Slum Clearance Board veedu eppadi peruvadhu?",
+      "current_output": "Rehabilitation for slum-dwellers. Eligibility: 10+ years in recognized slum, Name in survey. Types: In-situ development (same location), Resettlement (new location). Cost: Free or subsidized (based on income). Facilities: Basic amenities - water, electricity, toilet. Apply: TNSCB office/Local body. Documents: Slum survey ID, Aadhaar, Ration card. Projects: Multi-storey tenements in Chennai, other cities.",
+      "category": "tn_housing",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNSW006",
+      "instruction": "TN Widow Pension evvalavu? Eligibility enna?",
+      "current_output": "Monthly pension for widows. Amount: ₹1,000/month (State) + ₹300 (Central IGNWPS). Eligibility: 18-60 years widow, annual income below ₹72,000, not remarried. Destitute Widow: ₹1,500/month. Apply: Panchayat/Taluk office. Documents: Husband death certificate, Age proof, Income certificate, Aadhaar. 60+: Transferred to IGNOAPS.",
+      "category": "tn_social_welfare",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA037T",
+      "instruction": "Jan Dhan Account endraal enna?",
+      "current_output": "FREE zero-balance bank account for any Indian. Benefits: Free RuPay card, ₹2 lakh accident insurance, ₹30,000 life insurance (new accounts), overdraft up to ₹10,000, DBT transfer enabled. Open at any bank/Bank Mitra with just Aadhaar or Voter ID.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "REF007",
+      "instruction": "மத்திய அரசு உதவி எண்கள் என்ன?",
+      "current_output": "Aadhaar: 1947, PAN/Income Tax: 1800-180-1961, PM-KISAN: 155261, Ayushman Bharat: 14555, NSP Scholarship: 0120-6619540, PMKVY Skill: 1800-123-9626, Consumer: 1915, Women Helpline: 181, Cyber Crime: 1930",
+      "category": "reference_directory",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SLE004",
+      "instruction": "Naan thirumaanam seiya porein. Marriage registration, documents maatram, benefits ellam ennenna seiyya vendum?",
+      "current_output": "Before marriage:\n1. Marriage Assistance Scheme - Apply 40 days before (if eligible) - 8 gram Gold + ₹25,000-50,000\n\nAfter marriage (within 1 month):\n2. Marriage Registration - Sub-Registrar Office - ₹100-500\n\nDocument changes (for bride):\n3. Aadhaar - Name & Address change at ASK (₹50)\n4. PAN Card - Name change online (₹107)\n5. Voter ID - Form 8 at voters.eci.gov.in\n6. Passport - Re-issue with new name (₹1,500)\n7. Bank Account - Name & Nominee change\n8. Ration Card - Add to husband's or new card\n9. Insurance/EPF - Nominee update",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HE009",
+      "instruction": "Heart surgery-க்கு CMCHIS use செய்யலாமா?",
+      "current_output": "ஆம், cardiac surgeries CMCHIS-ல் covered. Bypass, valve replacement, angioplasty எல்லாம் cashless. Empaneled cardiac hospitals-ல் treatment பெறலாம். Pre-authorization தேவை.",
+      "category": "health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA015",
+      "instruction": "வாக்காளர் அடையாள அட்டை எப்படி பெறுவது?",
+      "current_output": "Apply at voters.eci.gov.in or Voter Helpline App. Fill Form 6. Documents: Age proof (18+ on Jan 1), address proof, passport photo. BLO will visit for verification. e-EPIC downloadable on app. Time: 30-45 days. FREE.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA033",
+      "instruction": "புதிய மின் இணைப்பு எப்படி பெறுவது?",
+      "current_output": "Apply at nsc.tnebnet.org with ownership proof (sale deed/rent agreement), Aadhaar, building certificate. Inspection by TANGEDCO. Charges: Deposit ₹500-15,000 based on load. Time: 7-15 days. Agricultural connection: FREE electricity for farming.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "REF003",
+      "instruction": "முக்கிய உதவி எண்கள் என்ன?",
+      "current_output": "Emergency: 112, Women Helpline: 181, Child Helpline: 1098, CM Cell: 1100, Legal Aid: 15100, Consumer: 1915, Electricity: 94987-94987, Water: 1916, Ration Card: 1967",
+      "category": "reference_directory",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA015T",
+      "instruction": "Voter ID eppadi peruvadhu?",
+      "current_output": "Apply at voters.eci.gov.in or Voter Helpline App. Fill Form 6. Documents: Age proof (18+ on Jan 1), address proof, passport photo. BLO will visit for verification. e-EPIC downloadable on app. Time: 30-45 days. FREE.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA009T",
+      "instruction": "Death certificate eppadi peruvadhu?",
+      "current_output": "Register within 21 days at place of death's Municipality/Panchayat - FREE! Documents: Medical death certificate, deceased's Aadhaar, informant's ID. After 21 days: Late fee + affidavit. Online at tnreginet.gov.in.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE007",
+      "instruction": "நான் சிறிய கடை / தொழில் ஆரம்பிக்க விரும்புகிறேன். என்னென்ன license, loan, benefits கிடைக்கும்?",
+      "current_output": "Step 1 - Registration:\n1. Udyam Registration (MSME) - udyamregistration.gov.in - இலவசம்\n2. GST Registration - ₹40 லட்சம்+ turnover-க்கு கட்டாயம்\n\nStep 2 - Local Licenses:\n3. Trade License - நகராட்சி - ₹500-5,000\n4. Shop & Establishment - tnlabour.tn.gov.in - ₹150-500\n5. FSSAI License - உணவு வணிகம் - fssai.gov.in\n\nStep 3 - Loans & Subsidies:\n6. PMEGP - ₹50 லட்சம் வரை - 15-35% subsidy\n7. MUDRA Loan - ₹10 லட்சம் வரை - No collateral\n8. NEEDS (TN) - ₹25 லட்சம் வரை - 25-30% subsidy\n9. Stand Up India (SC/ST/Women) - ₹1 கோடி வரை\n\nStep 4 - Ongoing:\n10. GST Returns - Monthly/Quarterly\n11. Income Tax - Yearly",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA024T",
+      "instruction": "Senior citizens-ku Bus/Train concession enna?",
+      "current_output": "TN State Bus: FREE travel in ordinary buses for 60+ (just show age proof). Railway: 40% discount for men 60+, 50% for women 58+ (auto-applied on IRCTC). Air India: 50% on select routes for 63+. Always carry age proof.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS022",
+      "instruction": "Pradhan Mantri Ujjwala Yojana (PMUY) endraal enna?",
+      "current_output": "Free LPG Connection. Eligibility: BPL families, SC/ST, PM-Awas beneficiaries. Benefits: Free LPG Connection, First Cylinder + Stove deposit-free, EMI option for cylinder cost. Apply: Nearby LPG Distributor (HP, Bharat, Indane), pmuy.gov.in. Documents: Aadhaar, BPL Card, Bank Account. Refill Subsidy: Comes directly to Bank Account via DBT",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNE007",
+      "instruction": "TN இலவச Bus Pass திட்டம் மாணவர்களுக்கு என்ன?",
+      "current_output": "அனைத்து மாணவர்களுக்கும் இலவச பேருந்து பயணம். Coverage: School students - Govt/Private, College students - UG/PG/Professional. Type: Free travel in ordinary buses. Process: School/College-ல் apply, ID card வாங்க வேண்டும். Documents: Bonafide certificate, Photo, Aadhaar. Validity: Academic year. Not for: AC buses, special buses.",
+      "category": "tn_education_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA002",
+      "instruction": "ஆதாரில் முகவரி மாற்றம் எப்படி செய்வது?",
+      "current_output": "Online: myaadhaar.uidai.gov.in → Login with OTP → Update Address → Upload new address proof → Pay ₹50. Address proof can be EB bill, bank statement, rent agreement. If no document, use Address Validation Letter (AVL) method where verifier at new address confirms.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA037",
+      "instruction": "Jan Dhan Account என்றால் என்ன?",
+      "current_output": "FREE zero-balance bank account for any Indian. Benefits: Free RuPay card, ₹2 lakh accident insurance, ₹30,000 life insurance (new accounts), overdraft up to ₹10,000, DBT transfer enabled. Open at any bank/Bank Mitra with just Aadhaar or Voter ID.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA032",
+      "instruction": "FSSAI License எப்படி பெறுவது?",
+      "current_output": "Mandatory for food business. Basic (up to ₹12L turnover): ₹100/year. State (₹12L-₹20Cr): ₹2,000-5,000/year. Apply at fssai.gov.in with ID proof, address proof, business proof. Display license number on food products. Renewal annual.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HE005",
+      "instruction": "Cancer treatment-க்கு government help உண்டா?",
+      "current_output": "CMCHIS-ல் cancer treatment covered. Chief Minister's Public Relief Fund-லும் apply செய்யலாம். Tata Memorial போன்ற hospitals-ல் subsidized treatment உண்டு. Social worker-ஐ contact செய்யுங்கள்.",
+      "category": "health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR004",
+      "instruction": "PM-KUSUM scheme endraal enna? Solar pump eppadi vaanguvadhu?",
+      "current_output": "Solar Energy scheme for farmers. Component A: Install solar power plants (500kW-2MW), sell electricity to grid. Component B: Standalone solar pumps (up to 7.5 HP), 60% subsidy (Central 30% + State 30%), farmer pays only 40%. Component C: Convert existing pump to solar. Apply: mnre.gov.in or State DISCOM. Benefit: Free electricity, reduced carbon footprint.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

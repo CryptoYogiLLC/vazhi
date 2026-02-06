@@ -1,0 +1,140 @@
+{
+  "total_samples": 2365,
+  "batch_size": 25,
+  "packs": {
+    "vazhi_maruthuvam": {
+      "sample_count": 459,
+      "batch_count": 19,
+      "batch_files": [
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_01.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_02.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_03.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_04.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_05.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_06.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_07.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_08.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_09.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_10.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_11.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_12.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_13.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_14.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_15.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_16.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_17.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_18.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_maruthuvam/batch_19.json"
+      ]
+    },
+    "vazhi_kalvi": {
+      "sample_count": 557,
+      "batch_count": 23,
+      "batch_files": [
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_01.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_02.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_03.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_04.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_05.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_06.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_07.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_08.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_09.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_10.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_11.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_12.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_13.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_14.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_15.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_16.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_17.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_18.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_19.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_20.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_21.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_22.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kalvi/batch_23.json"
+      ]
+    },
+    "vazhi_panpaadu": {
+      "sample_count": 211,
+      "batch_count": 9,
+      "batch_files": [
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_01.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_02.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_03.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_04.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_05.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_06.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_07.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_08.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_panpaadu/batch_09.json"
+      ]
+    },
+    "vazhi_kaval": {
+      "sample_count": 267,
+      "batch_count": 11,
+      "batch_files": [
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_01.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_02.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_03.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_04.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_05.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_06.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_07.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_08.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_09.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_10.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_kaval/batch_11.json"
+      ]
+    },
+    "vazhi_arasu": {
+      "sample_count": 328,
+      "batch_count": 14,
+      "batch_files": [
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_01.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_02.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_03.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_04.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_05.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_06.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_07.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_08.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_09.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_10.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_11.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_12.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_13.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_arasu/batch_14.json"
+      ]
+    },
+    "vazhi_sattam": {
+      "sample_count": 543,
+      "batch_count": 22,
+      "batch_files": [
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_01.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_02.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_03.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_04.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_05.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_06.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_07.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_08.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_09.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_10.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_11.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_12.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_13.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_14.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_15.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_16.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_17.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_18.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_19.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_20.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_21.json",
+        "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches/vazhi_sattam/batch_22.json"
+      ]
+    }
+  }
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 12,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH060_TG",
+      "instruction": "Case ethanai years oodum? Settlement pannalaamaa?",
+      "current_output": "Timeline: Consumer Forum 1-3 years, Civil court 5-10 years, Criminal 3-7 years. Settlement: 1) Lok Adalat (mutually agreed), 2) Mediation (court-annexed), 3) Direct negotiation. Benefits: Faster resolution, certain outcome, lower legal costs. Caution: Don't settle too low - get legal opinion on fair amount. Hospital insurance: Usually pushes for settlement.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH096_TM",
+      "instruction": "Sleeping pills வாங்க prescription வேணுமா?",
+      "current_output": "Yes! Most sleeping pills = Schedule H1/X - strict prescription control. Schedule H1: Alprazolam, Clonazepam, etc. - prescription + ID proof + register entry. Schedule X: Stronger sedatives - even stricter. Why: Addiction potential, misuse risk, suicide risk. Alternative: Melatonin (less restricted), lifestyle changes. Doctor: Will evaluate sleep issue cause first.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH013_TM",
+      "instruction": "TB (Tuberculosis) treatment free-யா கிடைக்குமா?",
+      "current_output": "Yes! National TB Elimination Program - completely FREE. Services: 1) Diagnosis (sputum test, X-ray), 2) Medicines (6-9 months course), 3) Follow-up tests, 4) DOTS therapy supervision, 5) Nutrition support (Rs.500/month), 6) Transport allowance. Where: Government hospitals, designated TB centres. Private diagnosis: Government will still provide free treatment. Nikshay Poshan Yojana: DBT nutrition support.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH172_TG",
+      "instruction": "Varmam therapy endraal enna?",
+      "current_output": "Varmam = Vital points in body (108 main points). Uses: 1) Treatment of pain, paralysis, injuries, 2) Martial arts (Varma Kalai), 3) Emergency first aid. How: Pressure, manipulation on specific points. Conditions treated: Back pain, joint problems, neurological issues, sports injuries. Training: Requires specialized Varmam training. Caution: Wrong application can be harmful - only trained practitioners.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH084_TM",
+      "instruction": "Staff rude-ஆ behave பண்றாங்க - complain?",
+      "current_output": "Patient dignity is a right. Complaint: 1) Duty manager/nursing superintendent, 2) Hospital administrator, 3) Written complaint for record, 4) Consumer Forum if serious/repeated. Include: Date, time, staff name/description, what happened, witnesses. Outcome: Apology, warning to staff, policy reminder. Serious (abuse/harassment): Police complaint possible.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH149_TM",
+      "instruction": "Burns-க்கு first aid என்ன?",
+      "current_output": "Immediate: 1) Cool water (not ice) for 10-20 minutes, 2) Remove jewelry/tight items, 3) Cover with clean cloth (not cotton wool), 4) Don't apply toothpaste/butter/egg - myth!, 5) Don't break blisters. Hospital needed: 1) Large burns, 2) Face/hands/genitals, 3) Deep burns (white/charred), 4) Chemical/electrical burns, 5) Difficulty breathing (smoke inhalation). Free treatment: Government hospitals for burns.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH020_TG",
+      "instruction": "District hospital vs Medical college hospital - enna difference?",
+      "current_output": "District Hospital: 1) Every district headquarters, 2) General specialties, 3) Emergency, surgery, maternity, 4) 100-300 beds typical. Medical College Hospital: 1) Teaching hospital, 2) Super-specialties available, 3) Better equipment, 4) 500-1000+ beds, 5) Complex cases referred here. Both free. Medical colleges: Chennai, Madurai, Coimbatore, Trichy, Salem, Thanjavur, Tirunelveli, etc.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH022_TM",
+      "instruction": "Jan Aushadhi store என்றால் என்ன? Medicines cheap-ஆ கிடைக்குமா?",
+      "current_output": "Jan Aushadhi = Government generic medicine stores. Prices: 50-90% cheaper than branded. Quality: Same as branded (WHO-GMP certified). Available: 1,800+ medicines, 280+ surgical items. Locations: Major hospitals, standalone stores. Find: janaushadhi.gov.in or app. Example: Paracetamol 500mg (10 tablets) - Rs.2-3 vs branded Rs.15-20. Prescription needed for schedule drugs.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH209_TG",
+      "instruction": "Fever-kku traditional treatment enna?",
+      "current_output": "Traditional fever remedies: 1) Nilavembu Kudineer (best for viral), 2) Papaya leaf juice (dengue prevention), 3) Coriander seed water, 4) Tulsi + ginger tea, 5) Vetiver (Khus) water for cooling, 6) Light food - kanji (rice porridge), 7) Rest and hydration. Wet cloth: On forehead for high fever. When doctor needed: >103°F, convulsions, rash, severe headache, confusion, lasting >3 days.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH212_TG",
+      "instruction": "Sore throat-kku gargle options?",
+      "current_output": "Gargle remedies: 1) Salt + warm water (most common), 2) Turmeric + salt + warm water, 3) Honey + warm water, 4) Apple cider vinegar diluted, 5) Licorice (Athimathuram) decoction. Frequency: 3-4 times daily. Drinks: 1) Warm water throughout day, 2) Honey + lemon + warm water, 3) Tulsi tea. Avoid: Cold drinks, spicy food, shouting. Persistent: If >1 week, see ENT doctor.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH125_TG",
+      "instruction": "Pregnancy-la free checkup enge kidaikkum?",
+      "current_output": "Free at: 1) PHC (Primary Health Centre), 2) Government hospitals, 3) Urban health centres. Services: 1) Registration (first trimester), 2) Regular checkups (minimum 4 ANC visits), 3) Blood/urine tests, 4) Ultrasound scans, 5) Iron/folic acid tablets, 6) Tetanus injection, 7) High risk identification. Documents: Mother and Child Protection Card issued. Important: Register early for complete care.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH214_TG",
+      "instruction": "Menstrual cramps-kku natural relief?",
+      "current_output": "Remedies: 1) Hot water bag on abdomen, 2) Ginger tea, 3) Ajwain water, 4) Fenugreek (Vendhayam) soaked water, 5) Sesame seeds (til) with jaggery, 6) Light exercise/yoga (child's pose, cat-cow), 7) Massage with warm sesame oil. Diet: Avoid cold foods, have warm foods. Long-term: Regular exercise, healthy weight help. Severe pain: Check for PCOS, endometriosis - see gynecologist.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH134_TG",
+      "instruction": "Doctor sex sonnaar/kettaar - complain enge?",
+      "current_output": "Report immediately! Complaint to: 1) District Appropriate Authority (Collector office), 2) State Supervisory Board (DHS), 3) Police FIR, 4) Medical Council. Evidence: If possible, record/witness. Confidential complaint: Identity protected. Reward: Some states offer reward for reporting. Action: Center sealed, license cancelled, criminal prosecution. Even asking = offence for both parties.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH209_TM",
+      "instruction": "Fever-க்கு traditional treatment என்ன?",
+      "current_output": "Traditional fever remedies: 1) Nilavembu Kudineer (best for viral), 2) Papaya leaf juice (dengue prevention), 3) Coriander seed water, 4) Tulsi + ginger tea, 5) Vetiver (Khus) water for cooling, 6) Light food - kanji (rice porridge), 7) Rest and hydration. Wet cloth: On forehead for high fever. When doctor needed: >103°F, convulsions, rash, severe headache, confusion, lasting >3 days.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH157_TG",
+      "instruction": "En pullaikku fever vandhirukku, GH pogalaamaa? (Chennai style)",
+      "current_output": "GH ponga, free treatment. Aana mild fever-kku PHC podhum. High fever, 3 days+ fever, fits, rash irundhaa GH immediately. Chennai: 1) GH (Egmore/Stanley/Kilpauk), 2) ICH Egmore (children specialist). Token system - early ponga. Documents: Ration card/Aadhar irundhaa good. Emergency-kku endha document-um vendaam.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH020_TM",
+      "instruction": "District hospital vs Medical college hospital - என்ன difference?",
+      "current_output": "District Hospital: 1) Every district headquarters, 2) General specialties, 3) Emergency, surgery, maternity, 4) 100-300 beds typical. Medical College Hospital: 1) Teaching hospital, 2) Super-specialties available, 3) Better equipment, 4) 500-1000+ beds, 5) Complex cases referred here. Both free. Medical colleges: Chennai, Madurai, Coimbatore, Trichy, Salem, Thanjavur, Tirunelveli, etc.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH039_TG",
+      "instruction": "Caste, religion paarthu treatment refuse pannalaamaa?",
+      "current_output": "Absolutely ILLEGAL! Non-discrimination is fundamental right. Prohibited: 1) Caste-based denial, 2) Religion-based denial, 3) Gender discrimination, 4) Economic status discrimination, 5) Disease-based discrimination (HIV, leprosy). Action: 1) Police complaint (SC/ST Act if applicable), 2) Human Rights Commission, 3) State Medical Council, 4) Consumer Forum. Hospital license: Can be cancelled.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH215_TG",
+      "instruction": "Nilavembu Kudineer eppadi thayaarippadhu?",
+      "current_output": "Ingredients: Nilavembu (Andrographis), Vetiver, Coriander, Dry ginger, Pepper, and 5 more herbs. Ready-made: Government distributes, pharmacies sell. Home preparation: 1) Get powder from Siddha pharmacy, 2) Boil 5g in 100ml water, 3) Reduce to 50ml, 4) Strain and drink warm. Dosage: 30-60ml, twice daily. When: Viral fever, dengue prevention, monsoon season. Avoid: Pregnancy, very young children - consult doctor.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH169_TG",
+      "instruction": "Siddha maruththuvam endraal enna?",
+      "current_output": "Siddha = Tamilnaattin paarambariya maruththuva murai. Origin: 18 Siddhars (gnaniyar) developed. Age: 5,000+ years old. Principle: Udal (body), Uyir (soul), Manam (mind) balance. Based on: Pancha bootham (5 elements), 96 thathuvangal, 3 doshas (Vatham, Pitham, Kabam). Treatment: Diet, herbs, minerals, yoga, lifestyle. Recognition: Government of India recognized AYUSH system.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH167_TG",
+      "instruction": "Papaya/Pineapple pregnancy-la miscarriage cause pannumaa?",
+      "current_output": "Myth (mostly)! Ripe papaya: Safe in moderate amounts. Raw papaya: Contains latex - avoid (may cause contractions). Pineapple: Safe in normal amounts (contains bromelain but too little to cause harm). No food: Scientifically proven to cause miscarriage in normal amounts. Advice: 1) Eat varied diet, 2) Avoid raw/undercooked food, 3) Consult doctor for specific concerns. Miscarriage causes: Usually chromosomal abnormalities, not food.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH129_TG",
+      "instruction": "Abortion legal-aa? Endha conditions-la allowed?",
+      "current_output": "Legal under MTP Act (amended 2021). Conditions: 1) Up to 20 weeks - one doctor opinion, 2) 20-24 weeks - two doctors opinion (rape, contraceptive failure, fetal abnormality), 3) Any time - if fetal abnormality (medical board). Special: Rape survivors, minors - extended limits. Unmarried women: Also eligible. Consent: Woman's consent only (adult). Minor: Guardian consent needed.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH219_TG",
+      "instruction": "Naturopathy endraal enna? Ayurveda-vida verupaadu?",
+      "current_output": "Naturopathy = Treatment using nature's elements. Methods: Water (hydrotherapy), mud, air, sun, diet, fasting, yoga. Difference from Ayurveda: 1) No medicines (mostly), 2) Focus on lifestyle correction, 3) More recent system, 4) Emphasizes fasting/detox. Combined: Often practiced with Yoga. Qualification: BNYS (Bachelor of Naturopathy and Yogic Sciences). Good for: Lifestyle diseases, prevention, detoxification.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH135_TG",
+      "instruction": "Free contraceptives enge kidaikkum?",
+      "current_output": "Free at: 1) PHC, 2) Government hospitals, 3) Anganwadi centres, 4) Urban health centres. Available: 1) Condoms, 2) Oral contraceptive pills (Mala-N, Mala-D), 3) IUD (Copper-T), 4) Injectable contraceptives, 5) Emergency contraceptive pills. Counseling: ANM/health worker will explain options. Choice: Woman's decision - no coercion. Sterilization: Also free but completely voluntary.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH024_TM",
+      "instruction": "முக்கிய health helplines என்னென்ன?",
+      "current_output": "Emergency: 108 (ambulance), 102 (pregnant women). Health info: 104 (general health helpline), 1075 (COVID - still active). Disease specific: 1097 (HIV/AIDS), 1800-599-0019 (TB). Mental health: 9152987821 (iCALL), 1800-599-0019 (NIMHANS). Poison: 1066 (Chennai). Child: 1098 (Childline). Women: 181 (women helpline). All 24x7 and free.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH208_TM",
+      "instruction": "Cold/cough-க்கு வீட்டு வைத்தியம் என்ன?",
+      "current_output": "Effective remedies: 1) Chukku Kaapi - Dry ginger + pepper + palm jaggery boiled in water, 2) Turmeric milk (Manjal Paal) - Before sleep, 3) Steam inhalation with tulsi/eucalyptus, 4) Honey + ginger juice, 5) Pepper rasam, 6) Tulsi kashayam, 7) Gargle with warm salt water. Avoid: Cold water, ice cream, curd. When to see doctor: Fever >3 days, breathing difficulty, blood in phlegm.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 3,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH025_TM",
+      "instruction": "Patient-க்கு என்னென்ன rights இருக்கு?",
+      "current_output": "Charter of Patient Rights (NMC): 1) Right to information (diagnosis, treatment options), 2) Right to records, 3) Right to emergency care, 4) Right to informed consent, 5) Right to confidentiality, 6) Right to second opinion, 7) Right to choose treatment/refuse treatment, 8) Right to non-discrimination, 9) Right to safe treatment, 10) Right to complaint redressal. Display: Hospitals must display patient rights.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH005_TM",
+      "instruction": "Ayushman Bharat வேற, CMCHIS வேறா?",
+      "current_output": "TN has CMCHIS (state scheme) - Ayushman Bharat (central) இல்ல. CMCHIS advantages: 1) Higher coverage (Rs.5 lakh vs Rs.5 lakh), 2) More procedures covered, 3) State-specific hospitals, 4) Better implementation. Other states: Ayushman Bharat applicable. TN residents: Use CMCHIS only. Traveling outside TN: Limited coverage - check empanelled hospitals.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH145_TM",
+      "instruction": "Anganwadi-ல் children-க்கு என்ன services?",
+      "current_output": "ICDS (Integrated Child Development Services): 1) Supplementary nutrition (hot meal/take home), 2) Growth monitoring (weight/height), 3) Immunization support, 4) Health referral, 5) Pre-school education (3-6 years), 6) Nutrition education for mothers. Beneficiaries: Children 0-6 years, pregnant/lactating women. Free: All services. Location: Every village/urban ward has Anganwadi centre.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH203_TM",
+      "instruction": "Paralysis/stroke rehabilitation Ayurveda-ல்?",
+      "current_output": "Ayurveda rehabilitation: Complements physiotherapy well. Treatments: 1) Abhyanga with specific oils, 2) Pinda Sweda (Navarakizhi), 3) Basti (medicated enema - key treatment), 4) Nasya, 5) Internal medicines. Best time: Post-acute phase (after stabilization). Duration: 21-90 days intensive. Outcomes: Improved mobility, speech, daily activities. Combination: Ayurveda + Physiotherapy + Yoga gives best results. Where: Specialized centers in Kerala, some TN facilities.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH226_TM",
+      "instruction": "Home remedies எப்போது avoid பண்ணணும்?",
+      "current_output": "Avoid home remedies when: 1) Serious symptoms (high fever, breathing difficulty, chest pain), 2) Symptoms lasting >2-3 days, 3) Children under 2 (many remedies not safe), 4) Pregnancy (many herbs contraindicated), 5) Taking prescription medicines (interactions), 6) Known allergies to ingredients, 7) Wounds with signs of infection (pus, spreading redness), 8) Chronic disease flare-up. Rule: Home remedies for minor, acute issues. Anything serious = doctor.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH216_TG",
+      "instruction": "Kabasura Kudineer - COVID-kku effective-aa?",
+      "current_output": "Government approved: For COVID prevention and mild symptoms. Ingredients: 15 herbs including Kabasuram, Adathodai, Chukku, etc. Benefits: Respiratory immunity, cough, cold. Preparation: Same as Nilavembu - boil powder, strain. Dosage: 60ml twice daily. Research: CCRS conducted clinical trials. Note: 1) Not substitute for COVID vaccine, 2) Severe COVID = hospital treatment, 3) Prevention + mild symptoms only. Available: Government free distribution, pharmacies.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH057_TM",
+      "instruction": "Hospital medical records தர மறுக்குது - என்ன செய்வது?",
+      "current_output": "Patient's right - cannot refuse. Actions: 1) Written demand with delivery acknowledgment, 2) RTI (if government hospital), 3) Consumer Forum application for production of records, 4) Police complaint (if suspicious tampering), 5) Court application for preservation order. Tampering: Serious offence - evidence destruction. Hospital must provide within 72 hours of written request.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH126_TM",
+      "instruction": "Delivery government hospital-ல் free-யா?",
+      "current_output": "Yes! Completely free. Includes: 1) Normal delivery, 2) C-section if needed, 3) Anesthesia, 4) Medicines, 5) Post-delivery care, 6) Baby care. Additional: 1) 102 ambulance free transport, 2) JSY cash incentive for institutional delivery, 3) Dr. Muthulakshmi scheme Rs.18,000. Private: CMCHIS covers complicated deliveries. Register: PHC for referral chain.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH139_TG",
+      "instruction": "Surrogacy legal-aa? Rules enna?",
+      "current_output": "Surrogacy Act 2021 rules: 1) Only altruistic surrogacy (no payment beyond expenses), 2) Commercial surrogacy banned, 3) Surrogate: Married woman, own child, related to couple, 4) Couple: Indian, married 5 years, medical need, 5) Single women/men: Not allowed. Registration: Surrogacy clinics must register. Certificate: National/State Surrogacy Board certification needed. International: Surrogacy for foreigners banned.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH161_TG",
+      "instruction": "Moottu vali aaru maasama irukku, scan edukkanumaa? (Senior citizen)",
+      "current_output": "6 months joint pain - orthopedic consultation needed. Tests: 1) X-ray first (usually sufficient), 2) MRI if X-ray normal but pain persists, 3) Blood tests (RA, uric acid). Government: Orthopedic OPD - free consultation and basic tests. Common causes: Osteoarthritis (wear and tear), rheumatoid arthritis. Treatment: 1) Medicines, 2) Physiotherapy (free at government), 3) Joint replacement if severe (CMCHIS covers). Self-care: Weight control, walking, avoid squatting.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH093_TM",
+      "instruction": "Pharmacy prescription இல்லாம antibiotic கொடுக்கலாமா?",
+      "current_output": "NO! Most antibiotics = Schedule H - prescription mandatory. Reason: Antibiotic resistance is serious health threat. Pharmacy violation: Drug Inspector complaint, license action. Exception: Some topical antibiotics (creams) may be OTC. Good practice: Complete prescribed course, don't share antibiotics, don't use leftover. Doctor: Can prescribe over phone in genuine emergency.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH036_TG",
+      "instruction": "En medical information yaarukkum share panna koodaadhu - right irukkaa?",
+      "current_output": "Yes! Doctor-patient confidentiality. Protected info: 1) Diagnosis, 2) Test results, 3) Treatment details, 4) HIV status, 5) Mental health records, 6) Reproductive health. Exceptions: 1) Patient consent, 2) Court order, 3) Public health (notifiable diseases), 4) Harm to others. Breach: Medical Council complaint + civil damages. Employer: Cannot demand medical records without consent.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH035_TM",
+      "instruction": "Body hospital-ல் detain பண்றாங்க bill கட்டும் வரை - legal-ஆ?",
+      "current_output": "ILLEGAL! Dead body detention prohibited. Supreme Court + High Court orders: 1) Body cannot be held for bill payment, 2) Hospital can pursue legal recovery of dues, 3) Detention = criminal offence. Action: 1) Police complaint, 2) Magistrate petition, 3) Human Rights Commission. Bill dispute: Settle later through legal means - body must be released. Report: DHS, State Medical Council.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH202_TG",
+      "instruction": "Hair fall/hair problems-kku Ayurveda?",
+      "current_output": "Effective treatments: 1) Shirodhara, 2) Shiro Abhyanga (head massage), 3) Nasya (nasal drops), 4) Internal medicines - Bhringraj, Brahmi, 5) Specialized hair oils - Neelibringadi. Conditions: Hair fall, premature greying, dandruff, baldness (early stages). Duration: 3-6 months for visible results. Diet: Important - protein, iron rich. Underlying causes: Stress, hormones, nutrition - all addressed. Products: Branded Ayurvedic hair oils available widely.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH141_TM",
+      "instruction": "PCOS/PCOD treatment எங்கே கிடைக்கும்?",
+      "current_output": "Available at: 1) Government hospital gynecology OPD - free, 2) Medical college hospitals - specialized care. Treatment: 1) Lifestyle modification (diet, exercise), 2) Medicines for hormonal balance, 3) Metformin if diabetic tendency, 4) Fertility treatment if trying to conceive. Tests: Ultrasound, hormonal tests - available free at government. Long-term: Regular monitoring needed.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH111_TM",
+      "instruction": "Counseling/therapy எங்கே கிடைக்கும்? Cost என்ன?",
+      "current_output": "Options: 1) Government hospitals - free (limited slots), 2) NGOs - free/subsidized (iCall, Snehi, etc.), 3) Private practitioners - Rs.500-3000/session, 4) Online platforms - Rs.300-1500/session (Practo, Amaha, YourDOST). Types: Clinical psychologist, counselor, psychiatrist (for medicines). Verify: RCI registration for psychologists. Tip: Many offer sliding scale fees based on income.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH012_TM",
+      "instruction": "School health program-ல் என்ன check பண்றாங்க?",
+      "current_output": "School Health Program services: 1) Height/weight monitoring, 2) Eye checkup (vision), 3) Dental checkup, 4) Hearing test, 5) General physical examination, 6) Deworming tablets, 7) Iron supplements, 8) Referral for issues found. Who: Government school students - free. Frequency: Usually once a year. Issues found: Referred to PHC/hospital. Spectacles: Free for poor students.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH179_TG",
+      "instruction": "Diabetes-kku Siddha medicine irukkaa?",
+      "current_output": "Yes! Siddha for Madhumegam (diabetes): Medicines: 1) Seenthil Choornam, 2) Neermulli Kudineer, 3) Nilavembu Kudineer, 4) Aavarai Pattai, 5) Sirukurinjan. Research: CCRS has validated formulations. Important: 1) Don't stop allopathic suddenly, 2) Regular monitoring essential, 3) Integrated approach best, 4) Diet + lifestyle crucial. Complication prevention: Siddha foot care for diabetic foot.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH184_TG",
+      "instruction": "Siddha medicine quality check eppadi panradhu?",
+      "current_output": "Check on pack: 1) AYUSH License number, 2) Manufacturing license, 3) Batch number, 4) Expiry date, 5) Manufacturer name and address, 6) GMP certification (if available). Buy from: 1) Licensed pharmacies, 2) Hospital pharmacies, 3) Government AYUSH stores. Avoid: 1) Loose medicines without label, 2) Online from unknown sources, 3) Unregistered practitioners' preparations. Complaint: State Drug Controller for spurious products.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH130_TM",
+      "instruction": "Abortion-க்கு husband consent வேணுமா?",
+      "current_output": "NO! Woman's decision alone. MTP Act: Only woman's consent required (if adult). Husband cannot: 1) Force abortion, 2) Prevent abortion, 3) His consent not legally required. Minor: Parent/guardian consent needed. Confidentiality: Doctor cannot inform husband without woman's consent. Hospital asking husband consent: Wrong - complain.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH171_TM",
+      "instruction": "Siddha treatment-ல் என்ன வகைகள் உள்ளன?",
+      "current_output": "Treatment types: 1) Internal medicines - Choornam (powder), Lehyam (paste), Kasayam (decoction), Thailam (oil), Maathirai (pills), 2) External - Pattru (poultice), Ottradam (fomentation), Nasiyam (nasal), Kattu (bandage), 3) Surgical - Siddha surgery, 4) Special therapies - Thokkanam (massage), Varmam, Yoga. Panchagavya: Cow products based. Kayakalpa: Rejuvenation therapy.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH105_TG",
+      "instruction": "Siddha treatment government hospital-la free-yaa kidaikkumaa?",
+      "current_output": "Yes! TN has strong Siddha infrastructure. Free at: 1) Government Siddha Medical Colleges (Chennai, Palayamkottai, etc.), 2) District AYUSH hospitals, 3) Taluk level Siddha dispensaries, 4) PHC attached Siddha units. Services: OPD, IPD, medicines. National Institute of Siddha (Tambaram): Specialized centre. Research: Central Council for Research in Siddha (Chennai).",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH187_TG",
+      "instruction": "Kayakalpa treatment enna? Enge available?",
+      "current_output": "Kayakalpa = Rejuvenation/anti-aging therapy. Purpose: Longevity, vitality, reverse aging effects. Methods: 1) Special medicines (Kayakalpa pills), 2) Dietary regimen, 3) Yoga, pranayama, 4) Lifestyle modifications. Duration: 40-90 days typically (intensive). Where: 1) NIS specialized program, 2) Selected Siddha hospitals, 3) Traditional practitioners. Not for: Acute illness, certain chronic conditions. Preparation: Requires purification therapies first.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH211_TG",
+      "instruction": "Headache-kku natural remedy?",
+      "current_output": "Remedies: 1) Ginger tea, 2) Clove paste on temples, 3) Peppermint oil on forehead, 4) Cold/warm compress (depends on type), 5) Rest in dark room, 6) Hydration (dehydration causes headache), 7) Inhale ajwain steam. Pressure points: Press between thumb and index finger. Lifestyle: Regular sleep, avoid screen strain, stress management. Migraine: See doctor - may need proper treatment.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH099_TM",
+      "instruction": "Pharmacy license இல்லாம operate பண்றாங்க - report?",
+      "current_output": "Illegal! Every pharmacy needs: 1) Drug License (displayed), 2) Registered Pharmacist (during operating hours). Report: Drug Inspector, State Drugs Control, local police. Check: License number displayed, pharmacist name displayed. Risk: Unlicensed pharmacy may sell fake/expired/wrong medicines. Online: E-pharmacy also needs license - check before ordering.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

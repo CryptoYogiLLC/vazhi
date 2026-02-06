@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 14,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TRAF006_TM",
+      "instruction": "Traffic police wrongly fine போட்டால் என்ன செய்வது?",
+      "current_output": "Options: 1) On-spot - evidence காட்டி argue (dashcam, photos), 2) Court-ல் contest (challan dispute), 3) Online grievance: tnpolice.gov.in, 4) RTO officer complaint. Challan copy கேளுங்க. Court contest-க்கு time limit உண்டு.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL008_TM",
+      "instruction": "Gratuity தர மறுத்தால் என்ன செய்வது?",
+      "current_output": "Steps: 1) Written application to employer, 2) 30 days-க்குள் pay பண்ணணும், 3) Refuse பண்ணால் Controlling Authority (Labour Commissioner)-க்கு complaint, 4) Labour Court appeal. Delay-க்கு 10% interest கிடைக்கும். Forfeiture: Only if dismissed for serious misconduct.",
+      "category": "employment_labor",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "TENA016_TM",
+      "instruction": "Yearly எவ்வளவு percentage rent increase நியாயமானது?",
+      "current_output": "சட்டத்தில் fixed percentage இல்லை. Practice-ல் 5-10% yearly increase normal. ஆனால் market rate, inflation, property value increase ஆகியவை consider ஆகும். Unreasonable increase-ஐ Rent Authority மூலம் dispute செய்யலாம்.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI014_TM",
+      "instruction": "Visitation rights என்றால் என்ன?",
+      "current_output": "Custody இல்லாத parent-க்கு child-ஐ சந்திக்கும் right. Court order: Weekly/monthly visits, holiday stays, phone/video calls. Visitation deny பண்ணினால் contempt of court. Both parents cooperate செய்வது child-க்கு நல்லது.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE021_TM",
+      "instruction": "Lawyer கொஞ்சம் expensive-ஆ இருக்கு, free-யா யாராவது help பண்ணுவாங்களா?",
+      "current_output": "Free legal aid: DLSA (District Legal Services Authority) - income <Rs.3 lakh, women, SC/ST, disabled எல்லாருக்கும் free lawyer. Toll-free: 15100. Taluk Legal Services Committee-லும் apply பண்ணலாம். Court-ல் directly legal aid request பண்ணலாம்.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA006_TG",
+      "instruction": "Advance/Security deposit evvalavu ketkalam?",
+      "current_output": "Tamil Nadu-la sattapadi maximum 3 months rent mathume advance-aa vaangalam. But practice-la 6-10 months advance kekkuranga. Idhu illegal. Rent Authority-kku complaint seyyalam.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_003_TM",
+      "instruction": "RTI fee எவ்வளவு? எப்படி pay பண்றது?",
+      "current_output": "Central Government: Rs.10 (postal order, DD, cash). Tamil Nadu State: Rs.10. BPL card holders: Fee exempted. Additional: Rs.2 per page for copies. Online: rtionline.gov.in (central), rtionline.tn.gov.in (state). Court fee stamp-உம் accept.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE021_TG",
+      "instruction": "Bank account-la kaasu pochu, yaaro OTP vaangi eduthuttaanga (Madurai style)",
+      "current_output": "Udane: 1) Bank-kku call - 24/7 helpline, account freeze kelunga, 2) 1930 helpline call, 3) Net banking-la transactions block, 4) ATM card block. 3 days-kkul report pannaa liability kuraiyum. Debit card insurance check pannunga.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF009_TM",
+      "instruction": "Hit and run case-ல் compensation எப்படி பெறுவது?",
+      "current_output": "FIR போடுங்க (vehicle details தெரியாவிட்டாலும்). Motor Accident Claims Tribunal (MACT)-ல் claim. Hit and run compensation: Death - Rs.2 lakh, Grievous injury - Rs.50,000 (Solatium Scheme). Driver identify ஆனால் full compensation + criminal case.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP025_TM",
+      "instruction": "Acid attack victim-க்கு என்ன rights/compensation?",
+      "current_output": "Rights: 1) Free medical treatment (government hospitals), 2) Compensation: Rs.3 lakhs minimum (state victim compensation), 3) Disability pension, 4) Acid sale regulation - ID proof mandatory, 5) Fast track court trial. TN: CM's Public Relief Fund additional support. Accused: 10 years to life imprisonment. NGO support: Stop Acid Attacks, Chhanv Foundation.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF011_TG",
+      "instruction": "Accident compensation evvalavu kidaikkum?",
+      "current_output": "Formula based: Age, income, dependency, injury severity. Death case: Multiplier method (age based - 12 to 18 times annual income). Injury: Medical expenses + loss of income + pain & suffering + disability percentage. Third party insurance: Unlimited liability.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE005_TG",
+      "instruction": "Appeal eppadi poduvadhu?",
+      "current_output": "Hierarchy: District Court → High Court → Supreme Court. Time limit: 30-90 days (varies). Appeal grounds: Law error, fact error, procedure violation. Memorandum of Appeal + certified copy of judgment. Stay application-um file pannalam. Delay condone petition if late.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP028_TG",
+      "instruction": "Site vaangap poren, ennenna paakkanum? (Chennai casual)",
+      "current_output": "Mudhalila: 1) Patta yaar perla irukku, 2) EC 30 years clear-aa, 3) Survey number match aagudhaa, 4) Poramboke illaiye, 5) Approval (DTCP/CMDA) irukkaa. Ellaathaiyum lawyer-kitta verify pannunga. Rush-la vaangaadheenga.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP019_TM",
+      "instruction": "Power of Attorney எத்தனை types? எது safe?",
+      "current_output": "Types: 1) General POA - all acts (risky), 2) Special POA - specific acts only (safer), 3) Durable POA - continues even if principal incapacitated. Registration: Property transactions - compulsory registration. Revocation: Written revocation + newspaper publication. Safe practice: Special POA with specific purpose + time limit. Never give blank POA!",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP030_TM",
+      "instruction": "என் புள்ள school-ல அடிச்சிட்டாங்க, action எடுக்கணும்",
+      "current_output": "Corporal punishment banned! RTE Act + NCPCR guidelines. Actions: 1) School principal-கிட்ட written complaint, 2) Education Department (DEO), 3) Child Welfare Committee, 4) Police (if serious injury). Evidence: Photos, medical certificate. Teacher action: Suspension, termination possible. School license: Risk of cancellation. Child helpline: 1098.",
+      "category": "supplementary",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CONS015_TG",
+      "instruction": "Insurance claim reject aanadhu - enna seyyalam?",
+      "current_output": "Steps: 1) Rejection letter-kku written reply kodunga, 2) IRDAI Grievance portal (igms.irda.gov.in)-la complaint, 3) Insurance Ombudsman-kitta appeal (Rs.30 lakh varai), 4) Consumer forum case. Claim rejection reason properly study pannunga - valid reason illaama reject panna mudiyaadhu.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP011_TG",
+      "instruction": "Gym membership cancel panna vidala, enna seivathu?",
+      "current_output": "Consumer rights: 1) Written cancellation request kodunga, 2) Refund policy check - pro-rata refund kelunga, 3) Unfair terms (no cancellation ever) = void under Consumer Protection Act, 4) Refuse pannaa: Consumer Forum complaint - Rs.1 lakh-kkul = District Forum. Medical reason cancellation: Doctor certificate koduththaa usually accept panraanga.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC014_TG",
+      "instruction": "Hospital excessive bill pottaanga - dispute eppadi seivathu?",
+      "current_output": "Steps: 1) Itemized bill demand (kattaayam tharanum), 2) Rate list compare (display mandatory), 3) Hospital grievance officer, 4) District Health Authority, 5) Consumer forum. Clinical Establishments Act: Rate display, itemized bill compulsory. Overcharging = unfair trade practice.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_001_TM",
+      "instruction": "RTI என்றால் என்ன? யார் file பண்ணலாம்?",
+      "current_output": "RTI = Right to Information Act 2005 - Government information பெறும் உரிமை. Any Indian citizen file பண்ணலாம். NRI, Company, Trust - file பண்ண முடியாது. Government, PSU, government-funded NGO எல்லாத்துக்கும் RTI apply.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_013_TM",
+      "instruction": "Whistleblower protection இருக்கா?",
+      "current_output": "Whistleblower Protection Act 2014: Corruption, misuse of power report பண்றவர்களுக்கு protection. Apply: Competent Authority (state level). Identity protection, victimization protection உண்டு. Retaliation-க்கு penalty. Anonymous complaints-உம் accept.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC021_TM",
+      "instruction": "PAN card-ல் mistake இருக்கு - correct பண்றது எப்படி?",
+      "current_output": "Online: tin-nsdl.com or onlineservices.nsdl.com. Form: Correction form + supporting documents. Fee: Rs.110 (Indian address) / Rs.1,020 (foreign). Documents: ID proof, address proof with correct details. Time: 15-20 days. Status track: UTI/NSDL websites.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE005_TM",
+      "instruction": "Appeal எப்படி போடுவது?",
+      "current_output": "Hierarchy: District Court → High Court → Supreme Court. Time limit: 30-90 days (varies). Appeal grounds: Law error, fact error, procedure violation. Memorandum of Appeal + certified copy of judgment. Stay application-உம் file பண்ணலாம். Delay condone petition if late.",
+      "category": "extended_topics",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SUPP003_TM",
+      "instruction": "ATM-ல் பணம் போச்சு ஆனா account-ல் debit ஆச்சு, என்ன செய்வது?",
+      "current_output": "Steps: 1) உடனே bank-க்கு call பண்ணுங்க (customer care), 2) Written complaint கொடுங்க - transaction ID mention பண்ணுங்க, 3) RBI rule: Bank 5 days-க்குள் refund பண்ணணும், 4) Delay ஆனால்: Rs.100/day compensation, 5) Resolve ஆகல = Banking Ombudsman complaint. Evidence: Transaction SMS, mini statement வச்சுக்கோங்க.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL014_TM",
+      "instruction": "Maternity leave எவ்வளவு நாள் கிடைக்கும்?",
+      "current_output": "Maternity Benefit Act 2017: 26 weeks paid leave (first two children), 12 weeks (third child onwards). Before delivery: 8 weeks max. Adoption/surrogate: 12 weeks. Miscarriage: 6 weeks. 10+ employees company-க்கு applicable. Creche facility mandatory (50+ employees).",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM015_TM",
+      "instruction": "Assault/Fighting case-க்கு என்ன ஆகும்?",
+      "current_output": "Simple hurt (IPC 323/BNS 115): 1 year imprisonment. Grievous hurt (IPC 325/BNS 117): 7 years. Voluntarily causing hurt (IPC 324/BNS 118): 3 years. Self-defence valid excuse. Medical report severity decide செய்யும். Compromise possible in simple cases.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

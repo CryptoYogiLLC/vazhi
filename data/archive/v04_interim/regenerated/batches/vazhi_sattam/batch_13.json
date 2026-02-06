@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 13,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PROP026_TM",
+      "instruction": "NRI property sell செய்ய POA கொடுக்கலாமா?",
+      "current_output": "ஆம், ஆனால் Special Power of Attorney (SPA) இருக்கணும் - specific property, specific purpose mention ஆகணும். Indian Embassy/Consulate-ல் notarize + apostille வேண்டும். GPA alone not sufficient. SPA registration recommended.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF019_TG",
+      "instruction": "Two-wheeler-kku pillion rider helmet kattaayamaa?",
+      "current_output": "Aama. Driver and pillion rider iruvarukkum ISI marked helmet kattaayam. Fine: Rs.1,000 + 3 months license suspension (repeat offence). Children-kkum helmet venum. Fashion helmets not acceptable.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE018_TM",
+      "instruction": "Stray dog bite ஆனால் compensation கிடைக்குமா?",
+      "current_output": "Corporation/Municipality நிலை பொறுத்தது. Complaint: Corporation + Animal Welfare Board. Compensation: Civil Court suit against local body (negligence). Medical expenses claim. ABC (Animal Birth Control) program failure prove பண்ணணும். Police complaint-உம் possible.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC011_TM",
+      "instruction": "காரணம் சொல்லாம job-ல் இருந்து remove பண்ணிட்டாங்க",
+      "current_output": "Wrongful termination: 1) Written explanation demand, 2) Labour Commissioner, 3) Labour Court/Industrial Tribunal. Remedies: Reinstatement, back wages, compensation. Standing Orders: Company rules check பண்ணுங்க. Workmen vs Manager: Different procedures apply.",
+      "category": "practical_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CONS030_TM",
+      "instruction": "Misleading advertisement-க்கு complaint போடலாமா?",
+      "current_output": "ஆம். ASCI (Advertising Standards Council of India)-க்கு complaint போடலாம் - ascionline.in. Consumer forum-லும் case போடலாம். Celebrity endorsement false claims-க்கும் celebrity liable. Compensation + advertisement withdraw order கிடைக்கும்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP006_TG",
+      "instruction": "Will illaamal irandhaal property yaarukku pogum?",
+      "current_output": "Hindu Succession Act padi: Class I heirs (wife, sons, daughters, mother) samamaaga pangu peruvaargal. Class I illaattal Class II (father, siblings, etc.). Muslim-kku Shariat law, Christian-kku Indian Succession Act apply.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM003_TG",
+      "instruction": "Cognizable vs Non-cognizable offence enna vithiyaasam?",
+      "current_output": "Cognizable: Serious crimes (murder, rape, theft, assault) - Police FIR pottu warrant illama arrest pannalam. Non-cognizable: Minor crimes (defamation, cheating under Rs.500) - Court permission venum. NC case-kku NCR (Non-Cognizable Report) padhivu seivaargal.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP015_TG",
+      "instruction": "Property vaangum mun ennenna documents check pannanum?",
+      "current_output": "Must check: 1) Title deed chain (30 years), 2) EC (30 years), 3) Patta & Chitta, 4) Survey sketch, 5) Tax paid receipts, 6) Approved building plan, 7) NOC (if apartment), 8) RERA registration (new projects), 9) Power of Attorney (if applicable). Lawyer verification recommended.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC017_TG",
+      "instruction": "Children parents-ai paarkaama vittuttaanga - law udhavumaa?",
+      "current_output": "Maintenance and Welfare of Parents Act 2007: Children (including married daughters) parents-kku maintain seyyanum. Tribunal: SDM/Tahsildar level. Maintenance order: Rs.10,000/month max. Property revocation: Gift deed cancel possible if neglect proved.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF017_TM",
+      "instruction": "Vehicle fitness certificate எப்போது வேணும்?",
+      "current_output": "Transport vehicles: Every year (8 years-க்குப் பிறகு every 6 months). Non-transport: 15 years-க்குப் பிறகு every 5 years. Test: Emission, brakes, lights, etc. Expired fitness: Rs.2,000 fine. Online booking: parivahan.gov.in.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE009_TG",
+      "instruction": "Revenge porn/intimate images share panninaal enna punishment?",
+      "current_output": "IT Act 66E: 3 years imprisonment + Rs.2 lakh fine. 67/67A: 5-7 years imprisonment. IPC 354C (voyeurism). Women: Section 499/500 defamation. Platform takedown: CERT-In report. Victim support: NCW helpline 7827-170-170. Don't blame victim - legal protection undu.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP005_TG",
+      "instruction": "Bank account freeze aachu, yen? Enna seivathu?",
+      "current_output": "Freeze reasons: 1) Court order (loan default, legal case), 2) IT department notice, 3) Suspicious transactions (PMLA), 4) KYC not updated. Steps: 1) Bank-kitta freeze reason kelunga (writing-la), 2) Court order = lawyer consult, 3) IT matter = CA consult, 4) KYC = documents update pannunga. Wrongful freeze: Banking Ombudsman complaint.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE019_TG",
+      "instruction": "Children-kku safe internet usage tips enna?",
+      "current_output": "Parents: 1) Parental controls enable, 2) Screen time limits, 3) Open communication, 4) Monitor (not spy) activity, 5) Teach about online dangers. Children: Don't share personal info, stranger-kitta chat vendaam, uncomfortable content-a parents-kitta sollunga.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC003_TG",
+      "instruction": "Neighbour veettu construction en veetukku damage - compensation kidaikkumaa?",
+      "current_output": "Aama. Civil Court-la damages claim. Steps: 1) Written notice to neighbour, 2) Photos/videos of damage, 3) Engineer report (damage assessment), 4) Civil suit file. Compensation: Repair cost + inconvenience. Injunction to stop work-um possible.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL004_TM",
+      "instruction": "Job மாறும்போது PF transfer எப்படி?",
+      "current_output": "Same UAN continue ஆகும் - transfer தேவையில்லை (auto-transfer). Old account + new account merge: EPFO portal → Online Services → Transfer Request. New employer-கிட்ட UAN கொடுங்க. Transfer: 10-15 days. Withdrawal பண்ணாம transfer பண்றது tax-efficient.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS033_TG",
+      "instruction": "Restaurant-la food poisoning aanaal case podalaamaa?",
+      "current_output": "Aama. 1) Medical report vaangunga (treatment evidence), 2) Food Safety Officer-kku complaint, 3) Consumer forum case, 4) Serious case - Police complaint (IPC 269, 270). Medical expenses + compensation kidaikkum. Restaurant license suspend/cancel aagalam.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC018_TM",
+      "instruction": "Senior citizen pension apply எப்படி செய்வது?",
+      "current_output": "Eligibility: 60+ years, BPL/low income. Schemes: IGNOPS (Rs.1,000/month), TN Old Age Pension (varies). Apply: e-Sevai centre, Taluk office. Documents: Age proof, income certificate, Aadhaar, bank account. Widow pension: Additional scheme available.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP012_TM",
+      "instruction": "Wedding hall booking cancel, advance திரும்ப தரல, legal action?",
+      "current_output": "Depends on: 1) Cancellation policy in agreement, 2) How early cancelled, 3) Reason for cancellation. Rights: 1) Unreasonable forfeiture = challenge பண்ணலாம், 2) Hall's fault (double booking, not available) = full refund + compensation, 3) Consumer Forum: Unfair trade practice claim. Force majeure (COVID type): Special consideration. Always get cancellation policy in writing!",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS017_TM",
+      "instruction": "Hospital bill excessive-ஆ இருக்கு - என்ன செய்யலாம்?",
+      "current_output": "Itemized bill கேளுங்க - hospital தர வேண்டும். Rate list display கட்டாயம் (Clinical Establishments Act). Overcharging complaint: 1) State Health Department, 2) District Collector, 3) Consumer forum. Insurance involved-ஆ இருந்தால் TPA-க்கும் complaint போடுங்க.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP024_TG",
+      "instruction": "Builder common area handover vaangaama irukku - enna seivathu?",
+      "current_output": "RERA-la complaint podunga - builder conveyance deed execute seyyanum endru order vaangalam. 50%+ flats occupied aanaal association form panni legal notice anuppunga. Non-compliance-kku penalty, imprisonment provisions undu.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL022_TM",
+      "instruction": "வேலையில இருந்து நிறுத்திட்டாங்க, F&F எப்ப கிடைக்கும்?",
+      "current_output": "Full and Final settlement: 30-45 days-ல் கிடைக்கணும். Include: Salary, leave encashment, bonus, gratuity (if eligible), notice pay, reimbursements. Delay ஆனா Labour Commissioner-க்கு complaint. Documents: Relieving letter, experience letter, salary slip, Form 16 - எல்லாம் கேளுங்க.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE015_TG",
+      "instruction": "Fake news share panninaal legal trouble varumaa?",
+      "current_output": "Yes, possible: IPC 505 (public mischief), 153A (promoting enmity), Epidemic Diseases Act (health misinformation). IT Rules 2021: Platforms must remove fake news. Knowingly spreading = higher liability. Before sharing: Verify from trusted sources. Fact-check websites use pannunga.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI011_TM",
+      "instruction": "Maintenance கொடுக்காவிட்டால் என்ன action எடுக்கலாம்?",
+      "current_output": "Options: 1) Execution petition - salary attachment, property attachment, 2) Contempt of court - imprisonment up to 3 months, 3) Section 125 CrPC - Magistrate can order payment + imprisonment. Arrears + future maintenance கேட்கலாம். Don't delay - act immediately.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE004_TG",
+      "instruction": "Job fraud - advance vaangittu mosam pannitaanga",
+      "current_output": "Complaint: 1) cybercrime.gov.in, 2) Local police FIR, 3) Labour Department (if company involved). Legal sections: IT Act 66D (cheating using computer), IPC 420 (cheating). Red flags: Advance fee, unrealistic salary, gmail/yahoo recruiter. Legitimate companies never ask money.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI002_TG",
+      "instruction": "Marriage-kku minimum age enna?",
+      "current_output": "Penn - 18 years, Aan - 21 years. Underage marriage illegal (Child Marriage Restraint Act). Underage marriage voidable (annul seyyalam). Parents/guardians-kku 2 years imprisonment + Rs.1 lakh fine. Marriage fix pannuravarkalum liable.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

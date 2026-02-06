@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 6,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "AS015",
+      "instruction": "'Ayya, naan unga neighbor Lakshmi pesuren, WhatsApp la problem, OTP oru number ku forward aaiduchu, adha sollunga' nu call vandhudhu. Lakshmi voice maadhiri irukku.",
+      "current_output": "WhatsApp OTP sollaadhenga ayya! Idhu account takeover scam. OTP kuduthaa unga WhatsApp account thirudiduvaanga, unga contacts kitta kaasu keppanga unga name la. Lakshmi kitta direct poi pesunga - probably avangooda account already hacked.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS025",
+      "instruction": "Summer vacation - 'Kids summer camp FREE registration! Limited seats, pay 5000 advance' - genuine camp-ஆ?",
+      "current_output": "Verify thoroughly! Summer-ல fake camp scams common. 'Free registration + advance fee' contradiction notice பண்ணுங்க. Known institutions மட்டும் trust பண்ணுங்க. Visit the place before paying. Online advance risky.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS025",
+      "instruction": "Son ku US admission apply panrom. 'Visa guaranteed, university scholarship arranged, processing fee 2 lakhs' nu consultant solraan. Trust pannalama?",
+      "current_output": "'Visa guaranteed' no one can promise - embassy decision. 'Scholarship arranged' - legitimate scholarships application through varum, agents arrange pannaadhu. 2 lakhs vaangitu basic work um pannaama ghost aaguvaanga. Verified consultants - check reviews, past student references.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT028",
+      "instruction": "New order WhatsApp la vandhuchchu nga - 'Dubai export ku 5 lakh order, advance QR scan pannunga receive panna' nu. Dindigul lock business ku genuine order aa nga?",
+      "current_output": "QR scan panna receive aagaadhu nga - DEBIT aagum! Dindigul lock manufacturers specifically target pannuraanga scammers. 'Export order' excitement la maatikkaadhenga. LC through illana verified buyer dhaan deal pannunga.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS007",
+      "instruction": "'Apollo Pharmacy la irundhu ayya, unga monthly medicines ready, delivery charge 200 rupees, OTP sollunga confirm panna' nu call vandhudhu. Naan Apollo la medicines vaanguven, genuine aa?",
+      "current_output": "Apollo pharmacy OTP kekka maatanga ayya delivery ku. 'Delivery OTP' nu solradhu actually payment OTP - kaasu unga account la irundhu pogum. Pharmacy ku neenga call panni confirm pannunga. Unknown calls la OTP sollaadhenga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS030",
+      "instruction": "'Catering for wedding - 50% advance only! Best price guaranteed' unknown caterer. Deal பண்ணலாமா?",
+      "current_output": "Risky! Wedding caterer scams அதிகம். Advance வாங்கிட்டு disappear or substandard food. References வாங்குங்க. Taste testing போங்க. Written agreement எடுங்க. Known caterers prefer பண்ணுங்க. Full advance தராதீங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT017",
+      "instruction": "Steel business WhatsApp order vandhudichu le - new customer, 2 lakh order, advance transfer pannuren nu QR anuppinaa. Scan pannalaama?",
+      "current_output": "Pannaadhele! QR scan panna nee KUDUKKA dhaan mudiyum, vaanga mudiyaadhu. Reverse UPI scam le idhu. 'Big order' nu excitement create pannudhu. Salem steel traders ipdi maatikirukkaa. Cash on delivery illa LC through dhaan deal pannu le.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS031",
+      "instruction": "'SBI Home Loan pre-approved - 50 lakhs at 6.5%, lowest rate ever, processing fee 15,000 required' nu call vandhudhu. Home vaanga plan irukku, genuine offer aa?",
+      "current_output": "Banks cold call la loan push pannaadhu. 6.5% - below current rates, impossible. Processing fee advance kekaadhu - loan amount la deduct pannuvaanga. 'Pre-approved' without application impossible. SBI branch ku direct apply pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS018",
+      "instruction": "Email vandhuchu 'CME credits verification failed. Pay 12,000 for audit clearance or face council action.' CME credits important, pay pannidlama?",
+      "current_output": "CME credits tracked through official medical council portals. No 'audit clearance fee' exists. Check your CME status directly on NMC/SMC website. Scammers know doctors worry about continuing education compliance. Official communication comes through council letterhead and registered mail.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS045",
+      "instruction": "Akshaya Tritiya - 'Digital gold at 50% off! Today only!' app notification வந்துச்சு. Buy பண்ணலாமா?",
+      "current_output": "Scam alert! Gold 50% off என்றெல்லாம் இல்ல. Akshaya Tritiya gold buying sentiment exploit. Unknown apps-ல gold வாங்காதீங்க. Trusted platforms (MMTC, banks) மட்டும் use பண்ணுங்க. Too good offer = too bad trap.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS041",
+      "instruction": "Republic Day - 'Free flag with Tiranga photo frame! Register and share' WhatsApp forward. Genuine government initiative-ஆ?",
+      "current_output": "Mostly scam! Government free-ஆ flag distribute பண்ணும், registration தேவையில்ல. 'Register and share' data collection trap. Republic Day patriotism exploit பண்றாங்க. Local government office-ல free-ஆ வாங்குங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS057",
+      "instruction": "Email vandhuchu 'Hospital promotion exam registration. Pay 5000 for staff nurse grade-2 to grade-1 exam.' Promotion exam ku pay pannalama?",
+      "current_output": "Government hospital promotions through TNPSC or department exams - fees minimal and official. Private hospital promotions are internal HR process. No external 'promotion exam' services. Check with your hospital HR or nursing superintendent.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT023",
+      "instruction": "'Kerala Lottery la 10 lakh win panniteenga, tax 15,000 pay pannulle' nu call vannille. Ticket vaangiyilla, win aakumo?",
+      "current_output": "Ticket illaama win aakumo alle? Kerala Lottery phone la call pannillalle, tax advance vaangillalle. Fraudsters alle ivanga. Muttom, Kollencode la fishermen ipdi maatikittanga. Block pannu number.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS070",
+      "instruction": "Close friend persistent aa 'business opportunity' explain pannaan - 'Amway/Vestige join pannu, both of us earn, just 15,000 starter kit.'",
+      "current_output": "Friend genuine aa believe panniruppaan - but MLM structure problematic. 95%+ participants lose money (FTC data). Friendship strain aagum if you refuse or fail. Research MLM statistics, politely decline. Real friendship survives business rejection.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS083",
+      "instruction": "SMS vandhudhu 'Film industry card registration. 3000 fee for FEFSI/TFPC membership.' Industry card kedaikum aa?",
+      "current_output": "FEFSI/TFPC membership through proper union process with verification. Membership requires industry introduction and work history. No SMS-based instant registration. Visit official union offices. Scammers know artists want industry recognition - selling fake memberships.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS044",
+      "instruction": "School reopening - 'Textbooks 80% discount! Order before stock ends' unknown site offer. Order பண்ணலாமா?",
+      "current_output": "Risky! School opening time-ல textbook scams common. Advance வாங்கி wrong books or nothing அனுப்புவாங்க. Government schools free-ஆ books தரும். Private school-க்கு official bookshop-ல வாங்குங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS038",
+      "instruction": "Company layoff aachhu. 'Labour department' call pannaan - 'Wrongful termination compensation 2 lakhs eligible, processing fee 10,000' nu.",
+      "current_output": "Labour department suo motu call pannaadhu. Compensation court through varum, not phone calls. 'Processing fee' government departments kekkaadhu. Genuine grievance irundhaa Labour Commissioner office ku direct ponga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS007",
+      "instruction": "'Ayudha Pooja - Free bike service from TVS! WhatsApp to register' - genuine service camp-ஆ?",
+      "current_output": "Fake! TVS official-ஆ WhatsApp registration வச்சிருக்காது. Ayudha Pooja-ல vehicle related scams அதிகம். Service camp-னா dealer-ஐ directly contact பண்ணுங்க. WhatsApp forward நம்பாதீங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG020",
+      "instruction": "Crypto investment-la double money guarantee-nu friend suggest panraanga",
+      "current_output": "Crypto-la guarantee illa sir. Double money scheme ellam Ponzi fraud. Friend-um emaanthurukkalam. SEBI registered platform use pannunga, guaranteed return nambaadheenga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS049",
+      "instruction": "'IPL match prediction - 100% accurate, join Telegram VIP group, 5000 subscription.' Demo predictions correct aa vandhudhu.",
+      "current_output": "Demo predictions - they send opposite predictions to different groups, one group always 'wins.' VIP group la 'invest more for insider info' demands varum. Match fixing illegal anyway. Cricket betting apps - most unlicensed, money recovery impossible.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS029",
+      "instruction": "Colleague introduce pannaan - 'Monthly 5000 invest, 12 months la 75,000 return, plus referral bonus.' Initial members good returns vaanguraanga nu sonnaan.",
+      "current_output": "Classic Ponzi/MLM structure - early investors ku late investors paisa kuduppaanga. 'Referral bonus' = MLM. Sustainable illa - scheme collapse aagum, last entrants lose pannuvaanga. Colleague genuine aa trust pannirupparu but scheme itself fraud. Politely decline pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR002",
+      "instruction": "Complaint file panna enna documents collect pannanum?",
+      "current_output": "Collect BEFORE filing: Screenshots of ALL conversations (WhatsApp, SMS, email), call recordings if available, scammer's phone numbers, scammer's bank account/UPI ID, transaction receipts/screenshots, bank statement showing debit, any links/websites shared, scammer's social media profiles, your Aadhaar/ID proof, your bank account details, timeline of events written down. Storage tip: Email screenshots to yourself (timestamp proof), Google Drive backup, don't delete anything from phone.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS005",
+      "instruction": "'SBI Special Senior Citizen FD - 12% interest, limited period offer' nu call vandhudhu. Regular FD 7% dhaan irukku, idhu genuine special offer aa?",
+      "current_output": "12% FD interest impossible ayya - RBI regulations 8-9% max allow pannum. 'Special offer' nu solluraanga, investment vaangitu kaanama poiruvaanga. SBI branch ku poi enquire pannunga - phone offers trust pannaadheenga. Too good to be true na, fraud dhaan.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS032",
+      "instruction": "WhatsApp message 'ICSI membership upgrade offer. Company Secretary certification with 50,000 fast-track fee.' Career advancement ku useful aa?",
+      "current_output": "ICSI membership only through official exam and training route, no 'fast-track' exists. Company Secretary is regulated profession with mandatory exams. Check icsi.edu for genuine membership process. Shortcuts to professional certification are always fraudulent.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS027",
+      "instruction": "'SEBI registered advisor, daily 2-3 stocks, 100% profit guaranteed, monthly subscription 10,000' nu call vandhudhu. Side income aagum nu paakkuren.",
+      "current_output": "'100% profit guaranteed' - SEBI regulations la illegal claim. Registered advisors ipdi cold calls pannaadhu. Subscription vaangitu random tips kuduppaanga - loss vandha responsibility illa. SEBI registered check pannunga sebi.gov.in la - most callers fake registration claim pannuvaanga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 4,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT090_TG",
+      "instruction": "Porumai (patience) patri mukkiya kuralgal enna?",
+      "current_output": "Kural: 'Agazhvaarai thaangum nilampoola thammai igazhvaarp poruththal thalai'. Thannai igazhpavargalaiyum bhoomi pol thaanguvadhae sirandha gunam. Melum: 'Poruththaaraip pondraami kaakkum'. Porumai ullavargalai failure kaakkum. Patience = shield against failure!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT012_TG",
+      "instruction": "'Ollaave theeya seyal' - theemai patriya kural enna solludhu?",
+      "current_output": "Kural: 'Theeyavai theeya payaththalaal theeyavai theeyinum anjap padum'. Artham: Theeya seyalgal theeya palangalaye tharum. Enavae thee-yai vida theeya seyalgalai adhigam bayapada vendum. Neruppu udalai mattum sudum, aanaal theeya seyalgal vaazhkkaiyaye azhikkum.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT073_TG",
+      "instruction": "Yaaro ennaip patri gossip panraanga - eppadi handle panradhu?",
+      "current_output": "'Kannindru kannarach sollinum sollarka munnindru pinnokkach sol'. Munnaal nalladhu pesi, pinnaal kettadhu pesuvadhai avoid pannungal. Gossip panravargal own credibility izhappaargal. Ignore them. 'Manathukkan maaasilan aadhal' - ungal manam clean-aa irundhaal podhum. Their words can't hurt you.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT094_TG",
+      "instruction": "Unmai (truth) patri enna kuralgal ullana?",
+      "current_output": "Kural: 'Vaaimai enappaduvadhu yaadhenin yaadhodrum theemai ilaadha solal'. Unmai enbadhu yaarukkum theengu seiyaadha vaarthaigalae. Melum: 'Thannennju arivadhu poiyarka poiththapin thanenjae thannai sudum'. Nenju arindhu poi sonnaal, andha nenjae unnai varuththum. Conscience never lies!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT005_TG",
+      "instruction": "Thirukkural eththanai mozhigalil mozhipeyarkkapattuLLadhu?",
+      "current_output": "Thirukkural 82-kkum merpatta mozhigalil mozhipeyarkkapattuLLadhu. Bible-kku aduthpadiyaga adhiga mozhigalil mozhipeyarkkappatta nool-nu sollapadugiradhu. Mudhal English mozhipeyarppu 1886-la G.U. Pope-naal seiyappattadhu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT004_TG",
+      "instruction": "Thirukkuraloda amaippu eppadi irukkudhu?",
+      "current_output": "Thirukkural moondru pirivugalaga amaindhuLLadhu: 1) Araththuppaal (38 adhigaarangal) - dharmam, nallozhukkam, 2) Porutpaal (70 adhigaarangal) - arasiyal, porulaadhaaram, 3) Kaamaththuppaal (25 adhigaarangal) - kaadhal, illara vaazhkai. Mothum 133 adhigaarangal, 1330 kuralpaakal. Ovvoru adhigaarathilum 10 kuralkal.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT098_TG",
+      "instruction": "Arul / karunai (kindness) patri enna kuralgal ullana?",
+      "current_output": "Kural: 'Arutselvam selvaththul selvam porutselvam pooriyaar kannum ula'. Karunai endra selvamae unmaiyaana selvam. Panam kettavargalidamum irukkum. Melum: 'Maraththalum innaa pirarnenju mannaadha potrum karunai'. Karunai illaadha vaazhkkai vaazhkkaiyae alla. Kindness = true wealth!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT088_TG",
+      "instruction": "Needhi / Justice patri Thirukkural enna solludhu?",
+      "current_output": "Kural: 'Sengonmai vendhanai sevvi thiRavaadhaavar naanani naadu'. Needhiyudan aalum arasanin naattil makkal bayamindri vaazhvaargal. Melum: 'Orndhukan nodaadhu iraipurindhu yaarmaattum therndhusei vaqdhae murai'. Baarapatchamindri, aaraainDhu needhi vazhanguvadhae sariyaana murai. Impartial justice = foundation of good governance!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT035_TG",
+      "instruction": "Thirukkuraloda mudhal kural edhu?",
+      "current_output": "'Agara mudhala ezhuththellam aadhi bhagavan mudhatre ulagu'. Artham: 'A' ezhutthu ella ezhutthukkkalkkum aadharam pola, iraivan ulagaththirku aadharam.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT189_TG",
+      "instruction": "Aathichudi endraal enna? Sila udhaarangal sollungal?",
+      "current_output": "Aathichudi - Avvaiyar ezhuthiya needhi nool. Kuzhanthaigalukkku nallozhukkam karpikka. Ovvoru ezhuthilum thodangum ottrai vari arivuraigal. Famous examples: 1) 'Aram seiya virumbu' - do good deeds, 2) 'Aaruvadhu sinam' - control anger, 3) 'Iyalvadhu karavelv' - don't hide your capabilities, 4) 'Udaiyadhu vilambel' - don't boast, 5) 'Ookkamadhu kaividel' - don't give up enthusiasm. Tamil Nadu schools-la compulsory. Simple but powerful moral lessons!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT124_TG",
+      "instruction": "Kayakalpam (Rejuvenation) endraal enna?",
+      "current_output": "Kayakalpam enbadhu udalai puththunarchiyaakki, vayathai thaamadhappaduththum murai. Siddhargal neenda aayulodu vaazhndhathaga korappaduvatharkku idhuvae kaaranam. Idhil adangum: 1) Kurippittta herbs utkollal, 2) Detox seidhal, 3) Yoga matrum praanaayaamam, 4) Diet restrictions, 5) Manadhai suththappaduththudhal. Modern anti-aging research-la sila siddhar herbs study seiyappaduginrana!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT170_TG",
+      "instruction": "Tamil Nadu-oda naattuppura kalaigal ennenna?",
+      "current_output": "Mukkiya naattuppura kalaigal: 1) Karakattam - paanaiyai thalaiyil vaiththu aaduvathu, 2) Oyilattam - group dance, harvest celebration, 3) Kummi - women's circle dance, 4) Kolattam - stick dance, 5) Kavadi Attam - Murugan festival, 6) Therukoothu - street drama, 7) Poikkaal Kuthiraiyattam - dummy horse dance, 8) Mayilattam - peacock costume dance, 9) Thappattam - percussion instrument dance. Village festivals-la indrum popular!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT114_TG",
+      "instruction": "Thirumoolar yaar? Thirumandhiram endraal enna?",
+      "current_output": "Thirumoolar Saiva Siddhaanthathoda founders-la oruvar. 'Thirumandhiram' endra magathaana noolai ezhuthiyavar - 3000 paadalgal. Idhu 10-vadu Thirumurai. 'Ondre kulam, oruvane devan' endra famous quote ivaradhu. Yoga, tantra, Saiva Siddhaandham, aanmeegam ellam idhil ullana. Oru pasuvoda udalil pugundu adhoda kanrai kaappattiya kadhai famous - adhanaal 'Moolar' endra peyar vandhadhu.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT155_TG",
+      "instruction": "Sangam Ilakkiyam endraal enna?",
+      "current_output": "Sangam Ilakkiyam Tamilin migap pazhamaiyaana ilakkiya thoguppu. Moondru sangangal nadandhathaaga Tamil marabu koorugindradhu. Indha ilakkiyangal Agam (kaadhal), Puram (veeram, por, arasiyal) endru pirikkappaduginrana. Ettuthogai, Paththuppaattu mukkiya thoguppugal. Iyarkai varnanai, manidha unarvugal azhagaaga siththarikkappattuLLana. Ulagin migap pazhaiya secular ilakkiyangalil ondru.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT050_TG",
+      "instruction": "'Nallavai ellam theeyavaam' - sombal patriya kural enna?",
+      "current_output": "Kural: 'Nallavai ellam theeyavaam theeyavum nallavaam selvam seyarku'. Artham: Somberiyidam nalla vaaippugal vandhaalum kettadhaaga maarum. Aanaal active-aaga iruppavanukkku ketta soozh nilayum nalladhaaga maarum. Your attitude determines outcome, not circumstances!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT013_TG",
+      "instruction": "'Udaiyar enappaduvadhu ookkam' - ookkam patriya kural enna?",
+      "current_output": "Kural: 'Udaiyar enappaduvadhu ookkam aqdhilaar udaiyadhu udaiyaro matru'. Artham: Unmaiyaana selvam enbadhu ookkame. Ookkam illadhavargal vera edhai vaiththirundhaalum adhu unmaiyaana selvam alla. Motivation-a patri arputhamaana kural.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT008_TG",
+      "instruction": "'Katrradhanaal aaya payanenkol' - indha kuraloda porul enna?",
+      "current_output": "Kural: 'Katrradhanaal aaya payanenkol vaalariVan natraal thozhaar enin'. Artham: Thooya arivudaiya iraivanoada thiruvadigalai vanangaavittaal, katra kalviyaal enna payan? Kalviyoda unmaiyaana payan iraivanai vananguvadhae enkiraar Valluvar.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT183_TG",
+      "instruction": "Penn Nayanmaargal yaaraenum irukiraargala?",
+      "current_output": "Aam, moondru penn Nayanmaargal ullanar: 1) Karaikkal Ammaiyar - pei uruvil Sivanai vanangiYavar, Thiruvalangattil Sivan aadum bodhu isai vazhangiYavar, 'Ammaiye' endru Sivan azhaiththathaal 'Ammaiyar' peyar, 2) Mangaiyarkkarasi (Thirunavukkarasar sagodhari), 3) Isaignaaniyar (Thirugnana Sambandhar thaay). Pengalum bhakthi maargathil sirandhavargal enbadharkku proof!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT041_TG",
+      "instruction": "'Arulillaarkku avvulagam illai' - arul patriya kural enna solludhu?",
+      "current_output": "Kural: 'Arulillaarkku avvulagam illai porulillaarkku ivvulagam illai yaangu'. Artham: Karunai illadhavargalukkku marumai (after-life) illai. Panam illadhavargalukkku immai (indha ulagam) kashtam. Compassion = spiritual wealth, Money = worldly needs. Irandum thevai!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT072_TG",
+      "instruction": "Fear of failure irukkidhu - eppadi overcome panradhu?",
+      "current_output": "'Olvadhu arivadhu arindhadan kan thangich selvaar peru nilaththu needu vaazhvaar'. Ungal thiRamayai arinDhu, adhil focus seiyungal. Melum: 'Ulluvadhu ellam uyarvullal' - always think positive. Failure is just feedback! Learn and try again. 'Thortraalum muyarchi sei' - effort matters more than outcome.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT197_TG",
+      "instruction": "Vallalar (Ramalinga Adigal) yaar?",
+      "current_output": "Vallalar (1823-1874) - 'Arutperunjothi' thaththuvathai parappiyavar. Jaadhi, madha verupaadugalai ethirthavar. 'Samarasa Suttha Sanmaarga Sangam' niruvinar. Vadaloor Sathya Gnana Sabhai kattinar - kovil without idol, pure light worship. 'Jeevakarunyam' (compassion for all living beings) mukkiya bodhanai. 1874-la 'Degathai oliyaaga maatri maraindhaar' endru nambappadugiradhu. Annadhaanam thodangiyavar - free food for all.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT118_TG",
+      "instruction": "Idaikaadar Siddhar patri enna theriyum?",
+      "current_output": "Idaikaadar aadu meykkum idaiyar samoogathai serndavar endru nambappadugiradhu - adhanaal indha peyar. Jaadhi bedhamindri evarum siddharagalam enbadharkku example. 'Idaikaadar Gnaanam', 'Idaikaadar Vaiththiyam' pondra noolgal avar peyaril ullana. Eliya mozhiyil aanmeegaththai explain panniyavar.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT176_TG",
+      "instruction": "Bharathiyar yaar? Avar contribution enna?",
+      "current_output": "Subramania Bharathi (1882-1921) - Tamilin migasirandha kavignargalil oruvar. Sirappugal: 1) Desiya kavignar - independence movement-kku inspiring poems, 2) Pen viduthalai - 'Pudhumaipenn' concept, 3) Jaadhi ozhippu - social reform, 4) Eliya Tamil - common people purindhukkolla, 5) Panchali Sabadham - epic poem. 'Sindhu nadhiyin misai', 'Vellainiraththorupoonai', 'Achamilai achamilai' migavum famous. Modern Tamil poetry father!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT062_TG",
+      "instruction": "Job interview-kku pogum bodhu courage-kku enna kural padikkalam?",
+      "current_output": "'Achchame keezhkaladhu aasaaram aqdhaal echchtham emaappu udaiththu'. Bayam enbadhu thaazhndhavrkalukkae uriyadu. Confident-aa irunngal. Melum: 'Ookkamadhu kaividel' - enthusiasm-a vidaadheeargal. Believe in yourself, prepare well, and face it boldly!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT159_TG",
+      "instruction": "Aimperungaappiyangal endraal enna?",
+      "current_output": "Tamiloda aindhu periya kaappiyangal: 1) Silapathigaram - Ilango Adigal, Kannagi kadhai, 2) Manimegalai - Seethalai Saatthanaar, Kannagi magal kadhai, 3) Seevaka Chinthamani - Thiruththakadevar, Jain kaappiyam, 4) Valaiyapathi - Jain kaappiyam (paguthi mattum kidaiththathu), 5) Kundalakesi - Buddha kaappiyam (muzhmaiyaaga kidaikkavillai). Silambum Manimekalayum irattai kaappiyangal endru azhaikkapadum.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

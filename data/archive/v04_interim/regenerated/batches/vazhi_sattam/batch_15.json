@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 15,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TRAF002_TG",
+      "instruction": "License renewal eppodhu pannanum?",
+      "current_output": "Non-transport: 20 years validity (age 50 varai), piragu 5 years. Transport: 3 years. Renewal: Expiry-kku 1 year mun or 1 year pin (late fee applicable). Online: parivahan.gov.in. Expired license-udan drive panninal fine Rs.5,000.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM019_TG",
+      "instruction": "Police investigation-la cooperate pannanuumaa?",
+      "current_output": "Aama, reasonable cooperation venum. Aanaal rights therinchukonga: 1) Self-incriminating statement kodukka vendaam, 2) Lawyer presence-la statement kodukkalam, 3) Illegal search oppose pannalam, 4) Narco test, brain mapping - consent venum.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS019_TM",
+      "instruction": "Consumer forum-ல் case file செய்ய என்னென்ன documents வேணும்?",
+      "current_output": "Required: 1) Written complaint (5 copies), 2) Bill/Invoice copy, 3) Warranty/Guarantee card, 4) Correspondence with seller (letters, emails), 5) ID proof, 6) Address proof, 7) Photos/Videos of defect. Online filing: edaakhil.nic.in portal மூலம்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP025_TG",
+      "instruction": "GPA (General Power of Attorney) moolam property sale valid-aa?",
+      "current_output": "Supreme Court ruling (2011): GPA moolam property sale NOT valid. GPA holder sale deed execute pannalam, but final ownership transfer Principal neril vandhu sign seyyanum or properly registered Special Power of Attorney venum.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL016_TG",
+      "instruction": "Shop employee rights enna?",
+      "current_output": "TN Shops and Establishments Act: 1) 8 hours work/day, 48 hours/week, 2) Weekly off mandatory, 3) Leave: 12 days earned + 12 days sick + 5 casual, 4) Overtime double wages, 5) No child labour (<14 years). Violation: Labour Inspector complaint.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL006_TG",
+      "instruction": "ESI hospital-la treatment eppadi peruvathu?",
+      "current_output": "ESI card + ID proof kaattunga. Dispensary-la OP treatment free. Serious cases: ESI hospital referral. Tied-up hospitals-lum treatment available. Emergency-kku any hospital-la treatment petru reimbursement claim pannalam. Dependent family members-kkum cover undu.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE006_TM",
+      "instruction": "Affidavit எங்கே பண்றது? Cost என்ன?",
+      "current_output": "Notary Public office (court complex nearby). Cost: Rs.50-200 (stamp paper) + Rs.100-500 (notary fee). Documents: ID proof, matter details. Self-drafted allowed. Notarized affidavit = legal document. e-Stamp paper available at banks.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM012_TG",
+      "instruction": "Bail reject aanaal enna seivathu?",
+      "current_output": "Appeal options: Lower court reject → Sessions Court. Sessions reject → High Court. High Court reject → Supreme Court. Fresh application: New grounds/changed circumstances irundhaal same court-layae fresh petition podalam. Legal aid available.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP017_TG",
+      "instruction": "Legal notice eppadi anuppuvadhu? Lawyer venumaa?",
+      "current_output": "Self anuppalaam, but lawyer recommended for proper drafting. Format: 1) From/To addresses, 2) Subject, 3) Facts, 4) Legal grounds, 5) Demand/relief sought, 6) Time limit (usually 15-30 days), 7) Consequence warning. Send: Registered post AD (Acknowledgement Due). Keep copy + postal receipt. Reply not mandatory but advisable.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP001_TG",
+      "instruction": "Bank loan EMI katta mudiyala, enna aagum?",
+      "current_output": "EMI default aanaal: 1) 90 days delay = NPA (Non-Performing Asset), 2) Bank notice anuppum, 3) Recovery agent varalam - aanaal avanga threaten panna koodaadhu, 4) Restructure/one-time settlement kelunga, 5) Home loan: SARFAESI Act-in keezh property auction aagalam. RBI guidelines: Recovery agent harassment-kku complaint podalam.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM010_TG",
+      "instruction": "Bail bond amount evvalavu irukkum?",
+      "current_output": "Offence severity based - Rs.10,000 to lakhs varai. Court discretion. Surety (guarantor) same amount-kku guarantee kodukkanum. Poor accused-kku personal bond (surety illaama) kidaikkum. Excessive bail unconstitutional.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL007_TG",
+      "instruction": "Gratuity-kku eligibility enna?",
+      "current_output": "Minimum 5 years continuous service venum. 10+ employees ulla establishment-kku applicable. Death/disability case-la 5 years vendaam. Calculation: Last drawn salary × 15/26 × years of service. Maximum: Rs.20 lakhs.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS006_TM",
+      "instruction": "Bill இல்லாம வாங்கின product-க்கு complaint போடலாமா?",
+      "current_output": "Bill இல்லாவிட்டாலும் complaint போடலாம். Alternative proofs: 1) Bank/card statement, 2) Online payment screenshot, 3) Warranty card, 4) Packaging with shop name, 5) Witness statement. ஆனால் bill இருந்தால் case strong ஆகும்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM006_TG",
+      "instruction": "Police ennai eppodhu arrest pannalaam?",
+      "current_output": "Cognizable offence-kku warrant illama arrest pannalam. Non-cognizable-kku warrant venum. Bailable offence-kku arrest thevai illa - notice podhum. 7 years-kku keezh punishment offences-kku generally arrest avoid pannanum (Supreme Court guidelines).",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE020_TG",
+      "instruction": "Online-la fraud aayitten, police-kku ponaa ozhungaa case poduvaangalaa? (Chennai style)",
+      "current_output": "Cyber crime special cell irukku - trained officers. cybercrime.gov.in-la first complaint podunga - track aagum. Local police-kkum FIR podunga. Both simultaneously pannalam. Evidence (screenshots, bank statements) ready-aa vachukonga.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP006_TM",
+      "instruction": "Will இல்லாமல் இறந்தால் property யாருக்கு போகும்?",
+      "current_output": "Hindu Succession Act படி: Class I heirs (wife, sons, daughters, mother) சமமாக பங்கு பெறுவார்கள். Class I இல்லாவிட்டால் Class II (father, siblings, etc.). Muslim-க்கு Shariat law, Christian-க்கு Indian Succession Act apply.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS002_TG",
+      "instruction": "Consumer complaint enge kodukkalam?",
+      "current_output": "Claim amount based: 1) Rs.1 crore varai - District Consumer Forum, 2) Rs.1-10 crore - State Commission, 3) Rs.10 crore mela - National Commission. Online: consumerhelpline.gov.in or NCH app moolam. Toll-free: 1800-11-4000.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF020_TG",
+      "instruction": "Traffic police license vaangittu poyittaar, enna panradhu? (Chennai style)",
+      "current_output": "Challan receipt vaangunga - license-kku padhil temporary receipt koduppaanga. Fine pay panni license collect pannunga (traffic police station/court). 60 days-kkul collect pannalnna cancelled aagalam. Online payment-um available.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_007_TG",
+      "instruction": "Private company-kitta RTI podalaamaa?",
+      "current_output": "Direct-aa poda mudiyaadhu. Aanaal government-kitta private company pattrina information ketkalam (permits, licenses, contracts, subsidies). Example: Builder RERA compliance pattri RERA Authority-kitta RTI podalam.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC012_TM",
+      "instruction": "School admission மறுக்கிறார்கள் - RTE-ல் seat இருக்கே?",
+      "current_output": "RTE Act 25%: EWS/disadvantaged group-க்கு reserved. Apply: Online portal (rte.tn.gov.in). Rejection complaint: Block Education Officer, DEO, State RTE Authority. Documents: Income certificate, caste certificate, residence proof. Age: 6-14 years.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC016_TG",
+      "instruction": "Medicine MRP-kku mela vitraal complaint enge?",
+      "current_output": "Complaint: Drug Inspector (District), State Drug Control. Legal Metrology Department-um complaint edukkum. Pharmacy license suspend/cancel aagalam. Consumer forum-la compensation. Evidence: Bill with MRP comparison. Toll-free: 1800-11-4000.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC002_TM",
+      "instruction": "Neighbour waste என் வீட்டு பக்கம் போடுகிறார் - action என்ன?",
+      "current_output": "Corporation/Municipality complaint: Solid Waste Management Rules violation. Police: IPC 268 (public nuisance), 269 (negligent act spreading disease). Photos/videos evidence. Tahsildar complaint-உம் possible. Fine up to Rs.5,000 for waste dumping violation.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC017_TM",
+      "instruction": "Children parents-ஐ பார்க்காம விட்டுட்டாங்க - law உதவுமா?",
+      "current_output": "Maintenance and Welfare of Parents Act 2007: Children (including married daughters) parents-க்கு maintain செய்யணும். Tribunal: SDM/Tahsildar level. Maintenance order: Rs.10,000/month max. Property revocation: Gift deed cancel possible if neglect proved.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC008_TM",
+      "instruction": "Chit fund company பணம் தர மறுக்கிறது - complaint எங்கே?",
+      "current_output": "Registered chit: Registrar of Chits (District). Unregistered: Police (cheating), Economic Offences Wing. TN Chit Funds Act violation. Consumer forum-உம் possible. Documents: Chit tickets, receipts, agreement. Collective complaint stronger.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS026_TM",
+      "instruction": "Builder flat தர delay பண்றார் - என்ன செய்யலாம்?",
+      "current_output": "RERA (Real Estate Regulatory Authority)-ல் complaint போடுங்க. tnrera.in - Tamil Nadu RERA portal. Delay-க்கு interest (SBI lending rate + 2%) கேட்கலாம். Full refund with interest-உம் கேட்கலாம். Consumer forum-லும் parallel-ஆ case போடலாம்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 19,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "COMM003_TG",
+      "instruction": "Counselling-la seat confirm aana, piragu change panna mudiyumaa?",
+      "current_output": "Options: 1) Tentative allotment - wait for next round, better college possible 2) Self-reporting - confirm seat, can still upgrade in subsequent rounds 3) Final allotment - must join or forfeit. Upgrade: Each round, vacant seats filled. Your higher choices reconsidered. Risk: If you reject and don't get better, no seat. Safe: Confirm in hand, upgrade if available. Fees paid = refundable if upgraded officially.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO008_TM",
+      "instruction": "10th Public Exam-க்கு எப்படி prepare செய்வது? Pass mark என்ன?",
+      "current_output": "**10th Public Exam Preparation:**\n\n**Pass Marks:**\n- Theory: 35/100 (each subject)\n- Practical: 50% (where applicable)\n- Minimum total: 35% overall\n\n**Subjects:**\n- Tamil (Paper 1 & 2)\n- English (Paper 1 & 2)\n- Mathematics\n- Science\n- Social Science\n\n**Preparation Strategy:**\n\n**6 Months Before:**\n1. Complete syllabus reading\n2. Important topics identify\n3. Formula list create (Maths, Science)\n\n**3 Months Before:**\n1. Chapter-wise revision\n2. Previous 5 years papers solve\n3. Model exams practice\n4. Weak areas focus\n\n**1 Month Before:**\n1. Quick revision\n2. Formula revision daily\n3. Time management practice\n4. Full-length mock tests\n\n**Subject-wise Tips:**\n\n**Tamil:** கவிதைகள், இலக்கணம் (திணை, துறை, பால்) focus\n\n**English:** Grammar rules, Letter/Essay formats\n\n**Maths:** Daily problem solving, Formula memorize\n\n**Science:** Diagrams practice, Chemical equations\n\n**Social:** Maps practice, Dates memorize\n\n**Free Resources:**\n- Kalvi TV (கல்வி தொலைக்காட்சி)\n- DIKSHA App\n- tnschools.gov.in study materials\n- YouTube: Tn Samacheer",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM029_TM",
+      "instruction": "Fee கட்ட முடியல, college-ல் exam எழுத விடமாட்டேங்கறாங்க",
+      "current_output": "Immediate options: 1) Talk to Principal - installment arrangement 2) Education loan - bank/college tie-up 3) Student Aid Fund (most colleges have) 4) Scholarship if eligible - pending payment proof show 5) NGO support - Rotary, Lions Club. Legal: College cannot deny exam for genuine financial difficulty. Escalate: University Registrar, UGC grievance. Documentation: Keep written request, college response. Prevention: Apply for scholarships, loans in advance.",
+      "category": "common_questions",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "EXTE003_TG",
+      "instruction": "Disability students-kku competitive exam la enna concessions undu?",
+      "current_output": "Scribe facility, extra time (1 hour), separate seating, PWD quota (4% reservation), age relaxation (10 years), fee exemption, assistive devices use pannalam. NEET, JEE, TNPSC ellathilum indha concessions kedaikum.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM015_TG",
+      "instruction": "JEE Maths-la weak, eppadi improve aavadhu?",
+      "current_output": "Maths improvement plan: 1) Basics strong - NCERT Class 11 first 2) Formula derivation purindhu padiyunga 3) Daily minimum 30 problems 4) Chapter-wise: Start easy (Sets, Relations) → Hard (Calculus, Coordinate) 5) Error analysis - why wrong? 6) Timed practice. High weightage: Calculus 35%, Algebra 25%, Coordinate 20%. Weak students: Focus scoring chapters first. Practice > Theory for Maths.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA023_TG",
+      "instruction": "10th/12th pass-ku endhendha government jobs apply seiyalaam?",
+      "current_output": "10th pass jobs: 1) Railway Group D 2) SSC MTS (Multi-Tasking Staff) 3) TNPSC Group 4 4) Police constable 5) Post office GDS. 12th pass jobs: 1) SSC CHSL (LDC, DEO) 2) TNPSC Group 4 (higher posts) 3) Bank clerk (some) 4) Railway NTPC 5) Defence - Army, Navy, Air Force. Age: 18-30 (varies). Apply: Respective recruitment websites. Free coaching available through Employment Exchange.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO006_TG",
+      "instruction": "Tamil Nadu govt-oda merit scholarship eppadi kidaikkum?",
+      "current_output": "CM's Merit Scholarship: 10th, 12th-la high marks vangiyavargalukku. Amount: ₹5,000-10,000 one-time. Eligibility: State topper, district topper, subject topper. Selection: Board exam results basis automatic. Higher education scholarship: ₹25,000-50,000 for state rank holders in entrance exams (NEET, JEE). Apply through School Education Department.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP016_TM",
+      "instruction": "Law படிக்க என்ன entrance exam எழுதணும்?",
+      "current_output": "**Law Entrance Exams:**\n\n**1. CLAT (Common Law Admission Test):**\n- For: 22 National Law Universities (NLUs)\n- Eligibility: 12th pass with 45% (40% SC/ST)\n- Age: No upper limit\n- Exam: December (usually)\n- Top NLUs: NLSIU Bangalore, NALSAR Hyderabad, NLU Delhi\n\n**CLAT Pattern:**\n| Section | Questions | Marks |\n|---------|-----------|-------|\n| English | 28-32 | 28-32 |\n| Current Affairs + GK | 35-39 | 35-39 |\n| Legal Reasoning | 35-39 | 35-39 |\n| Logical Reasoning | 28-32 | 28-32 |\n| Quantitative | 13-17 | 13-17 |\n| **Total** | **150** | **150** |\n\n- Duration: 2 hours\n- Negative: 0.25 marks\n\n**2. AILET (All India Law Entrance Test):**\n- For: NLU Delhi only\n- Similar pattern to CLAT\n- Separate exam\n\n**3. LSAT India:**\n- For: Private law colleges\n- Logical reasoning focus\n- Multiple test dates\n\n**4. TNDALU (TN Dr. Ambedkar Law University):**\n- For: TN Law Colleges\n- State-level entrance\n- tndalu.ac.in\n\n**5. Integrated LLB (5 years):**\n- After 12th\n- BA LLB, BBA LLB, BCom LLB\n\n**6. LLB (3 years):**\n- After Degree\n- Most state universities\n\n**Preparation:**\n\n**Start from Class 11:**\n- Read newspapers daily\n- Legal awareness\n- Logical reasoning practice\n- English comprehension\n\n**Books:**\n| Subject | Book |\n|---------|------|\n| Legal Reasoning | AP Bhardwaj |\n| Logical Reasoning | RS Aggarwal |\n| English | Word Power Made Easy |\n| GK | Lucent + Current Affairs |\n\n**Mock Tests:** clatconsortium.nic.in practice papers",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM017_TM",
+      "instruction": "உண்மையா பொய்யா: Myth: Government school-ல் படிச்சா success ஆக முடியாது",
+      "current_output": "உண்மை: Fact: பல IAS officers, Doctors, Engineers government school products. 7.5% reservation போன பிறகு government school NEET toppers அதிகரித்துள்ளனர். Quality of education depends on student's effort + teacher dedication. Many district toppers from government schools. Free education + scholarships = excellent opportunity.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM003_TM",
+      "instruction": "Arrear/Supplementary exam எப்படி clear ஆவது?",
+      "current_output": "Arrear clear strategy: 1) Previous failures reason analyze பண்ணுங்கள் 2) Important chapters மட்டும் focus - 60% weightage chapters 3) Previous year arrear question papers practice 4) Time: 1-2 months dedicated preparation 5) Easy questions first attempt 6) Passing marks aim: 35/100. Exam: October (10th), June (12th). Same syllabus, slightly easier paper. Private candidates also apply possible. Attempt limit இல்லை.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM030_TG",
+      "instruction": "Education helpline numbers contact info enna?",
+      "current_output": "• TN School Education Helpline: 1800-599-9880 - \n• Higher Education Helpline: 044-28524904 - \n• NEET Helpline: 011-40759000 - \n• TNPSC Helpline: 044-25332833 - \n• NSP Scholarship Helpline: 0120-6619540 - \n• Student Mental Health (iCALL): 9152987821 - \n• Women Helpline: 181 - \n• Child Helpline: 1098 - ",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE005_TM",
+      "instruction": "வேலைக்குப் போகும்போதே படிக்க முடியுமா?",
+      "current_output": "முடியும். Evening colleges (5pm-9pm), Sunday classes, correspondence courses, online degree programs (SWAYAM, NPTEL) மூலம் வேலை பார்த்துக்கொண்டே படிக்கலாம். UGC approved distance education universities-ல் சேரலாம்.",
+      "category": "extended_topics",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HIGH020_TG",
+      "instruction": "Pharmacy padippu (B.Pharm/D.Pharm) pathi vilakkuanga?",
+      "current_output": "D.Pharm: 2 years (+2 Biology/Maths aprom). B.Pharm: 4 years. Admission: TN Pharmacy Council counselling. Govt college fee: ₹5,000-15,000/year. Job opportunity: Medical shops, pharma companies, research. GPAT exam M.Pharm-ku. Own pharmacy shop thodangalam.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC005_TG",
+      "instruction": "Library-a effectively use panrathu eppadi?",
+      "current_output": "Library tips: 1) Get library card first day 2) Know sections - reference, lending, periodicals 3) Silent study areas = best concentration 4) Group study rooms book in advance 5) Digital resources - e-journals, databases access 6) Inter-library loan facility 7) Photocopy limits know 8) Renewal option use 9) Reserve books in demand. Pro tip: Morning time library = peaceful. Regular schedule = habit formation.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM027_TG",
+      "instruction": "Notes eppadi ezhuthuvathu effective-aa irukkum?",
+      "current_output": "Effective note-making: 1) Cornell method - page divide into sections 2) Use your own words, not copy 3) Highlight keywords, underline important 4) Use diagrams, flowcharts 5) Color coding for topics 6) Short forms, abbreviations 7) One topic per page 8) Revision space at bottom 9) Index at front 10) Update regularly. Digital options: Notion, OneNote - searchable. Handwritten better for memory. Review notes within 24 hours of class.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH027_TM",
+      "instruction": "இந்தியாவில் படிப்புக்கு education loan எப்படி வாங்குவது?",
+      "current_output": "படிகள்: 1) Admission letter வாங்குங்கள் 2) வங்கியில் விண்ணப்பம் 3) Documents submit (mark sheets, fee structure, income proof) 4) Loan sanction 5) கல்லூரிக்கு நேரடி disbursement. ₹4 lakh வரை - collateral தேவையில்லை. ₹4-7.5 lakh - third party guarantee. ₹7.5 lakh மேல் - property collateral. Interest subsidy available for EWS.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP020_TM",
+      "instruction": "Engineering padicha piragu job kedaikkavillai, enna seiyalaam?",
+      "current_output": "Kedaikkum, konjam time agum. Options: 1) Skill upgrade - Python, Data Science courses 2) GATE ezhudhu - PSU jobs, ME admission 3) Government jobs - SSC JE, RRB 4) Freelancing start pannu 5) Startup try pannu - PMEGP loan irukku. Tirupur, Coimbatore industry hub - networking pannu. Patience venum.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM001_TG",
+      "instruction": "Plus One admission-ku eppo apply pannanum?",
+      "current_output": "Timeline: 10th result vandha piragu 1 week-la notification. Usually May-June. Online application: www.tnschooleducation.in. Documents ready: 10th marks card, TC, community certificate, income certificate, Aadhaar. Choice filling: Preferred schools + subjects. Random allocation for government schools. Cutoff based for popular schools. Don't miss deadline - late applications not accepted.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM023_TM",
+      "instruction": "IBPS Clerk vs IBPS PO - எது apply பண்றது better?",
+      "current_output": "Comparison: Clerk - 12th pass eligible, ₹20,000-45,000 salary, clerical work. PO - Degree required, ₹40,000-80,000+ salary, managerial track. Difficulty: PO > Clerk. Career growth: PO faster promotions. Recommendation: Apply both! Same preparation works. Clerk = safe backup while aiming PO. Age: Clerk 20-28, PO 20-30. Competition: Both high, PO slightly more. Interview: PO has, Clerk doesn't (most banks).",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP015_TM",
+      "instruction": "Defence Jobs-க்கு என்னென்ன exams இருக்கு? Age limit என்ன?",
+      "current_output": "**Defence Recruitment Exams:**\n\n**1. NDA (National Defence Academy):**\n- For: Army, Navy, Air Force Officers\n- Eligibility: 12th pass/appearing (10+2)\n- Age: 16.5 - 19.5 years\n- Exam: UPSC conducts (April & September)\n- Training: 3 years at NDA Khadakwasla\n- Gender: Males only (as of now)\n\n**2. CDS (Combined Defence Services):**\n- For: IMA, OTA, Naval Academy, Air Force Academy\n- Eligibility: Degree (IMA/OTA), Physics-Maths (Air Force)\n- Age: 19-24/25 years\n- Exam: UPSC conducts\n- Gender: Males + Females (OTA)\n\n**3. AFCAT (Air Force Common Admission Test):**\n- For: Air Force Officers\n- Eligibility: Degree with 60%\n- Age: 20-24/26 years\n- Flying/Technical/Ground Duty branches\n\n**4. Indian Army:**\n\n| Entry | Eligibility | Age |\n|-------|-------------|-----|\n| NCC Special | NCC C Certificate | 19-25 |\n| TGC (Technical) | Engineering | 20-27 |\n| SSC Tech | Engineering | 20-27 |\n| JAG | Law Degree | 21-27 |\n| Soldier GD | 10th pass | 17.5-21 |\n| Soldier Clerk | 12th pass | 17.5-23 |\n\n**5. Indian Navy:**\n- SSC Officer\n- Sailor (MR, AA, SSR)\n- Age varies by entry\n\n**6. Indian Coast Guard:**\n- Navik, Yantrik\n- Eligibility: 10th/12th\n- joinindiancoastguard.gov.in\n\n**Physical Standards:**\n- Height: 157-170 cm (varies)\n- Weight: Proportionate\n- Vision: 6/6 or correctable\n- No flat feet, color blindness\n\n**Preparation:**\n- Written exam (Maths, English, GK)\n- SSB Interview (5 days)\n- Medical examination\n- Physical tests\n\n**Websites:**\n- joinindianarmy.nic.in\n- joinindiannavy.gov.in\n- careerindianairforce.cdac.in\n- upsc.gov.in (NDA/CDS)",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_011_TG",
+      "instruction": "NEET/JEE coaching-ku latchakanakkil selavagum, engalaal afford panna mudiyaadhu. Chance illayaa?",
+      "current_output": "Hope ulladhu! Free/Low-cost options: 1) Government free NEET/JEE coaching centres 2) School-based free coaching (apply through HM) 3) YouTube: Physics Wallah complete course free 4) NPTEL, SWAYAM free courses 5) Scholarship-based coaching: FIITJEE, Allen poor student schemes 6) Library resources - reference books available. Success stories: Many toppers from poor families using free resources. Key: Self-discipline and hard work. Money doesn't guarantee success.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC009_TM",
+      "instruction": "Project/Thesis work எப்படி approach பண்றது?",
+      "current_output": "Project success: 1) Choose topic early - guide consultation 2) Literature review first - Google Scholar, journals 3) Weekly meetings with guide - progress show 4) Documentation parallel - don't wait till end 5) Plagiarism check - Turnitin/iThenticate 6) Presentation practice - viva preparation 7) Backup data - multiple locations 8) Deadline buffer - submit before last day. Tip: Original contribution expected, not just copy. Industry internship projects valuable.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC003_TM",
+      "instruction": "Roommate-ஓட problem இருக்கு. Handle பண்றது எப்படி?",
+      "current_output": "Tips: 1) Communication first - politely discuss issues 2) Set ground rules - sleep time, study time, cleanliness 3) Respect personal space 4) Compromise needed from both sides 5) If serious issue - approach warden 6) Room change request (last resort) 7) Avoid gossip, direct conversation better. Remember: You're both adjusting. Patience required. Good roommate = lifelong friend possible.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO020_TM",
+      "instruction": "Infosys Foundation scholarship students-க்கு கிடைக்குமா?",
+      "current_output": "Infosys Foundation Programs: 1) Merit scholarships through partner NGOs 2) Rural education support 3) Research grants for PhD students 4) Infosys Prize - established researchers. Direct student scholarship: Through Buddy4Study partner programs. Engineering students: Campus recruitment preference. Apply: Check www.infosys.org annually for specific programs.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP004_TG",
+      "instruction": "Paramedical courses ennenna irukku? Job scope?",
+      "current_output": "Popular courses: 1) DMLT (Lab Technician) - 2 years 2) X-Ray/Radiology - 2 years 3) Operation Theatre Tech - 2 years 4) Physiotherapy (BPT) - 4 years 5) Optometry - 4 years 6) Medical Imaging Tech - 3 years. Admission: Based on 12th marks (Physics, Chemistry, Biology). Jobs: Hospitals, Diagnostic centres, Clinics. Salary: ₹12,000-25,000 starting. High demand, job security good.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

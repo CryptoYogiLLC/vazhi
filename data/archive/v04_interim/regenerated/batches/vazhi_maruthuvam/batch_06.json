@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 6,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH053_TG",
+      "instruction": "Diagnosis miss aachu, cancer late-aa detect aachu - negligence-aa?",
+      "current_output": "Depends on circumstances. Negligence if: 1) Symptoms clearly pointed to cancer, 2) Standard tests not ordered, 3) Reports misread, 4) Follow-up not done, 5) Patient's complaints ignored. Not negligence if: Symptoms were atypical, tests done but cancer not detectable at that stage. Prove: What a reasonably competent doctor would have done. Expert witness: Essential for such cases.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH001_TG",
+      "instruction": "Chief Minister's Comprehensive Health Insurance Scheme (CMCHIS) endraal enna?",
+      "current_output": "CMCHIS = Free health insurance for TN families. Coverage: Rs.5 lakh per family per year. Eligibility: Annual income below Rs.72,000 (rice card holders automatic). Benefits: 1,027 procedures covered - surgeries, treatments, follow-up. Cashless treatment at empanelled hospitals. Card: Family smart card issued. Renewal: Automatic for eligible families.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH008_TM",
+      "instruction": "Pregnant women-க்கு என்ன free schemes இருக்கு?",
+      "current_output": "TN schemes: 1) Dr. Muthulakshmi Maternity Benefit Scheme - Rs.18,000 cash assistance, 2) Free delivery at government hospitals, 3) Free antenatal checkups, 4) Iron/folic acid tablets free, 5) Free ultrasound scans, 6) 102 ambulance for transport, 7) Post-delivery nutrition support. Register: PHC/Government hospital within first trimester. Amma Baby Care Kit: Free baby items.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH015_TG",
+      "instruction": "Cancer treatment-kku government support irukkaa?",
+      "current_output": "Yes! Multiple supports: 1) CMCHIS - cancer treatment covered (Rs.5 lakh), 2) Government cancer hospitals - free/subsidized, 3) PM-JAY for eligible, 4) State Cancer Institute (Adyar) - subsidized, 5) CM's Relief Fund - apply for additional support. Free screening: Breast, cervical cancer at PHCs. Support: Transport allowance, free medicines (chemo). Apply: Hospital social worker will help with paperwork.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH186_TG",
+      "instruction": "Thokkanam massage enge kidaikkum?",
+      "current_output": "Thokkanam = Traditional Siddha massage therapy. Types: 9 types including Thattal, Irukkal, Pidithal, etc. Where: 1) NIS Tambaram - specialized unit, 2) Government Siddha hospitals, 3) Private Siddha clinics (verify registration). For: Muscular problems, paralysis, rehabilitation, stress relief. Sessions: Usually 7-14 day course. Cost: Free at government, Rs.300-1000 per session private. Trained: Only by certified Thokkanam therapists.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH165_TG",
+      "instruction": "AC room-la irundhaa cold varum - unmaiyaa?",
+      "current_output": "Myth! Cold caused by: Viruses, not temperature. AC connection: 1) Dry air irritates throat, 2) Poor AC maintenance = allergens, 3) Indoor crowding = virus spread, 4) Temperature shock going in/out. Prevention: Clean AC filters, adequate humidity, proper ventilation. Cold = viral infection - spread by contact/droplets, not AC itself.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH021_TM",
+      "instruction": "Government hospital-ல் waiting time அதிகமா இருக்கு, tips?",
+      "current_output": "Tips: 1) Go early morning (6-7 AM for token), 2) Weekdays better than Monday, 3) Avoid month-end, 4) Use online appointment if available, 5) Get referral from PHC for direct specialist access, 6) Emergency = no waiting (use emergency entrance), 7) Follow-up visits - ask for specific date/time. Seniors/pregnant: Priority queue usually available. Avoid: Public holidays, exam result days.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH004_TM",
+      "instruction": "CMCHIS hospital-ல் treatment refuse பண்றாங்க, என்ன செய்வது?",
+      "current_output": "Complaint options: 1) Hospital CMCHIS desk - escalate to manager, 2) CMCHIS helpline: 104, 3) District CMCHIS coordinator (Collector office), 4) Online: cmchistn.com grievance portal. Common issues: Card not working - call 104 for real-time activation. Hospital de-empanelment: Report to district coordinator. Emergency: Any hospital must treat - claim later.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH151_TG",
+      "instruction": "Fever 3 days aachu, hospital poganumaa?",
+      "current_output": "Go to hospital if: 1) Fever >103°F (39.4°C), 2) Fever with rash, 3) Severe headache/stiff neck, 4) Difficulty breathing, 5) Persistent vomiting, 6) Confusion, 7) Not responding to paracetamol, 8) Underlying conditions (diabetes, heart), 9) Children/elderly - earlier threshold. Dengue season: Blood test after day 3 of fever. Self-care: Hydration, rest, paracetamol (not aspirin for dengue suspected).",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH023_TG",
+      "instruction": "TNMSC pharmacy stores enge irukku?",
+      "current_output": "TNMSC = Tamil Nadu Medical Services Corporation. Stores: All government hospitals, standalone Fair Price Medicine Shops. Prices: 20-50% cheaper. Quality: Government-procured, tested. Items: Medicines, surgical items, consumables. Location: tnmsc.com for store locator. Government hospital patients: Medicines from TNMSC pharmacy often free (in-patient).",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH195_TM",
+      "instruction": "Arya Vaidya Sala, Kottakkal branch TN-ல் இருக்கா?",
+      "current_output": "Yes! AVS Kottakkal branches in TN: 1) Chennai - Multiple clinics, 2) Coimbatore, 3) Madurai. Services: 1) OPD consultation, 2) Panchakarma, 3) Pharmacy. Other Kerala chains in TN: 1) Arya Vaidya Pharmacy (AVP), Coimbatore, 2) Nagarjuna, 3) SNA Oushadhasala. Authentic: These are established, registered organizations. Products: Available in many pharmacies.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH204_TG",
+      "instruction": "Common Ayurvedic medicines - uses enna?",
+      "current_output": "Popular medicines: 1) Triphala - Digestion, detox, constipation, 2) Ashwagandha - Stress, energy, immunity, 3) Brahmi - Memory, concentration, 4) Chyawanprash - General tonic, immunity, 5) Guggulu - Cholesterol, joints, weight, 6) Dashamoola - Pain, inflammation, 7) Kumkumadi Thailam - Skin glow. Available: Pharmacies, AYUSH stores. Self-use: Some general tonics okay. Specific treatment: Need doctor consultation.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH170_TM",
+      "instruction": "Siddha doctor qualification என்ன? Verify எப்படி?",
+      "current_output": "Qualification: BSMS (Bachelor of Siddha Medicine and Surgery) - 5.5 years. Higher: MD (Siddha). Registration: State Medical Council mandatory. Verify: 1) TN Siddha Medical Council register, 2) Display of registration certificate, 3) BSMS degree certificate. Unqualified practice: Report to council, police. Titles: Siddha Maruthuvam, Vaidhiyar - verify registration before consulting.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH206_TM",
+      "instruction": "Ayurveda daily routine (Dinacharya) என்ன?",
+      "current_output": "Ideal routine: 1) Wake before sunrise (Brahma Muhurta), 2) Drink warm water, 3) Toilet/elimination, 4) Oil pulling (Gandusha), 5) Tongue scraping, 6) Teeth cleaning with herbal powder, 7) Abhyanga (oil massage), 8) Exercise/Yoga, 9) Bath, 10) Breakfast appropriate to Prakriti, 11) Mindful eating, 12) Early dinner (before sunset ideal), 13) Sleep by 10 PM. Benefits: Disease prevention, energy, longevity.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH122_TM",
+      "instruction": "Dementia patient-க்கு legal protection என்ன?",
+      "current_output": "Protections: 1) Guardianship: Court can appoint guardian for person/property, 2) Power of Attorney: Execute while still competent, 3) Senior Citizens Act: Protection from exploitation, 4) RPD Act: Disability rights. Financial: 1) Joint account with trusted person, 2) Nomination in all accounts, 3) Will execution early. Healthcare: Advance directive possible. Abuse: Report to police, Senior Citizens Tribunal.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH206_TG",
+      "instruction": "Ayurveda daily routine (Dinacharya) enna?",
+      "current_output": "Ideal routine: 1) Wake before sunrise (Brahma Muhurta), 2) Drink warm water, 3) Toilet/elimination, 4) Oil pulling (Gandusha), 5) Tongue scraping, 6) Teeth cleaning with herbal powder, 7) Abhyanga (oil massage), 8) Exercise/Yoga, 9) Bath, 10) Breakfast appropriate to Prakriti, 11) Mindful eating, 12) Early dinner (before sunset ideal), 13) Sleep by 10 PM. Benefits: Disease prevention, energy, longevity.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH018_TG",
+      "instruction": "Mental illness treatment government hospital-la kidaikkumaa?",
+      "current_output": "Yes! Free psychiatric services available. Where: 1) Institute of Mental Health (Kilpauk - Chennai), 2) District Mental Health Program (DMHP) centres, 3) Medical college psychiatry OPD. Services: 1) Consultation, 2) Medicines, 3) Counseling, 4) Admission if needed. DMHP: Every district has mental health team. Helpline: iCALL - 9152987821, Vandrevala - 1860-2662-345. Stigma-free treatment encouraged.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH164_TG",
+      "instruction": "Home remedies safe-aa? Eppodhu avoid pannanum?",
+      "current_output": "Some safe: Ginger for nausea, turmeric milk, salt water gargle, honey for cough (not <1 year). Avoid home remedies: 1) Serious illness (high fever, breathing difficulty), 2) When already on prescription medicines (interactions), 3) Wounds/burns (infection risk), 4) Children/pregnant (specific risks). Rule: Home remedy not working in 2-3 days = see doctor. Never apply: Cow dung on wounds, kerosene on head lice (dangerous!).",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH097_TM",
+      "instruction": "Pain killers addiction ஆகுமா? Control என்ன?",
+      "current_output": "Some can! Opioids (Tramadol, Codeine, Morphine): High addiction potential - Schedule H/X. NSAIDs (Ibuprofen, Diclofenac): Lower risk but long-term issues (stomach, kidney). Paracetamol: Relatively safe but liver damage if overdose. Rules: Opioids = strict prescription, register entry. Chronic pain: Doctor supervision essential. Addiction help: De-addiction centres, psychiatrist.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH198_TM",
+      "instruction": "Shirodhara therapy என்ன? Benefits என்ன?",
+      "current_output": "Shirodhara = Continuous pouring of medicated oil/buttermilk on forehead. Duration: 30-60 minutes per session. Benefits: 1) Stress relief, 2) Anxiety, depression, 3) Insomnia, 4) Headaches/migraines, 5) Hair problems, 6) Memory improvement. Types: Thaila dhara (oil), Takra dhara (buttermilk), Kashaya dhara (decoction). Sessions: 7-14 days typically. Where: Ayurveda centers, some wellness spas (verify authenticity).",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH110_TM",
+      "instruction": "Free mental health treatment எங்கே கிடைக்கும்?",
+      "current_output": "Government facilities: 1) Institute of Mental Health, Kilpauk (Chennai), 2) District Mental Health Program (DMHP) - every district, 3) Medical college psychiatry OPD, 4) Taluk/District hospital psychiatry unit. Free services: Consultation, medicines (basic), counseling. DMHP: Outreach to community, schools, PHCs. Appointment: Usually walk-in OPD or through PHC referral.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH037_TG",
+      "instruction": "HIV status employer-kitta sollanuumaa?",
+      "current_output": "NO! HIV status = highly confidential. HIV/AIDS Act 2017: 1) No mandatory testing for employment, 2) No disclosure to employer without consent, 3) No termination based on HIV status, 4) Anti-discrimination protection. Violation: Legal action against employer. Medical fitness: Can be declared fit without disclosing diagnosis. Exception: Healthcare workers - restricted duties (not termination).",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH228_TM",
+      "instruction": "Online natural remedy videos/tips - trust பண்ணலாமா?",
+      "current_output": "Be careful! Red flags: 1) \"Cure for everything\" claims, 2) No credentials shown, 3) Extreme claims without evidence, 4) Asking to stop doctor's medicines, 5) Selling expensive products. Trust: 1) Government AYUSH websites, 2) Established medical institutions, 3) Registered practitioners, 4) Research-backed information. Verify: Cross-check with multiple sources. Best: Consult qualified practitioner in person for treatment.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH004_TG",
+      "instruction": "CMCHIS hospital-la treatment refuse panraanga, enna seivathu?",
+      "current_output": "Complaint options: 1) Hospital CMCHIS desk - escalate to manager, 2) CMCHIS helpline: 104, 3) District CMCHIS coordinator (Collector office), 4) Online: cmchistn.com grievance portal. Common issues: Card not working - call 104 for real-time activation. Hospital de-empanelment: Report to district coordinator. Emergency: Any hospital must treat - claim later.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH158_TM",
+      "instruction": "Hospital-ல bill ரொம்ப போட்டாங்க, என்ன பண்றது?",
+      "current_output": "First - itemized bill கேளுங்க. Medicine MRP check பண்ணுங்க - MRP-க்கு மேல charge பண்ண கூடாது. Estimate இருந்தா compare பண்ணுங்க. Reasonable இல்லன்னா: 1) Hospital manager-கிட்ட complaint, 2) Consumer Forum, 3) DHS complaint. CMCHIS card இருந்தா - பல treatment free. Bill dispute = pay under protest (writing-ல) and then fight.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

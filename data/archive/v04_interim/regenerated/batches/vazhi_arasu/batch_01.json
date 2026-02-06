@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 1,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TNHO001",
+      "instruction": "TN-ல் இலவச வீட்டு மனை பட்டா எப்படி பெறுவது?",
+      "current_output": "ஏழைகளுக்கு இலவச வீட்டு மனை. தகுதி: Houseless poor families, BPL card holder, No land ownership. Size: 2-3 cents (varies by area). Process: Panchayat/Taluk office-ல் apply, List publish, Selection, Registration. Documents: Income certificate, Family card, Aadhaar, No property certificate. Priority: SC/ST, Widows, Differently abled. PMAY-G: House construction-க்கு ₹1.2 lakh + state share.",
+      "category": "tn_housing",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SC012",
+      "instruction": "Rashtriya Vayoshri Yojana (RVY) endraal enna?",
+      "current_output": "Free assistive devices for BPL senior citizens. Eligibility: 60+ years, BPL, age-related disability. Free Items: Walking stick, Elbow crutch, Walker, Tripod, Wheelchair, Hearing aid, Spectacles, Artificial dentures. Apply: ALIMCO assessment camps (announced in District). Documents: Age proof, BPL card, Aadhaar.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA020T",
+      "instruction": "Ayushman Bharat (PMJAY) enna?",
+      "current_output": "₹5 lakh free health insurance per family per year. Eligibility based on SECC 2011 BPL data. Check eligibility at pmjay.gov.in. Get card FREE at govt hospital/CSC with Aadhaar + ration card. Covers 1,500+ procedures at empanelled hospitals. In TN, combined with CMCHIS.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA039T",
+      "instruction": "PMAY-Urban eppadi peruvadhu?",
+      "current_output": "Interest subsidy for first home buyers. EWS/LIG: 6.5%, MIG-I: 4%, MIG-II: 3% subsidy on home loan. Apply through bank or pmay-urban.gov.in. Condition: No pucca house anywhere in India. Affidavit required. Wife as co-owner recommended. Saves ₹2-2.5 lakh!",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA019",
+      "instruction": "PM-KISAN திட்டம் என்றால் என்ன?",
+      "current_output": "Direct cash transfer of ₹6,000/year (₹2,000 x 3 installments) to land-owning farmers. Register at pmkisan.gov.in with Aadhaar, land records, bank account. Exclusions: Income tax payers, govt employees, professionals. State verification required.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS010",
+      "instruction": "Pradhan Mantri Suraksha Bima Yojana (PMSBY) enna?",
+      "current_output": "Accident Insurance scheme. Premium: Only ₹20 per year. Coverage: Death/Total disability ₹2 lakh, Partial disability ₹1 lakh. Age: 18-70 years. Eligibility: Savings Account holders. Join: Form at Bank, Auto-debit consent. Renews June 1. PMJJBY + PMSBY together: ₹456/year → ₹4 lakh coverage!",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNH001",
+      "instruction": "CMCHIS (முதலமைச்சர் மருத்துவ காப்பீடு திட்டம்) என்றால் என்ன?",
+      "current_output": "குடும்பத்திற்கு ₹5 லட்சம் மருத்துவ காப்பீடு. Coverage: 1,000+ procedures, All family members. தகுதி: TN ration card holder, Annual income ₹1.2 லட்சத்திற்கு கீழ். Hospitals: Empanelled Govt + Private hospitals. Cashless: Card காட்டினால் cashless treatment. Card: cmchistn.com-ல் check/download. Documents: Ration card, Aadhaar linking. Ayushman Bharat: CMCHIS + PMJAY merged in TN.",
+      "category": "tn_health_schemes",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SC005",
+      "instruction": "Minority community students-க்கு என்ன scholarship?",
+      "current_output": "Pre-matric, post-matric, merit-cum-means scholarship உண்டு. Muslim, Christian, Sikh, Buddhist, Jain, Parsi students eligible. minorityaffairs.gov.in-ல் apply செய்யலாம்.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PAN008",
+      "instruction": "PAN Card tholaindhuvidadhu - Duplicate eppadi peruvadhu?",
+      "current_output": "1. e-PAN Download (Free): eportal.incometax.gov.in → Instant e-PAN, Aadhaar OTP verification, PDF download. 2. Physical Duplicate: onlineservices.nsdl.com → 'Reprint of PAN Card', Fee ₹50, comes in 15-20 days. 3. Forgot PAN Number: incometax.gov.in → Know Your PAN, find using Name + DOB + Mobile",
+      "category": "pan_card_bilingual",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS006",
+      "instruction": "Stand Up India scheme endraal enna?",
+      "current_output": "Business loan for SC/ST/Women. Loan amount: ₹10 lakh - ₹1 crore. Eligibility: SC/ST or Women entrepreneur, Above 18 years, New Manufacturing/Trading/Service business, At least 51% ownership. Benefits: Collateral-free (CGTMSE Guarantee), Low interest rate, 7 year repayment period. Apply: standupmitra.in",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNR001",
+      "instruction": "TN ரேஷன் கடையில் என்ன பொருட்கள் கிடைக்கும்?",
+      "current_output": "TN PDS items list. Rice Card: 20 kg free rice/family. Sugar Card: 5 kg rice at ₹1/kg. Common: Sugar 1.5 kg (₹13.50), Wheat/Atta 2 kg (₹7), Palm Oil 500ml (₹27), Daal 1 kg (₹28). Specials: Pongal - 1 kg sugar free + cash; Diwali - 1 kg sugar free; Ramzan - dates + cash for Muslims. Eligibility: Ration card type-க்கு ஏற்ப. Shop: Monthly distribution, SMS alert.",
+      "category": "tn_ration_food",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA035",
+      "instruction": "FIR எப்படி பதிவு செய்வது?",
+      "current_output": "Visit nearest police station with written complaint. Zero FIR: Can file at ANY station. Online for some crimes: eservices.tnpolice.gov.in. Get FIR copy FREE (your right!). If police refuse: Complain to SP/District Collector. For cyber crimes: cybercrime.gov.in or call 1930.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA027T",
+      "instruction": "BC/MBC/SC/ST Scholarship eppadi peruvadhu?",
+      "current_output": "Apply at tneservices.tn.gov.in or scholarships.gov.in through school/college. Documents: Community certificate, income certificate, marksheet, Aadhaar, bank account. Benefits: Full fee waiver + monthly stipend ₹500-1,500. Apply within deadline each year.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNHO003",
+      "instruction": "TNHB (Tamil Nadu Housing Board) வீடு எப்படி வாங்குவது?",
+      "current_output": "TNHB affordable housing. Types: EWS (Economic Weaker Section), LIG, MIG, HIG flats/plots. Apply: tnhb.tn.gov.in-ல் online. Selection: Lottery/First-come-first-serve (scheme-க்கு ஏற்ப). Cost: Market விலையை விட குறைவு. Loan: Banks-உடன் tie-up, easy EMI. Documents: Income proof, Aadhaar, Address proof. Projects: Chennai, Coimbatore, Madurai, other cities. Rental Housing: Low-income-க்கு TNHB rental schemes உண்டு.",
+      "category": "tn_housing",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI004",
+      "instruction": "PAN Card pattriya common thavarugal enna?",
+      "current_output": "Wrong Beliefs vs Truth:\n\n1. ❌ Cannot open Bank Account without PAN → ✅ PAN mandatory only for ₹50,000+ transactions\n2. ❌ Minor doesn't need PAN → ✅ Required in some cases (Investment, Income)\n3. ❌ PAN-Aadhaar link is optional → ✅ Mandatory, else PAN becomes inoperative\n4. ❌ Having two PANs is okay → ✅ Illegal, ₹10,000 fine\n5. ❌ PAN card needs renewal → ✅ Lifetime valid, no renewal needed\n6. ❌ PAN number changes → ✅ Lifetime same number\n7. ❌ e-PAN is not valid → ✅ e-PAN is legally valid\n\nCommon Mistakes:\n- Wrong DOB in PAN → Aadhaar mismatch\n- Father's name instead of Husband's name\n- Not linking despite ₹1,000 late fee",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP032",
+      "instruction": "Scholarship eppadi peruvadhu?",
+      "current_output": "BC/MBC/SC/ST students-ku free education + stipend. Apply: tneservices.tn.gov.in. Documents: Community certificate, Income certificate, Marksheet. Key schemes: CM Higher Education Scholarship, BC/MBC Post-Matric Scholarship, SC/ST Scholarship",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNHO005",
+      "instruction": "TN Slum Clearance Board வீடு எப்படி பெறுவது?",
+      "current_output": "Slum-dwellers-க்கு punarvasam. தகுதி: Recognized slum-ல் 10+ years வசிப்பவர், Survey-ல் பெயர் உள்ளவர். Types: In-situ development (அதே இடத்தில்), Resettlement (புதிய இடம்). Cost: Free or subsidized (income-க்கு ஏற்ப). Facilities: Basic amenities - water, electricity, toilet. Apply: TNSCB office/Local body. Documents: Slum survey ID, Aadhaar, Ration card. Projects: Multi-storey tenements in Chennai, other cities.",
+      "category": "tn_housing",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS004",
+      "instruction": "Pradhan Mantri MUDRA Yojana (PMMY) - loan eppadi peruvadhu?",
+      "current_output": "Collateral-free loan for small business. Categories: Shishu (up to ₹50,000 - start business), Kishore (₹50,001-₹5 lakh - expansion), Tarun (₹5-₹10 lakh - larger expansion). Eligibility: Manufacturing/Trading/Service sector, Non-Corporate Small Business. Apply: mudra.org.in or nearby Bank. Need: Business Plan, ID Proof, Address Proof",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI008",
+      "instruction": "Government Schemes pattriya common thavarugal enna?",
+      "current_output": "PM-KISAN:\n❌ All farmers get it → ✅ Income Tax payers, Govt employees excluded\n❌ ₹6,000 one-time → ✅ ₹2,000 x 3 installments\n❌ Just apply → ✅ State Govt verification mandatory\n\nAyushman Bharat:\n❌ Valid in all hospitals → ✅ Only empanelled hospitals\n❌ All treatments covered → ✅ Only 1,500 specific procedures\n❌ OPD free → ✅ Only IPD covered\n❌ Everyone eligible → ✅ Only BPL (SECC 2011 data)\n\nMUDRA Loan:\n❌ Government gives loan → ✅ Banks give loan, Govt only guarantees\n❌ Guaranteed approval → ✅ Bank's discretion, credit check needed\n❌ Has subsidy → ✅ No subsidy, only collateral-free\n\nPMAY:\n❌ Free house → ✅ Only subsidy, not full cost\n❌ Eligible even with existing house → ✅ Ineligible if pucca house exists",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE002",
+      "instruction": "Engal kudumbathula pudhusa kuzhanthai piranthuirukku. Enna ella documents and benefits-ku apply pannanum?",
+      "current_output": "Step-by-step seiyya vendiyavai:\n\nFirst 21 days (Urgent!):\n1. Birth Certificate Registration - Hospital/Municipality/Panchayat - Free\n\nFirst 3 months:\n2. Baby's Aadhaar Card - Aadhaar Enrollment Center\n3. Add name in Ration Card - tnpds.gov.in\n\nMother's Benefits:\n4. Dr. Muthulakshmi Maternity Benefit (₹18,000) - PHC/Anganwadi\n5. PMMVY - Central (₹5,000) - First child only\n6. Amma Baby Care Kit - Auto at Govt Hospital\n\nIf girl child, additional:\n7. CM Girl Child Protection Scheme - ₹50,000 FD\n8. Sukanya Samriddhi Yojana - Post Office/Bank - 8.2% interest",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA038T",
+      "instruction": "PMJJBY/PMSBY Insurance enna?",
+      "current_output": "PMJJBY: Life insurance ₹2 lakh for ₹436/year (18-55 age). PMSBY: Accident insurance ₹2 lakh for just ₹20/year (18-70 age). Both together: ₹456/year for ₹4 lakh coverage! Enroll through bank with savings account. Auto-debit on June 1.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE008",
+      "instruction": "Naan siriya kadai / thozhil aarambikka virumburen. Ennenna license, loan, benefits kidaikkum?",
+      "current_output": "Step 1 - Registration:\n1. Udyam Registration - udyamregistration.gov.in (Free)\n2. GST Registration - If turnover > ₹40 lakh\n\nStep 2 - Local Licenses:\n3. Trade License - Municipality (₹500-5,000)\n4. Shop & Establishment - tnlabour.tn.gov.in\n5. FSSAI - For food business\n\nStep 3 - Loans:\n6. PMEGP - Up to ₹50 lakh, 15-35% subsidy\n7. MUDRA - Up to ₹10 lakh, no collateral\n8. NEEDS (TN) - Up to ₹25 lakh, 25-30% subsidy\n9. Stand Up India - SC/ST/Women, up to ₹1 crore\n\nStep 4 - Ongoing Compliances:\n10. GST Returns - Monthly/Quarterly\n11. Income Tax - Yearly",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP030",
+      "instruction": "Government school-la admission eppadi?",
+      "current_output": "RTE Act paadi 6-14 age children-ku free education. Documents: Birth certificate, Aadhaar, Transfer Certificate (old school). Admission: June-July (academic year start). Complaint: Nearby BEO / DEO office.",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB007T",
+      "instruction": "Chennai-la pudhiya Metro Water Connection eppadi vaanguvadhu? Online apply seyyalamaa?",
+      "current_output": "**CMWSSB New Connection:**\n\n**Online:** chennaimetrowater.tn.gov.in → New Connection\n\n**Documents:**\n- Property document\n- Building Plan\n- Property Tax Receipt\n- Aadhaar, Photo\n\n**Process:**\n1. Application submit\n2. Site inspection\n3. Get estimate\n4. Pay fees\n5. Connection (15-30 days)\n\n**Costs:**\n- Connection: ₹500-2,000\n- Deposit: ₹500-1,000\n- Road cutting: ₹5,000-20,000 (if needed)\n\n**Monthly:** ₹70-400 (domestic, usage based)\n\n**Complaint:** 044-4567 4567, CMWSSB App",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB005T",
+      "instruction": "Second-hand Car vaanginen. RC Transfer eppadi seyvadhu?",
+      "current_output": "**RC Transfer for Used Vehicle:**\n\n**Seller Must:**\n1. Sign Form 29 & 30\n2. Get NOC if different state\n3. Give: Original RC, Insurance, PUC, Signed forms\n\n**Buyer Must:**\n\n**Step 1:** Apply at parivahan.gov.in → Transfer of Ownership\n\n**Step 2: Documents**\n- Form 29 & 30 (both signed)\n- Original RC\n- Insurance (transferred)\n- PUC\n- Both Aadhaar + Address proof\n- Sale receipt\n\n**Step 3:** RTO Visit - Both parties, Vehicle inspection\n\n**Step 4: Fee**\n- Transfer: ₹300-500\n- Smart Card: ₹200\n\n**Step 5:** New RC in 7-15 days\n\n**Deadline:** 14 days from sale\n**Penalty:** ₹50/day delay (max ₹500)\n\n**Loan Vehicle:** Bank NOC mandatory",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 5,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH009_TG",
+      "instruction": "Primary Health Centre (PHC) endraal enna? Enna services kidaikkum?",
+      "current_output": "PHC = Village/block level government health facility. Free services: 1) Basic consultation, 2) Common illness treatment, 3) Maternal care, 4) Child immunization, 5) Family planning, 6) Minor wound dressing, 7) Basic lab tests, 8) Medicine dispensing, 9) Health education. Timings: Usually 9 AM - 4 PM. Staff: Doctor, nurse, pharmacist, lab technician. Referral: To CHC/District Hospital if needed.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH171_TG",
+      "instruction": "Siddha treatment-la enna vagaigal ullana?",
+      "current_output": "Treatment types: 1) Internal medicines - Choornam (powder), Lehyam (paste), Kasayam (decoction), Thailam (oil), Maathirai (pills), 2) External - Pattru (poultice), Ottradam (fomentation), Nasiyam (nasal), Kattu (bandage), 3) Surgical - Siddha surgery, 4) Special therapies - Thokkanam (massage), Varmam, Yoga. Panchagavya: Cow products based. Kayakalpa: Rejuvenation therapy.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH015_TM",
+      "instruction": "Cancer treatment-க்கு government support இருக்கா?",
+      "current_output": "Yes! Multiple supports: 1) CMCHIS - cancer treatment covered (Rs.5 lakh), 2) Government cancer hospitals - free/subsidized, 3) PM-JAY for eligible, 4) State Cancer Institute (Adyar) - subsidized, 5) CM's Relief Fund - apply for additional support. Free screening: Breast, cervical cancer at PHCs. Support: Transport allowance, free medicines (chemo). Apply: Hospital social worker will help with paperwork.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH103_TM",
+      "instruction": "Insulin storage எப்படி? Travel-ல் carry பண்ணலாமா?",
+      "current_output": "Storage: Refrigerator (2-8°C), not freezer. In-use vial: Room temperature okay for 28 days (most). Travel: 1) Carry in hand luggage (flight), 2) Cooling pouch for long journeys, 3) Doctor letter for security check, 4) Carry extra supply. Signs of spoilage: Discoloration, particles, frosted appearance. Airport: Insulin + syringes allowed with prescription letter.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH147_TM",
+      "instruction": "Stroke symptoms என்ன? FAST என்றால் என்ன?",
+      "current_output": "FAST test: F - Face drooping (one side), A - Arm weakness (can't raise one arm), S - Speech difficulty (slurred), T - Time to call emergency. Other symptoms: Sudden confusion, vision problem, severe headache, walking difficulty. Action: 1) Call 108, 2) Note time symptoms started (important for treatment), 3) Don't give food/water (swallowing problem possible). Window: 3-4.5 hours for clot-busting treatment.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH207_TM",
+      "instruction": "Ayurveda-படி என்ன food combinations avoid பண்ணணும்?",
+      "current_output": "Viruddha Ahara (incompatible foods): 1) Milk + fruit (except banana, mango), 2) Milk + fish/meat, 3) Honey + hot water, 4) Curd at night, 5) Cold water after meals, 6) Fruit after meals (eat separately), 7) Milk + sour foods. Why: Causes Ama (toxins), indigestion, diseases. Good combinations: Rice + dal, bread + vegetables. Rule: Eat warm, freshly cooked food. Avoid: Refrigerated/reheated food regularly.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH078_TM",
+      "instruction": "Insurance claim reject ஆனால் என்ன செய்வது?",
+      "current_output": "Rejection reasons: 1) Pre-existing disease (waiting period), 2) Excluded treatment, 3) Document missing, 4) Non-network hospital, 5) Fraud suspected. Appeal: 1) Written grievance to insurer (30 days), 2) IRDAI IGMS portal, 3) Insurance Ombudsman (free, up to Rs.30 lakhs), 4) Consumer Forum. Success tip: Get rejection reason in writing, provide complete documents, cite policy terms.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH095_TM",
+      "instruction": "Online-ல் medicine order பண்ணலாமா? Legal-ஆ?",
+      "current_output": "Legal with conditions. Rules: 1) Prescription medicines - must upload valid prescription, 2) Pharmacy must be licensed, 3) Schedule X (narcotics) - cannot be sold online. Platforms: Pharmeasy, 1mg, Netmeds, Apollo Pharmacy (licensed). Verify: Check if platform has Drug License. Benefits: Convenience, price comparison, home delivery. Caution: Verify medicine authenticity on receipt.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH132_TG",
+      "instruction": "Abortion refuse panraanga (unmarried) - rights?",
+      "current_output": "Illegal to refuse! MTP Act 2021: Explicitly includes unmarried women. If refused: 1) Ask for written reason, 2) Escalate to hospital administration, 3) Complaint to DHS, 4) Court (urgent petition). Marital status: Not relevant for abortion right. Judgment questions: Doctor should not morally judge. Alternative: Find another approved centre. Time sensitive: Don't delay - gestational limits apply.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH227_TG",
+      "instruction": "Natural = Safe enbadhu correct-aa?",
+      "current_output": "NOT always! Natural doesn't mean: 1) No side effects (many herbs have), 2) No interactions (herb-drug interactions real), 3) Safe for everyone (allergies, conditions), 4) Any amount is okay (overdose possible). Examples: 1) Neem - excess can harm liver, 2) Turmeric - blood thinner interaction, 3) Aloe - not for pregnant, 4) Some herbs toxic in large doses. Safe approach: 1) Moderate amounts, 2) Inform doctors, 3) Buy quality products, 4) Watch for reactions.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH198_TG",
+      "instruction": "Shirodhara therapy enna? Benefits enna?",
+      "current_output": "Shirodhara = Continuous pouring of medicated oil/buttermilk on forehead. Duration: 30-60 minutes per session. Benefits: 1) Stress relief, 2) Anxiety, depression, 3) Insomnia, 4) Headaches/migraines, 5) Hair problems, 6) Memory improvement. Types: Thaila dhara (oil), Takra dhara (buttermilk), Kashaya dhara (decoction). Sessions: 7-14 days typically. Where: Ayurveda centers, some wellness spas (verify authenticity).",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH063_TG",
+      "instruction": "Delivery-la mother/baby-kku injury - claim pannalaamaa?",
+      "current_output": "Yes, if negligence proved. Common claims: 1) Delayed C-section causing brain damage, 2) Birth injuries (brachial plexus), 3) Maternal death due to PPH mismanagement, 4) Infection, 5) Wrong forceps use. Proof: Partograph (labor record), CTG (fetal monitoring), timelines. Child injury: Long-term care compensation. Maternal death: Family claims. Time sensitive: Evidence deteriorates - act quickly.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH070_TM",
+      "instruction": "NABH accreditation என்றால் என்ன? Important-ஆ?",
+      "current_output": "NABH = National Accreditation Board for Hospitals. Means: Hospital meets quality standards in - patient safety, infection control, infrastructure, staff qualifications, processes. Benefits: 1) Quality assurance, 2) Insurance companies prefer NABH hospitals, 3) CGHS/ECHS empanelment, 4) Patient safety protocols. Levels: Entry level, Progressive, Full accreditation. Check: nabh.co website for list.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH068_TG",
+      "instruction": "Doctor credentials eppadi verify panradhu?",
+      "current_output": "Verify: 1) NMC website (nmc.org.in) - Indian Medical Register, 2) State Medical Council register, 3) Specialist registration (for specialists), 4) Hospital website - doctor profile. Check: 1) MBBS registration number, 2) PG degree registration, 3) Disciplinary actions if any. Fake doctor: Report to police + Medical Council. Important: Any doctor must display registration number.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH059_TG",
+      "instruction": "Doctor death case-la enna compensation kidaikkum?",
+      "current_output": "Death case compensation: 1) Lost income (future earnings multiplied), 2) Funeral expenses, 3) Medical expenses before death, 4) Loss of consortium (spouse), 5) Loss of parental care (children), 6) Mental agony to family. Calculation: Age, income, dependents, life expectancy. Young earning member death: Higher compensation. Ceiling: No fixed limit - based on facts. Criminal: Separate from compensation.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH230_TG",
+      "instruction": "Weight loss-kku natural-aa enna pannalaam? Gym poga time illa (Chennai urban style)",
+      "current_output": "No gym needed! Natural weight loss: 1) Morning warm water + lemon + honey, 2) Green tea/Jeera water instead of tea/coffee, 3) Dinner before 7 PM, 4) Walk 30 mins daily (morning/evening), 5) Reduce rice, increase vegetables, 6) No packaged snacks - nuts, fruits instead, 7) Intermittent fasting (16:8) if suitable. Apps: Step counter helps. Consistency: 1-2 kg/month loss is healthy and sustainable. Quick fix: Usually temporary and unhealthy.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH051_TM",
+      "instruction": "Operation-ல் கத்தரிக்கோல்/gauze உள்ளே விட்டுட்டாங்க - என்ன செய்வது?",
+      "current_output": "Classic negligence case (Res Ipsa Loquitur - thing speaks for itself). Steps: 1) Get X-ray/CT evidence, 2) Medical records collect, 3) Complaint to hospital, 4) Consumer Forum case, 5) Criminal complaint (Section 338 IPC - grievous hurt). Compensation: Cost of removal surgery + damages + mental agony + loss of income. Hospital cannot deny - clear negligence.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH077_TG",
+      "instruction": "Cashless hospitalization eppadi velai seyyum?",
+      "current_output": "Process: 1) Check hospital in network list, 2) Inform TPA/insurer before admission (planned), 3) Show health card at admission, 4) Hospital sends pre-auth request, 5) TPA approves amount, 6) Treatment happens, 7) Final bill - approved amount deducted, balance you pay. Emergency: Inform within 24 hours. Rejected: Appeal to insurer, pay and claim reimbursement.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH049_TM",
+      "instruction": "Medical negligence என்றால் என்ன?",
+      "current_output": "Medical negligence = Doctor/hospital standard of care fail. Elements: 1) Duty of care existed, 2) Breach of duty (below standard), 3) Injury occurred, 4) Injury caused by breach. Examples: Wrong surgery, missed diagnosis, wrong medicine, surgical tools left inside, infection due to poor hygiene. Not negligence: Treatment failure despite proper care, known complications.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH148_TG",
+      "instruction": "Snake bite aanaal enna seyyanum? Enna koodaadhu?",
+      "current_output": "DO: 1) Stay calm, 2) Immobilize bitten limb (don't move), 3) Remove jewelry (swelling), 4) Call 108/go to hospital immediately, 5) Note snake appearance if possible. DON'T: 1) Cut/suck wound, 2) Apply tourniquet tightly, 3) Apply ice/electric shock, 4) Give alcohol/traditional remedies, 5) Waste time catching snake. Antivenom: Available free at government hospitals. All snake bites need hospital evaluation.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH213_TM",
+      "instruction": "Minor burns/wounds-க்கு first aid natural remedy?",
+      "current_output": "Burns (minor): 1) Cool water (not ice) 10-20 mins, 2) Aloe vera gel (fresh), 3) Honey application (antibacterial), 4) Coconut oil after cooling, 5) Turmeric paste (wound healing). Wounds: 1) Clean with water, 2) Turmeric powder (traditional antiseptic), 3) Neem paste (antibacterial), 4) Honey. Don't use: Toothpaste, egg white, butter on burns - myths! Major burns/wounds: Hospital immediately.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH180_TG",
+      "instruction": "Infertility-kku Siddha treatment effective-aa?",
+      "current_output": "Used traditionally for: Male infertility (low sperm count, motility), Female infertility (PCOS, irregular periods, hormone balance). Treatments: 1) Karpam (fertility medicines), 2) Nei Prasham (ghee preparations), 3) Specific Lehyams, 4) Shodhana (detoxification). Consultation: Detailed history, examination. Duration: 3-6 months typically. Combined: Many take with modern treatment. NIS: Fertility clinic available. Evidence: Research ongoing, traditional success claims.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH169_TM",
+      "instruction": "சித்த மருத்துவம் என்றால் என்ன?",
+      "current_output": "Siddha = தமிழ்நாட்டின் பாரம்பரிய மருத்துவ முறை. Origin: 18 Siddhars (ஞானியர்) developed. Age: 5,000+ years old. Principle: உடல் (body), உயிர் (soul), மனம் (mind) balance. Based on: Pancha bootham (5 elements), 96 தத்துவங்கள், 3 doshas (Vatham, Pitham, Kabam). Treatment: Diet, herbs, minerals, yoga, lifestyle. Recognition: Government of India recognized AYUSH system.",
+      "category": "siddha_medicine",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HLTH199_TG",
+      "instruction": "Abhyanga massage vs regular massage - difference?",
+      "current_output": "Abhyanga = Ayurvedic whole body oil massage. Difference: 1) Medicated oils specific to condition/Prakriti, 2) Specific direction strokes (towards heart), 3) Marma points included, 4) Part of treatment protocol (not just relaxation), 5) Followed by steam bath typically. Benefits: Toxin removal, circulation, joint lubrication, skin health, relaxation. Self-Abhyanga: Daily oil massage at home recommended in Ayurveda. Professional: For treatment purposes.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH053_TM",
+      "instruction": "Diagnosis miss ஆச்சு, cancer late-ஆ detect ஆச்சு - negligence-ஆ?",
+      "current_output": "Depends on circumstances. Negligence if: 1) Symptoms clearly pointed to cancer, 2) Standard tests not ordered, 3) Reports misread, 4) Follow-up not done, 5) Patient's complaints ignored. Not negligence if: Symptoms were atypical, tests done but cancer not detectable at that stage. Prove: What a reasonably competent doctor would have done. Expert witness: Essential for such cases.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

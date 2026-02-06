@@ -1,0 +1,194 @@
+[
+  {
+    "instruction": "Recently widowed lady-க்கு call - 'உங்கள் husband insurance claim-க்கு processing fee கட்டுங்கள், மீதி paisa வரும்'.",
+    "output": "Insurance claim-க்கு advance fee கிடையாது. Grieving families-ஐ exploit செய்யும் கொடூர scam. Insurance company branch-ல் நேரடியாக விசாரியுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT013"
+  },
+  {
+    "instruction": "அப்பாவுக்கு (retired) போன் வந்தது - 'Pension arrears கிடைக்கும், processing-க்கு advance கட்டுங்கள்' என்று.",
+    "output": "Pension department advance கேட்காது. Treasury-ல் நேரடியாக விசாரியுங்கள். Retired employees-ஐ target செய்யும் common scam இது.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT003"
+  },
+  {
+    "instruction": "'Processing fee கட்டுங்கள், loan/prize/refund வரும்' என்கிறார்கள். கட்டலாமா?",
+    "output": "'Processing fee', 'registration fee', 'advance payment' - இவை scam signals. பணம் வர பணம் கட்ட வேண்டியதில்லை.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF005"
+  },
+  {
+    "instruction": "பொங்கல் offer-ன்னு WhatsApp message வந்துச்சு - 'Reliance பொங்கல் பம்பர், LED TV FREE! Link click பண்ணுங்க' - genuine-ஆ?",
+    "output": "இது பொங்கல் special scam! Reliance இப்படி WhatsApp forward அனுப்பாது. பொங்கல் excitement-ல மக்கள் எளிதா மாட்டிக்குறாங்க. Official app/website-ல மட்டும் offer பாருங்க. Forward link click பண்ணாதீங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS001"
+  },
+  {
+    "instruction": "'யாருக்கும் சொல்லாதீர்கள், secret offer' என்று caller insist பண்றாங்க.",
+    "output": "Secrecy demand scam sign. 'Family-கிட்ட சொல்லாதீர்கள்', 'confidential' என்று சொன்னால் - அவர்கள் உங்களை isolate பண்ண try பண்றாங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF007"
+  },
+  {
+    "instruction": "Pregnant lady-க்கு call - 'Pradhan Mantri Matru Vandana Yojana-ல் extra benefit, registration-க்கு Aadhaar OTP கொடுங்கள்'.",
+    "output": "PMMVY registration-க்கு OTP தேவையில்லை. Anganwadi center அல்லது hospital-ல் direct apply செய்யலாம். Pregnant women-ஐ target செய்யும் scam. OTP கொடுக்காதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT012"
+  },
+  {
+    "instruction": "Newly married couple-க்கு - 'Free honeymoon package வென்றீர்கள்! Booking fee 10000 மட்டும் கட்டுங்கள்' என்று Instagram ad.",
+    "output": "Free package-க்கு booking fee என்பது contradiction. Newly married couples-ஐ target செய்யும் travel scam. பணம் கட்டினால் போய்விடும், trip கிடைக்காது.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT014"
+  },
+  {
+    "instruction": "'OTP சொல்லுங்கள், verify பண்றோம்' என்று caller கேட்கிறார். Safe-ஆ?",
+    "output": "OTP யாருக்கும் சொல்லக்கூடாது - bank, police, government யாராக இருந்தாலும். 'OTP sollunga' என்பது #1 red flag phrase.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF002"
+  },
+  {
+    "instruction": "NRI relative-க்கு call வந்தது - 'உங்கள் India property-ல் problem, online-ல் fee கட்டினால் solve ஆகும்' என்று.",
+    "output": "Property issues-க்கு online fee கட்ட வேண்டியதில்லை. NRIs-ஐ target செய்யும் scam - India-ல் வருவது கஷ்டம் என்று தெரிந்து exploit செய்கிறார்கள். Lawyer consult செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT010"
+  },
+  {
+    "instruction": "First-time home buyer-க்கு - 'PMAY subsidy guaranteed, agent commission கட்டுங்கள், subsidy arrange பண்றோம்' என்கிறார்கள்.",
+    "output": "PMAY subsidy bank மூலமே வரும், agent தேவையில்லை. Commission கேட்பவர்கள் fraud. pmaymis.gov.in official website-ல் நேரடியாக apply செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT015"
+  },
+  {
+    "instruction": "என் அம்மாவுக்கு (60+) 'Ayushman Bharat card-ல் problem, OTP கொடுங்கள் fix பண்ணுவோம்' என்று call வந்தது.",
+    "output": "Ayushman Bharat team OTP கேட்காது. Senior citizens-ஐ target செய்யும் health scheme scam. OTP கொடுக்காதீர்கள். 14555 helpline-ல் verify செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT008"
+  },
+  {
+    "instruction": "'இன்றே கட்டுங்கள், இல்லனா offer போய்விடும்' என்கிறார்கள். Trust பண்ணலாமா?",
+    "output": "Urgency create செய்வது scammer technique. 'இன்றே', 'உடனே', 'last chance' என்று சொன்னால் யோசியுங்கள். Legitimate offers-க்கு time இருக்கும்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF001"
+  },
+  {
+    "instruction": "'AnyDesk/TeamViewer install பண்ணுங்கள், help பண்றோம்' என்று tech support சொல்கிறது.",
+    "output": "Remote access apps install பண்ண சொன்னால் 100% scam. 'AnyDesk', 'TeamViewer', 'Quick Support' - இவை danger words. Phone-ஐ control எடுத்துவிடுவார்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF003"
+  },
+  {
+    "instruction": "'QR scan பண்ணுங்கள், பணம் வரும்' என்று stranger சொல்கிறார்.",
+    "output": "QR scan = பணம் போகும், வராது. 'QR scan பண்ணுங்கள்' என்று பணம் receive பண்ண சொன்னால் reverse scam. Never scan stranger QR.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF008"
+  },
+  {
+    "instruction": "என் wife-க்கு WhatsApp வந்தது - 'Work from home, தினமும் 1000 சம்பாதியுங்கள், housewives special offer' என்று.",
+    "output": "Housewives-ஐ target செய்யும் task scam. ஆரம்பத்தில் சிறிய payment தருவார்கள், பின்பு investment கேட்டு ஏமாற்றுவார்கள். Join ஆகாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT004"
+  },
+  {
+    "instruction": "Job hunting செய்கிறேன். LinkedIn-ல் 'MNC company HR' என்று contact வந்து interview-க்கு training kit வாங்க 3000 கட்ட சொல்கிறார்.",
+    "output": "Legitimate companies training kit-க்கு பணம் கேட்காது. LinkedIn-ல் fake HR scams அதிகம். Company official website-ல் HR-ஐ verify செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT006"
+  },
+  {
+    "instruction": "Single parent-க்கு WhatsApp - 'குழந்தைகளுக்கு special scholarship, form fill பண்ண meeting-க்கு வாங்க' என்று unknown person message.",
+    "output": "Unknown persons-ஐ நம்பாதீர்கள். குழந்தைகள் safety முக்கியம். Official school அல்லது government website மூலமே scholarship apply செய்யுங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT011"
+  },
+  {
+    "instruction": "Exam முடிந்த student-க்கு call வந்தது - 'Scholarship guaranteed, application fee 5000' என்று.",
+    "output": "Legitimate scholarships-க்கு application fee கிடையாது. NSP (National Scholarship Portal) மூலமே apply செய்யுங்கள். Private calls நம்பாதீர்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT007"
+  },
+  {
+    "instruction": "பொங்கல் சமயம் 'Free gas cylinder for Pongal' link வந்துச்சு. Aadhaar number கேக்குது - fill பண்ணலாமா?",
+    "output": "ஆபத்து! Free cylinder scheme இல்ல, Aadhaar திருட scheme இது. பொங்கல்-ல 'free offer' scams peak-ல இருக்கும். Government scheme-னா official portal-ல தான் apply பண்ணணும். Random link-ல Aadhaar போடாதீங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS003"
+  },
+  {
+    "instruction": "நான் farmer. 'PM Kisan extra subsidy கிடைக்கும், apply பண்ண link-ல் click செய்யுங்கள்' என்று SMS வந்தது.",
+    "output": "PM Kisan portal (pmkisan.gov.in) மூலமே subsidy வரும். SMS link போலியானது. Bank, Aadhaar details கொடுத்தால் பணம் திருடப்படும். Official website மட்டுமே நம்புங்கள்.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT005"
+  },
+  {
+    "instruction": "'Bank verification-க்கு CVV, expiry date சொல்லுங்கள்' என்று call வந்தது.",
+    "output": "CVV, expiry date, full card number யாருக்கும் சொல்லக்கூடாது. Bank-ம் இவற்றை கேட்காது. Card details கேட்டால் scam.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF010"
+  },
+  {
+    "instruction": "'Video call-ல் இருங்கள், disconnect பண்ணாதீர்கள்' என்று officer சொல்கிறார்.",
+    "output": "Digital arrest scam. Real police video call-ல் investigation செய்யாது. 'Call cut பண்ணாதீர்கள்' என்று insist பண்ணினால் 100% fraud.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "red_flag_phrases",
+    "id": "RF009"
+  },
+  {
+    "instruction": "'பொங்கல் போனஸ் credited! 5000 ரூபாய் claim பண்ண OTP சொல்லுங்க' - government message-ஆ இது?",
+    "output": "Fake message! Government போனஸ் directly account-ல வரும், OTP கேக்காது. பொங்கல் time-ல இந்த scam அதிகம். 'Bonus claim' message வந்தா ignore பண்ணுங்க. Cyber crime-ல report பண்ணுங்க.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "festival_seasonal_scams",
+    "id": "FS002"
+  },
+  {
+    "instruction": "Small business owner-க்கு call - 'MSME loan sanction ஆனது, disbursement-க்கு GST registration fee முன்கூட்டியே கட்டுங்கள்'.",
+    "output": "Bank loan disbursement-க்கு advance fee கேட்காது. GST registration free (gst.gov.in). MSME portal-ல் நேரடியாக check செய்யுங்கள். Business owners-ஐ target செய்யும் scam.",
+    "language": "mixed",
+    "pack": "vazhi_kaval",
+    "category": "demographic_targeted_scams",
+    "id": "DT009"
+  }
+]

@@ -1,0 +1,226 @@
+[
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 1,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_01.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 2,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_02.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 3,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_03.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 4,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_04.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 5,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_05.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 6,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_06.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 7,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_07.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 8,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_08.json"
+  },
+  {
+    "pack": "vazhi_kaval",
+    "pack_folder": "security",
+    "batch_num": 9,
+    "samples": 1,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kaval/batch_09.json"
+  },
+  {
+    "pack": "vazhi_maruthuvam",
+    "pack_folder": "healthcare",
+    "batch_num": 1,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_maruthuvam/batch_01.json"
+  },
+  {
+    "pack": "vazhi_maruthuvam",
+    "pack_folder": "healthcare",
+    "batch_num": 2,
+    "samples": 12,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_maruthuvam/batch_02.json"
+  },
+  {
+    "pack": "vazhi_kalvi",
+    "pack_folder": "education",
+    "batch_num": 1,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kalvi/batch_01.json"
+  },
+  {
+    "pack": "vazhi_kalvi",
+    "pack_folder": "education",
+    "batch_num": 2,
+    "samples": 6,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_kalvi/batch_02.json"
+  },
+  {
+    "pack": "vazhi_arasu",
+    "pack_folder": "govt",
+    "batch_num": 1,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_arasu/batch_01.json"
+  },
+  {
+    "pack": "vazhi_arasu",
+    "pack_folder": "govt",
+    "batch_num": 2,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_arasu/batch_02.json"
+  },
+  {
+    "pack": "vazhi_arasu",
+    "pack_folder": "govt",
+    "batch_num": 3,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_arasu/batch_03.json"
+  },
+  {
+    "pack": "vazhi_arasu",
+    "pack_folder": "govt",
+    "batch_num": 4,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_arasu/batch_04.json"
+  },
+  {
+    "pack": "vazhi_arasu",
+    "pack_folder": "govt",
+    "batch_num": 5,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_arasu/batch_05.json"
+  },
+  {
+    "pack": "vazhi_arasu",
+    "pack_folder": "govt",
+    "batch_num": 6,
+    "samples": 8,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_arasu/batch_06.json"
+  },
+  {
+    "pack": "vazhi_sattam",
+    "pack_folder": "legal",
+    "batch_num": 1,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_sattam/batch_01.json"
+  },
+  {
+    "pack": "vazhi_sattam",
+    "pack_folder": "legal",
+    "batch_num": 2,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_sattam/batch_02.json"
+  },
+  {
+    "pack": "vazhi_sattam",
+    "pack_folder": "legal",
+    "batch_num": 3,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_sattam/batch_03.json"
+  },
+  {
+    "pack": "vazhi_sattam",
+    "pack_folder": "legal",
+    "batch_num": 4,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_sattam/batch_04.json"
+  },
+  {
+    "pack": "vazhi_sattam",
+    "pack_folder": "legal",
+    "batch_num": 5,
+    "samples": 10,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_sattam/batch_05.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 1,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_01.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 2,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_02.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 3,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_03.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 4,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_04.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 5,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_05.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 6,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_06.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 7,
+    "samples": 25,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_07.json"
+  },
+  {
+    "pack": "vazhi_panpaadu",
+    "pack_folder": "culture",
+    "batch_num": 8,
+    "samples": 14,
+    "file": "/Users/chocka/CursorProjects/vazhi/data/v04/regenerated/batches_missing/vazhi_panpaadu/batch_08.json"
+  }
+]

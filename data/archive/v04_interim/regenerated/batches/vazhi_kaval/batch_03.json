@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 3,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "FS024",
+      "instruction": "'Vinayaka Chaturthi - live pooja streaming subscription 999 Rs yearly' - email வந்துச்சு. Subscribe பண்ணலாமா?",
+      "current_output": "Most temples free-ஆ stream பண்றாங்க! Paid subscription scam இது. Temple official YouTube channels free. Chaturthi-ல religious sentiment exploit பண்றாங்க. Official temple website check பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS018",
+      "instruction": "'New Year prediction: Your lucky number will bring 10 crore! Pay 5000 for full report' - call வந்துச்சு. Real astrologer-ஆ?",
+      "current_output": "Fraud! 'Lucky number = crores' என்பது classic scam. New Year-ல astrology scams spike ஆகும். Lottery prediction என்றெல்லாம் இல்ல. Block the number. Astrology-க்கு money கொடுக்காதீங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS043",
+      "instruction": "SMS vandhuchu 'Trademark violation complaint against your business. Pay 50,000 settlement or face legal action.' Trademark issue vandhududhaa, settle pannidlama?",
+      "current_output": "Trademark disputes handled through legal notices and courts, not SMS settlements. Check IP India portal for actual complaints. Real trademark holders send advocate notices through registered post. Never settle via SMS - could be extortion attempt.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS008",
+      "instruction": "'Ayya, hospital la irundhu pesuren, unga son accident la admit, immediate surgery ku 1 lakh vendum, UPI pannunga' nu call vandhudhu. Bayama irukku, enna pannanum?",
+      "current_output": "Ayya, FIRST unga son ku phone pannunga! Answer pannala na, daughter-in-law, office ku call pannunga. Real hospital random numbers la UPI kekkaadhu - admission formalities irukkum. Panic la verify pannama pay pannaadheenga. 30 seconds verification lakhs save pannum.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS057",
+      "instruction": "Telegram group la join aanaen - 'Like YouTube videos, earn 50 per like, daily 500-1000 possible.' Initial la payment vandhudhu, now 'premium task ku 5000 invest' nu solraanga.",
+      "current_output": "Classic task scam - initial payments hook you. Premium investment ku endless demands varum - 'withdraw ku more invest pannu.' Students thousands lose pannuraanga. STOP NOW - don't invest more. Already paid aa - recovery very difficult.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS009",
+      "instruction": "WhatsApp message 'TCS requires your old employee data for tax compliance. Fill this form with PAN, previous salary details.' Munna TCS la work pannen, compliance ku genuine aa?",
+      "current_output": "Ex-employers contact through official HR email, not WhatsApp. TCS has Form 16 data, doesn't need you to fill forms. This is PAN/financial data harvesting. If genuinely needed, visit TCS HR portal or call official numbers.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT019",
+      "instruction": "PM Kisan la irundhu call vandhirukkappa - '6000 eligible, registration fee 200 pay pannungappa, Aadhaar sollunga' nu. Naan farmer dhaanappa, genuine aappa?",
+      "current_output": "Government scheme ku fee illaappa! PM-KISAN registration free - pmkisan.gov.in la pannalam. Aadhaar kuduthaa AEPS fraud panniruvaangappa, bank account la irundhu kaasu pogumappa. Kumbakonam, Papanasam la farmers ipdi maatikirukkanga. Village office la apply pannungappa.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS062",
+      "instruction": "WhatsApp message 'BOCW card renewal urgent. Pay 500 online or benefits stopped.' BOCW card irukku, renew pannalama?",
+      "current_output": "BOCW renewal through labour department office - nominal government fees. Benefits don't stop immediately - grace period exists. Never pay through WhatsApp links. Visit district labour welfare office for genuine renewal process.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS022",
+      "instruction": "ATM la irundhen, oru paiyan 'Ayya, UPI use pannunga easy aa irukkum, naan help pannuren setup panna' nu sonnaan. Phone eduthu enna enna yo pannaan. Aprom account la kaasu kammi.",
+      "current_output": "Aiyayo ayya! Stranger kitta phone kudukkaadhu! UPI setup nu solli unga phone access vaangirukkan - PIN paathiruppan or transaction panniruppan. Bank ku poi complaint pannunga, police la FIR pannunga. ATM/bank la staff help only vaangunga, random people illa.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG010",
+      "instruction": "Online-la oru ponnu friend aanaanga, ippo hospital bill-ku panam vennum-nu solraanga",
+      "current_output": "Romance scam ithu. Photo vera yaar-dhu-o irukkum. Video call refuse pannaanga-na confirm scam. Online stranger-ku panam anuppaadheenga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG012",
+      "instruction": "Job offer vandhudhu abroad-ku, visa-vum ticket-um free, agent fee 1 lakh matum",
+      "current_output": "Gulf job scam ithu. MOIA website-la registered agent-a check pannunga. Advance panam kudukkaadheega. Fake visa documents koduppanga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS010",
+      "instruction": "Email vandhuchu 'Your Jira license expiring, IT head approved renewal. Click to pay 50,000 from company account.' IT head name mention pannirukkanga, process pannalama?",
+      "current_output": "Business Email Compromise (BEC) attack! Scammers research company structure, impersonate executives. Real renewals go through procurement, not random emails. Verify with IT head directly through phone/internal chat. Never pay based on email alone.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS029",
+      "instruction": "Wedding season - 'Bridal makeup just 4999 Rs! Book now pay later' Instagram offer. Book பண்ணலாமா?",
+      "current_output": "Verify first! Wedding season-ல makeup artist scams common. Booking வாங்கிட்டு wedding day-ல வர மாட்டாங்க. Reviews, previous work check பண்ணுங்க. Known artists refer பண்ணுங்க. Advance full amount தராதீங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS039",
+      "instruction": "Call vandhudhu 'GST compliance issue detected in your business. Pay 20,000 immediately or face notice.' GST officer call pannaaraa, genuine aa?",
+      "current_output": "GST notices come through official GST portal and registered email, not phone calls. Officers identify themselves with designation and give written notice. Check gst.gov.in for any actual notices. Never pay anyone calling as 'GST officer'.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS004",
+      "instruction": "Email vandhuchu company domain hosting provider name la 'Your domain hosting expired. Pay 15,000 immediately or website goes down.' Panic aagudhu, en company website down aagidumaa?",
+      "current_output": "Check your actual hosting dashboard - not through email links. Real providers send multiple reminders before expiry. Scammers buy expired domain lists and target businesses. Verify sender email domain carefully - often slight misspellings like 'godady.com' instead of 'godaddy.com'.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS042",
+      "instruction": "Upwork la client - 'Big project 50,000, but need you to buy specific software first, I'll reimburse with payment.' Software ku 10,000 upfront kekkuraan.",
+      "current_output": "Classic freelance scam. Legitimate clients project tools provide pannuvaanga or cost include pannuvaanga in budget. 'Buy first, reimburse later' - reimbursement varaadhu. Upwork outside payment request = violation anyway. Decline and report.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS027",
+      "instruction": "WhatsApp message 'LTC claim deadline extending. Advance submission fee 3000 for priority processing.' LTC claim pending, priority ku pay pannalama?",
+      "current_output": "LTC claims processed through official channels - no 'advance fee' or 'priority processing' exists. Submit through proper bill section. Government never asks payment for processing employee benefits. Check service rules - all processes are free for employees.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS010",
+      "instruction": "'Star Health la irundhu pesuren, unga policy lapse aaidum, renewal premium 15,000 pay pannunga link la' nu message vandhudhu. Policy irukku, renew pannalama?",
+      "current_output": "Insurance companies SMS link la payment kekaadhu ayya. Lapse warning formal letter/email varum with reasonable time. Link click pannina fake site - card details pogum. Star Health official website la login panni check pannunga, illa branch ku call pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG001",
+      "instruction": "Enna sir, bank la problem-a? OTP sollunga fix pannidren nu call vandhudhu",
+      "current_output": "Indha call fake sir. Bank officer-a irundalum OTP kettuka koodadhu. Neenga OTP koduthaa, panam poirum. Phone cut pannunga, 1930-la complaint pannunga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS063",
+      "instruction": "Call vandhudhu 'Labour department insurance scheme. Pay 3000 annual premium for 5 lakh coverage.' Insurance nalla irukum, join pannalama?",
+      "current_output": "Government labour insurance (PMJJBY/PMSBY) costs only Rs 330-436 per year through bank. Welfare board provides free/subsidized insurance to members. 3000 for 5 lakh is neither government scheme nor good private deal. Check with bank for official government insurance schemes.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT016",
+      "instruction": "Call vandhidichi le - 'Account block aaidum, KYC update pannule' nu. OTP kekkudhu le. Enna pannudhu?",
+      "current_output": "Fraud le idhu! Bank phone la OTP kekumaa? Kekaadhu le! 'Block aaidum' nu bayamudhuthudhu paaru. Branch ku nee poi pesu le. Five Roads, Hasthampatti la businessmen ipdi maatikirukkaa. Phone la details kudukkaadhe le.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS004",
+      "instruction": "தமிழ் புத்தாண்டு offer - 'Flipkart 90% discount! Today only!' forward வந்துச்சு. Link safe-ஆ?",
+      "current_output": "Scam forward! Flipkart 90% discount கொடுக்காது. Tamil New Year excitement-ஐ misuse பண்றாங்க. 'Today only' urgency create பண்றது red flag. Official Flipkart app-ல மட்டும் shop பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS051",
+      "instruction": "Gym friend introduce pannaan - 'Health supplements, become distributor, recruitment bonus + product sales commission, 25,000 starter kit.'",
+      "current_output": "MLM red flags - expensive starter kit, emphasis on recruitment over sales. 'Bonus for recruiting' = pyramid structure. Products usually overpriced, hard to sell. 95%+ MLM participants lose money. Politely decline, friendship maintain pannunga but business avoid.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS013",
+      "instruction": "Call vandhudhu 'Medical Council license renewal overdue. Pay 15,000 penalty now or license suspended from tomorrow.' Panic aagudhu, enna pannanum doctor?",
+      "current_output": "State Medical Council sends renewal notices months in advance through registered mail. Check NMC/SMC portal for actual status. Scammers create urgency targeting doctors' fear of license issues. Never pay without verifying from official council website.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS012",
+      "instruction": "WhatsApp message vandhudhu 'NABH inspection scheduled for your clinic. Pre-inspection fee 25,000 required. Transfer immediately to avoid penalty.' NABH accreditation process la idhu varudhaa?",
+      "current_output": "NABH never asks for fees via WhatsApp! All NABH communications through official email and portal. Inspection fees paid through official channels after proper application. This targets healthcare facility owners - verify from nabh.co website directly.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

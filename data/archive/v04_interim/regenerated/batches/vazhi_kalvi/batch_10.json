@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 10,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HIGH036_TG",
+      "instruction": "Maatruththiraanaali (differently abled) students-ku padippu salugaigal enna?",
+      "current_output": "Benefits: 1) 5% reservation in all courses 2) Full fee waiver in govt colleges 3) Free laptop scheme 4) Special scholarship ₹3,000-10,000/month 5) Scribe facility in exams 6) Extra time (20 minutes/hour). UDID card theva. Disability certificate 40%+ irukka venum. Apply through Differently Abled Welfare Department.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM030_TM",
+      "instruction": "கல்வி உதவி எண்கள் தொடர்பு தகவல்கள் என்ன?",
+      "current_output": "• TN School Education Helpline: 1800-599-9880 - \n• Higher Education Helpline: 044-28524904 - \n• NEET Helpline: 011-40759000 - \n• TNPSC Helpline: 044-25332833 - \n• NSP Scholarship Helpline: 0120-6619540 - \n• Student Mental Health (iCALL): 9152987821 - \n• Women Helpline: 181 - \n• Child Helpline: 1098 - ",
+      "category": "common_questions",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HIGH008_TG",
+      "instruction": "Nursing padippuku (B.Sc Nursing) Tamil Nadu-la admission eppadi?",
+      "current_output": "Eligibility: +2 Biology 45% marks (SC/ST 40%). Admission: TN Health Department counselling. Steps: 1) Online application 2) Merit list 3) Counselling 4) College allotment. Duration: 4 years. Govt nursing college fee: ₹2,000-5,000/year. Job guarantee - govt hospital-la appointment.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM020_TG",
+      "instruction": "Myth or Fact: Myth: Tamil medium-la padichaa job kidaikkaadhu",
+      "current_output": "Fact: Fact: Language of education ≠ Job success. Tamil medium students succeed in: Government jobs (TNPSC, SSC), Teaching, Banking, Law, Business. English skill = learnable later. Many successful entrepreneurs, politicians, officers are Tamil medium. Focus: Strong foundation in concepts. English proficiency courses available free. Communication skills matter, not medium of instruction.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM010_TM",
+      "instruction": "Government school student NEET crack பண்ண முடியுமா?",
+      "current_output": "Absolutely yes! 7.5% reservation + determination = success. Resources: 1) Free coaching - Government NEET centres (apply through school) 2) Online free - NPTEL, SWAYAM, YouTube 3) NCERT books sufficient for Biology 4) Previous year papers - NTA website free. Success stories: Many govt school students top NEET. Challenges: English medium switch, lab exposure. Solutions: Tamil medium NEET option available, virtual labs online. Believe in yourself!",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE021_TM",
+      "instruction": "Free-யா coding கற்றுக்கொள்ள online resources என்ன இருக்கு?",
+      "current_output": "NPTEL, SWAYAM (government), freeCodeCamp, Codecademy, Khan Academy எல்லாம் free. TN government ELCOT training centres-ல் free computer courses உண்டு. YouTube-ல் Tamil-ல் coding tutorials இருக்கு.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM004_TM",
+      "instruction": "Management quota vs Government quota - என்ன difference?",
+      "current_output": "Government quota (65%): Counselling-based merit admission, low fees. Management quota (35%): College direct admission, higher fees (2-5x). NRI quota: Foreign citizen children, highest fees. Reality: Same degree, same placement opportunity. Management quota useful if: Marks low but can afford, specific college wanted, late application. Government quota: Always try first - significant cost savings. Private self-financing colleges: 100% management, higher fees.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA018_TG",
+      "instruction": "Graphic Design course enge padikkalaam? Job opportunity?",
+      "current_output": "Training options: 1) Arena Animation 2) MAAC 3) TNSDC multimedia courses 4) Online - Coursera, Skillshare. Tools to learn: Photoshop, Illustrator, CorelDraw, Canva. Duration: 3-12 months. Jobs: 1) Graphic designer 2) Social media designer 3) Print designer 4) UI designer 5) Freelancing. Salary: ₹12,000-30,000 starting. Portfolio build pannunga. Freelance platforms: Fiverr, Upwork, 99designs.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA015_TG",
+      "instruction": "Tally course padiththaal enna job kidaikkum?",
+      "current_output": "Tally jobs: 1) Accountant - small/medium businesses 2) Billing operator 3) Inventory manager 4) GST filing assistant 5) Bank data entry. Salary: ₹10,000-20,000 starting. Course duration: 2-3 months. Government centres: NIELIT, TNSDC. Private: Tally Academy (authorized). Certification: Tally.ERP 9 / TallyPrime. Combined with GST knowledge = better opportunities. Self-employment: Freelance accounting services.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC013_TG",
+      "instruction": "Education loan EMI katta mudiyala, enna option?",
+      "current_output": "Options available: 1) Moratorium extension request - bank will consider 2) EMI restructuring - lower EMI, longer tenure 3) Interest only payment temporarily 4) Parent co-borrower support 5) Government interest subsidy scheme check 6) Loan transfer to lower interest bank 7) Part-time income for EMI contribution. Don't do: Default silently - affects CIBIL score. Do: Communicate with bank proactively. Recovery harassment: Banking Ombudsman complaint.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA029C_TG",
+      "instruction": "ITI-la seera enna documents vendumay? Free training irukkumaa?",
+      "current_output": "10th/8th pass pannirukkanum. www.skilltraining.tn.gov.in-la apply pannu/pannunga. Government ITI full free - fee illai, tools, books ellam free. Documents: TC, marks card, community certificate, Aadhaar. June-July-la admission start aagum.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM009_TG",
+      "instruction": "NEET Physics hard-aa irukku, eppadi improve aavadhu?",
+      "current_output": "Physics improvement: 1) Concepts first - derivations later 2) Formula list chapter-wise 3) Daily 20-30 numericals practice 4) HC Verma for conceptual clarity 5) DC Pandey for NEET level. High weightage topics: Mechanics, Electrostatics, Modern Physics, Optics. Weak students: Start with easy chapters (Units, Motion, Thermodynamics). Video lectures: Physics Wallah, Unacademy free. Avoid formula memorization without understanding.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP008_TM",
+      "instruction": "JEE Main & Advanced-க்கு எப்படி prepare செய்வது?",
+      "current_output": "**JEE Preparation Strategy:**\n\n**Class 11 (Foundation Year):**\n\n**Focus Areas:**\n- NCERT complete mastery\n- Concept clarity > Speed\n- Build problem-solving skills\n- Regular practice\n\n**Subject Priority:**\n1. Maths (Most important for JEE)\n2. Physics (Concepts + Numericals)\n3. Chemistry (NCERT + Practice)\n\n**Class 12 (Intensive Year):**\n\n**Strategy:**\n- Complete syllabus by December\n- January: Full revision starts\n- March: Mock test series\n- April: JEE Main attempt\n\n**Books:**\n\n**Mathematics:**\n| Book | Level |\n|------|-------|\n| NCERT | Foundation |\n| RD Sharma | Practice |\n| Cengage Series | Advanced |\n| Previous Years | Must! |\n\n**Physics:**\n| Book | Level |\n|------|-------|\n| NCERT | Basic |\n| HC Verma | Concept Master |\n| DC Pandey | Practice |\n| Irodov | JEE Advanced |\n\n**Chemistry:**\n| Book | Level |\n|------|-------|\n| NCERT | Must (Inorganic especially) |\n| MS Chouhan | Organic |\n| OP Tandon | Physical |\n| VK Jaiswal | Inorganic |\n\n**Daily Routine:**\n```\n5:00 AM - Wake up\n5:30-8:00 AM - Maths (Most productive time)\n8:00-9:00 AM - Break, Breakfast\n9:00-1:00 PM - School/Self-study\n2:00-5:00 PM - Physics\n5:00-6:00 PM - Break\n6:00-9:00 PM - Chemistry + Revision\n9:00 PM - Dinner\n10:00 PM - Sleep\n```\n\n**Weekly:**\n- Sunday: Full mock test\n- Analysis of mistakes\n- Weak topic revision\n\n**JEE Advanced Extra:**\n- After JEE Main: 2-month intensive\n- More complex problems\n- Integer type, Matrix match practice",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP027_TM",
+      "instruction": "Fee comparison table",
+      "current_output": "Engineering: Govt ₹50K/year, Private ₹1-2 lakh. Medical: Govt ₹13.5K/year, Private ₹10-20 lakh. Arts/Science: Govt ₹2-5K/year, Private ₹20-50K. MBA: Govt ₹30-50K/year, Private ₹2-5 lakh. ITI: Govt Free, Private ₹20-40K. Polytechnic: Govt ₹1.5-3K/year, Private ₹30-50K.",
+      "category": "supplementary_courses",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SUPP022_TG",
+      "instruction": "NEET-ku prepare aaganum, Telugu medium-la padichirukken, mudiyuma?",
+      "current_output": "Mudiyum! NEET 13 languages-la ezhudhalaam - Telugu option irukku. TN state quota-ku: Native certificate venum OR 10th, 11th, 12th TN-la padichirukka venum. Border areas: Hosur, Krishnagiri students apply pannalam. NCERT Telugu version available. Focus on concepts - language secondary. Many Telugu medium students crack NEET!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH015_TG",
+      "instruction": "PhD admission Tamil Nadu-la eppadi nadakkudhu?",
+      "current_output": "Steps: 1) PG degree 55% marks (SC/ST 50%) 2) UGC NET/CSIR NET/GATE/SLET pass (fellowship-ku) 3) University entrance test + interview. Fellowship: JRF ₹31,000/month, SRF ₹35,000/month. Part-time PhD working professionals-ku available. Major universities: Anna, Madras, Bharathidasan, Bharathiar.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO017_TG",
+      "instruction": "Reliance Foundation Scholarship eppadi vaanguvadhu?",
+      "current_output": "Reliance Foundation Undergraduate Scholarship: UG 1st year students-ku ₹2 lakh over 4 years. Eligibility: Family income ₹2.5 lakh kizha, JEE/NEET rank holders, 12th 60%+. Selection: Application + Interview. Apply: www.reliancefoundation.org. Scholarship Plus program: Leadership development, mentoring, internships included.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_009_TG",
+      "instruction": "Friends ellaarum phone use panraanga, study time waste aagudhu, enna seivathu?",
+      "current_output": "Phone/Social media management: 1) Study time-la phone vera room-la vaiyunga 2) App blockers use (Forest, Freedom) 3) Scheduled screen time - 1 hour/day 4) Study group with serious friends 5) Parents-kitta phone control kodunga. Reality: Toppers also use phones - difference is discipline. Educational use OK: BYJU'S, Khan Academy, Doubt clearing. Self-control = life skill. Start with small goals.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM012_TG",
+      "instruction": "JEE Main vs JEE Advanced - enna difference?",
+      "current_output": "JEE Main: NITs, IIITs, GFTIs admission. JEE Advanced: IITs only. Eligibility: JEE Main top 2.5 lakh → JEE Advanced eligible. Difficulty: Advanced >> Main. Pattern: Main - 90 Qs, 300 marks, 3 hours. Advanced - 2 papers, 3 hours each, complex patterns. Attempts: Main - 6 (3 years × 2 sessions), Advanced - 2 consecutive years. Strategy: First secure good Main rank, then focus Advanced.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP015_TG",
+      "instruction": "Defence Jobs-ku ennenna exams irukku? Age limit enna?",
+      "current_output": "**Defence Exams:**\n\n**1. NDA:** 12th pass, 16.5-19.5 age, UPSC exam, Males only\n\n**2. CDS:** Degree, 19-25 age, UPSC exam\n\n**3. AFCAT:** Degree 60%, 20-26 age, Air Force\n\n**4. Army:**\n- Soldier GD: 10th, 17.5-21 age\n- Soldier Clerk: 12th, 17.5-23 age\n- Technical: Engineering degree\n\n**5. Navy:** SSC Officer, Sailor entries\n\n**6. Coast Guard:** Navik, Yantrik - 10th/12th\n\n**Physical Standards:**\n- Height 157-170 cm\n- Vision 6/6 or correctable\n- No flat feet\n\n**Preparation:** Written + SSB Interview + Medical + Physical\n\n**Websites:** joinindianarmy.nic.in, joinindiannavy.gov.in",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE021_TG",
+      "instruction": "Free-ya coding katrukkolla online resources enna irukku?",
+      "current_output": "NPTEL, SWAYAM (government), freeCodeCamp, Codecademy, Khan Academy ellam free. TN government ELCOT training centres-la free computer courses undu. YouTube-la Tamil-la coding tutorials irukku.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC017_TG",
+      "instruction": "Medical emergency hostel-la vandhaal enna seivathu?",
+      "current_output": "Emergency steps: 1) Call warden immediately 2) College has tie-up hospital - use that 3) 108 ambulance if serious 4) Keep parent contact updated with warden 5) Student health insurance - claim process know 6) ESI hospital if eligible 7) Govt hospital - free emergency care for all. Preparation: Keep emergency contacts, medical history, blood group info with you. Health card carry. Prevention: Regular health checkup, don't ignore symptoms.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM007_TM",
+      "instruction": "TC எங்கே போச்சு தெரியல, duplicate எப்படி வாங்குவது?",
+      "current_output": "Duplicate TC process: 1) FIR file - nearest police station 2) Newspaper advertisement - TC lost notice 3) School application - with FIR copy, newspaper cutting, affidavit 4) School verifies records, issues duplicate 5) Fees: ₹50-200. Time: 1-2 weeks. If school closed: Contact DEO (District Education Officer). Old schools: Check EMIS database for records. Important: Keep photocopy of all original certificates always!",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO005_TM",
+      "instruction": "Free laptop scheme-க்கு எப்படி apply செய்வது?",
+      "current_output": "TN Government Free Laptop Scheme: College 1st year students-க்கு. Auto-selection based on: 1) Government/Aided college admission 2) +2 marks 3) Community (SC/ST/BC/MBC priority). Process: College அளிக்கும் list அடிப்படையில் distribution. தனியாக apply செய்ய தேவையில்லை. Laptop worth: ₹15,000-20,000. Pre-loaded educational software இருக்கும். Service warranty 3 years.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM028_TG",
+      "instruction": "Marks card-la name/DOB wrong, correct panna eppadi?",
+      "current_output": "Correction process: 1) Apply to examination board (DGE for board exams) 2) Documents: Original marks card, Aadhaar, birth certificate, school bonafide 3) Affidavit (court/notary) 4) Newspaper advertisement (name change) 5) Processing fee ₹100-500. Time: 15-30 days. Portal: Online application available on DGE website. For university: Controller of Examinations. Gazette notification: For legal name change.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 2,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "FAMI012_TG",
+      "instruction": "Parents-kku children maintenance kodukkanuumaa?",
+      "current_output": "Aama. Maintenance and Welfare of Parents Act 2007 padi children (including married daughters) parents-kku maintain seyyanum. Maintenance Tribunal-la claim pannalam. Max Rs.10,000/month. Non-compliance: 3 months imprisonment. Property transfer reverse aagalam.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA029_TG",
+      "instruction": "Commercial property-kkum same rules-aa?",
+      "current_output": "Basic principles same. But commercial tenancy-kku: 1) Advance limit 6 months (residential-kku 3 months), 2) Rent increase reasonable-aa irukkanum, 3) Goodwill compensation ketkalam (long-term tenants), 4) Business loss-kku compensation ketkalam.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE019_TM",
+      "instruction": "Pet animal-க்கு என்ன legal responsibilities?",
+      "current_output": "Responsibilities: Registration (some municipalities), vaccination, leash in public, damage liability. Pet cruelty: PCA Act - 3 months imprisonment + Rs.100 fine (old law, amendments pending). Noise nuisance: Neighbour complaint valid. Banned breeds: Check local rules.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI004_TM",
+      "instruction": "Court marriage எப்படி செய்வது?",
+      "current_output": "Steps: 1) Marriage Registrar office-ல் form submit (30 days before), 2) Notice board-ல் display, 3) Objection period (30 days), 4) Marriage ceremony (Registrar முன்), 5) Certificate issue. Witnesses: 3 பேர். Documents: Birth certificate, address proof, photos, affidavit.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP016_TM",
+      "instruction": "Chitta என்றால் என்ன? Patta-விட வித்தியாசம் என்ன?",
+      "current_output": "Patta = Owner details, survey number, area. Chitta = Same info + land classification (wet/dry), soil type, cultivation details. Chitta is more detailed. Agriculture land-க்கு Chitta முக்கியம். Both available at Taluk office or online.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS004_TG",
+      "instruction": "Consumer case-kku time limit irukkaa?",
+      "current_output": "Aama. Problem therinja naalilirundhu 2 years-kkul complaint kodukkanum. Special circumstances-la delay condone aagalam - valid reason irukkanum. Medical negligence cases-kku discovery date-la irundhu count aagum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP013_TM",
+      "instruction": "Travel package போனது worst experience, compensation கிடைக்குமா?",
+      "current_output": "Yes, if: 1) Promised amenities இல்ல (hotel downgrade, no AC bus), 2) Itinerary மாற்றம் without consent, 3) Hidden charges. Claim: 1) Package cost difference, 2) Mental agony compensation, 3) Travel Forum/Consumer Forum complaint. Evidence: Brochure, booking confirmation, photos, videos. TAAI registered agents-கிட்ட book பண்ணுங்க - better accountability.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS022_TM",
+      "instruction": "Consumer forum order implement ஆகல - என்ன செய்வது?",
+      "current_output": "Execution petition file பண்ணுங்க. Order implement செய்யாத party-க்கு: 1) Fine, 2) Imprisonment (up to 3 years), 3) Property attachment. Forum-க்கே execution petition போடுங்க. District Collector மூலமும் execution நடக்கும்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA024_TG",
+      "instruction": "Tenant-aaga ennenna responsibilities irukku?",
+      "current_output": "1) Time-kku rent kattuvathu, 2) Veetai nalla condition-la maintain seivathu, 3) Illegal activities seyyaamal iruppathu, 4) Neighbors-kku disturbance kodukaamal iruppathu, 5) Agreement terms follow seivathu, 6) Vacate seyyum mun notice koduppathu.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF018_TG",
+      "instruction": "Police vehicle seize panninaal eppadi release peruvathu?",
+      "current_output": "Steps: 1) Challan pay, 2) Required documents produce (license, RC, insurance), 3) Release order perunga, 4) Vehicle collect. Court custody-la irundhaal Court order venum. Seizure fee applicable. 24 hours-kkul Magistrate inform aaganum.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_003_TG",
+      "instruction": "RTI fee evvalavu? Eppadi pay panradhu?",
+      "current_output": "Central Government: Rs.10 (postal order, DD, cash). Tamil Nadu State: Rs.10. BPL card holders: Fee exempted. Additional: Rs.2 per page for copies. Online: rtionline.gov.in (central), rtionline.tn.gov.in (state). Court fee stamp-um accept.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_005_TG",
+      "instruction": "RTI reject aanaal enna seivathu?",
+      "current_output": "First Appeal: Appellate Authority-kku 30 days-kkul (PIO-vin senior officer). Second Appeal: State/Central Information Commission-kku 90 days-kkul. No fee for appeals. Commission penalty podalam - Rs.250/day, max Rs.25,000.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA019_TG",
+      "instruction": "Owner repair seyya marukkiraar - rent kattaamal irukkalaama?",
+      "current_output": "Rent kattaamal irukka koodaadhu - idhu eviction-kku grounds aagividum. Instead: 1) Written notice kodunga, 2) Owner response illaattal repair seydhu receipt vaangunga, 3) Rent-la irundhu deduct seydhu balance kattunga, 4) Rent Authority-kku complaint kodunga.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS017_TG",
+      "instruction": "Hospital bill excessive-aa irukku - enna seyyalam?",
+      "current_output": "Itemized bill kelunga - hospital thara venum. Rate list display kattaayam (Clinical Establishments Act). Overcharging complaint: 1) State Health Department, 2) District Collector, 3) Consumer forum. Insurance involved-aa irundhaal TPA-kkum complaint podunga.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC020_TM",
+      "instruction": "Aadhaar correction எப்படி செய்வது?",
+      "current_output": "Online: myaadhaar.uidai.gov.in (demographic update). Offline: Aadhaar Enrolment Centre. Documents: Supporting proof for correction. Fee: Rs.50 (biometric update free). Time: 10-30 days. OTP verification required. Address update: Aadhaar app-லும் possible.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE008_TM",
+      "instruction": "Cyber stalking-க்கு என்ன law இருக்கு?",
+      "current_output": "IPC 354D (stalking) - 3 years imprisonment (first offence), 5 years (repeat). IT Act 66D (cheating by personation). Evidence collect: Screenshots, call logs, messages. Platform block + police complaint. Women: Protection order under DV Act-உம் பெறலாம்.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP024_TM",
+      "instruction": "Single mother rights என்னென்ன? Documents-ல் father name வேணுமா?",
+      "current_output": "Rights: 1) Birth certificate - mother name only acceptable, 2) School admission - father name not mandatory (Supreme Court), 3) Passport - mother as sole guardian okay, 4) Aadhar - single parent sufficient. Challenges: Some private institutions insist - quote Supreme Court judgment. Government schemes: Single mother pension available in TN. Child custody: Automatic to mother (unwed).",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF009_TG",
+      "instruction": "Hit and run case-la compensation eppadi peruvathu?",
+      "current_output": "FIR podunga (vehicle details theriyaaviitalum). Motor Accident Claims Tribunal (MACT)-la claim. Hit and run compensation: Death - Rs.2 lakh, Grievous injury - Rs.50,000 (Solatium Scheme). Driver identify aanaal full compensation + criminal case.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA018_TG",
+      "instruction": "Veetla repair velai yaar poruppu?",
+      "current_output": "Major repairs (roof leak, plumbing main line, electrical wiring, structural issues) - Owner responsibility. Minor repairs (tap washer, bulb, fuse) - Tenant responsibility. Agreement-la clearly mention irukkanum. Owner refuse pannina rent-la irundhu deduct seyyalam (with notice).",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP006_TM",
+      "instruction": "Owner திடீர்னு current cut பண்ணிட்டார், legal-ஆ?",
+      "current_output": "Illegal! Owner basic amenities (water, electricity) cut பண்ண கூடாது - self-help eviction illegal. Actions: 1) Police complaint (criminal intimidation), 2) Rent Authority complaint, 3) Civil court injunction. Owner penalty: Fine + imprisonment possible. Tenant rights: Continue staying + demand restoration. Document everything - photos, videos.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_005_TM",
+      "instruction": "RTI reject ஆனால் என்ன செய்வது?",
+      "current_output": "First Appeal: Appellate Authority-க்கு 30 days-க்குள் (PIO-வின் senior officer). Second Appeal: State/Central Information Commission-க்கு 90 days-க்குள். No fee for appeals. Commission penalty போடலாம் - Rs.250/day, max Rs.25,000.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF018_TM",
+      "instruction": "Police vehicle seize பண்ணினால் எப்படி release பெறுவது?",
+      "current_output": "Steps: 1) Challan pay, 2) Required documents produce (license, RC, insurance), 3) Release order பெறுங்க, 4) Vehicle collect. Court custody-ல் இருந்தால் Court order வேண்டும். Seizure fee applicable. 24 hours-க்குள் Magistrate inform ஆகணும்.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM017_TG",
+      "instruction": "Free legal aid eppadi peruvathu?",
+      "current_output": "Eligible: Women, children, SC/ST, disabled, victims of trafficking, industrial workers, custody persons, income < Rs.3 lakh/year. Apply: District Legal Services Authority (DLSA), Taluk Legal Services Committee. Court-lum request pannalam. Toll-free: 15100.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI001_TG",
+      "instruction": "Marriage registration kattaayamaa? Enge panrathu?",
+      "current_output": "Tamil Nadu-la Compulsory Registration of Marriages Act 2009-in keezh kattaayam. Register: 1) Hindu Marriage Act - Registrar of Marriages (Sub-Registrar office), 2) Special Marriage Act - Marriage Registrar. Online apply: serviceonline.gov.in. Documents: Age proof, address proof, photos, invitation card, witnesses.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS007_TG",
+      "instruction": "Warranty period mudinja piragum complaint seyyalaamaa?",
+      "current_output": "Manufacturing defect-kku warranty period mudindhaalum complaint seyyalam. Product reasonable lifespan-kkul fail aanaal complaint valid. Example: TV 6 months-la blast aanaal, warranty 3 months mudindhirundhalum case podalam.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

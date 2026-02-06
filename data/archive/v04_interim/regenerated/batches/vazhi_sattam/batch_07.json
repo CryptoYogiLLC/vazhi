@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 7,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "EXTE012_TM",
+      "instruction": "Life insurance claim reject ஆனால் appeal எங்கே?",
+      "current_output": "Steps: 1) Company grievance cell, 2) IRDAI IGMS portal (igms.irda.gov.in), 3) Insurance Ombudsman (Rs.30 lakh வரை), 4) Consumer forum, 5) Civil Court. Common rejection reasons: Non-disclosure, policy lapse, suicide clause. Documents: Policy, medical records, rejection letter.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC006_TG",
+      "instruction": "Cheque bounce aanadhu - enna action edukkalam?",
+      "current_output": "NI Act 138 procedure: 1) Bank memo receive, 2) Legal notice within 30 days, 3) 15 days wait for payment, 4) Complaint within 30 days (total 45 days from bounce). Court: Magistrate Court. Punishment: 2 years imprisonment + twice cheque amount fine.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP015_TM",
+      "instruction": "Property வாங்கும் முன் என்னென்ன documents check பண்ணணும்?",
+      "current_output": "Must check: 1) Title deed chain (30 years), 2) EC (30 years), 3) Patta & Chitta, 4) Survey sketch, 5) Tax paid receipts, 6) Approved building plan, 7) NOC (if apartment), 8) RERA registration (new projects), 9) Power of Attorney (if applicable). Lawyer verification recommended.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE017_TM",
+      "instruction": "SIM swap fraud-ல் இருந்து எப்படி protect பண்றது?",
+      "current_output": "Prevention: 1) SIM lock enable, 2) Don't share personal details, 3) Unusual network loss-க்கு alert, 4) Bank OTP to email (if available). If happened: Telecom provider + bank + police immediately. New SIM block request பண்ணுங்க.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA026_TG",
+      "instruction": "Veetla structural changes seyyalaamaa?",
+      "current_output": "Owner-oda written permission illaamal endha structural change-um seyya koodaadhu. Wall break panrathu, room partition poduvadhu, bathroom add seivathu ellam owner approval venum. Permission illaamal seydhaal restoration cost tenant kattanum.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL018_TG",
+      "instruction": "IT company-la bond sign pannen - valid-aa?",
+      "current_output": "Training bond: Valid if genuine training provided. Employment bond (2-3 years): Generally unenforceable - Indian Contract Act under 'restraint of trade'. Reasonable training cost recovery: May be valid. Exorbitant penalty: Not enforceable. Consult lawyer before paying.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP028_TG",
+      "instruction": "Old age home-la abuse nadakkuthu, complain enge?",
+      "current_output": "Complaint options: 1) Police (if physical/sexual abuse), 2) District Social Welfare Officer, 3) State Commission for Senior Citizens, 4) National Commission for Elderly. Old age home registration: Social Welfare Department-kitta - unregistered homes-ai report pannalam. Elder helpline: 14567. Documentation: Photos, medical reports, witness statements.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI025_TM",
+      "instruction": "Live-in relationship-ல் பிறந்த குழந்தைக்கு rights இருக்கா?",
+      "current_output": "ஆம். Supreme Court: Long-term live-in-ல் பிறந்த children legitimate. Father's property-ல் share உண்டு. Maintenance கேட்கலாம். Birth certificate-ல் father name போடலாம். DNA test மூலம் paternity prove பண்ணலாம்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP014_TG",
+      "instruction": "Poramboke land endraal enna? Adhai vaangalaamaa?",
+      "current_output": "Poramboke = Government reserved land (roads, water bodies, grazing land). Idhai yaarum own panna mudiyaadhu, sell/buy panna mudiyaadhu. Poramboke land-la construction illegal - demolish aagum. Land classification: eservices.tn.gov.in-la check pannunga.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_016_TG",
+      "instruction": "Government office-la velai nadakkala, yaarukitta solrathu? (Chennai style)",
+      "current_output": "Steps: 1) Andha officer-in higher officer-kitta complaint, 2) Collector office petition, 3) CM Cell - 1100, 4) RTI pottu file status kelunga. Ellaathaiyum writing-la kodunga, acknowledgment vaangunga.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP010_TG",
+      "instruction": "Ancestral property-ai yaaraavadhu oruthar thaniyaa virkkalaamaa?",
+      "current_output": "Mudiyaadhu. Ancestral property-la anaithu legal heirs-kkum pirappileye right undu. Virka ella coparceners consent + No Objection venum. Consent illaamal vitraal court-la challenge seyyalam.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF004_TG",
+      "instruction": "Traffic fine list Tamil Nadu-la enna?",
+      "current_output": "Major fines (2019 MV Act): Helmet illaama - Rs.1,000, Seat belt illaama - Rs.1,000, Signal jump - Rs.1,000, Drunk driving - Rs.10,000 (first), Over-speeding - Rs.1,000-2,000, Without license - Rs.5,000, Without insurance - Rs.2,000.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS009_TM",
+      "instruction": "Online order வரவில்லை - refund எப்படி பெறுவது?",
+      "current_output": "Steps: 1) Website/App-ல் refund request raise பண்ணுங்க, 2) Email-ல் written complaint அனுப்புங்க, 3) Payment bank-க்கு chargeback request கொடுங்க (credit card), 4) Response இல்லாவிட்டால் NCH (1800-11-4000) complaint, 5) Consumer forum case போடுங்க. E-commerce company 5-7 days-ல் acknowledge செய்யணும்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_006_TG",
+      "instruction": "RTI-la enna information ketka mudiyaadhu?",
+      "current_output": "Exemptions (Section 8): 1) National security, 2) Foreign relations, 3) Trade secrets, 4) Cabinet papers, 5) Personal information (no public interest), 6) Investigation documents (pending case), 7) Fiduciary relationship. Public interest override possible for some exemptions.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP014_TM",
+      "instruction": "Insurance claim reject ஆச்சு, appeal எப்படி?",
+      "current_output": "Steps: 1) Rejection reason writing-ல் கேளுங்க, 2) Grievance to Insurance Company (Grievance Officer), 3) 15 days-க்குள் response இல்ல = IRDAI IGMS portal (igms.irda.gov.in), 4) Still no resolution = Insurance Ombudsman (free, no lawyer needed), 5) Final option: Consumer Forum. Health insurance: TPA issues common - escalate to insurer directly.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_012_TM",
+      "instruction": "Government officer லஞ்சம் கேட்டால் என்ன செய்வது?",
+      "current_output": "Options: 1) Vigilance and Anti-Corruption (DVAC): 1064 helpline, 2) Lokayukta, 3) CBI (central government). Trap operation request பண்ணலாம். Evidence: Recording (legal in TN), witnesses. Bribe giver-க்கும் protection உண்டு (if reports).",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE015_TG",
+      "instruction": "Trademark register panradhu eppadi?",
+      "current_output": "Online: ipindia.gov.in. Classes: 45 different classes (goods/services). Search first: TM search portal. Fee: Rs.4,500-9,000. Process: Application → Examination → Publication → Opposition period (4 months) → Registration. Protection: 10 years, renewable.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP003_TM",
+      "instruction": "Guideline value என்றால் என்ன? எங்கே check பண்றது?",
+      "current_output": "Government நிர்ணயித்த minimum property value - இதற்கு கீழே register பண்ண முடியாது. Check: tnreginet.gov.in → Guideline Value Search → Zone/Village select. Actual sale higher-ஆ இருந்தால் actual value-க்கு stamp duty.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_017_TG",
+      "instruction": "VAO certificate thara maattengaraar, enna panradhu? (Rural Tamil)",
+      "current_output": "Tahsildar-kitta written complaint kodunga. Right to Service Act-in keezh time limit irukku - delay aana penalty. Collector Grievance Day (weekly) ponga. Last option: RTI pottu why delay-nnu kelunga.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP017_TG",
+      "instruction": "A-Register endraal enna?",
+      "current_output": "Village-level land record maintained by VAO. Contains: All survey numbers, owners, area, classification. Public document - anyone can inspect. Patta transfer, mutation ellam A-Register-la update aaganum. Discrepancy irundhaal Tahsildar-kku complaint.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS014_TM",
+      "instruction": "Bank service complaint எப்படி செய்வது?",
+      "current_output": "Steps: 1) Bank branch-ல் written complaint, 2) 30 days response இல்லாவிட்டால் Banking Ombudsman-க்கு complaint (rbi.org.in), 3) Still no resolution - Consumer forum. Online banking fraud-க்கு Cyber Crime portal-லும் report பண்ணுங்க.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA012_TG",
+      "instruction": "Owner current/water cut panni force pannuraar - enna seivathu?",
+      "current_output": "Idhu illegal harassment. 1) Police-la complaint kodunga, 2) Rent Authority-kku complaint, 3) Civil Court-la injunction peralaam. Essential services cut panradhu criminal offence. Owner-kku fine and imprisonment varai punishment.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE005_TM",
+      "instruction": "Loan app harassment - illegal collection practices",
+      "current_output": "RBI unregistered apps = illegal. Complaint: 1) RBI Sachet portal, 2) cybercrime.gov.in, 3) Police FIR (extortion, harassment). Harassment includes: Contact list access, morphed photos, threatening calls. Do NOT install unknown loan apps. Legal apps: RBI registered NBFC list check.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP018_TM",
+      "instruction": "Property document lost ஆனால் என்ன செய்வது?",
+      "current_output": "Steps: 1) Police complaint (FIR), 2) Newspaper advertisement (lost notice), 3) Sub-Registrar office-ல் certified copy apply, 4) Affidavit notarize. Certified copy original-க்கு சமம். Online: tnreginet.gov.in-ல் post-2009 documents download பண்ணலாம்.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE003_TG",
+      "instruction": "Fake website-la shopping panni fraud aanadhu - complaint eppadi?",
+      "current_output": "Steps: 1) Payment bank-kku chargeback request, 2) cybercrime.gov.in complaint, 3) Consumer forum (seller fraud), 4) Police FIR (IPC 420). Evidence save pannunga: Website screenshots, payment receipts, communication. Domain registrar-kkum report pannalam.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

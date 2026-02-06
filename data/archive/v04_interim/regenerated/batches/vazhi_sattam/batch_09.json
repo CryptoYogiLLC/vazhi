@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 9,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SUPP028_TM",
+      "instruction": "Old age home-ல் abuse நடக்குது, complain எங்கே?",
+      "current_output": "Complaint options: 1) Police (if physical/sexual abuse), 2) District Social Welfare Officer, 3) State Commission for Senior Citizens, 4) National Commission for Elderly. Old age home registration: Social Welfare Department-கிட்ட - unregistered homes-ஐ report பண்ணலாம். Elder helpline: 14567. Documentation: Photos, medical reports, witness statements.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS015_TM",
+      "instruction": "Insurance claim reject ஆனது - என்ன செய்யலாம்?",
+      "current_output": "Steps: 1) Rejection letter-க்கு written reply கொடுங்க, 2) IRDAI Grievance portal (igms.irda.gov.in)-ல் complaint, 3) Insurance Ombudsman-கிட்ட appeal (Rs.30 lakh வரை), 4) Consumer forum case. Claim rejection reason properly study பண்ணுங்க - valid reason இல்லாம reject பண்ண முடியாது.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA002_TG",
+      "instruction": "Rental agreement-la ennenna details irukkanum?",
+      "current_output": "Owner & tenant peru, address, Aadhaar number, monthly rent amount, advance/deposit amount, agreement period, maintenance yaar responsibility, notice period, house condition, restrictions (pets, subletting), electricity/water yaar pay panrathu - ellaam irukkanum.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA005_TG",
+      "instruction": "Online-la rental agreement register panna mudiyuma?",
+      "current_output": "Aama. TNREGINET (tnreginet.gov.in) moolam online-la document draft seydhu, e-stamp vaangi, appointment book panni Sub-Registrar office-la biometric verification seyyalam. Fully online illa - physical visit venum.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE004_TM",
+      "instruction": "Job fraud - advance வாங்கிட்டு மோசம் பண்ணிட்டாங்க",
+      "current_output": "Complaint: 1) cybercrime.gov.in, 2) Local police FIR, 3) Labour Department (if company involved). Legal sections: IT Act 66D (cheating using computer), IPC 420 (cheating). Red flags: Advance fee, unrealistic salary, gmail/yahoo recruiter. Legitimate companies never ask money.",
+      "category": "cyber_laws",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "TRAF010_TM",
+      "instruction": "Motor Accident Claim எப்படி file செய்வது?",
+      "current_output": "File at: Motor Accident Claims Tribunal (MACT) - District Court. Documents: FIR, medical records, bills, death certificate (if applicable), income proof, insurance details. Time limit: No strict limit (reasonable time). Lawyer not mandatory. Lok Adalat-லும் settle ஆகலாம்.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA018_TM",
+      "instruction": "வீட்டில் repair வேலை யார் பொறுப்பு?",
+      "current_output": "Major repairs (roof leak, plumbing main line, electrical wiring, structural issues) - Owner பொறுப்பு. Minor repairs (tap washer, bulb, fuse) - Tenant பொறுப்பு. Agreement-ல் clearly mention இருக்கணும். Owner refuse பண்ணினால் rent-ல் இருந்து deduct செய்யலாம் (with notice).",
+      "category": "tenant_rights",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "FAMI019_TM",
+      "instruction": "DV case-ல் என்ன relief கிடைக்கும்?",
+      "current_output": "Reliefs under DV Act: 1) Protection order (abuse stop), 2) Residence order (shared household-ல் stay), 3) Monetary relief (maintenance, medical, compensation), 4) Custody order, 5) Compensation. Ex-parte order (urgent) 2-3 days-ல் கிடைக்கும்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP030_TG",
+      "instruction": "En pulla school-la adicchittaanga, action edukkanum (Madurai style)",
+      "current_output": "Corporal punishment banned! RTE Act + NCPCR guidelines. Actions: 1) School principal-kitta written complaint, 2) Education Department (DEO), 3) Child Welfare Committee, 4) Police (if serious injury). Evidence: Photos, medical certificate. Teacher action: Suspension, termination possible. School license: Risk of cancellation. Child helpline: 1098.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE002_TG",
+      "instruction": "OTP share panni money pochu - thirumba kidaikkumaa?",
+      "current_output": "Bank approach: RBI circular-padi, unauthorized transaction-kku customer negligence irundhaalum limited liability (Rs.25,000 max). Aanaal OTP voluntary share = customer liability higher. 3 days-kkul report pannunga. Banking Ombudsman appeal undu.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL018_TM",
+      "instruction": "IT company-ல் bond sign பண்ணினேன் - valid-ஆ?",
+      "current_output": "Training bond: Valid if genuine training provided. Employment bond (2-3 years): Generally unenforceable - Indian Contract Act under 'restraint of trade'. Reasonable training cost recovery: May be valid. Exorbitant penalty: Not enforceable. Consult lawyer before paying.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM024_TG",
+      "instruction": "Ennoda paiyyanai police pidichitaanga, enna panradhu? (Madurai style)",
+      "current_output": "Panic aagaadheenga. First: enna case-la arrest-nnu kelunga. Bailable-nna station-layae bail kidaikkum. Non-bailable-nna lawyer-kitta ponga. 24 hours-la court-la produce pannanum - adhu rights. Lawyer helpline: DLSA, 15100.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP012_TG",
+      "instruction": "Wedding hall booking cancel, advance thirumba tharala, legal action?",
+      "current_output": "Depends on: 1) Cancellation policy in agreement, 2) How early cancelled, 3) Reason for cancellation. Rights: 1) Unreasonable forfeiture = challenge pannalam, 2) Hall's fault (double booking, not available) = full refund + compensation, 3) Consumer Forum: Unfair trade practice claim. Force majeure (COVID type): Special consideration. Always get cancellation policy in writing!",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF016_TM",
+      "instruction": "Duplicate RC எப்படி பெறுவது?",
+      "current_output": "Steps: 1) FIR (if lost/stolen), 2) Form 26 fill, 3) Affidavit, 4) Newspaper advertisement, 5) RTO application + fee. Documents: ID proof, address proof, insurance, PUC. Time: 15-30 days. Fee: Rs.300-500 + penalties if applicable.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE006_TM",
+      "instruction": "Social media-ல் abuse/trolling - complaint போடலாமா?",
+      "current_output": "ஆம். Sections: IT Act 66A (struck down but alternatives exist), 67 (obscene content), IPC 509 (insult to modesty), 506 (criminal intimidation), 507 (criminal intimidation by anonymous). Platform report + cybercrime.gov.in complaint. Women: 181 helpline.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC019_TM",
+      "instruction": "Important helpline numbers என்னென்ன?",
+      "current_output": "Emergency: 112. Police: 100. Fire: 101. Ambulance: 108. Women helpline: 181, 1091. Child helpline: 1098. Cyber crime: 1930. Consumer: 1800-11-4000. Senior citizen: 14567. Anti-corruption: 1064. CM helpline: 1100. Railway: 139.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS034_TG",
+      "instruction": "Kadaikkaaran mosamaana saamaan kuduthuttan, enna panradhu? (Chennai casual)",
+      "current_output": "Bill irukkaa paarunga. Bill irundhaa exchange/refund kelunga. Refuse pannaa Consumer helpline-la call pannunga - 1800-11-4000. WhatsApp-la complaint: 8800001915. Simple-aa solve aagum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS019_TG",
+      "instruction": "Consumer forum-la case file seyya ennenna documents venum?",
+      "current_output": "Required: 1) Written complaint (5 copies), 2) Bill/Invoice copy, 3) Warranty/Guarantee card, 4) Correspondence with seller (letters, emails), 5) ID proof, 6) Address proof, 7) Photos/Videos of defect. Online filing: edaakhil.nic.in portal moolam.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP023_TG",
+      "instruction": "Apartment Association-la enna rights irukku?",
+      "current_output": "TN Apartment Ownership Act padi: 1) AGM-la vote seyya, 2) Committee member aaga, 3) Accounts inspect seyya, 4) Common area use seyya, 5) Decisions-la participate. Arbitrary rules-kku object seyyalam. Discrimination-kku legal action edukkalam.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF008_TG",
+      "instruction": "Road accident-la enna seyyanum?",
+      "current_output": "Steps: 1) Injured-kku first aid, 2) 108 ambulance call, 3) Police 100 call, 4) Photos/videos edunga, 5) Witness details collect, 6) FIR file (or police will file). Good Samaritan law: Help pannuravarkalukku legal protection undu.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM004_TG",
+      "instruction": "False FIR pottaal enna aagum?",
+      "current_output": "IPC 182 (BNS 213): False information to public servant - 6 months imprisonment + fine. IPC 211 (BNS 248): False charge with intent to injure - 2-7 years imprisonment. Defamation case-um varum. Accused can file counter case. Think twice before filing.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS032_TG",
+      "instruction": "Expired product vitraal enna complaint seyyalam?",
+      "current_output": "FSSAI complaint: fssai.gov.in or Food Safety Officer (District)-kku. Consumer forum-la compensation case. Police complaint (IPC 273 - selling adulterated food). Seller-kku fine + license cancellation aagalam. Product, bill vaichirunga.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE002_TM",
+      "instruction": "OTP share பண்ணி money போச்சு - திரும்ப கிடைக்குமா?",
+      "current_output": "Bank approach: RBI circular-படி, unauthorized transaction-க்கு customer negligence இருந்தாலும் limited liability (Rs.25,000 max). ஆனால் OTP voluntary share = customer liability higher. 3 days-க்குள் report பண்ணுங்க. Banking Ombudsman appeal உண்டு.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE007_TM",
+      "instruction": "Power of Attorney எப்படி செய்வது?",
+      "current_output": "Types: General (all acts), Special (specific act). Draft on stamp paper (Rs.100-500 based on state). Registration: Sub-Registrar office (optional but recommended for property). NRI: Indian Embassy attestation. Revocation: Same process + inform parties.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC022_TM",
+      "instruction": "Birth certificate இல்லை - late registration எப்படி?",
+      "current_output": "Within 1 year: Normal fee at Registrar. 1-5 years: Late fee + affidavit. 5+ years: Court order required (Magistrate). Apply: Corporation/Municipality/Panchayat. Documents: Hospital records, school records, affidavit, ID proofs of parents. TN: e-Sevai centre-லும் available.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 6,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TRAF015_TM",
+      "instruction": "RC transfer எப்படி செய்வது?",
+      "current_output": "Vehicle sale-க்குப் பிறகு: 1) Form 29, 30 fill, 2) Both buyer & seller sign, 3) NOC from financer (if loan), 4) Insurance transfer, 5) RTO submit + fee pay. Time: 30 days-க்குள். Delay: Fine + legal issues. Online: parivahan.gov.in partially available.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL002_TM",
+      "instruction": "PF withdrawal எப்படி செய்வது?",
+      "current_output": "Online: EPFO portal → Online Services → Claim. Conditions: Retirement (58 years), 2 months unemployment, medical emergency (partial), home loan (partial), marriage (partial). Full withdrawal: Job quit + 2 months gap. Aadhaar linked UAN வேணும். 5-10 days-ல் amount வரும்.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP026_TG",
+      "instruction": "NRI property sell seyya POA kodukkalaama?",
+      "current_output": "Aama, aanaal Special Power of Attorney (SPA) irukkanum - specific property, specific purpose mention aaganum. Indian Embassy/Consulate-la notarize + apostille venum. GPA alone not sufficient. SPA registration recommended.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF005_TM",
+      "instruction": "E-challan pay எப்படி செய்வது?",
+      "current_output": "Online: echallan.parivahan.gov.in அல்லது TN Traffic Police app. Enter: Vehicle number/Challan number. Payment: Net banking, UPI, credit/debit card. Offline: Traffic police station, court. Non-payment: License suspension, vehicle seizure possible.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE015_TM",
+      "instruction": "Trademark register பண்றது எப்படி?",
+      "current_output": "Online: ipindia.gov.in. Classes: 45 different classes (goods/services). Search first: TM search portal. Fee: Rs.4,500-9,000. Process: Application → Examination → Publication → Opposition period (4 months) → Registration. Protection: 10 years, renewable.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS023_TG",
+      "instruction": "Medical negligence-kku consumer court-la case podalaamaa?",
+      "current_output": "Aama. Doctors, hospitals ellam 'service provider' category-la varum. Wrong diagnosis, treatment failure, surgery complications, hospital infection - ellaathukkum case podalam. Aanaal 'bonafide mistake'-kkum 'negligence'-kkum vithiyaasam prove pannanum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_004_TM",
+      "instruction": "RTI reply எத்தனை நாளில் கிடைக்கும்?",
+      "current_output": "Normal: 30 days. Life/liberty matter: 48 hours. Third party information: 40 days. Transfer to other department: 35 days (5 days transfer + 30 days). Reply இல்லாவிட்டால் deemed refusal - First Appeal போடலாம்.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF014_TG",
+      "instruction": "No Claim Bonus (NCB) endraal enna?",
+      "current_output": "Claim illaatha ovvoru varushamum premium discount. 1st year: 20%, 2nd: 25%, 3rd: 35%, 4th: 45%, 5th+: 50%. NCB transfer: Old vehicle sell pannum bodhu new vehicle-kku transfer aagum. Claim panninaal NCB reset.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM012_TM",
+      "instruction": "Bail reject ஆனால் என்ன செய்வது?",
+      "current_output": "Appeal options: Lower court reject → Sessions Court. Sessions reject → High Court. High Court reject → Supreme Court. Fresh application: New grounds/changed circumstances இருந்தால் same court-லேயே fresh petition போடலாம். Legal aid available.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL013_TG",
+      "instruction": "Overtime pay evvalavu kodukkanum?",
+      "current_output": "Factories Act: Normal working hours = 8 hours/day, 48 hours/week. Overtime = Double wages (2x normal rate). Maximum overtime: 50 hours/quarter. Overtime refuse pannalam (reasonable grounds). Forced overtime illegal.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA013_TG",
+      "instruction": "Owner veettu lock udaichu saamaan veliye pottaar - enna seivathu?",
+      "current_output": "Idhu serious criminal offence - house trespass, criminal intimidation, theft aagum. Udanadi: 1) Police-la FIR podunga (IPC 448, 441), 2) Magistrate Court-la complaint, 3) Civil Court-la damages claim seyyalam. Photos, videos evidence-aa vaichukonga.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE012_TG",
+      "instruction": "Right to be forgotten endraal enna?",
+      "current_output": "Online-la ulla personal information delete seyya request pannum right. DPDP Act 2023-la provision undu. Google search results remove: Google legal removal request. Social media: Platform privacy settings. Court orders moolamum removal possible.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP026_TG",
+      "instruction": "Senior citizen-ai pillaigal paarkala, maintenance ketkalaamaa?",
+      "current_output": "Maintenance and Welfare of Parents and Senior Citizens Act 2007: 1) Children/relatives maintenance taranum, 2) Tribunal: SDM/Collector level, 3) Max: Rs.10,000/month per child, 4) Non-compliance: 1 month jail + fine. Property transfer-kku pin neglect: Transfer cancel pannalam. Free legal aid: District Legal Services Authority. Helpline: 14567 (Elder helpline).",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP003_TG",
+      "instruction": "ATM-la panam poachu aana account-la debit aachu, enna seivathu?",
+      "current_output": "Steps: 1) Udane bank-kku call pannunga (customer care), 2) Written complaint kodunga - transaction ID mention pannunga, 3) RBI rule: Bank 5 days-kkul refund pannanum, 4) Delay aanaal: Rs.100/day compensation, 5) Resolve aagala = Banking Ombudsman complaint. Evidence: Transaction SMS, mini statement vachukonga.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL019_TG",
+      "instruction": "Notice period serve pannama resign pannalaamaa?",
+      "current_output": "Buy-out option: Notice pay koduthu immediately exit. Absconding: Risky - relieving letter, experience certificate kidaikkaadhu. Background verification-la problem. Negotiate with HR - most companies accept buy-out. New offer delay aanaal wait pannunga.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL010_TM",
+      "instruction": "Wrongful termination-க்கு என்ன செய்யலாம்?",
+      "current_output": "Options: 1) Labour Commissioner complaint, 2) Labour Court (Industrial Disputes Act), 3) Civil Court. Remedies: Reinstatement, back wages, compensation. Document everything: Termination letter, emails, performance records. Time limit: 3 years from termination date.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM022_TM",
+      "instruction": "Social media-ல் abuse/threat வந்தால் என்ன செய்வது?",
+      "current_output": "Steps: 1) Screenshot எடுங்க (URL visible-ஆ), 2) Report to platform, 3) Cyber Crime portal-ல் complaint, 4) Women-க்கு 181 helpline. Applicable laws: IT Act 66A (struck down), 67 (obscene content), IPC 506 (criminal intimidation), 509 (insult to modesty).",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS029_TM",
+      "instruction": "MRP-ஐ விட அதிகமாக விற்றால் என்ன செய்யலாம்?",
+      "current_output": "MRP-க்கு மேல் விற்பது illegal (Legal Metrology Act). Complaint: 1) Legal Metrology Department (District level), 2) Consumer helpline 1800-11-4000, 3) Consumer forum. Seller-க்கு fine up to Rs.25,000 first offence, Rs.50,000 repeat offence.",
+      "category": "consumer_protection",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CRIM011_TG",
+      "instruction": "Bail conditions ennenna irukkum?",
+      "current_output": "Common conditions: 1) Court dates attend, 2) Don't leave jurisdiction without permission, 3) Don't tamper evidence/threaten witnesses, 4) Passport surrender (if flight risk), 5) Periodical police station visit, 6) Don't contact victim. Violation = bail cancel + arrest.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM014_TM",
+      "instruction": "Defamation-க்கு case போடலாமா?",
+      "current_output": "Civil defamation: Damages claim செய்யலாம். Criminal defamation (IPC 499/500, BNS 356): 2 years imprisonment + fine. Truth = defence (public interest-ல் சொன்னால்). Social media defamation-க்கும் apply ஆகும். Written complaint Magistrate Court-ல் file.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL019_TM",
+      "instruction": "Notice period serve பண்ணாம resign பண்ணலாமா?",
+      "current_output": "Buy-out option: Notice pay கொடுத்து immediately exit. Absconding: Risky - relieving letter, experience certificate கிடைக்காது. Background verification-ல் problem. Negotiate with HR - most companies accept buy-out. New offer delay ஆனால் wait பண்ணுங்க.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM009_TG",
+      "instruction": "Bail eppadi peruvathu?",
+      "current_output": "Bailable offence: Police station-layae bail kidaikkum (matter of right). Non-bailable: Court-la application podanum. Documents: ID proof, address proof, surety documents. Bail bond + surety sign venum. Lawyer through apply panrathu better.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA030_TM",
+      "instruction": "PG/Hostel-க்கு rent laws apply ஆகுமா?",
+      "current_output": "PG/Hostel license agreement-under வரும், standard tenancy laws fully apply ஆகாது. ஆனால் basic rights (security deposit refund, notice period, harassment protection) apply ஆகும். Specific PG rules follow பண்ணணும்.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA028_TG",
+      "instruction": "Property sell aanaal tenant enna aagum?",
+      "current_output": "Registered agreement irundhaal new owner-um adhai honor seyya venum. Agreement period mudiyum varai tenant continue seyyalam. New owner arbitrary eviction seyya mudiyaadhu. Sale-kku mun tenant-kku inform seivathu good practice.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_010_TG",
+      "instruction": "Certificate delay aanaal enna seivathu?",
+      "current_output": "TN Right to Service Act: Specified time limit-kkul service kodukkanum. Delay aanaal: 1) Appellate Authority-kku appeal, 2) Penalty: Rs.250/day delay, 3) CM Cell complaint. Income certificate: 7 days, Community certificate: 15 days (approximate).",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

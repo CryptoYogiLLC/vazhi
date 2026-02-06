@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 1,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "PROP001_TM",
+      "instruction": "Property registration எப்படி செய்வது?",
+      "current_output": "Steps: 1) TNREGINET (tnreginet.gov.in)-ல் document draft, 2) E-stamp purchase, 3) Appointment book, 4) Sub-Registrar office visit (buyer, seller, 2 witnesses), 5) Biometric verification, 6) Document scan & registration. Required: Sale deed, EC, Patta, ID proofs, photos.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC005_TG",
+      "instruction": "Kadan kodutten, thirumba thara maattengaraanga - legal option?",
+      "current_output": "Amount based: <Rs.20,000 - Small Causes Court. >Rs.20,000 - Civil Court (money suit). Documents: Promissory note, acknowledgment, bank transfer proof, witnesses. Cheque bounce: NI Act 138 (criminal). Interest: 18% per annum claim possible. Limitation: 3 years.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC023_TM",
+      "instruction": "Passport reject ஆனது - என்ன செய்வது?",
+      "current_output": "Rejection reason check: passportindia.gov.in. Common reasons: Police verification issue, document mismatch, pending cases. Appeal: Regional Passport Officer. Court case pending: NOC from court required. Reapply with correct documents. Tatkaal for urgent cases.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF004_TM",
+      "instruction": "Traffic fine list Tamil Nadu-ல் என்ன?",
+      "current_output": "Major fines (2019 MV Act): Helmet இல்லாம - Rs.1,000, Seat belt இல்லாம - Rs.1,000, Signal jump - Rs.1,000, Drunk driving - Rs.10,000 (first), Over-speeding - Rs.1,000-2,000, Without license - Rs.5,000, Without insurance - Rs.2,000.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI003_TM",
+      "instruction": "Inter-caste/Inter-religion marriage register எப்படி செய்வது?",
+      "current_output": "Special Marriage Act 1954-ன் கீழ் register செய்யலாம். 30 days notice period உண்டு. Any religion/caste மணமக்கள் register பண்ணலாம். Parents consent not required (if major). Inter-caste marriage-க்கு TN government Rs.50,000 incentive scheme உண்டு.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC001_TM",
+      "instruction": "Neighbour சத்தம் போட்டு தொல்லை தருகிறார் - என்ன செய்வது?",
+      "current_output": "Steps: 1) Friendly talk முதலில், 2) Written complaint to RWA/Association, 3) Police complaint (IPC 290 - public nuisance), 4) Civil Court injunction. Night 10PM-6AM noise: Noise Pollution Rules violation. Decibel limit: Residential area 55dB day, 45dB night.",
+      "category": "practical_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "FAMI012_TM",
+      "instruction": "Parents-க்கு children maintenance கொடுக்கணுமா?",
+      "current_output": "ஆம். Maintenance and Welfare of Parents Act 2007 படி children (including married daughters) parents-க்கு maintain செய்யணும். Maintenance Tribunal-ல் claim பண்ணலாம். Max Rs.10,000/month. Non-compliance: 3 months imprisonment. Property transfer reverse ஆகலாம்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP022_TM",
+      "instruction": "Apartment வாங்கும் போது UDS என்றால் என்ன?",
+      "current_output": "UDS = Undivided Share of Land. Flat owner-க்கு land-ல் proportionate share. Building collapse/demolish ஆனாலும் land share உங்களுக்கு. Higher UDS = Better value. UDS % sale deed-ல் clearly mention இருக்கணும். UDS இல்லாம flat வாங்காதீங்க.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP006_TG",
+      "instruction": "Owner thideernu current cut pannitaar, legal-aa?",
+      "current_output": "Illegal! Owner basic amenities (water, electricity) cut panna koodaadhu - self-help eviction illegal. Actions: 1) Police complaint (criminal intimidation), 2) Rent Authority complaint, 3) Civil court injunction. Owner penalty: Fine + imprisonment possible. Tenant rights: Continue staying + demand restoration. Document everything - photos, videos.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM007_TG",
+      "instruction": "Anticipatory bail endraal enna?",
+      "current_output": "Arrest aavadharku munnaalaye bail peruvathu. Non-bailable offence-kku Sessions Court/High Court-la apply pannalam. FIR padhivana udanaye apply pannalam. Grant aanaal arrest aagaamal investigation-la cooperate seyyalam.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE007_TG",
+      "instruction": "Power of Attorney eppadi seivathu?",
+      "current_output": "Types: General (all acts), Special (specific act). Draft on stamp paper (Rs.100-500 based on state). Registration: Sub-Registrar office (optional but recommended for property). NRI: Indian Embassy attestation. Revocation: Same process + inform parties.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM005_TM",
+      "instruction": "Arrest ஆகும்போது என்ன rights இருக்கு?",
+      "current_output": "Constitutional rights: 1) Arrest reason தெரிவிக்கணும், 2) Lawyer அழைக்க right, 3) Family-க்கு inform செய்ய, 4) 24 hours-ல் Magistrate முன் ஆஜர், 5) Medical examination, 6) Silent remain செய்ய right. Women: Only women police, not between sunset-sunrise.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS025_TG",
+      "instruction": "Medical negligence-kku evvalavu compensation ketkalaamaa?",
+      "current_output": "Claim include: 1) Medical expenses incurred, 2) Future treatment cost, 3) Loss of income, 4) Pain and suffering (mental agony), 5) Loss of life expectancy, 6) Punitive damages. Lakhs to Crores varai - case severity-a poruthadhu. Expert lawyer consult pannunga.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC003_TM",
+      "instruction": "Neighbour வீட்டு construction என் வீட்டுக்கு damage - compensation கிடைக்குமா?",
+      "current_output": "ஆம். Civil Court-ல் damages claim. Steps: 1) Written notice to neighbour, 2) Photos/videos of damage, 3) Engineer report (damage assessment), 4) Civil suit file. Compensation: Repair cost + inconvenience. Injunction to stop work-உம் possible.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC027_TG",
+      "instruction": "Traffic police thappaa fine pottuttaaru, ethirkkalaama? (Tirunelveli style)",
+      "current_output": "Aamaa ethirkkalam. Dashcam/CCTV proof irundhaa best. Court-la challan contest pannalam. Online grievance: tnpolice.gov.in. Time limit undu - delay aagaama ponga. Challan copy kattaayam vaangunga.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE002_TM",
+      "instruction": "Court fee எவ்வளவு கட்டணும்?",
+      "current_output": "TN Court Fees Act based: Property suits - value based (1-10%), Money suits - amount based, Injunction - fixed fee. Consumer forum: Free up to Rs.5 lakh. Lok Adalat: No fee. Poor litigants: Court fee exemption available. e-payment: ecourts.gov.in.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE017_TG",
+      "instruction": "Tree cut panna permission venumaa?",
+      "current_output": "Aama. TN Forest Act + TN Preservation of Private Forests Act. Permission: District Forest Officer (forest land), Corporation/Municipality (urban area). Violations: Fine + imprisonment. Protected species: Sandalwood, Rosewood - strict restrictions. Compensatory plantation required.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP015_TG",
+      "instruction": "Packaged food-la foreign object kidaichadhu, action enna?",
+      "current_output": "Serious matter! Steps: 1) Product preserve pannunga (don't throw), 2) Photos/videos edunga, 3) Batch number, manufacturing date note pannunga, 4) Company complaint + social media, 5) Food Safety Officer complaint (local municipal office), 6) Consumer Forum - compensation claim. FSSAI: Manufacturer license cancel aagalam. Health affected: Medical bills + additional compensation.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS027_TG",
+      "instruction": "Builder specification maathi flat thandhaar - complaint podalaamaa?",
+      "current_output": "Aama. Agreement/Brochure-la sonna specification maarinaal RERA complaint podalam. Options: 1) Specification match seyya order, 2) Price reduction, 3) Compensation, 4) Full refund. Photos, videos, original brochure evidence-aa vainga.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL006_TM",
+      "instruction": "ESI hospital-ல் treatment எப்படி பெறுவது?",
+      "current_output": "ESI card + ID proof காட்டுங்க. Dispensary-ல் OP treatment free. Serious cases: ESI hospital referral. Tied-up hospitals-லும் treatment available. Emergency-க்கு any hospital-ல் treatment பெற்று reimbursement claim பண்ணலாம். Dependent family members-க்கும் cover உண்டு.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP016_TG",
+      "instruction": "Affidavit eppadi ezhudhuvadhu? Enge notarize panradhu?",
+      "current_output": "Affidavit format: 1) Title (I, [Name], do hereby solemnly affirm...), 2) Personal details (age, address, occupation), 3) Statement of facts (numbered paragraphs), 4) Verification (true to knowledge and belief), 5) Deponent signature. Notarize: Any Notary Public - Rs.50-200 fee. Stamp paper: Rs.10-100 (depends on purpose). E-stamp available at banks.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF005_TG",
+      "instruction": "E-challan pay eppadi seivathu?",
+      "current_output": "Online: echallan.parivahan.gov.in or TN Traffic Police app. Enter: Vehicle number/Challan number. Payment: Net banking, UPI, credit/debit card. Offline: Traffic police station, court. Non-payment: License suspension, vehicle seizure possible.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI014_TG",
+      "instruction": "Visitation rights endraal enna?",
+      "current_output": "Custody illadha parent-kku child-ai sandhikkum right. Court order: Weekly/monthly visits, holiday stays, phone/video calls. Visitation deny panninaal contempt of court. Both parents cooperate seivathu child-kku nalladhu.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI013_TM",
+      "instruction": "Divorce-ல் child custody யாருக்கு கிடைக்கும்?",
+      "current_output": "'Welfare of child' principle - யார் better care கொடுக்க முடியுமோ அவர்களுக்கு. General preference: Below 5 years - mother. 5+ years - child's preference consider ஆகும். Father-க்கும் custody கிடைக்கலாம் if mother unfit. Joint custody possible.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC012_TG",
+      "instruction": "School admission marukkiraargal - RTE-la seat irukke?",
+      "current_output": "RTE Act 25%: EWS/disadvantaged group-kku reserved. Apply: Online portal (rte.tn.gov.in). Rejection complaint: Block Education Officer, DEO, State RTE Authority. Documents: Income certificate, caste certificate, residence proof. Age: 6-14 years.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

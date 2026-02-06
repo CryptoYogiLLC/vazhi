@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 3,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CRIM009_TM",
+      "instruction": "Bail எப்படி பெறுவது?",
+      "current_output": "Bailable offence: Police station-லேயே bail கிடைக்கும் (matter of right). Non-bailable: Court-ல் application போடணும். Documents: ID proof, address proof, surety documents. Bail bond + surety sign வேண்டும். Lawyer through apply பண்றது better.",
+      "category": "criminal_basics",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "EMPL005_TM",
+      "instruction": "ESI card benefits என்னென்ன?",
+      "current_output": "Benefits: 1) Free medical care (ESI hospitals/dispensaries), 2) Sickness benefit (70% wages), 3) Maternity benefit (100% wages - 26 weeks), 4) Disability benefit, 5) Dependent benefit (death case), 6) Funeral expenses. Salary Rs.21,000/month வரை ESI applicable.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS002_TM",
+      "instruction": "Consumer complaint எங்கே கொடுக்கலாம்?",
+      "current_output": "Claim amount based: 1) Rs.1 crore வரை - District Consumer Forum, 2) Rs.1-10 crore - State Commission, 3) Rs.10 crore மேல் - National Commission. Online: consumerhelpline.gov.in அல்லது NCH app மூலம். Toll-free: 1800-11-4000.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE008_TM",
+      "instruction": "Mediation vs Arbitration என்ன difference?",
+      "current_output": "Mediation: Neutral person facilitates, parties decide, non-binding. Arbitration: Arbitrator decides, binding like court order, faster. Pre-litigation mediation: Compulsory for some cases. Arbitration agreement: Contract-ல் clause இருக்கணும். Both: Court-ஐ விட faster, cheaper.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM021_TM",
+      "instruction": "Online fraud-க்கு complaint எங்கே போடுவது?",
+      "current_output": "1) Cyber Crime portal: cybercrime.gov.in (national), 2) Local Cyber Crime police station, 3) 1930 helpline (financial fraud), 4) Bank-க்கு immediately inform. Screenshots, transaction details, communication records - எல்லாம் save பண்ணுங்க. 24 hours-க்குள் report பண்ணினால் money recover chance அதிகம்.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF006_TG",
+      "instruction": "Traffic police wrongly fine pottaal enna seivathu?",
+      "current_output": "Options: 1) On-spot - evidence kaatti argue (dashcam, photos), 2) Court-la contest (challan dispute), 3) Online grievance: tnpolice.gov.in, 4) RTO officer complaint. Challan copy kelunga. Court contest-kku time limit undu.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP001_TM",
+      "instruction": "Bank loan EMI கட்ட முடியல, என்ன ஆகும்?",
+      "current_output": "EMI default ஆனால்: 1) 90 days delay = NPA (Non-Performing Asset), 2) Bank notice அனுப்பும், 3) Recovery agent வரலாம் - ஆனால் அவங்க threaten பண்ண கூடாது, 4) Restructure/one-time settlement கேளுங்க, 5) Home loan: SARFAESI Act-ன் கீழ் property auction ஆகலாம். RBI guidelines: Recovery agent harassment-க்கு complaint போடலாம்.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS014_TG",
+      "instruction": "Bank service complaint eppadi seivathu?",
+      "current_output": "Steps: 1) Bank branch-la written complaint, 2) 30 days response illaattal Banking Ombudsman-kku complaint (rbi.org.in), 3) Still no resolution - Consumer forum. Online banking fraud-kku Cyber Crime portal-lum report pannunga.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA025_TG",
+      "instruction": "Subletting seyyalaamaa? Roommate serkkalaama?",
+      "current_output": "Owner permission illaamal subletting seyyakoodaadhu - idhu eviction-kku valid ground. Roommate seipathu owner consent-udan irukka venum. Agreement-la specifically allowed na mathume okay.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF016_TG",
+      "instruction": "Duplicate RC eppadi peruvathu?",
+      "current_output": "Steps: 1) FIR (if lost/stolen), 2) Form 26 fill, 3) Affidavit, 4) Newspaper advertisement, 5) RTO application + fee. Documents: ID proof, address proof, insurance, PUC. Time: 15-30 days. Fee: Rs.300-500 + penalties if applicable.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE002_TG",
+      "instruction": "Court fee evvalavu kattanum?",
+      "current_output": "TN Court Fees Act based: Property suits - value based (1-10%), Money suits - amount based, Injunction - fixed fee. Consumer forum: Free up to Rs.5 lakh. Lok Adalat: No fee. Poor litigants: Court fee exemption available. e-payment: ecourts.gov.in.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI007_TM",
+      "instruction": "Mutual consent divorce எவ்வளவு time ஆகும்?",
+      "current_output": "Minimum 6 months, maximum 18 months. Process: 1) Joint petition file, 2) 6 months cooling-off period, 3) Second motion, 4) Decree. 2023 Supreme Court ruling: Genuine cases-ல் 6 months waive ஆகலாம். Contested divorce: 2-5 years.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE009_TM",
+      "instruction": "Lok Adalat-ல் என்ன cases settle ஆகும்?",
+      "current_output": "Cases: Motor accident claims, labour disputes, matrimonial (except divorce), electricity bills, telephone bills, cheque bounce, bank loan recovery, compoundable criminal offences. Benefits: No court fee, no appeal, quick settlement. Permanent Lok Adalat: Public utility services.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP010_TG",
+      "instruction": "Lock-out period-la rent kattanumaa?",
+      "current_output": "Lock-in period (not lock-out): Agreement-la specify pannirukkum. During lock-in: 1) Tenant vacate panninal - remaining months rent pay pannanum, 2) Owner evict panna mudiyaadhu. After lock-in: Normal notice period applies (usually 1-2 months). Negotiate: Lock-in waiver possible with mutual consent. Always read agreement before signing!",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF021_TM",
+      "instruction": "ஆக்சிடென்ட் ஆயிடுச்சு, insurance company சரியா settle பண்ணல",
+      "current_output": "Steps: 1) Written complaint insurance company-க்கு, 2) IRDAI grievance portal (igms.irda.gov.in), 3) Insurance Ombudsman (free, Rs.30 lakh வரை), 4) Consumer forum. Documents ready-ஆ வச்சுக்கோங்க - FIR, medical bills, repair estimate, photos.",
+      "category": "traffic_vehicles",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "EMPL003_TM",
+      "instruction": "Employer PF கட்டல - என்ன செய்யலாம்?",
+      "current_output": "Complaint options: 1) EPFO portal: EPFiGMS (online grievance), 2) Regional PF Commissioner office, 3) Labour Commissioner. Employer liability: PF amount + 12% interest + damages (up to 100%). Criminal prosecution-உம் possible. Salary slip-ல் PF deduction check பண்ணுங்க.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC013_TG",
+      "instruction": "College/University degree certificate thara delay panraanga",
+      "current_output": "Steps: 1) Controller of Examinations complaint, 2) University Grievance Cell, 3) UGC Grievance portal, 4) RTI (status enquiry), 5) Court writ petition (if excessive delay). Provisional certificate-udan job apply pannalam. Employer-kku explain pannunga.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE009_TM",
+      "instruction": "Revenge porn/intimate images share பண்ணினால் என்ன punishment?",
+      "current_output": "IT Act 66E: 3 years imprisonment + Rs.2 lakh fine. 67/67A: 5-7 years imprisonment. IPC 354C (voyeurism). Women: Section 499/500 defamation. Platform takedown: CERT-In report. Victim support: NCW helpline 7827-170-170. Don't blame victim - legal protection உண்டு.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL011_TG",
+      "instruction": "Retrenchment compensation evvalavu kidaikkum?",
+      "current_output": "Formula: 15 days average pay × years of service. Applicable: 100+ employees company, 1 year+ service. Notice: 3 months advance or 3 months pay. LIFO principle (Last In First Out) follow aaganum. Re-employment preference undu.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_008_TG",
+      "instruction": "CM Helpline-la complaint eppadi koduppadhu?",
+      "current_output": "Tamil Nadu CM Helpline: 1100. Online: cmcell.tn.gov.in. Complaint categories: Corruption, service delay, government scheme issues. Tracking: SMS/Online. Escalation: Collector → Department Secretary → CM Cell. Response time: 15-30 days.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP019_TM",
+      "instruction": "Agricultural land-ஐ non-agricultural use-க்கு convert பண்ணலாமா?",
+      "current_output": "Land Use Conversion permission வேண்டும். Apply: District Collector/DTCP. Natham land-ஆக convert செய்தால் construction பண்ணலாம். Wet land (nanjai) conversion கடினம். Conversion fee + stamp duty difference கட்டணும். Illegal conversion-க்கு penalty + demolition.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC020_TG",
+      "instruction": "Aadhaar correction eppadi seivathu?",
+      "current_output": "Online: myaadhaar.uidai.gov.in (demographic update). Offline: Aadhaar Enrolment Centre. Documents: Supporting proof for correction. Fee: Rs.50 (biometric update free). Time: 10-30 days. OTP verification required. Address update: Aadhaar app-lum possible.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_010_TM",
+      "instruction": "Certificate delay ஆனால் என்ன செய்வது?",
+      "current_output": "TN Right to Service Act: Specified time limit-க்குள் service கொடுக்கணும். Delay ஆனால்: 1) Appellate Authority-க்கு appeal, 2) Penalty: Rs.250/day delay, 3) CM Cell complaint. Income certificate: 7 days, Community certificate: 15 days (approximate).",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA032_TG",
+      "instruction": "Veettu owner nammala thitturaaru, ennaa panradhu? (Madurai style)",
+      "current_output": "Thittradhu harassment-dhaan. Recording panni vachukonga (legal in TN). Police complaint podalam - IPC 504 (intentional insult). Women/SC/ST-kku additional protection laws irukku. Advocate-kitta consult pannunga.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA015_TG",
+      "instruction": "Owner eppodhu venumanalum rent increase seyyalaamaa?",
+      "current_output": "Mudiyaadhu. Agreement period-kkul rent increase seyya mudiyaadhu. Agreement mudinja piragu, pudhu agreement-la mutual consent-udan mathume increase seyyalam. Arbitrary increase-kku Rent Authority-la challenge seyyalam.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 9,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HIGH040_TG",
+      "instruction": "Board exam-ku eppadi thirambaada padippathu?",
+      "current_output": "Tips: 1) Previous year question papers practice pannunga 2) Time table pottu padiyunga 3) Blue print padi important chapters-ku priority 4) Daily 6-8 hours study 5) Weekly revision 6) Health-a kavaniyunga - proper sleep, food 7) Group study avoid, self-study better. TN government question bank: www.dge.tn.gov.in. Sample papers free download.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM022_TG",
+      "instruction": "Bank exam Reasoning section eppadi crack panrathu?",
+      "current_output": "Reasoning topics: Puzzles & Seating Arrangement (30-40% weightage), Syllogism, Blood Relations, Direction, Coding-Decoding, Inequality. Strategy: 1) Puzzles - daily 10 practice 2) Logic rules memorize 3) Speed improve through timed practice 4) Easy questions first in exam 5) Skip time-consuming Qs. Resources: RS Aggarwal, Rakesh Yadav, Testbook app. Time: 35 questions in 20-25 minutes. Practice = key to success.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM004_TM",
+      "instruction": "State board vs CBSE - எது better preparation?",
+      "current_output": "Comparison: State Board - Regional language strong, local competitive exams friendly. CBSE - National level exams (JEE, NEET) aligned, English medium uniform. For NEET/JEE: CBSE syllabus closer. For TNPSC: State board better. Reality: Both boards students crack all exams - preparation matters more than board. State board + NCERT combination = best for competitive exams. TN State board now NCERT aligned.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO031B_TG",
+      "instruction": "Scholarship panam eppo varum-nga? Status check panna mudiyuma?",
+      "current_output": "NSP portal-la login pannu/pannunga, status paaru/paarunga. PFMS site-layum payment track pannalam. 2-3 months edukkum normally. Reject aanaa defect list check pannu/pannunga.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH039_TG",
+      "instruction": "Rural students-ku special benefits ulladha?",
+      "current_output": "Aam, special benefits: 1) 7.5% government school quota in Engineering/Medical 2) Rural area nativity certificate benefits 3) Panchayat Union school students special coaching 4) Moovalur Ramamirtham Ammaiyar Scheme - girl students monthly stipend 5) Free coaching for competitive exams. District Collector office moolam apply pannalam. EMIS number irundhaal automatically eligible.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC003_TG",
+      "instruction": "Roommate-oda problem irukku. Handle panrathu eppadi?",
+      "current_output": "Tips: 1) Communication first - politely discuss issues 2) Set ground rules - sleep time, study time, cleanliness 3) Respect personal space 4) Compromise needed from both sides 5) If serious issue - approach warden 6) Room change request (last resort) 7) Avoid gossip, direct conversation better. Remember: You're both adjusting. Patience required. Good roommate = lifelong friend possible.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH013_TG",
+      "instruction": "MA/M.Sc/M.Com padippu govt colleges-la eppadi seruvathu?",
+      "current_output": "Admission method: 1) TNGASA PG Admissions portal 2) UG marks basis rank 3) Online counselling. Eligibility: Related UG degree 50% marks. Fee: Govt colleges-la ₹2,000-5,000/year only. Duration: 2 years. NET/SET exam-ku prepare aagalam.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM016_TM",
+      "instruction": "Scholarship reject ஆயிடுச்சு, again apply பண்ணலாமா?",
+      "current_output": "Yes, re-apply possible in most cases. Steps: 1) Check rejection reason on portal 2) Common issues: Wrong documents, income limit exceeded, duplicate application, bank account mismatch 3) Correct the issue 4) Re-apply in same/next cycle. Tips: Read defect list carefully, upload correct format (PDF/JPG), size limits follow, bank account in student name, Aadhaar-bank linked. Grievance: File complaint if wrongly rejected - evidence attach.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA014_TM",
+      "instruction": "Spoken English course free-யாக எங்கே உள்ளது?",
+      "current_output": "Free English training: 1) TNSDC - Communicative English 2) British Council online resources 3) NPTEL/SWAYAM - English courses 4) Employment exchange - soft skills training 5) NGOs - Pratham, Teach India. Apps: Duolingo, Hello English (free tier). Library-based conversation clubs. Government college students - Language lab access free. Interview skills + English combined courses available through TNSDC.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM026_TG",
+      "instruction": "Concentration improve panna enna seiyanum?",
+      "current_output": "Concentration tips: 1) Pomodoro technique - 25 min study, 5 min break 2) Mobile silent/away 3) Study table clean, good lighting 4) One subject at a time 5) Break tasks into smaller parts 6) Reward yourself after targets 7) Sleep 7-8 hours 8) Exercise daily 9) Meditation 10 minutes 10) Healthy food - avoid heavy meals. Environment: Same place, same time daily. Brain trains itself. Start with 30 min, increase gradually.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_006_TG",
+      "instruction": "8th class-la group select pannanuuma? Science/Commerce eppo choose panrathu?",
+      "current_output": "Group selection: 10th varai common syllabus. 11th-la group choose. Early awareness: 8th/9th-la interests identify pannunga. Science-ku: Maths, Science strong irukkanum. Commerce-ku: Accounts, Business interest. Arts-ku: Language, Social studies interest. Advice: 10th mudikkum varai ella subjects-aiyum properly padiyunga. Final decision 10th result vandha piragu.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP012_TG",
+      "instruction": "Bank Jobs-ku ennenna exams irukku? Eligibility enna?",
+      "current_output": "**Bank Exams:**\n\n**Major Exams:**\n\n1. **IBPS PO:** PSB Officer, Degree, 20-30 age, ₹52,000+ salary\n2. **IBPS Clerk:** PSB Clerk, Degree, 20-28 age, ₹28,000+ salary\n3. **SBI PO:** SBI Officer, Most prestigious\n4. **SBI Clerk:** SBI Clerical\n5. **RBI Grade B:** Highest salary, PG preferred\n6. **RRB:** Rural bank posts\n\n**Age Relaxation:**\n- SC/ST: +5 years\n- OBC: +3 years\n- PwD: +10 years\n\n**Apply:** ibps.in, sbi.co.in, rbi.org.in",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP026_TM",
+      "instruction": "Scholarship deadlines summary",
+      "current_output": "NSP (National): October-November. Post-matric SC/ST: September-October. BC/MBC welfare: August-September. Merit scholarships: After results announcement. INSPIRE: December-January. Private scholarships: Various - check Buddy4Study regularly. Tip: Apply within 2 weeks of portal opening.",
+      "category": "supplementary_courses",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SCHO018_TM",
+      "instruction": "First Generation Graduate-க்கு என்ன special benefits?",
+      "current_output": "**First Generation Graduate Benefits (TN):**\n\n**Definition:** பெற்றோர் இருவரும் degree படிக்காதவர்\n\n**1. CM Higher Education Assurance Scheme:**\n- Full tuition fee waiver\n- Free laptop\n- Monthly stipend: ₹1,000\n- Eligibility: First gen + Income < ₹2.5 lakh\n- Apply: tneservices.tn.gov.in\n\n**2. College Fee Waiver:**\n- Government colleges: FREE\n- Aided colleges: Nominal fees\n\n**3. Special Scholarship:**\n- Higher scholarship amount than others\n- Priority in hostel allotment\n\n**4. Free Coaching:**\n- NEET/JEE free coaching priority\n- UPSC coaching support\n\n**5. Book Bank Facility:**\n- Free textbooks for entire course\n\n**6. Laptop Scheme:**\n- Free laptop in UG first year\n- Preloaded study materials\n\n**How to Prove First Gen Status:**\n- Parents' educational qualification declaration\n- Affidavit if needed\n- No degree certificate for parents\n\n**Documents Needed:**\n- Parents' Aadhaar\n- Self-declaration\n- Income certificate\n- Community certificate\n\n**Apply Through:**\n- College admission time\n- tneservices.tn.gov.in\n- Scholarship committee\n\n**Important:** Declare first gen status during admission - don't miss!",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH009_TG",
+      "instruction": "Agriculture padippu (B.Sc Agri) Tamil Nadu-la eppadi padippathu?",
+      "current_output": "Eligibility: +2 Biology/Agriculture 50% marks. Admission: TNAU counselling. Steps: 1) www.tnau.ac.in-la apply 2) Merit ranking 3) Counselling 4) Campus allotment (Coimbatore/Madurai/Trichy). Fee: ₹5,000-10,000/year. Duration: 4 years. Farmers' children-ku priority.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH012_TG",
+      "instruction": "MBA padippu Tamil Nadu-la enge padippathu?",
+      "current_output": "Best options: 1) IIM Trichy (CAT score) 2) Anna University - MIT (TANCET) 3) Govt Arts Colleges (TANCET). TANCET exam: February-March. Eligibility: Any degree 50%. Govt college fee: ₹30,000-50,000/year. IIM fee: ₹20+ lakhs total. Scholarship opportunities irukku.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC002_TM",
+      "instruction": "Hostel mess சாப்பாடு ஒத்துவரல. என்ன பண்றது?",
+      "current_output": "Solutions: 1) Initially stomach upset common - adjust period 2) Mess committee-ல் complaint raise 3) Healthy snacks keep - fruits, biscuits 4) Weekend home food bring 5) Nearby canteen/restaurants (budget friendly) 6) Cooking allowed rooms-ல் simple items prepare 7) Mess rebate apply if eating outside regularly. Health: Don't skip meals, drink boiled water, maintain hygiene.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO016_TM",
+      "instruction": "TATA Scholarship for students என்ன?",
+      "current_output": "TATA Group Scholarships: 1) Tata Capital Pankh - ₹10,000-12,000/ஆண்டு for Class 6-12 2) Tata Trusts Higher Education - ₹50,000-2 lakh/ஆண்டு professional courses 3) Lady Tata Memorial Trust - Medical research. Eligibility: Income ₹4 lakh கீழ், 60%+ marks. Apply: Buddy4Study portal or direct application. Deadline varies.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM018_TM",
+      "instruction": "TNPSC Current Affairs எப்படி prepare ஆவது?",
+      "current_output": "Current Affairs strategy: 1) Daily newspaper - The Hindu/Indian Express Tamil 2) Monthly magazines - Shankar IAS, Vision 3) PIB daily bulletin 4) TN Government press releases 5) YouTube - free CA classes. Focus areas: TN government schemes, India-international relations, sports, awards, science. Weightage: 25-30% in TNPSC. Last 6 months - most important. Make short notes daily. Revision: Weekly once previous weeks review.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA019_TM",
+      "instruction": "Digital Marketing course padikkanum, free options irukka?",
+      "current_output": "Free courses: 1) Google Digital Garage - Google certification 2) HubSpot Academy - Inbound marketing 3) Meta Blueprint - Facebook/Instagram ads 4) Semrush Academy - SEO 5) NPTEL digital marketing. Paid: TNSDC subsidized courses. Topics: SEO, SEM, Social media, Content marketing, Email marketing. Jobs: Digital marketing executive ₹15,000-25,000. Freelancing possible. Build own social media presence as portfolio.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE004_TG",
+      "instruction": "Padippa paathila niruthinavar meedum padikka enna vazhi?",
+      "current_output": "NIOS (National Institute of Open Schooling) moolam 10th, 12th padikkalam. TNOU-la degree vaangalam. Bridge course, evening colleges, distance education irukku. Age limit illa.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA022_TG",
+      "instruction": "Women entrepreneurs-ku special schemes ulladha?",
+      "current_output": "Women-specific schemes: 1) Stand-Up India - ₹10 lakh to ₹1 crore (SC/ST/Women) 2) Mudra Yojana - Women priority 3) TANSIDCO - Women Entrepreneurship Programme 4) State Industries Department - 30% subsidy 5) TNCDW (Corporation for Development of Women) - interest-free loans. Training: TNSDC women skill programmes, TRYSEM. Self-help groups moolamum loans available. Apply: Respective department websites.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_007_TG",
+      "instruction": "Tuition poganuuma? School padippu mattum podhaadha?",
+      "current_output": "Depends on: 1) School quality - Government/Private 2) Child's self-study ability 3) Parent support at home 4) Specific subject weakness. Tuition alternatives: 1) Free government coaching centres 2) YouTube educational videos 3) Khan Academy, BYJU'S free tier 4) Group study with friends 5) Senior students help. When needed: Maths, Science weak subjects, competitive exam preparation. Cost: ₹500-2000/month for tuition. Self-study skill develop = best investment.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM015_TM",
+      "instruction": "JEE Maths-ல் weak, எப்படி improve ஆவது?",
+      "current_output": "Maths improvement plan: 1) Basics strong - NCERT Class 11 first 2) Formula derivation புரிந்து படியுங்கள் 3) Daily minimum 30 problems 4) Chapter-wise: Start easy (Sets, Relations) → Hard (Calculus, Coordinate) 5) Error analysis - why wrong? 6) Timed practice. High weightage: Calculus 35%, Algebra 25%, Coordinate 20%. Weak students: Focus scoring chapters first. Practice > Theory for Maths.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO017_TM",
+      "instruction": "பெண் மாணவிகளுக்கு என்ன special schemes இருக்கு?",
+      "current_output": "**பெண் மாணவிகளுக்கான Special Schemes:**\n\n**1. CM Girl Child Protection Scheme:**\n- ₹50,000 FD at birth (single girl child)\n- ₹25,000 each (two girl children)\n- Maturity at 18: ~₹1.5-2 lakh\n\n**2. Free Education:**\n- Free education up to PG for all girls in Govt institutions\n- No tuition fee\n\n**3. Moovalur Ramamirtham Scheme:**\n- ₹1,000/month for UG girl students\n- Apply: tneservices.tn.gov.in\n\n**4. Free Bicycle:**\n- Class 11 & 12 girl students\n- Govt & Aided schools\n- Automatic distribution\n\n**5. CBSE Udaan Scheme:**\n- Free engineering preparation for girls\n- cbseit.in/udaan\n\n**6. Pragati Scholarship (AICTE):**\n- ₹50,000/year for technical education\n- One girl per family\n- aicte-pragati-saksham-gov.in\n\n**7. Begum Hazrat Mahal Scholarship:**\n- For minority girls\n- Class 9-12: ₹5,000-6,000\n- UG/PG: ₹10,000-12,000\n\n**8. Indira Gandhi Scholarship (SC Single Girl):**\n- ₹36,200/year for PG\n- Single girl child only\n\n**9. Free Bus Travel:**\n- All women/girls free in TN ordinary buses\n\n**10. Safety Measures:**\n- Women helpline: 181\n- Anti-ragging helpline: 1800-180-5522\n- Campus safety mandatory\n\n**Apply:** Most through school/college or tneservices.tn.gov.in",
+      "category": "school_education",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

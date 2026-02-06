@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 22,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SCHO016_TM",
+      "instruction": "NEET/JEE-க்கு Free Coaching எங்கே கிடைக்கும்?",
+      "current_output": "**Free NEET/JEE Coaching in Tamil Nadu:**\n\n**1. Tamil Nadu Government Free Coaching:**\n\n**a) Naan Mudhalvan Program:**\n- Free NEET/JEE coaching\n- Online + Offline\n- Apply: naanmudhalvan.tn.gov.in\n\n**b) District-level Free Coaching:**\n- Collector Office conducts\n- Weekend classes\n- Free materials\n- Apply through school HM\n\n**2. TNSF (Tamil Nadu Science Forum):**\n- Free NEET coaching for rural students\n- Residential program\n- tnsf.org.in\n\n**3. Super 30 Programs:**\n- Various NGOs run\n- Selection through test\n- Free coaching + Hostel + Food\n- Mainly for SC/ST/EWS\n\n**4. ANTHE (Aakash National Talent Hunt):**\n- Scholarship exam\n- Up to 100% fee waiver\n- aakash.ac.in\n\n**5. Allen Scholarship Test (TALLENTEX):**\n- Up to 90% scholarship\n- allen.ac.in\n\n**6. Government Residential Schools:**\n- Eklavya Model Schools (Tribal)\n- Jawahar Navodaya Vidyalaya\n- Free coaching included\n\n**7. Online Free Resources:**\n\n| Platform | Content |\n|----------|--------|\n| SWAYAM | Free courses |\n| Khan Academy | All subjects |\n| Physics Wallah | NEET/JEE |\n| Unacademy Free | Limited access |\n| Vedantu Free | Basic content |\n| Kalvi TV | TN syllabus |\n\n**8. SC/ST/BC Specific:**\n- Dr. Ambedkar Free Coaching\n- BC/MBC Free Coaching Scheme\n- Apply: bcmbcmw.tn.gov.in\n\n**How to Find:**\n1. Ask school HM\n2. District Collector Office\n3. Social Welfare Department\n4. Local MLAs often sponsor\n\n**Tip:** Apply to multiple programs - increase chances!",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP017_TG",
+      "instruction": "Naanga Sri Lankan Tamil refugee. En pillaikku education kidaikkuma?",
+      "current_output": "Sri Lankan Tamil refugee education: 1) Government schools - Free admission for refugee camp children 2) Special coaching provided 3) TN Government scholarship for refugee students 4) UNHCR education support 5) Higher education: Special quota in some colleges. Documents: Camp registration, UNHCR certificate. Support organizations: READ, OFERR. Many refugee children have succeeded - IIT, Medical, Government jobs. Don't lose hope!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM002_TG",
+      "instruction": "Engineering counselling-la random number enna? Eppadi work aagum?",
+      "current_output": "Random number: Same marks students-ku tie-breaker. System generated, not controllable. Priority: 1st - Cutoff marks, 2nd - Random number (if same marks). Example: You 195 cutoff, random 50000. Another person 195 cutoff, random 10000. They get priority. Impact: Matters only when competing for last few seats in popular colleges. Strategy: Higher marks = random number irrelevant. Focus on marks, not luck.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM002_TG",
+      "instruction": "12th exam-la centum vaanga mudiyumaa? Eppadi?",
+      "current_output": "Centum possible subjects: Maths, Physics, Chemistry, Computer Science, Accountancy. Tips: 1) NCERT concepts thelivaaga purindhukollunga 2) Formula sheet thayaariyunga 3) Numerical problems: 50+ types practice 4) Diagram neat-aa draw pannunga 5) Answer writing: Steps muzhmaiyaaga 6) Time management: 3 hours mock tests. Centum scorers: 6 AM study, revision before sleep, doubt clearing same day.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE016_TM",
+      "instruction": "Bharatanatyam, Carnatic music படிக்க government institution இருக்கா?",
+      "current_output": "Tamil Nadu Music and Fine Arts University, Kalakshetra Foundation (Chennai), Government Music Colleges உள்ளன. Diploma, Degree courses available. Fee மிகக் குறைவு. Talented students-க்கு scholarship உண்டு.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM006_TG",
+      "instruction": "NEET exam pattern enna? Ethanai marks?",
+      "current_output": "NEET UG Pattern: Total 200 questions (180 attempt), 720 marks. Subjects: Physics 45+15 Qs, Chemistry 45+15 Qs, Biology 90+10 Qs. Marking: +4 correct, -1 wrong. Duration: 3 hours 20 minutes. Cutoff 2024: General 720-137, OBC 136-107, SC/ST 136-107. Language: English, Hindi, Tamil + 10 regional. Exam: May (yearly). Syllabus: Class 11 & 12 NCERT Physics, Chemistry, Biology.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA016_TG",
+      "instruction": "DCA/PGDCA course enna? Value irukkaa?",
+      "current_output": "DCA (Diploma in Computer Applications): 6 months - 1 year. PGDCA (Post Graduate): 1 year after graduation. Contents: MS Office, Internet, Basic programming, Database. Value: Government jobs-la DCA mandatory sila posts-ku. Private sector: Entry level IT support, data entry. Better alternative: BCA degree or specific skill courses (Python, Web development). DCA sufficient for basic computer operator roles.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM001_TM",
+      "instruction": "10th public exam-க்கு எப்படி prepare ஆவது? Topper tips என்ன?",
+      "current_output": "Topper strategies: 1) Textbook முழுமையாக படியுங்கள் - 80% questions textbook-இலிருந்து 2) Previous 5 years question papers practice 3) Blue print படி chapter-wise weightage கவனியுங்கள் 4) Maths & Science: daily problem solving 5) Tamil/English: grammar + essay practice 6) Social: Map pointing + dates memorize. Time: Daily 6-8 hours. Last month: Revision only. TN Government question bank: www.dge.tn.gov.in",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP005_TM",
+      "instruction": "NEET Result-க்கு பிறகு Counselling எப்படி நடக்கும்? TN-ல் seats எப்படி கிடைக்கும்?",
+      "current_output": "**NEET Counselling Process:**\n\n**Two Types:**\n1. **All India Quota (AIQ):** 15% seats - MCC conducts\n2. **State Quota:** 85% seats - State conducts\n\n**Tamil Nadu State Counselling:**\n\n**Conducting Body:** Medical Admission Committee (Selection Committee)\n\n**Website:** tnmedicalselection.org\n\n**Process:**\n\n**Round 1: Registration**\n- Online registration\n- Upload documents\n- Pay registration fee (~₹1,000)\n\n**Round 2: Choice Filling**\n- List all colleges in preference order\n- Government, Self-Finance, Deemed all options\n- Lock choices before deadline\n\n**Round 3: Seat Allotment**\n- Based on NEET rank + Preference + Category\n- Result announced online\n\n**Round 4: Reporting**\n- Go to allotted college\n- Document verification\n- Pay fees\n- Admission confirmed\n\n**TN Reservation:**\n\n| Category | Percentage |\n|----------|------------|\n| OC (General) | 31% |\n| BC | 26.5% |\n| BCM | 3.5% |\n| MBC/DNC | 20% |\n| SC | 18% |\n| ST | 1% |\n| Govt School 7.5% | Within each category |\n\n**Colleges in TN:**\n- Govt Medical Colleges: 36+\n- Self-Finance: 20+\n- Deemed Universities: 15+\n\n**Fees:**\n- Govt College: ~₹15,000/year\n- Self-Finance: ₹5-15 lakh/year\n- Deemed: ₹10-25 lakh/year\n\n**Important Dates:**\nCounselling usually starts July-August after results.",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP004_TG",
+      "instruction": "NEET Tamil Medium-la ezhudhalamaa? Translation problem irukkumaa?",
+      "current_output": "**NEET Tamil Medium:**\n\n**Yes, Tamil-la ezhudhalaam!**\n\n**Paper:** Bilingual - Tamil + English both printed\n\n**Translation Tips:**\n1. NCERT Tamil version read\n2. English terms-um therinjirukanum (Scientific names, formulas)\n3. Both versions study\n4. Mock tests Tamil-la practice\n\n**Exam Day:**\n- Question confusing? Check English version\n- Scientific terms same in both\n\n**Past Issues:**\n- Some translation errors reported\n- NTA improved now\n\n**Success:** Many Tamil medium students cleared!\n7.5% reservation for Govt school students helps.\n\n**Language is NOT a barrier!**",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO018_TG",
+      "instruction": "First Generation Graduate-ku enna special benefits?",
+      "current_output": "**First Generation Graduate Benefits:**\n\n**Definition:** Both parents not degree holders\n\n**1. CM Higher Education Scheme:**\n- Free tuition\n- Free laptop\n- ₹1,000/month stipend\n- Income < ₹2.5 lakh\n\n**2. College Fees:** Govt FREE, Aided minimal\n\n**3. Priority:**\n- Higher scholarship\n- Hostel priority\n- Free coaching priority\n\n**4. Book Bank:** Free textbooks\n\n**5. Free Laptop:** UG first year\n\n**Proof:** Parents' education declaration + Affidavit\n\n**Documents:** Parents Aadhaar, Self-declaration, Income certificate\n\n**Apply:** During admission + tneservices.tn.gov.in\n\n**Important:** Declare during admission!",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA005_TM",
+      "instruction": "Women-க்கு special ITI courses உள்ளதா?",
+      "current_output": "ஆம், Women ITI-கள் உள்ளன. Special trades: 1) Dress Making 2) Embroidery & Needle Work 3) Hair & Skin Care 4) Stenography 5) Desktop Publishing 6) Data Entry Operator 7) Secretarial Practice. Chennai, Coimbatore, Madurai-ல் exclusive Women ITIs. Regular ITI-லும் co-ed batches உள்ளன. Hostel facility free. Employment: Garment industry, salons, corporate offices.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP006_TG",
+      "instruction": "Aviation/Pilot training enge padippathu? Cost evvalavu?",
+      "current_output": "Options: 1) Commercial Pilot License (CPL) - Flying schools 2) B.Sc Aviation 3) Air hostess/Cabin crew training. CPL institutes: Madras Flying Club, Rajiv Gandhi Aviation Academy. CPL cost: ₹25-40 lakh (high investment). Duration: 18 months - 2 years. Alternative: IAF through AFCAT/NDA (free training). Cabin crew: 6 months course, ₹1-2 lakh. Jobs with airlines after training.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_015_TG",
+      "instruction": "Family-la yaarum college ponadhilla. Ennaal handle panna mudiyumaa? Enna expect panrathu?",
+      "current_output": "Proud moment - You're breaking the barrier! Tips: 1) Seniors-a approach pannunga - guidance 2) College orientation attend pannunga 3) Professors approachable - doubt clear pannunga 4) First generation scholarship apply pannunga 5) Library, labs utilize pannunga 6) Peer groups join - study circle. Common challenges: Imposter syndrome normal, English medium adjustment, new environment. Support: College counsellor, senior mentor programs. You CAN do this!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA005_TG",
+      "instruction": "Women-ku special ITI courses ulladha?",
+      "current_output": "Aam, Women ITI-gal ullana. Special trades: 1) Dress Making 2) Embroidery & Needle Work 3) Hair & Skin Care 4) Stenography 5) Desktop Publishing 6) Data Entry Operator 7) Secretarial Practice. Chennai, Coimbatore, Madurai-la exclusive Women ITIs. Regular ITI-layum co-ed batches ullana. Hostel facility free. Employment: Garment industry, salons, corporate offices.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_019_TG",
+      "instruction": "Velaiku poren, aanaa degree complete pannala. Ippo padikka mudiyumaa?",
+      "current_output": "100% possible! Options: 1) IGNOU - most flexible, exams twice yearly 2) Tamil Nadu Open University (TNOU) - Tamil medium available 3) University of Madras Distance 4) Evening colleges in Chennai 5) Online degrees - recognized universities. Process: Work continues + study weekends + exams during leave. Duration: UG 3 years, PG 2 years. Benefits: Promotion eligibility, government job apply, self-satisfaction. Many working people complete degrees in 30s, 40s. Never too late!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM018_TG",
+      "instruction": "Myth or Fact: Myth: Coaching illaamal NEET/JEE crack panna impossible",
+      "current_output": "Fact: Fact: Self-study toppers exist every year! Free resources: YouTube (Physics Wallah, Unacademy), NPTEL, SWAYAM, Government free coaching. Key factors: Discipline, proper study plan, consistent practice. Coaching helps but not mandatory. Many poor students crack using library + free online resources. Your determination > coaching centre brand.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP007_TG",
+      "instruction": "Journalism/Mass Communication padikka sirantha college?",
+      "current_output": "Top colleges: 1) Asian College of Journalism Chennai 2) Loyola College MA Journalism 3) Stella Maris 4) Anna University Media Sciences 5) SRM Mass Comm. Courses: BA/B.Sc Mass Comm (3 years), PG Diploma (1 year), MA Journalism (2 years). Jobs: TV channels, Newspapers, Digital media, PR agencies, Advertising. Skills: Writing, communication, current affairs knowledge. Internships important.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM024_TG",
+      "instruction": "SSC CGL enna? Tamil Nadu students apply pannalaamaa?",
+      "current_output": "SSC CGL (Combined Graduate Level): Central Government Group B & C posts. Posts: Tax Inspector, Auditor, Assistant, SI, etc. Tamil Nadu students - Yes, apply possible! Posting: All India basis, TN postings available. Exam: Tier 1, 2, 3, 4. Syllabus: English, Maths, Reasoning, GK. Salary: ₹35,000-1,50,000. Age: 18-32 (varies by post). Apply: www.ssc.nic.in. Notification: Usually December. Very good career option.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH023_TG",
+      "instruction": "Online degree programs Tamil Nadu-la enge kidaikkum?",
+      "current_output": "UGC-approved online programs: 1) SWAYAM platform (free courses) 2) NPTEL (IIT courses) 3) Anna University online 4) Madras University online 5) Private universities (Amity, Manipal online). SWAYAM courses-ku credit transfer possible. MOOCs certificate-ku mathippu athigaritthulladhu. Coursera, edX courses-um payanpaduthalaam.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC001_TM",
+      "instruction": "College hostel-ல் முதல் முறை stay பண்றேன். என்ன எடுத்துக்கணும்?",
+      "current_output": "Essential items: 1) Bedding - mattress, pillow, blanket 2) Bucket, mug, toiletries 3) Clothes + hangers 4) Study materials, stationery 5) Lock for cupboard 6) Electric kettle (if allowed) 7) First aid basics 8) Important documents photocopies 9) Passport size photos 10) Emergency contact numbers. Don't bring: Costly items, too many clothes initially. Adjust first, buy locally if needed.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH043_TG",
+      "instruction": "Thervu bayam (exam fear) eppadi pokkuvathu?",
+      "current_output": "Tips: 1) Nalla thayaarippu = confidence - syllabus complete pannunga 2) Mock tests ezhudhi pazhagunga 3) Exam-ku mundhina naal light revision mattum 4) Deep breathing exercises 5) Positive self-talk 6) Proper sleep (7-8 hrs) 7) Light, healthy food 8) Hall ticket, pen ready-a vaiyunga. Severe anxiety irundhal school counsellor-a santhiyunga.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO008_TG",
+      "instruction": "10th Public Exam-ku eppadi prepare seyvadhu? Pass mark enna?",
+      "current_output": "**10th Public Exam Preparation:**\n\n**Pass Marks:** 35/100 each subject, 35% overall\n\n**Subjects:** Tamil, English, Maths, Science, Social\n\n**Strategy:**\n\n**6 Months Before:**\n- Complete syllabus\n- Identify important topics\n- Create formula lists\n\n**3 Months Before:**\n- Chapter revision\n- Previous 5 years papers\n- Model exams\n\n**1 Month Before:**\n- Quick revision\n- Daily formulas\n- Mock tests\n\n**Subject Tips:**\n- Tamil: Grammar, Poems\n- English: Grammar, Letter format\n- Maths: Daily practice\n- Science: Diagrams, Equations\n- Social: Maps, Dates\n\n**Free Resources:** Kalvi TV, DIKSHA App, YouTube",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO009_TM",
+      "instruction": "National Scholarship Portal (NSP) மூலம் எந்தெந்த scholarships கிடைக்கும்?",
+      "current_output": "NSP scholarships: 1) Pre-matric SC/ST/OBC 2) Post-matric SC/ST/OBC 3) MHRD Merit scholarship 4) PM scholarship for wards of defence personnel 5) Minority scholarships 6) Top class education scholarship. Apply: www.scholarships.gov.in. One portal for 100+ schemes. Documents: Aadhaar, bank account, income certificate, caste certificate, marks. Deadline: October-November usually.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH032_TG",
+      "instruction": "Engineering padithu velai kidaikkavillai, enna seivathu?",
+      "current_output": "Alternative options: 1) Skill upgrade - Online courses (Coursera, NPTEL) 2) GATE ezhudhi PSU/ME admission 3) MBA padithu management-ku switch 4) Government jobs - SSC JE, RRB JE 5) Startup/Freelancing 6) TNSDC free skill training 7) Entrepreneurship - PMEGP loan moolam own business. District Employment Exchange-la register pannunga.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

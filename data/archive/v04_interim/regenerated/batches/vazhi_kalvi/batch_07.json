@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 7,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "EXAM020_TG",
+      "instruction": "TNPSC free coaching enge kidaikkum?",
+      "current_output": "Free coaching centres: 1) Government Free Coaching - Chennai, Trichy, Madurai, Coimbatore (Apply through Employment Exchange) 2) BC/MBC Welfare Department coaching 3) Adi Dravidar Welfare (SC/ST) 4) District Collectorate coaching programs 5) IAS Academy free batches. Online free: TNPSC Shouters, Group Exam Tamil YouTube channels, Telegram groups. Selection: Merit + income based. Apply early - limited seats.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM003_TG",
+      "instruction": "Arrear/Supplementary exam eppadi clear aavadhu?",
+      "current_output": "Arrear clear strategy: 1) Previous failures reason analyze pannunga 2) Important chapters mattum focus - 60% weightage chapters 3) Previous year arrear question papers practice 4) Time: 1-2 months dedicated preparation 5) Easy questions first attempt 6) Passing marks aim: 35/100. Exam: October (10th), June (12th). Same syllabus, slightly easier paper. Private candidates also apply possible. Attempt limit illai.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM019_TG",
+      "instruction": "TNPSC Pothu Tamil eppadi padippathu?",
+      "current_output": "Pothu Tamil sections: 1) Ilakkanam (Grammar) - Ezhuthiyial, Solliyal, Porulathigaram 2) Ilakkiyam - Sangam to Modern literature 3) Tamil culture and heritage. Books: 6th-12th Tamil textbooks, TNPSC previous papers. High scoring: Grammar rules, author-work matching, literary periods. Daily practice: 50 questions. Ilakkanam: Vinaigal, Pechu vazhakku, Ezhuthuvazhi rules. Tamil literature: Thirukkural mandatory (1330 kurals meanings).",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_014_TM",
+      "instruction": "NEET-ல் seat கிடைக்கல, drop year எடுக்கலாமா? Waste ஆகுமா?",
+      "current_output": "Drop year = Strategic decision, not waste. When good idea: 1) Close to cutoff - improvement chances high 2) Strong determination 3) Clear preparation plan. When risky: 1) First attempt poor score by big margin 2) No structured plan 3) Family pressure only. Statistics: Many successful doctors took 2-3 attempts. Alternative: Join backup course (B.Sc) + prepare NEET simultaneously. Drop year plan: Join test series, daily 8-10 hours, monthly assessment. One year invested wisely = lifetime career.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP021_TG",
+      "instruction": "Agriculture padikkanum-pa, enna college nalladhu?",
+      "current_output": "TNAU (Tamil Nadu Agricultural University) best-pa. Coimbatore main campus, Thanjavur, Madurai-layum colleges irukku. Admission: 12th Biology marks basis counselling. Fees kammi - ₹5000-10000/year. Farmers pillaikku priority irukku. Scholarship, hostel free. Modern farming techniques learn pannalam. Own land irundha double benefit.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP005_TM",
+      "instruction": "Merchant Navy join ஆக என்ன படிக்கணும்?",
+      "current_output": "Courses: 1) B.Sc Nautical Science (3 years) - Deck Officer 2) Marine Engineering (4 years) - Engine room 3) GP Rating (6 months) - Entry level. Eligibility: 12th PCM 60%+, Medical fitness strict. Institutes: IMU Chennai, AMET Chennai, MERI. Admission: IMU CET entrance exam. Career: High salary (₹50,000 - ₹5 lakh/month with experience), World travel. Challenges: Months away from family.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP025_TM",
+      "instruction": "Cutoff marks quick guide",
+      "current_output": "NEET 2024 (approx): General OC 720-137, BC 136-107, MBC 136-107, SC/ST 136-107. JEE Main: 90+ percentile for NITs. TNEA: Top colleges 195+, average 180+, minimum 150+. TNPSC Group 4: 80+ marks out of 150 safe. Engineering cutoff = Maths + Physics + Chemistry (max 200).",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE024_TM",
+      "instruction": "Coaching centre-க்கு அனுப்பணுமா, self-study போதுமா?",
+      "current_output": "பையன்/பொண்ணோட learning style பாருங்க. Self-disciplined-ஆ இருந்தா self-study + online resources போதும். Otherwise coaching உதவும். Free government coaching (Naan Mudhalvan, TNPSC free coaching) try பண்ணுங்க முதல்ல.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO007_TG",
+      "instruction": "Meenavar (fishermen) family students-ku scholarship ulladha?",
+      "current_output": "Aam, Fisheries Department Scholarships: 1) Pre-matric - ₹500-1,500/year 2) Post-matric - ₹2,000-5,000/year 3) Professional courses - ₹10,000-30,000 4) Higher education abroad - ₹10 lakh. Eligibility: Fishermen community certificate, registered fisherman's child. Apply: www.fisheries.tn.gov.in. Special quota in Anna University marine courses.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP009_TG",
+      "instruction": "TNPSC endraal enna? Ennenna exams nadathuvanga?",
+      "current_output": "**TNPSC:**\n\n**What:** TN Government job exams\n\n**Major Exams:**\n\n1. **Group 1:** Deputy Collector, DSP - Degree - ₹56,100+\n2. **Group 2:** Sub-Registrar, Assistant - Degree - ₹35,400+\n3. **Group 2A:** Jr Assistant, Typist - Degree - ₹19,500+\n4. **Group 4:** Jr Assistant, VAO - 10th/12th - ₹19,500+\n5. **Group 3:** Technical posts - Diploma/Degree\n\n**Exam Pattern:**\n- Prelims: 200 marks (GS + Aptitude)\n- Mains: 300 marks (GS + Language)\n- Interview: 40 marks (Group 1)\n\n**Age:** General 21-32, BC/MBC +5, SC/ST no limit\n\n**Apply:** tnpsc.gov.in",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP012_TG",
+      "instruction": "Trichy-la best medical colleges evai?",
+      "current_output": "Medical colleges Trichy region: 1) KAPV Government Medical College Trichy - MBBS, affordable 2) Thanjavur Medical College - Oldest in region 3) Dhanalakshmi Srinivasan Medical College - Private 4) Nursing colleges: Government + private multiple. MBBS admission: NEET + state counselling. Govt college fees: ₹13,500/year. Bond service required. Allied health courses also available.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_019_TM",
+      "instruction": "வேலைக்கு போறேன், ஆனா degree complete பண்ணல. இப்போ படிக்க முடியுமா?",
+      "current_output": "100% possible! Options: 1) IGNOU - most flexible, exams twice yearly 2) Tamil Nadu Open University (TNOU) - Tamil medium available 3) University of Madras Distance 4) Evening colleges in Chennai 5) Online degrees - recognized universities. Process: Work continues + study weekends + exams during leave. Duration: UG 3 years, PG 2 years. Benefits: Promotion eligibility, government job apply, self-satisfaction. Many working people complete degrees in 30s, 40s. Never too late!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO026_TM",
+      "instruction": "Scholarship-க்கு தேவையான documents என்னென்ன?",
+      "current_output": "Standard documents: 1) Aadhaar card 2) Bank passbook (student name) 3) Income certificate (latest) 4) Caste/Community certificate 5) Bonafide certificate from institution 6) Previous year marks card 7) Passport size photo 8) Fee receipt. Special cases: Disability certificate, EWS certificate, BPL card, domicile certificate. Tip: Keep original + 3 photocopies + scanned PDF ready.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_006_TM",
+      "instruction": "8th class-ல் group select பண்ணணுமா? Science/Commerce எப்போ choose பண்றது?",
+      "current_output": "Group selection: 10th வரை common syllabus. 11th-ல் group choose. Early awareness: 8th/9th-ல் interests identify பண்ணுங்கள். Science-க்கு: Maths, Science strong இருக்கணும். Commerce-க்கு: Accounts, Business interest. Arts-க்கு: Language, Social studies interest. Advice: 10th முடிக்கும் வரை எல்லா subjects-ஐயும் properly படியுங்கள். Final decision 10th result வந்த பிறகு.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP021_TM",
+      "instruction": "Agriculture padikkanum, endha college nalladhu?",
+      "current_output": "TNAU (Tamil Nadu Agricultural University) best-pa. Coimbatore main campus, Thanjavur, Madurai-layum colleges irukku. Admission: 12th Biology marks basis counselling. Fees kammi - ₹5000-10000/year. Farmers pillaikku priority irukku. Scholarship, hostel free. Modern farming techniques learn pannalam. Own land irundha double benefit.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH024_TM",
+      "instruction": "வெளிநாடு படிப்புக்கு என்னென்ன தேர்வுகள் எழுத வேண்டும்?",
+      "current_output": "முக்கிய தேர்வுகள்: 1) IELTS/TOEFL - English proficiency 2) GRE - MS/PhD (USA, Canada) 3) GMAT - MBA 4) SAT - UG (USA) 5) PTE - Australia, UK. IELTS: 6.5+ score தேவை பெரும்பாலும். GRE: 300+ நல்ல score. Chennai-ல் பல coaching centers உள்ளன. British Council, IDP IELTS நடத்துகின்றன.",
+      "category": "higher_studies",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SCHO025_TG",
+      "instruction": "Scholarship apply seiyum bodhu common mistakes enna?",
+      "current_output": "Avoid pannunga: 1) Deadline miss panrathu - calendar-la note podunga 2) Incomplete application - ella fields nirappunga 3) Wrong documents - size, format check 4) Bank account mismatch with Aadhaar 5) Income certificate expired 6) Multiple applications same scheme 7) Fake certificates (blacklist aaveenga). Tips: Apply early, keep scanned copies ready, check status regularly.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM026_TM",
+      "instruction": "Concentration improve பண்ண என்ன செய்யணும்?",
+      "current_output": "Concentration tips: 1) Pomodoro technique - 25 min study, 5 min break 2) Mobile silent/away 3) Study table clean, good lighting 4) One subject at a time 5) Break tasks into smaller parts 6) Reward yourself after targets 7) Sleep 7-8 hours 8) Exercise daily 9) Meditation 10 minutes 10) Healthy food - avoid heavy meals. Environment: Same place, same time daily. Brain trains itself. Start with 30 min, increase gradually.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC006_TG",
+      "instruction": "Internal assessment marks improve panrathu eppadi?",
+      "current_output": "Internal marks strategy: 1) Attendance - 75% minimum, aim 90% 2) Assignment submit on time - presentation matters 3) Class participation - ask questions, answer 4) Lab records neat and complete 5) Internal tests - prepare like semester 6) Project work - original effort show 7) Behavior with faculty - respectful interaction. Impact: 20-25% of total marks. Easy marks if consistent throughout semester.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO021_TG",
+      "instruction": "Foundation for Excellence (FFE) scholarship enna?",
+      "current_output": "FFE Scholarship: Engineering and Medical students-ku. Amount: ₹20,000-60,000/year. Eligibility: JEE/NEET cleared, family income ₹6 lakh kizha. Selection: Application review + verification. Benefits: Full tuition support + mentoring. Apply: www.ffe.org. Tamil Nadu-la 1000+ students benefitted. Deadline: Usually July-August.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP011_TG",
+      "instruction": "TNPSC-ku Free Coaching enga kidaikkum?",
+      "current_output": "**TNPSC Free Coaching:**\n\n**Government:**\n1. **TNSF:** Residential, SC/ST/MBC - tnsf.org.in\n2. **Dr. Ambedkar:** SC/ST - adwelfare.tn.gov.in\n3. **BC/MBC Coaching:** bcmbcmw.tn.gov.in\n4. **Minorities:** tamilnaduminoritywelfare.org\n\n**Universities:** Anna, Madras, Bharathiar - For students\n\n**District Collector:** Free weekend classes in all districts\n\n**Online Free:**\n- tnpsc.gov.in official materials\n- TNSF YouTube\n- Target TNPSC YouTube\n\n**Documents:**\n- Community Certificate\n- Income Certificate (< ₹2-3 lakh)\n- Education certificates\n- Aadhaar",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP002_TG",
+      "instruction": "NEET Exam Pattern enna? Marks eppadi calculate aagum?",
+      "current_output": "**NEET Exam Pattern:**\n\n**Basics:**\n- Offline exam, 3 hrs 20 min\n- 200 questions (180 to attempt)\n- 720 marks total\n\n**Subjects:** Physics, Chemistry, Botany, Zoology - 45 each\n\n**Marking:**\n- Correct: +4\n- Wrong: -1 (Negative!)\n- Unattempted: 0\n\n**Cut-off (Approx):**\n- General top colleges: 600+\n- Govt Medical General: 550+\n- SC: 450+, ST: 400+\n\n**Tips:**\n- No random guessing\n- Section B - choose wisely\n- Time management key",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH019_TG",
+      "instruction": "Architecture padippu (B.Arch) eppadi seruvathu?",
+      "current_output": "NATA exam compulsory. Eligibility: +2 Maths 50%. Duration: 5 years. Chennai Anna University, SAP, SRM nalla colleges. Govt college fee: ₹30,000-50,000/year. JEE Paper 2 moolamum admission kidaikkum. Creative field with good scope.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_020_TG",
+      "instruction": "10 varushamaa same job panren, career change pannanum, new skill learn panna enge povadhu?",
+      "current_output": "Career change options: 1) TNSDC free courses - 100+ skills 2) NSDC skill centers - PMKVY scheme 3) Online: Coursera, edX certificates (many free) 4) Coding: freeCodeCamp, Codecademy 5) Digital marketing: Google certifications free 6) MBA distance - career shift. Trending skills: Data Science, Digital Marketing, Cloud computing, Python. Strategy: Learn while working → Build portfolio → Apply new roles OR Entrepreneurship. Age no barrier - many successful career changes at 35-45.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM021_TG",
+      "instruction": "Bank exam-ku prepare aavadhu eppadi? SBI/IBPS difference?",
+      "current_output": "Banking exams: IBPS - Public sector banks (PNB, Canara, etc). SBI - Separate recruitment. Pattern similar: Prelims + Mains + Interview. Sections: English, Reasoning, Quantitative, General Awareness, Computer. Preparation: 1) RS Aggarwal for Maths/Reasoning 2) Word Power Made Easy for English 3) Banking Awareness - Arihant 4) Daily mock tests. Difference: SBI slightly tougher, more vacancies. Start with IBPS, apply SBI also.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

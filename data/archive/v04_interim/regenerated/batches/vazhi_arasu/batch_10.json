@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 10,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TPR006",
+      "instruction": "PM-KISAN registration eppadi seyvadhu? Status eppadi check pannuvadhu?",
+      "current_output": "Registration:\n\nMethod 1 - Online (Self):\n1. Go to: pmkisan.gov.in\n2. Click: 'New Farmer Registration'\n3. Select: State → Tamil Nadu\n4. Enter: Aadhaar Number\n5. Fill: Personal, Bank, Land details\n6. Upload: Land records (Patta/Chitta)\n7. Submit\n\nMethod 2 - CSC / Agriculture Office:\n- Documents kondu ponaa avanga seivanga\n- ₹0 charge (free service)\n\nDocuments:\n- Aadhaar Card\n- Bank Passbook (first page)\n- Land Records (Patta, Chitta, Adangal)\n\nStatus Check:\n1. pmkisan.gov.in → 'Beneficiary Status'\n2. Enter: Aadhaar / Mobile / Account Number\n3. Check: Registration status, Payment history\n\nPayment schedule: ₹2,000 x 3 (April-July, Aug-Nov, Dec-March)\n\nReject reasons: Income Tax payer, Govt employee, Wrong land records, Bank mismatch",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "REF002",
+      "instruction": "Important government websites enna?",
+      "current_output": "All e-Services: tneservices.tn.gov.in, Property Registration: tnreginet.gov.in, Ration Card: tnpds.gov.in, Vehicle/DL: parivahan.gov.in, Pension: pensionschemes.tn.gov.in, Police: eservices.tnpolice.gov.in, Employment: tnvelaivaaippu.gov.in, Electricity: nsc.tnebnet.org, Land Records: eservices.tn.gov.in/landrecords",
+      "category": "reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNW002",
+      "instruction": "Kalaignar Magalir Urimai Thittam (₹1000 scheme) endraal enna?",
+      "current_output": "₹1,000/month for TN women household heads. Eligibility: Women 21-60 years, household head, annual income below ₹2.5 lakh, Rice card holder. Exclusions: Govt job, Income tax payer, 4-wheeler owner, AC owner. Apply: Taluk office/Village panchayat. Documents: Aadhaar, Ration card, Family photo, Bank account. DBT: Monthly to bank account.",
+      "category": "tn_women_welfare",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA038",
+      "instruction": "PMJJBY/PMSBY Insurance என்றால் என்ன?",
+      "current_output": "PMJJBY: Life insurance ₹2 lakh for ₹436/year (18-55 age). PMSBY: Accident insurance ₹2 lakh for just ₹20/year (18-70 age). Both together: ₹456/year for ₹4 lakh coverage! Enroll through bank with savings account. Auto-debit on June 1.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR012",
+      "instruction": "Paramparagat Krishi Vikas Yojana (PKVY) endraal enna?",
+      "current_output": "Organic Farming promotion scheme. Cluster: 50+ farmers together on 50 acres. Support: ₹50,000/hectare (over 3 years) - Organic inputs, certification, marketing. PGS Certification: Participatory Guarantee System - free organic certification. Benefit: Premium price for organic produce, export opportunity, soil health improvement. Join: Agriculture Department, Krishi Vigyan Kendra. Training: Organic farming techniques, composting, bio-pesticides.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI015",
+      "instruction": "Government Schemes-க்கு apply செய்யும்போது பொதுவான தவறுகள் என்ன?",
+      "current_output": "Documentation Errors:\n1. ❌ Expired Income Certificate submit → ✅ 6 months-க்குள் issue செய்யப்பட்டது தேவை\n2. ❌ Aadhaar-Bank mismatch → ✅ Name, DOB exact match இருக்கணும், DBT fail ஆகும்\n3. ❌ Wrong bank account (inactive/closed) → ✅ Active account with correct IFSC\n4. ❌ Wrong photo size/format → ✅ Passport size, recent, white background\n\nEligibility Mistakes:\n5. ❌ Income limit exceed ஆனாலும் apply → ✅ Rejection + blacklist possible\n6. ❌ Same benefit multiple scheme-ல் claim → ✅ DBT catch பண்ணும், recovery + penalty\n7. ❌ Family member already availed mention செய்யாமல் → ✅ Declaration-ல் சொல்லணும்\n\nTimeline Mistakes:\n8. ❌ Deadline miss → ✅ Academic scholarships especially strict\n9. ❌ Renewal miss → ✅ Many schemes need yearly renewal\n10. ❌ Status check செய்யாமல் wait → ✅ Regular check, deficiency correct பண்ணலாம்",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AG009",
+      "instruction": "விதை வாங்க subsidy கிடைக்குமா?",
+      "current_output": "Certified seeds-க்கு 50% subsidy உண்டு. Agriculture department depot-ல் subsidized rate-ல் விதை வாங்கலாம். Paddy, millets, pulses-க்கு subsidy available.",
+      "category": "agriculture_schemes",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "RUR009T",
+      "instruction": "Gramathula engalukku sontha veedu illai. PMAY-Gramin moola veedu katta udhavi eppadi peruvadhu?",
+      "current_output": "**PMAY-Gramin (Rural Housing):**\n\n**Eligibility:**\n- Houseless as per SECC 2011 data\n- Kutcha house / Homeless\n- Priority: SC/ST, Minorities, BPL\n\n**Assistance:**\n- Plain areas: ₹1,20,000\n- Hilly areas: ₹1,30,000\n- MGNREGA labor wages: 90/95 days\n- Toilet: ₹12,000\n- **Total: ₹1.5 lakh+**\n\n**Process:**\n1. SECC data based auto-selection\n2. Gram Sabha approval\n3. If not in list: Appeal at Gram Panchayat/BDO\n\n**Check Eligibility:**\n- pmayg.nic.in → Search your name\n\n**Payment:** 3 installments based on construction stage\n\n**Additional:** MGNREGA wages, Free LPG, Free electricity, Toilet",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONV007",
+      "instruction": "[Multi-turn dialogue] Marriage Registration After Hindu Wedding - Full conversation guide",
+      "current_output": "User: Last month wedding aachu. Marriage certificate vaanganum. Eppadi?\n\nAssistant: Congrats! Marriage registration important - passport, visa, bank, property ellathukum use aagum.\n\n**Quick Questions:**\n1. Hindu marriage aa? Other religion?\n2. Wedding enga nadandhuchu - TN or other state?\n3. Bride & Groom - both TN residents aa?\n\nIndha details sollunga, exact process sollren.\n\nUser: Hindu marriage. Chennai-la nadandhuchu. Both TN residents.\n\nAssistant: Perfect! Hindu Marriage Act-la register pannalam:\n\n**Two Options:**\n\n**Option 1: Compulsory Registration (TN Rules)**\n- Within 1 year of marriage\n- No delay fee\n- Easier process\n\n**Option 2: After 1 year**\n- Additional affidavit\n- Newspaper notice\n- More documents\n\nUnga wedding evvalavu days aachu?\n\nUser: 3 weeks aachu. Online apply pannalaamaa?\n\nAssistant: **Yes! Online Apply Available:**\n\n**Step 1: tnreginet.gov.in**\n1. Go to tnreginet.gov.in\n2. Register / Login\n3. Select: Marriage Registration\n4. Choose: Hindu Marriage Act\n5. Fill Form:\n   - Husband details\n   - Wife details\n   - Marriage details (date, place, priest)\n6. Upload documents\n7. Pay fee online: ₹100-500\n8. Book SRO appointment\n\n**Step 2: Gather Documents**\n\n**Both parties:**\n- Age Proof (Aadhaar / DOB Certificate / SSLC)\n- Address Proof\n- Passport size photos (4 each)\n\n**Marriage Proof (Any 2):**\n- Wedding Invitation Card\n- Wedding Photos (with clear faces)\n- Priest's Certificate\n- Hall booking receipt\n\n**Witnesses:**\n- 2 witnesses with Aadhaar copy\n- (Usually parents or relatives)\n\n**Important:** \n- Husband age: 21+\n- Wife age: 18+\n- Both should be unmarried before this wedding\n\nDocuments ready aa?\n\nUser: Documents ready. SRO la enna nadakkum? Eppo poganum?\n\nAssistant: **SRO Visit Process:**\n\n**Who Should Come:**\n1. Husband (with all original documents)\n2. Wife (with all original documents)\n3. 2 Witnesses (with Aadhaar original)\n\n**At SRO:**\n\n**Step 1: Token/Appointment**\n- Show online booking\n- Get token number\n\n**Step 2: Document Verification**\n- Officer checks all documents\n- Verifies ages\n- Checks photos\n\n**Step 3: Signing**\n- Husband signs\n- Wife signs\n- Witnesses sign\n- Officer signs\n\n**Step 4: Biometric**\n- All 4 persons - fingerprint & photo\n\n**Step 5: Certificate**\n- Marriage Certificate issued\n- Same day!\n- Certified copy: Additional ₹50\n\n**Time:** 1-2 hours (depending on crowd)\n\n**Best Time to Go:**\n- Reach by 10:30 AM\n- Avoid month-end\n- Avoid Fridays (rush)\n\n**After Certificate:**\n- Wife can change name in documents\n- Aadhaar, PAN, Passport update possible\n\nSRO appointment book panniteengala?\n\nUser: Book pannitten. Oru doubt - wife name change pannumaa documents-la?\n\nAssistant: **Wife's Name Change - Optional!**\n\n**Two Options:**\n\n**Option 1: No Name Change**\n- Perfectly legal\n- Many women keep maiden name\n- Marriage certificate shows maiden name\n- No issues with any document\n\n**Option 2: Name Change**\n- Add husband's surname\n- Or completely change to husband's family name\n- Requires updating all documents\n\n**If Wife Wants to Change:**\n\n**Documents to Update:**\n1. **Aadhaar** - Aadhaar Seva Kendra (₹50)\n2. **PAN** - onlineservices.nsdl.com (₹107)\n3. **Passport** - passportindia.gov.in (₹1,500)\n4. **Voter ID** - voters.eci.gov.in (Free)\n5. **Bank Account** - Bank branch (Free)\n6. **Driving License** - parivahan.gov.in (₹200-500)\n\n**Order of Update:**\n1. Aadhaar first (base document)\n2. PAN second (link with Aadhaar)\n3. Then others\n\n**Documents Needed for Each:**\n- Marriage Certificate\n- Old document\n- Husband's ID proof (some places)\n\n**Time:** 2-4 weeks for all updates\n\nWife name change panna plan irukka?\n\nUser: Wife name add pannanum. Aadhaar-la eppadi?\n\nAssistant: **Wife Aadhaar Name Change:**\n\n**Can't do fully online - Need to visit Aadhaar Seva Kendra**\n\n**Step 1: Book Appointment (Optional but better)**\n- appointments.uidai.gov.in\n- Select: Update Aadhaar\n- Choose nearby center\n\n**Step 2: Documents to Carry**\n- **Original Aadhaar Card** (wife's)\n- **Marriage Certificate** (Original + Copy)\n- **Husband's Aadhaar** (Copy)\n- **Passport Photo** (if photo update needed)\n\n**Step 3: At Aadhaar Center**\n1. Fill Update form\n2. Select: Name Change + Address Change (if needed)\n3. Submit documents\n4. Biometric verification\n5. Pay: ₹50\n6. Get acknowledgment slip\n\n**Step 4: New Aadhaar**\n- URN (Update Request Number) on slip\n- Track: uidai.gov.in\n- New Aadhaar by post: 2-3 weeks\n- Download e-Aadhaar: Same time\n\n**Name Format Options:**\n- Add surname: \"Priya Kumar\" → \"Priya Ravi Kumar\"\n- Full change: \"Priya Kumar\" → \"Priya Ravi\"\n- Both acceptable\n\n**Important:**\n- New Aadhaar same number\n- Photo can also be updated (recommended)\n\n**After Aadhaar:**\n- PAN update becomes easy (Aadhaar OTP)\n- Bank update: Just show new Aadhaar\n\nAadhaar center nearby irukka? Appointment book pannalaamaa?\n\nUser: Okay. PAN update automatic aagumaa Aadhaar link irundhaa?\n\nAssistant: **Good Question! No - Not Automatic**\n\n**PAN Won't Auto-Update!**\n- PAN-Aadhaar link irundhalum name different irukkalam\n- But mismatch irundha problems varum\n- So update is MUST\n\n**PAN Name Change Process:**\n\n**After Aadhaar Updated:**\n\n**Step 1: Online Apply**\n1. onlineservices.nsdl.com\n2. \"Changes or Correction in PAN Data\"\n3. Select: Change in Name\n4. Enter: Old PAN details\n5. Enter: New name (as per new Aadhaar)\n6. Upload: New Aadhaar + Marriage Certificate\n7. Pay: ₹107\n8. Submit\n\n**Step 2: Verification**\n- Aadhaar OTP verification\n- Or: Sign & send documents by post\n\n**Step 3: New PAN Card**\n- Same PAN number (number doesn't change)\n- New card with new name\n- Time: 15-20 days\n\n**PAN-Aadhaar Re-linking:**\n- After name change, re-verify link\n- eportal.incometax.gov.in → Link Aadhaar Status\n\n**Mismatch Problem:**\nIf names don't match:\n- ITR filing issues\n- Bank KYC problems\n- Mutual Fund issues\n\n**Tip:** Keep both names similar across documents!\n\nShall I give complete name change checklist?\n\nUser: Yes please, complete checklist tharunga\n\nAssistant: **WIFE'S NAME CHANGE - COMPLETE CHECKLIST:**\n\n**ORDER OF UPDATE (Follow this sequence!):**\n\n**STEP 1: Marriage Certificate**\n- [ ] tnreginet.gov.in - Apply\n- [ ] SRO Visit - Both parties + 2 witnesses\n- [ ] Get certified copies (2-3)\n- **Time:** 1 day\n- **Cost:** ₹100-500\n\n**STEP 2: Aadhaar Card (Do First!)**\n- [ ] Book appointment: appointments.uidai.gov.in\n- [ ] Visit Aadhaar Seva Kendra\n- [ ] Documents: Old Aadhaar + Marriage Certificate + Husband Aadhaar copy\n- [ ] Pay ₹50\n- [ ] Download e-Aadhaar when ready\n- **Time:** 2-3 weeks\n- **Cost:** ₹50\n\n**STEP 3: PAN Card**\n- [ ] onlineservices.nsdl.com\n- [ ] Upload: New Aadhaar + Marriage Certificate\n- [ ] Pay ₹107\n- [ ] Verify PAN-Aadhaar link after\n- **Time:** 15-20 days\n- **Cost:** ₹107\n\n**STEP 4: Bank Account**\n- [ ] Visit branch\n- [ ] Documents: New Aadhaar + PAN + Marriage Certificate\n- [ ] Update: Name, Address, Nominee\n- [ ] Get new cheque book, debit card\n- **Time:** 7 days\n- **Cost:** Free\n\n**STEP 5: Voter ID**\n- [ ] voters.eci.gov.in → Form 8\n- [ ] Upload: New Aadhaar + Marriage Certificate\n- [ ] BLO verification\n- [ ] New EPIC issued\n- **Time:** 2-4 weeks\n- **Cost:** Free\n\n**STEP 6: Driving License (if applicable)**\n- [ ] parivahan.gov.in\n- [ ] Upload: New Aadhaar + Marriage Certificate\n- [ ] Pay ₹200-500\n- [ ] RTO visit for biometric\n- **Time:** 7-15 days\n- **Cost:** ₹200-500\n\n**STEP 7: Passport (if needed)**\n- [ ] passportindia.gov.in\n- [ ] Fresh passport or Re-issue\n- [ ] Documents: All updated + Marriage Certificate\n- [ ] PSK visit\n- [ ] Police verification\n- **Time:** 2-4 weeks\n- **Cost:** ₹1,500\n\n**OTHER UPDATES:**\n- [ ] Insurance policies - Nominee + Name\n- [ ] EPF (if employed) - Nomination\n- [ ] LIC policies\n- [ ] Demat account\n- [ ] Property (if joint owner)\n\n**TOTAL ESTIMATED:**\n- Time: 4-6 weeks for main documents\n- Cost: ~₹2,500-3,000\n\n**TIPS:**\n1. Keep 5 copies of Marriage Certificate\n2. Scan all documents - digital copies handy\n3. Update Aadhaar FIRST - base for everything\n4. Inform employer HR for records\n\n**QUICK REFERENCE:**\n| Document | Where | Time | Cost |\n|----------|-------|------|------|\n| Marriage Cert | SRO | 1 day | ₹500 |\n| Aadhaar | ASK | 2-3 weeks | ₹50 |\n| PAN | NSDL | 15-20 days | ₹107 |\n| Bank | Branch | 7 days | Free |\n| Voter ID | Online | 2-4 weeks | Free |\n| DL | RTO | 7-15 days | ₹500 |\n| Passport | PSK | 2-4 weeks | ₹1,500 |\n\nAll the best! Happy married life! 🎉",
+      "category": "conversational_dialogues",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNW006",
+      "instruction": "Marriage Assistance Scheme endraal enna? Evvalavu kidaikkum?",
+      "current_output": "Assistance for marriage of poor women. Amount: ₹25,000 (BC/MBC) to ₹50,000 (SC/ST) + 1 sovereign (8g) gold. Eligibility: Annual income below ₹72,000, bride 18+ years, extra ₹25,000 for degree holders. Apply: Taluk/DSW office, 40 days before marriage. Documents: Income certificate, Community certificate, Education certificate, Marriage invitation. Convert: Cash option instead of gold available.",
+      "category": "tn_women_welfare",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNREF001",
+      "instruction": "TN அரசு websites என்னென்ன?",
+      "current_output": "முக்கிய TN Government Portals: tn.gov.in (TN Govt main), tnpds.gov.in (Ration/PDS), cmchistn.com (Health Insurance), tnvelaivaaippu.gov.in (Employment), bcmbcmw.tn.gov.in (BC Welfare), adwb.tn.gov.in (SC/ST Welfare), tnhb.tn.gov.in (Housing Board), tangedco.gov.in (Electricity), tnreginet.gov.in (Registration), serviceonline.gov.in (e-Sevai). Mobile: UZHAVAN (Farmers), TNeGA (e-Governance).",
+      "category": "tn_reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA017",
+      "instruction": "Encumbrance Certificate (EC) எங்கே பெறுவது?",
+      "current_output": "Online at tnreginet.gov.in (records from 1987 onwards) - instant download. Offline at Sub-Registrar Office - 3-5 days. Fee: ₹15 per year. Essential for property verification - shows if property has any legal dues or mortgages.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB009T",
+      "instruction": "Veedu vadakaikku kodukka porein. Rent Agreement register seiyya venduma? Online seyyalamaa?",
+      "current_output": "**Rent Agreement Registration:**\n\n**Mandatory?**\n- Above 11 months: Registration mandatory\n- Up to 11 months: Notarized enough (but register recommended)\n\n**Why Register?**\n- Legal validity, Court proof\n- Easier tenant eviction\n- Address proof for Passport/Bank\n\n**Online Process:**\n1. tnreginet.gov.in\n2. E-stamping → Rent Agreement\n3. Fill details (Landlord, Tenant, Property, Rent, Duration)\n4. Pay stamp duty\n5. Download e-stamp\n6. Book SRO slot\n7. Visit with parties + witnesses\n\n**Costs:**\n- Stamp Duty: 1% of (Annual Rent + Advance)\n- Registration: 1%\n\n**Example:** ₹15,000/month rent → ~₹4,200 total\n\n**Documents:** Property document, Aadhaar, Photos, EB Bill, Tax receipt\n\n**SRO Visit:** Both parties + 2 witnesses + Biometric",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CMI011",
+      "instruction": "Banking மற்றும் Financial matters-ல் பொதுவான தவறுகள் என்ன?",
+      "current_output": "Bank Account:\n❌ Jan Dhan-ல் minimum balance வேண்டும் → ✅ Zero balance account\n❌ Nomination = Legal Heir → ✅ Nominee is trustee, not owner\n❌ Joint Account holder-க்கு automatic rights → ✅ Either or Survivor clause check பண்ணுங்க\n\nInsurance:\n❌ PMJJBY/PMSBY auto-renew → ✅ Every year June 1-ல் renew, balance இருக்கணும்\n❌ PMJJBY-ல் Suicide covered → ✅ முதல் year covered அல்ல\n❌ PMSBY எல்லா accident-க்கும் → ✅ Permanent disability மட்டும்\n\nTax:\n❌ Senior Citizens-க்கு tax இல்லை → ✅ ₹3 lakh வரை மட்டும் exempt (60-80)\n❌ Agricultural income fully exempt → ✅ State tax apply ஆகலாம்\n❌ PPF interest taxable → ✅ Fully exempt (EEE status)\n\nLoan:\n❌ Education loan-க்கு collateral கட்டாயம் → ✅ ₹7.5 lakh வரை collateral-free\n❌ KCC interest 4% fixed → ✅ Timely repayment-க்கு மட்டும்",
+      "category": "common_misconceptions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNA005",
+      "instruction": "TN-ல் விதை/உரம் மானியம் எப்படி பெறுவது?",
+      "current_output": "விவசாயிகளுக்கு subsidized விதை/உரம். Seed Subsidy: 50% discount on certified seeds, Agriculture dept office-ல் வாங்கலாம். Fertilizer Subsidy: Urea, DAP, MOP subsidized விலையில். UZHAVAN Card: Subsidy track, eligibility check. Distribution: Co-operative societies, Agri office. Documents: Patta, Farmer ID, Aadhaar. Season: Sowing season-க்கு முன் announce.",
+      "category": "tn_agriculture",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "TNA004",
+      "instruction": "UZHAVAN App endraal enna? Enna services ulladhu?",
+      "current_output": "Single app for TN farmers. Services: Crop insurance apply, KCC loan status, Subsidy schemes apply, Weather updates, Market prices (UZHAVAR SANDHAI rates), Expert advice. Download: Play Store - UZHAVAN. Registration: Aadhaar + farmer ID. Alerts: SMS/notification for govt schemes, weather warning. Offline: Basic info works offline. Language: Tamil + English.",
+      "category": "tn_agriculture",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB006T",
+      "instruction": "Naan Online-la Products vikkiren. GST Registration eppo kattaayam? Eppadi register seyvadhu?",
+      "current_output": "**GST for E-commerce:**\n\n**When Mandatory?**\n- E-commerce seller: ₹0 threshold - Need GST before first sale!\n- Regular goods: ₹40 lakh\n- Services: ₹20 lakh\n\n**Registration Process:**\n\n**Step 1:** gst.gov.in → New Registration → PAN/Mobile/Email verify → Get TRN\n\n**Step 2:** Fill Part B - Business details, Address, Bank account\n\n**Step 3: Documents**\n- PAN, Aadhaar\n- Address proof (Own: EB Bill / Rent: Agreement + NOC)\n- Bank Statement / Cheque\n- Photo\n\n**Step 4:** Aadhaar OTP verification\n\n**Step 5:** GSTIN in 3-7 days (FREE)\n\n**After Registration:**\n- Issue GST invoices\n- File monthly returns\n- Pay by 20th of next month\n\n**Warning:** No registration = 10% penalty or ₹10,000",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR004T",
+      "instruction": "Naan gramathula pengal Self Help Group (SHG) aarambikka virumburen. Eppadi register seyvadhu?",
+      "current_output": "**Starting SHG - Step by Step:**\n\n**Step 1: Form Group**\n- 10-20 women (same village/area)\n- Like-minded people\n- Age: 18-60\n\n**Step 2: Start Meetings**\n- Weekly meeting\n- Small savings (₹50-100/week)\n- Maintain minutes book\n\n**Step 3: Open Bank Account**\n- Show 3-month meeting records\n- Joint account (President + Secretary)\n\n**Step 4: Mahalir Thittam Registration**\n- Where: Block Development Office\n- TNSRLM\n- Website: tnrd.gov.in\n\n**Benefits:**\n1. Revolving Fund: ₹15,000 (grant)\n2. CIF: ₹50,000-1,00,000\n3. Bank Loan: Up to ₹10 lakh\n4. Free training\n5. Market access",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNEM003",
+      "instruction": "NEEDS (New Entrepreneur-cum-Enterprise Development Scheme) என்றால் என்ன?",
+      "current_output": "இளைஞர்களுக்கு சுய தொழில் loan. Amount: ₹5 லட்சம் வரை (Project cost-ல் 25% subsidy). தகுதி: 21-35 வயது (SC/ST/Women 45 வரை), 8th pass, TN resident. Sectors: Manufacturing, Service, Trading. Subsidy: General 25%, SC/ST/Women 30%. Training: Free EDP training mandatory. Apply: DIC (District Industries Centre). Documents: Project report, Education proof, Community certificate, Bank no-objection. Repayment: 3-7 years.",
+      "category": "tn_employment",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNHO002",
+      "instruction": "TN-la free house site patta eppadi peruvadhu?",
+      "current_output": "Free house site for poor. Eligibility: Houseless poor families, BPL card holder, No land ownership. Size: 2-3 cents (varies by area). Process: Apply at Panchayat/Taluk office, List published, Selection, Registration. Documents: Income certificate, Family card, Aadhaar, No property certificate. Priority: SC/ST, Widows, Differently abled. PMAY-G: ₹1.2 lakh + state share for house construction.",
+      "category": "tn_housing",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR013",
+      "instruction": "PM Krishi Sinchayee Yojana (PMKSY) என்றால் என்ன?",
+      "current_output": "நீர் பாசன விரிவாக்க திட்டம். Components: Har Khet Ko Pani (நீர் கிடைக்கச் செய்ய), Per Drop More Crop (Micro irrigation - Drip/Sprinkler, 55% subsidy), Watershed Development. Benefit: Drip irrigation-க்கு 55% subsidy, நீர் சேமிப்பு 30-50%, yield increase 20-40%. Apply: Agriculture Department/Horticulture Department. Micro Irrigation Fund: ₹5,000 crore for states. Water Sources: Bore well, farm pond, check dam support.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR011",
+      "instruction": "TNPDS Online Services - Ration card apply, name add/remove, address change?",
+      "current_output": "All services at: tnpds.gov.in\n\nNew Ration Card:\n1. tnpds.gov.in → 'New Card Application'\n2. Enter family details\n3. Upload: All Aadhaar, Address proof, Income certificate, Gas details, Photos\n4. Submit → RI inspection → Card issue (30-45 days)\n\nAdd Name (Birth/Marriage):\n1. tnpds.gov.in → 'Add Member'\n2. Select card number\n3. Enter new member details\n4. Upload: Birth/Marriage Certificate + Aadhaar\n5. Submit → Verification → Approval (15-30 days)\n\nRemove Name (Death/Transfer):\n1. tnpds.gov.in → 'Delete Member'\n2. Select card and member\n3. Reason: Death/Transferred/Left\n4. Upload: Death Certificate (if death)\n5. Submit → Approval (15 days)\n\nAddress Change:\n1. tnpds.gov.in → 'Address Modification'\n2. Enter new address\n3. Upload new address proof\n4. Submit → Inspection → Shop change if different area (30-45 days)\n\nChange Card Type (NPHH to PHH):\n- Apply at Taluk Office with new Income Certificate\n\nTrack: tnpds.gov.in → 'Application Status'",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR009",
+      "instruction": "e-NAM என்றால் என்ன? எப்படி பயனடைவது?",
+      "current_output": "Electronic National Agriculture Market. Online trading platform - இந்தியா முழுவதும் விற்கலாம். Benefit: நல்ல விலை கிடைக்கும், middlemen குறையும், transparent bidding. Register: enam.gov.in, அருகிலுள்ள e-NAM mandi. Process: Produce → Quality testing → Online auction → Highest bidder wins → Payment to bank. TN-ல்: UZHAVAR SANDHAIS connected. Quality Parameters: Moisture, foreign matter, damaged grains-க்கு grade.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP008",
+      "instruction": "EC (Encumbrance Certificate) enga peruvadhu?",
+      "current_output": "Online: tnreginet.gov.in (1987 onwards available). Offline: Sub-registrar office. Fee: ₹15 per year. Time: Online instant, offline 3-5 days.",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS008",
+      "instruction": "Pradhan Mantri Jeevan Jyoti Bima Yojana (PMJJBY) enna?",
+      "current_output": "Life Insurance scheme. Premium: Only ₹436 per year. Coverage: ₹2 lakh (on death). Age: 18-55 years. Eligibility: Those with Jan Dhan/Savings Account. How to join: Fill form at Bank, Give auto-debit consent. Renews every June 1",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

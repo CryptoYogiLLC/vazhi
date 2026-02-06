@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 6,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT194_TG",
+      "instruction": "Thiruvalluvar siddharaaga karudhapadugiraaraa?",
+      "current_output": "Thiruvalluvar Siddhargaloda pattiyalil silaraal serkkapadugirar. Gnaani endra vagayil Siddhar pondra status. Aanaal Thirukkural maruththuvam, rasavaadham pondra Siddhar subjects patri pesavillai - ethics, morality, worldly wisdom patri pesugiradhu. Enavae 'Gnaani' endru solvathu more appropriate. Siddhargaloda spiritual depth, Thiruvalluvaroda practical wisdom - irandaum complementary. Tamil gnnaanathoda iru mugangal!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT108_TG",
+      "instruction": "Bogar Siddhar yaar? Avar sirappu enna?",
+      "current_output": "Bogar Siddhar migavum pugazh petra Siddhargalil oruvar. Rasavaathathil (alchemy) expert. Pazhani Murugan kovilil ulla Moolavar silaiyai Navapashaanam (9 vagai vishangal) kondu seidhathaaga nambappadugiradhu. China-vukkum sendru Tao thaththuvathai karrathaagavum, angge 'Lao Tzu' endru azhaikkapattathagavum silar nambugiraargal (controversial claim).",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT138_TG",
+      "instruction": "Ranganathar Kovil (Srirangam) sirappu enna?",
+      "current_output": "Srirangam Ranganathaswamy Kovil ulagin migapperiya functioning Hindu temple. Sirappugal: 1) 7 pirakarangal (walls) - 156 acres parappu, 2) 21 gopurangal, 3) Raja Gopuram - 236 adi (Asia's tallest), 4) 108 Divya Desangalil mudhalavadhu, 5) Vaikunta Ekadasi - ore naalil 10 lakh+ per varuvaargal. Kaveri nadhi naduvil island-la ulladhu. Vishnu temples-la miga mukkiyam.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT082_TG",
+      "instruction": "Amaichar / minister-oda thaguthi enna?",
+      "current_output": "Kural: 'Karuviyum kaalamum seykaiyum seyyum aruvinaiyum maandadhu amaichu'. Tools, timing, method, execution - ellavatrilum thiramayaanavar nalla amaichar. Melum: 'Vankan kudikaaththal katrarridhal aalvinayodu ainDhudan maandadhu amaichu'. Dhairiyam, kudimakkalai kaaththal, kalvi, seyalthiran, nalla pecchu - minister-kku 5 qualities vendum.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT026_TG",
+      "instruction": "Corporate training-la Thirukkural eppadi use aagudhu?",
+      "current_output": "Pala multinational companies Thirukkural-based training nadaththugindrana: 1) Leadership workshops - Arasiyal adhigaarangal, 2) Ethics training - Araththuppaal, 3) Team building - Natpu adhikaaram, 4) Communication skills - Solvanmai, 5) Decision making - Therindhu seyalvagai. Infosys, TCS pondra IT companies Tamil Nadu offices-la idhu popular. 'Ancient Indian wisdom meets modern management' endru promote panraanga.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT051_TG",
+      "instruction": "'Kedil vizhuch selvam kalvi' - kalviyoda mathippu enna?",
+      "current_output": "Kural: 'Kedil vizhuch selvam kalvi oruvarku maadalla mattraiyavai'. Artham: Kalviye azhiyaadha selvam. Matra ella selvangalum (panam, thangam, soththu) oru naal poyvidum. Aanaal kalvi eppodhum unnudan irukkum. Education = permanent wealth. Investment in knowledge = best investment!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT135_TG",
+      "instruction": "Great Living Chola Temples endraal enna?",
+      "current_output": "UNESCO World Heritage Site-aaga declare seiyappatta moondru Chozhar kovilgal: 1) Brihadeeswara Kovil, Thanjavur (1010 CE) - Rajaraja Chozhan, 2) Gangaikonda Cholapuram Kovil (1035 CE) - Rajendra Chozhan, 3) Airavateswara Kovil, Darasuram (12th century) - Rajaraja Chozhan II. 'Living' enbadhu indrum poojai nadakkum kovilgal enbadhaik kurikkum.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT044_TG",
+      "instruction": "'Uram oruvatku ulla verukkai' - dhairiyam patriya kural enna?",
+      "current_output": "Kural: 'Uram oruvarku ulla verukkai aqdhillaar maramakkal aadhalae veru'. Artham: Manam thidam (courage) iruppavane unmaiyaana manidhan. Adhu illadhavargal mara manithargal - uyiratra maram pondravargal. Inner strength illaamal verum body irundhu enna payan? Mental courage > Physical strength.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT181_TG",
+      "instruction": "Kannappa Nayanar kadhai enna?",
+      "current_output": "Kannappar - Vedar kulathhai serndha Nayanar. Kaattil vettaiyaadum bodhu Kalahasti Sivalingatthai kandaar. Anbaal than vaayil irundha neeraal abhishekam, maamisathai naivethyam seydhaar. Oru naal Sivalingathoda kannilirundhu ratham vara, than kannai pidungi vaiththaar. Matroru kannilum ratham vara, adhaiyum pidunga murpatta bodhu Sivan thondri arul seydhaar. Unmayaana bhakthikku sadangu thevaiyillai enbadharkku udhaaranam!",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT180_TG",
+      "instruction": "Moovar (Thevaram Trio) yaar yaar?",
+      "current_output": "Moovar - Thevaram paadiya moondru mukkiya Nayanmaargal: 1) Thirugnana Sambandhar - 3 vayathil Umaiyaval paal oottiyathaaga kadhai, 16 vayathil Samanargalai vaadhaththil vendavar, 2) Thirunavukkarasar (Appar) - mudhalil Jain Samanar, pin Saivar aanavar, 'Navukkarasar' endraal naavoda arasar, 3) Sundarar - 'Thozhamai' bhakthi, Sivanai nanbanaaga paadiyavar. Ivargal 274 kovilgalai Paadal petra thalangalaakkinaargal.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT133_TG",
+      "instruction": "Koviloda vevveru paguthigal enna?",
+      "current_output": "Koviloda mukkiya paguthigal: 1) Gopuram - entrance tower, 2) Maha Dwaaram - main door, 3) Balipeedam - sacrificial altar, 4) Kodimaram - flag post, 5) Nandi/Vaahanam - deity's vehicle, 6) Mukhamandapam - front hall, 7) Artha Mandapam - intermediate hall, 8) Maha Mandapam - great hall, 9) Andharaalam - vestibule, 10) Garbhagriham/Karuvrai - sanctum sanctorum, 11) Prakaaram - circumambulatory path, 12) Kovil Kulam - temple tank.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT109_TG",
+      "instruction": "Bogar ezhuthiya noolgal enna?",
+      "current_output": "Bogaroda mukkiya noolgal: 1) Bogar 7000 - migapperiya nool, 7000 paadalgal, 2) Bogar Karpa Soothiram - rejuvenation medicine, 3) Bogar Vaiththiyam - maruththuvam, 4) Bogar Gnaanam - aanmeegam, 5) Bogar 12000 - virivana version, 6) Bogar Soothiram - formulas. Rasavaadham, maruththuvam, yoga ellam idhil ullana.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT126_TG",
+      "instruction": "Siddhar samaadhigal engellam ullana?",
+      "current_output": "Mukkiya siddhar samaadhigal: 1) Bogar - Pazhani, 2) Agathiyar - Podhigai Malai, Anuvi (Courtallam aruge), 3) Thirumoolar - Chidambaram, 4) Konganar - Tirupathi aruge, 5) Sattaimuni - Siruvachchoor, 6) Karuvoorar - Karuvoor (Karur), 7) Idaikaadar - Thiruvannamalai. Ovvoru samaadhiyilum special energy iruppathaga nambappadugiradhu.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT192_TG",
+      "instruction": "Avvaiyar Athiyamaanukku ezhuthiya paadalgal enna?",
+      "current_output": "Sangam kaala Avvaiyar Athiyamaan Nedunchezhiyan endra mannaroda nerungiYa nanbar. Puranaanooru-vil avarukkaaga pala paadalgal paadiyuLLaar. Famous: 'Nellukku iraiththaa neer vaikkal vazhi odi pullukkkum aange posiyumaam' - nellukku thanni paaychum bodhu pullukkkum pogum, nallavargalukku udhavinaal avargal saarndhavargalukkum nanmai aagum. Athiyamaan nellikani kodutha kadhaiyum famous - neenda aayulukkaana pazham.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT174_TG",
+      "instruction": "Chozhar venkala silaigal (Bronze sculptures) sirappu enna?",
+      "current_output": "Chozhar kaalathu venkala silaigal ulaga pugazh petrravai. Lost wax technique (mezhugu neekkal murai) payanpaduththappattathu. Sirappugal: 1) Nataraja - migavum famous, cosmic dance, 2) Proportion perfection, 3) Dynamic poses, 4) Fine details, 5) Bronze alloy - centuries-aaga intact. Thanjavur Art Gallery, Chennai Museum-la collection ulladhu. Swamimalai (Kumbakonam aruge) indrum traditional bronze casting nadakkiradhu. GI tag petradhu.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT110_TG",
+      "instruction": "Navapashaanam endraal enna? Pazhani silai eppadi seiyappattadhu?",
+      "current_output": "Navapashaanam enbadhu 9 vagaiyaana minerals/poisons kalandha kalavai: 1) Vellai Paashaanam, 2) Kal Paashaanam, 3) Manosilai, 4) Kaavi, 5) Kandhagam, 6) Rasam (mercury), 7) Vedi uppu, 8) Ilingam, 9) Pooram. Ivattrai kurippittta vigithathil kalandhu, heat seidhu, Pazhani Murugan silai seiyappattathu endru nambappadugiradhu. Abhishekam seiyum bodhu idhu medicinal water aagudhu endru bhakthargal nambugiraargal.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT144_TG",
+      "instruction": "274 Paadal Petra Sthalangal endraal enna?",
+      "current_output": "63 Nayanmaarkalaal (Saiva bhakthargal) Thevaram, Thiruvasagam aagiyavattril paadappatta 274 Sivan kovilgal. Ivattril perumbaalaanavai Tamil Nadu-la. 'Muththu Thiruppathigam' endru sirappup peyar. Thevaram - Sambandhar, Sundarar, Appar paadiyathu. Thiruvasagam - Manikkavasagar paadiyathu. Ovvoru kovilukkum sirappaana sthalapurana (history) undu.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT173_TM",
+      "instruction": "தஞ்சாவூர் ஓவியம் என்றால் என்ன?",
+      "current_output": "தஞ்சாவூர் ஓவியம் - தமிழ்நாட்டின் traditional painting style. 16th century-ல் Nayak period-ல் develop ஆனது. சிறப்புகள்: 1) Gold foil work - relief, 3D effect, 2) Semi-precious stones embedded, 3) Vibrant colors, 4) Hindu gods, goddesses themes, 5) Wooden base with cloth coating. GI (Geographical Indication) tag பெற்றது. Prices: ₹500 (small) to ₹50,000+ (large). Thanjavur-ல் நிறைய shops. Wedding gift-ஆக popular. Museum quality pieces collectors buy பண்றாங்க.",
+      "category": "arts_literature",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CULT069_TG",
+      "instruction": "Anger control panna mudiyavillai - endha kural udhavum?",
+      "current_output": "'Sinam ennum serndhaaraik kolli inam ennum emappunaiyai sudum'. Kobam enbadhu nammai serndhavargalaiyae (kudumbam, nanbargal) azhikkum. Melum: 'Aaruvadhu sinam' (Aathichudi) - kobatthai aaravidungal. Count to 10, take deep breaths, walk away. Anger hurts YOU more than others.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT039_TG",
+      "instruction": "'Azhukkaaru avaa veguli' - theeya gunangal patriya kural enna?",
+      "current_output": "Kural: 'Azhukkaaru avaaveguli innaachol naangum izhukkaarau iyandradhu il'. Artham: 1) Azhukkaaru (jealousy), 2) Avaa (greed), 3) Veguli (anger), 4) Innaachol (harsh words) - indha naangum illadhavan ozhukkamaanavan. Four enemies of good character!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT092_TG",
+      "instruction": "Nandri (gratitude) patri enna kuralgal ullana?",
+      "current_output": "Kural: 'Seiyaamal seidha uthavikku vaiyagamum vaanagamum aatral aridhu'. Edhirpaarkkamal yaaro seidha uthavikku bhoomiyum sorgamum kooda eedaagaadhu. Melum: 'Kaalaththinaal seidha nandri siRidheninum gnaalaththin maanap peridhu'. Right time-la seidha siriya uthaviyum ulagathai vida periyadu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT060_TG",
+      "instruction": "'Arivinaan aaguvadhu undo' - arivoda mathippu enna?",
+      "current_output": "Kural: 'Arivinaan aaguvadhu undo piridhinoy thanseyy vinaiyaan varum'. Artham: Arivaal ellam adaiyalam. Aanaal arivillaamai endra noi, nam seyalgalaaleyae varum. Ignorance is a self-inflicted disease. Knowledge is the cure - and it's up to you to acquire it!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT077_TG",
+      "instruction": "Life-la ellaamae wrong aagikittu irukku - enna seivadhu?",
+      "current_output": "'Idukkan varungaal naguga adhanai aduththoorvadhu aqdhoppa thil'. Kashta kaalathil siriyungal - adhuvae best remedy. Melum: 'Oozhayum uppakkam kaanbar ulaivindrith thaazhAdhu unjarru pavar'. Thodarndu muyarchi seipavargal fate-aiyum maatrruvaargal. This too shall pass!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT100_TG",
+      "instruction": "Pulan adakkam (self-control) patri enna kuralgal ullana?",
+      "current_output": "Kural: 'Aindhaviththaan aatral agalvisumbu laarkoman indhiranae saalum kari'. Aimpulangalai adakkiyavan Indhiranukkku samam. Melum: 'Serivarindhu seermai payakkum arivarindhu aatrin adangap perin'. Self-control ullavanukkaec sirappu kidaikkum. Master your senses = master your life!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT188_TG",
+      "instruction": "Avvaiyar yaar? Eththanai Avvaiyargal irundhaargal?",
+      "current_output": "Avvaiyar - Tamilin migap pugazh petra penn kavignar. 'Avvai' endraal 'moodhaatti' alladhu 'thaay' endru porul. Pala kaalakattangalil vevveru Avvaiyargal irundhathaaga scholars karudhugirar: 1) Sangam kaala Avvaiyar - Puranaanooru paadiyavar, Athiyamaan Nedunchezhiyanoda nanbar, 2) Bhakthi kaala Avvaiyar - Aathichudi, Kondraivendhan ezhuthiyavar, Murugan bhakthai. Irandaavadhu Avvaiyar migavum popular - kuzhanthaigalukkku needhi karpikkum paadalgal ezhuthiyavar.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

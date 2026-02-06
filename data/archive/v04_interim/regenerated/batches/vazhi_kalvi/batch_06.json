@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 6,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "AGE_016_TM",
+      "instruction": "Engineering-ல் 5 arrears இருக்கு. Parents-கிட்ட சொல்ல பயமா இருக்கு. என்ன பண்றது?",
+      "current_output": "First: Panic வேண்டாம், solve பண்ணலாம். Steps: 1) Anna University arrear exam schedule check - multiple attempts available 2) Subject-wise weak areas identify 3) Previous year papers - pattern same 4) Senior notes, YouTube tutorials 5) Group study effective. Parents-க்கு: Honest-ஆ சொல்லுங்கள் - support கிடைக்கும். Clearing strategy: Easy subjects first, confidence build. Max arrears allowed: 12 (can continue). Final year placement-க்கு clear பண்ணணும். Time இருக்கு.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP010_TM",
+      "instruction": "TNPSC Group 4 Exam-க்கு எப்படி prepare செய்வது?",
+      "current_output": "**TNPSC Group 4 Preparation:**\n\n**Eligibility:**\n- Age: 18-32 (Relaxation for reserved)\n- Education: SSLC (10th) pass\n- Any stream accepted\n\n**Exam Pattern:**\n\n| Section | Questions | Marks |\n|---------|-----------|-------|\n| GK & Current Affairs | 50 | 150 |\n| Tamil | 50 | 150 |\n| **Total** | **100** | **300** |\n\n- Duration: 3 hours\n- Negative Marking: 1/3 for wrong answer\n- Mode: OMR based\n\n**Syllabus:**\n\n**GK Section:**\n1. History (India + TN)\n2. Geography (India + TN)\n3. Indian Polity\n4. Indian Economy\n5. Science (Physics, Chemistry, Biology)\n6. Current Affairs\n\n**Tamil Section:**\n1. இலக்கணம் (Grammar)\n2. இலக்கியம் (Literature)\n3. தமிழ் பொது அறிவு\n4. ஆங்கிலம் → தமிழ் மொழிபெயர்ப்பு\n\n**Books:**\n\n**Tamil:**\n| Book | Publisher |\n|------|----------|\n| 6th-12th Tamil Textbooks | TN Govt |\n| Pothu Tamil | Sura/Sakthi |\n| Tamil Grammar | Agni/Tamilcube |\n\n**GK:**\n| Subject | Book |\n|---------|------|\n| History | 6th-12th NCERT + TN Books |\n| Geography | 6th-12th NCERT + TN |\n| Polity | Lakshmikant + TN Books |\n| Science | 6th-10th Science Books |\n| Current Affairs | Tamil Hindu, Monthly magazines |\n\n**Preparation Plan (6 months):**\n\n| Month | Focus |\n|-------|-------|\n| 1-2 | Basics from textbooks |\n| 3-4 | Subject-wise deep study |\n| 5 | Revision + Practice |\n| 6 | Mock tests + Current Affairs |\n\n**Tips:**\n1. Tamil medium students advantage!\n2. Read Tamil newspapers daily\n3. 10th books = 60% syllabus covered\n4. Focus on TN-specific content\n5. Solve previous 10 years papers",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC006_TM",
+      "instruction": "Internal assessment marks improve பண்றது எப்படி?",
+      "current_output": "Internal marks strategy: 1) Attendance - 75% minimum, aim 90% 2) Assignment submit on time - presentation matters 3) Class participation - ask questions, answer 4) Lab records neat and complete 5) Internal tests - prepare like semester 6) Project work - original effort show 7) Behavior with faculty - respectful interaction. Impact: 20-25% of total marks. Easy marks if consistent throughout semester.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_021_TG",
+      "instruction": "En paiyan 10th padikkiran. Future planning eppadi panrathu? Wrong decision edukka koodaadhu?",
+      "current_output": "Balanced approach: 1) Child's interest observe pannunga - Science/Arts/Sports 2) Aptitude test - free online available 3) Career counselling - school/district level 4) Multiple options explore - don't fix one path early 5) Financial planning start - education costs rising. Avoid: 1) Forcing your dreams on child 2) Neighbour's child comparison 3) One exam = end of world mentality. Support: Encourage exploration, failure tolerance, self-discovery. Best investment = supportive environment. Trust your child!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM028_TG",
+      "instruction": "Multiple subjects eppadi manage panrathu?",
+      "current_output": "Multi-subject strategy: 1) Timetable with specific slots 2) Alternate between easy/hard subjects 3) Active recall - test yourself 4) Spaced repetition - revise at intervals 5) Priority: Weak subjects more time 6) Daily targets: 2-3 subjects 7) Weekly review all subjects 8) Morning: Fresh topics, Evening: Revision 9) Sunday: Full revision + mock test 10) Track progress in journal. Don't study one subject for 5+ hours continuously - brain needs variety.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA002_TG",
+      "instruction": "ITI admission-ku enna thaguthi thevai?",
+      "current_output": "Eligibility varies by trade: 1) Engineering trades (Electrician, Fitter) - 10th pass 2) Non-engineering trades (Welder, Painter) - 8th pass. Age: 14-40 years. Apply: www.skilltraining.tn.gov.in. Selection: 10th/8th marks basis. No entrance exam. Documents: TC, marks card, community certificate, Aadhaar. Government ITI-la seats limited, apply early.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO014_TG",
+      "instruction": "Defence personnel children-ku PM Scholarship scheme enna?",
+      "current_output": "PM's Scholarship Scheme for RPF/CAPF/Assam Rifles: Professional degree courses-ku. Amount: Boys - ₹2,500/month (₹30,000/year), Girls - ₹3,000/month (₹36,000/year). Duration: Full course. Eligibility: Children of serving/retired/deceased personnel. Apply: www.ksb.gov.in (Kendriya Sainik Board). Separate scheme for Ex-servicemen through Ministry of Defence - ₹5,000/month.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC002_TG",
+      "instruction": "Hostel mess sappaadu othhuvarala. Enna panrathu?",
+      "current_output": "Solutions: 1) Initially stomach upset common - adjust period 2) Mess committee-la complaint raise 3) Healthy snacks keep - fruits, biscuits 4) Weekend home food bring 5) Nearby canteen/restaurants (budget friendly) 6) Cooking allowed rooms-la simple items prepare 7) Mess rebate apply if eating outside regularly. Health: Don't skip meals, drink boiled water, maintain hygiene.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH006_TG",
+      "instruction": "Tamil Nadu-la Polytechnic Diploma admission eppadi?",
+      "current_output": "10th pass-ku aprom seralaam. DOTE counselling: 1) www.tndte.gov.in-la apply 2) 10th marks basis rank 3) Online choice filling 4) College allotment. Duration: 3 years. Govt college fee: ₹1,500-3,000/year. Engineering 2nd year-ku lateral entry possible.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO031A_TG",
+      "instruction": "Scholarship panam eppo varum-pa? Check panna mudiyuma?",
+      "current_output": "NSP portal-la login pannu/pannunga, status paaru/paarunga. PFMS site-layum payment track pannalam. 2-3 months edukkum normally. Reject aanaa defect list check pannu/pannunga.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC009_TG",
+      "instruction": "Project/Thesis work eppadi approach panrathu?",
+      "current_output": "Project success: 1) Choose topic early - guide consultation 2) Literature review first - Google Scholar, journals 3) Weekly meetings with guide - progress show 4) Documentation parallel - don't wait till end 5) Plagiarism check - Turnitin/iThenticate 6) Presentation practice - viva preparation 7) Backup data - multiple locations 8) Deadline buffer - submit before last day. Tip: Original contribution expected, not just copy. Industry internship projects valuable.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO006_TM",
+      "instruction": "தமிழக அரசின் merit scholarship எப்படி கிடைக்கும்?",
+      "current_output": "CM's Merit Scholarship: 10th, 12th-ல் அதிக மதிப்பெண் பெற்றவர்களுக்கு. Amount: ₹5,000-10,000 one-time. Eligibility: State topper, district topper, subject topper. Selection: Board exam results அடிப்படையில் automatic. Higher education scholarship: ₹25,000-50,000 for state rank holders in entrance exams (NEET, JEE). Apply through School Education Department.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO014_TM",
+      "instruction": "12th Board Exam-க்கு எப்படி centum வாங்குவது?",
+      "current_output": "**12th Board Exam - Centum Strategy:**\n\n**6 Months Plan:**\n\n**Months 1-2: Foundation**\n- Complete syllabus first reading\n- NCERT/State Board textbooks only\n- Notes prepare (own handwriting best)\n- Formula sheets create\n\n**Months 3-4: Deep Learning**\n- Chapter-wise thorough study\n- Important questions identify\n- Diagrams practice (Bio, Physics)\n- Numericals practice (Maths, Physics, Chemistry)\n\n**Months 5: Revision + Practice**\n- Previous 10 years papers solve\n- Model papers practice\n- Time-bound tests\n- Weak areas focus\n\n**Month 6: Final Prep**\n- Quick revision\n- Formula revision daily\n- Full-length mock exams\n- Exam hall practice\n\n**Subject-wise Tips:**\n\n**Physics:**\n- Numericals daily practice\n- Derivations memorize\n- Diagrams neat drawing\n\n**Chemistry:**\n- Equations balance\n- Named reactions list\n- Organic mechanisms\n\n**Maths:**\n- 30 problems/day minimum\n- All example problems redo\n- Previous paper patterns\n\n**Biology:**\n- Diagrams labeled neatly\n- Flow charts for processes\n- Definitions exact\n\n**General Tips:**\n1. Wake up early (5 AM study effective)\n2. Take breaks (Pomodoro technique)\n3. Sleep 7 hours minimum\n4. No new topics in last week\n5. Presentation matters - neat writing\n\n**Free Resources:**\n- Kalvi TV\n- DIKSHA App\n- YouTube channels\n- Previous papers: dge.tn.gov.in",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH004_TG",
+      "instruction": "B.Ed admission Tamil Nadu-la eppadi nadakkudhu?",
+      "current_output": "Eligibility: Any degree 50% marks (SC/ST/OBC 45%). Steps: 1) TNTEU announcement 2) Online application 3) Merit-based counselling 4) College allotment. Govt college fee: ₹4,000-10,000/year. Duration: 2 years.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP009_TG",
+      "instruction": "Chennai-la free coaching centres enge irukku?",
+      "current_output": "Free coaching Chennai: 1) Government Free Coaching Centre - Nungambakkam (UPSC, TNPSC) 2) Adi Dravidar Welfare coaching - Saidapet 3) BC/MBC coaching - Egmore 4) IAS Academy free batches - Anna Salai 5) Employment Exchange coaching - various locations. Apply: Respective department websites. Selection: Merit + income based. Also: Marina Library study hall, Connemara Library resources free.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA011_TM",
+      "instruction": "PMKVY (Pradhan Mantri Kaushal Vikas Yojana) scheme என்ன?",
+      "current_output": "Central Government skill scheme. Features: 1) Free training - 200+ job roles 2) Certification - NSDC recognized 3) ₹500-2,000 reward on certification 4) Placement support 5) Recognition of Prior Learning (RPL) - existing skills-க்கு certificate. Duration: 150-300 hours. Training centers: Skill India centres across TN. Register: www.pmkvyofficial.org. Age: 15-45 years. 10th pass preferred.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH023_TM",
+      "instruction": "Online degree programs தமிழ்நாட்டில் எங்கே கிடைக்கும்?",
+      "current_output": "UGC-approved online programs: 1) SWAYAM platform (free courses) 2) NPTEL (IIT courses) 3) Anna University online 4) Madras University online 5) Private universities (Amity, Manipal online). SWAYAM courses-க்கு credit transfer possible. MOOCs certificate-க்கு மதிப்பு அதிகரித்துள்ளது. Coursera, edX courses-ஐயும் பயன்படுத்தலாம்.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC015_TG",
+      "instruction": "Ragging face panren. Enna seiyanum?",
+      "current_output": "Immediate action: 1) Don't comply with unreasonable demands 2) Note names, time, place 3) Report to Anti-Ragging Committee (every college has) 4) Online complaint: www.antiragging.in 5) Helpline: 1800-180-5522 (toll-free) 6) College principal/warden 7) Police if physical harm 8) UGC complaint portal. Protection: Your identity can be kept confidential. Punishment: Expulsion, criminal case against raggers. Don't suffer silently!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO008_TM",
+      "instruction": "Sports quota scholarship தமிழ்நாட்டில் உள்ளதா?",
+      "current_output": "Sports Development Authority of TN (SDAT) Scholarships: 1) State level players - ₹10,000-25,000/ஆண்டு 2) National level - ₹25,000-50,000 3) International level - ₹1-5 lakh 4) Olympic participants - special pension. College admission: 5% sports quota. Free coaching, equipment, diet allowance. Apply: www.sfrtn.tn.gov.in. Sports certificate from recognized association தேவை.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP010_TM",
+      "instruction": "Madurai region-ல் top engineering colleges எவை?",
+      "current_output": "Top engineering colleges Madurai region: 1) Thiagarajar College of Engineering (TCE) - Autonomous, top ranked 2) Government College of Engineering Tirunelveli 3) National Engineering College Kovilpatti 4) Mepco Schlenk Madurai 5) PSNA College of Engineering Dindigul. Admission: TNEA counselling. TCE cutoff high - 195+ for popular branches. Government colleges affordable - ₹50,000/year approx.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM014_TM",
+      "instruction": "Coaching இல்லாமல் JEE crack பண்ண முடியுமா?",
+      "current_output": "Possible but challenging. Self-study success factors: 1) Strong self-discipline 2) Proper study plan 3) Quality resources - YouTube (Physics Wallah, Unacademy free), NPTEL 4) Regular mock tests 5) Doubt clearing - online forums, Telegram groups. Advantages: Own pace, cost saving. Challenges: Motivation, structured approach, peer competition. Hybrid approach: Free online + self-study works well. Many toppers are self-study students.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP016_TG",
+      "instruction": "Law padikka enna entrance exam ezhudanum?",
+      "current_output": "**Law Entrance Exams:**\n\n**1. CLAT:** 22 NLUs, 12th 45%, Dec exam\n- Pattern: English + GK + Legal + Logical + Quant = 150 marks, 2 hours\n- Top NLUs: NLSIU, NALSAR, NLU Delhi\n\n**2. AILET:** NLU Delhi only, separate exam\n\n**3. LSAT India:** Private law colleges\n\n**4. TNDALU:** TN law colleges - tndalu.ac.in\n\n**After 12th:** 5-year integrated (BA LLB, BBA LLB)\n**After Degree:** 3-year LLB\n\n**Preparation:**\n- Daily newspapers\n- Legal awareness\n- Reasoning practice\n\n**Books:** AP Bhardwaj (Legal), RS Aggarwal (Reasoning)",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM016_TM",
+      "instruction": "TNPSC Group 1/2/4 - என்ன வித்தியாசம்? எது easy?",
+      "current_output": "Groups comparison: Group 4 - 10th/12th pass, Clerk/Typist posts, easiest. Group 2/2A - Degree, Assistant/Accountant posts, medium. Group 1 - Degree, DSP/Deputy Collector, hardest. Exam pattern: All MCQ. Syllabus: 6th-12th TN textbooks + Current affairs. Group 4: 1.5 lakh+ applicants, 5000+ posts. Group 1: 50,000 applicants, 50-100 posts. Start with Group 4, then progress. Same preparation works for all.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH039_TM",
+      "instruction": "கிராமப்புற மாணவர்களுக்கு சிறப்பு சலுகைகள் உள்ளதா?",
+      "current_output": "ஆம், சிறப்பு சலுகைகள்: 1) 7.5% government school quota in Engineering/Medical 2) Rural area nativity certificate benefits 3) Panchayat Union school students special coaching 4) Moovalur Ramamirtham Ammaiyar Scheme - girl students monthly stipend 5) Free coaching for competitive exams. District Collector office மூலம் விண்ணப்பிக்கலாம். EMIS number இருந்தால் automatically eligible.",
+      "category": "higher_studies",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "HIGH022_TG",
+      "instruction": "IGNOU-la ennenna padippugal ullana?",
+      "current_output": "228+ programmes available. Popular ones: BA, B.Com, BCA, MBA, MCA, MA, M.Com, B.Ed, Certificate courses. Admission: July & January batch. Online application: www.ignou.ac.in. Regional centre Chennai-la irukkudhu. Credit transfer facility ulladhu. Government jobs-ku recognized degree.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

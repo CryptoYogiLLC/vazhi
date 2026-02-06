@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 2,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "AS071",
+      "instruction": "College senior 'insider crypto tips' share pannaan - 'This coin 10x confirmed, invest now, I'll guide.' Trust pannalama?",
+      "current_output": "'Insider tips' in crypto - usually pump and dump. Senior buy panniruppaan already, your buying increases price, senior sells, you hold worthless coins. Seniors um scammed aagiruppaan, chain continues. Own research pannunga, 'tips' avoid.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS006",
+      "instruction": "Telegram group la job posting paathen '5 LPA remote job, interview tomorrow. Pay 2000 for technical assessment platform access.' Salary good, but assessment ku pay pannanum - legitimate aa?",
+      "current_output": "Companies never charge for assessments! HackerRank, CodeSignal - all free for candidates. Scammers target tech job seekers with 'assessment fees'. Real tech companies invest in hiring, don't charge candidates. Report and leave such groups.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG011",
+      "instruction": "SIM card KYC fail aagum-nu message vandhudhu, link click pannanum-nu irukku",
+      "current_output": "Fake message ithu! Telecom company link anuppaadhu. SIM problem irundhaa direct service center poonga. Link click pannaa phone hack aagum.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS071",
+      "instruction": "WhatsApp message 'Swiggy/Zomato premium partner program. Pay 10,000 for top listing and more orders.' Premium partner aanalaam aa?",
+      "current_output": "Swiggy/Zomato partnerships through official partner app, not WhatsApp payments. Listing algorithms based on ratings, delivery time, not 'premium payments'. 10,000 to unknown person won't change your visibility. Contact official Swiggy/Zomato partner support for any programs.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS017",
+      "instruction": "'RBI Special Bond - 15% guaranteed return, senior citizens ku special allocation' nu broker call pannaan. Government bond safe la, invest pannalama?",
+      "current_output": "RBI bonds 15% return kudukkaadhu ayya - current rate 7-8%. 'Special allocation' lie. Fake brokers senior citizens target pannuvaanga - life savings thiruduvanga. RBI bonds through banks only available - not random callers. Ignore this call.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS011",
+      "instruction": "Phone vandhudhu, crying voice la 'Thatha, naan Ravi pesuren, accident aaiduchu, police station la irukken, 50,000 bail vendum, yaar kittayum sollaadha please' nu. En pera voice maadhiri irukku, enna pannanum?",
+      "current_output": "Ayya, idhu 'grandparent scam' - voice imitate pannuvaanga or AI voice clone use pannuvaanga. 'Yaar kittayum sollaadha' nu solradhu red flag - verify panna vidaama irukkuraanga. Phone cut pannitu unga pera ORIGINAL number ku call pannunga. Real emergency na family ku theriyum.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT005",
+      "instruction": "FedEx call vandhuchi - 'Unga name la drugs parcel Mumbai customs la seized, CBI case file aagum' nu. Video call la uniform la oru aalu, 2 lakh pay pannina case close nu solraan. Bayam aa irukku da, genuine aa?",
+      "current_output": "Fake da! 'Digital arrest' nu solluvaanga - police video call la case nadathaadhu, money kekaadhu. Uniform costume da. Egmore, Adyar la professionals kuda maatinanga ipdi. Don't pay. Cut pannu, Cyber Crime Shastri Nagar office ku complaint kudu.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS058",
+      "instruction": "Bro, Telegram task job la first 500 vandhudhu. Now 5K invest pannanum advanced tasks ku nu. Worth aa da?",
+      "current_output": "STOP da! Initial payment bait - 5K pottaa '10K more for withdrawal' nu solluvaanga. Classic scam, students mass aa maatikuraanga. Whatever you paid - consider lost, don't pay more.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG002",
+      "instruction": "WhatsApp la oru link vanthuchu - click panna prize kidaikkum-nu soldraanga",
+      "current_output": "Prize scam ithu. Link click pannaadheenga! Unga phone la virus varum illa details thiruduvanga. Delete pannidhunga message-a.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS019",
+      "instruction": "Call vandhudhu 'NCTE registration update mandatory for all teachers. Pay 3000 processing fee through this link.' School la principal pressure podraanga, genuine aa?",
+      "current_output": "NCTE registration done through colleges and official NCTE portal, not individual payments. Inform your principal this is a scam. NCTE fees go through institutional channels, not individual teacher payments. Check ncte.gov.in for genuine requirements.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR012",
+      "instruction": "Naukri/LinkedIn la fake job scam - report eppidi?",
+      "current_output": "Naukri.com: Job listing → 'Report this job', email grievance@naukri.com. LinkedIn: Job → Three dots → 'Report this job', report fake recruiter profile. Indeed: Job → 'Report job', support.indeed.com. Internshala: help@internshala.com. Monster: india-care@monster.com. General: Ministry of Labour labour.gov.in, if recruitment fee taken - Police FIR + Labour Department complaint. If overseas job scam: Protector of Emigrants complaint.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS076",
+      "instruction": "TikTok/Instagram la 'Send 1000 to this UPI, get 2000 back - money doubling challenge' nu viral aagudhu. Friends try pannuvaanga.",
+      "current_output": "Money doubling impossible - basic logic. 'Viral' because scammers promote heavily. Friends who 'got money' - either lying or part of scam. 1000 anuppina - gone forever. Report such videos, warn friends.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG007",
+      "instruction": "CBI officer-nu video call vandhudhu, unga name drug case-la irukku, panam kattuna case close pannuvaanga-nu solraanga",
+      "current_output": "Digital arrest scam ithu madam! CBI video call-la case handle pannudhu illa. Uniform fake, ID fake. Call cut pannunga, 1930-la urgent-a report pannunga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR018",
+      "instruction": "OTP share panniten, account empty aaiduchu. Bank liability evlo?",
+      "current_output": "RBI Guidelines: Bank's fault = Zero liability, Third party breach (you not at fault) = Zero if reported in 3 days, Customer negligence (OTP sharing) = Full liability IF bank proves negligence. But you can argue: Social engineering defense (deceived, not negligent), Bank's duty of care (clear warnings?), Delayed debit argument (unusual pattern). Steps: Written complaint (say 'OTP obtained through fraud' not 'I gave OTP'), Banking Ombudsman at cms.rbi.org.in (90% get partial refund), Consumer Forum, Civil Court for large amounts.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR013",
+      "instruction": "Matrimony site la romance scam - report and recovery?",
+      "current_output": "BharatMatrimony: Profile → Report → 'Fake/Fraud', support@bharatmatrimony.com, 044-45002300. Shaadi.com: Profile → Report, care@shaadi.com, 022-67448888. Tamil Matrimony: support@tamilmatrimony.com. Tinder/Bumble/Hinge: Profile → Report → 'Scam or Spam'. Important: Collect ALL chat history before reporting, profile screenshots (they'll delete), photos received, money transfer receipts. Police FIR essential for large amounts. Recovery very low (money usually abroad). Prevention better: Video call verify, never send money before meeting.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS013",
+      "instruction": "கார்த்திகை தீபம் - 'Thiruvannamalai girivalam online booking, VIP darshan 2000 Rs' link வந்துச்சு. Genuine-ஆ?",
+      "current_output": "Fake! Thiruvannamalai temple official-ஆ இப்படி booking இல்ல. Karthigai time-ல temple scams peak. 'VIP darshan' என்று money திருடுவாங்க. Temple direct போங்க, middleman avoid பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RF006",
+      "instruction": "'Guaranteed return', '100% profit' என்று investment offer வந்தது. Believe பண்ணலாமா?",
+      "current_output": "Investment-ல் guarantee இல்லை. 'Guaranteed', 'risk-free', 'double your money' என்று சொன்னால் Ponzi scheme. SEBI registered platforms மட்டுமே safe.",
+      "category": "red_flag_phrases",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS037",
+      "instruction": "WhatsApp message 'GST portal special access offer for CAs. 20,000 annual fee for priority processing of client returns.' Client work ku useful aa?",
+      "current_output": "GST portal access same for all registered practitioners - no 'priority processing' tier. GSTN doesn't offer special CA packages outside official registration. This could be selling illegitimate access or simply fraud. Use official gst.gov.in only.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS055",
+      "instruction": "'Premium Spotify/Netflix free - Download APK from [link]' nu Telegram la share aachhu. Official app paid, idhu free alternative aa?",
+      "current_output": "Pirated APKs malware contain pannum - banking trojans, keyloggers. 'Free premium' bait. Phone data full aa steal aagum. Legitimate apps - Play Store/App Store only. Piracy shortcuts la malware risk always irukku.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS022",
+      "instruction": "SMS vandhuchu 'DIKSHA platform login issue. Click link to reset password immediately or training record deleted.' DIKSHA use pannuren, verify pannalama?",
+      "current_output": "DIKSHA password reset only through official diksha.gov.in portal. Never click SMS links - type URL directly. Training records don't get 'deleted' - this is creating false urgency. Official DIKSHA issues communicated through school administration.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS021",
+      "instruction": "Email vandhuchu 'Teacher's Insurance scheme from State Government. Premium 2000, coverage 10 lakh. Limited period offer, pay now.' Idhu genuine government scheme aa?",
+      "current_output": "Government insurance schemes announced through official GOs and school management. Education department never asks direct payment via email. Verify from DPI (Director of Public Instruction) website. Teachers already covered under GIS - check your existing coverage first.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG006",
+      "instruction": "Insurance policy lapse aagum-nu call vandhudhu, renew panna OTP venum-nu solraanga",
+      "current_output": "Insurance company OTP kettuka maattaanga sir. Policy details official website-la check pannunga. Caller-ku OTP kodukkaadheega - scam ithu.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS077",
+      "instruction": "Email vandhudhu 'Press council accreditation renewal. Pay 10,000 for journalist ID card.' Press card ku idhu process aa?",
+      "current_output": "Press Council of India accreditation free through employer organization. PIB accreditation through government process, no fees. State press accreditation through Information & PR department. No 10,000 fee for any legitimate journalist ID. Check official PCI website.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT029",
+      "instruction": "Call vandhuchu baa - 'Nee account block aagum baa, KYC update pannu' nu. OTP kekkuraanga baa. Enna pannudhu?",
+      "current_output": "Fraud baa idhu! Bank phone la OTP kekkumaa baa? Kekaadhu! 'Block aagum' nu bayamudhuthuraanga. Branch ku nee poi pesu baa. Katpadi, Ambur la leather businessmen ipdi maatikirukkanga. Phone la details kudukkaadhe baa.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG018",
+      "instruction": "QR scan panna cashback kidaikkum-nu stranger solraanga",
+      "current_output": "Reverse scam ithu! QR scan panna panam varaadhu, pogum. Cashback-ku QR scan thevai illa. Stranger QR scan panna sollaa - fraud.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

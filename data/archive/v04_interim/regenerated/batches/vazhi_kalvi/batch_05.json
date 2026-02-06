@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 5,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SCHO031C_TG",
+      "instruction": "Scholarship panam eppo varum? Track pannalaamay?",
+      "current_output": "NSP portal-la login pannu/pannunga, status paaru/paarunga. PFMS site-layum payment track pannalam. 2-3 months edukkum normally. Reject aanaa defect list check pannu/pannunga.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP014_TM",
+      "instruction": "Naanu visually impaired. Board exam-la enna special facilities kidaikkum?",
+      "current_output": "PWD exam facilities: 1) Scribe/Writer - you dictate, they write 2) Extra time - 20 minutes per hour 3) Separate room if needed 4) Large print question paper 5) Exemption from certain papers (language options). Apply: Through school with disability certificate (40%+). UDID card helps. Competitive exams: Same facilities available. Career: Many PWD-friendly government jobs reserved (4% reservation).",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP022_TM",
+      "instruction": "NEET-ku prepare aaganum, Telugu medium-la padichirukken, mudiyumaa?",
+      "current_output": "Mudiyum! NEET 13 languages-la ezhudhalaam - Telugu option irukku. TN state quota-ku: Native certificate venum OR 10th, 11th, 12th TN-la padichirukka venum. Border areas: Hosur, Krishnagiri students apply pannalam. NCERT Telugu version available. Focus on concepts - language secondary. Many Telugu medium students crack NEET!",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM026_TG",
+      "instruction": "Aadhaar-bank account link aagala, scholarship reject",
+      "current_output": "Linking steps: 1) Visit bank branch with Aadhaar 2) Fill seeding form 3) OTP verification 4) 48-72 hours to reflect. Check link status: Call bank customer care or use NPCI mapper. Common issues: Name mismatch (Aadhaar vs bank) - get corrected first. Multiple accounts: Only one can be primary for DBT. Alternative: Net banking/Mobile banking link option available. UIDAI website: Check Aadhaar-bank link status.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH042_TM",
+      "instruction": "Free coaching எங்கே கிடைக்கும்? Government schemes இருக்கிறதா?",
+      "current_output": "Free coaching options: 1) Tamil Nadu Government Free Coaching Centres - UPSC, TNPSC, SSC-க்கு major cities-ல் 2) BC/MBC Welfare Dept coaching 3) Adi Dravidar Welfare free coaching (SC/ST) 4) District Employment Office coaching 5) TNSDC skill centers. Online: NPTEL, SWAYAM, Unacademy free tier. Apply through respective department websites. Selection based on marks and income.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP014_TG",
+      "instruction": "SSC Exams endraal enna? TN students apply pannalaamaa?",
+      "current_output": "**SSC Exams:**\n\n**What:** Central Govt job exams, TN students can apply!\n\n**Major Exams:**\n\n1. **SSC CGL:** Inspector, Auditor - Degree - ₹44,900+\n2. **SSC CHSL:** DEO, LDC - 12th - ₹25,500+\n3. **SSC MTS:** Peon - 10th - ₹18,000+\n4. **SSC GD:** BSF, CISF - 10th - Physical test\n5. **SSC Steno:** Stenographer - 12th - Skill test\n\n**TN Advantage:**\n- Chennai posting preference\n- South zone vacancies\n\n**CGL Pattern (Tier-1):**\nReasoning 25 + GK 25 + Quant 25 + English 25 = 200 marks, 1 hour\n\n**Apply:** ssc.nic.in (SSC Southern Region Chennai)",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP013_TM",
+      "instruction": "Salem/Erode region-ல் agriculture courses எங்கே?",
+      "current_output": "Agriculture education Salem/Erode: 1) Vanavarayar Institute Pollachi - B.Sc Agriculture 2) Agricultural College & Research Institute Madurai (affiliated) 3) Horticultural College Periyakulam 4) KVK (Krishi Vigyan Kendra) - Short courses. TNAU affiliated colleges admission through TNAU counselling. Farmers' children priority. Practical training in farms included. Jobs: Agriculture department, banks (agri officer), own farming with modern techniques.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC005_TM",
+      "instruction": "Library-யை effectively use பண்றது எப்படி?",
+      "current_output": "Library tips: 1) Get library card first day 2) Know sections - reference, lending, periodicals 3) Silent study areas = best concentration 4) Group study rooms book in advance 5) Digital resources - e-journals, databases access 6) Inter-library loan facility 7) Photocopy limits know 8) Renewal option use 9) Reserve books in demand. Pro tip: Morning time library = peaceful. Regular schedule = habit formation.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC008_TM",
+      "instruction": "Semester exam-க்கு last minute preparation tips?",
+      "current_output": "Last week strategy: 1) Previous year papers - pattern identify 2) Important questions list make 3) Short notes revise, not new topics 4) Formula sheets ready 5) Sleep properly - memory consolidation 6) Light food, hydration 7) Morning revision of previous day 8) Group discussion for doubt clearing 9) Hall ticket, stationery ready. Avoid: All-night study, new topics, junk food, negative people. Trust your preparation!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM027_TM",
+      "instruction": "Notes எப்படி எழுதுவது effective-ஆக இருக்கும்?",
+      "current_output": "Effective note-making: 1) Cornell method - page divide into sections 2) Use your own words, not copy 3) Highlight keywords, underline important 4) Use diagrams, flowcharts 5) Color coding for topics 6) Short forms, abbreviations 7) One topic per page 8) Revision space at bottom 9) Index at front 10) Update regularly. Digital options: Notion, OneNote - searchable. Handwritten better for memory. Review notes within 24 hours of class.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM007_TM",
+      "instruction": "NEET-க்கு class 11 இருந்தே prepare ஆகணுமா?",
+      "current_output": "Ideal: Class 11 start. Why? NEET syllabus = 11th + 12th. Class 11 weightage: 45-50%. Strategy: 1) 11th: Concepts strong, NCERT master 2) 12th: Revision + new topics + mock tests 3) After 12th: Full revision + test series. Late starter (12th)? Focus 50% important topics, daily 10-12 hours. Dropper year: Structured coaching + self-study balance. Never too late - many crack in 2nd/3rd attempt.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM013_TG",
+      "instruction": "Scholarship apply pannen, status eppadi check panrathu?",
+      "current_output": "Status check methods: 1) NSP login - dashboard shows status 2) PFMS portal - payment tracking 3) State portal - respective department 4) SMS alerts (if registered) 5) College scholarship cell. Common statuses: Pending verification, Under process, Sanctioned, Disbursed, Rejected. Rejected: Check defect list, re-apply with correct documents. Timeline: 2-6 months from application. Grievance: Portal helpdesk option.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO013_TM",
+      "instruction": "11th & 12th படிக்கும்போது என்ன scholarship கிடைக்கும்?",
+      "current_output": "**Plus Two Scholarships:**\n\n**1. Post-Matric Scholarship (SC/ST) - Central:**\n- Day Scholar: ₹230/month\n- Hosteller: ₹750/month\n- Maintenance: ₹750/month\n- Income limit: ₹2.5 lakh\n- Apply: scholarships.gov.in\n\n**2. Post-Matric Scholarship (BC/MBC/DNC) - State:**\n- Full fee reimbursement\n- Monthly stipend: ₹500\n- Income limit: ₹2 lakh\n- Apply: tneservices.tn.gov.in\n\n**3. Minorities Post-Matric:**\n- ₹500/month (Hosteller: ₹1,000)\n- Course fee: Actual or ₹7,000 (whichever less)\n- Apply: scholarships.gov.in\n\n**4. Free Laptop Scheme (TN Govt):**\n- All Govt school 11th students\n- Automatic distribution\n- No separate application!\n\n**5. TN CM Higher Education Assurance Scheme:**\n- First Generation Graduates\n- Free education + ₹1,000/month\n- Apply: tneservices.tn.gov.in\n\n**6. INSPIRE Scholarship (Class 11-12):**\n- Top 1% in 10th board\n- ₹5,000/year for 11th & 12th\n- Auto-selection based on marks\n\n**7. Merit-based Scholarships:**\n- Various trusts based on 10th marks\n- Tata, Reliance, L&T, etc.\n\n**8. Pragati Scholarship (Girls):**\n- For girls in technical education\n- ₹50,000/year\n- Apply: aicte-pragati-saksham-gov.in\n\n**Apply Deadline:** Usually August-October",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM004_TG",
+      "instruction": "State board vs CBSE - edhu better preparation?",
+      "current_output": "Comparison: State Board - Regional language strong, local competitive exams friendly. CBSE - National level exams (JEE, NEET) aligned, English medium uniform. For NEET/JEE: CBSE syllabus closer. For TNPSC: State board better. Reality: Both boards students crack all exams - preparation matters more than board. State board + NCERT combination = best for competitive exams. TN State board now NCERT aligned.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM031B_TG",
+      "instruction": "NEET preparation-ku what should I do-nga? Free options?",
+      "current_output": "NCERT Biology, Physics, Chemistry - line by line read pannu/pannunga. Free coaching: Government centres-la apply pannu through school. Online free: YouTube (Physics Wallah), SWAYAM. 7.5% reservation govt school students-ku. Daily 6-8 hours padikka venum. Previous year papers practice important.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC024_TM",
+      "instruction": "என் பிள்ளை marks குறைஞ்சு படிக்குது. Pressure கொடுக்கணுமா?",
+      "current_output": "Approach wisely: 1) Understand reason first - health, interest, teaching quality, personal issues 2) Comparison avoid - every child different 3) Effort appreciate, not just results 4) Tutoring arrange if academic gap 5) Career alternatives discuss - marks ≠ only path 6) Mental health priority - pressure causes anxiety 7) Realistic expectations set. Reality: Many successful people were average students. Support > Pressure. Love unconditionally.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH021_TM",
+      "instruction": "வேலை செய்துகொண்டே படிக்க என்ன வழி இருக்கிறது?",
+      "current_output": "Distance Education வழிகள்: 1) IGNOU - மிகப்பெரிய open university 2) Tamil Nadu Open University (TNOU) 3) University of Madras - IDE 4) Annamalai University Distance. UG/PG/Diploma எல்லாம் available. கட்டணம்: ₹5,000-20,000/ஆண்டு. Exams: ஆண்டுக்கு 2 முறை. Work experience + degree இரண்டும் கிடைக்கும்.",
+      "category": "higher_studies",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "PRAC020_TG",
+      "instruction": "Resume/CV eppadi ezhudhuvadhu?",
+      "current_output": "Resume essentials: 1) Contact info - email (professional), phone 2) Education - reverse chronological, CGPA 3) Skills - technical + soft skills 4) Projects - 2-3 relevant ones with outcomes 5) Internships/Experience 6) Achievements - quantify where possible 7) Extra-curricular - leadership roles. Format: 1 page for freshers, clean design, no photos (India OK), PDF format. Avoid: Spelling errors, lying, lengthy paragraphs. Templates: Canva, Novoresume free options.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM013_TG",
+      "instruction": "JEE-ku endha books padikkanum?",
+      "current_output": "Essential books: Physics - HC Verma, DC Pandey, Irodov (Advanced). Chemistry - NCERT (must), OP Tandon (Physical), Himanshu Pandey (Organic), JD Lee (Inorganic). Maths - RD Sharma, Cengage series, Arihant. NCERT = Foundation. Beyond NCERT for JEE Advanced. Online: PYQs from NTA website, mock tests from coaching platforms. Quality > Quantity - one book per subject master pannunga.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE005_TG",
+      "instruction": "Velaikku pogum bodhe padikka mudiyuma?",
+      "current_output": "Mudiyum. Evening colleges (5pm-9pm), Sunday classes, correspondence courses, online degree programs (SWAYAM, NPTEL) moolam velai paathukitte padikkalam. UGC approved distance education universities-la seralam.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM029_TG",
+      "instruction": "Mock test ethanai murai ezhuthanum? Eppadi analyze panrathu?",
+      "current_output": "Mock test frequency: Last 2 months - weekly 2-3. Last month - daily. Analysis steps: 1) Check answers immediately 2) Category-wise error (silly mistake, concept gap, time issue) 3) Track weak areas 4) Revise mistakes same day 5) Redo wrong questions after 3 days 6) Score tracking graph maintain 7) Time per question analysis 8) Attempt strategy review. Sources: Official previous papers, coaching test series, free online (Testbook, Gradeup). Quality > quantity of mocks.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA021_TG",
+      "instruction": "PMEGP loan-ku eppadi apply seivathu?",
+      "current_output": "Prime Minister's Employment Generation Programme: Manufacturing-ku ₹50 lakh, Service-ku ₹20 lakh varai. Subsidy: General 15-25%, SC/ST/Women 25-35%. Process: 1) www.kviconline.gov.in-la register 2) Business plan submit 3) Bank verification 4) Loan sanction 5) EDP training (mandatory) 6) Disbursement. Age: 18+. Education: 8th pass (₹10 lakh+), any (₹10 lakh varai). District Industries Centre-la help available.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH010_TG",
+      "instruction": "Tamil Nadu-la BBA/BCA admission eppadi nadakkudhu?",
+      "current_output": "+2 any group pass. Govt colleges-ku: TNGASA counselling moolam. Private colleges: Direct application. BBA - Business padippu, BCA - Computer padippu. Duration: 3 years. Govt college fee: ₹3,000-8,000/year. Anna University affiliated colleges pala irukku.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO003_TM",
+      "instruction": "ஒரு பள்ளியிலிருந்து இன்னொரு பள்ளிக்கு TC எப்படி வாங்குவது?",
+      "current_output": "**Transfer Certificate (TC) Process:**\n\n**Step 1: Application**\n- பெற்றோர் பள்ளி தலைமையாசிரியரிடம் எழுத்துபூர்வ விண்ணப்பம்\n- காரணம் குறிப்பிடவும் (Transfer, Moving, etc.)\n\n**Step 2: Dues Clearance**\n- Library books return\n- Fees (if any) paid\n- ID card return\n\n**Step 3: TC Issue**\n- Govt school: 3-7 days\n- Private school: 7-15 days\n- கட்டணம்: Govt - Free, Private - ₹100-500\n\n**TC-ல் என்ன இருக்கும்:**\n- Student name & DOB\n- Class studied\n- Conduct & Character\n- Date of leaving\n- Medium of instruction\n- Community/Caste\n\n**புதிய பள்ளியில் சேர:**\n- Original TC\n- Previous marksheets\n- Aadhaar\n- Community certificate\n\n**TC மறுக்கப்பட்டால்:**\n- DEO (District Education Officer) புகார்\n- School-க்கு எதிராக action எடுக்கப்படும்",
+      "category": "school_education",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "AGE_008_TG",
+      "instruction": "Sports-la interest irukku, padippum sports-um combine panna mudiyumaa?",
+      "current_output": "Absolutely yes! Benefits: 1) Sports quota admission in colleges 2) Government jobs-la extra marks 3) Scholarships for sportspersons 4) Health and discipline. How: 1) Join school sports team 2) District sports coaching centres - free 3) SAI training 4) Balance: Morning sports, evening study. Careers: Sports quota → College → Job OR Professional sports. Many IAS officers, doctors are sportspersons. Time management key.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 1,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT027_TG",
+      "instruction": "Thirukkural Olympics-la mention aanadha?",
+      "current_output": "Aam! 2004 Athens Olympics-la opening ceremony-la Thirukkural quote display aanadhu: 'Yaadhum oore yaavarum kelir' - 'Every land is my homeland, all people are my kin'. Ulaga sagodharaththuvathai kaattum indha kural Olympic spirit-a perfect-aa represent panniyathu. Idhu Tamil community-kku migapperiya perumai!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT137_TG",
+      "instruction": "Meenakshi Amman Kovil (Madurai) patri sollungal?",
+      "current_output": "Meenakshi Sundareswarar Kovil Madurai-oda heart. Sirappugal: 1) 14 gopurangal - therku gopuram 170 adi uyaram, 2) 33,000 sirpangal, 3) Porthamarai Kulam - punidhanaana tank, 4) Aayiram Kaal Mandapam - 985 pillars, 5) Chithirai Thiruvizha - 1 million+ per varuvaargal. Nayakkar kaalathil virivupaduththappattathu. World's new 7 wonders-la shortlist aanadhu!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT113_TG",
+      "instruction": "Konganar pulse diagnosis-a eppadi explain panniyirukkaar?",
+      "current_output": "Konganar 'Naadi Paritchai' (pulse diagnosis) patri virivaga ezhuthiyuLLaar. Moondru viralgalaal manikattil naadiyai unarvadhu - Vaadha Naadi, Pittha Naadi, Kapa Naadi. 'Endha naadi eppadi adikkudhu, enna noi' endru formulas koduththuLLaar. Modern doctors-um appreciate panraanga indha ancient technique-a. Without any equipment-la diagnosis seiya mudiyum!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT130_TG",
+      "instruction": "Siddhar paadalgalai engge ketkalaam/padikkalaam?",
+      "current_output": "Siddhar paadalgal access seiya: 1) Project Madurai - free Tamil texts online (projectmadurai.org), 2) Tamil Virtual Academy - government site, 3) YouTube - vilakkanagalodu paadalgal, 4) Books - Chennai Higginbothams, Pari Nilayam, 5) Apps - Siddhar Paadalgal app, 6) Libraries - University of Madras, Connemara Library. Original palm leaves Saraswathi Mahal Library (Thanjavur)-la preserve seiyappattuLLana.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT011_TG",
+      "instruction": "'Vinayaal vinayaakki kodal' - sombala patri kural enna solludhu?",
+      "current_output": "Kural: 'Vinayaal vinayaakki kodal nanaigavul yaanaiyaal yaanaiyaath thatru'. Artham: Oru seyalai vaiththu innoru seyalai saadhippadu, madham pidittha yaanaiyai innoru yaanaiyaal pidippadu pondradhu. Puththisaalithanamana uzhaippai idhu vilakkugiradhu. Smart work-a patri 2000 varuda pazhaiya gnaanam!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT025_TG",
+      "instruction": "Thirukkural-a artificial intelligence (AI) eppadi payanpaduththugiradu?",
+      "current_output": "1) ChatGPT, Claude pondra AI-gal Thirukkural explain pannum, 2) Tamil NLP research-la Thirukkural corpus payanpadugiradhu, 3) AI-powered apps kural recommend pannum situation-kku etrapa, 4) Voice assistants Thirukkural sollum, 5) Machine learning Thirukkural translations improve panna udhavugiradhu. Tamil-kku AI develop panravanga Thirukkural-a test case-aa use panraanga!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT105_TG",
+      "instruction": "Agathiyar yaar? Avar yaen mukkiyamaanavar?",
+      "current_output": "Agathiyar (Agasthiyar) Siddhargaloda thalaivar, 'Guru Moorthi' endru azhaikkapadubavar. Tamil mozhikku ilakkanam ezhuthiyavar endru nambappadugiradhu (Agaththiyam). Sivaperumaan ivarukku neradiyaaga gnaanam aLiththathaaga nambikkai. Thennindiyaavukku vadakkilirundu vandhavar. Podhigai malaiyil indrum iruppathaga nambappadugiradhu. Siddha medicine-oda founding father.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT075_TG",
+      "instruction": "Loan kodukkalama vendaama?",
+      "current_output": "'Eeyaadha selvaththin eeyum pasi' - kodukkaadhaa selvam payanillai. Aanaal: 'Koduppadu aatraami kooruvadhu azhagalla' - kodukka mudiyaadhabodhu 'illai' solvathu thavaRilla. Assess carefully - ungal financial stability paarthu, thirumba kidaikkum endru nambikkai irundhaal mattum kodungal. Afford panna mudiyaadhAdhai loan kodukkaadheergal.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT048_TG",
+      "instruction": "'Vinaikkan vinaiyudaiyaan' - velayoda mukkiyaththuvam patriya kural enna?",
+      "current_output": "Kural: 'Vinaikkan vinaiyudaiyaan kenmai veraaga ninaippaanai neengum thiru'. Artham: Velai seiyum bodhu fully focused illaamal, vera vishayangal ninaippavanaai selvam vittu poyvidum. Work-la distraction = failure. Concentration and dedication needed for success.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT131_TG",
+      "instruction": "Tamil gopura kattidakkalai endraal enna?",
+      "current_output": "Tamil kovil kattidakkalai Tamil Nadu-oda unique temple architecture. Features: 1) Gopuram - piramaanda nuzhaivaayil gopurangal, 2) Vimanam - karuvrai mel amaippu, 3) Mandapam - pillared halls, 4) Prakaaram - temple corridors, 5) Kulam - temple tank. Pallavargal (7-9th century) thodangi, Chozhargal (9-13th century), Pandiyargal, Nayakkargal idhai develop panninaargal. World-la unique style!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT034_TG",
+      "instruction": "Kanyakumari Thiruvalluvar silai evvalavu uyaram?",
+      "current_output": "Silai: 133 adi (133 adhigaarangalukku), Peedam: 38 adi (Araththuppaal 38 adhigaarangalukku), Motham: 171 adi. Kadalil oru paarayin meedhu nirkkiradhu.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT089_TG",
+      "instruction": "Spy / ulavali patri enna solkiraar Valluvar?",
+      "current_output": "Kural: 'Otrum uraisaandra noolum ivaiyirandum thetrrenka mannavan kan'. Ulavaligalum, nalla noolkalum arasanoda kangal. Melum: 'Otrinaan otrip porulthERiyaa mannavan kotrrang kolakkidandhadhu il'. Ulavu illaamal aatchi nadaththa mudiyaadhu. Intelligence gathering is essential for governance - RAW, IB concepts 2000+ years ago!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT151_TG",
+      "instruction": "Chettinad architecture sirappu enna?",
+      "current_output": "Chettinad - Sivaganga district-la ulla paguthi. Nattukottai Chettiars vasikkum idam. Architecture sirappu: 1) Piramaanda maaligaigal - 50-100 rooms, 2) Burma teak, Italian marble, Belgian glass, 3) Athangudi tiles - handmade, 4) Spacious courtyards, 5) Ornate pillars. 19th-20th century-la vanigathil panakaararkalaga irundhaargal. Ippodhuu pala houses heritage hotels. Karaikudi famous for Chettinad food too!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT125_TG",
+      "instruction": "Siddhargal meditation patri enna solkirargal?",
+      "current_output": "Siddhargaloda meditation techniques: 1) Andhar mounam - inner silence, 2) Manthira japam - mantra repetition, 3) Oli dhiyaanam - light meditation, 4) Suvaasa kavanippu - breath awareness, 5) Kundalini dhiyaanam - chakra meditation. 'Manam odunginaal anaiththum odungum' enbadhu core teaching. Daily practice-kku even 10 minutes bodhum endru solkiraargal. Naveena mindfulness-oda Tamil moolam idhuvae!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT024_TG",
+      "instruction": "Social media-la Thirukkural eppadi popular aanadhu?",
+      "current_output": "1) #Thirukkural hashtag Twitter/X-la trending aagudhu, 2) Instagram-la artistic kural posts popular, 3) WhatsApp status-la kuralgal share aagindrana, 4) YouTube-la vilakka videos millions of views perugindrana, 5) Reels-la quick kural explanations viral aagindrana. Gen Z kooda Thirukkural-a 'ancient wisdom' endru appreciate panraanga. Memes kooda irukku - 'Valluvar said it 2000 years ago' format!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT158_TG",
+      "instruction": "Tholkappiyam endraal enna? Yaar ezhudhinar?",
+      "current_output": "Tholkappiyam - Tamilin migap pazhamaiyaana ilakkana nool. Tholkappiyar ezhuthiyathu. Ezhutthu, Sol, Porul endra moondru adhikaarangal. Tamil mozhiyoda grammar mattumalla, vaazhkai murai, panpaadu ellam idhil ullana. Agathiyaroda maanavan endru korappadugiradhu. 'Tholkappiyam katravan sol kaappiyam' enbadhu pazhamozhi. Indrum Tamil studies-kku aadharam.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT031_TG",
+      "instruction": "Thirukkuralil eththanai kuralgal ullana?",
+      "current_output": "1330 kuralgal. 133 adhigaarangal, ovvoru adhigaarathilum 10 kuralgal. Indha ennikkayai ninaivil vaikka: 133 x 10 = 1330.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT179_TG",
+      "instruction": "Nayanmaargal yaar? Eththanai per?",
+      "current_output": "Nayanmaargal - Saiva bhakthi iyakkathoda 63 punithargal. 'Nayanmaar' endraal 'thalaivar' endru porul. Ivargal Sivaperumaaanai vanangi, bhakthi maarggathai parappinaargal. Vevveru jaadhi, thozhil, pinnaniyilirundhu vandhavargal - arasar, vanigar, velaikkarar, pengal ellaarum undu. Sekkizhaar ezhuthiya 'Periya Puranam' ivargal varalatrai koorugiradu. Saiva samayathoda aadharam.",
+      "category": "saints_sages",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT171_TG",
+      "instruction": "Therukoothu endraal enna?",
+      "current_output": "Therukoothu - Tamil Nadu-oda traditional street theatre. Iravu muzhuvathum nadakkum. Mahabharata, Ramayana kathaigal popular. Sirappugal: 1) Vanna makeup - face painting, 2) Elaborate costumes, 3) Live music - harmonium, thavil, 4) Dialog + song + dance, 5) Audience participation. Kanchipuram, Villupuram areas-la famous. UNESCO Intangible Cultural Heritage list-la consideration-kku. Village entertainment before TV/cinema vandhadhu!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT153_TM",
+      "instruction": "கோயில் darshan timings எப்படி தெரிந்துகொள்வது?",
+      "current_output": "Darshan timings தெரிய: 1) Official temple websites - major temples maintain, 2) Dinamalar/Dinakaran temple section, 3) Temple phone numbers - call and ask, 4) Google Maps reviews - visitors update timings, 5) TN Tourism website. General pattern: Morning 6-12, Evening 4-8. Noon break (உச்சி சாந்தி) 12-4pm closed. Special darshan (VIP) tickets available in big temples - book online. Festivals-ல் extended hours. Arrive early for popular temples!",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT038_TG",
+      "instruction": "'Piranpazhi kooruvan thanpazhi' - idhu enna solludhu?",
+      "current_output": "Kural: 'Piranpazhi kooruvan thanpazhi yullum thirantherindhu koorap padum'. Artham: Piraraip pazhippavan, than kuraigalai maRaikka mudiyaadhu. Avan kuraigalum aaraayappattu veliye varum. Others-a criticize panravan own flaws expose aagum. Gossip panraadheeargal - ungal secrets-um veliye varum!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT076_TG",
+      "instruction": "Rich aaga aasai - aanaal shortcut vendaam. Enna vazhi?",
+      "current_output": "'Arulodum anbodum vaaraap porulaakkam pullaar purala vidal'. Arul, anbu illaamal sambaadhikkum panathai vittuvidunagl. Melum: 'Theeyavai seidhar kedudhal' - wrong ways-la earn panninal kettuppoveergal. Hard work + smart work + integrity = sustainable wealth. Shortcuts lead to downfall!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT046_TG",
+      "instruction": "'Thoonguka thoongich seyarpala' - patience patriya kural enna?",
+      "current_output": "Kural: 'Thoonguka thoongich seyarpala thoongarka thoongaadhu seyyum vinai'. Artham: Kaaththirukka vendiya kaariyangalukku kaaththirukka vendum. Udane seiya vendiyathai thaamadhikkak koodaadhu. Right timing-a understand panradhu success-kku key. Some things need patience, some need immediate action!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT042_TG",
+      "instruction": "'Vanja manaththaan paditrrozhukam' - nadippu patriya kural enna?",
+      "current_output": "Kural: 'Vanja manaththaan paditrrozhukam bhoothangal aindhum agaththe nagum'. Artham: Vanjaka manam kondavan nallavan pol nadikkum bodhu, aimbhoothangalum (nilam, neer, neruppu, kaatru, aakaayam) ullukul sirikkum. Fake people-a universe kooda keli panradhu! Authenticity-yoda mukkiyaththuvam.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT120_TG",
+      "instruction": "Pattinaththaar yaar? Avar kadhai enna?",
+      "current_output": "Pattinaththaar Kaaveripoompattinathil periya vanighar. Migavum selvandar. Oru naal avar magan oru packet thandhaar - ulle paarthal oosiyum noolum. 'Idhuvum unakku vendaam' endru solli sendruVittaar magan. Idhai unarntha Pattinaththaar ella selvaththaiyum vittu thuravi aanaar. 'Enna punniyam seidhanai nenjamae' endra paadal famous.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

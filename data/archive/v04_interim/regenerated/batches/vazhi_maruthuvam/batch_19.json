@@ -1,0 +1,71 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 19,
+  "sample_count": 9,
+  "samples": [
+    {
+      "id": "HLTH175_TG",
+      "instruction": "National Institute of Siddha (NIS) special treatments enna?",
+      "current_output": "NIS Tambaram specialties: 1) Noi Naadal (diagnostics), 2) Maruthuvam (general medicine), 3) Kuzhanthai Maruthuvam (pediatrics), 4) Sirappu Maruthuvam (specialties), 5) Nanju Nool (toxicology), 6) Gunapadam (pharmacology), 7) Pothu Maruthuvam. Special: 1) Varmam unit, 2) Panchakarma therapies, 3) Yoga therapy, 4) Research wing. Referral: Complex cases from all over India. Contact: 044-22411611.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH100_TG",
+      "instruction": "Wrong medicine kodutthuttaanga - action enna?",
+      "current_output": "Pharmacy negligence! Actions: 1) Don't use if noticed, 2) Return with bill, 3) If used and harm occurred - medical treatment first, 4) Complaint: Drug Inspector, Consumer Forum. Compensation: Medical expenses + damages if harm. Severe harm/death: Criminal case possible (Section 304A). Evidence: Wrong medicine pack, prescription, bill. Pharmacist license: Can be cancelled.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH011_TM",
+      "instruction": "Free vaccination schedule என்ன? எங்கே போகணும்?",
+      "current_output": "Universal Immunization Program - FREE for all children. Schedule: Birth - BCG, OPV, Hep B; 6 weeks - DPT, OPV, Hep B; 10 weeks - DPT, OPV; 14 weeks - DPT, OPV, Hep B; 9 months - Measles, Vitamin A; 16-24 months - DPT booster, OPV, Measles. Where: PHC, Government hospital, Anganwadi. Carry: Child's health card. Missed dose: Can catch up - consult ANM.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH201_TG",
+      "instruction": "Weight loss-kku Ayurveda treatment?",
+      "current_output": "Ayurveda approach: Not just weight loss - metabolic correction. Treatments: 1) Udvartana (herbal powder massage), 2) Vamana/Virechana (detox), 3) Lekhana Basti (specific enema), 4) Internal medicines (Triphala, Guggulu), 5) Diet as per Prakriti, 6) Lifestyle modifications. Duration: 3-6 months for sustainable results. Benefit: Addresses root cause, prevents regain. Not: Quick fix - gradual healthy weight loss.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH082_TM",
+      "instruction": "Hospital-ல் cleanliness இல்ல, infection risk - complain பண்ணலாமா?",
+      "current_output": "Yes! Infection control mandatory. Complaint: 1) Hospital management first, 2) DHS office (District Health Services), 3) Clinical Establishment Authority, 4) Municipal health officer (for general sanitation). Evidence: Photos, videos (if possible). Severe: Hospital license can be suspended. Also check: Bio-medical waste disposal, hand hygiene stations, clean linens.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH222_TG",
+      "instruction": "Fasting therapy (Upvas) safe-aa? Eppadi seiradhu?",
+      "current_output": "Therapeutic fasting types: 1) Fruit fast - only fruits, 2) Juice fast - fresh juices, 3) Water fast - only water (supervised only), 4) Intermittent fasting - 16:8 popular. Benefits: Detox, weight loss, digestive rest, autophagy (cell cleaning). Safe fasting: 1) Start slow (intermittent), 2) Stay hydrated, 3) Break fast gently (not heavy food), 4) Medical conditions - consult doctor. Avoid: Diabetes (uncontrolled), pregnancy, children, underweight.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH075_TM",
+      "instruction": "Unnecessary tests/procedures சொல்றாங்க - refuse பண்ணலாமா?",
+      "current_output": "Yes! Your body, your choice. Rights: 1) Ask why each test needed, 2) Get written justification, 3) Refuse non-essential tests, 4) Second opinion for major procedures. Red flags: 1) Full body checkup push, 2) Expensive test for minor issue, 3) Surgery suggestion without trying medicine first. If pressured: Change doctor/hospital. Complaint: If unethical push - Medical Council.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH135_TM",
+      "instruction": "Free contraceptives எங்கே கிடைக்கும்?",
+      "current_output": "Free at: 1) PHC, 2) Government hospitals, 3) Anganwadi centres, 4) Urban health centres. Available: 1) Condoms, 2) Oral contraceptive pills (Mala-N, Mala-D), 3) IUD (Copper-T), 4) Injectable contraceptives, 5) Emergency contraceptive pills. Counseling: ANM/health worker will explain options. Choice: Woman's decision - no coercion. Sterilization: Also free but completely voluntary.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH215_TM",
+      "instruction": "Nilavembu Kudineer எப்படி தயாரிப்பது?",
+      "current_output": "Ingredients: Nilavembu (Andrographis), Vetiver, Coriander, Dry ginger, Pepper, and 5 more herbs. Ready-made: Government distributes, pharmacies sell. Home preparation: 1) Get powder from Siddha pharmacy, 2) Boil 5g in 100ml water, 3) Reduce to 50ml, 4) Strain and drink warm. Dosage: 30-60ml, twice daily. When: Viral fever, dengue prevention, monsoon season. Avoid: Pregnancy, very young children - consult doctor.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

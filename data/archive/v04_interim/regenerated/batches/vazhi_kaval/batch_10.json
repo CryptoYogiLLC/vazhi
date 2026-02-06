@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 10,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "OS052",
+      "instruction": "WhatsApp message 'Uzhavar sandhai registration open. 5000 deposit for permanent stall.' Uzhavar sandhai la sell panna chance, genuine aa?",
+      "current_output": "Uzhavar Sandhai registration through agriculture department office, not WhatsApp. No large deposits for stall allocation. Visit nearest Uzhavar Sandhai office or agriculture extension officer. Government market stalls have proper application process.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG015",
+      "instruction": "AnyDesk download pannunga account problem fix pannuren-nu bank officer solraanga",
+      "current_output": "Remote access scam ithu sir! AnyDesk, TeamViewer mathiri apps download panna - avanga unga phone control pannuvanga, bank account kaali aagum!",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR024",
+      "instruction": "50,000 poachu. Full process follow pannanum. Complete checklist kudungal.",
+      "current_output": "Day 1 (Critical): Bank fraud helpline ✓, Account freeze/dispute ✓, 1930 call ✓, cybercrime.gov.in ✓, Evidence backed up ✓, Scammer blocked ✓. Day 2-3: Bank branch written complaint ✓, Police FIR ✓, UPI app complaint ✓, Screenshots emailed to self ✓. Day 7: Bank acknowledgment ✓, FIR copy ✓, Cyber cell follow-up ✓. Day 30: Status check ✓, Escalation if needed ✓, Banking Ombudsman if unhelpful ✓. Day 60: Ombudsman complaint ✓, Consumer Forum prep ✓. Recovery chance: 30-40% with fast reporting. Timeline: 2-6 months.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS001",
+      "instruction": "Oru email vandhuchu 'Your company server is compromised, immediate security audit needed. Click here to download security patch' nu IT department name la. Company la security team irukke, ipo enna pannanum?",
+      "current_output": "Classic phishing targeting IT professionals! Real security alerts come through internal channels, not random emails. Forward to actual security team, don't click any links. Attackers know IT people have admin access - that's why they target you specifically.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS040",
+      "instruction": "Bro, LinkedIn la Google HR message pannaan, interview fee 5K nu. Legit aa da?",
+      "current_output": "Fake da! Google interview fee kekaadhu - they'll pay you for onsite travel. LinkedIn la fake recruiters romba irukkaanga. Official careers.google.com la apply pannu.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS011",
+      "instruction": "'Diwali bonus from PM Modi - 7500 Rs direct transfer! Apply now' - WhatsApp-ல வந்துச்சு. Real scheme-ஆ?",
+      "current_output": "100% scam! PM name use பண்ணி Diwali-ல இந்த scam viral ஆகும். Government direct transfer-க்கு WhatsApp link கிடையாது. Official portal apply தான் valid. 'PM bonus' forward எல்லாம் fake.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS067",
+      "instruction": "Call vandhudhu 'BIS hallmark compliance deadline. Pay 25,000 registration fee immediately or face shop sealing.' Hallmark mandatory aayiduchhe, pay pannidlama?",
+      "current_output": "BIS hallmarking registration through bis.gov.in with official fees (not 25,000). Process takes time, no instant 'deadline'. Shop sealing requires legal process through consumer affairs department. Call BIS helpline 1800-11-4000 for genuine registration guidance.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "GI002",
+      "instruction": "'Income Tax department - உங்கள் refund pending, bank details update செய்யுங்கள்' என்று email வந்தது.",
+      "current_output": "IT department email-ல் bank details கேட்காது. Official IT portal (incometax.gov.in) மட்டுமே use செய்யுங்கள். இது phishing email.",
+      "category": "govt_impersonation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS027",
+      "instruction": "Admission season - 'Engineering seat guaranteed in top college! Pay 2 lakh management quota' - broker சொல்றாரு. Trust பண்ணலாமா?",
+      "current_output": "Mostly fraud! Admission brokers 90% scammers. 'Guaranteed seat' என்று money வாங்கி disappear ஆவாங்க. Official counselling process மட்டும் follow பண்ணுங்க. TNEA website check பண்ணுங்க. Broker avoid பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS074",
+      "instruction": "Call vandhudhu 'RERA registration update mandatory. Pay 20,000 processing fee immediately.' RERA registered broker, update pannanum aa?",
+      "current_output": "RERA agent registration through state RERA portal (rera.tn.gov.in for TN). Renewal fees are fixed and much lower. Updates done online, no phone-based processing. Check your registration status directly on RERA portal. Scammers target real estate professionals.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS085",
+      "instruction": "WhatsApp message 'CAPF canteen credit offer. Pay 1000 registration for 5000 credit limit.' Canteen la benefit kedaikum aa?",
+      "current_output": "Canteen facilities managed by CSD/departmental process. No external 'credit registration' schemes. Benefits through official service channels. Scammers target security personnel knowing their canteen reliance. Check with your unit welfare officer.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS035",
+      "instruction": "Office la irukken, call vandhudhu - 'Unga father collapse, [Hospital Name] la admit, immediate deposit 80,000, else treatment start pannaadhu' nu.",
+      "current_output": "FIRST - Father ku call pannunga, mother ku call pannunga, home ku call pannunga. Real hospitals treatment start pannitu payment pesuvaanga - especially emergency. 'Immediate deposit else no treatment' pressure tactic. 2 minutes verification worth it.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS030",
+      "instruction": "WhatsApp group la add aanaen - 'Crypto trading signals, forex guaranteed profits, invest minimum 50,000.' Screenshots la lakhs profit kaaturaanga.",
+      "current_output": "Screenshots fake or manipulated. 'Guaranteed profits' in trading impossible - if true, why share? Group members praising = part of scam gang. 50,000 invest pannina - initial small withdrawal allow pannuvaanga, then 'invest more to withdraw' trap. SEBI/RBI regulated platforms only use pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS003",
+      "instruction": "LIC la irundhu call vandhudhu, 'Ayya ungal policy mature aairuchu, 5 lakh bonus irukku. Bank details kudunga, direct credit pannidurom' nu. Naan LIC policy vachirukken, namba vendiyaadhu aa?",
+      "current_output": "LIC phone la bank details kekaadhu ayya. Policy maturity formal letter varum, signed by branch manager. Bonus irundhaalum branch la poi verify pannunga. Phone la details kuduthaa en account la irukka paisa um pogum. LIC branch ku direct ponga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS016",
+      "instruction": "'Christmas charity - donate for orphans, get tax exemption certificate' - email வந்துச்சு. Donate பண்ணலாமா?",
+      "current_output": "Verify பண்ணுங்க! Christmas-ல fake charity scams அதிகம். Unknown organization-க்கு direct donate பண்ணாதீங்க. Registered NGO website-ல donate பண்ணுங்க. 80G certificate issuing authority check பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT013",
+      "instruction": "WhatsApp la unknown number video call vandhuchchi ayyaa, oru ponnu... aprom face screenshot eduthuttaanga. 50K illana video family ku anuppurom nu blackmail panraangadaa. Bayam aa irukku, enna pannuvaandaa?",
+      "current_output": "Pay pannaadheenga ayyaa - pay pannaalum nirkaadhu. Organized gang idhu. cybercrime.gov.in la report pannunga, social media temporarily close pannunga. Family kitta sollunga - 'shame' dhaan ivanga weapon. Tirunelveli cyber crime la case panna mudiyum. Bayapadaadheenga ayyaa.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS028",
+      "instruction": "'Pre-launch offer - Plots near Chennai airport, 1 lakh per cent, value double in 2 years' nu ad paathen. Small investment start pannalama?",
+      "current_output": "'Pre-launch' often means no proper approvals yet. 'Near airport' - could be 50km away. 'Value double' - no guarantee in real estate. DTCP/CMDA approval verify pannunga, site physically visit pannunga, legal opinion vaangunga. Paper la nalla theriyum, ground reality different.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT020",
+      "instruction": "'Fasal Bima claim ready irukku, 1000 processing fee pay pannungappa' nu call vandhirukkappa. Claim apply pannirukkenbappa, genuine aappa?",
+      "current_output": "Crop insurance claim ku phone la fee kekaadhuappa! Agriculture office la irundhu official communication varumappa. Processing fee nu call panradhu fraudappa. Thiruvaiyaru la farmers ipdi maatikirukkanga. Agriculture office ku poi verify pannungappa.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR014",
+      "instruction": "Illegal loan app harassment - contacts ku call pannuraanga, morphed photos threat. Enna pannuradhu?",
+      "current_output": "Immediate: STOP paying (harassment won't stop), document ALL harassment, warn close contacts. Step 1: RBI Complaint at cms.rbi.org.in - 'Complaint against unauthorized digital lending app'. Step 2: Play Store report - Flag → 'Financial harm'. Step 3: Cyber Crime FIR - Sections 66E IT Act (privacy violation), 506 IPC (criminal intimidation), 509 IPC (insult modesty). Step 4: Legal notice through lawyer. Step 5: Twitter tag @RBI. Legal protection: Courts ruled loan app harassment illegal. Support: Women helpline 181, Legal Services Authority (free aid).",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS048",
+      "instruction": "Call vandhudhu 'Fastag KYC update mandatory. Pay 200 or toll charges double.' Fastag use pannuren, KYC pannanum aa?",
+      "current_output": "Fastag KYC done through bank that issued tag or NHAI portal - free process. No 200 rupee KYC fee exists. Toll charges don't double for KYC delay. Scammers know drivers fear toll issues. Update KYC through official bank app or ihmcl.in only.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS056",
+      "instruction": "Call vandhudhu 'Nursing council license renewal overdue. Pay 8000 immediately or face suspension.' License suspend aagidumaa?",
+      "current_output": "TN Nursing Council renewal through official council office and portal. Renewal fees much lower than 8000. Suspension requires proper show cause notice, not phone threats. Check tamilnadunursingcouncil.com for actual process and fees. Never pay phone callers.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS025",
+      "instruction": "Call vandhudhu 'CAG audit notification for your department. Personal appearance fee 10,000 or show cause notice issued.' Government job la audit matter serious, pay pannidlama?",
+      "current_output": "CAG audit notices come through official department channels, not phone calls. No 'personal appearance fee' exists in government system. CAG communicates through written notices to department heads. This exploits government employees' fear of audit - verify from your DDO.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT026",
+      "instruction": "'Turmeric Board la irundhu pesuren yi, subsidy ready irukku, 2000 processing fee' nu call vandhuduchu. Genuine aa yi?",
+      "current_output": "Government subsidy ku processing fee illa yi! Turmeric Board phone la fee kekaadhu yi. Unga details vera vazhila therinjirukku yi. Kodumudi, Gobichettipalayam la farmers ipdi maatikirukkanga yi. Agriculture office ku poi verify pannu yi.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS042",
+      "instruction": "Call vandhudhu 'Food license renewal from FSSAI. Pay 10,000 online or shop sealed tomorrow.' Restaurant irukku, license matter serious, pay pannidlama?",
+      "current_output": "FSSAI renewal done through foscos.fssai.gov.in portal with fixed government fees (much less than 10,000). Sealing requires proper legal process, not instant threats. Check actual license validity date. Scammers target food businesses knowing license fear.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR008",
+      "instruction": "Police station la FIR file panna enna process? Refuse pannaa enna pannuradhu?",
+      "current_output": "Documents needed: Written complaint (2 copies), evidence printouts, ID proof, bank statements, screenshots, cyber crime acknowledgment. Sections to mention: 420 IPC (Cheating), 406 IPC (Breach of trust), 66C IT Act (Identity theft), 66D IT Act (Cheating using computer). If police refuse: Step 1: Written application citing Section 154(3) CrPC. Step 2: Meet SP/DSP. Step 3: Section 156(3) CrPC application to Judicial Magistrate. Step 4: State Human Rights Commission. Step 5: High Court writ petition (if all else fails).",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

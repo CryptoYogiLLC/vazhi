@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 17,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CONS003_TG",
+      "instruction": "Consumer complaint-kku lawyer venumaa?",
+      "current_output": "Vendaam. Consumer forum-la neengale directly case nadathalaam. Simple procedure, no court fee for claims up to Rs.5 lakh. Complex cases-kku lawyer udhaviyaa irukum. But mandatory illa.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF017_TG",
+      "instruction": "Vehicle fitness certificate eppodhu venum?",
+      "current_output": "Transport vehicles: Every year (8 years-kkup piragu every 6 months). Non-transport: 15 years-kkup piragu every 5 years. Test: Emission, brakes, lights, etc. Expired fitness: Rs.2,000 fine. Online booking: parivahan.gov.in.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI013_TG",
+      "instruction": "Divorce-la child custody yaarukku kidaikkum?",
+      "current_output": "'Welfare of child' principle - yaar better care kodukka mudiyumo avarkalukku. General preference: Below 5 years - mother. 5+ years - child's preference consider aagum. Father-kkum custody kidaikkalam if mother unfit. Joint custody possible.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS013_TM",
+      "instruction": "Flash sale-ல் order confirm ஆனது, பிறகு cancel பண்ணிட்டாங்க - legal-ஆ?",
+      "current_output": "Unilateral cancellation after confirmation unfair trade practice ஆகும். Consumer forum-ல் complaint போடலாம். Price difference + compensation கேட்கலாம். 'Out of stock' excuse valid அல்ல - stock management seller responsibility.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP025_TM",
+      "instruction": "GPA (General Power of Attorney) மூலம் property sale valid-ஆ?",
+      "current_output": "Supreme Court ruling (2011): GPA மூலம் property sale NOT valid. GPA holder sale deed execute பண்ணலாம், but final ownership transfer Principal நேரில் வந்து sign செய்யணும் அல்லது properly registered Special Power of Attorney வேண்டும்.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS012_TG",
+      "instruction": "Fake product vitra e-commerce site-kku case podalaamaa?",
+      "current_output": "Aama. Counterfeit/fake products virpathu illegal. Consumer forum-la compensation claim seyyalam. Trademark owner-kkum report pannalam. Police complaint (IPC 420 - cheating) podalam. E-commerce platform-um liable.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE011_TG",
+      "instruction": "Succession certificate eppodhu venum?",
+      "current_output": "When needed: Bank accounts, shares, securities claim seyya. Will illaadha cases-kku. Apply: District Court. Documents: Death certificate, legal heir proof, asset details. Fee: Asset value based. Time: 3-6 months. Alternative: Nominee-aa irundhaal thevai illa.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL011_TM",
+      "instruction": "Retrenchment compensation எவ்வளவு கிடைக்கும்?",
+      "current_output": "Formula: 15 days average pay × years of service. Applicable: 100+ employees company, 1 year+ service. Notice: 3 months advance or 3 months pay. LIFO principle (Last In First Out) follow ஆகணும். Re-employment preference உண்டு.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL014_TG",
+      "instruction": "Maternity leave evvalavu naal kidaikkum?",
+      "current_output": "Maternity Benefit Act 2017: 26 weeks paid leave (first two children), 12 weeks (third child onwards). Before delivery: 8 weeks max. Adoption/surrogate: 12 weeks. Miscarriage: 6 weeks. 10+ employees company-kku applicable. Creche facility mandatory (50+ employees).",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_001_TG",
+      "instruction": "RTI endraal enna? Yaar file pannalaam?",
+      "current_output": "RTI = Right to Information Act 2005 - Government information perum urimai. Any Indian citizen file pannalam. NRI, Company, Trust - file panna mudiyaadhu. Government, PSU, government-funded NGO ellaathukkum RTI apply.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE015_TM",
+      "instruction": "Fake news share பண்ணினால் legal trouble வருமா?",
+      "current_output": "Yes, possible: IPC 505 (public mischief), 153A (promoting enmity), Epidemic Diseases Act (health misinformation). IT Rules 2021: Platforms must remove fake news. Knowingly spreading = higher liability. Before sharing: Verify from trusted sources. Fact-check websites use பண்ணுங்க.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM021_TG",
+      "instruction": "Online fraud-kku complaint enge poduvadhu?",
+      "current_output": "1) Cyber Crime portal: cybercrime.gov.in (national), 2) Local Cyber Crime police station, 3) 1930 helpline (financial fraud), 4) Bank-kku immediately inform. Screenshots, transaction details, communication records - ellam save pannunga. 24 hours-kkul report panninaal money recover chance adhigam.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM023_TG",
+      "instruction": "Police station-la complaint kudukka poren, enna pannanum? (Chennai casual)",
+      "current_output": "Mudhalla enna nadandhuchunnu clear-aa ezhudhi vachukonga. ID proof, evidence (photos, messages) eduthutu ponga. FIR copy kelunga - free-dhaan. Register panna maruttha SP office-kku complaint podunga. Calm-aa irunga.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_011_TG",
+      "instruction": "Ration card complaint enge koduppadhu?",
+      "current_output": "Options: 1) Ration shop-la complaint book, 2) Taluk Supply Officer, 3) District Supply Officer, 4) Food helpline: 1967, 5) TNCSC website. Issues: Fake entries, quantity shortage, quality issues, dealer misbehavior. Aadhaar seeding problems: UIDAI + DSO.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI021_TG",
+      "instruction": "Adoption-kku eligibility criteria enna?",
+      "current_output": "CARA rules: 1) Age: 25-55 years, 2) Married couple: 2 years stable marriage, 3) Single parent: allowed (restrictions apply), 4) Income: sufficient to raise child, 5) Medical: physically/mentally fit, 6) No criminal record. Age difference with child: max 45 years.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI008_TG",
+      "instruction": "Divorce-la wife-kku enna rights irukku?",
+      "current_output": "Rights: 1) Maintenance (permanent alimony), 2) Streedhan (gifts given at marriage), 3) Share in husband's property (if jointly acquired), 4) Child custody preference (especially below 5 years), 5) Residence right till divorce. Interim maintenance during case nadakkumbodhe kidaikkum.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL012_TM",
+      "instruction": "Minimum wages Tamil Nadu-ல் எவ்வளவு?",
+      "current_output": "Varies by industry and skill level. Unskilled: Rs.410-450/day, Semi-skilled: Rs.430-500/day, Skilled: Rs.480-600/day (approximate, 2024). Labour Department website-ல் exact rates. Less கொடுத்தால் Labour Inspector-க்கு complaint.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP024_TG",
+      "instruction": "Single mother rights ennenna? Documents-la father name venumaa?",
+      "current_output": "Rights: 1) Birth certificate - mother name only acceptable, 2) School admission - father name not mandatory (Supreme Court), 3) Passport - mother as sole guardian okay, 4) Aadhar - single parent sufficient. Challenges: Some private institutions insist - quote Supreme Court judgment. Government schemes: Single mother pension available in TN. Child custody: Automatic to mother (unwed).",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP003_TG",
+      "instruction": "Guideline value endraal enna? Enge check panrathu?",
+      "current_output": "Government nirnnayitha minimum property value - idhukku keezhe register panna mudiyaadhu. Check: tnreginet.gov.in → Guideline Value Search → Zone/Village select. Actual sale higher-aa irundhaal actual value-kku stamp duty.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE020_TM",
+      "instruction": "Online-ல ஃப்ராட் ஆயிட்டேன், police-க்கு போனா ஒழுங்கா case போடுவாங்களா?",
+      "current_output": "Cyber crime special cell இருக்கு - trained officers. cybercrime.gov.in-ல் first complaint போடுங்க - track ஆகும். Local police-க்கும் FIR போடுங்க. Both simultaneously பண்ணலாம். Evidence (screenshots, bank statements) ready-ஆ வச்சுக்கோங்க.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL015_TG",
+      "instruction": "Sexual harassment complaint eppadi seivathu?",
+      "current_output": "Internal Complaints Committee (ICC)-kku written complaint. ICC illaattal Local Complaints Committee (District level). Time limit: 3 months from incident. POSH Act 2013 protection. Anonymous complaint-um valid. Retaliation-kku protection undu.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE010_TG",
+      "instruction": "Will contest pannalaamaa?",
+      "current_output": "Aama. Grounds: Undue influence, fraud, forgery, unsound mind, improper execution. Contest: Probate Court. Time: Before probate granted-kku ethirppu, after = revocation suit. Evidence: Medical records, witnesses, handwriting expert. Burden of proof: Contestant.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL003_TG",
+      "instruction": "Employer PF kattala - enna seyyalam?",
+      "current_output": "Complaint options: 1) EPFO portal: EPFiGMS (online grievance), 2) Regional PF Commissioner office, 3) Labour Commissioner. Employer liability: PF amount + 12% interest + damages (up to 100%). Criminal prosecution-um possible. Salary slip-la PF deduction check pannunga.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP021_TG",
+      "instruction": "Workplace-la sexual harassment, POSH Act enna solluthu?",
+      "current_output": "POSH Act 2013 (Prevention of Sexual Harassment): 1) Every office with 10+ employees - Internal Committee (IC) irukkanum, 2) Complaint: IC-kku 3 months-kkul, 3) Inquiry: 90 days-kkul complete, 4) Action: Transfer, warning, termination. No IC: Local Committee-kku complaint. Retaliation protection undu. Anonymous complaint-um valid.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE019_TG",
+      "instruction": "Pet animal-kku enna legal responsibilities?",
+      "current_output": "Responsibilities: Registration (some municipalities), vaccination, leash in public, damage liability. Pet cruelty: PCA Act - 3 months imprisonment + Rs.100 fine (old law, amendments pending). Noise nuisance: Neighbour complaint valid. Banned breeds: Check local rules.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

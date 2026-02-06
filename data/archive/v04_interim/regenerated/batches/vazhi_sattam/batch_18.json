@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 18,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "FAMI010_TM",
+      "instruction": "Wife maintenance எவ்வளவு கேட்கலாம்?",
+      "current_output": "Fixed formula இல்லை. Consider: 1) Husband income, 2) Wife income/earning capacity, 3) Standard of living, 4) Children custody, 5) Liabilities. Rough guide: Husband income-ன் 25-30%. Interim maintenance: 20-25%. Court discretion based on facts.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP022_TM",
+      "instruction": "Maternity leave rights என்னென்ன?",
+      "current_output": "Maternity Benefit Act 2017: 1) 26 weeks paid leave (first 2 children), 2) 12 weeks (3rd child onwards), 3) 12 weeks (adoption/surrogacy), 4) Work from home option (post leave), 5) Creche facility (50+ employees). Cannot terminate during pregnancy/leave. ESI: Maternity benefit through ESI if covered. Miscarriage: 6 weeks leave.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_006_TM",
+      "instruction": "RTI-ல் என்ன information கேட்க முடியாது?",
+      "current_output": "Exemptions (Section 8): 1) National security, 2) Foreign relations, 3) Trade secrets, 4) Cabinet papers, 5) Personal information (no public interest), 6) Investigation documents (pending case), 7) Fiduciary relationship. Public interest override possible for some exemptions.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE003_TG",
+      "instruction": "Case status online-la eppadi check panradhu?",
+      "current_output": "Websites: ecourts.gov.in (all courts), highcourtmadras.gov.in (Madras HC), sci.gov.in (Supreme Court). Search by: CNR number, party name, case number, advocate name. e-Courts app-um available. Cause list (daily hearing list) check pannalam.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS024_TM",
+      "instruction": "Medical negligence case-க்கு என்ன evidence வேணும்?",
+      "current_output": "Required: 1) All medical records (hospital bound to give), 2) Prescriptions, 3) Test reports, 4) Bills, 5) Expert medical opinion (another doctor's opinion), 6) Death certificate (if applicable). RTI மூலம் government hospital records பெறலாம்.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS035_TG",
+      "instruction": "Online-la vaanguna phone-la problem, return panna maattengaraanga (Coimbatore style)",
+      "current_output": "First screenshot ellam edunga. App-la complaint raise pannunga. Email-la grievance officer-kku complaint anuppunga. 7 days-la response illanna NCH-la complaint podunga. Consumer forum-la case podalam - free-dhaan 5 lakh varai.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI022_TM",
+      "instruction": "Dowry demand-க்கு என்ன action எடுக்கலாம்?",
+      "current_output": "Dowry கேட்பது/கொடுப்பது illegal (Dowry Prohibition Act). Complaint: Police, Women helpline 181, Protection Officer. Punishment: 5 years imprisonment + fine. Dowry death (304B IPC): 7 years to life imprisonment. Evidence: Messages, recordings, witness statements.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC018_TG",
+      "instruction": "Senior citizen pension apply eppadi seivathu?",
+      "current_output": "Eligibility: 60+ years, BPL/low income. Schemes: IGNOPS (Rs.1,000/month), TN Old Age Pension (varies). Apply: e-Sevai centre, Taluk office. Documents: Age proof, income certificate, Aadhaar, bank account. Widow pension: Additional scheme available.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS029_TG",
+      "instruction": "MRP-a vida adhigamaaga vitraal enna seyyalam?",
+      "current_output": "MRP-kku mela virpathu illegal (Legal Metrology Act). Complaint: 1) Legal Metrology Department (District level), 2) Consumer helpline 1800-11-4000, 3) Consumer forum. Seller-kku fine up to Rs.25,000 first offence, Rs.50,000 repeat offence.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI015_TM",
+      "instruction": "Child custody order மாற்ற முடியுமா?",
+      "current_output": "ஆம், circumstances மாறினால். Modification petition file பண்ணலாம். Grounds: Custodial parent neglect, child's preference change, better opportunity with other parent, relocation. Court child's welfare basis-ல் decide செய்யும்.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI025_TG",
+      "instruction": "Live-in relationship-la pirandha kuzhanthaiku rights irukkaa?",
+      "current_output": "Aama. Supreme Court: Long-term live-in-la pirandha children legitimate. Father's property-la share undu. Maintenance ketkalam. Birth certificate-la father name podalam. DNA test moolam paternity prove pannalam.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP012_TG",
+      "instruction": "12 varushamaaga nilatthai use pannuravar ownership claim pannuraar - valid-aa?",
+      "current_output": "Adverse Possession law: 12 years continuous, open, hostile possession-kku piragu ownership claim pannalam - aanaal court-la prove pannanum. Government land-kku 30 years. Udanadiyaa legal action edunga - delay aanaal rights izhappeergal.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC006_TM",
+      "instruction": "Cheque bounce ஆனது - என்ன action எடுக்கலாம்?",
+      "current_output": "NI Act 138 procedure: 1) Bank memo receive, 2) Legal notice within 30 days, 3) 15 days wait for payment, 4) Complaint within 30 days (total 45 days from bounce). Court: Magistrate Court. Punishment: 2 years imprisonment + twice cheque amount fine.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE007_TM",
+      "instruction": "Morphed photos upload பண்ணிட்டாங்க - என்ன action?",
+      "current_output": "Serious offence: IT Act 66E (privacy violation), 67/67A (obscene/sexually explicit content), IPC 500 (defamation), 509 (insult to modesty). Steps: 1) Platform report (takedown), 2) cybercrime.gov.in, 3) Police FIR. Women: Additional protection under POCSO (if minor), DV Act.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS020_TG",
+      "instruction": "Consumer case-kku fees evvalavu?",
+      "current_output": "District Forum: Rs.5 lakh varai - Nil fee, Rs.5-10 lakh - Rs.200, Rs.10-20 lakh - Rs.400, Rs.20-50 lakh - Rs.1000, Rs.50 lakh-1 crore - Rs.2000. State Commission: Rs.2500-5000. National Commission: Rs.5000. SC/ST/Women-kku 50% concession.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA010_TG",
+      "instruction": "Owner thideernu veetai kaali seyyach sollalaamaa?",
+      "current_output": "Mudiyaadhu. Agreement-la ulla notice period (podhuvaaga 1-3 months) kodukka venum. Notice illaamal evict seydhaal illegal. Rent Authority-kku complaint seyyalam. Court order illaamal forceful eviction seyya mudiyaadhu.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC005_TM",
+      "instruction": "கடன் கொடுத்தேன், திரும்ப தர மாட்டேங்குறாங்க - legal option?",
+      "current_output": "Amount based: <Rs.20,000 - Small Causes Court. >Rs.20,000 - Civil Court (money suit). Documents: Promissory note, acknowledgment, bank transfer proof, witnesses. Cheque bounce: NI Act 138 (criminal). Interest: 18% per annum claim possible. Limitation: 3 years.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC015_TM",
+      "instruction": "Hospital body தர மறுக்கிறது - death case",
+      "current_output": "Bill non-payment-க்காக body தர மறுக்க முடியாது - Supreme Court ruling. Contact: Police, District Collector, Human Rights Commission. Hospital against action possible. MLC case-ல் police formalities உண்டு - legitimate delay. But payment reason illegal.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI002_TM",
+      "instruction": "Marriage-க்கு minimum age என்ன?",
+      "current_output": "பெண் - 18 years, ஆண் - 21 years. Underage marriage illegal (Child Marriage Restraint Act). Underage marriage voidable (annul செய்யலாம்). Parents/guardians-க்கு 2 years imprisonment + Rs.1 lakh fine. Marriage fix பண்றவர்களும் liable.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF012_TM",
+      "instruction": "Vehicle insurance types என்னென்ன?",
+      "current_output": "Types: 1) Third-party (mandatory) - others-க்கு damage cover, 2) Comprehensive - own vehicle + third party, 3) Own damage - only own vehicle. Third-party minimum கட்டாயம் (MV Act). Without insurance driving: Rs.2,000 fine + vehicle seizure.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP021_TM",
+      "instruction": "Workplace-ல் sexual harassment, POSH Act என்ன சொல்லுது?",
+      "current_output": "POSH Act 2013 (Prevention of Sexual Harassment): 1) Every office with 10+ employees - Internal Committee (IC) இருக்கணும், 2) Complaint: IC-க்கு 3 months-க்குள், 3) Inquiry: 90 days-க்குள் complete, 4) Action: Transfer, warning, termination. No IC: Local Committee-க்கு complaint. Retaliation protection உண்டு. Anonymous complaint-உம் valid.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS031_TG",
+      "instruction": "Hidden charges vasoolittaal enna seyyalam?",
+      "current_output": "Hidden charges unfair trade practice. E-commerce Rules 2020-in keezh all charges upfront display kattaayam. Complaint: Consumer forum, NCH helpline. Refund of hidden charges + compensation ketkalam. Bank service charges-kku Banking Ombudsman.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM015_TG",
+      "instruction": "Assault/Fighting case-kku enna aagum?",
+      "current_output": "Simple hurt (IPC 323/BNS 115): 1 year imprisonment. Grievous hurt (IPC 325/BNS 117): 7 years. Voluntarily causing hurt (IPC 324/BNS 118): 3 years. Self-defence valid excuse. Medical report severity decide seyyum. Compromise possible in simple cases.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE011_TG",
+      "instruction": "Spam calls/SMS stop panna enna seyyanum?",
+      "current_output": "DND registration: 1909 call/SMS or TRAI DND app. Complaint: 1909-la spam report. DND-kkup piragum spam vandhaal company-kku Rs.1,000/violation fine. Truecaller-type apps-la report. Bank/company opt-out options use pannunga.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF011_TM",
+      "instruction": "Accident compensation எவ்வளவு கிடைக்கும்?",
+      "current_output": "Formula based: Age, income, dependency, injury severity. Death case: Multiplier method (age based - 12 to 18 times annual income). Injury: Medical expenses + loss of income + pain & suffering + disability percentage. Third party insurance: Unlimited liability.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 21,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SCHO015_TM",
+      "instruction": "12th படிக்கும்போதே என்ன competitive exams-க்கு prepare ஆகலாம்?",
+      "current_output": "**12th-ல் இருக்கும்போதே Prepare செய்யக்கூடிய Exams:**\n\n**1. NEET (Medical):**\n- For: MBBS, BDS, BAMS, BHMS, Nursing\n- Subjects: Physics, Chemistry, Biology\n- Exam: May (usually)\n- Prepare from: Class 11 itself!\n\n**2. JEE Main & Advanced (Engineering):**\n- For: IIT, NIT, IIIT, GFTIs\n- Subjects: Physics, Chemistry, Maths\n- JEE Main: January & April\n- JEE Advanced: After Main qualify\n\n**3. CUET (Central Universities):**\n- For: Delhi University, JNU, BHU, etc.\n- Subjects: Domain subjects + Language + General Test\n- New exam - gaining importance\n\n**4. CLAT (Law):**\n- For: National Law Universities\n- Subjects: English, GK, Legal Reasoning, Logical Reasoning, Maths\n- Exam: December\n- Can start from Class 11\n\n**5. NDA (Defence):**\n- For: Army, Navy, Air Force\n- Age: 16.5 - 19.5 years\n- Exam: April & September\n- 12th appearing can apply!\n\n**6. KVPY (Kishore Vaigyanik):**\n- Science scholarship + IISc admission\n- For: Class 11 & 12 science students\n- Exam: November\n\n**7. NTSE (National Talent Search):**\n- Scholarship exam\n- For: Class 10 students\n- Good for building competitive exam mindset\n\n**Preparation Timeline:**\n\n| Exam | Start Prep | Peak Prep |\n|------|------------|----------|\n| NEET | Class 11 start | Class 12 |\n| JEE | Class 11 start | Class 12 |\n| CLAT | Class 11 | Class 12 |\n| NDA | Class 12 | After 12th |\n\n**Parallel Preparation Tips:**\n1. Board syllabus = 60-70% competitive syllabus\n2. Extra topics identify & cover\n3. Test series join early\n4. Balance board + competitive",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_015_TM",
+      "instruction": "Family-ல யாரும் college போனதில்ல. என்னால் handle பண்ண முடியுமா? என்ன expect பண்றது?",
+      "current_output": "Proud moment - You're breaking the barrier! Tips: 1) Seniors-ஐ approach பண்ணுங்கள் - guidance 2) College orientation attend பண்ணுங்கள் 3) Professors approachable - doubt clear பண்ணுங்கள் 4) First generation scholarship apply பண்ணுங்கள் 5) Library, labs utilize பண்ணுங்கள் 6) Peer groups join - study circle. Common challenges: Imposter syndrome normal, English medium adjustment, new environment. Support: College counsellor, senior mentor programs. You CAN do this!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC018_TM",
+      "instruction": "Campus placement-க்கு எப்படி prepare ஆவது?",
+      "current_output": "Placement preparation: 1) Aptitude - RS Aggarwal, IndiaBix daily 2) Technical - Core subjects revision 3) Coding - HackerRank, LeetCode (for IT) 4) Resume - 1 page, achievement focused 5) Communication - Mock interviews practice 6) GD - Current affairs, articulation 7) HR questions - self-intro, strengths, goals. Timeline: Start 6 months before placement season. CGPA matters - maintain above 7 minimum. Internships boost resume significantly.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP014_TG",
+      "instruction": "I am visually impaired. Board exam-la enna special facilities kidaikkum?",
+      "current_output": "PWD exam facilities: 1) Scribe/Writer - you dictate, they write 2) Extra time - 20 minutes per hour 3) Separate room if needed 4) Large print question paper 5) Exemption from certain papers (language options). Apply: Through school with disability certificate (40%+). UDID card helps. Competitive exams: Same facilities available. Career: Many PWD-friendly government jobs reserved (4% reservation).",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC017_TM",
+      "instruction": "Medical emergency hostel-ல் வந்தால் என்ன செய்வது?",
+      "current_output": "Emergency steps: 1) Call warden immediately 2) College has tie-up hospital - use that 3) 108 ambulance if serious 4) Keep parent contact updated with warden 5) Student health insurance - claim process know 6) ESI hospital if eligible 7) Govt hospital - free emergency care for all. Preparation: Keep emergency contacts, medical history, blood group info with you. Health card carry. Prevention: Regular health checkup, don't ignore symptoms.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA018_TM",
+      "instruction": "Graphic Design course எங்கே படிக்கலாம்? Job opportunity?",
+      "current_output": "Training options: 1) Arena Animation 2) MAAC 3) TNSDC multimedia courses 4) Online - Coursera, Skillshare. Tools to learn: Photoshop, Illustrator, CorelDraw, Canva. Duration: 3-12 months. Jobs: 1) Graphic designer 2) Social media designer 3) Print designer 4) UI designer 5) Freelancing. Salary: ₹12,000-30,000 starting. Portfolio build பண்ணுங்கள். Freelance platforms: Fiverr, Upwork, 99designs.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM011_TG",
+      "instruction": "NEET fail aanaal enna alternatives irukkudhu?",
+      "current_output": "Medical field alternatives: 1) B.Sc Nursing - no NEET 2) BDS (Dental) - lower cutoff 3) BAMS/BHMS/BUMS - Ayurveda/Homeopathy 4) B.Sc Allied Health Sciences 5) Pharmacy (B.Pharm) 6) Physiotherapy (BPT) 7) Veterinary (NEET separate cutoff). Other options: 1) Dropper year - many succeed 2) B.Sc Biology → Research 3) Biotechnology. Reality check: 18 lakh applicants, 1 lakh seats - alternatives are not failure, different path.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO013_TG",
+      "instruction": "11th & 12th padikkumbodhum enna scholarship kidaikkum?",
+      "current_output": "**Plus Two Scholarships:**\n\n**1. SC/ST Post-Matric:**\n- Day: ₹230/month, Hostel: ₹750/month\n- Income < ₹2.5 lakh\n\n**2. BC/MBC Post-Matric:**\n- Full fee + ₹500/month stipend\n- Income < ₹2 lakh\n\n**3. Minorities:**\n- ₹500-1,000/month\n- Fee up to ₹7,000\n\n**4. Free Laptop:** All Govt school 11th students (auto)\n\n**5. First Gen Graduate Scheme:**\n- Free education + ₹1,000/month\n\n**6. INSPIRE:** Top 1% in 10th - ₹5,000/year\n\n**7. Pragati (Girls):** ₹50,000/year for tech\n\n**Apply:** scholarships.gov.in, tneservices.tn.gov.in\n**Deadline:** August-October",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO010_TG",
+      "instruction": "Minority scholarship (Muslims, Christians, Sikhs) eppadi apply seivathu?",
+      "current_output": "Ministry of Minority Affairs Scholarships: 1) Pre-matric - Class 1-10, ₹1,000-6,000/year 2) Post-matric - Class 11 onwards, ₹3,000-11,000/year 3) Merit-cum-Means - Professional courses, ₹20,000+/year. Eligibility: Minority certificate, income ₹2-2.5 lakh/year kizha. Apply: NSP portal moolam. Muslims, Christians, Sikhs, Buddhists, Parsis, Jains eligible.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP005_TG",
+      "instruction": "NEET Result-ku appuram Counselling eppadi nadakkum? TN-la seats eppadi kidaikkum?",
+      "current_output": "**NEET Counselling:**\n\n**Types:**\n1. All India Quota (15%) - MCC\n2. State Quota (85%) - TN Selection Committee\n\n**TN Website:** tnmedicalselection.org\n\n**Process:**\n1. Online Registration + Documents + Fee\n2. Choice Filling - List colleges in preference\n3. Seat Allotment - Based on rank + choice + category\n4. Reporting - Go to college, verify, pay, confirm\n\n**TN Reservation:**\n- OC 31%, BC 26.5%, MBC 20%, SC 18%, ST 1%\n- 7.5% Govt school within each\n\n**Fees:**\n- Govt: ₹15,000/year\n- Self-Finance: ₹5-15 lakh/year\n- Deemed: ₹10-25 lakh/year\n\n**Timing:** July-August usually",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO013_TG",
+      "instruction": "UGC scholarship MA/MSc/PhD students-ku enna?",
+      "current_output": "UGC Scholarships: 1) Non-NET Fellowship - ₹8,000/month MPhil/PhD 2) JRF (through NET) - ₹31,000/month 3) SRF (2 years after JRF) - ₹35,000/month 4) Rajiv Gandhi National Fellowship (SC/ST PhD) - ₹31,000-35,000/month 5) Maulana Azad National Fellowship (Minorities PhD). Apply: www.ugc.ac.in. NET exam pass aanaal automatic JRF.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP006_TG",
+      "instruction": "JEE Main & Advanced endraal enna? IIT-ku eppadi povadhu?",
+      "current_output": "**JEE Exam:**\n\n**Two Levels:**\n1. **JEE Main:** For NITs, IIITs, State colleges\n2. **JEE Advanced:** For IITs only (after Main qualify)\n\n**JEE Main Pattern:**\n- Physics, Chemistry, Maths - 100 marks each\n- Total: 300 marks, 90 questions\n- Online exam, 3 hours\n- Negative marking: -1\n\n**IIT Path:**\n12th PCM (75%) → JEE Main (Top 2.5L) → JEE Advanced → IIT\n\n**TN Students:**\n- TNEA uses JEE Main score option\n- Anna University through TNEA: tneaonline.org\n\n**Attempts:** 2 per year, Max in 3 consecutive years",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM022_TG",
+      "instruction": "Myth or Fact: Myth: Marks mattum important, extra-curricular waste",
+      "current_output": "Fact: Fact: Balanced development essential. Extra-curricular benefits: 1) Sports quota admission 2) Stress relief = better study 3) Personality development 4) College applications value it 5) Soft skills development. Reality: Toppers also play sports, music, participate in activities. Time management skill learned. All-rounder students more successful in career long-term.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO006_TG",
+      "instruction": "NMMS Exam endraal enna? Eppadi prepare seyvadhu?",
+      "current_output": "**NMMS Exam:**\n\n**What:** Scholarship exam for Class 8\n**Benefit:** ₹12,000/year for Class 9-12\n\n**Eligibility:**\n- Class 8 Govt school student\n- 55%+ in Class 7 (SC/ST: 50%)\n- Income < ₹3.5 lakh\n\n**Exam:**\n- MAT: 90 questions (Reasoning)\n- SAT: 90 questions (Science, Social, Maths)\n- 90 minutes each\n\n**Preparation:**\n1. Class 7-8 NCERT/State Board\n2. Previous papers practice\n3. Reasoning books\n\n**Timeline:** Apply July-Aug, Exam Nov, Result Jan\n**Apply:** Through School HM",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP024_TG",
+      "instruction": "Important exam dates 2024-25",
+      "current_output": "Board Exams: 10th March, 12th March. NEET: May first week. JEE Main: January & April sessions. TNPSC Group 4: Throughout year. TNEA counselling: June-July. College admissions: June-August. GATE: February. CAT: November. CLAT: December.",
+      "category": "supplementary_courses",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "SCHO019_TM",
+      "instruction": "கிராமப்புற மாணவர்களுக்கு என்ன special schemes இருக்கு?",
+      "current_output": "**கிராமப்புற மாணவர் சலுகைகள்:**\n\n**1. PMSSS (PM Special Scholarship - J&K pattern for TN):**\n- For rural meritorious students\n- Full fee + Maintenance\n\n**2. Rural Talent Search:**\n- Special exams for rural students\n- Winners get scholarship\n\n**3. Eklavya Model Residential Schools:**\n- For tribal areas\n- Free education + Hostel + Food\n- CBSE curriculum\n- emrs.tribal.gov.in\n\n**4. Kasturba Gandhi Balika Vidyalaya (KGBV):**\n- For rural girls (Class 6-12)\n- Residential schools\n- SC/ST/OBC/Minority focus\n\n**5. Free Hostel Scheme:**\n- BC/MBC/SC/ST hostels in all districts\n- Free accommodation + Food\n- Apply: Respective welfare departments\n\n**6. Transport Allowance:**\n- For students traveling from villages\n- ₹500-1,000/month\n\n**7. Special Coaching (Rural):**\n- TNSF rural NEET coaching\n- Block-level coaching centers\n- Weekend residential programs\n\n**8. Agriculture Education:**\n- Special quota for rural students in Agri colleges\n- TNAU reservations\n\n**9. Rural Internship Priority:**\n- Govt jobs rural posting preference\n- Medical seats rural bond\n\n**10. Distance Education:**\n- IGNOU, TNOU centers in rural areas\n- Study materials delivered\n\n**How to Avail:**\n- Get rural area certificate from VAO\n- Apply through school\n- Contact Block Education Officer",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA028_TM",
+      "instruction": "Defence force join ஆக training எங்கே கிடைக்கும்?",
+      "current_output": "Defence training options: 1) Sainik Schools - Class 6 admission (for NDA prep) 2) Army rally coaching - District soldiers boards 3) NDA coaching - Government free centers 4) Agnipath training - TNSDC centers 5) Private coaching institutes. Physical fitness: Running, pull-ups, sit-ups practice daily. Written exam: Maths, English, GK. Medical: Strict standards. Apply: www.joinindianarmy.nic.in. Age: 17.5-21 (varies by entry).",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO012_TM",
+      "instruction": "AICTE scholarship engineering students-க்கு என்ன உள்ளது?",
+      "current_output": "AICTE Scholarships: 1) Pragati - Women in technical education, ₹50,000/ஆண்டு 2) Saksham - Differently abled students, ₹50,000/ஆண்டு 3) Swanath - Orphan students 4) PM's Special Scholarship - J&K students. Additional: GATE qualified students-க்கு ₹12,400/மாதம் scholarship ME/M.Tech-ல். Apply: www.aicte-india.org. Income limit: ₹8 lakh/ஆண்டு.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE008_TG",
+      "instruction": "Coimbatore-la engineering padikka nalla college edhu?",
+      "current_output": "PSG Tech (autonomous - best ranking), GCT (government), CIT, Amrita, KGISL ellam top colleges. PSG-kku TNEA counselling la high cutoff varum. GCT government college - fees romba koraivau.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC023_TM",
+      "instruction": "என் பையன்/பொண்ணு college-ல் வெளியூர் போறாங்க. எப்படி support பண்றது?",
+      "current_output": "Parent support tips: 1) Regular communication - but not controlling 2) Visit once in first month - help settle 3) Emergency contact with warden establish 4) Bank account with adequate funds 5) UPI/GPay teach for daily expenses 6) Health insurance ensure 7) Trust them - allow independence 8) Listen without judging when they share problems 9) Homesickness normal - patience. Balance: Support without helicopter parenting. They're growing up!",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM006_TM",
+      "instruction": "NEET exam pattern என்ன? எத்தனை marks?",
+      "current_output": "NEET UG Pattern: Total 200 questions (180 attempt), 720 marks. Subjects: Physics 45+15 Qs, Chemistry 45+15 Qs, Biology 90+10 Qs. Marking: +4 correct, -1 wrong. Duration: 3 hours 20 minutes. Cutoff 2024: General 720-137, OBC 136-107, SC/ST 136-107. Language: English, Hindi, Tamil + 10 regional. Exam: May (yearly). Syllabus: Class 11 & 12 NCERT Physics, Chemistry, Biology.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA027_TG",
+      "instruction": "Evening college-la padikkalamaa? Working people-ku option?",
+      "current_output": "Evening college options: 1) University of Madras evening courses 2) Annamalai University distance + contact 3) IGNOU weekend classes 4) Polytechnic evening batches (limited). Timings: Usually 6-9 PM. Courses: BA, B.Com, BBA, LLB. Benefits: Work + study together, degree = regular degree value. Alternative: Distance education from TNOU, IGNOU - study anytime. Some employers sponsor employee education.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE022_TM",
+      "instruction": "Data Science, AI courses-க்கு எந்த college best?",
+      "current_output": "IIT Madras (BSc in Data Science - online), Anna University, VIT, SRM, PSG Tech ஆகியவற்றில் AI/ML courses உள்ளன. IIT Madras online degree affordable-ஆகவும் flexible-ஆகவும் இருக்கு.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH025_TG",
+      "instruction": "Vellinaadu padippuku education loan eppadi vaanguvadhu?",
+      "current_output": "Bank loan options: 1) SBI Scholar Loan - up to ₹1.5 crore 2) Bank of Baroda Vidya Lakshmi 3) HDFC Credila 4) Avanse. Requirements: Admission letter, I-20/CAS, collateral (₹7.5 lakh mela loan-ku). Vidya Lakshmi Portal (www.vidyalakshmi.co.in) - ore idathula pala banks-la apply pannalam. Interest: 8-12%.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_010_TM",
+      "instruction": "NEET-ஆ JEE-ஆ? Doctor-ஆ Engineer-ஆ? எப்படி decide பண்றது?",
+      "current_output": "Decision factors: 1) Interest - Patient care vs Problem solving 2) Study style - Memory vs Logic 3) Duration - MBBS 5.5 years vs Engineering 4 years 4) Investment - Medical costlier 5) Lifestyle - Doctor on-call vs Engineer 9-5. Self-assessment: Biology enjoy பண்றீங்களா = NEET. Maths/Physics enjoy = JEE. Both attempt possible (Science stream). Shadow a doctor and engineer if possible. Final call: Your genuine interest, not family pressure.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 18,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "EXAM009_TM",
+      "instruction": "NEET Physics hard-ஆக இருக்கு, எப்படி improve ஆவது?",
+      "current_output": "Physics improvement: 1) Concepts first - derivations later 2) Formula list chapter-wise 3) Daily 20-30 numericals practice 4) HC Verma for conceptual clarity 5) DC Pandey for NEET level. High weightage topics: Mechanics, Electrostatics, Modern Physics, Optics. Weak students: Start with easy chapters (Units, Motion, Thermodynamics). Video lectures: Physics Wallah, Unacademy free. Avoid formula memorization without understanding.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM001_TM",
+      "instruction": "Plus One admission-க்கு எப்போது apply பண்ணணும்?",
+      "current_output": "Timeline: 10th result வந்த பிறகு 1 week-ல் notification. Usually May-June. Online application: www.tnschooleducation.in. Documents ready: 10th marks card, TC, community certificate, income certificate, Aadhaar. Choice filling: Preferred schools + subjects. Random allocation for government schools. Cutoff based for popular schools. Don't miss deadline - late applications not accepted.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM024_TM",
+      "instruction": "SSC CGL என்ன? Tamil Nadu students apply பண்ணலாமா?",
+      "current_output": "SSC CGL (Combined Graduate Level): Central Government Group B & C posts. Posts: Tax Inspector, Auditor, Assistant, SI, etc. Tamil Nadu students - Yes, apply possible! Posting: All India basis, TN postings available. Exam: Tier 1, 2, 3, 4. Syllabus: English, Maths, Reasoning, GK. Salary: ₹35,000-1,50,000. Age: 18-32 (varies by post). Apply: www.ssc.nic.in. Notification: Usually December. Very good career option.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH021_TG",
+      "instruction": "Velai seithukonde padikka enna vazhi irukkudhu?",
+      "current_output": "Distance Education options: 1) IGNOU - biggest open university 2) Tamil Nadu Open University (TNOU) 3) University of Madras - IDE 4) Annamalai University Distance. UG/PG/Diploma ellam available. Fee: ₹5,000-20,000/year. Exams: 2 times per year. Work experience + degree rendu kidaikkum.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM013_TM",
+      "instruction": "JEE-க்கு எந்த books படிக்கணும்?",
+      "current_output": "Essential books: Physics - HC Verma, DC Pandey, Irodov (Advanced). Chemistry - NCERT (must), OP Tandon (Physical), Himanshu Pandey (Organic), JD Lee (Inorganic). Maths - RD Sharma, Cengage series, Arihant. NCERT = Foundation. Beyond NCERT for JEE Advanced. Online: PYQs from NTA website, mock tests from coaching platforms. Quality > Quantity - one book per subject master பண்ணுங்கள்.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE017_TM",
+      "instruction": "Isai Kuzhu, Naatiya Kuzhu போட்டிகளில் win பண்ணினால் என்ன benefit?",
+      "current_output": "District/State level-ல் win பண்ணினால் certificate, cash prize கிடைக்கும். College admission-ல் extra marks weightage உண்டு. Cultural quota-வில் admission பெறலாம். State artist-ஆக recognition கிடைக்கும்.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM029_TG",
+      "instruction": "Fee katta mudiyala, college-la exam ezhudha vidamaattengiraanga",
+      "current_output": "Immediate options: 1) Talk to Principal - installment arrangement 2) Education loan - bank/college tie-up 3) Student Aid Fund (most colleges have) 4) Scholarship if eligible - pending payment proof show 5) NGO support - Rotary, Lions Club. Legal: College cannot deny exam for genuine financial difficulty. Escalate: University Registrar, UGC grievance. Documentation: Keep written request, college response. Prevention: Apply for scholarships, loans in advance.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE022_TG",
+      "instruction": "Data Science, AI courses-kku endha college best?",
+      "current_output": "IIT Madras (BSc in Data Science - online), Anna University, VIT, SRM, PSG Tech-la AI/ML courses irukku. IIT Madras online degree affordable-aagavum flexible-aagavum irukku.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA008_TM",
+      "instruction": "Government Polytechnic college-ல் admission எப்படி?",
+      "current_output": "DOTE (Directorate of Technical Education) counselling: 1) www.tndte.gov.in-ல் online registration 2) 10th marks upload 3) Choice filling - college + branch 4) Rank list based on marks 5) Counselling date - certificate verification 6) Seat allotment. Fee: Government polytechnic ₹1,500-3,000/year. Reservation applicable. Cutoff marks: Top colleges-க்கு 400+ (out of 500).",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM025_TG",
+      "instruction": "SSC CHSL enna post kidaikkum? 12th pass-ku best option?",
+      "current_output": "SSC CHSL (Combined Higher Secondary Level): 12th pass Central Govt jobs. Posts: LDC (Lower Division Clerk), DEO (Data Entry Operator), Postal Assistant, Sorting Assistant. Salary: ₹20,000-60,000. Exam: Tier 1 (CBT) + Tier 2 (Descriptive). Syllabus: English, Maths, Reasoning, GK. Typing test required. Age: 18-27. Best option for 12th pass - stable central govt job. Apply: www.ssc.nic.in.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_012_TM",
+      "instruction": "Board exam-ல் fail ஆயிட்டேன். Life waste ஆயிடுச்சு என்று feel ஆகுது. என்ன செய்வது?",
+      "current_output": "First: You are NOT a failure! Exam failure ≠ Life failure. Many successful people failed exams: Abdul Kalam, Dhirubhai Ambani. Immediate steps: 1) Supplementary exam-க்கு prepare - 3 months time 2) Talk to parents/teacher openly 3) If severe stress - school counsellor or helpline iCALL: 9152987821. Future: Many paths to success - ITI, Diploma, NIOS, Skill training. One exam doesn't define you. Rise again stronger!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP012_TM",
+      "instruction": "Trichy-ல் best medical colleges எவை?",
+      "current_output": "Medical colleges Trichy region: 1) KAPV Government Medical College Trichy - MBBS, affordable 2) Thanjavur Medical College - Oldest in region 3) Dhanalakshmi Srinivasan Medical College - Private 4) Nursing colleges: Government + private multiple. MBBS admission: NEET + state counselling. Govt college fees: ₹13,500/year. Bond service required. Allied health courses also available.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM027_TM",
+      "instruction": "School/College புகார் எங்கே கொடுப்பது?",
+      "current_output": "Complaint hierarchy: School: 1) Class teacher → Headmaster → DEO (District Education Officer). College: 1) HOD → Principal → University Registrar → UGC (for serious issues). Online: 1) CM Cell - www.cm.tn.gov.in 2) MHRD grievance portal 3) Anti-ragging: www.antiragging.in. Fee issues: Fee Committee. Documents: Keep written complaints, get acknowledgment. Serious cases: Police, Women's Commission (harassment).",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP016_TG",
+      "instruction": "En appa construction worker, vera vera place-ku porom. School admission eppadi?",
+      "current_output": "Migrant children rights: 1) RTE Act - Free education anywhere in India 2) Admission without TC - Self-declaration accepted 3) Mid-year admission allowed 4) Age-appropriate class placement 5) SSA support. Contact: Nearest government school, District Education Officer. Documents: Aadhaar (if any), parent ID. Free: Books, uniform, mid-day meal. Language support provided for transition.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC021_TG",
+      "instruction": "Interview-la common questions enna? Eppadi answer panrathu?",
+      "current_output": "Common questions: 1) Tell about yourself - 2 min summary, relevant points 2) Strengths - with example proof 3) Weakness - genuine + improvement action 4) Why this company - research based answer 5) Where do you see yourself in 5 years - realistic goals 6) Why should we hire you - value proposition 7) Any questions - always ask 2-3 thoughtful ones. Practice: Mirror practice, record yourself, mock interviews. Dress: Formals, neat appearance.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_017_TM",
+      "instruction": "Degree முடிஞ்சாச்சு. Job search பண்றதா, PG படிக்கறதா? Confused-ஆ இருக்கேன்.",
+      "current_output": "Decision framework: Job now if: 1) Financial need urgent 2) Work experience wanted 3) Industry-specific UG sufficient. PG if: 1) Academic/Research interest 2) Specific career needs PG (MBA for management) 3) Higher salary jump. Middle path: Job + Distance PG (IGNOU, University) OR Work 2-3 years → PG. Reality: Both paths successful. No 'wrong' choice. Career isn't linear. Many do job → PG → better job. Decide based on YOUR goals, not others' opinions.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM020_TM",
+      "instruction": "உண்மையா பொய்யா: Myth: Tamil medium-ல் படிச்சா job கிடைக்காது",
+      "current_output": "உண்மை: Fact: Language of education ≠ Job success. Tamil medium students succeed in: Government jobs (TNPSC, SSC), Teaching, Banking, Law, Business. English skill = learnable later. Many successful entrepreneurs, politicians, officers are Tamil medium. Focus: Strong foundation in concepts. English proficiency courses available free. Communication skills matter, not medium of instruction.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC021_TM",
+      "instruction": "Interview-ல் common questions என்ன? எப்படி answer பண்றது?",
+      "current_output": "Common questions: 1) Tell about yourself - 2 min summary, relevant points 2) Strengths - with example proof 3) Weakness - genuine + improvement action 4) Why this company - research based answer 5) Where do you see yourself in 5 years - realistic goals 6) Why should we hire you - value proposition 7) Any questions - always ask 2-3 thoughtful ones. Practice: Mirror practice, record yourself, mock interviews. Dress: Formals, neat appearance.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP023_TG",
+      "instruction": "Kerala border-la irukkom, TN scholarship kidaikkuma?",
+      "current_output": "Kidaikkum! TN nativity certificate irundha all TN scholarships eligible. Kanyakumari district fully TN - no issue. Apply: NSP portal for central, TN department portals for state scholarships. Documents: Nativity certificate, income certificate from TN Tahsildar. Same benefits as other TN districts. BC/MBC/SC/ST applicable based on TN categorization.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP004_TM",
+      "instruction": "Paramedical courses என்னென்ன இருக்கு? Job scope?",
+      "current_output": "Popular courses: 1) DMLT (Lab Technician) - 2 years 2) X-Ray/Radiology - 2 years 3) Operation Theatre Tech - 2 years 4) Physiotherapy (BPT) - 4 years 5) Optometry - 4 years 6) Medical Imaging Tech - 3 years. Admission: Based on 12th marks (Physics, Chemistry, Biology). Jobs: Hospitals, Diagnostic centres, Clinics. Salary: ₹12,000-25,000 starting. High demand, job security good.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM016_TG",
+      "instruction": "Scholarship reject aayiduchu, again apply pannalaamaa?",
+      "current_output": "Yes, re-apply possible in most cases. Steps: 1) Check rejection reason on portal 2) Common issues: Wrong documents, income limit exceeded, duplicate application, bank account mismatch 3) Correct the issue 4) Re-apply in same/next cycle. Tips: Read defect list carefully, upload correct format (PDF/JPG), size limits follow, bank account in student name, Aadhaar-bank linked. Grievance: File complaint if wrongly rejected - evidence attach.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO022_TG",
+      "instruction": "Padippai niruttha nirbanddhamaa irukiren, emergency scholarship ulladha?",
+      "current_output": "Emergency options: 1) HDFC ECSS - crisis support ₹75,000 2) PM CARES (COVID affected) 3) Chief Minister's Public Relief Fund - apply to Collector 4) College Student Aid Fund 5) Rotary Club scholarships 6) Lions Club education support. Immediate help: District Social Welfare Officer-a santhiyunga. NGOs: Pratham, Smile Foundation. Fee postponement request to college principal.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE002_TG",
+      "instruction": "UDID card enna? Eppadi peruvathu?",
+      "current_output": "Unique Disability ID - disability irukkuravangalukku identity card. swavlambancard.gov.in la online apply pannalam. District hospital la assessment vanganum, certificate kudupanga. Ella scheme-kkum UDID card vendiyathu.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_003_TM",
+      "instruction": "என் குழந்தை மெதுவாக படிக்குது, school-ல் special help இருக்கா?",
+      "current_output": "Slow learners support: 1) NEET (National Education Enhancement Training) - remedial classes 2) Resource teachers in schools 3) Learning disability screening available 4) Extra coaching hours - afternoon sessions 5) IEDSS (Inclusive Education) for special needs. School-ல் class teacher-ஐ சந்தியுங்கள். BRC (Block Resource Centre) special educators உள்ளனர். Private assessment: Rs.500-2000 at government hospitals. Early intervention helps - don't delay.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO010_TM",
+      "instruction": "Minority scholarship (Muslims, Christians, Sikhs) எப்படி apply செய்வது?",
+      "current_output": "Ministry of Minority Affairs Scholarships: 1) Pre-matric - Class 1-10, ₹1,000-6,000/ஆண்டு 2) Post-matric - Class 11 onwards, ₹3,000-11,000/ஆண்டு 3) Merit-cum-Means - Professional courses, ₹20,000+/ஆண்டு. தகுதி: Minority certificate, income ₹2-2.5 lakh/ஆண்டு கீழ். Apply: NSP portal மூலம். Muslims, Christians, Sikhs, Buddhists, Parsis, Jains eligible.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

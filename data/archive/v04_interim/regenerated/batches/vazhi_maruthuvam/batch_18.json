@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 18,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH049_TG",
+      "instruction": "Medical negligence endraal enna?",
+      "current_output": "Medical negligence = Doctor/hospital standard of care fail. Elements: 1) Duty of care existed, 2) Breach of duty (below standard), 3) Injury occurred, 4) Injury caused by breach. Examples: Wrong surgery, missed diagnosis, wrong medicine, surgical tools left inside, infection due to poor hygiene. Not negligence: Treatment failure despite proper care, known complications.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH120_TG",
+      "instruction": "Depression-kku disability certificate kidaikkumaa?",
+      "current_output": "Yes, if severe. RPD Act 2016: Mental illness included as disability. Requirements: 1) Benchmark disability (40%+), 2) Certified by medical board (district hospital), 3) UDID card application. Benefits: 1) Reservation in education/jobs, 2) Income tax exemption, 3) Travel concession, 4) Scholarship eligibility. Process: Apply at district hospital disability assessment camp or SADAREM.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH168_TG",
+      "instruction": "Generic medicine weak, branded strong - unmaiyaa?",
+      "current_output": "MYTH! Same active ingredient, same dose = same effect. Why generic cheaper: No brand marketing cost, no patent royalty. Quality: Government-approved generics meet same standards. Proof: Government hospitals use generic - same results. Jan Aushadhi: WHO-GMP certified, 50-90% cheaper. Don't fall for: Marketing claims, fancy packaging. Ask pharmacist: Generic alternative for any branded medicine.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH090_TM",
+      "instruction": "MRP-க்கு மேல charge பண்றாங்க - complain எப்படி?",
+      "current_output": "Illegal! Legal Metrology Act violation. MRP = Maximum Retail Price (inclusive of all taxes). Action: 1) Point out MRP printed on pack, 2) Refuse to pay excess, 3) Complaint: Weights and Measures Department (Legal Metrology), 4) Consumer helpline: 1800-11-4000. Evidence: Bill + photo of MRP on pack. Penalty: Fine on seller. Hospital pharmacy also bound by MRP.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH064_TM",
+      "instruction": "Anesthesia-ல் problem ஆச்சு - claim?",
+      "current_output": "Anesthesia complications: 1) Awareness during surgery, 2) Brain damage from hypoxia, 3) Allergic reaction (if not checked), 4) Nerve damage, 5) Death. Liability: 1) Anesthesiologist (primary), 2) Surgeon (team), 3) Hospital. Evidence: Anesthesia chart, monitoring records, drug records. Pre-op assessment: Should identify risks. Informed consent: Specific to anesthesia needed.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH009_TM",
+      "instruction": "Primary Health Centre (PHC) என்றால் என்ன? என்ன services கிடைக்கும்?",
+      "current_output": "PHC = Village/block level government health facility. Free services: 1) Basic consultation, 2) Common illness treatment, 3) Maternal care, 4) Child immunization, 5) Family planning, 6) Minor wound dressing, 7) Basic lab tests, 8) Medicine dispensing, 9) Health education. Timings: Usually 9 AM - 4 PM. Staff: Doctor, nurse, pharmacist, lab technician. Referral: To CHC/District Hospital if needed.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH104_TG",
+      "instruction": "Ayurveda/Siddha medicine safe-aa? Regulation irukkaa?",
+      "current_output": "Regulated under AYUSH Ministry. Safety: Licensed products from registered manufacturers = regulated. Risks: 1) Heavy metals in some (lead, mercury), 2) Unlicensed products dangerous, 3) Interactions with allopathy. Verify: 1) AYUSH license number on pack, 2) Manufacturing license, 3) Batch number, expiry. Government: AYUSH hospitals provide regulated treatment. Caution: Inform allopathic doctor if taking AYUSH medicines.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH182_TM",
+      "instruction": "Respiratory problems-க்கு (asthma, bronchitis) Siddha?",
+      "current_output": "Siddha for Swasakasam (respiratory): Asthma, bronchitis, allergic rhinitis, sinusitis. Medicines: 1) Thalisathi Choornam, 2) Adathodai Kudineer, 3) Kantharasam, 4) Poorna Chandrodayam. Therapies: 1) Steam inhalation with herbs, 2) Nasiyam (nasal drops), 3) Chest application with specific oils. Preventive: Build immunity, avoid triggers. Works well: For chronic management, reducing frequency of attacks.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH074_TM",
+      "instruction": "Medicine MRP-க்கு மேல charge பண்றாங்க - legal-ஆ?",
+      "current_output": "ILLEGAL! MRP = Maximum Retail Price. Law: Legal Metrology Act - selling above MRP is punishable. Hospital excuse: \"Service charges\" - not valid for medicines. Action: 1) Point out MRP on strip/bottle, 2) Refuse to pay excess, 3) Weights and Measures Department complaint, 4) Consumer Forum. Penalty: Fine + compensation. Document: Photo of MRP vs bill amount.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH038_TG",
+      "instruction": "Family member-kku patient condition sollalaamaa?",
+      "current_output": "Only with patient consent (if patient is conscious/competent). Rules: 1) Adult patient decides who gets information, 2) Unconscious patient: Next of kin informed, 3) Minor: Parents/guardians informed, 4) Psychiatric patient: Rules vary. Sensitive info (HIV, mental health): Extra careful - patient must specifically consent. Nominated person: Patient can designate specific family member for communication.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH050_TM",
+      "instruction": "Doctor wrong treatment கொடுத்தாங்க, sue பண்ணலாமா?",
+      "current_output": "Yes, if negligence proved. Options: 1) Consumer Forum (compensation), 2) Civil court (damages), 3) Criminal court (if death/grievous hurt), 4) Medical Council (disciplinary action). Proof needed: Medical records, expert opinion, treatment protocol violation. Not every bad outcome = negligence. Consult medical-legal expert before proceeding. Time limit: 2-3 years.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH082_TG",
+      "instruction": "Hospital-la cleanliness illa, infection risk - complain pannalaamaa?",
+      "current_output": "Yes! Infection control mandatory. Complaint: 1) Hospital management first, 2) DHS office (District Health Services), 3) Clinical Establishment Authority, 4) Municipal health officer (for general sanitation). Evidence: Photos, videos (if possible). Severe: Hospital license can be suspended. Also check: Bio-medical waste disposal, hand hygiene stations, clean linens.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH095_TG",
+      "instruction": "Online-la medicine order pannalaamaa? Legal-aa?",
+      "current_output": "Legal with conditions. Rules: 1) Prescription medicines - must upload valid prescription, 2) Pharmacy must be licensed, 3) Schedule X (narcotics) - cannot be sold online. Platforms: Pharmeasy, 1mg, Netmeds, Apollo Pharmacy (licensed). Verify: Check if platform has Drug License. Benefits: Convenience, price comparison, home delivery. Caution: Verify medicine authenticity on receipt.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH188_TG",
+      "instruction": "Daily immunity-kku Siddha tips enna?",
+      "current_output": "Daily practices: 1) Nilavembu Kudineer (immune booster), 2) Chukku Kaapi (dry ginger coffee), 3) Turmeric milk, 4) Kabasura Kudineer (respiratory immunity), 5) Oil pulling (Gandusha), 6) Sesame oil application on head, 7) Pranayama. Seasonal: Different recipes for different seasons. Government: Distributed free during dengue, COVID seasons. Home preparation: Simple recipes available online from authentic sources.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH084_TG",
+      "instruction": "Staff rude-aa behave panraanga - complain?",
+      "current_output": "Patient dignity is a right. Complaint: 1) Duty manager/nursing superintendent, 2) Hospital administrator, 3) Written complaint for record, 4) Consumer Forum if serious/repeated. Include: Date, time, staff name/description, what happened, witnesses. Outcome: Apology, warning to staff, policy reminder. Serious (abuse/harassment): Police complaint possible.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH214_TM",
+      "instruction": "Menstrual cramps-க்கு natural relief?",
+      "current_output": "Remedies: 1) Hot water bag on abdomen, 2) Ginger tea, 3) Ajwain water, 4) Fenugreek (Vendhayam) soaked water, 5) Sesame seeds (til) with jaggery, 6) Light exercise/yoga (child's pose, cat-cow), 7) Massage with warm sesame oil. Diet: Avoid cold foods, have warm foods. Long-term: Regular exercise, healthy weight help. Severe pain: Check for PCOS, endometriosis - see gynecologist.",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH028_TM",
+      "instruction": "Informed consent என்றால் என்ன? எதுக்கெல்லாம் consent வேணும்?",
+      "current_output": "Informed consent = Patient understanding and agreeing to treatment. Required for: 1) Any surgery, 2) Anesthesia, 3) Blood transfusion, 4) Invasive procedures, 5) Clinical trials, 6) HIV testing. Must explain: Procedure, risks, alternatives, success rate. Language: Patient's language (Tamil). Without consent: Medical negligence. Exception: Life-threatening emergency - implied consent.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH088_TM",
+      "instruction": "Generic medicine vs Branded - quality same-ஆ?",
+      "current_output": "Yes! Same active ingredient, same dose, same effect. Difference: Brand name vs chemical name. Why cheaper: No advertising cost, no brand royalty. Quality: WHO-GMP certified generics = equal quality. Example: Paracetamol (generic) = Crocin/Dolo (branded). Verify: ISI mark, batch number, expiry date. Jan Aushadhi: Government generic stores - same quality, 50-90% cheaper.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH037_TM",
+      "instruction": "HIV status employer-கிட்ட சொல்லணுமா?",
+      "current_output": "NO! HIV status = highly confidential. HIV/AIDS Act 2017: 1) No mandatory testing for employment, 2) No disclosure to employer without consent, 3) No termination based on HIV status, 4) Anti-discrimination protection. Violation: Legal action against employer. Medical fitness: Can be declared fit without disclosing diagnosis. Exception: Healthcare workers - restricted duties (not termination).",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH194_TG",
+      "instruction": "Panchakarma treatment TN-la enge kidaikkum?",
+      "current_output": "Panchakarma = 5 detoxification therapies. Where in TN: 1) Government AYUSH hospitals (limited), 2) Private Ayurveda centers - Arya Vaidya Pharmacy branches, 3) Kerala-based resorts with TN branches, 4) Integrated wellness centers. Cities: Chennai, Coimbatore, Madurai have more options. Cost: Private Rs.2,000-10,000/day. Duration: 7-21 days typically. Best: Kerala for authentic Panchakarma (closer option).",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH077_TM",
+      "instruction": "Cashless hospitalization எப்படி வேலை செய்யும்?",
+      "current_output": "Process: 1) Check hospital in network list, 2) Inform TPA/insurer before admission (planned), 3) Show health card at admission, 4) Hospital sends pre-auth request, 5) TPA approves amount, 6) Treatment happens, 7) Final bill - approved amount deducted, balance you pay. Emergency: Inform within 24 hours. Rejected: Appeal to insurer, pay and claim reimbursement.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH041_TG",
+      "instruction": "Transgender patient-kku sariyaana treatment kidaikkumaa?",
+      "current_output": "Legal right! Transgender Persons Act 2019 + NALSA judgment. Rights: 1) Treatment in preferred gender ward (with certificate), 2) No discrimination, 3) Respectful treatment, 4) SRS (Sex Reassignment Surgery) available at government hospitals (Chennai, limited centres). TN: Progressive policies, transgender welfare board. Complaint: Social Welfare Department, Human Rights Commission.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH217_TG",
+      "instruction": "Kitchen herbs-in medicinal uses enna?",
+      "current_output": "Common kitchen medicines: 1) Turmeric - Antiseptic, anti-inflammatory, immunity, 2) Ginger - Digestion, nausea, cold, 3) Pepper - Cold, metabolism, 4) Cumin - Digestion, iron source, 5) Coriander - Cooling, digestion, 6) Curry leaves - Diabetes, hair health, 7) Fenugreek - Blood sugar, lactation, 8) Garlic - Heart, infection, 9) Tulsi - Immunity, respiratory, 10) Neem - Skin, blood purifier. Daily use: Prevention better than cure!",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH144_TG",
+      "instruction": "Newborn-kku free screening tests enna?",
+      "current_output": "Newborn screening at government hospitals: 1) Hearing screening, 2) Heart defect screening (pulse oximetry), 3) Eye examination (for retinopathy if premature), 4) Hip examination, 5) Thyroid screening (heel prick blood test). Rashtriya Bal Swasthya Karyakram (RBSK): Regular health checkup for children 0-18 years. Follow-up: If abnormality found, referred to higher centre - treatment free.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH131_TG",
+      "instruction": "Safe abortion enge kidaikkum? Cost enna?",
+      "current_output": "Safe facilities: 1) Government hospitals - free, 2) Approved private clinics (check registration), 3) Medical college hospitals. Cost: Government = free. Private = Rs.3,000-15,000 (depends on weeks, method). Method: 1) Medical (pills) - early pregnancy, 2) Surgical - later stage. Unsafe abortion risks: Infection, hemorrhage, infertility, death. Never go to unregistered places.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

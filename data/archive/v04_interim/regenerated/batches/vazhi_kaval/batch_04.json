@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kaval",
+  "batch_num": 4,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "RT014",
+      "instruction": "Call vandhuchchi pa - 'Unga account block aagum, KYC update pannunga' nu. OTP kekkuraanga. Enna pannuradhu?",
+      "current_output": "Fraud pa idhu! Bank phone la OTP kekaadhu. 'Block aagum' nu bayamudhuthuraanga. Branch ku neeye poi pesu. Srirangam, Cantonment area la pensioners ipdi maatikirukkanga. Phone la details kudukaadhae pa.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS060",
+      "instruction": "'Write product reviews, 100 per review, unlimited earning' nu website paathen. 500 registration fee.",
+      "current_output": "Review writing legit irundhaalum - registration fee kekaadhu. Paid review sites direct pay pannuvaanga. 500 fee site - either no payment later or endless 'premium membership' demands. Swagbucks, Toluna - legit survey sites irukku, free registration.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS020",
+      "instruction": "WhatsApp message 'CBSE board training mandatory. Register with 5000 fee for CBSE certified teacher status.' Idhuvum mandatory aa?",
+      "current_output": "CBSE training programs announced through schools, not WhatsApp. Official CBSE training through DIKSHA platform is free. 'CBSE certified teacher' is not an official designation. Schools receive training circulars officially - ask your administration.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS073",
+      "instruction": "Email vandhuchu 'Restaurant rating improvement service. 15,000 for 4.5 star guarantee.' Rating improve aagum aa?",
+      "current_output": "Fake review services violate Swiggy/Zomato terms - can get you delisted. Ratings improve through genuine food quality and service. 'Guaranteed ratings' means fake reviews - illegal and risky. Focus on actual customer satisfaction, not bought ratings.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS059",
+      "instruction": "'Work from hostel - Data entry job, daily 3 hours, monthly 15,000, registration 1000' nu Instagram ad. Pocket money ku useful, join pannalama?",
+      "current_output": "Legitimate data entry jobs registration fee kekaadhu. 1000 vaangitu simple work kuduppaanga initially - then 'software fee', 'certification fee' more demands. Monthly 15,000 for 3 hours - too good, basic math fail. Internshala, LinkedIn verified internships try pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS064",
+      "instruction": "Followed celebrity page 'iPhone 15 Giveaway - Follow + Tag 3 friends + Pay 500 shipping to claim.' I won nu DM vandhudhu. Legitimate aa?",
+      "current_output": "Fake celebrity pages - verification badge check pannunga. Real giveaways shipping fee kekaadhu. 500 pay pannina - more fees varum, iPhone varaadhu. 'Tag friends' = scam spread mechanism. Ignore fake giveaways.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS009",
+      "instruction": "En paiyan accident nu hospital call pannudhu da. 1 lakh urgent nu. Bayama irukku.",
+      "current_output": "Ayya, panic aagaadheenga! First unga paiyan number ku direct call pannunga. Real hospital ipdi random call panni UPI kekkaadhu. Verify pannunga first, transfer pannaadheenga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT011",
+      "instruction": "99acres la flat paathaen - 2BHK Race Course la 7000 rent. Owner call pannaar 'NRI irukkaen, advance 40K transfer pannunga, key courier pannuren' nu. Photos nalla irukkudhae, genuine aa saami?",
+      "current_output": "Scam saami. Market rate la half ku below irukkunu red flag. 'NRI' excuse - direct meet avoid panna. Photos vera listing la irundhu copy pannirukkanga. NEVER pay without seeing property. Race Course, Saibaba Colony la rental scam romba common. Owner/agent in person meet pannunga.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG014",
+      "instruction": "Electricity bill pending-nu message vandhudhu, pay pannalaina connection cut-nu link kuduthurukaanga",
+      "current_output": "EB fake message anuppaadhu. Official EB app illa website-la mattum pay pannunga. Indha link phishing site - card details thiruduvanga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR010",
+      "instruction": "Facebook/Instagram/WhatsApp la scammer report eppidi pannuradhu?",
+      "current_output": "WhatsApp: Open chat → Tap name → 'Report', forward scam to wa.me/919845098450 (India tip line). Instagram: Profile → Three dots → 'Report' → 'Scam or fraud', or help.instagram.com. Facebook: Profile/Post → Three dots → 'Find support or report', facebook.com/hacked if compromised. Telegram: Profile → Report, email abuse@telegram.org, @notoscam bot. Twitter/X: Profile → Three dots → 'Report'. LinkedIn: Profile → More → 'Report/Block', linkedin.com/help/linkedin/ask/fraud.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS084",
+      "instruction": "Call vandhudhu 'Police welfare fund contribution audit. Pay 2000 to clear discrepancy.' Welfare fund la issue irukka?",
+      "current_output": "Police welfare contributions deducted at source from salary. No separate payments for 'audit clearance'. Such calls are scams targeting police personnel. Check with your station accounts or district welfare office for any actual issues.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS038",
+      "instruction": "SMS vandhuchu 'Tax audit software license expiring. Renew at 8000 or face ICAI penalty.' Software license ku ICAI penalty varudhaa?",
+      "current_output": "ICAI doesn't mandate specific software for tax audit. Software licenses are between you and vendor, not ICAI matter. No ICAI penalty for software issues. Check with your actual software provider for genuine renewals.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR017",
+      "instruction": "QR code scan panna panam poachu (reverse scam). Special recovery procedure irukka?",
+      "current_output": "Why tricky: YOU authorized transaction (entered PIN), bank sees as 'legitimate'. But still possible: Step 1 (within 30 min): Call bank - 'Fraudulently induced to make payment', request beneficiary bank freeze. Step 2: Contact beneficiary bank from UPI ID (@oksbi = SBI, @okicici = ICICI). Step 3: FIR - Section 420 IPC (Cheating by inducement), Section 66D IT Act. Step 4: Collect QR code image, chat where asked to scan. Legal argument: 'Consent obtained by fraud is no consent'. Recovery: 20-30% if reported within 1 hour.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG016",
+      "instruction": "Matrimony site-la abroad NRI match vandhudhu, India vara flight ticket panam venum-nu solraanga",
+      "current_output": "Marriage scam ithu! NRI-nu sonna flight-ku panam irukkaadhu-nu illa. Video call with family kettunga. Refuse pannaanga-na avoid pannunga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR028",
+      "instruction": "Emergency contacts ellam oru edathula vendum. Master list kudungal.",
+      "current_output": "EMERGENCY: Police 100, Cyber Crime 1930, Women 181, Child 1098, Senior 14567. BANKS: RBI Ombudsman 14448, SBI 1800-111-109, HDFC 1800-266-4332, ICICI 1800-1080, Axis 1800-419-5959, Indian Bank 1800-425-4422. CYBER: National 1930, Portal cybercrime.gov.in, TN 044-28512440. CONSUMER: Helpline 1800-11-4000, Portal consumerhelpline.gov.in. UPI: PhonePe 080-68727374, GPay 1800-419-0157, Paytm 0120-4456456. LEGAL: NALSA 15100, TN SLSA tnsla.gov.in. MENTAL HEALTH: iCALL 9152987821, Vandrevala 1860-2662-345, Snehi 044-24640050. TELECOM: Airtel 121, Jio 198, Vi 199, BSNL 1800-180-1503.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT024",
+      "instruction": "Call vandhuduchu yi - 'Unga account block aagudhuyyi, KYC update pannungayyi' nu. OTP kekkuraangayyi. Enna pannurathu?",
+      "current_output": "Fraud yi idhu! Bank phone la OTP kekkumaa yi? Kekaadhu yi! 'Block aagudhu' nu bayamudhuthuraanga. Branch ku nee poi pesuyyi. Perundurai, Bhavani la textile owners ipdi maatikirukkanga yi. Phone la details kudukkaadhe yi.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS041",
+      "instruction": "US job search panren. 'H1B sponsorship guaranteed, employer tie-up ready, processing fee $3000' nu consultancy solrudhu.",
+      "current_output": "H1B lottery-based - 'guaranteed' impossible. Legitimate employers employee fee pay pannuvaanga, candidate kekaadhu. $3000 vaangitu fake offer letter kuduppaanga - visa reject, money gone. Direct company applications, LinkedIn jobs - legitimate path.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AS039",
+      "instruction": "LinkedIn la 'HR from Google/Microsoft' message - 'Your profile selected, initial interview fee 5,000 for assessment platform access.' Dream job opportunity, pay pannalama?",
+      "current_output": "Google, Microsoft - NO interview fees. 'HR' direct message - fake recruiter. Assessment platforms company provide pannum free. LinkedIn fake recruiters mass aa irukkaanga. Official career pages la apply pannunga, DM job offers ignore pannunga.",
+      "category": "age_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS033",
+      "instruction": "Monsoon - 'Chennai flood relief fund - donate to this UPI' viral message. Donate பண்ணலாமா?",
+      "current_output": "Verify first! Flood time-ல fake relief scams அதிகம். Random UPI-க்கு donate பண்ணாதீங்க. CM Relief Fund official channel use பண்ணுங்க. NGO-னா registration verify பண்ணுங்க. Emotion-ல hasty decision வேண்டாம்.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TG013",
+      "instruction": "Trading app-la daily 10% return guarantee solraanga, invest pannalama?",
+      "current_output": "Ponzi scheme ithu! Daily 10% impossible - 3650% per year aagum. App moodividum, panam ellam poirum. SEBI registered platforms mattum use pannunga.",
+      "category": "tanglish_scam_detection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FS019",
+      "instruction": "தைப்பூசம் - 'Palani kavadi booking online, fast track for 1500 Rs' message வந்துச்சு. Temple official-ஆ?",
+      "current_output": "Temple official-ஆ இப்படி booking இல்ல! Thai Poosam-ல Palani related scams peak. 'Fast track' என்று ஏமாத்துவாங்க. Temple HR&CE website மட்டும் official. Direct temple-ல enquire பண்ணுங்க.",
+      "category": "festival_seasonal_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT031",
+      "instruction": "'CMC Hospital la irundhu pesuren baa, unga relative admit, urgent surgery ku 1 lakh transfer pannu' nu call vandhuchi. Bayam aa irukku baa, enna pannudhu?",
+      "current_output": "First unga relative ku direct call pannu baa! CMC random calls panni money kekaadhu. 'Emergency' nu panic create panni thiruduraanga. Vellore la hospital scams increase aachu. 30 seconds verify panna spend pannu - transfer panna avasaram illa baa.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RR003",
+      "instruction": "UPI la panam poachu, bank la enna process follow pannanum?",
+      "current_output": "Step 1: Call Bank's 24/7 Fraud Helpline - SBI: 1800-111-109, HDFC: 1800-266-4332, ICICI: 1800-1080, Axis: 1800-419-5959, Indian Bank: 1800-425-4422. Say: 'Unauthorized transaction aachu, amount [X], time [X], beneficiary UPI ID [X]. Please freeze and initiate reversal.' Step 2: Visit branch within 24 hours, submit written complaint, get acknowledgment. Step 3: File dispute in banking app under 'Dispute Transaction'. Step 4: RBI Escalation at cms.rbi.org.in if bank doesn't respond in 30 days. Recovery timeline: 10-45 days if reported within 24 hours.",
+      "category": "recovery_reporting_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "OS076",
+      "instruction": "WhatsApp message 'TNRERA compliance fee 15,000 for continued registration.' TNRERA la idhu mandatory aa?",
+      "current_output": "TNRERA fees published on official website - no hidden 'compliance fees'. Registration and renewal through portal only. WhatsApp payment requests are scams. Check rera.tn.gov.in for actual fee structure and payment method.",
+      "category": "occupation_specific_scams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RT012",
+      "instruction": "Ayyaa, call vandhuchchi - 'Ungada account block aaidum, KYC update pannuungada' nu. OTP kekkudhungadaa. Enna pannuvaandaa?",
+      "current_output": "Fraud ayyaa idhu! Bank kaaran phone la OTP keppaan-aa? Keppaane keppaane! 'Block aaidum' nu bayamudhuthuraanga paaru. Branch ku neengadaa poi pesunga. Palayamkottai la oru retired teacher ipdi 1 lakh lose pannittaanga.",
+      "category": "regional_tamil_scams",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nSECURITY PACK GUIDELINES:\n- Tanglish is natural for scam/cyber topics\n- Keep technical terms: OTP, password, link, scam\n- Use Tamil for warnings: எச்சரிக்கை (warning), ஆபத்து (danger), மோசடி (fraud)\n- Format with emoji headers: 🚨, 🛡️, ⚠️\n"
+}

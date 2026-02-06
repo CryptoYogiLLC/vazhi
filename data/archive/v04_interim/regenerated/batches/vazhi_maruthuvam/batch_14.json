@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_maruthuvam",
+  "batch_num": 14,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "HLTH204_TM",
+      "instruction": "Common Ayurvedic medicines - uses என்ன?",
+      "current_output": "Popular medicines: 1) Triphala - Digestion, detox, constipation, 2) Ashwagandha - Stress, energy, immunity, 3) Brahmi - Memory, concentration, 4) Chyawanprash - General tonic, immunity, 5) Guggulu - Cholesterol, joints, weight, 6) Dashamoola - Pain, inflammation, 7) Kumkumadi Thailam - Skin glow. Available: Pharmacies, AYUSH stores. Self-use: Some general tonics okay. Specific treatment: Need doctor consultation.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH066_TM",
+      "instruction": "Cosmetic surgery gone wrong - refund/compensation கிடைக்குமா?",
+      "current_output": "Trickier than medical treatment cases. Issues: 1) Subjective expectations, 2) Inherent risks, 3) No guaranteed outcomes. Claim if: 1) Promised results not delivered, 2) Complications due to negligence, 3) Unqualified surgeon, 4) No proper consent. Proof: Before/after photos, advertisements/promises made, consent form, expert opinion. Consumer Forum: Deficiency in service.",
+      "category": "medical_negligence",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH008_TG",
+      "instruction": "Pregnant women-kku enna free schemes irukku?",
+      "current_output": "TN schemes: 1) Dr. Muthulakshmi Maternity Benefit Scheme - Rs.18,000 cash assistance, 2) Free delivery at government hospitals, 3) Free antenatal checkups, 4) Iron/folic acid tablets free, 5) Free ultrasound scans, 6) 102 ambulance for transport, 7) Post-delivery nutrition support. Register: PHC/Government hospital within first trimester. Amma Baby Care Kit: Free baby items.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH124_TG",
+      "instruction": "Marriage-la mental illness ground for divorce-aa?",
+      "current_output": "Complex issue. Law: Mental disorder is a ground under Hindu Marriage Act, but: 1) Must be incurable/very severe, 2) Must be before marriage or continuous after, 3) Court considers treatment possibility, 4) Living together impossible. Safeguards: 1) Medical evidence needed, 2) Treatment efforts considered, 3) Maintenance rights protected. Progressive interpretation: Courts increasingly protective of mentally ill spouse.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH166_TM",
+      "instruction": "Antibiotics எல்லா infection-க்கும் வேலை செய்யுமா?",
+      "current_output": "NO! Antibiotics only for: Bacterial infections. Useless for: Viral infections (cold, flu, most fevers, COVID). Problem: Overuse = antibiotic resistance (serious global threat). When needed: Doctor decides based on examination/tests. Don't: 1) Self-prescribe antibiotics, 2) Demand antibiotics for every fever, 3) Stop course early. Most colds/fevers: Viral - need rest, fluids, paracetamol only.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH096_TG",
+      "instruction": "Sleeping pills vaanga prescription venumaa?",
+      "current_output": "Yes! Most sleeping pills = Schedule H1/X - strict prescription control. Schedule H1: Alprazolam, Clonazepam, etc. - prescription + ID proof + register entry. Schedule X: Stronger sedatives - even stricter. Why: Addiction potential, misuse risk, suicide risk. Alternative: Melatonin (less restricted), lifestyle changes. Doctor: Will evaluate sleep issue cause first.",
+      "category": "pharmacy_medicines",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH043_TM",
+      "instruction": "Doctor-மேல் complaint போட எங்கே போகணும்?",
+      "current_output": "Tamil Nadu Medical Council (TNMC): For registered doctors. Address: 914, EVR Periyar Salai, Kilpauk, Chennai-10. Process: 1) Written complaint with evidence, 2) Inquiry by Council, 3) Hearing, 4) Action: Warning, suspension, removal from register. Timeline: 6 months - 2 years. Alternative: Consumer Forum for compensation. Criminal: Police if criminal negligence.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH167_TM",
+      "instruction": "Papaya/Pineapple pregnancy-ல் miscarriage cause பண்ணுமா?",
+      "current_output": "Myth (mostly)! Ripe papaya: Safe in moderate amounts. Raw papaya: Contains latex - avoid (may cause contractions). Pineapple: Safe in normal amounts (contains bromelain but too little to cause harm). No food: Scientifically proven to cause miscarriage in normal amounts. Advice: 1) Eat varied diet, 2) Avoid raw/undercooked food, 3) Consult doctor for specific concerns. Miscarriage causes: Usually chromosomal abnormalities, not food.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH074_TG",
+      "instruction": "Medicine MRP-kku mela charge panraanga - legal-aa?",
+      "current_output": "ILLEGAL! MRP = Maximum Retail Price. Law: Legal Metrology Act - selling above MRP is punishable. Hospital excuse: \"Service charges\" - not valid for medicines. Action: 1) Point out MRP on strip/bottle, 2) Refuse to pay excess, 3) Weights and Measures Department complaint, 4) Consumer Forum. Penalty: Fine + compensation. Document: Photo of MRP vs bill amount.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH081_TG",
+      "instruction": "Employer insurance ponaa personal insurance venumaa?",
+      "current_output": "Yes, recommended! Reasons: 1) Job change = coverage gap, 2) Corporate cover usually basic (Rs.3-5 lakhs), 3) Family may not be covered, 4) Age increases premium later, 5) Pre-existing conditions develop. Strategy: 1) Corporate as primary, 2) Personal as top-up, 3) Super top-up for high coverage. Start early: Lower premium, no waiting period issues later.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH108_TM",
+      "instruction": "Mental health insurance cover ஆகுமா?",
+      "current_output": "Yes! Mandatory since MHCA 2017 + IRDAI guidelines. Coverage: 1) Psychiatric hospitalization, 2) Day care treatment, 3) OPD (some policies), 4) Medicine costs. Exclusions: Some policies exclude substance abuse (check terms). Claim: Same as physical illness - cashless/reimbursement. Denied: Complaint to IRDAI, Insurance Ombudsman. Important: Don't hide history - disclose for valid claims.",
+      "category": "mental_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH079_TG",
+      "instruction": "Hospital insurance claim-kku cooperate pannala - enna seivathu?",
+      "current_output": "Hospital must cooperate for cashless. Issues: 1) Won't file pre-auth, 2) Asking cash despite insurance, 3) Not providing documents. Action: 1) Escalate to hospital administration, 2) Call TPA directly, 3) Insurer helpline, 4) Pay and claim reimbursement (last resort). Network hospital agreement: They must facilitate cashless. Complaint: Insurer can de-empanel non-cooperative hospitals.",
+      "category": "private_hospitals",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH046_TG",
+      "instruction": "Mentally ill person treatment-kku yaar consent taranum?",
+      "current_output": "Mental Healthcare Act 2017 rules: 1) Nominated representative (patient designates when competent), 2) Family members (spouse, parents, sibling - in order), 3) No one available: Hospital board decision. Advance directive: Patient can write treatment preferences when competent. Involuntary admission: Only if danger to self/others - magistrate approval needed within 24 hours.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH194_TM",
+      "instruction": "Panchakarma treatment TN-ல் எங்கே கிடைக்கும்?",
+      "current_output": "Panchakarma = 5 detoxification therapies. Where in TN: 1) Government AYUSH hospitals (limited), 2) Private Ayurveda centers - Arya Vaidya Pharmacy branches, 3) Kerala-based resorts with TN branches, 4) Integrated wellness centers. Cities: Chennai, Coimbatore, Madurai have more options. Cost: Private Rs.2,000-10,000/day. Duration: 7-21 days typically. Best: Kerala for authentic Panchakarma (closer option).",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH223_TM",
+      "instruction": "Yoga therapy எங்கே learn பண்ணலாம்?",
+      "current_output": "Free options: 1) Government Yoga centres (every district), 2) AYUSH hospitals - yoga unit, 3) Parks - morning free sessions (many cities), 4) Schools/colleges - yoga programs. Paid: 1) Private yoga studios, 2) Art of Living, Isha centres, 3) Online courses (after basics learned). Certification: If want to teach - AYUSH certified courses. Therapy: For specific conditions - consult yoga therapist (BNYS or certified).",
+      "category": "natural_remedies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH127_TG",
+      "instruction": "High-risk pregnancy endraal enna? Special care enge?",
+      "current_output": "High-risk factors: 1) Age <18 or >35, 2) Previous C-section/complications, 3) Multiple pregnancy (twins), 4) Diabetes/BP/heart disease, 5) Rh negative blood, 6) Previous stillbirth/miscarriage. Care: 1) Referred to district hospital/medical college, 2) More frequent monitoring, 3) Specialist care. Identification: During ANC visits. Don't hide history - affects baby's safety.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH017_TG",
+      "instruction": "Dialysis free-yaa seyyalaamaa?",
+      "current_output": "Yes! Pradhan Mantri National Dialysis Program. Free dialysis: Government hospitals, empanelled private centres. Eligibility: BPL/low income patients. Sessions: Usually 2-3 per week. CMCHIS: Also covers dialysis. Kidney transplant: Covered under CMCHIS (Rs.5 lakh). Location: District hospitals, medical colleges. Registration: Through nephrologist referral. Medicines: EPO injections also subsidized.",
+      "category": "government_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH129_TM",
+      "instruction": "Abortion legal-ஆ? எந்த conditions-ல் allowed?",
+      "current_output": "Legal under MTP Act (amended 2021). Conditions: 1) Up to 20 weeks - one doctor opinion, 2) 20-24 weeks - two doctors opinion (rape, contraceptive failure, fetal abnormality), 3) Any time - if fetal abnormality (medical board). Special: Rape survivors, minors - extended limits. Unmarried women: Also eligible. Consent: Woman's consent only (adult). Minor: Guardian consent needed.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH141_TG",
+      "instruction": "PCOS/PCOD treatment enge kidaikkum?",
+      "current_output": "Available at: 1) Government hospital gynecology OPD - free, 2) Medical college hospitals - specialized care. Treatment: 1) Lifestyle modification (diet, exercise), 2) Medicines for hormonal balance, 3) Metformin if diabetic tendency, 4) Fertility treatment if trying to conceive. Tests: Ultrasound, hormonal tests - available free at government. Long-term: Regular monitoring needed.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH030_TG",
+      "instruction": "Second opinion ketkalaamaa? Doctor kobappaduvaaraa?",
+      "current_output": "Absolutely your right! Benefits: 1) Verify diagnosis, 2) Explore treatment options, 3) Confirm surgery necessity, 4) Peace of mind. How: 1) Ask for medical records, 2) Consult another specialist, 3) Get written opinion. Ethical doctors welcome this. Major decisions: Cancer, surgery, chronic illness - always get second opinion. Online: Telemedicine second opinions available.",
+      "category": "patient_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH128_TM",
+      "instruction": "Dr. Muthulakshmi Maternity Benefit Scheme என்ன?",
+      "current_output": "TN government scheme: Rs.18,000 cash assistance. Eligibility: 1) TN resident, 2) Family income limit, 3) First two live births, 4) Institutional delivery, 5) Age 19+. Payment: 3 installments - during pregnancy, after delivery, after vaccination completion. Apply: PHC/Government hospital during registration. Documents: Ration card, Aadhar, bank account. Working women: Separate maternity benefit also applicable.",
+      "category": "womens_health",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH166_TG",
+      "instruction": "Antibiotics ellaa infection-kkum velai seyyumaa?",
+      "current_output": "NO! Antibiotics only for: Bacterial infections. Useless for: Viral infections (cold, flu, most fevers, COVID). Problem: Overuse = antibiotic resistance (serious global threat). When needed: Doctor decides based on examination/tests. Don't: 1) Self-prescribe antibiotics, 2) Demand antibiotics for every fever, 3) Stop course early. Most colds/fevers: Viral - need rest, fluids, paracetamol only.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH157_TM",
+      "instruction": "என் புள்ளைக்கு fever வந்திருக்கு, GH போகலாமா?",
+      "current_output": "GH போங்க, free treatment. ஆனா mild fever-க்கு PHC போதும். High fever, 3 days+ fever, fits, rash இருந்தா GH immediately. Chennai: 1) GH (Egmore/Stanley/Kilpauk), 2) ICH Egmore (children specialist). Token system - early போங்க. Documents: Ration card/Aadhar இருந்தா good. Emergency-க்கு எந்த document-உம் வேண்டாம்.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH180_TM",
+      "instruction": "Infertility-க்கு Siddha treatment effective-ஆ?",
+      "current_output": "Used traditionally for: Male infertility (low sperm count, motility), Female infertility (PCOS, irregular periods, hormone balance). Treatments: 1) Karpam (fertility medicines), 2) Nei Prasham (ghee preparations), 3) Specific Lehyams, 4) Shodhana (detoxification). Consultation: Detailed history, examination. Duration: 3-6 months typically. Combined: Many take with modern treatment. NIS: Fertility clinic available. Evidence: Research ongoing, traditional success claims.",
+      "category": "siddha_medicine",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HLTH191_TG",
+      "instruction": "Ayurveda doctor qualification enna?",
+      "current_output": "Qualification: BAMS (Bachelor of Ayurvedic Medicine and Surgery) - 5.5 years. Higher: MD (Ayurveda), MS (Ayurveda surgery). Registration: Central/State Ayurveda Council. Verify: CCIM register online, displayed certificate. In TN: Fewer Ayurveda practitioners than Siddha. Colleges: Limited in TN - most trained elsewhere. Practice: Registered practitioners can practice across India.",
+      "category": "ayurveda",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nHEALTHCARE PACK GUIDELINES:\n- Use Tamil medical terms: மருத்துவமனை (hospital), மருத்துவர் (doctor), சிகிச்சை (treatment)\n- Keep disease names in English first time with Tamil: \"Diabetes (நீரிழிவு)\"\n- Government hospital names can stay in English\n- Use Tamil numbers where natural\n- Format with emoji headers: 🏥, 💊, 🌿\n"
+}

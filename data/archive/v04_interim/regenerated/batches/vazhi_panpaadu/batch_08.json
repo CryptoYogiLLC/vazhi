@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_panpaadu",
+  "batch_num": 8,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CULT040_TG",
+      "instruction": "'Thannuyir neeppinum' - unmai patriya kural enna?",
+      "current_output": "Kural: 'Thannuyir neeppinum seiyarka thanpiRidhor innuyir neekkum vinai'. Artham: Than uyir ponaalum, pira uyirgalai kollum seyalai seiyakkoodaadhu. Ahimsa-yoda uchcham. Even at the cost of your own life, don't harm others. Non-violence-a ivvalavu strongly sonnavar Valluvar!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT087_TG",
+      "instruction": "War / por patri Valluvar enna solkiraar?",
+      "current_output": "Kural: 'Tholpadai thondran ethirvinaiyum ulpadai ondraanum vendhanai vel'. Nalla padai, ethiriyoda weakness aRidhal, ulloor support - ivai vetrikkku vazhi. Aanaal: 'Anjaamai allaal thunai venda enjaamai enni idaththaal seyin'. Yosiththu, right time-la seidhaal dhairiyam mattumae podhum. Strategic thinking over brute force!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT099_TG",
+      "instruction": "Karunai illadhavargal patri enna solkiraar?",
+      "current_output": "Kural: 'Arulillaarkku avvulagam illai porulillaarkku ivvulagam illai'. Karunai illadhavargalukkku marumai illai, panam illadhavargalukkku immai kashtam. Melum: 'Porulartraar pooppar orukaal arulartraar artrraarmatr raadhal aridhu'. Panam ponaal thirumba varum, karunai ponaal thirumba varaadhu. Kindness once lost = hardest to regain!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT074_TG",
+      "instruction": "Panam semikka mudiyavillai - enna kural udhavum?",
+      "current_output": "'Alavarinndhu vaazhaadhaan vaazhkkai ulapola illaagiththondraak kedum'. Varavukku thagundabadi selavu seiyaadhavan vaazhkkai kedum. Melum: 'Aagaaru alavarinndhu eega' - income arinDhu selavaziyungal. Budget maintain pannungal. Needs vs Wants piriyungal. 50-30-20 rule follow pannungal!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT127_TG",
+      "instruction": "Podhigai Malai yaen siddhargalukkku mukkiyam?",
+      "current_output": "Podhigai Malai (Agastyamalai) Western Ghats-la ulladhu. Agathiyar ingge thavam seidhathaaga nambappadugiradhu. Rare herbs niraiya kidaikkum. Indrum Agathiyar ingge iruppathaga silar nambugiraargal. Spiritual seekers ingge yaathirai selgiraargal. Courtallam (Kutralam) aruge. Dense forest enbathaal trekking permits thevai. Biodiversity hotspot-aagavum declared.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT020_TG",
+      "instruction": "Thirukkuralil business-kku udhavum kuralgal enna?",
+      "current_output": "Porutpaalil business-kku etra adhigaarangal: 1) Ookkamudaimai - motivation, 2) Aalvinai udaimai - leadership, 3) Idanarithtal - market analysis, 4) Kaalamarithal - timing, 5) Vinaiththitpam - focus, 6) Vinaiththooimai - ethics, 7) Therindhu seyalvagai - planning. MBA courses-la Thirukkural teach panraanga ippo!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT083_TG",
+      "instruction": "Tax / vari patri Valluvar enna solkiraar?",
+      "current_output": "Kural: 'Uzhuvaar ulagaththaarkku aaniaqth thatraadhu ezhuvaarai ellaam poruththu'. Vivasaayigal ulagoda aadharam. Melum: 'Alavu oththu vaazhAdha mannavan ulagaththu alavu irandhu migaipaduththu'. Vari adhigamaga vaangum arasan makkalai thunpuruththukiraan. Fair taxation, farmers' welfare - 2000+ years ago sonna modern economics!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT054_TG",
+      "instruction": "'Oodalin thondrum siruthuni' - oodal patriya kural enna solludhu?",
+      "current_output": "Kural: 'Oodalin thondrum siruthuni nallali vaaadinum paadu perum'. Artham: Siriya oodal (love fight) kaadhalai melum inimaiyaakkum. Siriya varuththam vandhaalum, adhu mannippim bodhu innum aazhamaana anbaaga maarum. Healthy arguments strengthen relationships!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT067_TG",
+      "instruction": "Petrorkaludan misunderstanding irundhaal enna seivadhu?",
+      "current_output": "'Annaiyum pithavum munnari deivam' (Kondraivendhan). Petrorae mudhal kadavul. Melum: 'Eendra pozhudhin peridhuvakkum thanmagaNai saandron enakketta thaay'. Thaay thandhai nam nalladharkae solkirargal. Patience-udan explain pannungal, respect maintain pannungal.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT093_TG",
+      "instruction": "Nandri marappadu patri enna solkiraar?",
+      "current_output": "Kural: 'Endhandri kondraarkum uyvundaam uyvilai seinandri kondra magarku'. Ella baavangalukkum mannippu undu, aanaal nandri marandhavnukku illai. Melum: 'Nandri marappadu nandrandru nandralla thandriyum marappadu nandru'. Nandriyai marakkakkoodaadhu, theemayai marakkalaam. Forgetting kindness = unforgivable sin!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT160_TG",
+      "instruction": "Silapathigaram kadhai enna?",
+      "current_output": "Silapathigaram - Kannagi, Kovalan kadhai. Kovalan Pukaar nagarathu vanigan. Manaivi Kannagi. Madhavi endra nadana mangayai kaadhalitthu selvam izhakiraan. Manam maari Kannagiyudan Madurai pokiraan. Kannagiyoda silambu virkka, porkkollan 'thirudan' endru arasanidam pugaar seigiraan. Arasan Kovalanai kolkiraan. Kannagi kobathil silambai udaiththu nirabaaradhiyai kaatti, Maduraiyai erikkiraal. Pathivrathaiyoda sakthiyai kaattum kaappiyam.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT156_TG",
+      "instruction": "Ettuthogai endraal enna? Avai ennenna?",
+      "current_output": "Ettuthogai - ettu noolgaloda thoguppu: 1) Natrrinai - 400 paadalgal, 2) Kurunthogai - 401 paadalgal, 3) Aingurunooru - 500 paadalgal, 4) Pathitruppaththu - Sera mannargalai paadiyathu, 5) Parippadal - Thirumaal, Murugan patriyathu, 6) Kaliththogai - Kali viruththappa, 7) Aganaanooru - 400 agappaadalgal, 8) Puranaanooru - 400 purappaadalgal. Vevveru pulvargal paadiyavai.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT161_TG",
+      "instruction": "Kambaramayanam patri sollungal?",
+      "current_output": "Kambaramayanam - Kambar ezhuthiya Tamil Ramayanam. 12th century-la Chozhar kaalathil ezhuthappattathu. Valmiki Ramayanathoda thazhUval alla - suthandhiramaana padaippu. 10,500+ paadalgal. Kaandangal: Baala Kaandam, Ayodhya Kaandam, Aaranya Kaandam, Kishkindha Kaandam, Sundara Kaandam, Yuththaa Kaandam. Tamil kavithai uchcham. 'Kavichakravarthi' endra pattam Kambarukku.",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT175_TG",
+      "instruction": "Kolam enna? Eppadi poduvathu?",
+      "current_output": "Kolam - veettu vaasalil podum floor design. Rice flour (arisi maavu) payanpaduththuvathu traditional - ants, birds-kku unavu. Vagaigal: 1) Pulli Kolam - dots around design, 2) Sikku Kolam - intricate patterns, 3) Ner Kolam - straight lines. Every day different design. Pongal - special big kolam. Aadi month - kal pookal (stone flowers) add panraanga. YouTube-la tutorials niraiya. Tamil women's daily art form!",
+      "category": "arts_literature",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT154_TM",
+      "instruction": "கோயிலில் photography அனுமதி உண்டா?",
+      "current_output": "Photography rules: 1) கருவறை உள்ளே - almost always prohibited, 2) Outer areas - usually allowed, 3) Special ticket for camera - some temples charge (₹50-100), 4) Mobile phones - generally ok for selfies outside, 5) Video - often extra charge or prohibited. Major temples: Meenakshi - ₹50 camera fee, Srirangam - limited areas, Thanjai - allowed outside. Flash photography usually not allowed. Drones - strictly prohibited. Ask at entrance if unsure. Respect the space - worship first, photos second!",
+      "category": "temples_heritage",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CULT014_TG",
+      "instruction": "'Arivudaiyaar aavadhu arivaar' - leadership patri Valluvar enna solraar?",
+      "current_output": "Kural: 'Arivudaiyaar aavadhu arivaar arivilaar aqdhiari kallaa thavar'. Artham: Arivudaiyavargal varapovadhai munkoottiye arivargal. Arivilladhavargal appadi ariya maattargal. Ethirkaalathai paarkkum thiran (foresight) patriya kural. Nalla leader-kku idhu avasiyam.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT101_TG",
+      "instruction": "Kobaththai adakkuvadhu patri enna solkiraar?",
+      "current_output": "Kural: 'Sinaththai porulaaga kondavan kedu ninaiththadhan polum tharum'. Kobaththai mukkiyamaga karudhupavanukkku kedhuthalae varum. Melum: 'Thannaithaan kaakkin sinangaakka kaavaakkaal thannaiyae kollum sinam'. Kobaththai adakkavillendral, adhu unnaiyae azhikkum. Anger destroys the angry person first!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT111_TG",
+      "instruction": "Bogar samaadhi engge ulladhu?",
+      "current_output": "Bogar samaadhi Pazhani Murugan kovilukkullaeyae ulladhu. Sanctum sanctorum-kku keezhae underground-la Bogar indrum dhiyaanathil iruppathaga nambappadugiradhu. Andha idaththil darshan seiyalam. 'Bogar' endra 2020 Tamil movie idhaippatriyathu. Pazhanikku ponaal Bogar samaadhiyai dharisikka marakkaadheeargal!",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT143_TG",
+      "instruction": "108 Divya Desangal endraal enna?",
+      "current_output": "12 Azhvaargalaal paadappatta 108 Vishnu kovilgal. Ivattril: 84 Tamil Nadu-la, 11 Kerala-la, 2 Andhra-la, 1 Gujarat-la, 2 Uttar Pradesh-la, 6 Nepal-la (Vaikunta), 2 mattravai. Ovvondrilum Perumal vevveru peyaril, vevveru form-la iruppaar. 'Nalayira Divya Prabandham' indha kovilgalai paadugiradhu. 108-m visit seivathu spiritual achievement.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT061_TG",
+      "instruction": "Office-la boss unfair-aa nadandhukkondaal enna kural udhavum?",
+      "current_output": "'Poraiyudaimai porludaimai potrrich sirandhaan serivudaimai avviraN en'. Porumai enbadhu migapperiya selvam. Unfair situation-la porumaiyaaga irundhu, right time-la action edukavum. Emotional reaction avoid pannunga. Document everything, stay professional.",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT086_TG",
+      "instruction": "Democracy / jananayagam concept Thirukkuralil ulladha?",
+      "current_output": "Neradiyaaga 'democracy' illai, aanaal concepts ullana: 'Iraimaatchi' - nalla aatchiyoda adaiyaалangal. 'Kudiseyalvagai' - makkal pangaetpu. Melum: 'Sevikkuna villAdha pozhdu siRidhum ivakkum iraachchiyam il'. Makkal kural ketkkaadha arasu veezhum. Accountability to people - democratic principle in ancient text!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT059_TG",
+      "instruction": "'Nayanilan enbadhu sollum' - selfish person patriya kural enna?",
+      "current_output": "Kural: 'Nayanilan enbadhu sollum payanila sollizhuk kuttravar natpu'. Artham: Payanatra pecchu pesupavargaloda natpu, 'ivar selfish' endru kaattiVidum. Quality of friendship shows character. Your friends reflect who you are!",
+      "category": "thirukkural",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT171_TM",
+      "instruction": "தெருக்கூத்து என்றால் என்ன?",
+      "current_output": "தெருக்கூத்து - தமிழ்நாட்டின் traditional street theatre. இரவு முழுவதும் நடக்கும். Mahabharata, Ramayana கதைகள் popular. சிறப்புகள்: 1) வண்ண makeup - face painting, 2) Elaborate costumes, 3) Live music - harmonium, thavil, 4) Dialog + song + dance, 5) Audience participation. Kanchipuram, Villupuram areas-ல் famous. UNESCO Intangible Cultural Heritage list-ல் consideration-க்கு. Village entertainment before TV/cinema வந்தது!",
+      "category": "arts_literature",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CULT136_TG",
+      "instruction": "Gangaikonda Cholapuram koviloda sirappu enna?",
+      "current_output": "Rajendra Chozhan thandhaiyoda ninaivaga kattiya kovil. Sirappugal: 1) Thanjai kovilai pondrae aanaal satru siriya alavu, 2) Lion base pilasters - unique feature, 3) Sirpangal miga azhagu - Nataraja, Saraswati, 4) Gangaiyai vendradhoda ninaivaga indha peyar, 5) Oru kaalathil pudhiya thalainagaram ingethan. Ariyalur district-la ulladhu. Thanjai alavu crowd illai - peaceful visit possible.",
+      "category": "temples_heritage",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CULT112_TG",
+      "instruction": "Konganar Siddhar yaar? Avar contributions enna?",
+      "current_output": "Konganar (Kongana Siddhar) Bogar-oda sishyar. Kongu naattai serndavar enbathaal indha peyar. Siddha medicine-la miga mukkiyamaana contributions seidhavar. Noigaloda diagnosis methods, marundhu thayaarippu muraigal patri virivaga ezhuthiyavar. 'Konganar Vaiththiya Soothiram' migavum famous.",
+      "category": "siddhars",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nCULTURE PACK GUIDELINES:\n- Pure Tamil preferred\n- Thirukkural must use CITATION FORMAT with quotation marks\n- Include source attribution\n- Format with emoji headers: 📖, 🙏, 🛕\n"
+}

@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 4,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "RC013",
+      "instruction": "ரேஷன் பொருட்கள் எவ்வளவு கிடைக்கும்? விலை என்ன?",
+      "current_output": "Rice card: 20kg free rice per family. Sugar card: 5kg rice at Rs.1/kg. Wheat, sugar, palm oil-ம் subsidized விலையில் கிடைக்கும். Pongal, Diwali-க்கு special items உண்டு.",
+      "category": "ration_card",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CONV002",
+      "instruction": "[Multi-turn dialogue] Lost Aadhaar and PAN - Recovery Process - Full conversation guide",
+      "current_output": "User: Ennoda purse tholainjuduchu. Aadhaar, PAN card ellam poyiduchu. Enna pannanum?\n\nAssistant: Oh no! Don't worry, recover pannidalam. First few immediate steps:\n\n**Urgently pannunga:**\n1. **Bank Cards Block:** Bank helpline-ku call panni ATM/Debit card block pannunga\n2. **Aadhaar Biometric Lock:** Misuse thadukka myaadhaar.uidai.gov.in la lock pannunga\n\n**Apram documents recover pannalam.** Purse-la enna ellam irundhuchu?\n\nUser: Aadhaar, PAN, ATM card, Driving License irundhuchu. Bank card block pannitten already.\n\nAssistant: Good, bank card block panneeteenga. Now one by one recover pannuvaom:\n\n**1. Aadhaar Card (Easiest - 5 mins):**\n- Website: eaadhaar.uidai.gov.in\n- Enter: Aadhaar Number (remember pannunga or family member kitta irukka?)\n- OTP: Registered mobile-la varum\n- Download: e-Aadhaar PDF (Free!)\n- Password: First 4 letters of name (CAPS) + Birth Year\n\nUnga Aadhaar number nenaivil irukka?\n\nUser: Aadhaar number nenaivil illa. Mobile number register pannirukken but number maathiten recently.\n\nAssistant: Hmm, slight complication but solve pannalam:\n\n**Aadhaar Number Maranthu + Mobile Maariruchu:**\n\n**Option 1: Family Member Check**\n- Spouse/Parent Aadhaar-la sometimes linked family details irukku\n- Old documents-la Aadhaar copy irukka? (Bank, College, Office)\n\n**Option 2: Aadhaar Enrollment Center**\n- Nearest center: uidai.gov.in → Locate Center\n- Go with any ID proof (Voter ID, Passport, DL)\n- Biometric match pannuvanga\n- Mobile update pannalam + Aadhaar retrieve\n- Fee: ₹50\n\n**Option 3: myaadhaar.uidai.gov.in**\n- \"Retrieve Lost UID/EID\"\n- But needs registered email or mobile\n\nVera ID proof edhaachu irukka - Voter ID, Passport?\n\nUser: Voter ID veetla irukku. DL tholainjuduchu.\n\nAssistant: Perfect! Voter ID irukku na process easy:\n\n**Step 1: Aadhaar Retrieve**\n1. Nearest Aadhaar Seva Kendra (ASK) poganum\n2. Carry: Voter ID Original\n3. Tell: \"Aadhaar number retrieve pannanum, mobile update pannanum\"\n4. Biometric verify pannuvanga\n5. New mobile link aagum\n6. Aadhaar number kedaikum\n7. Fee: ₹50\n\n**Find ASK:** uidai.gov.in → Locate Enrollment Center\n\n**Step 2: After Aadhaar Ready**\n- Download e-Aadhaar immediately\n- PVC card order: ₹50 (optional)\n\nVoter ID eduthukitu ASK pogalaamaa? Apram PAN and DL paakalam.\n\nUser: Okay Aadhaar panniten nu vechukonga. PAN card eppadi?\n\nAssistant: Good! Aadhaar ready na PAN super easy:\n\n**e-PAN Download (Instant & FREE):**\n1. Website: eportal.incometax.gov.in\n2. Click: \"Instant e-PAN\"\n3. Click: \"Check Status / Download e-PAN\"\n4. Enter: PAN Number... \n\n**PAN Number Maranthuducha?**\n\n**Know Your PAN:**\n1. Same website: eportal.incometax.gov.in\n2. \"Know Your PAN\" option\n3. Enter: Name + DOB + Mobile Number\n4. OTP verify\n5. PAN Number display aagum!\n\nApram:\n- \"Instant e-PAN\" la download\n- Aadhaar OTP verify\n- PDF ready - FREE!\n\nPAN number nenaivil irukka?\n\nUser: PAN number nenaivila illa, but Aadhaar ready nu vechukonga. Aadhaar irundha PAN kedaikuma?\n\nAssistant: Yes! Aadhaar irundha PAN retrieve pannalam:\n\n**Method 1: Know Your PAN with Aadhaar**\n1. eportal.incometax.gov.in\n2. \"Know Your PAN\"\n3. Enter: Full Name (as in PAN) + DOB + Registered Mobile\n4. OTP\n5. PAN display\n\n**Method 2: If PAN-Aadhaar Linked**\n1. Same portal\n2. \"Link Aadhaar Status\"\n3. Enter Aadhaar number\n4. If linked, PAN number display aagum!\n\n**Method 3: Form 49A (if above fail)**\n- onlineservices.nsdl.com\n- \"Reprint of PAN Card\"\n- Enter details\n- ₹50 fee\n- Physical card varum\n\nTry pannunga - most likely Method 1 or 2 work aagum. Driving License paaklamaa?\n\nUser: Okay try panren. DL eppadi recover pannuvadhu?\n\nAssistant: **Duplicate Driving License:**\n\n**Online Process:**\n1. Website: parivahan.gov.in\n2. Online Services → Tamil Nadu\n3. \"Duplicate Driving License\"\n4. Enter: DL Number (nenaivil irukka?)\n\n**DL Number Maranthuducha?**\n- parivahan.gov.in → \"Know Your DL Number\"\n- Enter: Name + DOB + Mobile\n- DL details varum\n\n**Documents Upload:**\n- Aadhaar Card\n- Address Proof\n- FIR Copy (Optional but recommended)\n- Passport Photo\n\n**Fee:** ₹200-500\n\n**RTO Visit:**\n- Online apply panna apram\n- Slot book pannunga\n- Document verification\n- Photo capture\n- Duplicate DL issue (Smart Card by post)\n\n**Time:** 7-15 days\n\n**Tip:** FIR file pannunga (online: eservices.tnpolice.gov.in) - future-ku safe, plus some RTOs ask for it.\n\nVera documents tholainjucha?\n\nUser: Illa, idhu dhan. Summary solunga please\n\nAssistant: **Complete Recovery Summary:**\n\n**1. Aadhaar Card**\n- ASK visit with Voter ID\n- Biometric verify + Mobile update\n- Fee: ₹50\n- Then: eaadhaar.uidai.gov.in la download (FREE)\n\n**2. PAN Card**\n- eportal.incometax.gov.in\n- \"Know Your PAN\" → Retrieve number\n- \"Instant e-PAN\" → Download (FREE)\n- Physical card: ₹50 (optional)\n\n**3. Driving License**\n- parivahan.gov.in\n- \"Know Your DL\" → Get number\n- \"Duplicate DL\" → Apply\n- Fee: ₹200-500\n- RTO visit for verification\n- Time: 7-15 days\n\n**Bonus Tips:**\n1. FIR file pannunga for records\n2. DigiLocker app use pannunga - all documents digital-la safe\n3. Aadhaar biometric lock pannunga until new cards varum\n\n**Priority Order:** Aadhaar first → PAN → DL\n\nAll the best! Vendum na ask pannunga.",
+      "category": "conversational_dialogues",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNW004",
+      "instruction": "Chief Minister's Girl Child Protection Scheme endraal enna?",
+      "current_output": "Girl child protection + savings. Amount: ₹50,000 deposit (by Govt). Types: Scheme 1 - Single girl child family, Scheme 2 - Two girl children family. Eligibility: Poor family, parents below 35 years, family planning operation done. Benefit: ₹1 lakh+ maturity at 18, for higher education/marriage. Apply: ICDS/Taluk office.",
+      "category": "tn_women_welfare",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PAN002",
+      "instruction": "Pudhiya PAN Card eppadi peruvadhu?",
+      "current_output": "Online application: 1. NSDL: onlineservices.nsdl.com 2. UTIITSL: pan.utiitsl.com 3. e-Filing Portal (Instant e-PAN): eportal.incometax.gov.in (Aadhaar based - FREE!). Documents needed: ID Proof (Aadhaar/Voter ID/Passport), Address Proof, DOB Proof, Photo & Signature. Fee: Physical PAN ₹107 (India), e-PAN Free. Time: 15-20 days (Physical), Instant (e-PAN)",
+      "category": "pan_card_bilingual",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA031",
+      "instruction": "GST Registration எப்போது கட்டாயம்?",
+      "current_output": "Goods (intra-state): ₹40 lakh+ turnover. Services: ₹20 lakh+. E-commerce sellers: ₹0 - mandatory from first sale! Inter-state supply: Mandatory regardless of turnover. Register FREE at gst.gov.in with PAN, Aadhaar, address proof, bank details.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR001T",
+      "instruction": "Naan siru vivasaayi. Organic vivasaayam seiyya virumburen. Enna udhavi kidaikkum?",
+      "current_output": "Organic vivasaayathukku pala thittangal ullana:\n\n1. **PKVY Scheme**\n   - Help: ₹50,000/hectare (3 years)\n   - Cluster basis (50 farmers)\n   - Where: District Agriculture Officer\n\n2. **PGS Certification (Free)**\n   - pgsindia-ncof.gov.in\n   - Apply as group\n\n3. **TN Organic Farming Policy**\n   - Vermicompost unit: 50% subsidy\n   - Bio-fertilizer: Free\n   - Where: Block Agriculture Office\n\n4. **Training**\n   - KVK - Free training\n   - TNAU - Certificate courses\n\n5. **Market Support**\n   - Organic Mandi through e-NAM\n   - Direct sale allowed",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA007T",
+      "instruction": "PAN-Aadhaar Link eppadi seyvadhu?",
+      "current_output": "Online: eportal.incometax.gov.in → Link Aadhaar → Enter PAN and Aadhaar → OTP verify → Pay ₹1,000 late fee. SMS method: Send 'UIDPAN <Aadhaar> <PAN>' to 567678. MANDATORY - unlinked PAN becomes inoperative!",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR007",
+      "instruction": "MUDRA Loan eppadi vaanguvadhu? Enna documents vendum?",
+      "current_output": "Loan Types:\n- Shishu: Up to ₹50,000 (Start small business)\n- Kishore: ₹50,001 - ₹5 lakh (Expand business)\n- Tarun: ₹5 - ₹10 lakh (Big expansion)\n\nEligibility: 18+ age, Indian citizen, Business plan ready, No collateral needed!\n\nDocuments:\n1. Aadhaar + PAN\n2. Address Proof\n3. Business plan / Project report\n4. Quotations (machines, equipment)\n5. 2 passport photos\n6. Bank statement (6 months - existing business)\n7. ITR (if available)\n\nApply:\n\nMethod 1 - Bank:\n1. Nearest bank branch pogga\n2. MUDRA loan enquire\n3. Application form fill\n4. Documents submit\n5. Bank verification\n6. Sanction (7-15 days)\n\nMethod 2 - Online:\n- mudra.org.in\n- Udyamimitra.in (SIDBI)\n- psbloansin59minutes.com (existing businesses)\n\nInterest: 8-12% (bank discretion)\n\nRejection reasons: Poor CIBIL (< 650), Incomplete docs, Weak business plan, Existing default",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA010T",
+      "instruction": "Community Certificate eppadi peruvadhu?",
+      "current_output": "Apply at tneservices.tn.gov.in or Taluk Office. Documents: Parent's community certificate, school TC, Aadhaar, address proof. VAO verification, RI check, Tahsildar approval. Time: 15-30 days. Fee: ₹25-50. Essential for reservation benefits.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR010",
+      "instruction": "e-NAM endraal enna? Eppadi payanadaivadhu?",
+      "current_output": "Electronic National Agriculture Market. Online trading platform - sell across India. Benefit: Better prices, fewer middlemen, transparent bidding. Register: enam.gov.in, nearby e-NAM mandi. Process: Produce → Quality testing → Online auction → Highest bidder wins → Payment to bank. In TN: UZHAVAR SANDHAIS connected. Quality Parameters: Grade based on moisture, foreign matter, damaged grains.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNH003",
+      "instruction": "Amma Baby Care Kit என்றால் என்ன?",
+      "current_output": "புதிதாக பிறந்த குழந்தைக்கு இலவச Kit. Value: ₹5,000+. Contents: Baby clothes (6 sets), Mosquito net, Baby bed, Towels, Diapers, Baby oil/soap/powder, Blanket, Toys. தகுதி: Govt hospital delivery, Dr. Muthulakshmi scheme beneficiary. Given: Hospital-லேயே discharge போது கொடுப்பார்கள். Documents: MCP card, Delivery details.",
+      "category": "tn_health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS034",
+      "instruction": "PM SVANidhi (Street Vendor Loan) endraal enna?",
+      "current_output": "Loan for Street Vendors. First loan: ₹10,000, Second: ₹20,000 (for timely repayment), Third: ₹50,000. Interest Subsidy: 7%. Cashback: Up to ₹1,200/year for digital payments. Eligibility: Certificate of Vending/Letter of Recommendation, Name in Urban Local Body survey. Apply: pmsvanidhi.mohua.gov.in",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE011",
+      "instruction": "என் பிள்ளை 12th முடித்துவிட்டார். College admission, scholarship, education loan எல்லாம் எப்படி?",
+      "current_output": "Admission Process:\n1. Entrance Exams - NEET/JEE Main/TNEA\n2. Counselling - tneaonline.org/josaa.nic.in\n\nScholarships:\n3. BC/MBC/SC/ST Scholarship - tneservices.tn.gov.in - Full fee waiver + Stipend\n4. முதலமைச்சர் உயர்கல்வி உறுதி திட்டம் - First Gen Graduates - Free education + Laptop + ₹1,000/month\n5. National Scholarship Portal - scholarships.gov.in\n6. Merit-cum-Means - Technical education\n\nEducation Loan:\n7. Vidya Lakshmi Portal - vidyalakshmi.co.in - 40+ Banks\n8. ₹7.5 lakh வரை Collateral-free\n9. Interest Subsidy - EWS students\n\nFree Laptop: Govt School/College students\nFree Hostel: BC/MBC/SC/ST",
+      "category": "scenario_life_events",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNA006",
+      "instruction": "TN-la vithai/uram subsidy eppadi peruvadhu?",
+      "current_output": "Subsidized seeds/fertilizers for farmers. Seed Subsidy: 50% discount on certified seeds, buy at Agriculture dept office. Fertilizer Subsidy: Urea, DAP, MOP at subsidized prices. UZHAVAN Card: Track subsidy, check eligibility. Distribution: Co-operative societies, Agri office. Documents: Patta, Farmer ID, Aadhaar. Season: Announced before sowing season.",
+      "category": "tn_agriculture",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNR002",
+      "instruction": "TN Ration Kadai-la enna items kidaikkum?",
+      "current_output": "TN PDS items list. Rice Card: 20 kg free rice/family. Sugar Card: 5 kg rice at ₹1/kg. Common: Sugar 1.5 kg (₹13.50), Wheat/Atta 2 kg (₹7), Palm Oil 500ml (₹27), Daal 1 kg (₹28). Specials: Pongal - 1 kg sugar free + cash; Diwali - 1 kg sugar free; Ramzan - dates + cash for Muslims. Eligibility: Based on ration card type. Shop: Monthly distribution, SMS alert.",
+      "category": "tn_ration_food",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR010T",
+      "instruction": "Engal gramathula kudineer prachhanai ulladhu. Government-kitta eppadi complaint seyvadhu? Enna thittangal ullana?",
+      "current_output": "**Rural Drinking Water Problem Solution:**\n\n**Complaint Channels:**\n1. Gram Panchayat - Written complaint, Gram Sabha\n2. Block Development Officer - If Panchayat doesn't act\n3. District Collector - tndistricts.gov.in, CM Cell 1100\n4. TWAD Board - twadboard.tn.gov.in, 1800-425-5434\n\n**Government Schemes:**\n1. **Jal Jeevan Mission** - Tap water to every house, Free\n2. **Combined Water Supply** - Multi-village scheme\n3. **Oorani Restoration** - Traditional water body repair\n4. **RO Plant** - For high TDS areas\n\n**Individual Connection:**\n- Apply at Panchayat\n- ₹100-500 charge\n\n**Water Quality Issue:**\n- Free testing at District Lab",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR008",
+      "instruction": "Ayushman Bharat card eppadi vaanguvadhu? Eligibility check eppadi?",
+      "current_output": "Eligibility Check:\n\nMethod 1 - Online:\n1. pmjay.gov.in → 'Am I Eligible'\n2. Enter: Mobile number\n3. OTP validate\n4. Enter: State, Name, Ration Card / Aadhaar\n5. Result: Eligible / Not Eligible\n\nMethod 2 - Helpline: 14555\nMethod 3 - Govt Hospital / Ayushman Mitra desk / CSC\n\nCard vaanguvadhu:\n1. Where: Government Hospital / CSC / PMJAY Kendra\n2. Documents: Aadhaar, Ration Card, Passport photo\n3. Process: Eligibility verify → Photo capture → e-Card generate\n4. Fee: FREE!\n5. Time: Same day (15-30 minutes)\n\nCard use:\n1. Empanelled hospital pogga\n2. Ayushman desk-la card kaattunga\n3. Pre-authorization (some surgeries)\n4. Treatment - cashless!\n5. No money needed (up to ₹5 lakh/year)\n\nTamil Nadu-la: CMCHIS + Ayushman Bharat combined, same card works",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA018",
+      "instruction": "பட்டா மாற்றம் எப்படி செய்வது?",
+      "current_output": "After property registration at SRO, apply for Patta transfer at Taluk Office or eservices.tn.gov.in. Documents: Registered document, EC, ID proof, tax receipts. Field inspection by VAO/RI. Time: 30-45 days. Essential for proving ownership.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "BGP018",
+      "instruction": "Marriage registration eppadi seyvadhu?",
+      "current_output": "Hindu Marriage Act paadi: 1. Sub-registrar office-la application 2. Documents: Both age proof (Male 21+, Female 18+), Address proof, photos, Marriage invitation / photos, 2 witnesses (Aadhaar copy) 3. Fee: ₹100-500 4. Online: tnreginet.gov.in",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP038",
+      "instruction": "Water connection eppadi peruvadhu?",
+      "current_output": "Urban area: twadboard.tn.gov.in. Rural: Village Administrative Officer. Documents: Property document, ID proof, Tax receipt. Fee: ₹500-1500 (connection charge)",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA013T",
+      "instruction": "Ration card-la name serkka enna seyvadhu?",
+      "current_output": "For birth: Apply at tnpds.gov.in with birth certificate + baby's Aadhaar. For marriage: Marriage certificate + spouse's Aadhaar. Remove old card entry if transferring. Taluk Office verification. Time: 15-30 days.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC014",
+      "instruction": "Sports quota-ல் scholarship உண்டா?",
+      "current_output": "State/National level sports achievement இருந்தால் sports scholarship கிடைக்கும். SAI (Sports Authority of India), state sports council scholarships உண்டு. Certificate proof தேவை.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA028",
+      "instruction": "Education Loan எப்படி வாங்குவது?",
+      "current_output": "Apply through vidyalakshmi.co.in (40+ banks, single application) or directly at bank. Up to ₹7.5 lakh: collateral-free. Interest: 8-10%. EWS students get interest subsidy during study. Documents: Admission letter, fee structure, co-borrower details, ID proofs.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RD002",
+      "instruction": "MGNREGA endraal enna? Velai eppadi peruvadhu?",
+      "current_output": "100-day work guarantee for rural families. Eligibility: Rural household, above 18 years, ready for manual labor. Job Card: Apply at Gram Panchayat, get card in 15 days. Wage: ₹294/day in TN (varies by state). Works: Water conservation, roads, agriculture, tree planting. If no work in 15 days: Unemployment allowance. Wages: To bank account within 15 days.",
+      "category": "rural_development",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA028T",
+      "instruction": "Education Loan eppadi vaanguvadhu?",
+      "current_output": "Apply through vidyalakshmi.co.in (40+ banks, single application) or directly at bank. Up to ₹7.5 lakh: collateral-free. Interest: 8-10%. EWS students get interest subsidy during study. Documents: Admission letter, fee structure, co-borrower details, ID proofs.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

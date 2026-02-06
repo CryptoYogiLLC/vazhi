@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 3,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CQA023",
+      "instruction": "முதியோர் ஓய்வூதியம் எப்படி பெறுவது?",
+      "current_output": "TN State: ₹1,000/month (60-79 years), ₹1,500/month (80+). Eligibility: BPL/low income, no other pension. Apply at tneservices.tn.gov.in or Taluk Office with age proof, income certificate, Aadhaar, bank account. VAO verification. Time: 30-60 days.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "AG004",
+      "instruction": "Free borewell scheme எப்படி apply செய்வது?",
+      "current_output": "SC/ST, small/marginal farmers-க்கு free borewell scheme உண்டு. Agriculture department-ல் apply செய்யவும். Land document, caste certificate தேவை. Waiting list இருக்கும்.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR006",
+      "instruction": "Kisan Credit Card (KCC) eppadi vaanguvadhu? Enna benefits?",
+      "current_output": "Low-interest loan for farmers. Interest: 4% (after subvention - 7% base, 3% interest subvention for timely repayment). Credit Limit: Up to ₹3 lakh (based on land area). Uses: Seeds, fertilizers, pesticides, equipment, harvest expenses. Repayment: Flexible - based on crop cycle. Apply: Bank with land documents, Aadhaar, passport photo. Simplified for PM-KISAN beneficiaries. KCC available for fishermen, animal husbandry too.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA039",
+      "instruction": "PMAY-Urban எப்படி பெறுவது?",
+      "current_output": "Interest subsidy for first home buyers. EWS/LIG: 6.5%, MIG-I: 4%, MIG-II: 3% subsidy on home loan. Apply through bank or pmay-urban.gov.in. Condition: No pucca house anywhere in India. Affidavit required. Wife as co-owner recommended. Saves ₹2-2.5 lakh!",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HE008",
+      "instruction": "Mental health treatment free-யா?",
+      "current_output": "Government mental health hospitals-ல் treatment free. NIMHANS, Institute of Mental Health (Chennai) போன்ற institutes உண்டு. District Mental Health Programme கீழ் PHC-லும் counseling available.",
+      "category": "health_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA016",
+      "instruction": "திருமண பதிவு எப்படி செய்வது?",
+      "current_output": "Apply at tnreginet.gov.in or Sub-Registrar Office. Documents: Age proof (groom 21+, bride 18+), address proof, wedding photos/invitation, 2 witnesses with Aadhaar. Both parties must be present at SRO. Fee: ₹100-500. Same day certificate.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA036",
+      "instruction": "இலவச சட்ட உதவி எங்கே பெறுவது?",
+      "current_output": "TNSLSA (Tamil Nadu State Legal Services Authority) provides free legal aid. Eligibility: BPL, SC/ST, women, differently-abled, senior citizens, victims of trafficking. Helpline: 15100 (24x7). Legal Aid Cell at every district court. Lok Adalat for quick settlements.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "TNE002",
+      "instruction": "Chief Minister's Higher Education Scholarship endraal enna?",
+      "current_output": "Scholarship for first-generation graduates. Amount: ₹12,000/year (UG), ₹18,000/year (PG). Eligibility: First graduate in family, Govt/Govt-aided college, Annual income below ₹2.5 lakh. Duration: Full course period. Apply: College processes, Income certificate, First graduate declaration, Aadhaar. Auto-credited: Semester-wise to bank account.",
+      "category": "tn_education_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNR004",
+      "instruction": "TN Mid-Day Meal Scheme endraal enna?",
+      "current_output": "Free nutritious lunch for Govt school students. Coverage: Class 1-10 (Govt + Aided schools). Menu: Rice/Variety rice + Sambar + Egg/Banana + Boiled Egg (weekly). Morning: Nutrition breakfast (select areas). Nutrition: 450-700 calories, 12-20g protein. Aim: Increase school attendance, Nutrition, Prevent dropouts. Quality: Monthly inspection, Nutritionist supervision. Anganwadi: Integrated Child Development Services for 0-6 years kids.",
+      "category": "tn_ration_food",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA002T",
+      "instruction": "Aadhaar-la address change eppadi seyvadhu?",
+      "current_output": "Online: myaadhaar.uidai.gov.in → Login with OTP → Update Address → Upload new address proof → Pay ₹50. Address proof can be EB bill, bank statement, rent agreement. If no document, use Address Validation Letter (AVL) method where verifier at new address confirms.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR001",
+      "instruction": "நான் சிறு விவசாயி. Organic விவசாயம் செய்ய விரும்புகிறேன். என்ன உதவி கிடைக்கும்?",
+      "current_output": "Organic விவசாயத்திற்கு பல திட்டங்கள் உள்ளன:\n\n1. **PKVY (Paramparagat Krishi Vikas Yojana)**\n   - உதவி: ₹50,000/hectare (3 வருடம்)\n   - Cluster அடிப்படையில் (50 விவசாயிகள்)\n   - எங்கே: District Agriculture Officer\n\n2. **PGS Certification (Free)**\n   - pgsindia-ncof.gov.in\n   - Group-ஆக apply செய்யவும்\n\n3. **Tamil Nadu Organic Farming Policy**\n   - Vermicompost unit: 50% subsidy\n   - Bio-fertilizer: Free distribution\n   - எங்கே: Block Agriculture Office\n\n4. **Training**\n   - KVK (Krishi Vigyan Kendra) - Free training\n   - TNAU - Certificate courses\n\n5. **Market Support**\n   - Organic Mandi through e-NAM\n   - Direct consumer sale permission",
+      "category": "rural_scenarios",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "REF008",
+      "instruction": "Central Government helpline numbers enna?",
+      "current_output": "Aadhaar: 1947, PAN/Income Tax: 1800-180-1961, PM-KISAN: 155261, Ayushman Bharat: 14555, NSP Scholarship: 0120-6619540, PMKVY Skill: 1800-123-9626, Consumer: 1915, Women Helpline: 181, Cyber Crime: 1930",
+      "category": "reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA014T",
+      "instruction": "Pudhiya driving license eppadi peruvadhu?",
+      "current_output": "Step 1: Apply for Learner's License (LLR) at parivahan.gov.in - age proof, address proof, medical declaration. Pass computer test. Step 2: After 30 days, apply for DL. Take driving test at RTO. Fee: ₹200-700. Age: 18+ for car/bike, 16+ for without gear.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CGS012",
+      "instruction": "Atal Pension Yojana (APY) endraal enna?",
+      "current_output": "Pension scheme for Unorganized Sector. Age: 18-40 years can join. Pension at 60: ₹1,000/₹2,000/₹3,000/₹4,000/₹5,000 per month. Contribution: Varies by age + pension amount (joining at 18 = ₹210/month for ₹5,000 pension). Benefits: Government co-contribution, Pension continues for spouse, Corpus to nominee. Join: Bank/Post Office",
+      "category": "central_govt_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB005",
+      "instruction": "Second-hand Car வாங்கினேன். RC Transfer எப்படி செய்வது?",
+      "current_output": "**RC Transfer Process (Used Vehicle):**\n\n**Seller செய்ய வேண்டியவை:**\n\n1. **Form 29 & 30**\n   - Transfer of Ownership forms\n   - Seller signature\n   - parivahan.gov.in download\n\n2. **NOC (if different state)**\n   - Original RTO-யிலிருந்து\n   - Loan இருந்தால் Bank NOC\n\n3. **Deliver to Buyer:**\n   - Original RC\n   - Insurance transfer letter\n   - PUC Certificate\n   - Signed forms\n\n**Buyer செய்ய வேண்டியவை:**\n\n**Step 1: Online Application**\n1. parivahan.gov.in → Online Services → TN\n2. Transfer of Ownership\n3. Fill Form 29 & 30\n4. Upload documents\n5. Pay fee online\n\n**Step 2: Documents**\n- Form 29 & 30 (signed by both)\n- Original RC Book\n- Insurance (transferred or new)\n- PUC Certificate\n- Seller's Aadhaar + Address proof\n- Buyer's Aadhaar + Address proof\n- Sale receipt / Agreement\n- NOC (if applicable)\n\n**Step 3: RTO Visit**\n- Book slot online\n- Both parties present (or POA)\n- Document verification\n- Vehicle inspection (HPT check)\n- Biometric/Photo\n\n**Step 4: Fee Payment**\n\n| Item | Amount |\n|------|--------|\n| Transfer Fee | ₹300-500 |\n| Smart Card | ₹200 |\n| Road Tax (if applicable) | Varies |\n\n**Step 5: New RC**\n- Processing: 7-15 days\n- Collect or by post\n\n**Timeline:** 14 days from sale (legal requirement)\n\n**Penalty for Delay:**\n- ₹50/day after 14 days\n- Maximum ₹500\n\n**Loan Vehicle:**\n- Bank NOC mandatory\n- Hypothecation removal first\n- Or transfer with hypothecation\n\n**Insurance Transfer:**\n- Within 14 days\n- Or take fresh policy\n- NCB transfer possible",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNR003",
+      "instruction": "TN மதிய உணவு திட்டம் (Mid-Day Meal) என்றால் என்ன?",
+      "current_output": "Govt school மாணவர்களுக்கு இலவச சத்தான உணவு. Coverage: Class 1-10 (Govt + Aided schools). Menu: Rice/Variety rice + Sambar + Egg/Banana + Boiled Egg (weekly). காலை: Morning nutrition breakfast (select areas). Nutrition: 450-700 calories, 12-20g protein. Aim: School attendance increase, Nutrition, Dropout prevention. Quality: Monthly inspection, Nutritionist supervision. Anganwadi: 0-6 years kids-க்கு Integrated Child Development Services.",
+      "category": "tn_ration_food",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR005",
+      "instruction": "PAN-Aadhaar link status check pannuvadhu eppadi? Link pannuvadhu eppadi?",
+      "current_output": "Status Check:\n1. Go to: eportal.incometax.gov.in\n2. Click: 'Link Aadhaar Status'\n3. Enter: PAN + Aadhaar\n4. Result: Linked / Not Linked\n\nLink pannuvadhu:\n\nMethod 1 - Online:\n1. eportal.incometax.gov.in → 'Link Aadhaar'\n2. Enter PAN + Aadhaar + Name + Mobile\n3. OTP validate\n4. Pay ₹1,000 (late fee)\n5. Done!\n\nMethod 2 - SMS:\n- Send: UIDPAN <12-digit Aadhaar> <10-digit PAN>\n- To: 567678 or 56161\n- Example: UIDPAN 123456789012 ABCDE1234F\n\nLink aagala na enna aagum:\n- PAN 'Inoperative' aagum\n- ITR file panna mudiyaadhu\n- ₹50,000+ transactions blocked\n- Higher TDS (20%)\n- Mutual Fund / Demat open panna mudiyaadhu",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR007T",
+      "instruction": "Naan gramathula ulla govt school-la padikkiren. BC student. Ennenna benefits kidaikkum?",
+      "current_output": "**BC Student Benefits:**\n\n**School Level:**\n1. Free education\n2. Free textbooks\n3. Free uniform (2 sets)\n4. Mid-Day Meal + Egg, Milk, Banana\n5. Free Bus Pass\n6. Pre-Matric Scholarship: ₹150-500/month\n\n**11th-12th:**\n7. Free Laptop (11th)\n8. BC Scholarship: Fees + ₹500/month\n\n**College:**\n9. CM Higher Education Scheme (First Gen Graduate): Free + Laptop + ₹1,000/month\n10. BC Post-Matric: Full fee waiver + Hostel + Stipend\n\n**Apply:** tneservices.tn.gov.in, School/College\n\n**Documents:** Community Certificate, Income Certificate, Aadhaar, Marksheet, Bank account",
+      "category": "rural_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR012",
+      "instruction": "Veetla current connection pudusa vaanganum - enna seiyyanum?",
+      "current_output": "TANGEDCO New Connection:\n\nStep 1 - Apply Online:\n1. nsc.tnebnet.org → 'New Service Connection'\n2. Register with mobile\n3. Select: Domestic/Commercial/Agricultural\n4. Fill application\n5. Upload documents\n\nDocuments: Ownership proof (Patta/Sale Deed/Rent Agreement), Aadhaar, Address proof, Building Completion Certificate (new building), Passport photo\n\nStep 2 - Inspection:\n- TANGEDCO officer visit\n- Wiring check\n- Meter location decide\n\nStep 3 - Payment:\n- Security Deposit: ₹500-2,000 (load based)\n- Service Connection Charge\n- Pay online or at TANGEDCO office\n\nStep 4 - Connection:\n- Meter installation\n- Supply start\n- Time: 7-15 days total\n\nAgricultural Connection (Free electricity):\n- Apply at TANGEDCO office\n- Documents: Land (Patta/Chitta), Pump set details, Well/Borewell proof\n- Processing: 30-60 days\n\nComplaint/Status: 94987-94987 or TANGEDCO Mobile App",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA005T",
+      "instruction": "Aadhaar paadhukaappaaga vaikka enna seyyalam?",
+      "current_output": "1) Lock biometrics at myaadhaar.uidai.gov.in - prevents unauthorized authentication. 2) Use Virtual ID (VID) - 16-digit temporary number instead of Aadhaar. 3) Use Masked Aadhaar - shows only last 4 digits. 4) Check authentication history regularly.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP028",
+      "instruction": "Free legal aid enga kidaikum?",
+      "current_output": "Tamil Nadu State Legal Services Authority (TNSLSA). Eligibility: BPL family, SC/ST, Women, Differently abled. Phone: 15100 (toll-free). Every district court-la Legal Aid Cell irukku. Lok Adalat: Cases-a easily solve pannalam.",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA022T",
+      "instruction": "Kalaignar Magalir Urimai Thittam enna?",
+      "current_output": "₹1,000/month for woman head of family in TN. Eligibility: 21+ age, family income below ₹2.5 lakh, not govt employee/tax payer, no other pension. Apply through Anganwadi or kalaaboravu.tn.gov.in with Aadhaar, ration card, bank account.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA001T",
+      "instruction": "Pudhiya Aadhaar card eppadi peruvadhu?",
+      "current_output": "Visit nearest Aadhaar Enrollment Center (find at uidai.gov.in), carry identity proof (Voter ID/PAN/Passport), address proof (Ration Card/EB Bill), and age proof (Birth Certificate/SSLC). Biometric capture will be done. First enrollment is FREE. Aadhaar delivered within 90 days.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA025",
+      "instruction": "Kisan Credit Card (KCC) எப்படி பெறுவது?",
+      "current_output": "Apply at any bank or through pmkisan.gov.in. Documents: Aadhaar, PAN, land records (Patta/Chitta), sowing certificate. Loan up to ₹3 lakh collateral-free at only 4% interest (with subvention). Crop insurance auto-enrolled. Repay after harvest.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RUR003",
+      "instruction": "என் விவசாய நிலத்தை வீட்டு மனையாக மாற்ற என்ன செய்ய வேண்டும்?",
+      "current_output": "**விவசாய நில மாற்றம் (Land Conversion):**\n\n**எங்கே Apply செய்வது:**\n- District Collector Office\n- Online: eservices.tn.gov.in\n\n**வகைகள்:**\n1. **NA Conversion (Non-Agricultural)**\n   - விவசாயம் → Residential/Commercial\n   \n2. **Layout Approval** (பல மனைகள்)\n   - DTCP approval தேவை\n\n**தேவையான ஆவணங்கள்:**\n- Patta (உங்கள் பெயரில்)\n- Chitta & Adangal\n- FMB (Field Measurement Book)\n- EC (30 years)\n- Tax receipts\n- Location sketch\n- NOC from Agriculture Dept (சில cases)\n\n**கட்டணம்:**\n- Conversion fee: Land value-ன் 1-3%\n- Market value-ன் 50% stamp duty difference\n\n**Process:**\n1. Application submit\n2. Revenue Dept verification\n3. Agriculture Dept NOC\n4. Site inspection\n5. Collector approval\n6. Patta-ல் land type மாற்றம்\n\n**காலம்:** 2-6 மாதங்கள்\n\n**தடைகள்:**\n- Wet land (நஞ்சை) → கடினம்\n- Prime agricultural zone → Not allowed\n- 2 acre-க்கு மேல் → Special permission\n\n**Penalty (without conversion):**\n- Unauthorized construction\n- Panchayat action\n- Legal issues during sale",
+      "category": "rural_scenarios",
+      "target_language": "pure_tamil"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

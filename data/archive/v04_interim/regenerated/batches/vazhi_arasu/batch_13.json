@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_arasu",
+  "batch_num": 13,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "TPR001",
+      "instruction": "Aadhaar Card-la mobile number maatra enna seiyyanum?",
+      "current_output": "Online-la mudiyaadhu - Aadhaar Seva Kendra pooganum\n\nSteps:\n1. Nearest ASK find: uidai.gov.in → Locate Enrollment Center\n2. Appointment book (optional): appointments.uidai.gov.in\n3. Documents: Original Aadhaar + New mobile (active SIM with OTP capability)\n4. At ASK: Form fill → Biometric verification → New mobile register\n5. Fee: ₹50\n6. Confirmation: SMS to new number\n\nImportant:\n- Old number-la OTP varaadhu, biometric verification thaan\n- 2-3 days-la update aagum\n- Verify at myaadhaar.uidai.gov.in",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PAN012",
+      "instruction": "Minor kuzhanthaiku PAN Card thevaiya?",
+      "current_output": "Needed when: FD/Investment in child's name, Child has income (Child Artist), Property in child's name. To apply: Parent/Guardian must apply, Need child's Birth Certificate + Parent's ID proof, Must update details (photo, signature) when turning 18",
+      "category": "pan_card_bilingual",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC011",
+      "instruction": "Rashtriya Vayoshri Yojana (RVY) என்றால் என்ன?",
+      "current_output": "BPL மூத்த குடிமக்களுக்கு இலவச உதவி சாதனங்கள். தகுதி: 60+ வயது, BPL, Age-related disability உள்ளவர்கள். Free Items: Walking stick, Elbow crutch, Walker, Tripod, Wheelchair, Hearing aid, Spectacles, Artificial dentures. விண்ணப்பம்: ALIMCO assessment camps (District-ல் announce செய்வார்கள்). Documents: Age proof, BPL card, Aadhaar.",
+      "category": "senior_citizens_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA029T",
+      "instruction": "Jan Aushadhi-la marundhu yen malivu?",
+      "current_output": "Jan Aushadhi sells generic medicines with same quality as branded (WHO-GMP certified) at 50-90% lower price. No brand premium. Find stores at janaushadhi.gov.in. Example: Metformin 500mg - Market ₹25, Jan Aushadhi ₹3.50. Great for long-term medications.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA020",
+      "instruction": "ஆயுஷ்மான் பாரத் (PMJAY) என்றால் என்ன?",
+      "current_output": "₹5 lakh free health insurance per family per year. Eligibility based on SECC 2011 BPL data. Check eligibility at pmjay.gov.in. Get card FREE at govt hospital/CSC with Aadhaar + ration card. Covers 1,500+ procedures at empanelled hospitals. In TN, combined with CMCHIS.",
+      "category": "comprehensive_qa",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA034T",
+      "instruction": "Chennai-la Metro Water Connection eppadi?",
+      "current_output": "Apply at chennaimetrowater.tn.gov.in with property document, building plan, tax receipt, Aadhaar. Site inspection for feasibility. Charges: Connection ₹500-2,000, deposit ₹500-1,000, road cutting extra. Monthly bill ₹70-400 (domestic). Helpline: 044-4567 4567.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SLE009",
+      "instruction": "நான் நிலம் / வீடு வாங்க போகிறேன். என்னென்ன சரிபார்க்க வேண்டும்? Registration எப்படி செய்வது?",
+      "current_output": "வாங்குவதற்கு முன் சரிபார்க்க வேண்டியவை:\n1. Title Verification - 30 வருட Parent Document Chain - Lawyer verify\n2. EC (Encumbrance Certificate) - tnreginet.gov.in - 30 years\n3. Patta & Chitta - eservices.tn.gov.in/landrecords\n4. TSLR Extract (FMB) - நிலத்தின் அளவு\n5. Tax Receipts - Property Tax paid-ஆ?\n6. Approved Layout - DTCP/CMDA/RERA\n7. Land Use - Agricultural/Residential?\n\nRegistration:\n8. Stamp Duty: 7% + Registration: 4% = ~11%\n9. Sale Deed - Lawyer-உடன் prepare\n10. Sub-Registrar - Both parties + 2 witnesses\n11. Post-Registration: Patta transfer at Taluk Office\n\nPMAY Benefit: முதல் வீடு - 3-6.5% வட்டி மானியம்",
+      "category": "scenario_life_events",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "PAN007",
+      "instruction": "PAN Card தொலைந்துவிட்டது - Duplicate எப்படி பெறுவது?",
+      "current_output": "1. e-PAN Download (Free): eportal.incometax.gov.in → Instant e-PAN, Aadhaar OTP verification, PDF download. 2. Physical Duplicate: onlineservices.nsdl.com → 'Reprint of PAN Card', கட்டணம் ₹50, 15-20 நாட்களில் வரும். 3. PAN Number மறந்துவிட்டால்: incometax.gov.in → Know Your PAN, Name + DOB + Mobile கொடுத்து கண்டுபிடிக்கலாம்",
+      "category": "pan_card_bilingual",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR002",
+      "instruction": "Aadhaar address update online eppadi seyvadhu?",
+      "current_output": "Online Method (easiest):\n1. Login: myaadhaar.uidai.gov.in\n2. OTP: Registered mobile-la varum\n3. Select: 'Update Address'\n4. Enter new address\n5. Upload document: Passport/Bank Statement/EB Bill/Rent Agreement (PDF < 2MB)\n6. Pay: ₹50 online\n7. Note URN (Update Request Number)\n8. Time: 2-3 weeks-la new Aadhaar varum\n\nAddress Validation Letter (Document illaadha case):\n1. myaadhaar → Address Update → 'Request for AVL'\n2. Enter Verifier details (relative/friend at new address)\n3. Verifier-ku letter pogum\n4. Verifier consent kodutha update aagum",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA012T",
+      "instruction": "Pudhiya ration card eppadi peruvadhu?",
+      "current_output": "Apply at tnpds.gov.in or Taluk Office. Documents: All family members' Aadhaar, address proof, income certificate, gas connection details, photos. Types: PHH (₹1 rice), AAY (free rice), NPHH. RI inspection, 30-45 days processing.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA030T",
+      "instruction": "Employment Exchange-la register eppadi seyvadhu?",
+      "current_output": "Online at tnvelaivaaippu.gov.in → OTR (One Time Registration). Documents: Educational certificates, community certificate, Aadhaar, photo. Benefits: Govt job notifications, private opportunities, skill training. Renew every 3 years. Also available at District Employment Office.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNSW003",
+      "instruction": "TN மாற்றுத்திறனாளி ஓய்வூதியம்/உதவி என்ன?",
+      "current_output": "மாற்றுத்திறனாளிகளுக்கு TN benefits. Pension: ₹1,500/month (40%+ disability). Aids: Free wheelchair, hearing aid, artificial limbs, crutches. Education: Free education + special hostels. Employment: 4% reservation in govt jobs. Bus: Free travel (ordinary buses). Loan: Subsidy loan for self-employment. UDID Card: Unique Disability ID - all benefits-க்கு கட்டாயம். Apply: Social Welfare dept/Taluk office.",
+      "category": "tn_social_welfare",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "REF005",
+      "instruction": "முக்கிய மத்திய அரசு இணையதளங்கள் என்ன?",
+      "current_output": "All Services: services.india.gov.in, Aadhaar: uidai.gov.in / myaadhaar.uidai.gov.in, PAN: incometax.gov.in, Scholarships: scholarships.gov.in, Pension: maandhan.in, PM-KISAN: pmkisan.gov.in, Ayushman Bharat: pmjay.gov.in, PMAY Housing: pmay-urban.gov.in, Education Loan: vidyalakshmi.co.in, Skill Training: pmkvyofficial.org, MUDRA Loan: mudra.org.in, Street Vendor: pmsvanidhi.mohua.gov.in, LPG: mylpg.in, DigiLocker: digilocker.gov.in",
+      "category": "reference_directory",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "CQA033T",
+      "instruction": "Pudhiya electricity connection eppadi peruvadhu?",
+      "current_output": "Apply at nsc.tnebnet.org with ownership proof (sale deed/rent agreement), Aadhaar, building certificate. Inspection by TANGEDCO. Charges: Deposit ₹500-15,000 based on load. Time: 7-15 days. Agricultural connection: FREE electricity for farming.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "BGP034",
+      "instruction": "Kadai thodanga enna permission vendum?",
+      "current_output": "1. GST registration (above ₹40 lakh turnover) 2. Trade License: Municipality/Gram Panchayat 3. Shop & Establishment Act: tnlabour.tn.gov.in 4. FSSAI License (food business): fssai.gov.in 5. Fire Safety Certificate (large shops)",
+      "category": "bilingual_govt_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA021T",
+      "instruction": "MUDRA Loan eppadi vaanguvadhu?",
+      "current_output": "Collateral-free business loan from any bank. Shishu: up to ₹50,000, Kishore: up to ₹5 lakh, Tarun: up to ₹10 lakh. Apply at bank or mudra.org.in with business plan, ID proof, address proof. Interest: 8-12%. Good for starting/expanding small business.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TPR003",
+      "instruction": "Aadhaar biometric lock eppadi seyvadhu? Yen seiyyanum?",
+      "current_output": "Yen Lock seiyyanum:\n- Yaarum unga Aadhaar misuse seiyya mudiyaadhu\n- Fake SIM, fake bank account open panna mudiyaadhu\n- Only you can unlock when needed\n\nEppadi Lock seyvadhu:\n1. Go to: myaadhaar.uidai.gov.in\n2. Login: Aadhaar + OTP\n3. Click: 'Lock/Unlock Biometrics'\n4. Select: 'Lock'\n5. Confirm: Done!\n\nUnlock seiyya:\n- Same process, 'Unlock' select\n- Temporarily unlock for specific use\n- Auto re-lock option available\n\nVirtual ID (VID) - Better option:\n1. myaadhaar → VID Generator\n2. 16-digit temporary number kidaikum\n3. Aadhaar-ku badhila VID kodukalam\n4. Anytime new VID generate pannalam",
+      "category": "tanglish_detailed_procedures",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB010T",
+      "instruction": "Naan Tuition Center / Coaching Institute thodanga virumburen. Enna permission vendum?",
+      "current_output": "**Coaching Center Permissions:**\n\n**Basic Requirements:**\n1. **Shop & Establishment** - tnlabour.tn.gov.in (₹500-1,500)\n2. **Trade License** - Corporation (₹1,000-5,000)\n3. **Fire Safety NOC** - If 50+ students\n4. **Building Safety** - Structural certificate\n\n**Large Institute Additional:**\n5. **Trust/Society Registration** - If structured entity\n6. **GST** - If turnover > ₹20 lakh\n7. **PF/ESI** - If employees\n\n**Staff:** Qualified teachers, Background verification\n\n**Infrastructure:** Ventilation, Drinking water, Toilets, Space\n\n**Timeline:** Basic 2-4 weeks, Large 1-2 months\n\n**No special license for:** IAS/JEE/NEET coaching, Language classes, Computer training",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SC011",
+      "instruction": "Free laptop scheme-க்கு எப்படி apply செய்வது?",
+      "current_output": "Tamil Nadu-ல் government school 11th, 12th students-க்கு free laptop scheme உண்டு. Separate application தேவையில்லை, school மூலம் automatically பெறலாம். Aadhaar linking கட்டாயம்.",
+      "category": "scholarship",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "URB006",
+      "instruction": "நான் Online-ல் Products விற்கிறேன். GST Registration எப்போது கட்டாயம்? எப்படி register செய்வது?",
+      "current_output": "**GST Registration for E-commerce:**\n\n**எப்போது கட்டாயம்?**\n\n| Category | Threshold |\n|----------|----------|\n| Goods (Inter-state) | ₹0 - Immediately! |\n| Goods (Intra-state) | ₹40 lakh turnover |\n| Services | ₹20 lakh turnover |\n| E-commerce Seller | ₹0 - Immediately! |\n\n**E-commerce-ல் விற்றால்:**\n- Amazon, Flipkart, Meesho, etc.\n- Turnover limit இல்லை\n- முதல் sale-க்கு முன்னே GST வேண்டும்!\n\n**Registration Process:**\n\n**Step 1: gst.gov.in**\n1. Services → Registration → New Registration\n2. Part A: PAN, Mobile, Email verify\n3. TRN (Temporary Reference Number) கிடைக்கும்\n\n**Step 2: Part B - Details**\n1. Business Information\n2. Promoter/Partner details\n3. Principal place of business\n4. Additional place (if any)\n5. Goods/Services categories\n6. Bank account details\n7. Document upload\n\n**Step 3: Documents**\n- PAN Card\n- Aadhaar Card\n- Business Address Proof:\n  - Own: Electricity Bill + Property Tax\n  - Rent: Rent Agreement + NOC from owner\n- Bank Statement / Cancelled Cheque\n- Photo (Passport size)\n- Digital Signature (Partnership/Company)\n\n**Step 4: Verification**\n- Aadhaar OTP / EVC\n- Or: Physical verification by officer\n\n**Step 5: GSTIN Issue**\n- Time: 3-7 working days\n- 15-digit GSTIN\n- Certificate download\n\n**Fee:** FREE (No government fee)\n\n**After Registration:**\n1. Issue GST invoices\n2. Collect GST from customers\n3. File monthly returns (GSTR-1, GSTR-3B)\n4. Pay GST by 20th of next month\n\n**Composition Scheme:**\n- Turnover < ₹1.5 Cr\n- Pay 1% tax (instead of regular)\n- No input credit\n- Quarterly return\n- Not for e-commerce sellers!\n\n**Penalties (no registration):**\n- 10% of tax due or ₹10,000 (whichever higher)\n- Serious offense: Imprisonment possible",
+      "category": "urban_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA040",
+      "instruction": "PMAY-Gramin எப்படி பெறுவது?",
+      "current_output": "House construction assistance for rural poor. Amount: ₹1.20 lakh (plain) / ₹1.30 lakh (hilly). Selection from SECC 2011 data. Check eligibility at pmayg.nic.in. If not in list: Appeal at Gram Panchayat. Additional: MGNREGA wages, toilet under SBM. Total: ₹1.5 lakh+",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGR011",
+      "instruction": "Paramparagat Krishi Vikas Yojana (PKVY) என்றால் என்ன?",
+      "current_output": "Organic Farming ஊக்குவிப்பு திட்டம். Cluster: 50+ விவசாயிகள் சேர்ந்து 50 ஏக்கர். Support: ₹50,000/hectare (3 வருடத்தில்) - Organic inputs, certification, marketing. PGS Certification: Participatory Guarantee System - free organic certification. Benefit: Premium price for organic produce, export opportunity, soil health improvement. Join: Agriculture Department, Krishi Vigyan Kendra. Training: Organic farming techniques, composting, bio-pesticides.",
+      "category": "agriculture_schemes",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA007",
+      "instruction": "PAN-Aadhaar Link எப்படி செய்வது?",
+      "current_output": "Online: eportal.incometax.gov.in → Link Aadhaar → Enter PAN and Aadhaar → OTP verify → Pay ₹1,000 late fee. SMS method: Send 'UIDPAN <Aadhaar> <PAN>' to 567678. MANDATORY - unlinked PAN becomes inoperative!",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TNREF002",
+      "instruction": "TN Government websites enna enna?",
+      "current_output": "Important TN Government Portals: tn.gov.in (TN Govt main), tnpds.gov.in (Ration/PDS), cmchistn.com (Health Insurance), tnvelaivaaippu.gov.in (Employment), bcmbcmw.tn.gov.in (BC Welfare), adwb.tn.gov.in (SC/ST Welfare), tnhb.tn.gov.in (Housing Board), tangedco.gov.in (Electricity), tnreginet.gov.in (Registration), serviceonline.gov.in (e-Sevai). Mobile: UZHAVAN (Farmers), TNeGA (e-Governance).",
+      "category": "tn_reference_directory",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CQA003T",
+      "instruction": "Aadhaar mobile number change eppadi?",
+      "current_output": "Cannot be done online for security reasons. Must visit Aadhaar Seva Kendra (ASK) with original Aadhaar and new active SIM. Biometric verification required. Fee: ₹50. Update is immediate with SMS confirmation.",
+      "category": "comprehensive_qa",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nGOVERNMENT PACK GUIDELINES:\n- Keep website URLs and scheme acronyms in English\n- Use Tamil for process steps: விண்ணப்பம் (application), ஆவணம் (document)\n- Tamil numbers for amounts when natural\n- Format with emoji headers: 🏛️, 📋, 💰\n"
+}

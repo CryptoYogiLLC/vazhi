@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 2,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "AGE_005_TM",
+      "instruction": "Tamil medium-ல் படிச்சா future-ல் problem வருமா? English medium better-ஆ?",
+      "current_output": "Reality check: Tamil medium = Mother tongue strong, concepts clear. English medium = Language advantage. Both work! Important: 1) Foundation subjects (Maths, Science) any medium OK 2) English can be learned later 3) Many Tamil medium toppers in competitive exams 4) Government jobs no medium preference. Advice: Choose based on child comfort. Tamil medium + English tuition = balanced approach. Focus on learning, not medium.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH044_TG",
+      "instruction": "Exam-la time management eppadi seivathu?",
+      "current_output": "Strategies: 1) Question paper muzhuvathum mudhalil padiyunga (5 mins) 2) Easy questions mudhalil attempt 3) Marks-ku erpa time allocate (1 mark = 1 minute rule) 4) Stuck aanaal skip, later return 5) Last 10 minutes revision-ku keep 6) Answer length = marks (2 marks = half page, 5 marks = 1 page) 7) Watch/clock parunga regularly. Practice: At home, exam conditions-la previous papers ezhuthunga.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM020_TM",
+      "instruction": "TNPSC free coaching எங்கே கிடைக்கும்?",
+      "current_output": "Free coaching centres: 1) Government Free Coaching - Chennai, Trichy, Madurai, Coimbatore (Apply through Employment Exchange) 2) BC/MBC Welfare Department coaching 3) Adi Dravidar Welfare (SC/ST) 4) District Collectorate coaching programs 5) IAS Academy free batches. Online free: TNPSC Shouters, Group Exam Tamil YouTube channels, Telegram groups. Selection: Merit + income based. Apply early - limited seats.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC022_TM",
+      "instruction": "Offer letter வந்தாச்சு, joining-க்கு முன்னாடி என்ன check பண்ணணும்?",
+      "current_output": "Verify before joining: 1) Company registration - MCA website check 2) Glassdoor reviews - employee experiences 3) Offer letter details - CTC breakdown, deductions 4) Bond clause - duration, penalty 5) Notice period - reasonable? 6) Probation period - terms 7) Location confirmation 8) Joining date flexibility. Documents to prepare: Original certificates, bank account, PAN card, Aadhaar, photos. Background verification: Common in MNCs - ensure documents genuine.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE008_TM",
+      "instruction": "கோவையில் engineering படிக்க நல்ல college எது?",
+      "current_output": "PSG Tech (autonomous - best ranking), GCT (government), CIT, Amrita, KGISL ஆகியவை முன்னணி colleges. PSG-க்கு TNEA counselling-ல் high cutoff வரும். GCT government college - fees மிகக் குறைவு.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_013_TG",
+      "instruction": "12th mudinjachu, veetla college vendaam, kalyanam pannikonu solraanga. Naan padikkanum.",
+      "current_output": "Your education is your RIGHT! Support available: 1) Moovalur Ramamirtham - financial support for girl education 2) Free government college education 3) Women helpline: 181 4) District Women Protection Officer 5) NGOs: Pratham, CRY support. Convince family: Show scholarship opportunities, free education costs, earning potential after degree. Legal: Child Marriage Prevention Act (below 18 illegal). Study brings independence and better life. Don't give up your dreams!",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA001_TG",
+      "instruction": "ITI-la ennenna trades padikkalaam? Edhu popular?",
+      "current_output": "Popular ITI trades: 1) Electrician - mikavum demand 2) Fitter - manufacturing jobs 3) Welder - construction, shipyard 4) Motor Mechanic - automobile industry 5) COPA (Computer Operator) - IT support 6) Electronics Mechanic 7) Plumber - house construction 8) Turner - machine shop. Duration: 1-2 years. TN-la 130+ trades available. Government ITI free-yaa padikkalaam.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO004_TG",
+      "instruction": "Disabled child-ku enna benefits irukku school-la?",
+      "current_output": "**Disabled Student Benefits:**\n\n**Education:**\n- Inclusive education in regular schools\n- Special schools (Blind, Deaf, etc.) - FREE\n\n**Financial:**\n- Scholarship: ₹1,000-3,000/month\n- Transport allowance\n- Reader/Scribe allowance\n\n**Exam Concessions:**\n- Extra 20-30 min/hour\n- Scribe allowed\n- Separate room\n- Computer allowed\n\n**Free Devices:** Wheelchair, Hearing aid, Braille kit\n\n**Apply:** District Differently Abled Welfare Officer\n**Must Have:** UDID Card from swavlambancard.gov.in",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO015_TM",
+      "instruction": "KVPY scholarship என்ன? Science students எப்படி apply செய்வது?",
+      "current_output": "Kishore Vaigyanik Protsahan Yojana (KVPY): IISc Bangalore நடத்தும் science aptitude test. Streams: SA (Class 11), SX (Class 12), SB (1st year BSc). Scholarship: ₹5,000-7,000/மாதம் + annual contingency grant. Selection: Aptitude test + Interview. Benefits: IISc/IISERs admission priority. 2022 onwards INSPIRE SHE-ஆக merge ஆனது, but similar benefits continue through INSPIRE.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM004_TG",
+      "instruction": "Management quota vs Government quota - enna difference?",
+      "current_output": "Government quota (65%): Counselling-based merit admission, low fees. Management quota (35%): College direct admission, higher fees (2-5x). NRI quota: Foreign citizen children, highest fees. Reality: Same degree, same placement opportunity. Management quota useful if: Marks low but can afford, specific college wanted, late application. Government quota: Always try first - significant cost savings. Private self-financing colleges: 100% management, higher fees.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC020_TM",
+      "instruction": "Resume/CV எப்படி எழுதுவது?",
+      "current_output": "Resume essentials: 1) Contact info - email (professional), phone 2) Education - reverse chronological, CGPA 3) Skills - technical + soft skills 4) Projects - 2-3 relevant ones with outcomes 5) Internships/Experience 6) Achievements - quantify where possible 7) Extra-curricular - leadership roles. Format: 1 page for freshers, clean design, no photos (India OK), PDF format. Avoid: Spelling errors, lying, lengthy paragraphs. Templates: Canva, Novoresume free options.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO028_TM",
+      "instruction": "Scholarship status எப்படி check செய்வது?",
+      "current_output": "Status check வழிகள்: 1) NSP portal login - application status tab 2) PFMS portal (Public Financial Management System) - payment tracking 3) State scholarship portal - individual login 4) SMS alerts (registered mobile) 5) College scholarship cell. Payment delay: 2-3 months normal. Rejected ஆனால்: Defect list பார்த்து correct documents upload. Grievance: helpdesk on portal.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC022_TG",
+      "instruction": "Offer letter vanthaachu, joining-ku munnaadi enna check pannanum?",
+      "current_output": "Verify before joining: 1) Company registration - MCA website check 2) Glassdoor reviews - employee experiences 3) Offer letter details - CTC breakdown, deductions 4) Bond clause - duration, penalty 5) Notice period - reasonable? 6) Probation period - terms 7) Location confirmation 8) Joining date flexibility. Documents to prepare: Original certificates, bank account, PAN card, Aadhaar, photos. Background verification: Common in MNCs - ensure documents genuine.",
+      "category": "practical_guide",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA019_TG",
+      "instruction": "Digital Marketing course padikkanum, free options irukkaa?",
+      "current_output": "Free courses: 1) Google Digital Garage - Google certification 2) HubSpot Academy - Inbound marketing 3) Meta Blueprint - Facebook/Instagram ads 4) Semrush Academy - SEO 5) NPTEL digital marketing. Paid: TNSDC subsidized courses. Topics: SEO, SEM, Social media, Content marketing, Email marketing. Jobs: Digital marketing executive ₹15,000-25,000. Freelancing possible. Build own social media presence as portfolio.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_004_TG",
+      "instruction": "En paiyanukku 6 vayasu aachu, Government school-la eppadi serpathu?",
+      "current_output": "Class 1 admission: Age 5+ (as on June 1st). Process: 1) Nearest government primary school-la neradigava sellunga 2) Application form vaangunga 3) Documents: Birth certificate, Aadhaar, parent ID, address proof, photos 4) Admission free - no donation 5) TC not needed for new admission. RTE Act: 25% seats private schools-layum EWS/DG category-ku reserved. Online: www.tnschools.gov.in for RTE admission.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA010_TG",
+      "instruction": "TNSDC free courses enna?",
+      "current_output": "TNSDC offers 100+ free courses: 1) IT/Software - Web development, Data entry 2) Manufacturing - CNC, Welding 3) Healthcare - Nursing assistant, Lab technician 4) Retail - Sales, customer service 5) Hospitality - Hotel management basics 6) Construction - Mason, plumber. Duration: 1-6 months. Certification + placement assistance. Apply: www.tnskill.tn.gov.in. Age: 18-35. Free hostel for outstation candidates.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH017_TG",
+      "instruction": "CS (Company Secretary) padippu enna? Eppadi seruvathu?",
+      "current_output": "ICSI nadathum padippu. Levels: 1) Foundation (+2 aprom) 2) Executive 3) Professional. Total duration: 3-4 years. Practical training 15 months. Fee: Foundation ₹4,500, Executive ₹16,000, Professional ₹20,000. Corporate law, governance specialization. Good salary in companies.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_004_TM",
+      "instruction": "என் பையனுக்கு 6 வயசு ஆச்சு, Government school-ல் எப்படி சேர்ப்பது?",
+      "current_output": "Class 1 admission: Age 5+ (as on June 1st). Process: 1) Nearest government primary school-ல் நேரடியாக செல்லுங்கள் 2) Application form வாங்குங்கள் 3) Documents: Birth certificate, Aadhaar, parent ID, address proof, photos 4) Admission free - no donation 5) Transfer certificate not needed for new admission. RTE Act: 25% seats private schools-லும் EWS/DG category-க்கு reserved. Online: www.tnschools.gov.in for RTE admission.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM022_TM",
+      "instruction": "Bank exam Reasoning section எப்படி crack பண்றது?",
+      "current_output": "Reasoning topics: Puzzles & Seating Arrangement (30-40% weightage), Syllogism, Blood Relations, Direction, Coding-Decoding, Inequality. Strategy: 1) Puzzles - daily 10 practice 2) Logic rules memorize 3) Speed improve through timed practice 4) Easy questions first in exam 5) Skip time-consuming Qs. Resources: RS Aggarwal, Rakesh Yadav, Testbook app. Time: 35 questions in 20-25 minutes. Practice = key to success.",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP013_TG",
+      "instruction": "IBPS PO/Clerk Exam Pattern enna? Eppadi prepare seyvadhu?",
+      "current_output": "**IBPS PO/Clerk Pattern:**\n\n**PO:**\n- Prelims: English 30 + Quant 35 + Reasoning 35 = 100 (1 hour)\n- Mains: 200 marks (3 hours) + Interview 100\n\n**Clerk:**\n- Prelims: Same 100 marks\n- Mains: 200 marks (2 hrs 40 min)\n- No Interview!\n\n**Books:**\n- Quant: RS Aggarwal\n- Reasoning: RS Aggarwal, MK Pandey\n- English: Wren & Martin\n- Banking: Arihant\n\n**6-Month Plan:**\n- Month 1-2: Basics + Current affairs\n- Month 3-4: Advanced + Speed\n- Month 5-6: Mock tests daily\n\n**Daily:** Quant 2hr + Reasoning 2hr + English 1hr + GK 1hr + Mock 1hr",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP002_TM",
+      "instruction": "Animation/VFX படிப்பு career-க்கு நல்லதா?",
+      "current_output": "Growing industry! Courses: 1) B.Sc Animation 2) Diploma (Arena, MAAC, Frameboxx) 3) Certificate courses. Duration: 6 months - 3 years. Skills: Maya, 3ds Max, After Effects, Photoshop. Jobs: Animation studios, Game companies, Ad agencies, Film industry (VFX). Chennai: Major hub for animation studios. Salary: ₹15,000-40,000 starting. Freelancing possible. Portfolio = key to jobs.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO005_TG",
+      "instruction": "Class 6-8 students-ku enna scholarship kidaikkum?",
+      "current_output": "**Middle School Scholarships (Class 6-8):**\n\n**1. SC/ST Pre-Matric:**\n- Day: ₹150/month, Hostel: ₹350/month\n- Books: ₹750/year\n- Income < ₹2.5 lakh\n\n**2. BC/MBC Pre-Matric:**\n- Day: ₹100/month, Hostel: ₹250/month\n\n**3. Minorities Pre-Matric:**\n- ₹100/month + ₹500/year\n- Muslim, Christian, Sikh, Jain, Buddhist, Parsi\n\n**4. NMMS (Class 8):**\n- ₹12,000/year for Class 9-12\n- Through exam\n\n**5. INSPIRE MANAK:**\n- ₹10,000 for science projects\n\n**Apply:** scholarships.gov.in through school",
+      "category": "school_education",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA006_TM",
+      "instruction": "Polytechnic Diploma என்ன? ITI-யிலிருந்து என்ன வித்தியாசம்?",
+      "current_output": "வித்தியாசம்: ITI = Trade training (practical focused), Diploma = Technical education (theory + practical). Diploma: 3 years after 10th. Branches: Mechanical, Civil, Electrical, Electronics, Computer Science, Automobile. Job level: Supervisor/Junior Engineer. ITI: Technician/Operator level. Salary difference: Diploma holders ₹5,000-10,000 more starting. Higher studies: Diploma → B.E. lateral entry possible.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXAM023_TG",
+      "instruction": "IBPS Clerk vs IBPS PO - edhu apply panrathu better?",
+      "current_output": "Comparison: Clerk - 12th pass eligible, ₹20,000-45,000 salary, clerical work. PO - Degree required, ₹40,000-80,000+ salary, managerial track. Difficulty: PO > Clerk. Career growth: PO faster promotions. Recommendation: Apply both! Same preparation works. Clerk = safe backup while aiming PO. Age: Clerk 20-28, PO 20-30. Competition: Both high, PO slightly more. Interview: PO has, Clerk doesn't (most banks).",
+      "category": "exam_preparation",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO009_TG",
+      "instruction": "10th padikkura students-ku enna scholarship irukku?",
+      "current_output": "**Class 9-10 Scholarships:**\n\n**1. Pre-Matric (SC/ST):**\n- Day: ₹150/month\n- Hostel: ₹350/month\n- Books: ₹750/year\n\n**2. Pre-Matric (BC/MBC):**\n- Day: ₹100/month\n- Hostel: ₹250/month\n\n**3. Minorities:**\n- ₹100/month + ₹500/year\n\n**4. NMMS:** ₹12,000/year (if qualified in Class 8)\n\n**5. Private:**\n- Tata Trust, Reliance Foundation, L&T\n- Sitaram Jindal: ₹750/month\n\n**Apply:** scholarships.gov.in\n**Deadline:** September-October usually",
+      "category": "school_education",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

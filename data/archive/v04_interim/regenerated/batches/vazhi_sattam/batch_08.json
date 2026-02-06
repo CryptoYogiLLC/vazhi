@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 8,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "CONS022_TG",
+      "instruction": "Consumer forum order implement aagala - enna seivathu?",
+      "current_output": "Execution petition file pannunga. Order implement seyyaadha party-kku: 1) Fine, 2) Imprisonment (up to 3 years), 3) Property attachment. Forum-kke execution petition podunga. District Collector moolamum execution nadakkum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC007_TM",
+      "instruction": "Business partnership dispute - partner பணம் தர மறுக்கிறார்",
+      "current_output": "Options: 1) Partnership deed terms check, 2) Arbitration (if clause exists), 3) Civil Court suit (dissolution + accounts), 4) Criminal (if cheating proved - IPC 420). Partnership deed written இல்லாவிட்டால் proof difficult. Accounts settlement mandatory.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP005_TM",
+      "instruction": "Patta என்றால் என்ன? Patta பெயர் மாற்றுவது எப்படி?",
+      "current_output": "Patta = Revenue record showing land ownership. Transfer: 1) Apply at Taluk office/eservices.tn.gov.in, 2) Submit: Sale deed, old patta, EC, ID proof, 3) Revenue Inspector verification, 4) Tahsildar approval. Time: 30-45 days. Online status track பண்ணலாம்.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP002_TM",
+      "instruction": "Stamp duty எவ்வளவு கட்டணும்?",
+      "current_output": "Tamil Nadu-ல்: Stamp duty 7%, Registration fee 4% = Total 11% of property value (guideline value அல்லது sale value - எது அதிகமோ அது). Women single owner-க்கு stamp duty 1% concession. Agricultural land-க்கு lower rates.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE003_TM",
+      "instruction": "Fake website-ல் shopping பண்ணி fraud ஆனது - complaint எப்படி?",
+      "current_output": "Steps: 1) Payment bank-க்கு chargeback request, 2) cybercrime.gov.in complaint, 3) Consumer forum (seller fraud), 4) Police FIR (IPC 420). Evidence save பண்ணுங்க: Website screenshots, payment receipts, communication. Domain registrar-க்கும் report பண்ணலாம்.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE001_TM",
+      "instruction": "Civil case file செய்ய என்ன procedure?",
+      "current_output": "Steps: 1) Lawyer consult, 2) Plaint draft, 3) Court fee pay, 4) Filing, 5) Summons to defendant, 6) Written statement, 7) Issues framing, 8) Evidence, 9) Arguments, 10) Judgment. Time: 2-5 years (varies). e-Courts: ecourts.gov.in case status track.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF008_TM",
+      "instruction": "Road accident-ல் என்ன செய்யணும்?",
+      "current_output": "Steps: 1) Injured-க்கு first aid, 2) 108 ambulance call, 3) Police 100 call, 4) Photos/videos எடுங்க, 5) Witness details collect, 6) FIR file (or police will file). Good Samaritan law: Help பண்றவர்களுக்கு legal protection உண்டு.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE018_TG",
+      "instruction": "Stray dog bite aanaal compensation kidaikkumaa?",
+      "current_output": "Corporation/Municipality nilai poruthadhu. Complaint: Corporation + Animal Welfare Board. Compensation: Civil Court suit against local body (negligence). Medical expenses claim. ABC (Animal Birth Control) program failure prove pannanum. Police complaint-um possible.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP011_TM",
+      "instruction": "Gym membership cancel பண்ண விடல, என்ன செய்வது?",
+      "current_output": "Consumer rights: 1) Written cancellation request கொடுங்க, 2) Refund policy check - pro-rata refund கேளுங்க, 3) Unfair terms (no cancellation ever) = void under Consumer Protection Act, 4) Refuse பண்ணா: Consumer Forum complaint - Rs.1 lakh-க்குள் = District Forum. Medical reason cancellation: Doctor certificate கொடுத்தா usually accept பண்றாங்க.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA014_TG",
+      "instruction": "Eviction notice vandhaal ethanai naal time kidaikkum?",
+      "current_output": "Agreement-la mention seidha notice period (1-3 months) kidaikkum. Court through eviction na reasonable time koduppaanga. Rent default case-la 15 days notice koduthu arrears pay seiyya chance tharuvaanga.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CONS009_TG",
+      "instruction": "Online order varavilla - refund eppadi peruvathu?",
+      "current_output": "Steps: 1) Website/App-la refund request raise pannunga, 2) Email-la written complaint anuppunga, 3) Payment bank-kku chargeback request kodunga (credit card), 4) Response illaattal NCH (1800-11-4000) complaint, 5) Consumer forum case podunga. E-commerce company 5-7 days-la acknowledge seyyanum.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI019_TG",
+      "instruction": "DV case-la enna relief kidaikkum?",
+      "current_output": "Reliefs under DV Act: 1) Protection order (abuse stop), 2) Residence order (shared household-la stay), 3) Monetary relief (maintenance, medical, compensation), 4) Custody order, 5) Compensation. Ex-parte order (urgent) 2-3 days-la kidaikkum.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI001_TM",
+      "instruction": "Marriage registration கட்டாயமா? எங்கே பண்றது?",
+      "current_output": "Tamil Nadu-ல் Compulsory Registration of Marriages Act 2009-ன் கீழ் கட்டாயம். Register: 1) Hindu Marriage Act - Registrar of Marriages (Sub-Registrar office), 2) Special Marriage Act - Marriage Registrar. Online apply: serviceonline.gov.in. Documents: Age proof, address proof, photos, invitation card, witnesses.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF002_TM",
+      "instruction": "License renewal எப்போது பண்ணணும்?",
+      "current_output": "Non-transport: 20 years validity (age 50 வரை), பிறகு 5 years. Transport: 3 years. Renewal: Expiry-க்கு 1 year முன் அல்லது 1 year பின் (late fee applicable). Online: parivahan.gov.in. Expired license-உடன் drive பண்ணினால் fine Rs.5,000.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP009_TG",
+      "instruction": "Tenant union form pannalaamaa? Collective bargaining legal-aa?",
+      "current_output": "Legal! Tenant associations/unions form pannalam. Benefits: 1) Collective voice against unfair practices, 2) Negotiate with owner associations, 3) Legal aid pooling, 4) Information sharing. Registration: Societies Registration Act-in keezh. Apartment complexes: Resident Welfare Association (RWA) common. Protect yourselves through unity.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL015_TM",
+      "instruction": "Sexual harassment complaint எப்படி செய்வது?",
+      "current_output": "Internal Complaints Committee (ICC)-க்கு written complaint. ICC இல்லாவிட்டால் Local Complaints Committee (District level). Time limit: 3 months from incident. POSH Act 2013 protection. Anonymous complaint-உம் valid. Retaliation-க்கு protection உண்டு.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE016_TG",
+      "instruction": "Pollution complaint enge koduppadhu?",
+      "current_output": "TNPCB (Tamil Nadu Pollution Control Board): tnpcb.gov.in. NGT (National Green Tribunal): Chennai bench. District Environment Engineer. Complaint types: Air, water, noise, hazardous waste. Evidence: Photos, videos, test reports. Public interest litigation-um possible.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL017_TG",
+      "instruction": "Appointment letter kodukkala - sattavirodhamaa?",
+      "current_output": "Aama. Written employment contract kodukkanum. Appointment letter contents: Designation, salary, probation period, notice period, duties. Oral appointment-um valid aanaal prove panradhu kashtam. Always insist on written letter + copy vaangunga.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA016_TG",
+      "instruction": "Yearly evvalavu percentage rent increase niyaayamanadhu?",
+      "current_output": "Sattathula fixed percentage illa. Practice-la 5-10% yearly increase normal. But market rate, inflation, property value increase ivai consider aagum. Unreasonable increase-a Rent Authority moolam dispute seyyalam.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI021_TM",
+      "instruction": "Adoption-க்கு eligibility criteria என்ன?",
+      "current_output": "CARA rules: 1) Age: 25-55 years, 2) Married couple: 2 years stable marriage, 3) Single parent: allowed (restrictions apply), 4) Income: sufficient to raise child, 5) Medical: physically/mentally fit, 6) No criminal record. Age difference with child: max 45 years.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA001_TG",
+      "instruction": "Rental agreement kattaayama?",
+      "current_output": "Aama, 2017 Act padiye kattaayam. Written agreement illaattal problem varum. 11 months-kku mela irundhaal Registration kattaayam. Stamp paper-la ezhudhi Sub-Registrar office-la register seiyya venum.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF010_TG",
+      "instruction": "Motor Accident Claim eppadi file seivathu?",
+      "current_output": "File at: Motor Accident Claims Tribunal (MACT) - District Court. Documents: FIR, medical records, bills, death certificate (if applicable), income proof, insurance details. Time limit: No strict limit (reasonable time). Lawyer not mandatory. Lok Adalat-lum settle aagalam.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE021_TM",
+      "instruction": "Bank account-ல காசு போச்சு, யாரோ OTP வாங்கி எடுத்துட்டாங்க",
+      "current_output": "உடனே: 1) Bank-க்கு call - 24/7 helpline, account freeze கேளுங்க, 2) 1930 helpline call, 3) Net banking-ல் transactions block, 4) ATM card block. 3 days-க்குள் report பண்ணா liability குறையும். Debit card insurance check பண்ணுங்க.",
+      "category": "cyber_laws",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "RTI_008_TM",
+      "instruction": "CM Helpline-ல் complaint எப்படி கொடுப்பது?",
+      "current_output": "Tamil Nadu CM Helpline: 1100. Online: cmcell.tn.gov.in. Complaint categories: Corruption, service delay, government scheme issues. Tracking: SMS/Online. Escalation: Collector → Department Secretary → CM Cell. Response time: 15-30 days.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM005_TG",
+      "instruction": "Arrest aagum bodhu enna rights irukku?",
+      "current_output": "Constitutional rights: 1) Arrest reason therivikkanum, 2) Lawyer azhaikka right, 3) Family-kku inform seyya, 4) 24 hours-la Magistrate mun aajar, 5) Medical examination, 6) Silent remain seyya right. Women: Only women police, not between sunset-sunrise.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}

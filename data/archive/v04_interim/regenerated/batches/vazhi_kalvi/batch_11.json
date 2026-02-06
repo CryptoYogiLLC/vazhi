@@ -1,0 +1,183 @@
+{
+  "pack": "vazhi_kalvi",
+  "batch_num": 11,
+  "sample_count": 25,
+  "samples": [
+    {
+      "id": "SCHO030A_TG",
+      "instruction": "Scholarship-ku apply panna enna document venum-pa?",
+      "current_output": "Aadhaar, bank passbook (student name-la), income certificate, community certificate, marks card, photo, bonafide - ipdi ellam venum. Original + xerox + scan ready-a vechikko/vechikunga.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_003_TG",
+      "instruction": "En kuzhanthai methuvaga padikkudhu, school-la special help irukkaa?",
+      "current_output": "Slow learners support: 1) NEET programme - remedial classes 2) Resource teachers in schools 3) Learning disability screening available 4) Extra coaching hours - afternoon sessions 5) IEDSS for special needs. School-la class teacher-a santhiyunga. BRC special educators ullana. Private assessment: Rs.500-2000 at government hospitals. Early intervention helps - don't delay.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE017_TG",
+      "instruction": "Isai Kuzhu, Naatiya Kuzhu competitions la win pannina enna benefit?",
+      "current_output": "District/State level-la win pannina certificate, cash prize kedaikum. College admission-la extra marks weightage undu. Cultural quota-la admission peralaam. State artist-aaga recognition kedaikum.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO026_TG",
+      "instruction": "Scholarship-ku thevaiyana documents ennenna?",
+      "current_output": "Standard documents: 1) Aadhaar card 2) Bank passbook (student name) 3) Income certificate (latest) 4) Caste/Community certificate 5) Bonafide certificate from institution 6) Previous year marks card 7) Passport size photo 8) Fee receipt. Special cases: Disability certificate, EWS certificate, BPL card, domicile certificate. Tip: Keep original + 3 photocopies + scanned PDF ready.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "AGE_018_TM",
+      "instruction": "Final year-ல இருக்கேன். Government job prepare பண்ணணும். Campus placement-ஐ விடலாமா?",
+      "current_output": "Don't skip placement! Reasons: 1) Government job = uncertain timeline (1-3 years) 2) Private job = income while preparing 3) Age limit allows both 4) Financial independence. Strategy: Campus placement attend + clear any job → Join → Prepare TNPSC/SSC evenings/weekends → Clear govt exam → Resign → Join government. Many success stories of working professionals clearing exams. Private job experience also valued. Safety net important - family shouldn't struggle while you prepare.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM008_TG",
+      "instruction": "Board exam-la Re-totalling vs Re-valuation - enna difference?",
+      "current_output": "Re-totalling: Marks addition only check. Answer sheet re-read illai. Cost: ₹50/subject. Time: 10-15 days. Success rate: Low. Re-valuation: Full paper re-evaluation by new examiner. Cost: ₹300-500/subject. Time: 30-45 days. Success rate: Higher if genuine mistake. Apply within: 15 days of result. Portal: DGE website. Choose wisely - re-valuation for major doubt only.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH029_TG",
+      "instruction": "Education loan thiruppich seluthuvathu eppadi?",
+      "current_output": "Repayment: Padippu mudintha piragu + 6 months to 1 year moratorium. EMI thodangum. Repayment period: 5-15 years. Tax benefit: Section 80E-la vatti-ku deduction (no max limit, up to 8 years). Pre-closure penalty illai most banks-la. Auto-debit setup seithu EMI thavaramal kattunga.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH007_TG",
+      "instruction": "ITI padippu yarukku errathu? Eppadi seruvathu?",
+      "current_output": "8th or 10th pass aanavargalukku. 130+ types of trades irukku (Electrician, Fitter, Welder, Computer Operator etc). Admission: www.skilltraining.tn.gov.in. Duration: 6 months to 2 years. Govt ITI fully free. Padicha approm Apprenticeship seiyalam, nalla job opportunity.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA002_TM",
+      "instruction": "ITI admission-க்கு என்ன தகுதி தேவை?",
+      "current_output": "தகுதி trades வாரியாக மாறும்: 1) Engineering trades (Electrician, Fitter) - 10th pass 2) Non-engineering trades (Welder, Painter) - 8th pass. Age: 14-40 years. Apply: www.skilltraining.tn.gov.in. Selection: 10th/8th marks basis. No entrance exam. Documents: TC, marks card, community certificate, Aadhaar. Government ITI-ல் seats limited, apply early.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE011_TM",
+      "instruction": "மதுரை Kamaraj University-ல distance education நல்லதா?",
+      "current_output": "MKU distance education UGC approved, widely recognized. BA, BCom, BBA, MA, MCom courses available. Study centre city-லயே இருக்கும். Fees affordable. Contact classes weekend-ல நடக்கும்.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM026_TM",
+      "instruction": "Aadhaar-bank account link ஆகல, scholarship reject",
+      "current_output": "Linking steps: 1) Visit bank branch with Aadhaar 2) Fill seeding form 3) OTP verification 4) 48-72 hours to reflect. Check link status: Call bank customer care or use NPCI mapper. Common issues: Name mismatch (Aadhaar vs bank) - get corrected first. Multiple accounts: Only one can be primary for DBT. Alternative: Net banking/Mobile banking link option available. UIDAI website: Check Aadhaar-bank link status.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM017_TG",
+      "instruction": "Myth or Fact: Myth: Government school-la padichaa success aaga mudiyaadhu",
+      "current_output": "Fact: Fact: Pala IAS officers, Doctors, Engineers government school products. 7.5% reservation pona piragu government school NEET toppers athigaritthullanar. Quality depends on student effort + teacher dedication. Many district toppers from government schools. Free education + scholarships = excellent opportunity.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO025_TM",
+      "instruction": "Scholarship apply செய்யும் போது common mistakes என்ன?",
+      "current_output": "தவிர்க்க வேண்டியவை: 1) Deadline miss பண்றது - calendar-ல் note போடுங்கள் 2) Incomplete application - எல்லா fields நிரப்புங்கள் 3) Wrong documents - size, format check 4) Bank account mismatch with Aadhaar 5) Income certificate expired 6) Multiple applications same scheme 7) Fake certificates (blacklist ஆவீர்கள்). Tips: Apply early, keep scanned copies ready, check status regularly.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA017_TG",
+      "instruction": "Hardware and Networking course padikkalaamaa?",
+      "current_output": "Good career option. Courses: 1) CCNA (Cisco) - Networking 2) CompTIA A+ - Hardware 3) MCSE (Microsoft) - Server admin 4) Hardware & Networking diploma. Duration: 3-12 months. Jobs: 1) Network administrator 2) System support 3) Hardware technician 4) IT helpdesk. Salary: ₹15,000-30,000. Demand: Every company needs IT support. NIELIT offers recognized courses. Self-employment: Computer repair shop.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMP003_TM",
+      "instruction": "NEET-க்கு எப்படி prepare செய்வது? எந்த books படிக்கணும்?",
+      "current_output": "**NEET Preparation Strategy:**\n\n**2-Year Plan (Class 11-12):**\n\n**Class 11:**\n- NCERT thoroughly (Most important!)\n- Concept clarity focus\n- Regular practice\n- Foundation building\n\n**Class 12:**\n- NCERT revision\n- Previous years papers\n- Mock tests\n- Weak areas focus\n\n**Subject-wise Books:**\n\n**Physics:**\n| Book | Purpose |\n|------|--------|\n| NCERT Class 11 & 12 | Foundation (Must!) |\n| HC Verma | Concept + Problems |\n| DC Pandey | Practice |\n| Previous Years | Pattern understanding |\n\n**Chemistry:**\n| Book | Purpose |\n|------|--------|\n| NCERT | Must read multiple times! |\n| MS Chouhan (Organic) | Organic mechanisms |\n| VK Jaiswal (Inorganic) | Reactions |\n| N Awasthi (Physical) | Numericals |\n\n**Biology:**\n| Book | Purpose |\n|------|--------|\n| NCERT | 90% questions from here! |\n| Trueman's Biology | Extra MCQs |\n| MTG NEET Guide | Practice |\n| Previous Years | Must solve |\n\n**Daily Schedule (Class 12):**\n```\n5:00 AM - Wake up, Fresh\n5:30-7:30 AM - Physics/Chemistry (Alternate)\n7:30-8:30 AM - Break, Breakfast\n8:30-1:00 PM - School\n2:00-4:00 PM - Biology\n4:00-5:00 PM - Break, Snacks\n5:00-7:00 PM - Weak subject\n7:00-8:00 PM - Dinner, Relax\n8:00-10:00 PM - Revision/MCQs\n10:00 PM - Sleep\n```\n\n**Key Tips:**\n1. NCERT = Bible (Read 5-6 times minimum)\n2. Biology diagrams daily practice\n3. Physics numericals daily\n4. Chemistry equations balance\n5. 50-100 MCQs daily\n6. Weekly full-length test",
+      "category": "competitive_exams",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP026_TG",
+      "instruction": "Scholarship deadlines summary",
+      "current_output": "NSP (National): October-November. Post-matric SC/ST: September-October. BC/MBC welfare: August-September. Merit scholarships: After results announcement. INSPIRE: December-January. Private scholarships: Various - check Buddy4Study regularly. Tip: Apply within 2 weeks of portal opening.",
+      "category": "supplementary_courses",
+      "target_language": "pure_tamil"
+    },
+    {
+      "id": "AGE_002_TG",
+      "instruction": "Free uniform, books ellam school kodukkuma? Apply pannanuuma?",
+      "current_output": "Government school benefits: 1) Free textbooks - ella subjects 2) Free notebooks - 4-5 books 3) Free uniform - 2 sets (₹600 worth) 4) Free footwear - Class 1-5 5) Free school bag - select schools. Apply: Admission-aanavudan automatic. Documents: Birth certificate, Aadhaar, parent Aadhaar, address proof. Private aided schools-layum books free. Distribution: June-July school opening.",
+      "category": "age_group_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH011_TG",
+      "instruction": "ME/M.Tech admission Tamil Nadu-la eppadi?",
+      "current_output": "GATE score compulsory (govt colleges-ku). Steps: 1) GATE ezhuthunga 2) Anna University TANCA counselling-ku apply 3) GATE score + UG marks basis rank 4) College allotment. GATE illamalum sila colleges-la seralaam (sponsored/self-financing). Govt college fee: ₹10,000-30,000/year.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SCHO016_TG",
+      "instruction": "TATA Scholarship for students enna?",
+      "current_output": "TATA Group Scholarships: 1) Tata Capital Pankh - ₹10,000-12,000/year for Class 6-12 2) Tata Trusts Higher Education - ₹50,000-2 lakh/year professional courses 3) Lady Tata Memorial Trust - Medical research. Eligibility: Income ₹4 lakh kizha, 60%+ marks. Apply: Buddy4Study portal or direct application. Deadline varies.",
+      "category": "scholarships",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH037_TM",
+      "instruction": "Ex-servicemen பிள்ளைகளுக்கு படிப்பு சலுகைகள் என்ன?",
+      "current_output": "சலுகைகள்: 1) TNPSC-ல் 2% horizontal reservation 2) Engineering/Medical admission-ல் reservation 3) Sainik School admission priority 4) AFMC, NDA-ல் முன்னுரிமை 5) Fee concession பல கல்லூரிகளில். Prime Minister's Scholarship: ₹36,000-60,000/ஆண்டு professional courses-க்கு. Kendriya Sainik Board scholarship available. Apply with father's discharge certificate.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP005_TG",
+      "instruction": "Merchant Navy join aaga enna padikkanum?",
+      "current_output": "Courses: 1) B.Sc Nautical Science (3 years) - Deck Officer 2) Marine Engineering (4 years) - Engine room 3) GP Rating (6 months) - Entry level. Eligibility: 12th PCM 60%+, Medical fitness strict. Institutes: IMU Chennai, AMET Chennai, MERI. Admission: IMU CET entrance exam. Career: High salary (₹50,000 - ₹5 lakh/month with experience), World travel. Challenges: Months away from family.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP028_TG",
+      "instruction": "Government job salary ranges",
+      "current_output": "TNPSC Group 1: ₹56,100-1,77,500 (DSP, DC level). Group 2: ₹35,400-1,12,400 (Assistant level). Group 4: ₹19,500-62,000 (Clerk level). Banking PO: ₹40,000-80,000+. SSC CGL: ₹35,000-1,50,000. Teaching (TRB): ₹35,000-70,000. Note: Includes DA, HRA, benefits.",
+      "category": "supplementary_courses",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "COMM022_TM",
+      "instruction": "உண்மையா பொய்யா: Myth: Marks மட்டும் important, extra-curricular waste",
+      "current_output": "உண்மை: Fact: Balanced development essential. Extra-curricular benefits: 1) Sports quota admission 2) Stress relief = better study 3) Personality development 4) College applications value it 5) Soft skills development. Reality: Toppers also play sports, music, participate in activities. Time management skill learned. All-rounder students more successful in career long-term.",
+      "category": "common_questions",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "HIGH044_TM",
+      "instruction": "தேர்வில் time management எப்படி செய்வது?",
+      "current_output": "Strategies: 1) Question paper முழுவதும் முதலில் படியுங்கள் (5 mins) 2) Easy questions முதலில் attempt 3) Marks-க்கு ஏற்ப time allocate (1 mark = 1 minute rule) 4) Stuck ஆனால் skip, later return 5) Last 10 minutes revision-க்கு keep 6) Answer length = marks (2 marks = half page, 5 marks = 1 page) 7) Watch/clock பாருங்கள் regularly. Practice: At home, exam conditions-ல் previous papers எழுதுங்கள்.",
+      "category": "higher_studies",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "VOCA007_TG",
+      "instruction": "Polytechnic-la endha branch select seivathu? Job opportunity eppadi?",
+      "current_output": "Branch wise opportunities: 1) Mechanical - Manufacturing, automobile companies 2) Civil - Construction, PWD, real estate 3) Electrical - TNEB, industries, electrician 4) Electronics - IT companies, telecom 5) Computer Science - Software, IT support 6) Automobile - Service centers, companies. Highest demand: Mechanical, Civil. Growing: Computer Science. Government jobs: TNPSC Diploma level posts available.",
+      "category": "vocational_training",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nEDUCATION PACK GUIDELINES:\n- Tanglish is acceptable for modern education topics\n- Keep exam names (NEET, JEE, TNPSC) in English\n- Use Tamil for explanations: தேர்வு (exam), கல்லூரி (college), பாடத்திட்டம் (syllabus)\n- Format with emoji headers: 📚, 🎓, 📝\n"
+}

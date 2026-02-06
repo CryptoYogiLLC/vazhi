@@ -1,0 +1,134 @@
+{
+  "pack": "vazhi_sattam",
+  "batch_num": 22,
+  "sample_count": 18,
+  "samples": [
+    {
+      "id": "CONS024_TG",
+      "instruction": "Medical negligence case-kku enna evidence venum?",
+      "current_output": "Required: 1) All medical records (hospital bound to give), 2) Prescriptions, 3) Test reports, 4) Bills, 5) Expert medical opinion (another doctor's opinion), 6) Death certificate (if applicable). RTI moolam government hospital records peralaam.",
+      "category": "consumer_protection",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC016_TM",
+      "instruction": "Medicine MRP-க்கு மேல் விற்றால் complaint எங்கே?",
+      "current_output": "Complaint: Drug Inspector (District), State Drug Control. Legal Metrology Department-உம் complaint எடுக்கும். Pharmacy license suspend/cancel ஆகலாம். Consumer forum-ல் compensation. Evidence: Bill with MRP comparison. Toll-free: 1800-11-4000.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PROP022_TG",
+      "instruction": "Apartment vaangum podhu UDS endraal enna?",
+      "current_output": "UDS = Undivided Share of Land. Flat owner-kku land-la proportionate share. Building collapse/demolish aanalum land share ungalukku. Higher UDS = Better value. UDS % sale deed-la clearly mention irukkanum. UDS illaama flat vaangaadheenga.",
+      "category": "property_land",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE001_TG",
+      "instruction": "Civil case file seyya enna procedure?",
+      "current_output": "Steps: 1) Lawyer consult, 2) Plaint draft, 3) Court fee pay, 4) Filing, 5) Summons to defendant, 6) Written statement, 7) Issues framing, 8) Evidence, 9) Arguments, 10) Judgment. Time: 2-5 years (varies). e-Courts: ecourts.gov.in case status track.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA008_TG",
+      "instruction": "Advance thirumba thara ethanai naal time irukku?",
+      "current_output": "Sattapadi veedu kaali seydha 30 days-kkul advance thirumba thara venum. Delay aanaal 6% interest-udan thara venum. Idhu 2017 Act-la clearly mention aagiyirukku.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF013_TM",
+      "instruction": "Insurance claim reject ஆனால் என்ன செய்வது?",
+      "current_output": "Steps: 1) Rejection reason written-ஆ கேளுங்க, 2) Insurance company grievance cell, 3) Insurance Ombudsman (igms.irda.gov.in), 4) Consumer forum, 5) MACT (accident claims). Common rejection reasons: Policy lapse, drunk driving, unlicensed driver. Documentation முக்கியம்.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "PRAC023_TG",
+      "instruction": "Passport reject aanadhu - enna seivathu?",
+      "current_output": "Rejection reason check: passportindia.gov.in. Common reasons: Police verification issue, document mismatch, pending cases. Appeal: Regional Passport Officer. Court case pending: NOC from court required. Reapply with correct documents. Tatkaal for urgent cases.",
+      "category": "practical_scenarios",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CYBE006_TG",
+      "instruction": "Social media-la abuse/trolling - complaint podalaamaa?",
+      "current_output": "Aama. Sections: IT Act 66A (struck down but alternatives exist), 67 (obscene content), IPC 509 (insult to modesty), 506 (criminal intimidation), 507 (criminal intimidation by anonymous). Platform report + cybercrime.gov.in complaint. Women: 181 helpline.",
+      "category": "cyber_laws",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EXTE013_TM",
+      "instruction": "Health insurance cashless reject ஆனால் reimbursement கிடைக்குமா?",
+      "current_output": "ஆம். Cashless rejection ≠ claim rejection. Pay hospital, submit bills to insurer. Reimbursement claim: 15-30 days. Rejection-க்கு: IRDAI complaint, Ombudsman, Consumer forum. Pre-authorization issues: TPA (Third Party Administrator) contact. Network hospital outside-உம் claim possible.",
+      "category": "extended_topics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF013_TG",
+      "instruction": "Insurance claim reject aanaal enna seivathu?",
+      "current_output": "Steps: 1) Rejection reason written-aa kelunga, 2) Insurance company grievance cell, 3) Insurance Ombudsman (igms.irda.gov.in), 4) Consumer forum, 5) MACT (accident claims). Common rejection reasons: Policy lapse, drunk driving, unlicensed driver. Documentation mukkiyam.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "SUPP004_TM",
+      "instruction": "Credit card bill pay பண்ண முடியல, harassment வருது, என்ன செய்வது?",
+      "current_output": "RBI Fair Practice Code: 1) Recovery agents 7AM-7PM only contact பண்ணலாம், 2) Office/relatives-கிட்ட போக கூடாது (without permission), 3) Threaten, abuse பண்ண கூடாது, 4) Violation: Bank-க்கு + RBI-க்கு complaint, 5) Settlement option கேளுங்க - usually 50-70% pay பண்ணி close பண்ணலாம். Police complaint-உம் போடலாம் harassment-க்கு.",
+      "category": "supplementary",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM008_TG",
+      "instruction": "Police torture seydhaal enna seivathu?",
+      "current_output": "Complaint options: 1) SP/DIG-kku written complaint, 2) Judicial Magistrate-kku complaint, 3) State Human Rights Commission, 4) National Human Rights Commission, 5) High Court writ petition. Medical report, photos, witnesses - evidence vaangunga. Custodial torture serious offence.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "RTI_014_TG",
+      "instruction": "TNEB electricity complaint eppadi poduvadhu?",
+      "current_output": "Options: 1) TANGEDCO helpline: 1912, 2) Online: tangedco.gov.in, 3) TNEB app, 4) Local section office. Issues: Billing errors, connection delay, power cut, meter fault. Escalation: AE → EE → SE → CE. Consumer Grievance Redressal Forum (CGRF) for unresolved issues.",
+      "category": "rti_government",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TENA030_TG",
+      "instruction": "PG/Hostel-kku rent laws apply aagumaa?",
+      "current_output": "PG/Hostel license agreement-under varum, standard tenancy laws fully apply aagaadhu. But basic rights (security deposit refund, notice period, harassment protection) apply aagum. Specific PG rules follow pannanum.",
+      "category": "tenant_rights",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "CRIM011_TM",
+      "instruction": "Bail conditions என்னென்ன இருக்கும்?",
+      "current_output": "Common conditions: 1) Court dates attend, 2) Don't leave jurisdiction without permission, 3) Don't tamper evidence/threaten witnesses, 4) Passport surrender (if flight risk), 5) Periodical police station visit, 6) Don't contact victim. Violation = bail cancel + arrest.",
+      "category": "criminal_basics",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "TRAF012_TG",
+      "instruction": "Vehicle insurance types ennenna?",
+      "current_output": "Types: 1) Third-party (mandatory) - others-kku damage cover, 2) Comprehensive - own vehicle + third party, 3) Own damage - only own vehicle. Third-party minimum kattaayam (MV Act). Without insurance driving: Rs.2,000 fine + vehicle seizure.",
+      "category": "traffic_vehicles",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "EMPL020_TG",
+      "instruction": "Swiggy/Zomato delivery partner-kku labour laws apply aagumaa?",
+      "current_output": "Gig workers classified as 'independent contractors' - traditional labour laws fully apply aagaadhu. Code on Social Security 2020: Gig workers-kku social security provisions (implementation pending). Accident/injury-kku company insurance check pannunga. Union formation possible.",
+      "category": "employment_labor",
+      "target_language": "tanglish"
+    },
+    {
+      "id": "FAMI022_TG",
+      "instruction": "Dowry demand-kku enna action edukkalam?",
+      "current_output": "Dowry ketpathu/koduppathu illegal (Dowry Prohibition Act). Complaint: Police, Women helpline 181, Protection Officer. Punishment: 5 years imprisonment + fine. Dowry death (304B IPC): 7 years to life imprisonment. Evidence: Messages, recordings, witness statements.",
+      "category": "family_law",
+      "target_language": "tanglish"
+    }
+  ],
+  "guidelines": "\nLEGAL PACK GUIDELINES:\n- Keep Act names in English: \"RTI Act 2005\"\n- Use Tamil for concepts: புகார் (complaint), உரிமை (rights), சட்டம் (law)\n- Legal terms: வழக்கறிஞர் (lawyer), நீதிமன்றம் (court)\n- Format with emoji headers: ⚖️, 📜, 🏛️\n"
+}
