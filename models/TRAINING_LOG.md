@@ -322,6 +322,76 @@ Max Seq Length: 1024
 | Q8_0 | ~500MB | High quality backup |
 | Q4_K_M | ~250MB | **Mobile deployment** |
 
+### Training Progress
+
+**Initial Run (2025-02-07):**
+
+| Step | Loss | Notes |
+|------|------|-------|
+| 50 | 1.26 | Starting loss |
+| 100 | 1.17 | Learning... |
+| 200 | 1.10 | Good progress |
+| 400 | 0.77 | Converging |
+| 600 | 0.64 | Good |
+| 800 | 0.55 | **Last good checkpoint** |
+| 950 | 0.53 | Lowest loss achieved |
+| 1000 | 0.73 | ⚠️ Starting to diverge |
+| 1100 | 2.57 | ❌ DIVERGED - Loss exploded |
+
+### Training Divergence Issue
+
+**What Happened:**
+Training was progressing well with loss dropping from 1.26 to 0.53 over 950 steps.
+At step 1000, loss suddenly jumped from 0.53 → 0.73 → 2.57, indicating training divergence.
+
+**Root Cause Analysis:**
+1. Learning rate (2e-4) too aggressive for small model
+2. Lack of gradient clipping allowed gradient explosions
+3. Cosine scheduler may have caused LR oscillations
+
+**Recovery Plan:**
+Resume from checkpoint-800 (last good state, loss ~0.55) with:
+- Reduced learning rate: 5e-5 (was 2e-4)
+- Gradient clipping: max_grad_norm=0.3
+- More frequent logging: every 25 steps
+- More frequent saves: every 100 steps
+
+**Notebook Updated:**
+Added RECOVERY_MODE flag to training notebook that:
+- Uses conservative hyperparameters
+- Resumes from checkpoint-800
+- Monitors for early signs of divergence
+
+### Recovery Training Result: ❌ FAILED
+
+**Training Completed:** Yes (2085 steps, 1h 31m)
+**Final Loss:** 0.325 average, 0.558 at last step
+**Loss Stability:** ✅ Stable throughout (no divergence)
+
+**But Model Output:** Complete garbage
+
+**Test Results:**
+```
+Q: திருக்குறளின் முதல் குறள் என்ன?
+A: இட体系系统的ரsystemsystemsystem... (gibberish)
+```
+
+**Diagnosis:**
+- Base Qwen2.5-0.5B model works fine (produces Tamil)
+- LoRA adapter corrupts the output completely
+- Corruption present even at checkpoint-1800
+- Different garbage on float16 vs 4-bit loading
+
+**Root Cause Analysis:**
+| Suspect | Likelihood | Notes |
+|---------|------------|-------|
+| LoRA rank too high (r=32) | High | Too aggressive for 0.5B model |
+| 4-bit training instability | Medium | Small models sensitive to quantization |
+| Too many target modules | Medium | Modified 7 modules simultaneously |
+| Learning rate (5e-5) | Low | Was conservative |
+
+**Decision:** Pivot to pre-trained Tamil models (Sarvam-1 or Gemma 2B Tamil)
+
 ### Files Created
 - Training notebook: `/notebooks/Vazhi_Qwen05B_Training.ipynb`
 - Data prep script: `/data/tamil_foundation/prepare_training_data.py`
