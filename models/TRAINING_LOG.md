@@ -8,18 +8,18 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 
 | Version | Date | Status | Key Changes |
 |---------|------|--------|-------------|
-| v0.1 | 2025-02-05 | ❌ Failed | Initial training, Culture pack hallucination |
-| v0.2 | 2025-02-06 | ❌ Failed | Added culture_v2 data, still hallucinating |
-| v0.3 | 2025-02-06 | ⏸️ Skipped | Heavy augmentation planned but root cause found |
-| v0.4 | 2025-02-06 | ❌ Failed | GGUF quantization produced gibberish output |
-| v0.5 | 2025-02-07 | ❌ Failed | SLM approach with Qwen2.5-0.5B - LoRA corrupted model |
-| v0.6 | 2025-02-07 | 🔄 Training | Sarvam-2B + IndicAlign Anudesh + VAZHI data |
+| v0.1 | 2026-02-05 | ❌ Failed | Initial training, Culture pack hallucination |
+| v0.2 | 2026-02-06 | ❌ Failed | Added culture_v2 data, still hallucinating |
+| v0.3 | 2026-02-06 | ⏸️ Skipped | Heavy augmentation planned but root cause found |
+| v0.4 | 2026-02-06 | ❌ Failed | GGUF quantization produced gibberish output |
+| v0.5 | 2026-02-07 | ❌ Failed | SLM approach with Qwen2.5-0.5B - LoRA corrupted model |
+| v0.6 | 2026-02-07 | 🔄 Training | Sarvam-2B + IndicAlign Anudesh + VAZHI data |
 
 ---
 
 ## v0.1 Training Run
 
-**Date:** 2025-02-05
+**Date:** 2026-02-05
 **Base Model:** Qwen2.5-3B-Instruct
 **Training Data:** 3,007 samples
 **Epochs:** 3
@@ -42,7 +42,7 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 
 ## v0.2 Training Run
 
-**Date:** 2025-02-06
+**Date:** 2026-02-06
 **Base Model:** Qwen2.5-3B-Instruct
 **Training Data:** 3,180 samples (3,007 + 173 culture_v2)
 **Epochs:** 3
@@ -118,7 +118,7 @@ ACTUAL Output Language (character analysis):
 
 ## v0.3 (Skipped)
 
-**Date:** 2025-02-06
+**Date:** 2026-02-06
 **Status:** Prepared but not executed
 
 ### What Was Planned
@@ -138,7 +138,7 @@ Even with 75 samples of the correct first kural, the model would still:
 
 ## v0.4 Training Run (Failed - Quantization Issues)
 
-**Date:** 2025-02-06 to 2025-02-07
+**Date:** 2026-02-06 to 2026-02-07
 **Status:** ❌ Failed
 
 ### Key Decisions Made
@@ -184,7 +184,7 @@ Even with 75 samples of the correct first kural, the model would still:
 2. [x] Audit and categorize existing samples - Done!
 3. [x] Generate authoritative Culture data - 145 samples
 
-**Audit Results (2025-02-06):**
+**Audit Results (2026-02-06):**
 | Category | Count | % |
 |----------|-------|---|
 | Keep (>70% Tamil) | 421 | 13.2% |
@@ -254,7 +254,7 @@ A: கூறிய் லக்கிய் சிறப்பு கொண்�
 
 ## v0.5 Training (Current - SLM Approach)
 
-**Date:** 2025-02-07
+**Date:** 2026-02-07
 **Status:** 🔄 Training in Progress
 **Base Model:** Qwen2.5-0.5B-Instruct
 **Training Platform:** Google Colab (T4 GPU)
@@ -325,7 +325,7 @@ Max Seq Length: 1024
 
 ### Training Progress
 
-**Initial Run (2025-02-07):**
+**Initial Run (2026-02-07):**
 
 | Step | Loss | Notes |
 |------|------|-------|
@@ -402,7 +402,7 @@ A: இட体系系统的ரsystemsystemsystem... (gibberish)
 
 ## Pre-trained Tamil Model Evaluation
 
-**Date:** 2025-02-07
+**Date:** 2026-02-07
 **Purpose:** Find an existing Tamil model instead of training from scratch
 
 ### Models Tested
@@ -456,7 +456,7 @@ A: இட体系系统的ரsystemsystemsystem... (gibberish)
 
 ## v0.6 Training (Current - Sarvam-2B Fine-tuning)
 
-**Date:** 2025-02-07
+**Date:** 2026-02-07
 **Status:** 🔄 Training in Progress
 **Base Model:** sarvamai/sarvam-2b-v0.5
 **Training Platform:** Kaggle (T4 GPU)
@@ -552,7 +552,7 @@ Training Settings:
 
 ### ADR-003: Why SLM (Small Language Model) Approach?
 
-**Date:** 2025-02-07
+**Date:** 2026-02-07
 **Status:** ✅ Adopted
 
 **Context:**
@@ -616,7 +616,7 @@ Use Qwen2.5-0.5B-Instruct as the base model instead of Qwen2.5-3B-Instruct.
 
 ### ADR-004: Mixed Training Format (Q&A + Completion)
 
-**Date:** 2025-02-07
+**Date:** 2026-02-07
 **Status:** ✅ Adopted
 
 **Context:**

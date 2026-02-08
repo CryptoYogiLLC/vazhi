@@ -2,7 +2,7 @@
 
 > **Goal**: Deploy a Tamil AI assistant on mobile devices (~1-1.5GB)
 
-**Last Updated**: 2025-02-07
+**Last Updated**: 2026-02-07
 **Status**: Phase 2 - Model Training
 
 ---
@@ -324,14 +324,14 @@ Week 4:
 
 | Date | Decision | Rationale |
 |------|----------|-----------|
-| 2025-02-05 | Use Qwen 3B | Good multilingual, available |
-| 2025-02-06 | Pivot to Qwen 0.5B | 3B GGUF produced gibberish |
-| 2025-02-07 | Pivot to Sarvam 2B | 0.5B LoRA corrupted model |
-| 2025-02-07 | Use IndicAlign Anudesh | Native Tamil instruction data (not Wiki_Chat) |
-| 2025-02-07 | Filter for Tamil only | Anudesh is only ~5% Tamil, need Unicode filtering |
-| 2025-02-07 | Conservative LoRA (r=8) | Previous r=32 too aggressive |
-| 2025-02-07 | 4-bit training | T4 GPU OOM with float16 Sarvam-2B |
-| 2025-02-07 | bf16 not fp16 | 4-bit model incompatible with fp16 scaler |
+| 2026-02-05 | Use Qwen 3B | Good multilingual, available |
+| 2026-02-06 | Pivot to Qwen 0.5B | 3B GGUF produced gibberish |
+| 2026-02-07 | Pivot to Sarvam 2B | 0.5B LoRA corrupted model |
+| 2026-02-07 | Use IndicAlign Anudesh | Native Tamil instruction data (not Wiki_Chat) |
+| 2026-02-07 | Filter for Tamil only | Anudesh is only ~5% Tamil, need Unicode filtering |
+| 2026-02-07 | Conservative LoRA (r=8) | Previous r=32 too aggressive |
+| 2026-02-07 | 4-bit training | T4 GPU OOM with float16 Sarvam-2B |
+| 2026-02-07 | bf16 not fp16 | 4-bit model incompatible with fp16 scaler |
 
 ---
 

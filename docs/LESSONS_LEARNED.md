@@ -5,7 +5,7 @@
 **Project:** VAZHI (வழி) - **V**oluntary **A**I with **Z**ero-cost **H**elpful **I**ntelligence
 **Vision:** An open-source Tamil LLM that runs **offline on mobile phones** - free, transparent, Tamil-first
 **Goal:** Deploy a Tamil-capable LLM on mobile devices (~250MB)
-**Timeline:** February 2025
+**Timeline:** February 2026
 **Status:** v0.6 Training in Progress (Sarvam-2B + IndicAlign)
 
 ---
@@ -228,7 +228,7 @@ Instead of compressing a large model, start with a smaller model that quantizes 
 
 ### 1. Started with Existing Tamil Models
 
-**Models We Actually Tested (2025-02-07):**
+**Models We Actually Tested (2026-02-07):**
 
 | Model | Size | Tamil Quality | Result |
 |-------|------|---------------|--------|
@@ -254,7 +254,7 @@ Sarvam-2B + fine-tuning: ~1.2GB → Current approach (v0.6)
 
 ### 2. Leveraged AI4Bharat Resources
 
-**What AI4Bharat Actually Provides (Tested 2025-02-07):**
+**What AI4Bharat Actually Provides (Tested 2026-02-07):**
 
 | Resource | Reality Check |
 |----------|---------------|
@@ -737,5 +737,5 @@ VAZHI may not be the first Tamil mobile LLM, but the lessons learned here will h
 
 ---
 
-*Document created: 2025-02-07*
-*Last updated: 2025-02-07*
+*Document created: 2026-02-07*
+*Last updated: 2026-02-07*

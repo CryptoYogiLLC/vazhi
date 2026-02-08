@@ -1,8 +1,8 @@
-# VAZHI (வழி) — AI Thozhan (AI தோழன்)
+# VAZHI (வழி) — AI Vazhi Thozhan (AI வழித் தோழன்)
 
-**Your Offline AI Companion for Tamil Nadu**
+**The Friend on Your AI Journey | உங்கள் AI பயணத்தின் தோழன்**
 
-*உங்கள் டிஜிட்டல் தோழன் — எப்போதும் உங்களுடன், இணையம் இல்லாமலும்*
+*Your Offline AI Companion for Tamil Nadu — எப்போதும் உங்களுடன், இணையம் இல்லாமலும்*
 
 ---
 
@@ -230,7 +230,7 @@ Your sponsorship helps:
 
 **Full form:** **V**oluntary **A**I with **Z**ero-cost **H**elpful **I**ntelligence
 
-**Tagline:** AI Thozhan (AI தோழன்) — Your AI Companion
+**Tagline:** AI Vazhi Thozhan (AI வழித் தோழன்) — The Friend on Your AI Journey
 
 ---
 
@@ -350,8 +350,8 @@ This is a community project. No corporation owns it. You own it.
 ---
 
 <p align="center">
-  <b>வழி காட்டும் AI — AI தோழன்</b><br>
-  <i>The open path to Tamil AI — Your AI Companion</i><br><br>
+  <b>வழி காட்டும் AI — AI வழித் தோழன்</b><br>
+  <i>The Friend on Your AI Journey</i><br><br>
   🌾 For every farmer who deserves to know their rights<br>
   👵 For every grandmother who shouldn't fall for scams<br>
   📚 For every student who wants to learn in Tamil<br>
@@ -361,4 +361,4 @@ This is a community project. No corporation owns it. You own it.
 
 ---
 
-*Last updated: February 2025*
+*Last updated: February 2026*
