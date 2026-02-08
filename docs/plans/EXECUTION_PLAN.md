@@ -92,17 +92,28 @@ Q: Scam message detection
 A: Correctly identifies "மோசடி" (fraud) ✅
 ```
 
-### Next Step: Fine-tune with VAZHI Govt Data
+### Next Step: Fine-tune with ALL VAZHI Data
 
-The base model works but has some factual gaps. Fine-tuning with government module data (452 items) to improve accuracy.
+**Key Insight:** Model size (1.63 GB) stays the same regardless of training data amount!
+So we train with EVERYTHING to maximize knowledge in a single download.
 
-**Notebook:** `notebooks/Vazhi_Gemma2B_Finetune_Govt.ipynb`
+**Notebook:** `notebooks/Vazhi_Gemma2B_Finetune_Full.ipynb`
+
+**Training Data:** 11,112 samples covering:
+- 🛡️ Scam/Security protection
+- 🏛️ Government schemes
+- 🏥 Healthcare
+- 📚 Education
+- ⚖️ Legal
+- 🪷 Culture (Thirukkural, Siddhars, Classical literature)
+- 🗣️ Dialects (Chennai, Madurai, Kongu)
+- 🚫 Guardrails ("I don't know" responses)
 
 **Key Differences from Failed Attempts:**
 - Starting from a WORKING model (not teaching Tamil)
 - Training in bf16 (NOT 4-bit!)
-- Very conservative LoRA (r=4)
-- Small focused dataset (452 items)
+- Conservative LoRA (r=8)
+- Full dataset = maximum knowledge in same size model
 
 ---
 
