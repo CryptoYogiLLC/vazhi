@@ -12,7 +12,8 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | v0.2 | 2025-02-06 | ❌ Failed | Added culture_v2 data, still hallucinating |
 | v0.3 | 2025-02-06 | ⏸️ Skipped | Heavy augmentation planned but root cause found |
 | v0.4 | 2025-02-06 | ❌ Failed | GGUF quantization produced gibberish output |
-| v0.5 | 2025-02-07 | 🔄 Training | SLM approach with Qwen2.5-0.5B + new Tamil data |
+| v0.5 | 2025-02-07 | ❌ Failed | SLM approach with Qwen2.5-0.5B - LoRA corrupted model |
+| v0.6 | 2025-02-07 | 🔄 Training | Sarvam-2B + IndicAlign Anudesh + VAZHI data |
 
 ---
 
@@ -396,6 +397,129 @@ A: இட体系系统的ரsystemsystemsystem... (gibberish)
 - Training notebook: `/notebooks/Vazhi_Qwen05B_Training.ipynb`
 - Data prep script: `/data/tamil_foundation/prepare_training_data.py`
 - Dataset: https://huggingface.co/datasets/CryptoYogi/vazhi-tamil-v05
+
+---
+
+## Pre-trained Tamil Model Evaluation
+
+**Date:** 2025-02-07
+**Purpose:** Find an existing Tamil model instead of training from scratch
+
+### Models Tested
+
+| Model | Size | Result | Notes |
+|-------|------|--------|-------|
+| Sarvam-1 (2B) | 2B | ❌ English responses | Base model, not instruction-tuned |
+| Sarvam-2b-v0.5 | 2B | ❌ English responses | Base model, wrong answers |
+| Gemma-2b-it-tamil | 2B | ❌ 401 Unauthorized | Model is private/doesn't exist |
+| Tamil-LLaMA 7B | 7B | ✅ Works! | Correct Tamil responses, but 3.9GB too large |
+
+### Key Findings
+
+1. **Tamil-LLaMA 7B is the only working model** - Produces correct Tamil, but 3.9GB far exceeds mobile target
+2. **Sarvam models need instruction-tuning** - They're base models, respond in English to Tamil queries
+3. **Gemma Tamil doesn't exist** - The model `abhinand/tamil-gemma-2b-instruct-v0.1` returns 401
+4. **AI4Bharat has no small Tamil instruction LLM** - Airavata is Hindi-only 7B model
+
+### AI4Bharat IndicAlign Dataset Analysis
+
+**Dataset:** `ai4bharat/indic-align`
+
+| Subset | Total Rows | Purpose | Recommendation |
+|--------|------------|---------|----------------|
+| **Anudesh** | 36,820 | Native instruction-response pairs | ✅ Best for instruction-tuning |
+| Dolly_T | ~15,000 | Translated Dolly dataset | Okay but not native |
+| Wiki_Chat | 100,000+ | Wikipedia-based conversations | ❌ Not instruction format |
+| Flan_Aligned | Large | Translated Flan | Good for diversity |
+
+**Anudesh Structure:**
+```python
+{
+  "interactions": [["user message", "assistant response"], ...],
+  "meta": {...}
+}
+```
+
+**Tamil Content in Anudesh:**
+- Total: 36,820 rows (all Indian languages)
+- Tamil after filtering: **1,966 rows** (~5.3%)
+- Filtering method: Unicode character detection (0x0B80-0x0BFF)
+
+### Decision
+
+> **Strategy:** Fine-tune Sarvam-2B with IndicAlign Anudesh (Tamil) + VAZHI domain data
+>
+> **Rationale:** Sarvam-2B already knows Tamil vocabulary (trained on 2T tokens of Indian languages).
+> It just needs instruction-tuning to follow commands. Use native Tamil instruction data from Anudesh.
+
+---
+
+## v0.6 Training (Current - Sarvam-2B Fine-tuning)
+
+**Date:** 2025-02-07
+**Status:** 🔄 Training in Progress
+**Base Model:** sarvamai/sarvam-2b-v0.5
+**Training Platform:** Kaggle (T4 GPU)
+
+### Why Sarvam-2B?
+
+| Factor | Value |
+|--------|-------|
+| Pre-training | 2T tokens of 10 Indian languages |
+| Tamil knowledge | Already has vocabulary + grammar |
+| What's missing | Instruction-following capability |
+| Q4_K_M size | ~1.2GB (mobile viable) |
+
+### Training Data
+
+| Source | Items | Purpose |
+|--------|-------|---------|
+| VAZHI dataset | 11,112 | Domain-specific (Thirukkural, govt, health) |
+| IndicAlign Anudesh (Tamil) | 1,966 | Native Tamil instruction pairs |
+| **Total** | **13,078** | Combined training set |
+
+### Training Configuration
+
+```python
+Base Model: sarvamai/sarvam-2b-v0.5
+Quantization: 4-bit (BitsAndBytes) - required for T4 16GB
+Precision: bf16 (not fp16 - caused errors with 4-bit)
+
+LoRA Settings:
+  rank: 8           # Conservative
+  alpha: 16
+  target_modules: [q_proj, v_proj]  # Only 2 modules
+  dropout: 0.05
+
+Training Settings:
+  learning_rate: 1e-5
+  epochs: 2
+  batch_size: 2
+  gradient_accumulation: 8
+  max_grad_norm: 0.3
+  max_length: 512
+  gradient_checkpointing: True
+```
+
+### Training Progress
+
+| Step | Loss | Notes |
+|------|------|-------|
+| 50 | 3.12 | Starting loss (normal) |
+| ... | ... | Training in progress |
+
+**Expected:** 1636 total steps, ~1.5 hours on T4
+
+### Memory Issues Encountered
+
+1. **Float16 loading OOM** - Sarvam-2B too large for T4 in float16
+2. **Solution:** 4-bit quantization with BitsAndBytes
+3. **fp16 training error** - BFloat16 model incompatible with fp16 training
+4. **Solution:** Changed to bf16=True in trainer config
+
+### Files Created
+- Training notebook: `/notebooks/Vazhi_Sarvam2B_Finetune.ipynb`
+- Evaluation notebook: `/notebooks/Vazhi_Pretrained_Tamil_Test.ipynb`
 
 ---
 

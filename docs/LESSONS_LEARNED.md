@@ -6,7 +6,7 @@
 **Vision:** An open-source Tamil LLM that runs **offline on mobile phones** - free, transparent, Tamil-first
 **Goal:** Deploy a Tamil-capable LLM on mobile devices (~250MB)
 **Timeline:** February 2025
-**Status:** v0.5 Training in Progress
+**Status:** v0.6 Training in Progress (Sarvam-2B + IndicAlign)
 
 ---
 
@@ -77,7 +77,7 @@ Building a Tamil LLM for mobile deployment proved far more challenging than anti
 | **Day 13** | Research | Surveyed Sarvam, Gemma Tamil, AI4Bharat | 💡 Existing solutions exist! |
 | **Day 14** | SLM Pivot | Decided on Qwen2.5-0.5B approach | ✅ New strategy |
 
-### Week 4: SLM Training (Failed)
+### Week 4: SLM Training (Failed) → Sarvam-2B Pivot
 
 | Day | Milestone | What We Did | Outcome |
 |-----|-----------|-------------|---------|
@@ -86,7 +86,9 @@ Building a Tamil LLM for mobile deployment proved far more challenging than anti
 | **Day 17** | Training Divergence | Loss exploded at step 1000 (0.53→2.57) | ❌ Training failed |
 | **Day 18** | Recovery Training | New run with lower LR + grad clipping | ❌ Loss stable but output garbage |
 | **Day 19** | Diagnosis | Tested checkpoints, found LoRA corrupted model | 💡 LoRA too aggressive for 0.5B |
-| **Day 20** | Pivot Decision | Decided to test Sarvam-1 and Gemma 2B Tamil | 🔄 Next steps |
+| **Day 20** | Model Testing | Tested Sarvam-1, Sarvam-2B, Gemma Tamil, Tamil-LLaMA | 💡 Only Tamil-LLaMA works |
+| **Day 21** | IndicAlign Analysis | Explored AI4Bharat datasets, found Anudesh | 💡 ~1,966 Tamil items available |
+| **Day 22** | v0.6 Training | Sarvam-2B + Anudesh Tamil + VAZHI data | 🔄 Training in progress |
 
 ---
 
@@ -226,51 +228,64 @@ Instead of compressing a large model, start with a smaller model that quantizes 
 
 ### 1. Started with Existing Tamil Models
 
-**Models We Discovered Too Late:**
+**Models We Actually Tested (2025-02-07):**
 
-| Model | Size | Tamil Quality | Source |
+| Model | Size | Tamil Quality | Result |
 |-------|------|---------------|--------|
-| Sarvam-1 | 2B | Excellent | sarvamai/sarvam-1 |
-| Sarvam-1 GGUF | 1.17GB (IQ3_M) | Good | Already quantized! |
-| Gemma 2B Tamil | 2B | Good | abhinand/tamil-gemma-2b-instruct-v0.1 |
-| Tamil-LLaMA | 7B | Excellent | Too large for mobile |
+| Sarvam-1 | 2B | ❌ English responses | Base model, not instruction-tuned |
+| Sarvam-2b-v0.5 | 2B | ❌ English responses | Base model, needs fine-tuning |
+| Gemma 2B Tamil | 2B | ❌ 401 Unauthorized | Model doesn't exist/is private |
+| Tamil-LLaMA 7B | 7B | ✅ Works! | 3.9GB - too large for mobile |
 
-**What We Should Have Done:**
+**Reality Check:**
+- Sarvam models are **base models** - they respond in English, not Tamil
+- Gemma Tamil model `abhinand/tamil-gemma-2b-instruct-v0.1` returns 401 - doesn't exist
+- Only Tamil-LLaMA 7B actually works, but at 3.9GB it's far too large
+
+**What Actually Works:**
 ```
-Day 1: Test Sarvam-1 IQ3_M (1.17GB) for Tamil quality
-Day 2: If good, try further compression or accept 1.17GB
-Day 3: Only if Sarvam fails, train custom model
+Tamil-LLaMA 7B Q4: 3.9GB → Works but too large
+Sarvam-2B + fine-tuning: ~1.2GB → Current approach (v0.6)
 ```
 
-**Lesson #4:** Always survey existing solutions before building from scratch. The Tamil LLM space is more mature than we assumed.
+**Lesson #4:** Don't assume models work without testing. "Tamil-capable" often means base model that needs instruction-tuning, not a ready-to-use assistant.
 
 ---
 
 ### 2. Leveraged AI4Bharat Resources
 
-**Resources We Didn't Use:**
+**What AI4Bharat Actually Provides (Tested 2025-02-07):**
 
-| Resource | What It Offers | How It Would Have Helped |
-|----------|----------------|-------------------------|
-| **Sangraha** | 251M Tamil tokens of clean text | Pre-training data for Tamil fluency |
-| **IndicAlign** | 74.7M instruction pairs | Massive instruction-tuning dataset |
-| **IndicTrans2** | Translation models | Could augment training data |
-| **Indic-Gemma** | Indian language Gemma variants | Pre-trained for Indian languages |
+| Resource | Reality Check |
+|----------|---------------|
+| **IndicAlign** | Multiple subsets, NOT a single Tamil dataset |
+| **Anudesh subset** | 36,820 rows total, only ~1,966 are Tamil (~5%) |
+| **Airavata** | Hindi-only 7B model - NOT for Tamil |
+| **Sangraha** | Pretraining corpus, not instruction data |
 
-**What We Should Have Done:**
+**IndicAlign Subsets We Explored:**
+
+| Subset | Total Rows | Tamil Items | Best For |
+|--------|------------|-------------|----------|
+| Anudesh | 36,820 | ~1,966 (5%) | ✅ Native instructions |
+| Wiki_Chat | 100,000+ | Unknown | ❌ Wrong format (not instructions) |
+| Dolly_T | ~15,000 | Unknown | Translated, not native |
+
+**Correct Usage:**
 ```python
-# Instead of generating 11K samples manually:
-from datasets import load_dataset
+# Load Anudesh subset specifically
+indic_align = load_dataset("ai4bharat/indic-align", "Anudesh", split="train")
 
-# Use IndicAlign's Tamil subset
-indic_align = load_dataset("ai4bharat/IndicAlign", "tam")
-# 74.7M instruction pairs vs our 11K!
+# Filter for Tamil using Unicode detection
+def is_tamil_text(text):
+    tamil_chars = sum(1 for c in text if 0x0B80 <= ord(c) <= 0x0BFF)
+    return tamil_chars / len(text) > 0.3 if text else False
 
-# Supplement with Sangraha for fluency
-sangraha = load_dataset("ai4bharat/sangraha", "tam")
+tamil_items = indic_align.filter(lambda x: is_tamil_text(x["interactions"][0][0]))
+# Result: ~1,966 Tamil items from 36,820 total
 ```
 
-**Lesson #5:** Don't reinvent the wheel. AI4Bharat has spent years curating Indian language data. Use it.
+**Lesson #5:** AI4Bharat resources are valuable but require careful filtering. "74.7M instruction pairs" is across ALL Indian languages - Tamil is only ~5% of IndicAlign Anudesh.
 
 ---
 
@@ -479,19 +494,22 @@ For conversational content:
 | 8 | Low loss ≠ Working model | v0.5 had loss 0.5 but output garbage |
 | 9 | LoRA rank must match model size | r=32 too aggressive for 0.5B model |
 | 10 | 4-bit training is risky for small models | Instability compounds in fewer params |
+| 11 | Test models before assuming they work | Sarvam/Gemma Tamil didn't work as expected |
+| 12 | Filter multilingual datasets for target language | IndicAlign Anudesh is only ~5% Tamil |
+| 13 | Base models ≠ Instruction-tuned models | Sarvam-2B responds in English until fine-tuned |
 
 ---
 
 ## What's Next
 
-### Immediate (v0.5)
-- Complete Qwen2.5-0.5B training
-- Test Q4_K_M quantization
+### Immediate (v0.6 - Current)
+- Complete Sarvam-2B fine-tuning with IndicAlign Anudesh + VAZHI data
+- Test GGUF conversion (Q4_K_M target ~1.2GB)
 - Validate Tamil output quality
 
-### If v0.5 Fails
-1. Try Sarvam-1 IQ3_M (1.17GB) - accept larger size
-2. Attempt Minitron compression on Sarvam
+### If v0.6 Fails
+1. Try Tamil-LLaMA 7B Q2 (~2GB) - accept larger size for tablets
+2. Attempt Minitron compression on trained Sarvam-2B
 3. Explore vocabulary pruning
 
 ### Future Considerations

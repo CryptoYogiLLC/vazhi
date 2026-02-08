@@ -50,11 +50,13 @@ VAZHI aims to be an offline Tamil AI assistant for mobile. After multiple traini
 
 ### External Resources (Available)
 
-| Resource | Size | Use Case |
-|----------|------|----------|
-| AI4Bharat IndicAlign | 74.7M pairs | Instruction-tuning |
-| AI4Bharat Sangraha | 251M tokens | Tamil fluency |
-| Our VAZHI data | 11,696 items | Domain-specific |
+| Resource | Size | Tamil Content | Use Case |
+|----------|------|---------------|----------|
+| AI4Bharat IndicAlign (Anudesh) | 36,820 total | ~1,966 Tamil (~5%) | Instruction-tuning |
+| AI4Bharat Sangraha | 251M tokens | Significant Tamil | Tamil fluency (pretraining) |
+| Our VAZHI data | 11,112 items | ~85% Tamil | Domain-specific |
+
+**Note:** IndicAlign contains multiple Indian languages. Anudesh subset filtered for Tamil yields ~1,966 items using Unicode character detection.
 
 ---
 
@@ -67,7 +69,7 @@ VAZHI aims to be an offline Tamil AI assistant for mobile. After multiple traini
 | v0.1-v0.2 | Qwen 3B | LoRA fine-tune | ❌ Hallucination |
 | v0.4 | Qwen 3B | Improved data | ❌ GGUF gibberish |
 | v0.5 | Qwen 0.5B | SLM approach | ❌ LoRA corrupted model |
-| **v0.6** | **Sarvam 2B** | **IndicAlign + VAZHI** | **🔄 Pending** |
+| **v0.6** | **Sarvam 2B** | **IndicAlign Anudesh (Tamil) + VAZHI** | **🔄 In Progress** |
 
 ### Current Strategy: Sarvam-2B Fine-tuning
 
@@ -82,8 +84,9 @@ VAZHI aims to be an offline Tamil AI assistant for mobile. After multiple traini
 ```yaml
 Base Model: sarvamai/sarvam-2b-v0.5
 Training Data:
-  - IndicAlign Tamil subset (up to 50K samples)
-  - VAZHI domain data (11,696 samples)
+  - IndicAlign Anudesh Tamil: 1,966 samples (filtered from 36,820)
+  - VAZHI domain data: 11,112 samples
+  - Total: 13,078 samples
 
 LoRA Settings:
   rank: 8           # Conservative (not 32)
@@ -97,7 +100,8 @@ Training Settings:
   batch_size: 2
   gradient_accumulation: 8
   max_grad_norm: 0.3       # Gradient clipping
-  precision: float16       # Not 4-bit
+  precision: bf16          # BFloat16 (4-bit base for memory)
+  max_length: 512
 ```
 
 **Notebook**: `notebooks/Vazhi_Sarvam2B_Finetune.ipynb`
@@ -323,8 +327,11 @@ Week 4:
 | 2025-02-05 | Use Qwen 3B | Good multilingual, available |
 | 2025-02-06 | Pivot to Qwen 0.5B | 3B GGUF produced gibberish |
 | 2025-02-07 | Pivot to Sarvam 2B | 0.5B LoRA corrupted model |
-| 2025-02-07 | Use IndicAlign data | Need more instruction data |
+| 2025-02-07 | Use IndicAlign Anudesh | Native Tamil instruction data (not Wiki_Chat) |
+| 2025-02-07 | Filter for Tamil only | Anudesh is only ~5% Tamil, need Unicode filtering |
 | 2025-02-07 | Conservative LoRA (r=8) | Previous r=32 too aggressive |
+| 2025-02-07 | 4-bit training | T4 GPU OOM with float16 Sarvam-2B |
+| 2025-02-07 | bf16 not fp16 | 4-bit model incompatible with fp16 scaler |
 
 ---
 
