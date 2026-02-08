@@ -13,7 +13,7 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | v0.3 | 2026-02-06 | ⏸️ Skipped | Heavy augmentation planned but root cause found |
 | v0.4 | 2026-02-06 | ❌ Failed | GGUF quantization produced gibberish output |
 | v0.5 | 2026-02-07 | ❌ Failed | SLM approach with Qwen2.5-0.5B - LoRA corrupted model |
-| v0.6 | 2026-02-07 | 🔄 Training | Sarvam-2B + IndicAlign Anudesh + VAZHI data |
+| v0.6 | 2026-02-07 | ❌ Failed | Sarvam-2B + IndicAlign Anudesh - 4-bit training corrupted model |
 
 ---
 
@@ -505,10 +505,65 @@ Training Settings:
 
 | Step | Loss | Notes |
 |------|------|-------|
-| 50 | 3.12 | Starting loss (normal) |
-| ... | ... | Training in progress |
+| 50 | 3.12 | Starting loss |
+| 200 | 3.02 | Started decreasing |
+| 350 | 2.78 | Good progress |
+| 500 | 2.61 | Converging |
+| 800 | 2.53 | Stable |
+| 1200 | 2.57 | Stable |
+| 1450 | 2.49 | Final loss |
+| 1636 | ~2.5 | **Training complete** |
 
-**Expected:** 1636 total steps, ~1.5 hours on T4
+**Duration:** ~1.5 hours on Kaggle T4
+
+### Test Results: ❌ COMPLETE FAILURE
+
+Despite stable loss (~2.5), the model output was complete garbage:
+
+```
+Q: வணக்கம், நீங்கள் யார்?
+A: H celebrated once (' '" - ((- { like - * - Or / (- What States peace...
+
+Q: திருக்குறளின் முதல் குறள் என்ன?
+A: கு ( (- - ('"(- / celebrated ' * {< celebrated November celebrated...
+
+Q: தமிழ்நாட்டின் தலைநகரம் எது?
+A: க celebrated ( ' - ('(' ' (- William celebrated - November celebrated...
+```
+
+**Observed Issues:**
+1. Random English words repeated ("celebrated" appears dozens of times)
+2. Mixed scripts from multiple Indian languages (Punjabi ਹਾਂ, Odia ନ୍ତି, Gujarati ઓસ્ટ્રે)
+3. Random punctuation and symbols
+4. No coherent Tamil whatsoever
+5. Pattern similar to v0.5 Qwen failure
+
+### Root Cause Analysis
+
+| Factor | Assessment |
+|--------|------------|
+| 4-bit training | ❌ **Primary cause** - quantization during training corrupts weights |
+| Loss stability | Misleading - low loss ≠ working model |
+| LoRA settings | r=8 was conservative but still failed with 4-bit |
+| Data quality | Not the issue - same data, different failure mode than v0.1-v0.4 |
+
+**Conclusion:** 4-bit quantized training is fundamentally unstable for instruction-tuning. The model learns to minimize loss but the quantized weights cannot represent coherent language patterns.
+
+### Lessons Learned from v0.6
+
+1. **4-bit training doesn't work** - Both Qwen 0.5B and Sarvam 2B failed with 4-bit
+2. **Loss is not a reliable metric** - Can have perfect loss but garbage output
+3. **Memory constraints force bad tradeoffs** - T4 16GB insufficient for float16 training of 2B models
+4. **Need different approach** - Either use pre-quantized models or train on larger GPU
+
+### Decision: Pivot to Tamil-LLaMA Extreme Quantization
+
+Since training small models has failed repeatedly, try the opposite approach:
+- Take a **working** model (Tamil-LLaMA 7B)
+- Apply **extreme quantization** (IQ2_XXS ~1.5GB, IQ1_M ~1.1GB)
+- Test if Tamil quality survives
+
+**Notebook:** `notebooks/Vazhi_TamilLLaMA_Quantization.ipynb`
 
 ### Memory Issues Encountered
 

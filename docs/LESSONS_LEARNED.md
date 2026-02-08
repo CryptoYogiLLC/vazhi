@@ -497,6 +497,8 @@ For conversational content:
 | 11 | Test models before assuming they work | Sarvam/Gemma Tamil didn't work as expected |
 | 12 | Filter multilingual datasets for target language | IndicAlign Anudesh is only ~5% Tamil |
 | 13 | Base models ≠ Instruction-tuned models | Sarvam-2B responds in English until fine-tuned |
+| 14 | 4-bit training corrupts models | v0.5 Qwen and v0.6 Sarvam both failed with 4-bit |
+| 15 | Consider extreme quantization of working models | Better to compress a working 7B than train a broken 2B |
 
 ---
 
