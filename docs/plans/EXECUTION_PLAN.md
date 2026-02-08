@@ -2,17 +2,19 @@
 
 > **Goal**: Deploy a Tamil AI assistant on mobile devices (~1-1.5GB)
 
-**Last Updated**: 2026-02-07
-**Status**: Phase 2 - Model Training
+**Last Updated**: 2026-02-08
+**Status**: Phase 2 Complete - Model Selected ✅
 
 ---
 
 ## Executive Summary
 
-VAZHI aims to be an offline Tamil AI assistant for mobile. After multiple training attempts and model evaluations, we've identified the optimal path:
+VAZHI aims to be an offline Tamil AI assistant for mobile. After multiple training attempts failed, we discovered that using a pre-trained Tamil model works better than training our own.
 
-**Primary Strategy**: Fine-tune Sarvam-2B with IndicAlign + VAZHI data
-**Fallback Strategy**: Use Tamil-LLaMA 7B (3.9GB) for high-end devices
+**Selected Model**: Gemma-2B Tamil Q4_K_M (1.63 GB)
+- Source: `RichardErkhov/abhinand_-_gemma-2b-it-tamil-v0.1-alpha-gguf`
+- Produces coherent Tamil, basic facts correct
+- Ready for mobile integration - no training needed!
 
 ---
 
@@ -60,7 +62,7 @@ VAZHI aims to be an offline Tamil AI assistant for mobile. After multiple traini
 
 ---
 
-## Phase 2: Model Training 🔄
+## Phase 2: Model Training ✅ Complete
 
 ### Attempt History
 
@@ -69,51 +71,38 @@ VAZHI aims to be an offline Tamil AI assistant for mobile. After multiple traini
 | v0.1-v0.2 | Qwen 3B | LoRA fine-tune | ❌ Hallucination |
 | v0.4 | Qwen 3B | Improved data | ❌ GGUF gibberish |
 | v0.5 | Qwen 0.5B | SLM approach | ❌ LoRA corrupted model |
-| **v0.6** | **Sarvam 2B** | **IndicAlign Anudesh (Tamil) + VAZHI** | **🔄 In Progress** |
+| v0.6 | Sarvam 2B | IndicAlign + VAZHI | ❌ 4-bit training corrupted |
+| **v0.7** | **Gemma-2B Tamil** | **Pre-trained model** | **✅ Works!** |
 
-### Current Strategy: Sarvam-2B Fine-tuning
+### Selected Model: Gemma-2B Tamil Q4_K_M
 
-**Why Sarvam-2B?**
-- Pre-trained on 2T tokens of 10 Indian languages (including Tamil)
-- Already understands Tamil vocabulary and grammar
-- Just needs instruction-tuning (not language learning)
-- Q4_K_M size: ~1.2GB (mobile viable)
+After all training attempts failed, we tested pre-trained Tamil models and found:
 
-**Training Configuration (Conservative)**
+**Winner:** `RichardErkhov/abhinand_-_gemma-2b-it-tamil-v0.1-alpha-gguf`
+- File: `gemma-2b-it-tamil-v0.1-alpha.Q4_K_M.gguf`
+- Size: **1.63 GB** (fits mobile target!)
+- Quality: Coherent Tamil, basic facts correct
 
-```yaml
-Base Model: sarvamai/sarvam-2b-v0.5
-Training Data:
-  - IndicAlign Anudesh Tamil: 1,966 samples (filtered from 36,820)
-  - VAZHI domain data: 11,112 samples
-  - Total: 13,078 samples
+**Test Results:**
+```
+Q: தமிழ்நாட்டின் தலைநகரம் எது?
+A: தமிழ்நாட்டின் தலைநகரம் சென்னை. ✅
 
-LoRA Settings:
-  rank: 8           # Conservative (not 32)
-  alpha: 16
-  target_modules: [q_proj, v_proj]  # Only 2 modules
-  dropout: 0.05
-
-Training Settings:
-  learning_rate: 1e-5      # Very low
-  epochs: 2
-  batch_size: 2
-  gradient_accumulation: 8
-  max_grad_norm: 0.3       # Gradient clipping
-  precision: bf16          # BFloat16 (4-bit base for memory)
-  max_length: 512
+Q: Scam message detection
+A: Correctly identifies "மோசடி" (fraud) ✅
 ```
 
-**Notebook**: `notebooks/Vazhi_Sarvam2B_Finetune.ipynb`
+### Next Step: Fine-tune with VAZHI Govt Data
 
-### Fallback: Tamil-LLaMA 7B
+The base model works but has some factual gaps. Fine-tuning with government module data (452 items) to improve accuracy.
 
-If Sarvam-2B training fails or GGUF quality is poor:
+**Notebook:** `notebooks/Vazhi_Gemma2B_Finetune_Govt.ipynb`
 
-| Option | Size | Quality | Target Devices |
-|--------|------|---------|----------------|
-| Tamil-LLaMA 7B Q4 | 3.9GB | ✅ Proven | Tablets, high-end phones |
-| Tamil-LLaMA 7B Q2 | ~2GB | ⚠️ Degraded | Mid-range phones |
+**Key Differences from Failed Attempts:**
+- Starting from a WORKING model (not teaching Tamil)
+- Training in bf16 (NOT 4-bit!)
+- Very conservative LoRA (r=4)
+- Small focused dataset (452 items)
 
 ---
 
@@ -332,15 +321,19 @@ Week 4:
 | 2026-02-07 | Conservative LoRA (r=8) | Previous r=32 too aggressive |
 | 2026-02-07 | 4-bit training | T4 GPU OOM with float16 Sarvam-2B |
 | 2026-02-07 | bf16 not fp16 | 4-bit model incompatible with fp16 scaler |
+| 2026-02-08 | Use pre-trained Gemma-2B Tamil | All training attempts failed, pre-trained works |
+| 2026-02-08 | Q4_K_M is minimum viable quant | Q3 and below degrade Tamil quality |
+| 2026-02-08 | Fine-tune govt module only | Test if fine-tuning adds domain knowledge |
 
 ---
 
 ## Next Actions
 
-1. **Immediate**: Run Sarvam-2B fine-tuning notebook in Kaggle
-2. **After Training**: Test GGUF quality with Tamil questions
-3. **If Success**: Begin mobile integration
-4. **If Failure**: Evaluate Tamil-LLaMA 7B for tablets
+1. **Immediate**: Fine-tune Gemma-2B Tamil with govt data (452 items)
+2. **After Fine-tuning**: Test if domain knowledge improved
+3. **If Success**: Fine-tune with other VAZHI modules
+4. **If Failure**: Use base Gemma-2B Tamil as-is (still works!)
+5. **Then**: Begin mobile app integration with working model
 
 ---
 

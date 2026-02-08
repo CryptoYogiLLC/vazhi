@@ -499,6 +499,9 @@ For conversational content:
 | 13 | Base models ≠ Instruction-tuned models | Sarvam-2B responds in English until fine-tuned |
 | 14 | 4-bit training corrupts models | v0.5 Qwen and v0.6 Sarvam both failed with 4-bit |
 | 15 | Consider extreme quantization of working models | Better to compress a working 7B than train a broken 2B |
+| 16 | Pre-trained Tamil models exist and work | Gemma-2B Tamil Q4_K_M (1.63GB) produces coherent Tamil |
+| 17 | Q4_K_M is minimum viable quantization | Q3 and below cause visible quality degradation |
+| 18 | Fine-tune working models, don't train from scratch | Add domain knowledge to models that already know the language |
 
 ---
 

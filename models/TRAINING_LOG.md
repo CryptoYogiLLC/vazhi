@@ -556,14 +556,84 @@ A: க celebrated ( ' - ('(' ' (- William celebrated - November celebrated...
 3. **Memory constraints force bad tradeoffs** - T4 16GB insufficient for float16 training of 2B models
 4. **Need different approach** - Either use pre-quantized models or train on larger GPU
 
-### Decision: Pivot to Tamil-LLaMA Extreme Quantization
+### Decision: Pivot to Pre-trained Tamil Model Quantization Testing
 
 Since training small models has failed repeatedly, try the opposite approach:
-- Take a **working** model (Tamil-LLaMA 7B)
-- Apply **extreme quantization** (IQ2_XXS ~1.5GB, IQ1_M ~1.1GB)
-- Test if Tamil quality survives
+- Find **working** pre-trained Tamil models
+- Test various quantization levels
+- Find the smallest model that produces coherent Tamil
 
 **Notebook:** `notebooks/Vazhi_TamilLLaMA_Quantization.ipynb`
+
+---
+
+## Pre-trained Model Quantization Testing
+
+**Date:** 2026-02-08
+**Status:** ✅ Complete
+**Platform:** Kaggle
+
+### Models Tested
+
+| Model | Quant | Size | Chennai Test | Tamil Quality | Viable? |
+|-------|-------|------|--------------|---------------|---------|
+| Tamil-LLaMA 7B | Q4_K_M | 4.18 GB | ✅ சென்னை | ✅✅ Excellent | Too large |
+| **Gemma-2B Tamil** | **Q4_K_M** | **1.63 GB** | **✅ சென்னை** | **✅ Good** | **✅ WINNER** |
+| Gemma-2B Tamil | Q3_K_M | 1.38 GB | ❌ சென்பா | ⚠️ Degraded | No |
+| Gemma-2B Tamil | Q2_K | 1.16 GB | ❌ Repeats | ❌ Broken | No |
+| Qwen3-1.7B Tamil | Q4_K_M | 1.11 GB | ❌ Wrong | ⚠️ Inaccurate | Marginal |
+| Llama3.2-Tamil-3B | Q2_K | 1.49 GB | ❌ Garbage | ❌ Broken | No |
+
+### Detailed Test Results
+
+**Tamil-LLaMA 7B Q4_K_M (4.18 GB)** - Baseline
+```
+Q: வணக்கம், நீங்கள் யார்?
+A: இந்தக் கோரிக்கையின்படி, பயனரின் அடையாளத்தை அடையாளம் காண்பதே குறிக்கோள்.
+
+Q: தமிழ்நாட்டின் தலைநகரம் எது?
+A: தமிழ்நாட்டின் தலைநகரம் சென்னையில்.
+```
+✅ Coherent Tamil, correct answers, but 4.18 GB too large for mobile target.
+
+**Gemma-2B Tamil Q4_K_M (1.63 GB)** - SELECTED
+```
+Q: வணக்கம், நீங்கள் யார்?
+A: எனது பெயர் ஸ்பீஸ், எனது கட்டுப்பாடுகள் உங்கள் பார்வையில் தோன்றுகின்றன.
+
+Q: தமிழ்நாட்டின் தலைநகரம் எது?
+A: தமிழ்நாட்டின் தலைநகரம் சென்னை.
+```
+✅ Coherent Tamil, Chennai correct, fits mobile target (1.63 GB).
+
+**Gemma-2B Tamil Q3_K_M (1.38 GB)** - Degraded
+```
+Q: தமிழ்நாட்டின் தலைநகரம் எது?
+A: தமிழ்நாட்டின் தலைநகரம் சென்பா.
+```
+❌ "சென்பா" instead of "சென்னை" - quantization damage visible.
+
+**Qwen3-1.7B Tamil Q4_K_M (1.11 GB)** - Inaccurate
+```
+Q: தமிழ்நாட்டின் தலைநகரம் எது?
+A: தமிழ்நாட்டின் தலைநகரம் நகராட்சி நகரத்தில் அமைந்துள்ளது...
+```
+❌ Wrong answer, vague response.
+
+### Key Findings
+
+1. **Working pre-trained models beat failed training** - Gemma-2B Tamil at 1.63 GB outperforms all our training attempts
+2. **Q4_K_M is the floor** - Going below Q4 causes visible quality degradation
+3. **Model architecture matters** - Gemma handles quantization better than Llama3.2 for Tamil
+4. **No training needed** - Just download and use the pre-quantized model
+
+### Selected Model
+
+**Gemma-2B Tamil Q4_K_M**
+- Source: `RichardErkhov/abhinand_-_gemma-2b-it-tamil-v0.1-alpha-gguf`
+- File: `gemma-2b-it-tamil-v0.1-alpha.Q4_K_M.gguf`
+- Size: 1.63 GB
+- Quality: Good coherent Tamil, basic facts correct
 
 ### Memory Issues Encountered
 
