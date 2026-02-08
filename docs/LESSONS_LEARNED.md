@@ -4,9 +4,10 @@
 
 **Project:** VAZHI (வழி) - **V**oluntary **A**I with **Z**ero-cost **H**elpful **I**ntelligence
 **Vision:** An open-source Tamil LLM that runs **offline on mobile phones** - free, transparent, Tamil-first
-**Goal:** Deploy a Tamil-capable LLM on mobile devices (~250MB)
+**Goal:** Deploy a Tamil-capable LLM on mobile devices (~250-300MB target)
+**Current MVP:** 1.6GB Gemma-2B Tamil (interim solution while pursuing smaller model)
 **Timeline:** February 2026
-**Status:** v0.6 Training in Progress (Sarvam-2B + IndicAlign)
+**Status:** v0.8 Hybrid Architecture Implemented
 
 ---
 
@@ -502,26 +503,91 @@ For conversational content:
 | 16 | Pre-trained Tamil models exist and work | Gemma-2B Tamil Q4_K_M (1.63GB) produces coherent Tamil |
 | 17 | Q4_K_M is minimum viable quantization | Q3 and below cause visible quality degradation |
 | 18 | Fine-tune working models, don't train from scratch | Add domain knowledge to models that already know the language |
+| 19 | Don't wait for perfect AI - provide value immediately | Hybrid architecture unblocked the entire project |
+| 20 | Separate factual data from AI interpretation | SQLite for facts, LLM for explanations |
+| 21 | Progressive enhancement > feature gating | Users can try app before committing to model download |
+
+---
+
+## The Hybrid Architecture Pivot (v0.8)
+
+### The Key Insight
+
+While struggling with model training and quantization, we realized a fundamental truth:
+
+> **Not every query needs AI. Many queries just need accurate data.**
+
+For example:
+- "குறள் 1 என்ன?" → Just needs database lookup
+- "Emergency number?" → Just needs a phone number
+- "Is this a scam?" → Needs AI analysis
+
+### The Solution: Hybrid Retrieval Architecture
+
+Instead of waiting for a perfect AI model, we built an architecture that provides **immediate value** through deterministic lookups:
+
+```
+User Query → Query Router → [Deterministic | Hybrid | AI] → Response
+```
+
+| Query Type | Route | AI Needed |
+|------------|-------|-----------|
+| Exact lookup (குறள் 1) | SQLite | No |
+| Explanation request | LLM | Yes |
+| Hybrid (குறள் 1 meaning) | SQLite + LLM | Optional |
+
+### Benefits
+
+1. **Immediate Value**: App works from first launch (no model download)
+2. **Zero Hallucination**: Factual data (verses, phone numbers) always accurate
+3. **Smaller Initial Download**: ~50MB app vs 1.6GB with model
+4. **Higher Install Rates**: Users can try before committing to download
+5. **Progressive Enhancement**: Better experience with optional AI model
+
+### Implementation
+
+Built a complete hybrid system:
+- **Query Router**: Pattern-based classification (no ML needed)
+- **Retrieval Services**: Domain-specific SQLite lookups
+- **Hybrid Chat Provider**: Manages dual-path responses
+- **Knowledge Result Cards**: Rich UI for structured data
+- **Model Download Service**: Pause/resume, network detection, storage validation
+
+### Lesson #19: Don't wait for perfect AI - provide value immediately
+
+The hybrid architecture was a game-changer. Instead of blocking on model training, we could:
+- Ship a useful app today
+- Gather user feedback on what queries are most common
+- Optimize AI training based on real usage data
 
 ---
 
 ## What's Next
 
-### Immediate (v0.6 - Current)
-- Complete Sarvam-2B fine-tuning with IndicAlign Anudesh + VAZHI data
-- Test GGUF conversion (Q4_K_M target ~1.2GB)
-- Validate Tamil output quality
+### Immediate (v0.8 - Current)
+- Populate full Thirukkural database (1,330 verses)
+- Complete government schemes database
+- Integrate MVP model: Gemma-2B Tamil (1.6GB)
 
-### If v0.6 Fails
-1. Try Tamil-LLaMA 7B Q2 (~2GB) - accept larger size for tablets
-2. Attempt Minitron compression on trained Sarvam-2B
-3. Explore vocabulary pruning
+### Short-term (v0.9)
+- FTS5 Tamil search optimization
+- Expert directory feature
+- Pursue target model: ~250-300MB SLM
+
+### Target Model Strategy (250-300MB)
+The 1.6GB Gemma-2B is an interim MVP solution. Our goal remains a ~250-300MB model for budget devices.
+
+Approaches under consideration:
+1. **Qwen2.5-0.5B fine-tuning**: ~250MB Q4 target
+2. **Minitron compression**: Compress Gemma-2B → 1B → ~500MB
+3. **Vocabulary pruning**: Remove non-Tamil tokens
+4. **Tamil-optimized tokenizer**: Reduce token/char ratio
+5. **BitNet (1.58-bit)**: Extreme compression research
 
 ### Future Considerations
 - Custom Tamil-optimized tokenizer
 - Distillation from larger Tamil models
-- Hybrid architecture (LLM + lookup tables)
-- Investigate BitNet (1.58-bit) for extreme compression
+- Multi-dialect support
 
 ---
 
@@ -743,4 +809,4 @@ VAZHI may not be the first Tamil mobile LLM, but the lessons learned here will h
 ---
 
 *Document created: 2026-02-07*
-*Last updated: 2026-02-07*
+*Last updated: 2026-02-08*

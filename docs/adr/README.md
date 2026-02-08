@@ -21,6 +21,7 @@ An Architecture Decision Record captures an important architectural decision mad
 | [006](006-voice-integration-strategy.md) | Voice Integration Strategy | Accepted | Native platform STT/TTS for voice input/output |
 | [007](007-free-donations-monetization.md) | Free + Donations Monetization | Accepted | 100% free app with optional donation support |
 | [008](008-app-store-distribution.md) | App Store Distribution | Accepted | Google Play + Apple App Store + F-Droid |
+| [009](009-hybrid-retrieval-architecture.md) | Hybrid Retrieval Architecture | Accepted | Deterministic SQLite + AI paths for zero hallucination |
 
 ## Key Decisions Summary
 
@@ -31,7 +32,8 @@ An Architecture Decision Record captures an important architectural decision mad
 
 ### Technology Choices
 - **Framework**: Flutter (Dart)
-- **LLM Inference**: llama.cpp (GGUF format) for offline, HuggingFace for cloud
+- **Architecture**: Hybrid Retrieval (Deterministic SQLite + Optional AI)
+- **LLM Inference**: llamadart (GGUF format) for offline, HuggingFace for cloud
 - **Voice**: Native platform APIs (speech_to_text, flutter_tts)
 - **Backend**: HuggingFace Spaces with Gradio
 

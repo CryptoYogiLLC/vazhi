@@ -162,25 +162,43 @@ Download only what you need. Each pack is carefully curated with verified inform
 
 ## Current Status | தற்போதைய நிலை
 
-**Version:** v0.6 (Training in Progress)
+**Version:** v0.8 (Hybrid Architecture)
+
+### Key Innovation: Hybrid Retrieval
+
+VAZHI now uses a **Hybrid Retrieval Architecture** that works immediately after installation:
+
+| Feature | Without Model | With Model |
+|---------|---------------|------------|
+| Thirukkural lookup | Instant | Instant + AI explanation |
+| Emergency numbers | Instant | Instant |
+| Scheme details | Instant | Instant + advice |
+| Scam detection | Basic patterns | Full AI analysis |
+| Conversations | Limited | Full capability |
 
 ### Technical Details
 
 | Component | Status |
 |-----------|--------|
-| AI Model | Sarvam-2B fine-tuned with Tamil instruction data |
-| Training Data | 13,078 Tamil instruction pairs |
-| Target Size | ~1-1.5 GB (fits on most smartphones) |
-| Mobile App | Flutter-based, iOS & Android |
+| Hybrid Architecture | Deterministic SQLite + Optional AI |
+| AI Model (MVP) | Gemma-2B Tamil (1.6GB GGUF) |
+| AI Model (Target) | ~250-300MB (SLM in development) |
+| Deterministic Data | ~2,500 records (~2MB) |
+| Mobile App | Flutter + Riverpod |
 
 ### Progress
 
 - [x] Training data: 13,078 Tamil Q&A pairs
 - [x] Knowledge packs: 6 domains created
-- [x] Mobile app: Basic UI ready
-- [ ] Model training: v0.6 in progress
-- [ ] GGUF quantization: Pending
-- [ ] App store release: Coming soon
+- [x] Mobile app: Full UI with hybrid support
+- [x] Hybrid architecture: Query Router + Retrieval Services
+- [x] Deterministic retrieval: Thirukkural, Schemes, Emergency, Health
+- [x] Model download: Pause/resume, network detection, storage validation
+- [x] Voice input/output: Tamil STT/TTS
+- [x] Feedback system: In-app with WhatsApp integration
+- [ ] AI model training: In progress (v0.7)
+- [ ] Full database population: Pending
+- [ ] App store release: Planned
 
 ---
 
@@ -282,27 +300,33 @@ For developers and contributors:
 ### Architecture
 
 ```
-┌─────────────────────────────────────────┐
-│           VAZHI Mobile App              │
-├─────────────────────────────────────────┤
-│  ┌─────────────┐    ┌────────────────┐  │
-│  │   Chat UI   │    │ Knowledge Pack │  │
-│  │   (Tamil)   │    │   Selector     │  │
-│  └──────┬──────┘    └───────┬────────┘  │
-│         │                   │           │
-│         ▼                   ▼           │
-│  ┌─────────────────────────────────────┐│
-│  │     Local LLM Engine (llama.cpp)   ││
-│  └──────────────┬──────────────────────┘│
-│                 │                        │
-│                 ▼                        │
-│  ┌─────────────────────────────────────┐│
-│  │     GGUF Model (~1-1.5GB)          ││
-│  │     + Knowledge Pack Data           ││
-│  └─────────────────────────────────────┘│
-└─────────────────────────────────────────┘
-         Everything runs on YOUR phone
-              No server needed
+┌─────────────────────────────────────────────────────────────┐
+│                    VAZHI Mobile App                          │
+├─────────────────────────────────────────────────────────────┤
+│  ┌─────────────┐    ┌────────────────┐   ┌──────────────┐   │
+│  │   Chat UI   │    │ Knowledge Pack │   │    Voice     │   │
+│  │   (Tamil)   │    │   Selector     │   │   STT/TTS    │   │
+│  └──────┬──────┘    └───────┬────────┘   └──────────────┘   │
+│         │                   │                                │
+│         ▼                   ▼                                │
+│  ┌─────────────────────────────────────┐                    │
+│  │          Query Router               │◄── Pattern matching │
+│  └──────────────┬──────────────────────┘                    │
+│                 │                                            │
+│       ┌─────────┴─────────┐                                  │
+│       ▼                   ▼                                  │
+│  ┌──────────┐       ┌──────────────┐                        │
+│  │  SQLite  │       │ LLM Engine   │ ◄── Optional download  │
+│  │ (2MB)    │       │ (1.6GB GGUF) │                        │
+│  └────┬─────┘       └──────┬───────┘                        │
+│       │                    │                                 │
+│       └────────┬───────────┘                                 │
+│                ▼                                             │
+│  ┌─────────────────────────────────────┐                    │
+│  │    Hybrid Response (Data + AI)     │                    │
+│  └─────────────────────────────────────┘                    │
+└─────────────────────────────────────────────────────────────┘
+         Works immediately • AI enhancement optional
 ```
 
 ### Repository Structure
@@ -361,4 +385,4 @@ This is a community project. No corporation owns it. You own it.
 
 ---
 
-*Last updated: February 2026*
+*Last updated: February 8, 2026*
