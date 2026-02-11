@@ -11,11 +11,7 @@ class ModelStatusIndicator extends ConsumerWidget {
   final bool compact;
   final VoidCallback? onTap;
 
-  const ModelStatusIndicator({
-    super.key,
-    this.compact = false,
-    this.onTap,
-  });
+  const ModelStatusIndicator({super.key, this.compact = false, this.onTap});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -92,10 +88,7 @@ class ModelStatusIndicator extends ConsumerWidget {
                 else
                   Text(
                     _getDescription(status),
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey[600],
-                    ),
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
               ],
             ),
@@ -108,7 +101,11 @@ class ModelStatusIndicator extends ConsumerWidget {
     );
   }
 
-  Widget _buildStatusIcon(ModelStatus status, double progress, {double size = 20}) {
+  Widget _buildStatusIcon(
+    ModelStatus status,
+    double progress, {
+    double size = 20,
+  }) {
     switch (status) {
       case ModelStatus.notDownloaded:
         return Icon(
@@ -127,11 +124,7 @@ class ModelStatusIndicator extends ConsumerWidget {
           ),
         );
       case ModelStatus.downloaded:
-        return Icon(
-          Icons.cloud_done_outlined,
-          size: size,
-          color: Colors.blue,
-        );
+        return Icon(Icons.cloud_done_outlined, size: size, color: Colors.blue);
       case ModelStatus.loading:
         return SizedBox(
           width: size,
@@ -139,17 +132,9 @@ class ModelStatusIndicator extends ConsumerWidget {
           child: const CircularProgressIndicator(strokeWidth: 2),
         );
       case ModelStatus.ready:
-        return Icon(
-          Icons.check_circle,
-          size: size,
-          color: Colors.green,
-        );
+        return Icon(Icons.check_circle, size: size, color: Colors.green);
       case ModelStatus.error:
-        return Icon(
-          Icons.error_outline,
-          size: size,
-          color: Colors.red,
-        );
+        return Icon(Icons.error_outline, size: size, color: Colors.red);
     }
   }
 
@@ -169,10 +154,7 @@ class ModelStatusIndicator extends ConsumerWidget {
         const SizedBox(height: 4),
         Text(
           '${(progress * 100).toInt()}% பதிவிறக்கம்',
-          style: TextStyle(
-            fontSize: 10,
-            color: Colors.grey[600],
-          ),
+          style: TextStyle(fontSize: 10, color: Colors.grey[600]),
         ),
       ],
     );
@@ -337,10 +319,7 @@ class DownloadPromptBanner extends ConsumerWidget {
                     ),
                     Text(
                       'ஆஃப்லைன் AI உரையாடல் மற்றும் ஆழமான விளக்கங்கள்',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.grey[600],
-                      ),
+                      style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                     ),
                   ],
                 ),
@@ -359,10 +338,7 @@ class DownloadPromptBanner extends ConsumerWidget {
               Expanded(
                 child: Text(
                   '📦 1.6 GB  •  📱 ஆஃப்லைன் வேலை செய்யும்',
-                  style: TextStyle(
-                    fontSize: 11,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 11, color: Colors.grey[600]),
                 ),
               ),
               ElevatedButton.icon(
@@ -372,7 +348,10 @@ class DownloadPromptBanner extends ConsumerWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: VazhiTheme.primaryColor,
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 10,
+                  ),
                 ),
               ),
             ],

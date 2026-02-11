@@ -40,15 +40,14 @@ class HealthcareService extends RetrievalService {
         totalCount: hospitals.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
   /// Get government hospitals
-  Future<RetrievalResult<Hospital>> getGovernmentHospitals(String? district) async {
+  Future<RetrievalResult<Hospital>> getGovernmentHospitals(
+    String? district,
+  ) async {
     if (district == null) {
       return RetrievalResult.notFound(
         category: category,
@@ -66,7 +65,10 @@ class HealthcareService extends RetrievalService {
 
   /// Search hospitals
   @override
-  Future<RetrievalResult<Hospital>> search(String query, {int limit = 20}) async {
+  Future<RetrievalResult<Hospital>> search(
+    String query, {
+    int limit = 20,
+  }) async {
     if (query.trim().isEmpty) {
       return RetrievalResult.notFound(
         category: category,
@@ -93,25 +95,27 @@ class HealthcareService extends RetrievalService {
         hasMore: hospitals.length >= limit,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தேடல் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தேடல் பிழை: $e', category: category);
     }
   }
 
   /// Get emergency hospitals (with 24/7 emergency)
-  Future<RetrievalResult<Hospital>> getEmergencyHospitals(String district) async {
+  Future<RetrievalResult<Hospital>> getEmergencyHospitals(
+    String district,
+  ) async {
     try {
       final results = await KnowledgeDatabase.getHospitalsByDistrict(district);
 
       // Filter for hospitals with emergency service
-      final filtered = results.where((m) => (m['has_emergency'] as int?) == 1).toList();
+      final filtered = results
+          .where((m) => (m['has_emergency'] as int?) == 1)
+          .toList();
 
       if (filtered.isEmpty) {
         return RetrievalResult.notFound(
           category: category,
-          message: '$district மாவட்டத்தில் அவசர சிகிச்சை மருத்துவமனைகள் கிடைக்கவில்லை',
+          message:
+              '$district மாவட்டத்தில் அவசர சிகிச்சை மருத்துவமனைகள் கிடைக்கவில்லை',
         );
       }
 
@@ -124,10 +128,7 @@ class HealthcareService extends RetrievalService {
         totalCount: hospitals.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -176,14 +177,19 @@ class HealthcareService extends RetrievalService {
   }
 
   /// Format list of hospitals
-  String _formatHospitalListResponse(List<Hospital> hospitals, String district) {
+  String _formatHospitalListResponse(
+    List<Hospital> hospitals,
+    String district,
+  ) {
     final buffer = StringBuffer();
 
     buffer.writeln('🏥 **$district மருத்துவமனைகள்** (${hospitals.length})');
     buffer.writeln();
 
     // Group by type
-    final govt = hospitals.where((h) => h.type == 'govt' || h.type == 'ghq').toList();
+    final govt = hospitals
+        .where((h) => h.type == 'govt' || h.type == 'ghq')
+        .toList();
     final private = hospitals.where((h) => h.type == 'private').toList();
 
     if (govt.isNotEmpty) {

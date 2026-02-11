@@ -57,10 +57,7 @@ class HybridMessage extends Message {
   }
 
   /// Create knowledge-based response
-  factory HybridMessage.knowledge(
-    KnowledgeResponse response, {
-    String? pack,
-  }) {
+  factory HybridMessage.knowledge(KnowledgeResponse response, {String? pack}) {
     return HybridMessage._(
       id: DateTime.now().millisecondsSinceEpoch.toString(),
       role: MessageRole.assistant,
@@ -236,7 +233,8 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     if (message.knowledgeResponse == null) return;
 
     // Get the AI prompt
-    final prompt = message.knowledgeResponse!.aiPromptSuggestion ??
+    final prompt =
+        message.knowledgeResponse!.aiPromptSuggestion ??
         'விளக்கம் தாருங்கள்: ${message.content}';
 
     // Add loading
@@ -287,11 +285,16 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
 /// Hybrid chat provider
 final hybridChatProvider =
     StateNotifierProvider<HybridChatNotifier, List<HybridMessage>>((ref) {
-  final knowledgeService = ref.watch(knowledgeServiceProvider);
-  final apiService = ref.watch(vazhiApiServiceProvider);
-  final localService = ref.watch(vazhiLocalServiceProvider);
-  return HybridChatNotifier(knowledgeService, apiService, localService, ref);
-});
+      final knowledgeService = ref.watch(knowledgeServiceProvider);
+      final apiService = ref.watch(vazhiApiServiceProvider);
+      final localService = ref.watch(vazhiLocalServiceProvider);
+      return HybridChatNotifier(
+        knowledgeService,
+        apiService,
+        localService,
+        ref,
+      );
+    });
 
 /// Check if model is ready for AI queries
 final isModelReadyProvider = Provider<bool>((ref) {

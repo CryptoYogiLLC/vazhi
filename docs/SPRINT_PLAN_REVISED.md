@@ -143,8 +143,12 @@ vazhi_app/
 - [ ] Full Thirukkural database (1,330 verses)
 - [ ] Complete government schemes database
 - [ ] Hospital directory population
-- [ ] MVP: Gemma-2B Tamil (1.6GB) integration
-- [ ] Target: SLM training (~250-300MB) for budget devices
+- [ ] **NEW TARGET: Qwen3-0.6B (<1GB GGUF)** - Two-stage training in progress
+- [ ] Micro-DAPT + SFT pipeline on Kaggle
+
+**Model Pivot (2026-02-09):** Pivoted from Gemma-2B to Qwen3-0.6B due to tokenizer corruption in Gemma base model (OrderedVocab holes at indices 1,2). New approach uses two-stage training:
+1. **Micro-DAPT**: 80% Vazhi outputs + 20% Sangraha Tamil corpus for fluency
+2. **SFT**: Instruction tuning with assistant-only loss masking
 
 ### Phase 4: Polish & Launch
 - [ ] Expert directory feature
@@ -169,6 +173,8 @@ vazhi_app/
 | Testing Infrastructure | Local only | HuggingFace Space | Fast iteration during development |
 | Model Hosting | Self-hosted | HuggingFace | Free hosting, easy access |
 | MVP Inference | Cloud API | On-device GGUF | Offline-first is core to VAZHI vision |
+| AI Model | Gemma-2B Tamil (1.6GB) | **Qwen3-0.6B (<1GB)** | Gemma tokenizer corrupted; Qwen3 has native thinking, better size |
+| Training Approach | Single SFT pass | **Two-stage (Micro-DAPT → SFT)** | Preserves Tamil fluency AND instruction-following |
 
 **Note**: HuggingFace Space is for development/testing only. The MVP will have fully offline on-device inference.
 
@@ -196,7 +202,8 @@ vazhi_app/
 
 ---
 
-*Last updated: February 8, 2026*
-*Training: COMPLETE (val loss 0.567)*
+*Last updated: February 9, 2026*
+*Training: Qwen3-0.6B Micro-DAPT + SFT in progress on Kaggle*
 *Current milestone: Phase 3 - Data Population & AI Model*
 *Architecture: Hybrid Retrieval (Deterministic + Optional AI)*
+*Target Model: Qwen3-0.6B (<1GB GGUF) with two-stage training*

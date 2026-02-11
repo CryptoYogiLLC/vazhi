@@ -16,7 +16,8 @@ class ThirukkuralService extends RetrievalService {
     if (number < 1 || number > 1330) {
       return RetrievalResult.notFound(
         category: category,
-        message: 'குறள் எண் 1 முதல் 1330 வரை இருக்க வேண்டும்\n'
+        message:
+            'குறள் எண் 1 முதல் 1330 வரை இருக்க வேண்டும்\n'
             '(Kural number must be between 1 and 1330)',
       );
     }
@@ -38,25 +39,27 @@ class ThirukkuralService extends RetrievalService {
         formattedResponse: formatForDisplay(kural),
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
   /// Get all kurals in an athikaram (chapter)
-  Future<RetrievalResult<Thirukkural>> getByAthikaram(int athikaramNumber) async {
+  Future<RetrievalResult<Thirukkural>> getByAthikaram(
+    int athikaramNumber,
+  ) async {
     if (athikaramNumber < 1 || athikaramNumber > 133) {
       return RetrievalResult.notFound(
         category: category,
-        message: 'அதிகார எண் 1 முதல் 133 வரை இருக்க வேண்டும்\n'
+        message:
+            'அதிகார எண் 1 முதல் 133 வரை இருக்க வேண்டும்\n'
             '(Athikaram number must be between 1 and 133)',
       );
     }
 
     try {
-      final results = await KnowledgeDatabase.getKuralsByAthikaram(athikaramNumber);
+      final results = await KnowledgeDatabase.getKuralsByAthikaram(
+        athikaramNumber,
+      );
       if (results.isEmpty) {
         return RetrievalResult.notFound(
           category: category,
@@ -75,10 +78,7 @@ class ThirukkuralService extends RetrievalService {
         totalCount: kurals.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -96,16 +96,16 @@ class ThirukkuralService extends RetrievalService {
         totalCount: athikarams.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
   /// Search kurals by text
   @override
-  Future<RetrievalResult<Thirukkural>> search(String query, {int limit = 20}) async {
+  Future<RetrievalResult<Thirukkural>> search(
+    String query, {
+    int limit = 20,
+  }) async {
     if (query.trim().isEmpty) {
       return RetrievalResult.notFound(
         category: category,
@@ -118,7 +118,8 @@ class ThirukkuralService extends RetrievalService {
       if (results.isEmpty) {
         return RetrievalResult.notFound(
           category: category,
-          message: '"$query" க்கான குறள்கள் கிடைக்கவில்லை\n'
+          message:
+              '"$query" க்கான குறள்கள் கிடைக்கவில்லை\n'
               '(No kurals found for "$query")',
         );
       }
@@ -133,10 +134,7 @@ class ThirukkuralService extends RetrievalService {
         hasMore: kurals.length >= limit,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தேடல் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தேடல் பிழை: $e', category: category);
     }
   }
 
@@ -167,10 +165,7 @@ class ThirukkuralService extends RetrievalService {
         totalCount: kurals.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -192,7 +187,9 @@ class ThirukkuralService extends RetrievalService {
     buffer.writeln('**பொருள்:** ${kural.meaningTamil}');
     buffer.writeln();
     buffer.writeln('---');
-    buffer.writeln('📚 **அதிகாரம்:** ${kural.athikaram} (${kural.athikaramNumber})');
+    buffer.writeln(
+      '📚 **அதிகாரம்:** ${kural.athikaram} (${kural.athikaramNumber})',
+    );
     buffer.writeln('📖 **பால்:** ${kural.paal}');
 
     return buffer.toString();
@@ -205,7 +202,9 @@ class ThirukkuralService extends RetrievalService {
     final first = kurals.first;
     final buffer = StringBuffer();
 
-    buffer.writeln('📚 **அதிகாரம் ${first.athikaramNumber}: ${first.athikaram}**');
+    buffer.writeln(
+      '📚 **அதிகாரம் ${first.athikaramNumber}: ${first.athikaram}**',
+    );
     buffer.writeln('📖 ${first.paal} | ${first.paalEnglish}');
     buffer.writeln();
     buffer.writeln('---');

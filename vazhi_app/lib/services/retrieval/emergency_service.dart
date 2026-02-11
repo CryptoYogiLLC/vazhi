@@ -31,10 +31,7 @@ class EmergencyService extends RetrievalService {
         totalCount: contacts.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -54,14 +51,14 @@ class EmergencyService extends RetrievalService {
         contacts,
         category: category,
         displayTitle: 'தேசிய அவசர எண்கள்',
-        formattedResponse: _formatContactListResponse(contacts, showNationalBadge: true),
+        formattedResponse: _formatContactListResponse(
+          contacts,
+          showNationalBadge: true,
+        ),
         totalCount: contacts.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -87,17 +84,18 @@ class EmergencyService extends RetrievalService {
         totalCount: contacts.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
   /// Get contacts by district
-  Future<RetrievalResult<EmergencyContact>> getByDistrict(String district) async {
+  Future<RetrievalResult<EmergencyContact>> getByDistrict(
+    String district,
+  ) async {
     try {
-      final results = await KnowledgeDatabase.getEmergencyContacts(district: district);
+      final results = await KnowledgeDatabase.getEmergencyContacts(
+        district: district,
+      );
       if (results.isEmpty) {
         return RetrievalResult.notFound(
           category: category,
@@ -114,16 +112,16 @@ class EmergencyService extends RetrievalService {
         totalCount: contacts.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
   /// Search emergency contacts
   @override
-  Future<RetrievalResult<EmergencyContact>> search(String query, {int limit = 20}) async {
+  Future<RetrievalResult<EmergencyContact>> search(
+    String query, {
+    int limit = 20,
+  }) async {
     if (query.trim().isEmpty) {
       return getAllContacts();
     }
@@ -152,7 +150,9 @@ class EmergencyService extends RetrievalService {
         );
       }
 
-      final contacts = filtered.map((m) => EmergencyContact.fromMap(m)).toList();
+      final contacts = filtered
+          .map((m) => EmergencyContact.fromMap(m))
+          .toList();
       return RetrievalResult.list(
         contacts,
         category: category,
@@ -161,10 +161,7 @@ class EmergencyService extends RetrievalService {
         totalCount: contacts.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தேடல் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தேடல் பிழை: $e', category: category);
     }
   }
 
@@ -185,7 +182,9 @@ class EmergencyService extends RetrievalService {
         return getAllContacts();
       }
 
-      final contacts = filtered.map((m) => EmergencyContact.fromMap(m)).toList();
+      final contacts = filtered
+          .map((m) => EmergencyContact.fromMap(m))
+          .toList();
       return RetrievalResult.list(
         contacts,
         category: category,
@@ -194,10 +193,7 @@ class EmergencyService extends RetrievalService {
         totalCount: contacts.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -244,7 +240,10 @@ class EmergencyService extends RetrievalService {
   }
 
   /// Format list of contacts
-  String _formatContactListResponse(List<EmergencyContact> contacts, {bool showNationalBadge = false}) {
+  String _formatContactListResponse(
+    List<EmergencyContact> contacts, {
+    bool showNationalBadge = false,
+  }) {
     final buffer = StringBuffer();
 
     buffer.writeln('🚨 **அவசர தொடர்பு எண்கள்**');

@@ -61,11 +61,26 @@ void main() {
 
   group('KnowledgeCategory', () {
     test('fromId returns correct category', () {
-      expect(KnowledgeCategoryExtension.fromId('thirukkural'), KnowledgeCategory.thirukkural);
-      expect(KnowledgeCategoryExtension.fromId('schemes'), KnowledgeCategory.schemes);
-      expect(KnowledgeCategoryExtension.fromId('emergency'), KnowledgeCategory.emergency);
-      expect(KnowledgeCategoryExtension.fromId('health'), KnowledgeCategory.health);
-      expect(KnowledgeCategoryExtension.fromId('unknown'), KnowledgeCategory.general);
+      expect(
+        KnowledgeCategoryExtension.fromId('thirukkural'),
+        KnowledgeCategory.thirukkural,
+      );
+      expect(
+        KnowledgeCategoryExtension.fromId('schemes'),
+        KnowledgeCategory.schemes,
+      );
+      expect(
+        KnowledgeCategoryExtension.fromId('emergency'),
+        KnowledgeCategory.emergency,
+      );
+      expect(
+        KnowledgeCategoryExtension.fromId('health'),
+        KnowledgeCategory.health,
+      );
+      expect(
+        KnowledgeCategoryExtension.fromId('unknown'),
+        KnowledgeCategory.general,
+      );
     });
 
     test('id getter returns correct string', () {

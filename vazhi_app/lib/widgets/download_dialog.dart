@@ -18,8 +18,7 @@ final downloadServiceProvider = Provider<ModelDownloadService>((ref) {
 });
 
 /// Current download progress provider
-final downloadProgressStreamProvider =
-    StreamProvider<DownloadProgress>((ref) {
+final downloadProgressStreamProvider = StreamProvider<DownloadProgress>((ref) {
   final service = ref.watch(downloadServiceProvider);
   return service.progressStream;
 });
@@ -249,17 +248,11 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
             children: [
               Text(
                 'AI Brain பதிவிறக்கம்',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Text(
                 'ஆஃப்லைன் AI உரையாடல்',
-                style: TextStyle(
-                  fontSize: 13,
-                  color: Colors.grey,
-                ),
+                style: TextStyle(fontSize: 13, color: Colors.grey),
               ),
             ],
           ),
@@ -310,15 +303,9 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
       children: [
         Icon(icon, size: 20, color: iconColor ?? VazhiTheme.primaryColor),
         const SizedBox(width: 12),
-        Text(
-          label,
-          style: TextStyle(color: Colors.grey[600], fontSize: 13),
-        ),
+        Text(label, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
         const Spacer(),
-        Text(
-          value,
-          style: const TextStyle(fontWeight: FontWeight.w500),
-        ),
+        Text(value, style: const TextStyle(fontWeight: FontWeight.w500)),
       ],
     );
   }
@@ -397,10 +384,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
         const SizedBox(height: 12),
         Text(
           _getStatusText(progress),
-          style: TextStyle(
-            fontWeight: FontWeight.w500,
-            color: progressColor,
-          ),
+          style: TextStyle(fontWeight: FontWeight.w500, color: progressColor),
         ),
       ],
     );

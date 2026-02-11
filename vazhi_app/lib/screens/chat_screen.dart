@@ -35,19 +35,68 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
 
   // Category card display info - using local assets for offline support
   static const List<Map<String, dynamic>> _categoryCardInfo = [
-    {'id': 'culture', 'icon': '🪷', 'title': 'கலாச்சாரம்', 'subtitle': 'Culture', 'description': 'Thirukkural, temples, festivals', 'color': Color(0xFFFF6B35), 'imageAsset': 'assets/images/culture.jpg'},
-    {'id': 'education', 'icon': '📚', 'title': 'கல்வி', 'subtitle': 'Education', 'description': 'Scholarships, exams, admissions', 'color': Color(0xFF4A90D9), 'imageAsset': 'assets/images/education.jpg'},
-    {'id': 'security', 'icon': '🛡️', 'title': 'பாதுகாப்பு', 'subtitle': 'Security', 'description': 'Identify scams, cyber safety', 'color': Color(0xFF4682B4), 'imageAsset': 'assets/images/security.jpg'},
-    {'id': 'legal', 'icon': '⚖️', 'title': 'சட்டம்', 'subtitle': 'Legal', 'description': 'RTI, consumer rights, laws', 'color': Color(0xFF6B3FA0), 'imageAsset': 'assets/images/legal.jpg'},
-    {'id': 'govt', 'icon': '🏛️', 'title': 'அரசு', 'subtitle': 'Government', 'description': 'Schemes, services, documents', 'color': Color(0xFF1E3A5F), 'imageAsset': 'assets/images/govt.jpg'},
-    {'id': 'health', 'icon': '🧘', 'title': 'சுகாதாரம்', 'subtitle': 'Healthcare', 'description': 'Health tips, Siddha, wellness', 'color': Color(0xFF20B2AA), 'imageAsset': 'assets/images/health.jpg'},
+    {
+      'id': 'culture',
+      'icon': '🪷',
+      'title': 'கலாச்சாரம்',
+      'subtitle': 'Culture',
+      'description': 'Thirukkural, temples, festivals',
+      'color': Color(0xFFFF6B35),
+      'imageAsset': 'assets/images/culture.jpg',
+    },
+    {
+      'id': 'education',
+      'icon': '📚',
+      'title': 'கல்வி',
+      'subtitle': 'Education',
+      'description': 'Scholarships, exams, admissions',
+      'color': Color(0xFF4A90D9),
+      'imageAsset': 'assets/images/education.jpg',
+    },
+    {
+      'id': 'security',
+      'icon': '🛡️',
+      'title': 'பாதுகாப்பு',
+      'subtitle': 'Security',
+      'description': 'Identify scams, cyber safety',
+      'color': Color(0xFF4682B4),
+      'imageAsset': 'assets/images/security.jpg',
+    },
+    {
+      'id': 'legal',
+      'icon': '⚖️',
+      'title': 'சட்டம்',
+      'subtitle': 'Legal',
+      'description': 'RTI, consumer rights, laws',
+      'color': Color(0xFF6B3FA0),
+      'imageAsset': 'assets/images/legal.jpg',
+    },
+    {
+      'id': 'govt',
+      'icon': '🏛️',
+      'title': 'அரசு',
+      'subtitle': 'Government',
+      'description': 'Schemes, services, documents',
+      'color': Color(0xFF1E3A5F),
+      'imageAsset': 'assets/images/govt.jpg',
+    },
+    {
+      'id': 'health',
+      'icon': '🧘',
+      'title': 'சுகாதாரம்',
+      'subtitle': 'Healthcare',
+      'description': 'Health tips, Siddha, wellness',
+      'color': Color(0xFF20B2AA),
+      'imageAsset': 'assets/images/health.jpg',
+    },
   ];
 
   @override
   void initState() {
     super.initState();
     // Shuffle category cards on each app launch
-    _shuffledCategoryIds = _categoryCardInfo.map((c) => c['id'] as String).toList()..shuffle();
+    _shuffledCategoryIds =
+        _categoryCardInfo.map((c) => c['id'] as String).toList()..shuffle();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       ref.read(voiceInputStateProvider.notifier).initialize();
       ref.read(voiceOutputStateProvider.notifier).initialize();
@@ -113,8 +162,12 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     // Use hybrid or regular chat based on feature flag
-    final hybridMessages = _useHybridChat ? ref.watch(hybridChatProvider) : <HybridMessage>[];
-    final regularMessages = !_useHybridChat ? ref.watch(chatProvider) : <Message>[];
+    final hybridMessages = _useHybridChat
+        ? ref.watch(hybridChatProvider)
+        : <HybridMessage>[];
+    final regularMessages = !_useHybridChat
+        ? ref.watch(chatProvider)
+        : <Message>[];
     final messages = _useHybridChat ? hybridMessages : regularMessages;
     final voiceInputState = ref.watch(voiceInputStateProvider);
 
@@ -146,11 +199,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           Expanded(
             child: messages.isNotEmpty
                 ? _useHybridChat
-                    ? _buildHybridChatView(hybridMessages)
-                    : _buildChatView(regularMessages)
+                      ? _buildHybridChatView(hybridMessages)
+                      : _buildChatView(regularMessages)
                 : _showCategoryView
-                    ? _buildCategoryOnlyView()
-                    : _buildWelcomeView(),
+                ? _buildCategoryOnlyView()
+                : _buildWelcomeView(),
           ),
 
           // Input area
@@ -206,7 +259,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Center(
-                  child: Text('வ', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white)),
+                  child: Text(
+                    'வ',
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ),
             ),
@@ -235,12 +295,18 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       actions: [
         if (hasMessages)
           IconButton(
-            icon: const Icon(Icons.delete_outline, color: VazhiTheme.textSecondary),
+            icon: const Icon(
+              Icons.delete_outline,
+              color: VazhiTheme.textSecondary,
+            ),
             onPressed: () => _showClearChatDialog(),
           ),
         if (!showBack)
           IconButton(
-            icon: const Icon(Icons.settings_outlined, color: VazhiTheme.textSecondary),
+            icon: const Icon(
+              Icons.settings_outlined,
+              color: VazhiTheme.textSecondary,
+            ),
             onPressed: () => _scaffoldKey.currentState?.openDrawer(),
           ),
       ],
@@ -250,17 +316,51 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   Widget _buildAcronymText() {
     return RichText(
       text: TextSpan(
-        style: const TextStyle(fontSize: 8, color: VazhiTheme.textSecondary, letterSpacing: 0.2),
+        style: const TextStyle(
+          fontSize: 8,
+          color: VazhiTheme.textSecondary,
+          letterSpacing: 0.2,
+        ),
         children: [
-          TextSpan(text: 'V', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+          TextSpan(
+            text: 'V',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: VazhiTheme.primaryColor,
+            ),
+          ),
           const TextSpan(text: 'oluntary '),
-          TextSpan(text: 'A', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+          TextSpan(
+            text: 'A',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: VazhiTheme.primaryColor,
+            ),
+          ),
           const TextSpan(text: 'I with '),
-          TextSpan(text: 'Z', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+          TextSpan(
+            text: 'Z',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: VazhiTheme.primaryColor,
+            ),
+          ),
           const TextSpan(text: 'ero-cost '),
-          TextSpan(text: 'H', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+          TextSpan(
+            text: 'H',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: VazhiTheme.primaryColor,
+            ),
+          ),
           const TextSpan(text: 'elpful '),
-          TextSpan(text: 'I', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+          TextSpan(
+            text: 'I',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: VazhiTheme.primaryColor,
+            ),
+          ),
           const TextSpan(text: 'ntelligence'),
         ],
       ),
@@ -295,7 +395,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                         borderRadius: BorderRadius.circular(28),
                       ),
                       child: const Center(
-                        child: Text('வழி', style: TextStyle(fontSize: 64, fontWeight: FontWeight.bold, color: Colors.white)),
+                        child: Text(
+                          'வழி',
+                          style: TextStyle(
+                            fontSize: 64,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -304,17 +411,51 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                 // Acronym with bold letters
                 RichText(
                   text: TextSpan(
-                    style: const TextStyle(fontSize: 13, color: VazhiTheme.textSecondary, letterSpacing: 0.3),
+                    style: const TextStyle(
+                      fontSize: 13,
+                      color: VazhiTheme.textSecondary,
+                      letterSpacing: 0.3,
+                    ),
                     children: [
-                      TextSpan(text: 'V', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+                      TextSpan(
+                        text: 'V',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: VazhiTheme.primaryColor,
+                        ),
+                      ),
                       const TextSpan(text: 'oluntary '),
-                      TextSpan(text: 'A', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+                      TextSpan(
+                        text: 'A',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: VazhiTheme.primaryColor,
+                        ),
+                      ),
                       const TextSpan(text: 'I with '),
-                      TextSpan(text: 'Z', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+                      TextSpan(
+                        text: 'Z',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: VazhiTheme.primaryColor,
+                        ),
+                      ),
                       const TextSpan(text: 'ero-cost '),
-                      TextSpan(text: 'H', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+                      TextSpan(
+                        text: 'H',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: VazhiTheme.primaryColor,
+                        ),
+                      ),
                       const TextSpan(text: 'elpful '),
-                      TextSpan(text: 'I', style: TextStyle(fontWeight: FontWeight.bold, color: VazhiTheme.primaryColor)),
+                      TextSpan(
+                        text: 'I',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: VazhiTheme.primaryColor,
+                        ),
+                      ),
                       const TextSpan(text: 'ntelligence'),
                     ],
                   ),
@@ -342,26 +483,40 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
                         color: VazhiTheme.goldAccent,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: const Text(
                         '100% FREE',
-                        style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     const SizedBox(width: 8),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 10,
+                        vertical: 4,
+                      ),
                       decoration: BoxDecoration(
                         color: Colors.white24,
                         borderRadius: BorderRadius.circular(12),
                       ),
                       child: const Text(
                         '📴 Works Offline',
-                        style: TextStyle(fontSize: 11, fontWeight: FontWeight.w500, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 11,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ],
@@ -369,17 +524,29 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                 const SizedBox(height: 12),
                 const Text(
                   'VAZHI வழி',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.white),
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   'A free Tamil AI assistant for Tamilians worldwide. Ask questions about government schemes, legal rights, health, education, culture & identify scams - all in Tamil or Tanglish.',
-                  style: TextStyle(fontSize: 13, color: Colors.white.withOpacity(0.9), height: 1.4),
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: Colors.white.withOpacity(0.9),
+                    height: 1.4,
+                  ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   'தமிழர்களுக்கான இலவச AI வழி தோழன்',
-                  style: TextStyle(fontSize: 12, color: Colors.white.withOpacity(0.7), fontStyle: FontStyle.italic),
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.white.withOpacity(0.7),
+                    fontStyle: FontStyle.italic,
+                  ),
                 ),
               ],
             ),
@@ -390,7 +557,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           // Section title
           const Text(
             'How can I help you?',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, color: VazhiTheme.textPrimary),
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+              color: VazhiTheme.textPrimary,
+            ),
           ),
           const SizedBox(height: 4),
           Text(
@@ -414,9 +585,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           const SizedBox(height: 20),
 
           // Quick suggestions
-          QuickSuggestionChips(
-            onTap: _handleSuggestionTap,
-          ),
+          QuickSuggestionChips(onTap: _handleSuggestionTap),
 
           const SizedBox(height: 24),
         ],
@@ -499,7 +668,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                     width: 130,
                     height: 130,
                     fit: BoxFit.cover,
-                    errorBuilder: (context, error, stackTrace) => const SizedBox(),
+                    errorBuilder: (context, error, stackTrace) =>
+                        const SizedBox(),
                   ),
                 ),
               ),
@@ -513,22 +683,36 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                     children: [
                       Text(icon, style: const TextStyle(fontSize: 24)),
                       const Spacer(),
-                      const Icon(Icons.arrow_forward_ios, size: 14, color: Colors.white54),
+                      const Icon(
+                        Icons.arrow_forward_ios,
+                        size: 14,
+                        color: Colors.white54,
+                      ),
                     ],
                   ),
                   const Spacer(),
                   Text(
                     title,
-                    style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: Colors.white),
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                   Text(
                     subtitle,
-                    style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.8)),
+                    style: TextStyle(
+                      fontSize: 11,
+                      color: Colors.white.withOpacity(0.8),
+                    ),
                   ),
                   const SizedBox(height: 2),
                   Text(
                     description,
-                    style: TextStyle(fontSize: 10, color: Colors.white.withOpacity(0.7)),
+                    style: TextStyle(
+                      fontSize: 10,
+                      color: Colors.white.withOpacity(0.7),
+                    ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -576,21 +760,28 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               return MessageBubble(
                 message: message,
                 userQuestion: userQuestion,
-                onSpeak: isAssistant && !message.isLoading && message.error == null
+                onSpeak:
+                    isAssistant && !message.isLoading && message.error == null
                     ? () => _speakMessage(message.content)
                     : null,
                 onRetry: message.error != null
                     ? () => ref.read(chatProvider.notifier).retryLast()
                     : null,
-                currentFeedback: feedbackState.getFeedbackForMessage(message.id),
-                onPositiveFeedback: isAssistant && !message.isLoading && message.error == null
+                currentFeedback: feedbackState.getFeedbackForMessage(
+                  message.id,
+                ),
+                onPositiveFeedback:
+                    isAssistant && !message.isLoading && message.error == null
                     ? () => _handlePositiveFeedback(message, userQuestion)
                     : null,
-                onNegativeFeedback: isAssistant && !message.isLoading && message.error == null
+                onNegativeFeedback:
+                    isAssistant && !message.isLoading && message.error == null
                     ? () => _handleNegativeFeedback(message, userQuestion)
                     : null,
-                onCorrection: isAssistant && !message.isLoading && message.error == null
-                    ? (correction) => _handleCorrection(message, userQuestion, correction)
+                onCorrection:
+                    isAssistant && !message.isLoading && message.error == null
+                    ? (correction) =>
+                          _handleCorrection(message, userQuestion, correction)
                     : null,
               );
             },
@@ -638,7 +829,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
 
               return HybridMessageBubble(
                 message: message,
-                onSpeak: message.role == MessageRole.assistant &&
+                onSpeak:
+                    message.role == MessageRole.assistant &&
                         !message.isLoading &&
                         message.error == null
                     ? () => _speakMessage(message.content)
@@ -654,12 +846,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   }
 
   void _handlePositiveFeedback(Message message, String? userQuestion) {
-    ref.read(feedbackProvider.notifier).addPositive(
-      messageId: message.id,
-      question: userQuestion ?? '',
-      modelResponse: message.content,
-      pack: message.pack,
-    );
+    ref
+        .read(feedbackProvider.notifier)
+        .addPositive(
+          messageId: message.id,
+          question: userQuestion ?? '',
+          modelResponse: message.content,
+          pack: message.pack,
+        );
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('நன்றி! 👍'),
@@ -670,12 +864,14 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   }
 
   void _handleNegativeFeedback(Message message, String? userQuestion) {
-    ref.read(feedbackProvider.notifier).addNegative(
-      messageId: message.id,
-      question: userQuestion ?? '',
-      modelResponse: message.content,
-      pack: message.pack,
-    );
+    ref
+        .read(feedbackProvider.notifier)
+        .addNegative(
+          messageId: message.id,
+          question: userQuestion ?? '',
+          modelResponse: message.content,
+          pack: message.pack,
+        );
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Thanks for the feedback 👎'),
@@ -685,14 +881,20 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     );
   }
 
-  void _handleCorrection(Message message, String? userQuestion, String correction) {
-    ref.read(feedbackProvider.notifier).addCorrection(
-      messageId: message.id,
-      question: userQuestion ?? '',
-      modelResponse: message.content,
-      correction: correction,
-      pack: message.pack,
-    );
+  void _handleCorrection(
+    Message message,
+    String? userQuestion,
+    String correction,
+  ) {
+    ref
+        .read(feedbackProvider.notifier)
+        .addCorrection(
+          messageId: message.id,
+          question: userQuestion ?? '',
+          modelResponse: message.content,
+          correction: correction,
+          pack: message.pack,
+        );
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('திருத்தம் சமர்ப்பிக்கப்பட்டது! 🙏'),
@@ -806,7 +1008,8 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           Image.asset(
             imageAsset,
             fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) => Container(color: color),
+            errorBuilder: (context, error, stackTrace) =>
+                Container(color: color),
           ),
           // Gradient overlay
           Container(
@@ -814,10 +1017,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                colors: [
-                  color.withOpacity(0.9),
-                  color.withOpacity(0.75),
-                ],
+                colors: [color.withOpacity(0.9), color.withOpacity(0.75)],
               ),
             ),
           ),
@@ -917,7 +1117,10 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                         decoration: BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: color.withOpacity(0.3), width: 1.5),
+                          border: Border.all(
+                            color: color.withOpacity(0.3),
+                            width: 1.5,
+                          ),
                           boxShadow: [
                             BoxShadow(
                               color: color.withOpacity(0.1),
@@ -945,7 +1148,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Icon(Icons.arrow_forward, size: 16, color: color),
+                                Icon(
+                                  Icons.arrow_forward,
+                                  size: 16,
+                                  color: color,
+                                ),
                               ],
                             ),
                           ],
@@ -998,7 +1205,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
       builder: (context) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: const Text('Clear Chat?'),
-        content: const Text('This will delete all messages in this conversation.'),
+        content: const Text(
+          'This will delete all messages in this conversation.',
+        ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),

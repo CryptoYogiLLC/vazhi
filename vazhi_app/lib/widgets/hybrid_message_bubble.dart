@@ -71,10 +71,7 @@ class HybridMessageBubble extends ConsumerWidget {
         ),
         child: Text(
           message.content,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 15,
-          ),
+          style: const TextStyle(color: Colors.white, fontSize: 15),
         ),
       ),
     );
@@ -110,10 +107,7 @@ class HybridMessageBubble extends ConsumerWidget {
             const SizedBox(width: 12),
             Text(
               'சிந்தித்துக் கொண்டிருக்கிறேன்...',
-              style: TextStyle(
-                color: Colors.grey[600],
-                fontSize: 14,
-              ),
+              style: TextStyle(color: Colors.grey[600], fontSize: 14),
             ),
           ],
         ),
@@ -140,9 +134,7 @@ class HybridMessageBubble extends ConsumerWidget {
               decoration: BoxDecoration(
                 color: Colors.red.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(
-                  color: Colors.red.withValues(alpha: 0.3),
-                ),
+                border: Border.all(color: Colors.red.withValues(alpha: 0.3)),
               ),
               child: Row(
                 children: [
@@ -151,10 +143,7 @@ class HybridMessageBubble extends ConsumerWidget {
                   Expanded(
                     child: Text(
                       message.error!,
-                      style: const TextStyle(
-                        color: Colors.red,
-                        fontSize: 14,
-                      ),
+                      style: const TextStyle(color: Colors.red, fontSize: 14),
                     ),
                   ),
                 ],
@@ -238,10 +227,7 @@ class HybridMessageBubble extends ConsumerWidget {
               ),
               child: SelectableText(
                 message.content,
-                style: const TextStyle(
-                  fontSize: 15,
-                  height: 1.6,
-                ),
+                style: const TextStyle(fontSize: 15, height: 1.6),
               ),
             ),
           ],

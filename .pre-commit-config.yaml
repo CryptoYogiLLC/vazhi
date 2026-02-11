@@ -74,15 +74,15 @@ repos:
       # Check for hardcoded API keys/secrets in Dart files
       - id: check-dart-secrets
         name: Check for hardcoded secrets in Dart
-        entry: sh -c 'git diff --staged --name-only | grep "\.dart$" | xargs -I {} grep -lE "(api[_-]?key|secret|token|password)\s*[:=]\s*[\"'\''][^\"'\'']{8,}[\"'\'']" {} 2>/dev/null && echo "Found potential hardcoded secrets in Dart files!" && exit 1 || exit 0'
+        entry: sh -c 'files=$(git diff --staged --name-only | grep "\.dart$" || true); if [ -n "$files" ]; then echo "$files" | xargs grep -lE "(api[_-]?key|secret|token|password)\s*[:=]\s*[\"'\''][^\"'\'']{8,}[\"'\'']" 2>/dev/null && echo "Found potential hardcoded secrets!" && exit 1; fi; exit 0'
         language: system
         files: ^vazhi_app/.*\.dart$
         pass_filenames: false
 
-      # Check for HuggingFace tokens
+      # Check for HuggingFace tokens (exclude venv)
       - id: check-hf-tokens
         name: Check for HuggingFace tokens
-        entry: sh -c 'git diff --staged --name-only | xargs grep -lE "hf_[A-Za-z0-9]{30,}" 2>/dev/null && echo "Found HuggingFace token!" && exit 1 || exit 0'
+        entry: sh -c 'git diff --staged --name-only | grep -v "^\.venv/" | xargs grep -lE "hf_[A-Za-z0-9]{30,}" 2>/dev/null && echo "Found HuggingFace token!" && exit 1 || exit 0'
         language: system
         pass_filenames: false
 
@@ -96,6 +96,8 @@ repos:
 # Exclude patterns
 exclude: |
   (?x)^(
+    \.venv/.*|
+    venv/.*|
     vazhi_app/build/.*|
     vazhi_app/.dart_tool/.*|
     vazhi_app/android/.gradle/.*|

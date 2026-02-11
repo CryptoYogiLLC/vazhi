@@ -1,0 +1,1757 @@
+{
+  "metadata": {
+    "title": "Tamil Classical Moral Literature Foundation",
+    "description": "Complete Aathichoodi (109 verses) and Konrai Venthan (91 verses) by Avvaiyar",
+    "author": "Avvaiyar (ஔவையார்)",
+    "period": "12th Century CE (attributed)",
+    "total_entries": 200,
+    "sources": ["aathichoodi", "konrai_venthan"],
+    "created": "2026-02-07",
+    "version": "1.0.0",
+    "language": "Tamil",
+    "purpose": "Tamil language foundation training data"
+  },
+  "aathichoodi": {
+    "title": "ஆத்திசூடி",
+    "title_english": "Aathichoodi",
+    "description": "A collection of 109 single-line moral aphorisms, each starting with a letter of the Tamil alphabet in order",
+    "total_verses": 109,
+    "verses": [
+      {
+        "number": 1,
+        "letter": "அ",
+        "verse": "அறம் செய விரும்பு",
+        "transliteration": "Aram seya virumbu",
+        "meaning_tamil": "நல்ல காரியங்கள் செய்ய விருப்பம் கொள்",
+        "meaning_english": "Desire to do righteous deeds",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 2,
+        "letter": "ஆ",
+        "verse": "ஆறுவது சினம்",
+        "transliteration": "Aaruvadhu sinam",
+        "meaning_tamil": "கோபத்தை அடக்கி ஆறப்போடு",
+        "meaning_english": "Let anger subside; cool down your temper",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 3,
+        "letter": "இ",
+        "verse": "இயல்வது கரவேல்",
+        "transliteration": "Iyalvadhu karavelvu",
+        "meaning_tamil": "உன்னால் இயன்றதை மறைக்காதே; கொடு",
+        "meaning_english": "Do not hide what you can afford to give",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 4,
+        "letter": "ஈ",
+        "verse": "ஈவது விலக்கேல்",
+        "transliteration": "Eevadhu vilakkel",
+        "meaning_tamil": "கொடுப்பதைத் தடுக்காதே",
+        "meaning_english": "Do not prevent charity or giving",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 5,
+        "letter": "உ",
+        "verse": "உடையது விளம்பேல்",
+        "transliteration": "Udaiyadhu vilambel",
+        "meaning_tamil": "உன்னிடம் உள்ளதை பெருமையாக சொல்லாதே",
+        "meaning_english": "Do not boast about your possessions",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 6,
+        "letter": "ஊ",
+        "verse": "ஊக்கமது கைவிடேல்",
+        "transliteration": "Ookkamadhu kaividel",
+        "meaning_tamil": "முயற்சியை கைவிடாதே",
+        "meaning_english": "Do not give up enthusiasm and perseverance",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 7,
+        "letter": "எ",
+        "verse": "எண் எழுத்து இகழேல்",
+        "transliteration": "En ezhuthu igazhel",
+        "meaning_tamil": "கணிதமும் மொழியும் இகழாதே; கல்வியை மதி",
+        "meaning_english": "Do not despise numbers and letters; respect education",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 8,
+        "letter": "ஏ",
+        "verse": "ஏற்பது இகழ்ச்சி",
+        "transliteration": "Erpadhu igazhchi",
+        "meaning_tamil": "பிறரிடம் யாசிப்பது இழிவானது",
+        "meaning_english": "Begging is disgraceful",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 9,
+        "letter": "ஐ",
+        "verse": "ஐயம் இட்டு உண்",
+        "transliteration": "Aiyam ittu un",
+        "meaning_tamil": "பிச்சை இட்டு பின் உண்",
+        "meaning_english": "Give alms before you eat",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 10,
+        "letter": "ஒ",
+        "verse": "ஒப்புர வொழுகு",
+        "transliteration": "Oppura vozhugu",
+        "meaning_tamil": "உலக ஒழுக்கத்தோடு நட",
+        "meaning_english": "Conduct yourself according to social norms",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 11,
+        "letter": "ஓ",
+        "verse": "ஓதுவது ஒழியேல்",
+        "transliteration": "Odhuvadhu ozhiyel",
+        "meaning_tamil": "படிப்பதை நிறுத்தாதே",
+        "meaning_english": "Never stop learning and studying",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 12,
+        "letter": "ஔ",
+        "verse": "ஔவியம் பேசேல்",
+        "transliteration": "Auviyam pesel",
+        "meaning_tamil": "பொறாமை பேசாதே",
+        "meaning_english": "Do not speak with envy or jealousy",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 13,
+        "letter": "க",
+        "verse": "கடிவது மற",
+        "transliteration": "Kadivadhu mara",
+        "meaning_tamil": "கோபத்தை மற",
+        "meaning_english": "Forget harsh and angry words",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 14,
+        "letter": "கா",
+        "verse": "காப்பது விரதம்",
+        "transliteration": "Kaappadhu viradham",
+        "meaning_tamil": "காப்பதே உண்மையான விரதம்",
+        "meaning_english": "Protecting others is the true penance",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 15,
+        "letter": "கி",
+        "verse": "கிழமைப்பட வாழ்",
+        "transliteration": "Kizhamaippada vaazh",
+        "meaning_tamil": "உரிமையோடு வாழ்",
+        "meaning_english": "Live with rightful ownership and responsibility",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 16,
+        "letter": "கீ",
+        "verse": "கீழ்மை அகற்று",
+        "transliteration": "Keezhmai agatru",
+        "meaning_tamil": "இழிவான செயல்களை விலக்கு",
+        "meaning_english": "Remove lowly and mean behavior",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 17,
+        "letter": "கு",
+        "verse": "குணமது கைவிடேல்",
+        "transliteration": "Gunamadhu kaividel",
+        "meaning_tamil": "நல்ல குணத்தை கைவிடாதே",
+        "meaning_english": "Do not abandon good character",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 18,
+        "letter": "கூ",
+        "verse": "கூடிப் பிரியேல்",
+        "transliteration": "Koodip piriyel",
+        "meaning_tamil": "இணைந்தவர்களை பிரியாதே",
+        "meaning_english": "Do not separate those who are united",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 19,
+        "letter": "கெ",
+        "verse": "கெடுப்பது ஒழி",
+        "transliteration": "Keduppadhu ozhi",
+        "meaning_tamil": "அழிக்கும் செயல்களை நிறுத்து",
+        "meaning_english": "Stop destructive actions",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 20,
+        "letter": "கே",
+        "verse": "கேள்வி முயல்",
+        "transliteration": "Kelvi muyal",
+        "meaning_tamil": "கேட்டு கற்க முயற்சி செய்",
+        "meaning_english": "Strive to learn by listening",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 21,
+        "letter": "கை",
+        "verse": "கைவினை கரவேல்",
+        "transliteration": "Kaivinai karavel",
+        "meaning_tamil": "கைத்தொழிலை மறைக்காதே",
+        "meaning_english": "Do not hide your skills and craftsmanship",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 22,
+        "letter": "கொ",
+        "verse": "கொள்ளை விரும்பேல்",
+        "transliteration": "Kollai virumbel",
+        "meaning_tamil": "கொள்ளை அடிக்க விரும்பாதே",
+        "meaning_english": "Do not desire to plunder or loot",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 23,
+        "letter": "கோ",
+        "verse": "கோதாட்டு ஒழி",
+        "transliteration": "Kodhaattu ozhi",
+        "meaning_tamil": "குற்றமான விளையாட்டை விடு",
+        "meaning_english": "Avoid harmful games and sports",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 24,
+        "letter": "கௌ",
+        "verse": "கௌவை அகற்று",
+        "transliteration": "Kauvai agatru",
+        "meaning_tamil": "புறங்கூறுதலை அகற்று",
+        "meaning_english": "Remove slander and gossip",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 25,
+        "letter": "ச",
+        "verse": "சக்கர நெறி நில்",
+        "transliteration": "Chakkara neri nil",
+        "meaning_tamil": "அரச நெறியில் நில்",
+        "meaning_english": "Stand by the wheel of dharma; follow the righteous path",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 26,
+        "letter": "சா",
+        "verse": "சான்றோர் இனத்து இரு",
+        "transliteration": "Saandror inathu iru",
+        "meaning_tamil": "பெரியோர் கூட்டத்தில் இரு",
+        "meaning_english": "Be in the company of the wise and learned",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 27,
+        "letter": "சி",
+        "verse": "சித்திரம் பேசேல்",
+        "transliteration": "Chithiram pesel",
+        "meaning_tamil": "பொய்யான அழகிய சொல் பேசாதே",
+        "meaning_english": "Do not speak with false embellishments",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 28,
+        "letter": "சீ",
+        "verse": "சீர்மை மறவேல்",
+        "transliteration": "Seermai maravel",
+        "meaning_tamil": "சிறப்பை மறவாதே",
+        "meaning_english": "Do not forget excellence and dignity",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 29,
+        "letter": "சு",
+        "verse": "சுளிக்கச் சொல்லேல்",
+        "transliteration": "Sulikka sollel",
+        "meaning_tamil": "கேட்பவர் வெறுக்கும்படி பேசாதே",
+        "meaning_english": "Do not speak words that disgust listeners",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 30,
+        "letter": "சூ",
+        "verse": "சூது விரும்பேல்",
+        "transliteration": "Soodhu virumbel",
+        "meaning_tamil": "சூதாட்டத்தை விரும்பாதே",
+        "meaning_english": "Do not desire gambling",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 31,
+        "letter": "செ",
+        "verse": "செய்வன திருந்தச் செய்",
+        "transliteration": "Seyvana thiruntha sei",
+        "meaning_tamil": "செய்யும் காரியங்களை நன்றாகச் செய்",
+        "meaning_english": "Do things well and perfectly",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 32,
+        "letter": "சே",
+        "verse": "சேரிடம் அறிந்து சேர்",
+        "transliteration": "Seridam arindhu ser",
+        "meaning_tamil": "சேரவேண்டிய இடத்தை அறிந்து சேர்",
+        "meaning_english": "Know and join the right place and company",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 33,
+        "letter": "சை",
+        "verse": "சையெனத் திரியேல்",
+        "transliteration": "Saiyena thiriyel",
+        "meaning_tamil": "பிறர் இகழும்படி திரியாதே",
+        "meaning_english": "Do not roam inviting contempt",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 34,
+        "letter": "சொ",
+        "verse": "சொற்சோர்வு படேல்",
+        "transliteration": "Sorsorvu padel",
+        "meaning_tamil": "சொல்லில் தவறு செய்யாதே",
+        "meaning_english": "Do not falter in your words",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 35,
+        "letter": "சோ",
+        "verse": "சோம்பித் திரியேல்",
+        "transliteration": "Sombi thiriyel",
+        "meaning_tamil": "சோம்பேறியாக திரியாதே",
+        "meaning_english": "Do not wander lazily",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 36,
+        "letter": "ஞ",
+        "verse": "ஞயம்பட உரை",
+        "transliteration": "Gnayampada urai",
+        "meaning_tamil": "இனிமையாக பேசு",
+        "meaning_english": "Speak pleasantly and sweetly",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 37,
+        "letter": "த",
+        "verse": "தக்கோன் எனத் திரி",
+        "transliteration": "Thakkon ena thiri",
+        "meaning_tamil": "தகுதியானவன் என்று திரி",
+        "meaning_english": "Move about as a worthy person",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 38,
+        "letter": "தா",
+        "verse": "தானமது விரும்பு",
+        "transliteration": "Thaanamadhu virumbu",
+        "meaning_tamil": "தானம் செய்ய விரும்பு",
+        "meaning_english": "Desire to give charity",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 39,
+        "letter": "தி",
+        "verse": "திருமாலுக்கு அடிமை செய்",
+        "transliteration": "Thirumalukku adimai sei",
+        "meaning_tamil": "இறைவனுக்கு தொண்டு செய்",
+        "meaning_english": "Serve the divine Lord",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 40,
+        "letter": "தீ",
+        "verse": "தீவினை அகற்று",
+        "transliteration": "Theevinai agatru",
+        "meaning_tamil": "தீய செயல்களை அகற்று",
+        "meaning_english": "Remove evil deeds",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 41,
+        "letter": "து",
+        "verse": "துன்பத்திற்கு இடம் கொடேல்",
+        "transliteration": "Thunbathirku idam kodel",
+        "meaning_tamil": "துன்பத்திற்கு இடம் தராதே",
+        "meaning_english": "Do not give room for sorrow",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 42,
+        "letter": "தூ",
+        "verse": "தூக்கி வினை செய்",
+        "transliteration": "Thookki vinai sei",
+        "meaning_tamil": "சிந்தித்து செயல் செய்",
+        "meaning_english": "Think before you act; act with deliberation",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 43,
+        "letter": "தெ",
+        "verse": "தெய்வம் இகழேல்",
+        "transliteration": "Theivam igazhel",
+        "meaning_tamil": "தெய்வத்தை இகழாதே",
+        "meaning_english": "Do not despise God",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 44,
+        "letter": "தே",
+        "verse": "தேசத்தோடு ஒட்டி வாழ்",
+        "transliteration": "Thesathodhu otti vaazh",
+        "meaning_tamil": "நாட்டோடு இணைந்து வாழ்",
+        "meaning_english": "Live in harmony with your country",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 45,
+        "letter": "தை",
+        "verse": "தையல் சொல் கேளேல்",
+        "transliteration": "Thaiyal sol kelel",
+        "meaning_tamil": "பெண்களின் தீய சொல்லை கேளாதே",
+        "meaning_english": "Do not heed harmful counsel from women",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 46,
+        "letter": "தொ",
+        "verse": "தொன்மை மறவேல்",
+        "transliteration": "Thonmai maravel",
+        "meaning_tamil": "பழமையான நட்பை மறவாதே",
+        "meaning_english": "Do not forget old friendships",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 47,
+        "letter": "தோ",
+        "verse": "தோற்பன தொடரேல்",
+        "transliteration": "Thorpana thodarel",
+        "meaning_tamil": "தோல்வி தரும் செயல்களை தொடராதே",
+        "meaning_english": "Do not pursue things that lead to defeat",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 48,
+        "letter": "ந",
+        "verse": "நன்மை கடைப்பிடி",
+        "transliteration": "Nanmai kadaipidi",
+        "meaning_tamil": "நன்மையை கடைப்பிடி",
+        "meaning_english": "Adhere to goodness",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 49,
+        "letter": "நா",
+        "verse": "நாடு ஒப்பன செய்",
+        "transliteration": "Naadu oppana sei",
+        "meaning_tamil": "நாடு ஏற்கும் செயல்களை செய்",
+        "meaning_english": "Do what the country approves",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 50,
+        "letter": "நி",
+        "verse": "நிலையில் பிரியேல்",
+        "transliteration": "Nilaiyil piriyel",
+        "meaning_tamil": "உன் நிலையிலிருந்து பிரியாதே",
+        "meaning_english": "Do not deviate from your position",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 51,
+        "letter": "நீ",
+        "verse": "நீர் விளையாடேல்",
+        "transliteration": "Neer vilaiyaadel",
+        "meaning_tamil": "நீரில் விளையாடாதே",
+        "meaning_english": "Do not play in water recklessly",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 52,
+        "letter": "நு",
+        "verse": "நுண்மை நுகரேல்",
+        "transliteration": "Nunmai nugarel",
+        "meaning_tamil": "நுட்பமான தீமைகளை நுகராதே",
+        "meaning_english": "Do not indulge in subtle vices",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 53,
+        "letter": "நூ",
+        "verse": "நூல் பல கல்",
+        "transliteration": "Nool pala kal",
+        "meaning_tamil": "பல நூல்களை கற்றுக்கொள்",
+        "meaning_english": "Learn many books and scriptures",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 54,
+        "letter": "நெ",
+        "verse": "நெற்பயிர் விளை",
+        "transliteration": "Nerpayir vilai",
+        "meaning_tamil": "நெல் பயிர் விளைவி",
+        "meaning_english": "Cultivate paddy; practice agriculture",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 55,
+        "letter": "நே",
+        "verse": "நேர்பட ஒழுகு",
+        "transliteration": "Nerpada ozhugu",
+        "meaning_tamil": "நேர்மையாக நட",
+        "meaning_english": "Conduct yourself honestly",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 56,
+        "letter": "நை",
+        "verse": "நைவினை நணுகேல்",
+        "transliteration": "Naivinai nanugel",
+        "meaning_tamil": "அழிவு தரும் செயலை நெருங்காதே",
+        "meaning_english": "Do not approach destructive deeds",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 57,
+        "letter": "நொ",
+        "verse": "நொய்ய உரையேல்",
+        "transliteration": "Noiya uraiyel",
+        "meaning_tamil": "இழிவான சொல் சொல்லாதே",
+        "meaning_english": "Do not speak worthless words",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 58,
+        "letter": "நோ",
+        "verse": "நோய்க்கு இடம் கொடேல்",
+        "transliteration": "Noikku idam kodel",
+        "meaning_tamil": "நோய்க்கு இடம் கொடாதே",
+        "meaning_english": "Do not give room for disease",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 59,
+        "letter": "ப",
+        "verse": "பழிப்பன பகரேல்",
+        "transliteration": "Pazhippana pagarel",
+        "meaning_tamil": "பழிக்கத்தக்கவற்றை சொல்லாதே",
+        "meaning_english": "Do not speak of blameworthy things",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 60,
+        "letter": "பா",
+        "verse": "பாம்பொடு பழகேல்",
+        "transliteration": "Paambodu pazhagel",
+        "meaning_tamil": "தீயவர்களோடு பழகாதே",
+        "meaning_english": "Do not associate with the wicked (like snakes)",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 61,
+        "letter": "பி",
+        "verse": "பிழைபடச் சொல்லேல்",
+        "transliteration": "Pizhaipada sollel",
+        "meaning_tamil": "தவறாக சொல்லாதே",
+        "meaning_english": "Do not speak erroneously",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 62,
+        "letter": "பீ",
+        "verse": "பீடு பெற நில்",
+        "transliteration": "Peedu pera nil",
+        "meaning_tamil": "பெருமை பெற நில்",
+        "meaning_english": "Stand to gain greatness",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 63,
+        "letter": "பு",
+        "verse": "புகழ்ந்தாரை போற்றி வாழ்",
+        "transliteration": "Pugazhndharai potri vaazh",
+        "meaning_tamil": "புகழ்ந்தவர்களை போற்றி வாழ்",
+        "meaning_english": "Live honoring those who praised you",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 64,
+        "letter": "பூ",
+        "verse": "பூமி திருத்தி உண்",
+        "transliteration": "Bhoomi thiruthi un",
+        "meaning_tamil": "நிலத்தை பண்படுத்தி உண்",
+        "meaning_english": "Cultivate the land and then eat",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 65,
+        "letter": "பெ",
+        "verse": "பெரியாரை துணை கொள்",
+        "transliteration": "Periyaarai thunai kol",
+        "meaning_tamil": "பெரியவர்களை துணையாக கொள்",
+        "meaning_english": "Take elders and the wise as your support",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 66,
+        "letter": "பே",
+        "verse": "பேதைமை அகற்று",
+        "transliteration": "Pethaimai agatru",
+        "meaning_tamil": "அறியாமையை அகற்று",
+        "meaning_english": "Remove ignorance and foolishness",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 67,
+        "letter": "பை",
+        "verse": "பையலோடு இணங்கேல்",
+        "transliteration": "Paiyalodu inangel",
+        "meaning_tamil": "அறிவில்லாதவரோடு சேராதே",
+        "meaning_english": "Do not associate with fools",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 68,
+        "letter": "பொ",
+        "verse": "பொருள் தனைப் போற்றி வாழ்",
+        "transliteration": "Porul thanai potri vaazh",
+        "meaning_tamil": "செல்வத்தை காத்து வாழ்",
+        "meaning_english": "Live protecting your wealth",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 69,
+        "letter": "போ",
+        "verse": "போர்த் தொழில் புரியேல்",
+        "transliteration": "Por thozhil puriyel",
+        "meaning_tamil": "போர் தொழிலை செய்யாதே",
+        "meaning_english": "Do not engage in warfare unnecessarily",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 70,
+        "letter": "ம",
+        "verse": "மனம் தடுமாறேல்",
+        "transliteration": "Manam thadumaarel",
+        "meaning_tamil": "மனம் தடுமாறாதே",
+        "meaning_english": "Do not let your mind waver",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 71,
+        "letter": "மா",
+        "verse": "மாற்றானுக்கு இடம் கொடேல்",
+        "transliteration": "Maatranukku idam kodel",
+        "meaning_tamil": "பகைவனுக்கு இடம் கொடாதே",
+        "meaning_english": "Do not give place to enemies",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 72,
+        "letter": "மி",
+        "verse": "மிகைபடச் சொல்லேல்",
+        "transliteration": "Migaipada sollel",
+        "meaning_tamil": "மிகைப்படுத்தி சொல்லாதே",
+        "meaning_english": "Do not exaggerate when speaking",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 73,
+        "letter": "மீ",
+        "verse": "மீதூண் விரும்பேல்",
+        "transliteration": "Meethoon virumbel",
+        "meaning_tamil": "அதிகமாக உண்ண விரும்பாதே",
+        "meaning_english": "Do not desire to overeat",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 74,
+        "letter": "மு",
+        "verse": "முனைமுகத்து நில்லேல்",
+        "transliteration": "Munaimugath nillel",
+        "meaning_tamil": "சண்டை முனையில் நிற்காதே",
+        "meaning_english": "Do not stand at the front of battle unnecessarily",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 75,
+        "letter": "மூ",
+        "verse": "மூர்க்கரோடு இணங்கேல்",
+        "transliteration": "Morkkarodu inangel",
+        "meaning_tamil": "முரடர்களோடு சேராதே",
+        "meaning_english": "Do not associate with the obstinate and rude",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 76,
+        "letter": "மெ",
+        "verse": "மெல்லி நல்லாள் தோள் சேர்",
+        "transliteration": "Melli nallaal thol ser",
+        "meaning_tamil": "நல்ல மனைவியின் தோளை சேர்",
+        "meaning_english": "Embrace the shoulders of a good wife",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 77,
+        "letter": "மே",
+        "verse": "மேன்மக்கள் சொல் கேள்",
+        "transliteration": "Menmakkal sol kel",
+        "meaning_tamil": "உயர்ந்தவர்கள் சொல் கேள்",
+        "meaning_english": "Listen to the words of the noble",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 78,
+        "letter": "மை",
+        "verse": "மைவிழியார் மனை அகல்",
+        "transliteration": "Maivizhiyaar manai agal",
+        "meaning_tamil": "விலைமாதர் வீட்டை விட்டு அகல்",
+        "meaning_english": "Stay away from the house of courtesans",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 79,
+        "letter": "மொ",
+        "verse": "மொழிவது அற மொழி",
+        "transliteration": "Mozhivadhu ara mozhi",
+        "meaning_tamil": "அறத்தை பேசு",
+        "meaning_english": "Speak words of righteousness",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 80,
+        "letter": "மோ",
+        "verse": "மோகத்தை முனி",
+        "transliteration": "Moghathai muni",
+        "meaning_tamil": "ஆசையை வெறு",
+        "meaning_english": "Hate excessive desire and lust",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 81,
+        "letter": "வ",
+        "verse": "வல்லமை பேசேல்",
+        "transliteration": "Vallamai pesel",
+        "meaning_tamil": "வலிமையை பெருமையாக பேசாதே",
+        "meaning_english": "Do not boast about your strength",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 82,
+        "letter": "வா",
+        "verse": "வாதுமுற் கூறேல்",
+        "transliteration": "Vaadhumur koorel",
+        "meaning_tamil": "வாதத்தை முற்படுத்தாதே",
+        "meaning_english": "Do not initiate arguments",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 83,
+        "letter": "வி",
+        "verse": "வித்தை விரும்பு",
+        "transliteration": "Vithai virumbu",
+        "meaning_tamil": "கல்வியை விரும்பு",
+        "meaning_english": "Desire knowledge and learning",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 84,
+        "letter": "வீ",
+        "verse": "வீடு பெற நில்",
+        "transliteration": "Veedu pera nil",
+        "meaning_tamil": "முக்தி பெற நில்",
+        "meaning_english": "Stand to attain liberation (moksha)",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 85,
+        "letter": "வு",
+        "verse": "உத்தமன் ஆக இரு",
+        "transliteration": "Uthaman aaga iru",
+        "meaning_tamil": "உத்தமனாக இரு",
+        "meaning_english": "Be a noble and virtuous person",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 86,
+        "letter": "வூ",
+        "verse": "ஊக்கமது கைவிடேல்",
+        "transliteration": "Ookkamathu kaividel",
+        "meaning_tamil": "ஊக்கத்தை கைவிடாதே",
+        "meaning_english": "Do not abandon enthusiasm",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 87,
+        "letter": "வெ",
+        "verse": "வெட்டெனப் பேசேல்",
+        "transliteration": "Vettena pesel",
+        "meaning_tamil": "கடுமையாக பேசாதே",
+        "meaning_english": "Do not speak harshly",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 88,
+        "letter": "வே",
+        "verse": "வேண்டி வினை செயேல்",
+        "transliteration": "Vendi vinai seyel",
+        "meaning_tamil": "விரும்பி தீய வினை செய்யாதே",
+        "meaning_english": "Do not intentionally do evil deeds",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 89,
+        "letter": "வை",
+        "verse": "வைகறைத் துயில் எழு",
+        "transliteration": "Vaikarai thuyil ezhu",
+        "meaning_tamil": "அதிகாலையில் எழு",
+        "meaning_english": "Wake up at dawn",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 90,
+        "letter": "வொ",
+        "verse": "ஒற்றுமை விரும்பு",
+        "transliteration": "Otrumai virumbu",
+        "meaning_tamil": "ஒற்றுமையை விரும்பு",
+        "meaning_english": "Desire unity and harmony",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 91,
+        "letter": "வோ",
+        "verse": "ஓய்தல் இல்லாமல் உழை",
+        "transliteration": "Oithal illamal uzhai",
+        "meaning_tamil": "ஓய்வின்றி உழை",
+        "meaning_english": "Work without rest",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 92,
+        "letter": "ய",
+        "verse": "யாம் என்று ஒருப்படேல்",
+        "transliteration": "Yaam endru oruppudel",
+        "meaning_tamil": "நான் என்று கர்வப்படாதே",
+        "meaning_english": "Do not be proud saying 'I'",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 93,
+        "letter": "ர",
+        "verse": "இரவு நல்கி வாழ்",
+        "transliteration": "Iravu nalgi vaazh",
+        "meaning_tamil": "இரவலர்க்கு கொடுத்து வாழ்",
+        "meaning_english": "Live by giving to those who ask",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 94,
+        "letter": "ல",
+        "verse": "இலவம் பஞ்சில் துயில்",
+        "transliteration": "Ilavam panjil thuyil",
+        "meaning_tamil": "இலவம் பஞ்சில் படு",
+        "meaning_english": "Sleep on cotton from the silk-cotton tree",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 95,
+        "letter": "வ",
+        "verse": "வல்லவன் ஆண்மை தெளி",
+        "transliteration": "Vallavan aanmai theli",
+        "meaning_tamil": "வல்லவனின் ஆண்மையை தெளிவாக அறி",
+        "meaning_english": "Understand the valor of the capable",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 96,
+        "letter": "ழ",
+        "verse": "அழகு அலற விரும்பேல்",
+        "transliteration": "Azhagu alara virumbel",
+        "meaning_tamil": "அழகு அழிய விரும்பாதே",
+        "meaning_english": "Do not desire beauty to be destroyed",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 97,
+        "letter": "ள",
+        "verse": "உள்ளது அறி",
+        "transliteration": "Ulladhu ari",
+        "meaning_tamil": "உண்மையை அறி",
+        "meaning_english": "Know the truth",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 98,
+        "letter": "ற",
+        "verse": "அறநெறி தவறேல்",
+        "transliteration": "Araneri thavarel",
+        "meaning_tamil": "அற நெறியில் தவறாதே",
+        "meaning_english": "Do not deviate from the path of righteousness",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 99,
+        "letter": "ன",
+        "verse": "அனந்தல் ஆடேல்",
+        "transliteration": "Anandhal aadel",
+        "meaning_tamil": "தூக்கமின்மையால் சோர்வடையாதே",
+        "meaning_english": "Do not become drowsy from lack of sleep",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 100,
+        "letter": "ஃ",
+        "verse": "அஃகம் சுருக்கேல்",
+        "transliteration": "Ahkam surukel",
+        "meaning_tamil": "தானியத்தை குறைக்காதே; நிறுத்தலில் குறை செய்யாதே",
+        "meaning_english": "Do not reduce the measure of grains; be honest in weighing",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 101,
+        "letter": "அ",
+        "verse": "அருமை அறிந்து அன்பு செய்",
+        "transliteration": "Arumai arindhu anbu sei",
+        "meaning_tamil": "பொருளின் அருமை அறிந்து அன்பு செய்",
+        "meaning_english": "Know the value and love accordingly",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 102,
+        "letter": "இ",
+        "verse": "இளமையில் கல்",
+        "transliteration": "Ilamaiyil kal",
+        "meaning_tamil": "இளமையிலேயே கற்றுக்கொள்",
+        "meaning_english": "Learn in your youth",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 103,
+        "letter": "உ",
+        "verse": "உயர்வினும் பணி",
+        "transliteration": "Uyarvinum pani",
+        "meaning_tamil": "உயர்ந்த நிலையிலும் பணிவாக இரு",
+        "meaning_english": "Be humble even in high positions",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 104,
+        "letter": "எ",
+        "verse": "எளிமையை விரும்பு",
+        "transliteration": "Elimaiyai virumbu",
+        "meaning_tamil": "எளிமையான வாழ்க்கையை விரும்பு",
+        "meaning_english": "Desire simplicity",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 105,
+        "letter": "ஒ",
+        "verse": "ஒரு நன்மை செய்",
+        "transliteration": "Oru nanmai sei",
+        "meaning_tamil": "ஒரு நன்மையாவது செய்",
+        "meaning_english": "Do at least one good deed",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 106,
+        "letter": "க",
+        "verse": "கற்றதை கேளேல்",
+        "transliteration": "Katradhai kelel",
+        "meaning_tamil": "கற்றவற்றை இகழேல்",
+        "meaning_english": "Do not despise what you have learned",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 107,
+        "letter": "த",
+        "verse": "தவம் தலையாம் செய்",
+        "transliteration": "Thavam thalaiyaam sei",
+        "meaning_tamil": "தவத்தை முக்கியமாக செய்",
+        "meaning_english": "Perform penance as the primary duty",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 108,
+        "letter": "ப",
+        "verse": "பரிவது ஆம் செய்",
+        "transliteration": "Parivadhu aam sei",
+        "meaning_tamil": "இரக்கமுள்ள செயல்களை செய்",
+        "meaning_english": "Do compassionate deeds",
+        "source": "aathichoodi"
+      },
+      {
+        "number": 109,
+        "letter": "ம",
+        "verse": "மனோலயம் ஆகு",
+        "transliteration": "Manolayam aagu",
+        "meaning_tamil": "மனம் அடங்கியவனாக இரு",
+        "meaning_english": "Attain mental tranquility",
+        "source": "aathichoodi"
+      }
+    ]
+  },
+  "konrai_venthan": {
+    "title": "கொன்றை வேந்தன்",
+    "title_english": "Konrai Venthan",
+    "description": "A collection of 91 two-line moral couplets by Avvaiyar, each teaching practical wisdom for daily life",
+    "total_verses": 91,
+    "verses": [
+      {
+        "number": 1,
+        "verse": "அன்னையும் பிதாவும் முன்னறி தெய்வம்",
+        "transliteration": "Annaiyum pithaavum munnari theivam",
+        "meaning_tamil": "தாயும் தந்தையும் முதலில் அறிய வேண்டிய கடவுள்",
+        "meaning_english": "Mother and father are the first gods to know",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 2,
+        "verse": "ஆலயம் தொழுவது சாலவும் நன்று",
+        "transliteration": "Aalayam thozhuvadhu saalavum nandru",
+        "meaning_tamil": "கோயிலை வணங்குவது மிகவும் நல்லது",
+        "meaning_english": "Worshipping at temples is very good",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 3,
+        "verse": "இல்லறம் அல்லது நல்லறம் அன்று",
+        "transliteration": "Illaram alladhu nallaram andru",
+        "meaning_tamil": "இல்லறம் அல்லாமல் வேறு நல்ல அறம் இல்லை",
+        "meaning_english": "There is no virtue greater than family life",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 4,
+        "verse": "ஈயார் தேட்டை தீயார் கொள்வர்",
+        "transliteration": "Eeyaar thettai theeyaar kolvar",
+        "meaning_tamil": "கொடுக்காதவர் சேர்த்ததை தீயவர் கொள்வர்",
+        "meaning_english": "What the miser hoards, the wicked will take",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 5,
+        "verse": "உடையான் கெட்டால் நடையாள் கொள்வர்",
+        "transliteration": "Udaiyaan kettaal nadaiyaal kolvar",
+        "meaning_tamil": "செல்வந்தன் கெட்டால் நடை பெறுவார் கொள்வர்",
+        "meaning_english": "When the wealthy fall, the active will claim their wealth",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 6,
+        "verse": "ஊக்கம் உடைமை ஆக்கத்திற்கு அழகு",
+        "transliteration": "Ookkam udaimai aakathirku azhagu",
+        "meaning_tamil": "ஊக்கம் கொண்டிருப்பது செல்வத்திற்கு அழகு",
+        "meaning_english": "Enthusiasm is the beauty of prosperity",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 7,
+        "verse": "எண்ணும் எழுத்தும் கண்ணெனத் தகும்",
+        "transliteration": "Ennum ezhuthum kannena thagum",
+        "meaning_tamil": "எண்ணும் எழுத்தும் கண் போன்றவை",
+        "meaning_english": "Numbers and letters are like eyes",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 8,
+        "verse": "ஏவா மக்கள் மூவா மருந்து",
+        "transliteration": "Evaa makkal moovaa marundhu",
+        "meaning_tamil": "சொல்லாமல் செய்யும் மக்கள் மூப்பு வராத மருந்து",
+        "meaning_english": "Children who act without being told are the medicine against aging",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 9,
+        "verse": "ஐயம் புகினும் செய்வன செய்",
+        "transliteration": "Aiyam puginum seyvana sei",
+        "meaning_tamil": "சந்தேகம் வந்தாலும் செய்ய வேண்டியதை செய்",
+        "meaning_english": "Even in doubt, do what must be done",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 10,
+        "verse": "ஒருவனைப் பற்றி ஒரகத்து இரு",
+        "transliteration": "Oruvanai patri oragathu iru",
+        "meaning_tamil": "ஒருவனை நம்பி ஒரு இடத்தில் இரு",
+        "meaning_english": "Trust one person and stay in one place",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 11,
+        "verse": "ஓதலின் நன்று ஒழுக்கம் பேணல்",
+        "transliteration": "Odhalin nandru ozhukkam penal",
+        "meaning_tamil": "ஓதுவதை விட ஒழுக்கம் காப்பது நன்று",
+        "meaning_english": "Maintaining good conduct is better than mere recitation",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 12,
+        "verse": "கற்றவர்தான் கண் உடையவர்",
+        "transliteration": "Katravarthaan kan udaiyavar",
+        "meaning_tamil": "கற்றவர்களே கண் உடையவர்கள்",
+        "meaning_english": "Only the learned have true eyes",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 13,
+        "verse": "காணாக் கனவு மாணா ஆகும்",
+        "transliteration": "Kaanaak kanavu maanaa aagum",
+        "meaning_tamil": "காணாத கனவு சிறப்பாகாது",
+        "meaning_english": "Unseen dreams will not be fulfilled",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 14,
+        "verse": "கிளைஞர் மரபு விளைவது அறி",
+        "transliteration": "Kilaignar marabu vilaivadhu ari",
+        "meaning_tamil": "உறவினர் பண்பு விளைவதை அறி",
+        "meaning_english": "Know what grows from the tradition of kin",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 15,
+        "verse": "கீழோர் ஆயினும் தாழ உரை",
+        "transliteration": "Keezhore aayinum thaazha urai",
+        "meaning_tamil": "கீழ்நிலையில் உள்ளவர் ஆனாலும் பணிவாக பேசு",
+        "meaning_english": "Even to those of lower status, speak humbly",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 16,
+        "verse": "குற்றம் பார்க்கில் சுற்றம் இல்லை",
+        "transliteration": "Kutram paarkil sutram illai",
+        "meaning_tamil": "குற்றம் தேடினால் உறவு இல்லை",
+        "meaning_english": "If you look for faults, you will have no relations",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 17,
+        "verse": "கூர்த்துநோக்கில் பேர்த்தும் ஏமாற்று",
+        "transliteration": "Koorthunokil perthum emattru",
+        "meaning_tamil": "கூர்மையாக நோக்கினாலும் மறுபடியும் ஏமாற்றப்படுவாய்",
+        "meaning_english": "Even with keen observation, you can be deceived again",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 18,
+        "verse": "கெடுவது செய்யின் விடுவது கருமம்",
+        "transliteration": "Keduvadhu seiyin viduvadhu karumam",
+        "meaning_tamil": "கெடுக்கும் செயல் செய்தால் விடுவது கடமை",
+        "meaning_english": "If doing harm, abandoning it is duty",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 19,
+        "verse": "கேட்டினும் உண்டோர் ஆக்கம் கருது",
+        "transliteration": "Kettinum undor aakkam karudhu",
+        "meaning_tamil": "கேட்டாலும் ஒரு ஆக்கம் நினை",
+        "meaning_english": "Even in ruin, think of creation",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 20,
+        "verse": "கைப்பொருள் தன்னில் மெய்ப்பொருள் காண்",
+        "transliteration": "Kaiporul thannil meyporul kaan",
+        "meaning_tamil": "கையில் உள்ளதில் உண்மை பொருளை காண்",
+        "meaning_english": "See the true value in what you have in hand",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 21,
+        "verse": "கொல்லான் புலாலை மறுத்தானும் கோத்திரத்து உய்யும்",
+        "transliteration": "Kollaan pulaalai maruthanum kothirathu uyyum",
+        "meaning_tamil": "கொல்லாதவனும் புலால் மறுத்தவனும் குலத்தை உயர்த்துவான்",
+        "meaning_english": "He who does not kill and abstains from meat elevates his lineage",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 22,
+        "verse": "கோல் கொடியார் சாலக் கேடு",
+        "transliteration": "Kol kodiyaar saalak kedu",
+        "meaning_tamil": "ஆட்சி கொடியவர் மிகவும் கேட்டை அடைவர்",
+        "meaning_english": "Cruel rulers will face great ruin",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 23,
+        "verse": "சந்ததி விருத்தி பந்தம் எனத்தகும்",
+        "transliteration": "Sandhathi viruthi bandham enathagum",
+        "meaning_tamil": "வம்சம் பெருகுவது பந்தம் எனப்படும்",
+        "meaning_english": "The growth of progeny is called bondage",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 24,
+        "verse": "சான்றோர் சொல்லை உள்ளம் கொள்",
+        "transliteration": "Saandror sollai ullam kol",
+        "meaning_tamil": "பெரியோர் சொல்லை மனதில் கொள்",
+        "meaning_english": "Keep the words of the wise in your heart",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 25,
+        "verse": "சிற்றினம் சேராமை நற்றினம் பெறலாம்",
+        "transliteration": "Sitrinam seraamai natrinam peralaam",
+        "meaning_tamil": "சிறிய கூட்டம் சேராமல் இருந்தால் நல்ல கூட்டம் கிடைக்கும்",
+        "meaning_english": "Avoiding bad company brings good company",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 26,
+        "verse": "சீரைத் தேடும் பேரைப் பார்",
+        "transliteration": "Seerai thedum perai paar",
+        "meaning_tamil": "சிறப்பை தேடுபவர் பெயரை பார்",
+        "meaning_english": "Look at the name of one who seeks excellence",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 27,
+        "verse": "சுற்றம் தழுவுவது முற்றும் நட்பு",
+        "transliteration": "Sutram thazhuvuvadhu mutrum natpu",
+        "meaning_tamil": "உறவை தழுவுவது முழு நட்பு",
+        "meaning_english": "Embracing relatives is complete friendship",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 28,
+        "verse": "சூதும் வாதும் வேதனை செய்யும்",
+        "transliteration": "Soodhum vaadhum vedhanai seyyum",
+        "meaning_tamil": "சூதும் வாதமும் துன்பம் தரும்",
+        "meaning_english": "Gambling and arguments cause suffering",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 29,
+        "verse": "செய்தவம் மறவேல் ஐயன் பெறலாம்",
+        "transliteration": "Seithavam maravel aiyan peralaam",
+        "meaning_tamil": "செய்த தவத்தை மறவாதே, குருவைப் பெறலாம்",
+        "meaning_english": "Do not forget your penance; you may gain a master",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 30,
+        "verse": "சேரிடம் அறிந்து சேர்ந்து வாழ்",
+        "transliteration": "Seridam arindhu serndhu vaazh",
+        "meaning_tamil": "சேரும் இடம் அறிந்து சேர்ந்து வாழ்",
+        "meaning_english": "Know the right place to join and live there",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 31,
+        "verse": "சொற்றவம் இல்லார் பெற்றவம் கொள்",
+        "transliteration": "Sortavam illaar petravam kol",
+        "meaning_tamil": "சொல் தவம் இல்லாதவரிடம் பெற்ற தவம் கொள்",
+        "meaning_english": "Take gained wisdom from those who lack word-penance",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 32,
+        "verse": "சோம்பர் என்னும் தேம்பல் விடு",
+        "transliteration": "Sombar ennum thembal vidu",
+        "meaning_tamil": "சோம்பேறி என்னும் சோர்வை விடு",
+        "meaning_english": "Abandon the weakness called laziness",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 33,
+        "verse": "ஞானம் இல்லார்க்கு சேனமும் இல்லை",
+        "transliteration": "Gnanam illarkku senamum illai",
+        "meaning_tamil": "அறிவு இல்லாதவர்க்கு செல்வமும் இல்லை",
+        "meaning_english": "Without wisdom, there is no wealth",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 34,
+        "verse": "தந்தை சொல் மிக்க மந்திரம் இல்லை",
+        "transliteration": "Thandhai sol mikka manthiram illai",
+        "meaning_tamil": "தந்தையின் சொல்லை விட உயர்ந்த மந்திரம் இல்லை",
+        "meaning_english": "There is no mantra greater than a father's words",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 35,
+        "verse": "தாய் சொல் தட்டேல் வாய் சுவை கெடும்",
+        "transliteration": "Thaai sol thattel vaai suvai kedum",
+        "meaning_tamil": "தாயின் சொல்லை மறுத்தால் வாயின் சுவை கெடும்",
+        "meaning_english": "If you refuse mother's words, taste in your mouth will be lost",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 36,
+        "verse": "திருவருளால் மறைபொருள் தெளி",
+        "transliteration": "Thiruvarulaal maraiporul theli",
+        "meaning_tamil": "இறையருளால் மறைபொருளை தெளிவாக அறி",
+        "meaning_english": "By divine grace, understand the secrets of scriptures",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 37,
+        "verse": "தீராப் புகழ் தீர எண்ணேல்",
+        "transliteration": "Theeraap pugazh theera ennel",
+        "meaning_tamil": "தீராத புகழை தீர்க்க எண்ணாதே",
+        "meaning_english": "Do not think of ending undying fame",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 38,
+        "verse": "துக்கம் விட்டுத் திக்குகள் காண்",
+        "transliteration": "Thukkam vittu thikkugal kaan",
+        "meaning_tamil": "துக்கத்தை விட்டு திசைகளை காண்",
+        "meaning_english": "Leave sorrow and see the directions (opportunities)",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 39,
+        "verse": "தூற்றும் நூல் கற்று ஏற்றம் பெறு",
+        "transliteration": "Thootrum nool katru etram peru",
+        "meaning_tamil": "புகழப்படும் நூல் கற்று உயர்வு பெறு",
+        "meaning_english": "Learn praised texts and gain elevation",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 40,
+        "verse": "தெய்வம் தொழாதான் வாய்மை கெடும்",
+        "transliteration": "Theivam thozhaathaan vaaimai kedum",
+        "meaning_tamil": "தெய்வத்தை தொழாதவன் வாய்மை கெடும்",
+        "meaning_english": "He who does not worship God loses truth",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 41,
+        "verse": "தேடாமற் காண்பது அருமை",
+        "transliteration": "Thedaamar kaanpadhu arumai",
+        "meaning_tamil": "தேடாமல் காண்பது அரிது",
+        "meaning_english": "Finding without searching is rare",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 42,
+        "verse": "தையலை நம்பின் வையகம் ஏமாறும்",
+        "transliteration": "Thaiyalai nambin vaiyagam emaarum",
+        "meaning_tamil": "பெண்ணை மட்டும் நம்பினால் உலகம் ஏமாறும்",
+        "meaning_english": "If you trust only in women, the world will be deceived",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 43,
+        "verse": "தொழில் செய்வோர் செல்வர் ஆவர்",
+        "transliteration": "Thozhil seivor selvar aavar",
+        "meaning_tamil": "தொழில் செய்பவர் செல்வந்தர் ஆவர்",
+        "meaning_english": "Those who work become wealthy",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 44,
+        "verse": "தோளிணை மாற்றேல் ஆளிணை கெடும்",
+        "transliteration": "Tholinai maatrel aalinai kedum",
+        "meaning_tamil": "தோள் இணையை மாற்றினால் ஆள் இணை கெடும்",
+        "meaning_english": "If you change shoulder partners, your pair will be ruined",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 45,
+        "verse": "நல்லது பாரில் பொல்லாதது போம்",
+        "transliteration": "Nalladhu paaril polladhadhu pom",
+        "meaning_tamil": "நல்லதை பார்த்தால் தீயது போகும்",
+        "meaning_english": "If you see good, evil will go away",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 46,
+        "verse": "நாள் எனின் மறவேல் நாள் என கருது",
+        "transliteration": "Naal enin maravel naal ena karudhu",
+        "meaning_tamil": "நாள் என்றால் மறவாதே, நாள் என கருது",
+        "meaning_english": "If it is a day, do not forget; think of it as a day",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 47,
+        "verse": "நிலையில் தொழில் நில் மலையிலும் உயர்",
+        "transliteration": "Nilaiyil thozhil nil malaiyilum uyar",
+        "meaning_tamil": "நிலையான தொழிலில் நில், மலையை விட உயர்வாய்",
+        "meaning_english": "Stand in steady work; you will rise higher than mountains",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 48,
+        "verse": "நீள் பணி செய்வோன் நாள் மாறி இருக்கும்",
+        "transliteration": "Neel pani seivon naal maari irukkum",
+        "meaning_tamil": "நீண்ட பணி செய்பவன் நாள் மாறி இருக்கும்",
+        "meaning_english": "One who does long service will have days change for the better",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 49,
+        "verse": "நுகர்வன நுகர்ந்து துகள் அற வாழ்",
+        "transliteration": "Nugarvana nugarndhu thugal ara vaazh",
+        "meaning_tamil": "நுகர வேண்டியதை நுகர்ந்து குற்றமின்றி வாழ்",
+        "meaning_english": "Enjoy what should be enjoyed and live without fault",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 50,
+        "verse": "நூல் அறி பண்டிதன் வேல் அறி மன்னன்",
+        "transliteration": "Nool ari pandithan vel ari mannan",
+        "meaning_tamil": "நூல் அறிந்தவன் பண்டிதன், வேல் அறிந்தவன் மன்னன்",
+        "meaning_english": "He who knows texts is a scholar; he who knows the spear is a king",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 51,
+        "verse": "நெல்லும் உயிர்ப்பு புல்லும் இரை தேடு",
+        "transliteration": "Nellum uyirppu pullum irai thedu",
+        "meaning_tamil": "நெல்லும் உயிர் வளர்க்கும், புல்லும் உணவு தேடும்",
+        "meaning_english": "Rice sustains life; even grass seeks food",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 52,
+        "verse": "நேர்நிலை இல்லார் பார்நிலை அறியார்",
+        "transliteration": "Nernilai illaar paarnilai ariyaar",
+        "meaning_tamil": "நேர்மையான நிலை இல்லாதவர் உலக நிலை அறியார்",
+        "meaning_english": "Those without honesty do not know the state of the world",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 53,
+        "verse": "நைவளம் இல்லார் உய்வளம் இல்லார்",
+        "transliteration": "Naivalam illaar uyvalam illaar",
+        "meaning_tamil": "நெகிழும் தன்மை இல்லாதவர் உய்வு வளம் இல்லாதவர்",
+        "meaning_english": "Those without flexibility lack prosperity of salvation",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 54,
+        "verse": "நொந்தாரை நோவ சொல்லேல்",
+        "transliteration": "Nondhaarai nova sollel",
+        "meaning_tamil": "வருந்தியவரை வருத்தும்படி சொல்லாதே",
+        "meaning_english": "Do not speak to hurt those who are already suffering",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 55,
+        "verse": "நோற்றேல் பிழைப்பு ஏற்றேல் பிணி",
+        "transliteration": "Notrel pizhaippu etrel pini",
+        "meaning_tamil": "நோற்றால் பிழைப்பு வரும், ஏற்றால் நோய் வரும்",
+        "meaning_english": "Fasting brings survival; accepting brings disease",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 56,
+        "verse": "பருவத்தே பயிர் செய் கருமத்தே கண் வை",
+        "transliteration": "Paruvathe payir sei karumathe kan vai",
+        "meaning_tamil": "பருவ காலத்தில் பயிர் செய், செயலில் கவனம் வை",
+        "meaning_english": "Sow in season; keep an eye on your deeds",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 57,
+        "verse": "பாலோடு ஆனை தான் நோக்க வேண்டும்",
+        "transliteration": "Paalodu aanai thaan nokka vendum",
+        "meaning_tamil": "பாலுடன் யானையை தன்னால் நோக்க வேண்டும்",
+        "meaning_english": "One must observe the elephant along with milk (care in nurturing)",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 58,
+        "verse": "பிச்சை புகேல் அச்சம் இன்றி வாழ்",
+        "transliteration": "Pichai pugel achham indri vaazh",
+        "meaning_tamil": "பிச்சை எடுக்காதே, பயமின்றி வாழ்",
+        "meaning_english": "Do not beg; live without fear",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 59,
+        "verse": "பீடு பெற எண்ணு நாடு புகழ் கொள்",
+        "transliteration": "Peedu pera ennu naadu pugazh kol",
+        "meaning_tamil": "பெருமை பெற எண்ணு, நாட்டின் புகழ் கொள்",
+        "meaning_english": "Think of gaining greatness; take the country's fame",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 60,
+        "verse": "புலை வளர்த்தோன் வாழும் அளவு வாழ்",
+        "transliteration": "Pulai valarthon vaazhum alavu vaazh",
+        "meaning_tamil": "இழிசெயல் வளர்த்தவன் வாழும் அளவு வாழ்",
+        "meaning_english": "Live as long as one who nurtured lowly deeds lives",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 61,
+        "verse": "பூமி ஒழுக்கம் மேவி நட",
+        "transliteration": "Bhoomi ozhukkam mevi nada",
+        "meaning_tamil": "பூமியின் ஒழுக்கத்தை மேவி நட",
+        "meaning_english": "Walk with the earth's moral conduct",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 62,
+        "verse": "பெற்றோர் பணி செய் சுற்றம் பெருகும்",
+        "transliteration": "Petror pani sei sutram perugum",
+        "meaning_tamil": "பெற்றோருக்கு பணி செய், சுற்றம் பெருகும்",
+        "meaning_english": "Serve your parents; relatives will multiply",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 63,
+        "verse": "பேர்மை உடையார் மூர்க்கம் பேசார்",
+        "transliteration": "Permai udaiyaar mookkam pesaar",
+        "meaning_tamil": "பெருமை உடையவர் முரட்டுத்தனமாக பேசார்",
+        "meaning_english": "Those with greatness do not speak rudely",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 64,
+        "verse": "பைய நடந்தால் வையம் தாங்கும்",
+        "transliteration": "Paiya nadandhal vaiyam thaangum",
+        "meaning_tamil": "மெதுவாக நடந்தால் உலகம் தாங்கும்",
+        "meaning_english": "If you walk slowly, the world will support you",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 65,
+        "verse": "பொன்னின் அருமை உன்னினால் புரியும்",
+        "transliteration": "Ponnin arumai unninal puriyum",
+        "meaning_tamil": "பொன்னின் அருமை நினைத்தால் புரியும்",
+        "meaning_english": "If you think about it, you will understand the value of gold",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 66,
+        "verse": "போர்வை தனில் பார்வை இரு",
+        "transliteration": "Porvai thanil paarvai iru",
+        "meaning_tamil": "போர்வைக்குள் பார்வை வை",
+        "meaning_english": "Keep your vision under the blanket (be discrete)",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 67,
+        "verse": "மாற்றான் வலிமை தேற்றி முனை",
+        "transliteration": "Matraan valimai thetri munai",
+        "meaning_tamil": "எதிரியின் வலிமை தெளிந்து முனை",
+        "meaning_english": "Understand the enemy's strength and then advance",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 68,
+        "verse": "மின்னின் நிலையை நின்று உணர்",
+        "transliteration": "Minnin nilaiyai nindru unar",
+        "meaning_tamil": "மின்னலின் நிலையை நின்று உணர்",
+        "meaning_english": "Stand and understand the state of lightning (impermanence)",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 69,
+        "verse": "மீயும் வினைப்பயன் தோயும் நலம்",
+        "transliteration": "Meeyum vinaippayan thoyum nalam",
+        "meaning_tamil": "உயரும் வினைப்பயன் தோயும் நலம்",
+        "meaning_english": "The fruit of rising action brings immersed welfare",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 70,
+        "verse": "முற்பகல் செய்தவம் பிற்பகல் விளையும்",
+        "transliteration": "Murpagal seithavam pirpagal vilaiyum",
+        "meaning_tamil": "முற்பகலில் செய்த தவம் பிற்பகலில் விளையும்",
+        "meaning_english": "Penance done in the morning bears fruit in the afternoon",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 71,
+        "verse": "மூத்தோர் சொல் கேள் காத்திரமாம்",
+        "transliteration": "Moothor sol kel kaathiramaam",
+        "meaning_tamil": "மூத்தவர் சொல் கேள், அது காப்பாற்றும்",
+        "meaning_english": "Listen to elders' words; they will protect you",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 72,
+        "verse": "மெத்தப் படித்தால் சத்தியம் தெரியும்",
+        "transliteration": "Methap padithal sathiyam theriyum",
+        "meaning_tamil": "மிகவும் படித்தால் உண்மை தெரியும்",
+        "meaning_english": "If you study much, truth will be known",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 73,
+        "verse": "மேதினி ஆணை நீதியின் படி",
+        "transliteration": "Medhini aanai needhiyin padi",
+        "meaning_tamil": "பூமியின் கட்டளை நீதியின் படி",
+        "meaning_english": "The earth's command follows justice",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 74,
+        "verse": "மொழிவது பொய்யேல் தொழில்வது அழியும்",
+        "transliteration": "Mozhivadhu poiyel thozhilvadhu azhiyum",
+        "meaning_tamil": "சொல்வது பொய்யானால் தொழில் அழியும்",
+        "meaning_english": "If what you say is false, your work will perish",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 75,
+        "verse": "மோனம் ஆகில் ஞானம் உண்டாகும்",
+        "transliteration": "Monam aagil gnanam undaagum",
+        "meaning_tamil": "மௌனமாக இருந்தால் ஞானம் உண்டாகும்",
+        "meaning_english": "If you are silent, wisdom will arise",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 76,
+        "verse": "வல்லவன் வள்ளுவன் எல்லாரும் போற்று",
+        "transliteration": "Vallavan valluvan ellaarum potru",
+        "meaning_tamil": "வல்லவன் வள்ளுவன், எல்லாரும் போற்று",
+        "meaning_english": "The capable one is Valluvan; everyone should honor him",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 77,
+        "verse": "வாழ்நாள் அறிந்து வாழ் பாழ் நீங்கும்",
+        "transliteration": "Vaazhnaal arindhu vaazh paazh neengum",
+        "meaning_tamil": "வாழ்நாள் அறிந்து வாழ்ந்தால் பாழ் நீங்கும்",
+        "meaning_english": "If you live knowing your life span, ruin will leave",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 78,
+        "verse": "வித்து இல்லார்க்கு சுத்தி இல்லை",
+        "transliteration": "Vithu illaarkku suthi illai",
+        "meaning_tamil": "வித்து இல்லாதவருக்கு சுத்தி இல்லை",
+        "meaning_english": "Those without seed have no purity",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 79,
+        "verse": "வீட்டுமை ஓம்புவோன் நாட்டுமை சேர்வான்",
+        "transliteration": "Veettumai ombuvon naattumai servaan",
+        "meaning_tamil": "வீட்டுமையை காப்பவன் நாட்டுமை சேர்வான்",
+        "meaning_english": "He who protects his home will join his country",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 80,
+        "verse": "வெற்றி வேண்டின் ஒற்றுமை வேண்டும்",
+        "transliteration": "Vetri vendin otrumai vendum",
+        "meaning_tamil": "வெற்றி வேண்டுமானால் ஒற்றுமை வேண்டும்",
+        "meaning_english": "If you want victory, you need unity",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 81,
+        "verse": "வேதத்தின் பயன் வீடு பெறல்",
+        "transliteration": "Vedhathin payan veedu peral",
+        "meaning_tamil": "வேதத்தின் பயன் வீடு பெறுதல்",
+        "meaning_english": "The fruit of the Vedas is attaining liberation",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 82,
+        "verse": "வைகல் தோறும் தெய்வம் தொழு",
+        "transliteration": "Vaigal thorum theivam thozhu",
+        "meaning_tamil": "தினமும் தெய்வத்தை தொழு",
+        "meaning_english": "Worship God every day",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 83,
+        "verse": "வொய்யார் சொல் கேளேல் மெய்யார் சொல் கேள்",
+        "transliteration": "Voiyaar sol kelel meiyaar sol kel",
+        "meaning_tamil": "பொய்யர் சொல் கேளாதே, மெய்யர் சொல் கேள்",
+        "meaning_english": "Do not listen to liars; listen to the truthful",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 84,
+        "verse": "யாருக்கும் இடுக்கண் இயற்றேல்",
+        "transliteration": "Yaarukkum idukkan iyatrel",
+        "meaning_tamil": "யாருக்கும் துன்பம் செய்யாதே",
+        "meaning_english": "Do not cause trouble to anyone",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 85,
+        "verse": "இரவலர் புகழ் தருவோர் தம் புகழ் செய்",
+        "transliteration": "Iravalar pugazh tharuvor tham pugazh sei",
+        "meaning_tamil": "யாசகர் புகழ் தருவோர் தம் புகழ் செய்வர்",
+        "meaning_english": "Those who give fame to beggars create their own fame",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 86,
+        "verse": "இலமென்று அசைவு இல் இலமென்று அயர்வு இல்",
+        "transliteration": "Ilamenru asaivu il ilamenru ayarvu il",
+        "meaning_tamil": "இல்லை என்று அசைவு இல்லை, இல்லை என்று சோர்வு இல்லை",
+        "meaning_english": "Saying 'I have not' causes no movement; saying 'I have not' causes no weariness",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 87,
+        "verse": "அழுக்காறு நெஞ்சத்தான் ஆக்கம் போன்றது இல்லை",
+        "transliteration": "Azhukkaaru nenjathaan aakkam pondradhu illai",
+        "meaning_tamil": "பொறாமை உள்ள மனத்தவனுக்கு ஆக்கம் போன்றது இல்லை",
+        "meaning_english": "One with envy in heart has nothing like prosperity",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 88,
+        "verse": "உள்ளியது எய்தலால் உள்ளல் தான் உள்ளலே",
+        "transliteration": "Ulliyadhu eithallaal ullal thaan ullale",
+        "meaning_tamil": "நினைத்ததை அடைவதால் நினைப்பதே நினைப்பு",
+        "meaning_english": "Since thought achieves what is thought, thinking itself is thinking",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 89,
+        "verse": "அறிவிலான் நெஞ்சு உறில் பொறிபயிலும் வெறியே",
+        "transliteration": "Arivilaan nenju uril pori payilum veriye",
+        "meaning_tamil": "அறிவில்லாதவன் நெஞ்சில் உறைந்தால் புலன்கள் வெறியை பயிலும்",
+        "meaning_english": "If ignorance dwells in heart, senses practice frenzy",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 90,
+        "verse": "நன்றி மறப்பது நன்று அன்று",
+        "transliteration": "Nandri marappadhu nandru andru",
+        "meaning_tamil": "நன்றியை மறப்பது நன்று அன்று",
+        "meaning_english": "Forgetting gratitude is not good",
+        "source": "konrai_venthan"
+      },
+      {
+        "number": 91,
+        "verse": "அஃகமும் காசும் சிக்கெனத் தேடு",
+        "transliteration": "Ahkamum kasum sikkena thedu",
+        "meaning_tamil": "தானியமும் பணமும் உறுதியாக தேடு",
+        "meaning_english": "Search firmly for grains and money",
+        "source": "konrai_venthan"
+      }
+    ]
+  },
+  "statistics": {
+    "total_aathichoodi_verses": 109,
+    "total_konrai_venthan_verses": 91,
+    "total_verses": 200,
+    "unique_tamil_letters_covered": 47,
+    "primary_themes": [
+      "righteousness",
+      "education",
+      "humility",
+      "hard_work",
+      "family_values",
+      "honesty",
+      "self_control",
+      "charity",
+      "wisdom",
+      "respect_for_elders"
+    ]
+  }
+}

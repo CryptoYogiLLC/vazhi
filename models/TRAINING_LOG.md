@@ -14,6 +14,9 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | v0.4 | 2026-02-06 | ❌ Failed | GGUF quantization produced gibberish output |
 | v0.5 | 2026-02-07 | ❌ Failed | SLM approach with Qwen2.5-0.5B - LoRA corrupted model |
 | v0.6 | 2026-02-07 | ❌ Failed | Sarvam-2B + IndicAlign Anudesh - 4-bit training corrupted model |
+| v0.7 | 2026-02-08 | ❌ Failed | Gemma-2B Tamil - Training worked but GGUF conversion failed (tokenizer holes) |
+| v0.8 | 2026-02-09 | 🔄 In Progress | Qwen3-0.6B - Two-stage Micro-DAPT + SFT on Kaggle |
+| v3.1 | 2026-02-10 | ❌ Failed | Qwen3-0.6B SFT - Mixed data formats caused "systemsystemsystem..." output |
 
 ---
 
@@ -635,6 +638,135 @@ A: தமிழ்நாட்டின் தலைநகரம் நகரா
 - Size: 1.63 GB
 - Quality: Good coherent Tamil, basic facts correct
 
+---
+
+## v0.7 Training Run (Gemma-2B Tamil Fine-tuning)
+
+**Date:** 2026-02-08
+**Status:** ❌ Failed (GGUF conversion failed due to tokenizer corruption)
+**Base Model:** abhinand/gemma-2b-it-tamil-v0.1-alpha (forked to CryptoYogi/gemma-2b-tamil-base)
+**Training Platform:** Kaggle (T4/P100 GPU)
+
+### Why Gemma-2B Tamil?
+
+After v0.6's complete failure with 4-bit training, we pivoted to using a pre-trained Tamil-capable model:
+
+| Factor | Value |
+|--------|-------|
+| Pre-training | Already instruction-tuned for Tamil |
+| Tamil quality | Produces coherent Tamil at Q4_K_M |
+| Base size | 2B parameters |
+| Q4_K_M size | 1.63 GB |
+| Tokenizer | Has proper pad_token (ID 0) |
+
+### Model Forking
+
+To ensure long-term stability and not depend on an "alpha" model, we forked the base model:
+
+**Original:** `abhinand/gemma-2b-it-tamil-v0.1-alpha`
+**Fork:** `CryptoYogi/gemma-2b-tamil-base`
+
+This gives us control over the base model and prevents issues if the original author modifies or removes it.
+
+### Critical Bug Discovery: Tokenizer Corruption
+
+**The Problem:**
+Previous training attempts (notebook166f14a8b5.ipynb) produced garbage output despite reasonable loss values. The model output became gibberish like:
+```
+Q: வணக்கம், நீங்கள் யார்?
+A: !!!!!!!!!!!!!!!!!!!!!!!!!... (infinite repetition)
+```
+
+**Root Cause Identified:**
+Setting `tokenizer.pad_token = tokenizer.eos_token` corrupted the tokenizer's internal vocabulary structure, causing "OrderedVocab contains holes" warning.
+
+**The Fix:**
+```python
+# ❌ WRONG - This corrupts the tokenizer
+tokenizer.pad_token = tokenizer.eos_token
+
+# ✅ CORRECT - The tokenizer already has a proper pad_token
+# Just align the model config with the tokenizer, don't modify tokenizer
+model.config.pad_token_id = tokenizer.pad_token_id  # Already 0
+model.config.bos_token_id = tokenizer.bos_token_id
+model.config.eos_token_id = tokenizer.eos_token_id
+```
+
+### Learning Rate Boundary Testing
+
+Tested two learning rates to find optimal training parameters:
+
+| Learning Rate | Loss Start | Loss End | Result |
+|---------------|------------|----------|--------|
+| 1e-6 | 3.37 | 3.37 | ❌ No learning (too conservative) |
+| 5e-5 | 3.39 | 3.00 | ✅ Learning without catastrophic forgetting |
+
+**Key Finding:** 5e-5 with fixed tokenizer produces stable learning where:
+- Loss decreases (3.39 → 3.00)
+- Model retains coherent Tamil output
+- No repetition loops or garbage output
+
+### Training Configuration (Validated)
+
+```python
+Base Model: CryptoYogi/gemma-2b-tamil-base
+Quantization: 4-bit (BitsAndBytes)
+Precision: bf16
+
+LoRA Settings:
+  rank: 4           # Very conservative
+  alpha: 8
+  target_modules: [q_proj, v_proj]  # Only 2 modules
+  dropout: 0.05
+
+Training Settings:
+  learning_rate: 5e-5
+  epochs: 1         # Single pass through data
+  batch_size: 2
+  gradient_accumulation: 4
+  max_grad_norm: 1.0  # Gradient clipping
+  max_length: 512
+  gradient_checkpointing: True
+  bf16: True
+```
+
+### Test Run Results (177 steps)
+
+| Step | Loss | Notes |
+|------|------|-------|
+| 23 | 3.39 | Starting loss |
+| 65 | 3.15 | Learning... |
+| 100 | 3.08 | Good progress |
+| 150 | 3.00 | Converging |
+| 177 | ~3.00 | Training complete |
+
+**Output Quality Test:**
+```
+Q: வணக்கம், நீங்கள் யார்?
+A: (Coherent Tamil response - no repetition, no garbage)
+```
+
+### Full Training Plan
+
+Now that the test run validated the approach, full training will use:
+- All 11K samples from VAZHI dataset
+- Same hyperparameters as test run
+- Single epoch to prevent overfitting
+- Monitor for loss > 3.2 (early stopping threshold)
+
+### Post-Training Pipeline
+
+1. **Upload LoRA adapter** to HuggingFace
+2. **Merge adapter** with base model
+3. **Upload merged model** to HuggingFace
+4. **Convert to GGUF** (Q4_K_M for mobile deployment)
+5. **Test on mobile** before release
+
+### Files Created
+- Training notebook: `/notebooks/Vazhi_Training_Fixed.ipynb`
+- Base model fork notebook: `/notebooks/Vazhi_Fork_Base_Model.ipynb`
+- Forked model: `CryptoYogi/gemma-2b-tamil-base` on HuggingFace
+
 ### Memory Issues Encountered
 
 1. **Float16 loading OOM** - Sarvam-2B too large for T4 in float16
@@ -645,6 +777,261 @@ A: தமிழ்நாட்டின் தலைநகரம் நகரா
 ### Files Created
 - Training notebook: `/notebooks/Vazhi_Sarvam2B_Finetune.ipynb`
 - Evaluation notebook: `/notebooks/Vazhi_Pretrained_Tamil_Test.ipynb`
+
+### v0.7 GGUF Conversion Failure
+
+Despite successful training (loss 3.39→3.00), GGUF conversion failed:
+
+**Error:**
+```
+GGML_ASSERT(id_to_token.size() == token_to_id.size()) failed
+```
+
+**Root Cause:**
+The source model `abhinand/gemma-2b-it-tamil-v0.1-alpha` had a corrupted tokenizer:
+- Warning during training: "OrderedVocab contains holes for indices [1, 2]"
+- This warning was ignored during training
+- The vocabulary corruption made GGUF conversion impossible
+
+**Attempted Fixes:**
+1. Replace tokenizer files with clean `google/gemma-2b` tokenizer → Failed (vocab mismatch)
+2. Various GGUF conversion flags → Failed (fundamental corruption)
+3. Manual tokenizer surgery → Failed (embedding weights tied to corrupted vocab)
+
+**Conclusion:** The base model itself was corrupted. No post-training fix possible.
+
+---
+
+## v0.8 Training Run (Current - Qwen3-0.6B Two-Stage Training)
+
+**Date:** 2026-02-09
+**Status:** 🔄 In Progress
+**Base Model:** Qwen/Qwen3-0.6B
+**Training Platform:** Kaggle (T4 GPU)
+
+### Why Qwen3-0.6B?
+
+After v0.7's GGUF failure and consultation with GPT5.2, pivoted to Qwen3-0.6B:
+
+| Factor | Gemma-2B | Qwen3-0.6B |
+|--------|----------|------------|
+| Parameters | 2B | 600M |
+| Tokenizer | Corrupted | Clean |
+| GGUF target | 1.6GB | <1GB |
+| Thinking | None | Native `/think` mode |
+| Multilingual | Limited | Strong |
+
+### Two-Stage Training Pipeline
+
+**Key Insight:** Single-pass SFT causes either fluency loss OR instruction-following loss.
+
+**Solution:** Two-stage training:
+
+```
+┌─────────────────────────────────────────────────────────┐
+│ Stage 1: Micro-DAPT (Continued Pretraining)             │
+├─────────────────────────────────────────────────────────┤
+│ Data: 80% Vazhi outputs + 20% Sangraha Tamil            │
+│ Purpose: Boost Tamil fluency without breaking model     │
+│ Format: Plain text completion (no chat template)        │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────┐
+│ Stage 2: SFT (Instruction Tuning)                       │
+├─────────────────────────────────────────────────────────┤
+│ Data: Full Vazhi Q&A pairs in chat format               │
+│ Purpose: Teach instruction-following                    │
+│ Loss: Assistant-only masking (user tokens masked)       │
+└─────────────────────────────────────────────────────────┘
+                          │
+                          ▼
+┌─────────────────────────────────────────────────────────┐
+│ Post-Training: Merge + GGUF                             │
+├─────────────────────────────────────────────────────────┤
+│ 1. Merge LoRA adapters to base model                    │
+│ 2. Upload merged model to HuggingFace                   │
+│ 3. Convert to GGUF (Q4_K_M)                             │
+│ 4. Upload GGUF to HuggingFace Hub                       │
+└─────────────────────────────────────────────────────────┘
+```
+
+### Training Data
+
+**Micro-DAPT Data:**
+| Source | Proportion | Purpose |
+|--------|------------|---------|
+| Vazhi outputs (Tamil) | 80% | Domain knowledge |
+| Sangraha corpus (AI4Bharat) | 20% | Tamil fluency |
+
+**SFT Data:**
+| Source | Items | Format |
+|--------|-------|--------|
+| Vazhi Q&A pairs | 11,112 | Qwen chat template |
+
+### Training Configuration
+
+```python
+# Micro-DAPT Stage
+model = "Qwen/Qwen3-0.6B"
+lora_rank = 16
+lora_alpha = 32
+target_modules = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+learning_rate = 2e-4
+epochs = 1
+max_seq_length = 2048
+
+# SFT Stage (uses Micro-DAPT output as base)
+learning_rate = 1e-4
+epochs = 2
+loss_type = "assistant_only"  # Mask user tokens
+```
+
+### Infrastructure Fixes
+
+| Issue | Fix |
+|-------|-----|
+| CUDA device selection | `os.environ["CUDA_VISIBLE_DEVICES"] = "0"` |
+| Tokenizer parallelism | `os.environ["TOKENIZERS_PARALLELISM"] = "false"` |
+| T4 precision | `fp16=True` (not bf16, T4 doesn't support bf16 well) |
+| Disconnect protection | HF Hub checkpointing every epoch |
+
+### Preflight Fail-Fast System
+
+Before full training, run preflight check:
+```python
+# 1. Tiny Micro-DAPT: 50 samples, 10 steps
+# 2. Tiny SFT: 50 samples, 10 steps
+# 3. Merge LoRA
+# 4. Generate test output
+# 5. If output quality poor → pivot before wasting hours
+```
+
+### Training Progress
+
+| Stage | Status | Notes |
+|-------|--------|-------|
+| Preflight Check | ✅ | Output quality verified |
+| Micro-DAPT | 🔄 In Progress | Training on Kaggle |
+| SFT | ⏳ Pending | Waiting for DAPT completion |
+| Merge + GGUF | ⏳ Pending | Final conversion |
+
+### Expected Outputs
+
+| Format | Expected Size | Use Case |
+|--------|---------------|----------|
+| F16 | ~1.2GB | Reference |
+| Q4_K_M | **<1GB** | **Mobile deployment** |
+
+### Files Created
+- Training notebook: `~/Downloads/Vazhi_Qwen3_MicroDAPT_SFT_GGUF_HFHub_KAGGLE_SAFE.ipynb`
+- Sangraha data integration: AI4Bharat CC-BY 4.0 corpus
+
+---
+
+## v3.1 Training Run (Failed - Mixed Data Formats)
+
+**Date:** 2026-02-10
+**Status:** ❌ Failed
+**Base Model:** Qwen/Qwen3-0.6B
+**Training Platform:** Kaggle (T4 GPU)
+
+### What We Tried
+
+Attempted to rebalance the dataset to fix Thirukkural distribution skew (71% → 25%):
+1. Extracted ~1,050 diverse Tamil Q&A from IndicAlign
+2. Added ~47 manual samples
+3. Downsampled Thirukkural from existing dataset
+4. Merged all samples and trained
+
+### Training Metrics
+
+| Metric | Value |
+|--------|-------|
+| Total samples | 4,933 |
+| Loss start | 3.39 |
+| Loss end | ~0.5 |
+| Training time | ~1.5 hours |
+| Status | ✅ Completed |
+
+### Test Results: ❌ COMPLETE GARBAGE
+
+Despite good loss, model output was completely broken:
+
+```
+Q: வணக்கம்
+A: 'systemsystemsystemsystemsystemsystemsystem...
+
+Q: தமிழ்நாட்டின் தலைநகரம் என்ன?
+A: தஉsystemsystemsystemsystemsystem...
+
+Q: 2+2 என்ன?
+A: 4systemsystemsystemsystem...
+```
+
+### Root Cause: MIXED DATA FORMATS
+
+**The Critical Mistake:**
+The notebook mixed two incompatible data formats in a single SFT training run:
+
+| Source | Format | Count | Issue |
+|--------|--------|-------|-------|
+| Existing dataset (`vazhi-tamil-v05`) | RAW TEXT | ~3,836 | No ChatML structure |
+| IndicAlign + Manual samples | ChatML formatted | ~1,097 | Properly structured |
+
+**Why This Breaks Training:**
+
+The existing dataset contains samples like:
+```
+யாதும் ஊரே யாவரும் கேளிர்
+தீதும் நன்றும் பிறர்தர வாரா...
+```
+This is raw Sangam poetry with NO instruction/output structure.
+
+The diverse samples were formatted as:
+```
+<|im_start|>system
+நீங்கள் VAZHI...<|im_end|>
+<|im_start|>user
+தமிழ்நாட்டின் தலைநகரம்?<|im_end|>
+<|im_start|>assistant
+சென்னை.<|im_end|>
+```
+
+When mixed together, the model saw:
+- Raw text samples without "system" tags
+- ChatML samples WITH "system" tags
+- No consistent pattern to learn
+
+Result: Model learned to output "system" repeatedly as a dominant pattern.
+
+### The Fix
+
+**Option A: SFT with ChatML-only data**
+```python
+# ONLY include samples that have ChatML formatting
+def is_chatml_formatted(text):
+    return "<|im_start|>" in text and "<|im_end|>" in text
+
+# Filter for SFT
+final_samples = [s for s in all_samples if is_chatml_formatted(s["text"])]
+```
+
+**Option B: Proper Two-Stage Training**
+- Stage 1 (Micro-DAPT): Use raw Tamil text WITHOUT chat template
+- Stage 2 (SFT): Use ONLY ChatML-formatted Q&A pairs
+
+### Lessons Learned
+
+1. **NEVER mix data formats in SFT** - All samples must have consistent chat template
+2. **Raw text ≠ SFT data** - Raw text belongs in DAPT (continued pretraining), not SFT
+3. **Low loss ≠ working model** - Loss can be excellent (0.5) while output is garbage
+4. **Verify format consistency** - Check 100% ChatML before training
+
+### Files Updated
+
+- Notebook fix: `/notebooks/Vazhi_SFT_v3_1_Balanced.ipynb` - Added format filtering
+- Lessons learned: `/docs/LESSONS_LEARNED.md` - Added Lesson #28
 
 ---
 
@@ -760,6 +1147,30 @@ Use a mixed format approach:
 - Mix prevents the model from only learning to respond to questions
 - Raw text helps with Tamil language patterns and fluency
 
+### ADR-005: Hybrid Retrieval Architecture
+
+**Date:** 2026-02-08
+**Status:** ✅ Adopted
+**Full Document:** `/vazhi_app/docs/adr/ADR-005-hybrid-retrieval-architecture.md`
+
+**Context:**
+- App needs to provide value before 1.6GB model download
+- Factual data (Thirukkural, phone numbers) must never be hallucinated
+- Cloud inference fallback would incur ongoing costs
+
+**Decision:**
+Implement a hybrid architecture with two paths:
+1. **Deterministic Path** - SQLite lookup for exact data (no model needed)
+2. **AI-Enhanced Path** - LLM for explanations and conversations (model required)
+
+**Benefits:**
+- App is useful immediately from first launch
+- Zero hallucination for factual data
+- Encourages model download for AI features
+- No cloud costs
+
+**Data Schema:** `/vazhi_app/docs/data_schema.md`
+
 ---
 
 ## Mistakes to Avoid
@@ -772,6 +1183,16 @@ Use a mixed format approach:
 6. **Don't assume larger models quantize better** - Smaller models may preserve quality better
 7. **Don't skip GGUF testing** - Always test quantized output before deployment
 8. **Don't ignore tokenization efficiency** - Tamil chars/token ratio matters
+9. **NEVER modify the tokenizer's special tokens** - Setting `pad_token = eos_token` causes "OrderedVocab holes" and corrupts the model. Instead, align model config with the existing tokenizer tokens
+10. **Don't trust low loss values alone** - Test actual model output after training; loss can be low while output is garbage
+11. **Don't use learning rates below 1e-5** - Too conservative, model won't learn. 5e-5 is the sweet spot for LoRA fine-tuning
+12. **NEVER ignore tokenizer warnings** - "OrderedVocab contains holes" is a FATAL error that will break GGUF conversion. Stop training immediately if you see this warning
+13. **Don't use single-pass SFT for language adaptation** - Two-stage (DAPT→SFT) preserves fluency AND instructions
+14. **Don't skip preflight testing** - Run tiny DAPT+SFT before full training to catch issues early
+15. **Don't rely on Colab/Kaggle session persistence** - Checkpoint to HF Hub every epoch
+16. **Verify base model tokenizer BEFORE training** - A corrupted source model will produce corrupted outputs
+17. **NEVER mix data formats in SFT** - Raw text and ChatML-formatted samples CANNOT be trained together. Raw text → DAPT stage. ChatML → SFT stage. Mixing causes "systemsystemsystem..." output.
+18. **Verify format consistency before training** - Use `is_chatml_formatted()` check to ensure 100% of SFT samples have proper chat template
 
 ---
 
@@ -791,14 +1212,63 @@ Use a mixed format approach:
 3. **Corpus vs generated**: Authoritative sources prevent hallucination
 4. **Dialect balance matters**: Include regional variations for authentic responses
 
+### Training Configuration (v0.7 Discoveries)
+
+1. **Never modify tokenizer special tokens**: Setting `tokenizer.pad_token = tokenizer.eos_token` creates "OrderedVocab holes" and corrupts vocabulary. Instead, align the model's config with the tokenizer's existing tokens:
+   ```python
+   model.config.pad_token_id = tokenizer.pad_token_id
+   model.config.bos_token_id = tokenizer.bos_token_id
+   model.config.eos_token_id = tokenizer.eos_token_id
+   ```
+
+2. **Learning rate boundaries for LoRA**:
+   - Too low (1e-6): No learning, loss stays flat
+   - Sweet spot (5e-5): Stable learning, no catastrophic forgetting
+   - Too high (2e-4): Training divergence after ~1000 steps
+
+3. **Conservative LoRA settings work**: r=4, alpha=8, targeting only q_proj and v_proj is sufficient for domain adaptation without corrupting base model capabilities
+
+4. **4-bit training can work**: Unlike v0.5/v0.6 failures, using a pre-trained Tamil model (not English-first model) with proper tokenizer handling allows successful 4-bit training
+
+5. **Fork your base models**: Depending on external "alpha" models is risky. Fork to your own HuggingFace space for stability
+
+6. **Gradient checkpointing + use_cache conflict**: Set `model.config.use_cache = False` before training, re-enable for inference
+
+### Continuous Learning Pipeline (Designed in v0.7)
+
+1. **Weekly feedback collection**: Users provide 👍/👎/✏️ feedback on responses
+2. **Corrections become training data**: User corrections in Alpaca format for fine-tuning
+3. **Monthly model updates**: Aggregate corrections, retrain, and redeploy
+4. **Feedback loop**: App → Corrections → Training → Improved Model → App
+
 ---
 
 ## References
 
-- v0.5 Training notebook: `/notebooks/Vazhi_Qwen05B_Training.ipynb`
+### Training Notebooks
+- v0.7 Training notebook (CURRENT): `/notebooks/Vazhi_Training_Fixed.ipynb`
+- v0.7 Fork base model: `/notebooks/Vazhi_Fork_Base_Model.ipynb`
+- v0.6 Sarvam-2B notebook: `/notebooks/Vazhi_Sarvam2B_Finetune.ipynb`
+- v0.5 Qwen-0.5B notebook: `/notebooks/Vazhi_Qwen05B_Training.ipynb`
 - v0.4 Training notebook: `/notebooks/Vazhi_Day4_v02_Training.ipynb`
+- SmolLM notebook: `/notebooks/Vazhi_SmolLM_135M_Training.ipynb`
+
+### Diagnostics & Quantization
 - GGUF Diagnostics: `/notebooks/Vazhi_GGUF_Diagnostic.ipynb`, `Vazhi_GGUF_Diagnostic_v2.ipynb`
+- GGUF Quantization: `/notebooks/Vazhi_GGUF_Quantization.ipynb`
+
+### Data & Models
 - Data prep script: `/data/tamil_foundation/prepare_training_data.py`
 - Tamil foundation data: `/data/tamil_foundation/` (19 JSON files)
 - HuggingFace dataset: https://huggingface.co/datasets/CryptoYogi/vazhi-tamil-v05
+- Forked base model: https://huggingface.co/CryptoYogi/gemma-2b-tamil-base
 - Regeneration plan: `/docs/DATA_REGENERATION_PLAN.md`
+
+### App Feedback System
+- Feedback model: `/vazhi_app/lib/models/feedback.dart`
+- Feedback service: `/vazhi_app/lib/services/feedback_service.dart`
+- Feedback buttons widget: `/vazhi_app/lib/widgets/feedback_buttons.dart`
+
+### Architecture Documentation
+- ADR-005 Hybrid Retrieval: `/vazhi_app/docs/adr/ADR-005-hybrid-retrieval-architecture.md`
+- Knowledge Pack Schema: `/vazhi_app/docs/data_schema.md`

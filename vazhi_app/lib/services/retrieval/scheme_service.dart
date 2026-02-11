@@ -25,11 +25,17 @@ class SchemeService extends RetrievalService {
       final scheme = Scheme.fromMap(map);
 
       // Load eligibility and documents
-      final eligibility = await KnowledgeDatabase.getSchemeEligibility(schemeId);
-      scheme.eligibility = eligibility.map((m) => SchemeEligibility.fromMap(m)).toList();
+      final eligibility = await KnowledgeDatabase.getSchemeEligibility(
+        schemeId,
+      );
+      scheme.eligibility = eligibility
+          .map((m) => SchemeEligibility.fromMap(m))
+          .toList();
 
       final documents = await KnowledgeDatabase.getSchemeDocuments(schemeId);
-      scheme.documents = documents.map((m) => SchemeDocument.fromMap(m)).toList();
+      scheme.documents = documents
+          .map((m) => SchemeDocument.fromMap(m))
+          .toList();
 
       return RetrievalResult.found(
         scheme,
@@ -38,17 +44,18 @@ class SchemeService extends RetrievalService {
         formattedResponse: formatForDisplay(scheme),
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
   /// Get all schemes
-  Future<RetrievalResult<Scheme>> getAllSchemes({bool activeOnly = true}) async {
+  Future<RetrievalResult<Scheme>> getAllSchemes({
+    bool activeOnly = true,
+  }) async {
     try {
-      final results = await KnowledgeDatabase.getAllSchemes(activeOnly: activeOnly);
+      final results = await KnowledgeDatabase.getAllSchemes(
+        activeOnly: activeOnly,
+      );
       if (results.isEmpty) {
         return RetrievalResult.notFound(
           category: category,
@@ -65,10 +72,7 @@ class SchemeService extends RetrievalService {
         totalCount: schemes.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -94,10 +98,7 @@ class SchemeService extends RetrievalService {
         totalCount: schemes.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -116,8 +117,10 @@ class SchemeService extends RetrievalService {
       final filtered = results.where((m) {
         final nameTamil = (m['name_tamil'] as String?)?.toLowerCase() ?? '';
         final nameEnglish = (m['name_english'] as String?)?.toLowerCase() ?? '';
-        final descTamil = (m['description_tamil'] as String?)?.toLowerCase() ?? '';
-        final descEnglish = (m['description_english'] as String?)?.toLowerCase() ?? '';
+        final descTamil =
+            (m['description_tamil'] as String?)?.toLowerCase() ?? '';
+        final descEnglish =
+            (m['description_english'] as String?)?.toLowerCase() ?? '';
 
         return nameTamil.contains(queryLower) ||
             nameEnglish.contains(queryLower) ||
@@ -128,7 +131,8 @@ class SchemeService extends RetrievalService {
       if (filtered.isEmpty) {
         return RetrievalResult.notFound(
           category: category,
-          message: '"$query" க்கான திட்டங்கள் கிடைக்கவில்லை\n'
+          message:
+              '"$query" க்கான திட்டங்கள் கிடைக்கவில்லை\n'
               '(No schemes found for "$query")',
         );
       }
@@ -142,15 +146,14 @@ class SchemeService extends RetrievalService {
         totalCount: schemes.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தேடல் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தேடல் பிழை: $e', category: category);
     }
   }
 
   /// Get scheme eligibility
-  Future<RetrievalResult<SchemeEligibility>> getEligibility(String schemeId) async {
+  Future<RetrievalResult<SchemeEligibility>> getEligibility(
+    String schemeId,
+  ) async {
     try {
       final results = await KnowledgeDatabase.getSchemeEligibility(schemeId);
       if (results.isEmpty) {
@@ -160,7 +163,9 @@ class SchemeService extends RetrievalService {
         );
       }
 
-      final eligibility = results.map((m) => SchemeEligibility.fromMap(m)).toList();
+      final eligibility = results
+          .map((m) => SchemeEligibility.fromMap(m))
+          .toList();
       return RetrievalResult.list(
         eligibility,
         category: category,
@@ -169,10 +174,7 @@ class SchemeService extends RetrievalService {
         totalCount: eligibility.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -196,10 +198,7 @@ class SchemeService extends RetrievalService {
         totalCount: documents.length,
       );
     } catch (e) {
-      return RetrievalResult.error(
-        'தரவுத்தளப் பிழை: $e',
-        category: category,
-      );
+      return RetrievalResult.error('தரவுத்தளப் பிழை: $e', category: category);
     }
   }
 
@@ -220,7 +219,9 @@ class SchemeService extends RetrievalService {
     buffer.writeln();
 
     // Level badge
-    final levelBadge = scheme.level == 'state' ? '🏢 மாநில அரசு' : '🏛️ மத்திய அரசு';
+    final levelBadge = scheme.level == 'state'
+        ? '🏢 மாநில அரசு'
+        : '🏛️ மத்திய அரசு';
     buffer.writeln('$levelBadge | ${scheme.department ?? ""}');
     buffer.writeln();
 
@@ -273,7 +274,9 @@ class SchemeService extends RetrievalService {
       for (final scheme in stateSchemes) {
         buffer.writeln('• **${scheme.nameTamil}**');
         final desc = scheme.descriptionTamil;
-        buffer.writeln('  ${desc.length > 80 ? desc.substring(0, 80) : desc}...');
+        buffer.writeln(
+          '  ${desc.length > 80 ? desc.substring(0, 80) : desc}...',
+        );
         buffer.writeln();
       }
     }
@@ -284,7 +287,9 @@ class SchemeService extends RetrievalService {
       for (final scheme in centralSchemes) {
         buffer.writeln('• **${scheme.nameTamil}**');
         final desc = scheme.descriptionTamil;
-        buffer.writeln('  ${desc.length > 80 ? desc.substring(0, 80) : desc}...');
+        buffer.writeln(
+          '  ${desc.length > 80 ? desc.substring(0, 80) : desc}...',
+        );
         buffer.writeln();
       }
     }

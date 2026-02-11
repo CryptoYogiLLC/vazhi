@@ -10,12 +10,14 @@ import '../services/vazhi_local_service.dart';
 
 /// Inference mode enum
 enum InferenceMode {
-  local,  // On-device GGUF model
-  cloud,  // HuggingFace Space API
+  local, // On-device GGUF model
+  cloud, // HuggingFace Space API
 }
 
 /// Current inference mode provider
-final inferenceModeProvider = StateProvider<InferenceMode>((ref) => InferenceMode.local);
+final inferenceModeProvider = StateProvider<InferenceMode>(
+  (ref) => InferenceMode.local,
+);
 
 /// API service provider
 final vazhiApiServiceProvider = Provider<VazhiApiService>((ref) {
@@ -40,7 +42,9 @@ enum ModelStatus {
 }
 
 /// Model status provider
-final modelStatusProvider = StateProvider<ModelStatus>((ref) => ModelStatus.notDownloaded);
+final modelStatusProvider = StateProvider<ModelStatus>(
+  (ref) => ModelStatus.notDownloaded,
+);
 
 /// Download progress provider (0.0 to 1.0)
 final downloadProgressProvider = StateProvider<double>((ref) => 0.0);
@@ -77,7 +81,9 @@ class ChatNotifier extends StateNotifier<List<Message>> {
       if (mode == InferenceMode.local) {
         // Local inference
         if (!_localService.isReady) {
-          throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை. முதலில் மாடலை பதிவிறக்கவும்.');
+          throw VazhiLocalException(
+            'மாடல் ஏற்றப்படவில்லை. முதலில் மாடலை பதிவிறக்கவும்.',
+          );
         }
         response = await _localService.chat(text, pack: pack);
       } else {
@@ -152,7 +158,8 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   final VazhiLocalService _localService;
   final Ref _ref;
 
-  ModelManagerNotifier(this._localService, this._ref) : super(ModelStatus.notDownloaded) {
+  ModelManagerNotifier(this._localService, this._ref)
+    : super(ModelStatus.notDownloaded) {
     _checkModelStatus();
   }
 
@@ -233,10 +240,11 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
 }
 
 /// Model manager provider
-final modelManagerProvider = StateNotifierProvider<ModelManagerNotifier, ModelStatus>((ref) {
-  final localService = ref.watch(vazhiLocalServiceProvider);
-  return ModelManagerNotifier(localService, ref);
-});
+final modelManagerProvider =
+    StateNotifierProvider<ModelManagerNotifier, ModelStatus>((ref) {
+      final localService = ref.watch(vazhiLocalServiceProvider);
+      return ModelManagerNotifier(localService, ref);
+    });
 
 /// Available knowledge packs
 final availablePacksProvider = Provider<List<PackInfo>>((ref) {

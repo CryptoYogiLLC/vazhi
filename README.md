@@ -181,8 +181,8 @@ VAZHI now uses a **Hybrid Retrieval Architecture** that works immediately after 
 | Component | Status |
 |-----------|--------|
 | Hybrid Architecture | Deterministic SQLite + Optional AI |
-| AI Model (MVP) | Gemma-2B Tamil (1.6GB GGUF) |
-| AI Model (Target) | ~250-300MB (SLM in development) |
+| AI Model (Target) | **Qwen3-0.6B (<1GB GGUF)** |
+| Training Approach | Two-stage: Micro-DAPT → SFT |
 | Deterministic Data | ~2,500 records (~2MB) |
 | Mobile App | Flutter + Riverpod |
 
@@ -196,7 +196,7 @@ VAZHI now uses a **Hybrid Retrieval Architecture** that works immediately after 
 - [x] Model download: Pause/resume, network detection, storage validation
 - [x] Voice input/output: Tamil STT/TTS
 - [x] Feedback system: In-app with WhatsApp integration
-- [ ] AI model training: In progress (v0.7)
+- [ ] AI model training: **Qwen3-0.6B (v0.8) in progress on Kaggle**
 - [ ] Full database population: Pending
 - [ ] App store release: Planned
 
@@ -317,7 +317,7 @@ For developers and contributors:
 │       ▼                   ▼                                  │
 │  ┌──────────┐       ┌──────────────┐                        │
 │  │  SQLite  │       │ LLM Engine   │ ◄── Optional download  │
-│  │ (2MB)    │       │ (1.6GB GGUF) │                        │
+│  │ (2MB)    │       │ (<1GB GGUF)  │                        │
 │  └────┬─────┘       └──────┬───────┘                        │
 │       │                    │                                 │
 │       └────────┬───────────┘                                 │
@@ -385,4 +385,4 @@ This is a community project. No corporation owns it. You own it.
 
 ---
 
-*Last updated: February 8, 2026*
+*Last updated: February 9, 2026*

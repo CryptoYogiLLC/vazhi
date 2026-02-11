@@ -47,7 +47,8 @@ class RetrievalResult<T> {
   });
 
   /// Create a success result with single item
-  factory RetrievalResult.found(T item, {
+  factory RetrievalResult.found(
+    T item, {
     required KnowledgeCategory category,
     String? displayTitle,
     String? formattedResponse,
@@ -63,7 +64,8 @@ class RetrievalResult<T> {
   }
 
   /// Create a success result with multiple items
-  factory RetrievalResult.list(List<T> items, {
+  factory RetrievalResult.list(
+    List<T> items, {
     required KnowledgeCategory category,
     String? displayTitle,
     String? formattedResponse,
@@ -95,7 +97,8 @@ class RetrievalResult<T> {
   }
 
   /// Create an error result
-  factory RetrievalResult.error(String message, {
+  factory RetrievalResult.error(
+    String message, {
     required KnowledgeCategory category,
   }) {
     return RetrievalResult(

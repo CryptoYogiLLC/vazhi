@@ -234,17 +234,11 @@ class KnowledgeResultCard extends StatelessWidget {
             children: [
               const Text(
                 'ஆழமான விளக்கம் வேண்டுமா?',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 14,
-                ),
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
               ),
               Text(
                 'AI Brain பதிவிறக்கம் செய்யுங்கள்',
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.grey[600],
-                ),
+                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
               ),
             ],
           ),
@@ -279,10 +273,7 @@ class KnowledgeResultCard extends StatelessWidget {
         const Expanded(
           child: Text(
             'இதைப் பற்றி மேலும் கேளுங்கள்!',
-            style: TextStyle(
-              fontWeight: FontWeight.w500,
-              fontSize: 14,
-            ),
+            style: TextStyle(fontWeight: FontWeight.w500, fontSize: 14),
           ),
         ),
         OutlinedButton.icon(
@@ -376,11 +367,7 @@ class _ActionButton extends StatelessWidget {
   final String label;
   final VoidCallback? onTap;
 
-  const _ActionButton({
-    required this.icon,
-    required this.label,
-    this.onTap,
-  });
+  const _ActionButton({required this.icon, required this.label, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -396,10 +383,7 @@ class _ActionButton extends StatelessWidget {
             const SizedBox(height: 4),
             Text(
               label,
-              style: TextStyle(
-                fontSize: 10,
-                color: Colors.grey[600],
-              ),
+              style: TextStyle(fontSize: 10, color: Colors.grey[600]),
             ),
           ],
         ),

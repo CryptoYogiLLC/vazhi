@@ -67,7 +67,7 @@
 
         .phone-frame {
             width: 280px;
-            height: 550px;
+            height: 580px;
             margin: 30px auto;
             border-radius: 35px;
             position: relative;
@@ -87,24 +87,39 @@
             z-index: 10;
         }
 
-        /* Concept 1: Temple Gopuram */
+        /* ===== CONCEPT 1: TEMPLE GOPURAM ===== */
         .temple-frame {
             background: linear-gradient(180deg, #FFF8F0 0%, #FFEDE0 100%);
         }
 
-        .temple-pattern {
+        /* Actual kolam pattern - interlocking curves */
+        .temple-kolam-pattern {
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: 0.05;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 5 L35 15 L45 15 L37 22 L40 32 L30 26 L20 32 L23 22 L15 15 L25 15 Z' fill='none' stroke='%238B4513' stroke-width='1'/%3E%3C/svg%3E");
+            opacity: 0.12;
+            background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%238B4513' stroke-width='1.5'%3E%3Cpath d='M0 40 Q20 20 40 40 Q60 60 80 40'/%3E%3Cpath d='M0 40 Q20 60 40 40 Q60 20 80 40'/%3E%3Cpath d='M40 0 Q20 20 40 40 Q60 60 40 80'/%3E%3Cpath d='M40 0 Q60 20 40 40 Q20 60 40 80'/%3E%3Ccircle cx='40' cy='40' r='3' fill='%238B4513'/%3E%3Ccircle cx='0' cy='40' r='2' fill='%238B4513'/%3E%3Ccircle cx='80' cy='40' r='2' fill='%238B4513'/%3E%3Ccircle cx='40' cy='0' r='2' fill='%238B4513'/%3E%3Ccircle cx='40' cy='80' r='2' fill='%238B4513'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Gopuram silhouette */
+        .gopuram-silhouette {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 250px;
+            opacity: 0.08;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 300'%3E%3Cpath fill='%238B4513' d='M100 0 L110 20 L105 20 L115 40 L108 40 L120 60 L110 60 L125 85 L112 85 L130 115 L115 115 L140 150 L120 150 L150 190 L125 190 L160 240 L130 240 L130 300 L70 300 L70 240 L40 240 L75 190 L50 190 L80 150 L60 150 L85 115 L70 115 L88 85 L75 85 L90 60 L80 60 L92 40 L85 40 L95 20 L90 20 Z'/%3E%3Crect x='85' y='260' width='30' height='40' fill='%238B4513'/%3E%3C/svg%3E") no-repeat center bottom;
+            background-size: contain;
         }
 
         .temple-header {
             padding-top: 50px;
             padding-bottom: 15px;
             text-align: center;
-            background: linear-gradient(180deg, rgba(139,69,19,0.1) 0%, transparent 100%);
+            position: relative;
+            z-index: 2;
         }
 
         .temple-header h2 {
@@ -123,6 +138,8 @@
             gap: 8px;
             padding: 15px;
             justify-content: center;
+            position: relative;
+            z-index: 2;
         }
 
         .temple-chip {
@@ -135,24 +152,27 @@
         }
 
         .temple-chip.inactive {
-            background: #E8E0D8;
+            background: rgba(139,69,19,0.1);
             color: #8B4513;
             box-shadow: none;
+            border: 1px solid rgba(139,69,19,0.3);
         }
 
         .temple-bubble {
             margin: 15px;
             padding: 15px;
-            background: white;
+            background: rgba(255,255,255,0.9);
             border-radius: 15px;
-            border: 1px solid #D4AF37;
+            border: 2px solid #D4AF37;
             box-shadow: 0 2px 10px rgba(139,69,19,0.1);
+            position: relative;
+            z-index: 2;
         }
 
         .temple-bubble::before {
             content: "🕉️";
             position: absolute;
-            margin-left: -30px;
+            margin-left: -35px;
             margin-top: -5px;
         }
 
@@ -174,6 +194,7 @@
             align-items: center;
             box-shadow: 0 -5px 20px rgba(139,69,19,0.1);
             border: 2px solid #D4AF37;
+            z-index: 2;
         }
 
         .temple-input input {
@@ -182,6 +203,7 @@
             font-size: 0.9em;
             color: #666;
             outline: none;
+            background: transparent;
         }
 
         .temple-input .mic {
@@ -195,7 +217,7 @@
             color: white;
         }
 
-        /* Concept 2: Marina Sunrise */
+        /* ===== CONCEPT 2: MARINA SUNRISE ===== */
         .marina-frame {
             background: linear-gradient(180deg, #FFE4E1 0%, #E6F3FF 100%);
         }
@@ -291,25 +313,46 @@
             outline: none;
         }
 
-        /* Concept 3: Kolam Canvas */
+        /* ===== CONCEPT 3: KOLAM CANVAS ===== */
         .kolam-frame {
             background: #FFFEF5;
         }
 
-        .kolam-pattern {
+        /* Full kolam pattern with interlocking curves */
+        .kolam-full-pattern {
             position: absolute;
             width: 100%;
             height: 100%;
-            opacity: 0.08;
-            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='20' cy='5' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='35' cy='5' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='5' cy='20' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='20' cy='20' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='35' cy='20' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='5' cy='35' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='20' cy='35' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='35' cy='35' r='2' fill='%23FF6B35'/%3E%3C/svg%3E");
+            opacity: 0.15;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FF6B35' stroke-width='1.2'%3E%3C!-- Main interlocking loops --%3E%3Cpath d='M0 50 C15 35, 35 35, 50 50 C65 65, 85 65, 100 50'/%3E%3Cpath d='M0 50 C15 65, 35 65, 50 50 C65 35, 85 35, 100 50'/%3E%3Cpath d='M50 0 C35 15, 35 35, 50 50 C65 65, 65 85, 50 100'/%3E%3Cpath d='M50 0 C65 15, 65 35, 50 50 C35 65, 35 85, 50 100'/%3E%3C!-- Corner curves --%3E%3Cpath d='M0 0 Q25 25 50 0'/%3E%3Cpath d='M0 0 Q25 25 0 50'/%3E%3Cpath d='M100 0 Q75 25 50 0'/%3E%3Cpath d='M100 0 Q75 25 100 50'/%3E%3Cpath d='M0 100 Q25 75 50 100'/%3E%3Cpath d='M0 100 Q25 75 0 50'/%3E%3Cpath d='M100 100 Q75 75 50 100'/%3E%3Cpath d='M100 100 Q75 75 100 50'/%3E%3C!-- Center dot --%3E%3Ccircle cx='50' cy='50' r='4' fill='%23FF6B35'/%3E%3C!-- Grid dots --%3E%3Ccircle cx='0' cy='0' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='50' cy='0' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='100' cy='0' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='0' cy='50' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='100' cy='50' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='0' cy='100' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='50' cy='100' r='2' fill='%23FF6B35'/%3E%3Ccircle cx='100' cy='100' r='2' fill='%23FF6B35'/%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        /* Kolam border pattern */
+        .kolam-border {
+            position: absolute;
+            top: 45px;
+            left: 10px;
+            right: 10px;
+            bottom: 70px;
+            border: none;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .kolam-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border: 3px solid transparent;
+            border-image: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q10 10 20 20 Q30 30 40 20' stroke='%23FF6B35' stroke-width='2' fill='none'/%3E%3Cpath d='M20 0 Q10 10 20 20 Q30 30 20 40' stroke='%23FF6B35' stroke-width='2' fill='none'/%3E%3C/svg%3E") 20 round;
         }
 
         .kolam-header {
-            padding-top: 50px;
+            padding-top: 55px;
             padding-bottom: 15px;
             text-align: center;
-            border-bottom: 3px dotted #FF6B35;
-            margin: 0 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .kolam-header h2 {
@@ -322,11 +365,33 @@
             font-size: 0.85em;
         }
 
+        /* Decorative kolam corners around header */
+        .kolam-header::before,
+        .kolam-header::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FF6B35' stroke-width='1.5'%3E%3Cpath d='M5 20 Q20 5 35 20 Q20 35 5 20'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23FF6B35'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+        }
+
+        .kolam-header::before {
+            left: 20px;
+            top: 50px;
+        }
+
+        .kolam-header::after {
+            right: 20px;
+            top: 50px;
+        }
+
         .kolam-categories {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
-            padding: 20px;
+            padding: 15px 20px;
+            position: relative;
+            z-index: 2;
         }
 
         .kolam-chip {
@@ -335,71 +400,108 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            border: 2px dotted #FF6B35;
-            border-radius: 8px;
-            background: rgba(255,107,53,0.05);
-            font-size: 0.7em;
+            border: 2px solid rgba(255,107,53,0.3);
+            border-radius: 12px;
+            background: rgba(255,255,255,0.8);
+            font-size: 0.65em;
             color: #1A1A1A;
-        }
-
-        .kolam-chip.active {
-            background: #FF6B35;
-            color: white;
-            border-style: solid;
-        }
-
-        .kolam-chip span {
-            font-size: 1.5em;
-            margin-bottom: 5px;
-        }
-
-        .kolam-bubble {
-            margin: 10px 15px;
-            padding: 15px;
-            background: white;
-            border-radius: 0;
             position: relative;
         }
 
-        .kolam-bubble::before,
-        .kolam-bubble::after {
-            content: '◆';
-            position: absolute;
-            color: #FF6B35;
-            font-size: 0.8em;
+        .kolam-chip.active {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            color: white;
+            border: none;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.3);
         }
 
-        .kolam-bubble::before {
+        .kolam-chip span {
+            font-size: 1.8em;
+            margin-bottom: 3px;
+        }
+
+        /* Kolam corner decorations on chips */
+        .kolam-chip::before {
+            content: '';
+            position: absolute;
             top: -5px;
             left: -5px;
+            width: 15px;
+            height: 15px;
+            border-top: 2px solid #FF6B35;
+            border-left: 2px solid #FF6B35;
+            border-radius: 3px 0 0 0;
         }
 
-        .kolam-bubble::after {
+        .kolam-chip::after {
+            content: '';
+            position: absolute;
             bottom: -5px;
             right: -5px;
+            width: 15px;
+            height: 15px;
+            border-bottom: 2px solid #FF6B35;
+            border-right: 2px solid #FF6B35;
+            border-radius: 0 0 3px 0;
+        }
+
+        .kolam-chip.active::before,
+        .kolam-chip.active::after {
+            border-color: white;
+        }
+
+        .kolam-bubble {
+            margin: 10px 20px;
+            padding: 15px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 15px;
+            position: relative;
+            z-index: 2;
+            border: 2px solid rgba(255,107,53,0.2);
+        }
+
+        /* Kolam flower decoration on bubble */
+        .kolam-bubble::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            background: url("data:image/svg+xml,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23FF6B35' stroke-width='1.5'%3E%3Cellipse cx='12' cy='6' rx='4' ry='6'/%3E%3Cellipse cx='12' cy='18' rx='4' ry='6'/%3E%3Cellipse cx='6' cy='12' rx='6' ry='4'/%3E%3Cellipse cx='18' cy='12' rx='6' ry='4'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%23FF6B35'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+            background-color: #FFFEF5;
         }
 
         .kolam-bubble p {
             color: #1A1A1A;
             font-size: 0.85em;
             line-height: 1.5;
-            border: 1px dashed #ddd;
-            padding: 10px;
         }
 
         .kolam-input {
             position: absolute;
             bottom: 20px;
-            left: 15px;
-            right: 15px;
+            left: 20px;
+            right: 20px;
             background: white;
-            border: 3px dotted #FF6B35;
+            border: 2px solid #FF6B35;
+            border-radius: 25px;
             padding: 12px 20px;
             display: flex;
             align-items: center;
+            z-index: 2;
         }
 
-        /* Concept 4: Dual Identity */
+        .kolam-input input {
+            border: none;
+            flex: 1;
+            outline: none;
+            background: transparent;
+            color: #666;
+        }
+
+        /* ===== CONCEPT 4: DUAL IDENTITY ===== */
         .dual-frame {
             background: #FAFAFA;
         }
@@ -492,7 +594,7 @@
             align-items: center;
         }
 
-        /* Concept 5: Illustrated */
+        /* ===== CONCEPT 5: ILLUSTRATED ===== */
         .illustrated-frame {
             background: #FDF6E3;
         }
@@ -699,7 +801,8 @@
             </div>
             <div class="phone-frame temple-frame">
                 <div class="phone-notch"></div>
-                <div class="temple-pattern"></div>
+                <div class="temple-kolam-pattern"></div>
+                <div class="gopuram-silhouette"></div>
                 <div class="temple-header">
                     <h2>🕉️ வழி</h2>
                     <span>VAZHI - Your Tamil Guide</span>
@@ -721,10 +824,10 @@
             <div class="concept-footer">
                 <h4>Key Elements</h4>
                 <ul>
-                    <li>• Warm saffron & temple stone colors</li>
-                    <li>• Subtle kolam pattern backgrounds</li>
+                    <li>• Gopuram silhouette as watermark</li>
+                    <li>• Interlocking kolam curve patterns</li>
                     <li>• Gold accent borders (temple jewelry)</li>
-                    <li>• Gopuram silhouettes as watermarks</li>
+                    <li>• Warm saffron & temple stone colors</li>
                 </ul>
             </div>
         </div>
@@ -774,9 +877,10 @@
             </div>
             <div class="phone-frame kolam-frame">
                 <div class="phone-notch"></div>
-                <div class="kolam-pattern"></div>
+                <div class="kolam-full-pattern"></div>
+                <div class="kolam-border"></div>
                 <div class="kolam-header">
-                    <h2>◆ வழி ◆</h2>
+                    <h2>வழி</h2>
                     <span>VAZHI</span>
                 </div>
                 <div class="kolam-categories">
@@ -791,15 +895,16 @@
                     <p>அகர முதல எழுத்தெல்லாம் ஆதி பகவன் முதற்றே உலகு - இது திருக்குறளின் முதல் குறள்.</p>
                 </div>
                 <div class="kolam-input">
-                    <input type="text" placeholder="◆ கேளுங்கள் ◆">
+                    <input type="text" placeholder="கேளுங்கள்...">
+                    <span style="color: #FF6B35;">🎤</span>
                 </div>
             </div>
             <div class="concept-footer">
                 <h4>Key Elements</h4>
                 <ul>
-                    <li>• Kolam dot patterns everywhere</li>
-                    <li>• Diamond (◆) corner decorations</li>
-                    <li>• Dotted borders & lines</li>
+                    <li>• Full interlocking kolam curves</li>
+                    <li>• Kolam flower decorations</li>
+                    <li>• Corner bracket accents</li>
                     <li>• Rice-white background</li>
                 </ul>
             </div>

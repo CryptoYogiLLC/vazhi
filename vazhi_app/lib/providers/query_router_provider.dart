@@ -12,12 +12,11 @@ final queryRouterProvider = Provider<QueryRouter>((ref) {
 });
 
 /// Classify a query and get routing information
-final queryClassificationProvider = FutureProvider.family<QueryClassification, String>(
-  (ref, query) async {
-    final router = ref.watch(queryRouterProvider);
-    return router.classify(query);
-  },
-);
+final queryClassificationProvider =
+    FutureProvider.family<QueryClassification, String>((ref, query) async {
+      final router = ref.watch(queryRouterProvider);
+      return router.classify(query);
+    });
 
 /// Get routing statistics for debugging
 final routingStatsProvider = FutureProvider<Map<String, dynamic>>((ref) async {
@@ -26,9 +25,12 @@ final routingStatsProvider = FutureProvider<Map<String, dynamic>>((ref) async {
 });
 
 /// Check if a query can be answered without the model
-final canAnswerWithoutModelProvider = FutureProvider.family<bool, String>(
-  (ref, query) async {
-    final classification = await ref.watch(queryClassificationProvider(query).future);
-    return classification.canAnswerWithoutModel;
-  },
-);
+final canAnswerWithoutModelProvider = FutureProvider.family<bool, String>((
+  ref,
+  query,
+) async {
+  final classification = await ref.watch(
+    queryClassificationProvider(query).future,
+  );
+  return classification.canAnswerWithoutModel;
+});

@@ -83,7 +83,8 @@ class KnowledgeResponse {
   }
 
   /// Check if we have a displayable response
-  bool get hasResponse => formattedResponse != null && formattedResponse!.isNotEmpty;
+  bool get hasResponse =>
+      formattedResponse != null && formattedResponse!.isNotEmpty;
 
   /// Check if this needs model for complete response
   bool get needsModel => !answeredDeterministically || suggestAiEnhancement;
@@ -103,11 +104,11 @@ class KnowledgeService {
     SchemeService? schemeService,
     EmergencyService? emergencyService,
     HealthcareService? healthcareService,
-  })  : _router = router ?? QueryRouter(),
-        _thirukkuralService = thirukkuralService ?? ThirukkuralService(),
-        _schemeService = schemeService ?? SchemeService(),
-        _emergencyService = emergencyService ?? EmergencyService(),
-        _healthcareService = healthcareService ?? HealthcareService();
+  }) : _router = router ?? QueryRouter(),
+       _thirukkuralService = thirukkuralService ?? ThirukkuralService(),
+       _schemeService = schemeService ?? SchemeService(),
+       _emergencyService = emergencyService ?? EmergencyService(),
+       _healthcareService = healthcareService ?? HealthcareService();
 
   /// Process a query and return the best response
   Future<KnowledgeResponse> query(String userQuery) async {
@@ -126,7 +127,9 @@ class KnowledgeService {
   }
 
   /// Handle deterministic queries
-  Future<KnowledgeResponse> _handleDeterministic(QueryClassification classification) async {
+  Future<KnowledgeResponse> _handleDeterministic(
+    QueryClassification classification,
+  ) async {
     final result = await _retrieveData(classification);
 
     if (result == null || !result.success) {
@@ -141,7 +144,9 @@ class KnowledgeService {
   }
 
   /// Handle hybrid queries (data + AI enhancement)
-  Future<KnowledgeResponse> _handleHybrid(QueryClassification classification) async {
+  Future<KnowledgeResponse> _handleHybrid(
+    QueryClassification classification,
+  ) async {
     final result = await _retrieveData(classification);
 
     if (result == null || !result.success) {
@@ -160,7 +165,9 @@ class KnowledgeService {
   }
 
   /// Retrieve data from appropriate service
-  Future<RetrievalResult<dynamic>?> _retrieveData(QueryClassification classification) async {
+  Future<RetrievalResult<dynamic>?> _retrieveData(
+    QueryClassification classification,
+  ) async {
     switch (classification.category) {
       case KnowledgeCategory.thirukkural:
         return _handleThirukkural(classification);
@@ -186,9 +193,12 @@ class KnowledgeService {
   }
 
   /// Handle Thirukkural queries
-  Future<RetrievalResult<dynamic>> _handleThirukkural(QueryClassification classification) async {
+  Future<RetrievalResult<dynamic>> _handleThirukkural(
+    QueryClassification classification,
+  ) async {
     // If we have an entity ID, get specific kural
-    if (classification.entityId != null && classification.entityType == 'kural_number') {
+    if (classification.entityId != null &&
+        classification.entityType == 'kural_number') {
       final kuralNumber = int.tryParse(classification.entityId!);
       if (kuralNumber != null) {
         return _thirukkuralService.getByNumber(kuralNumber);
@@ -200,9 +210,12 @@ class KnowledgeService {
   }
 
   /// Handle scheme queries
-  Future<RetrievalResult<dynamic>> _handleSchemes(QueryClassification classification) async {
+  Future<RetrievalResult<dynamic>> _handleSchemes(
+    QueryClassification classification,
+  ) async {
     // Check for specific scheme ID
-    if (classification.entityId != null && classification.entityType == 'scheme_id') {
+    if (classification.entityId != null &&
+        classification.entityType == 'scheme_id') {
       return _schemeService.getById(classification.entityId!);
     }
 
@@ -211,17 +224,23 @@ class KnowledgeService {
   }
 
   /// Handle emergency queries
-  Future<RetrievalResult<dynamic>> _handleEmergency(QueryClassification classification) async {
+  Future<RetrievalResult<dynamic>> _handleEmergency(
+    QueryClassification classification,
+  ) async {
     final query = classification.query.toLowerCase();
 
     // Check for specific type
-    if (query.contains('police') || query.contains('போலீஸ்') || query.contains('காவல்')) {
+    if (query.contains('police') ||
+        query.contains('போலீஸ்') ||
+        query.contains('காவல்')) {
       return _emergencyService.getByType('police');
     }
     if (query.contains('fire') || query.contains('தீ')) {
       return _emergencyService.getByType('fire');
     }
-    if (query.contains('ambulance') || query.contains('ஆம்புலன்ஸ்') || query.contains('108')) {
+    if (query.contains('ambulance') ||
+        query.contains('ஆம்புலன்ஸ்') ||
+        query.contains('108')) {
       return _emergencyService.getByType('medical');
     }
 
@@ -230,13 +249,17 @@ class KnowledgeService {
   }
 
   /// Handle health/hospital queries
-  Future<RetrievalResult<dynamic>> _handleHealth(QueryClassification classification) async {
+  Future<RetrievalResult<dynamic>> _handleHealth(
+    QueryClassification classification,
+  ) async {
     // Search hospitals
     return _healthcareService.search(classification.query);
   }
 
   /// Full-text search across all data
-  Future<RetrievalResult<Map<String, dynamic>>> _fullTextSearch(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> _fullTextSearch(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.fullTextSearch(query);
       if (results.isEmpty) {
@@ -262,10 +285,15 @@ class KnowledgeService {
   }
 
   /// Build AI prompt suggestion based on retrieved data
-  String _buildAiPrompt(QueryClassification classification, RetrievalResult<dynamic> result) {
+  String _buildAiPrompt(
+    QueryClassification classification,
+    RetrievalResult<dynamic> result,
+  ) {
     final buffer = StringBuffer();
 
-    buffer.writeln('Based on the following data, please provide additional explanation:');
+    buffer.writeln(
+      'Based on the following data, please provide additional explanation:',
+    );
     buffer.writeln();
     buffer.writeln('---');
     buffer.writeln(result.formattedResponse ?? '');
@@ -273,7 +301,9 @@ class KnowledgeService {
     buffer.writeln();
     buffer.writeln('User query: ${classification.query}');
     buffer.writeln();
-    buffer.writeln('Please explain the meaning, context, or provide additional insights in Tamil.');
+    buffer.writeln(
+      'Please explain the meaning, context, or provide additional insights in Tamil.',
+    );
 
     return buffer.toString();
   }

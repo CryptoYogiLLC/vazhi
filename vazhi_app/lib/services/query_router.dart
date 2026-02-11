@@ -33,10 +33,7 @@ class QueryRouter {
 
   /// Normalize query for matching
   String _normalizeQuery(String query) {
-    return query
-        .toLowerCase()
-        .trim()
-        .replaceAll(RegExp(r'\s+'), ' ');
+    return query.toLowerCase().trim().replaceAll(RegExp(r'\s+'), ' ');
   }
 
   /// Match against patterns stored in database
@@ -88,8 +85,9 @@ class QueryRouter {
     required String normalizedQuery,
     required PatternMatch match,
   }) {
-    final category = KnowledgeCategoryExtension.fromId(match.categoryId)
-        ?? KnowledgeCategory.general;
+    final category =
+        KnowledgeCategoryExtension.fromId(match.categoryId) ??
+        KnowledgeCategory.general;
 
     // Extract entity ID based on category
     String? entityId;
@@ -250,10 +248,21 @@ class QueryRouter {
   /// Check if query needs explanation (AI enhancement)
   bool _needsExplanation(String query) {
     final explanationPatterns = [
-      'விளக்கம்', 'விளக்கு', 'அர்த்தம்', 'பொருள்',
-      'explain', 'meaning', 'what does', 'why',
-      'எப்படி', 'ஏன்', 'how', 'tell me more',
-      'elaborate', 'detail', 'விரிவாக',
+      'விளக்கம்',
+      'விளக்கு',
+      'அர்த்தம்',
+      'பொருள்',
+      'explain',
+      'meaning',
+      'what does',
+      'why',
+      'எப்படி',
+      'ஏன்',
+      'how',
+      'tell me more',
+      'elaborate',
+      'detail',
+      'விரிவாக',
     ];
     return explanationPatterns.any((p) => query.contains(p));
   }
@@ -261,9 +270,21 @@ class QueryRouter {
   /// Check if this is an emergency-related query
   bool _isEmergencyQuery(String query) {
     final patterns = [
-      'அவசர', 'emergency', 'ஆம்புலன்ஸ்', 'ambulance',
-      'போலீஸ்', 'police', 'தீ', 'fire', '108', '100', '101',
-      'helpline', 'உதவி எண்', 'accident', 'விபத்து',
+      'அவசர',
+      'emergency',
+      'ஆம்புலன்ஸ்',
+      'ambulance',
+      'போலீஸ்',
+      'police',
+      'தீ',
+      'fire',
+      '108',
+      '100',
+      '101',
+      'helpline',
+      'உதவி எண்',
+      'accident',
+      'விபத்து',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -271,10 +292,26 @@ class QueryRouter {
   /// Check if this is a scheme-related query
   bool _isSchemeQuery(String query) {
     final patterns = [
-      'திட்டம்', 'scheme', 'cmchis', 'ஆயுஷ்மான்', 'ayushman',
-      'முத்ரா', 'mudra', 'கிசான்', 'kisan', 'ஓய்வூதியம்', 'pension',
-      'மகளிர் உரிமை', 'சலுகை', 'subsidy', 'அரசு உதவி', 'welfare',
-      'eligibility', 'தகுதி', 'documents', 'ஆவணங்கள்',
+      'திட்டம்',
+      'scheme',
+      'cmchis',
+      'ஆயுஷ்மான்',
+      'ayushman',
+      'முத்ரா',
+      'mudra',
+      'கிசான்',
+      'kisan',
+      'ஓய்வூதியம்',
+      'pension',
+      'மகளிர் உரிமை',
+      'சலுகை',
+      'subsidy',
+      'அரசு உதவி',
+      'welfare',
+      'eligibility',
+      'தகுதி',
+      'documents',
+      'ஆவணங்கள்',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -282,9 +319,16 @@ class QueryRouter {
   /// Check if this is a health/hospital query
   bool _isHealthQuery(String query) {
     final patterns = [
-      'மருத்துவமனை', 'hospital', 'doctor', 'மருத்துவர்',
-      'clinic', 'phc', 'ஆரம்ப சுகாதார', 'அரசு மருத்துவமனை',
-      'health center', 'medical',
+      'மருத்துவமனை',
+      'hospital',
+      'doctor',
+      'மருத்துவர்',
+      'clinic',
+      'phc',
+      'ஆரம்ப சுகாதார',
+      'அரசு மருத்துவமனை',
+      'health center',
+      'medical',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -292,9 +336,18 @@ class QueryRouter {
   /// Check if this is a safety/scam query
   bool _isSafetyQuery(String query) {
     final patterns = [
-      'மோசடி', 'scam', 'fraud', 'ஏமாற்று', 'otp',
-      'வங்கி மோசடி', 'bank fraud', 'பாதுகாப்பு', 'safety',
-      'fake', 'போலி', 'cheating',
+      'மோசடி',
+      'scam',
+      'fraud',
+      'ஏமாற்று',
+      'otp',
+      'வங்கி மோசடி',
+      'bank fraud',
+      'பாதுகாப்பு',
+      'safety',
+      'fake',
+      'போலி',
+      'cheating',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -302,12 +355,31 @@ class QueryRouter {
   /// Check if query requires AI response
   bool _requiresAiResponse(String query) {
     final aiPatterns = [
-      'எப்படி', 'how to', 'how do', 'ஏன்', 'why',
-      'what if', 'என்றால்', 'suggest', 'பரிந்துரை',
-      'recommend', 'compare', 'ஒப்பிடு', 'difference',
-      'வேறுபாடு', 'best', 'சிறந்த', 'should i',
-      'help me', 'உதவி', 'advice', 'ஆலோசனை',
-      'opinion', 'கருத்து', 'think', 'நினை',
+      'எப்படி',
+      'how to',
+      'how do',
+      'ஏன்',
+      'why',
+      'what if',
+      'என்றால்',
+      'suggest',
+      'பரிந்துரை',
+      'recommend',
+      'compare',
+      'ஒப்பிடு',
+      'difference',
+      'வேறுபாடு',
+      'best',
+      'சிறந்த',
+      'should i',
+      'help me',
+      'உதவி',
+      'advice',
+      'ஆலோசனை',
+      'opinion',
+      'கருத்து',
+      'think',
+      'நினை',
     ];
     return aiPatterns.any((p) => query.contains(p));
   }
@@ -328,8 +400,7 @@ class QueryRouter {
     for (final pattern in _cachedPatterns!) {
       byCategory[pattern.categoryId] =
           (byCategory[pattern.categoryId] ?? 0) + 1;
-      byType[pattern.responseType] =
-          (byType[pattern.responseType] ?? 0) + 1;
+      byType[pattern.responseType] = (byType[pattern.responseType] ?? 0) + 1;
     }
 
     return {

@@ -4,10 +4,10 @@
 
 **Project:** VAZHI (வழி) - **V**oluntary **A**I with **Z**ero-cost **H**elpful **I**ntelligence
 **Vision:** An open-source Tamil LLM that runs **offline on mobile phones** - free, transparent, Tamil-first
-**Goal:** Deploy a Tamil-capable LLM on mobile devices (~250-300MB target)
-**Current MVP:** 1.6GB Gemma-2B Tamil (interim solution while pursuing smaller model)
+**Goal:** Deploy a Tamil-capable LLM on mobile devices (<1GB target)
+**Current Target:** Qwen3-0.6B with two-stage training (Micro-DAPT → SFT)
 **Timeline:** February 2026
-**Status:** v0.8 Hybrid Architecture Implemented
+**Status:** v0.8+ Qwen3-0.6B Training in Progress
 
 ---
 
@@ -506,6 +506,13 @@ For conversational content:
 | 19 | Don't wait for perfect AI - provide value immediately | Hybrid architecture unblocked the entire project |
 | 20 | Separate factual data from AI interpretation | SQLite for facts, LLM for explanations |
 | 21 | Progressive enhancement > feature gating | Users can try app before committing to model download |
+| 22 | **NEVER ignore tokenizer warnings** | "OrderedVocab holes" warning caused complete GGUF failure |
+| 23 | Two-stage training (DAPT→SFT) preserves both fluency AND instructions | DAPT alone breaks instructions, SFT alone degrades Tamil |
+| 24 | Preflight fail-fast saves days of wasted training | Run tiny DAPT+SFT before full training |
+| 25 | Checkpoint to HF Hub frequently | Survives Colab/Kaggle disconnects |
+| 26 | Smaller models (0.6B) > larger models (2B) for <1GB target | Less quantization degradation |
+| 27 | Verify base model tokenizer before training | Corrupted source = corrupted output |
+| 28 | **NEVER mix data formats in SFT** | Raw text + ChatML mixed = "systemsystemsystem..." garbage |
 
 ---
 
@@ -564,25 +571,30 @@ The hybrid architecture was a game-changer. Instead of blocking on model trainin
 
 ## What's Next
 
-### Immediate (v0.8 - Current)
+### Immediate (v0.8+ - Current)
+- **Qwen3-0.6B training on Kaggle** (two-stage: Micro-DAPT → SFT)
 - Populate full Thirukkural database (1,330 verses)
 - Complete government schemes database
-- Integrate MVP model: Gemma-2B Tamil (1.6GB)
 
 ### Short-term (v0.9)
+- GGUF quantization of trained Qwen3-0.6B
+- HuggingFace Space deployment for testing
 - FTS5 Tamil search optimization
-- Expert directory feature
-- Pursue target model: ~250-300MB SLM
 
-### Target Model Strategy (250-300MB)
-The 1.6GB Gemma-2B is an interim MVP solution. Our goal remains a ~250-300MB model for budget devices.
+### Target Model Strategy (<1GB)
+**Current approach: Qwen3-0.6B with two-stage training**
 
-Approaches under consideration:
-1. **Qwen2.5-0.5B fine-tuning**: ~250MB Q4 target
-2. **Minitron compression**: Compress Gemma-2B → 1B → ~500MB
-3. **Vocabulary pruning**: Remove non-Tamil tokens
-4. **Tamil-optimized tokenizer**: Reduce token/char ratio
-5. **BitNet (1.58-bit)**: Extreme compression research
+Why Qwen3-0.6B:
+1. **Native thinking capability** - Built-in reasoning with `/think` mode
+2. **600M parameters** - Sweet spot for <1GB GGUF target
+3. **Clean tokenizer** - No corruption issues like Gemma
+4. **Strong multilingual support** - Better Tamil handling than Gemma
+
+Two-stage training pipeline:
+1. **Micro-DAPT**: 80% Vazhi outputs + 20% Sangraha Tamil corpus (AI4Bharat, CC-BY 4.0)
+2. **SFT**: Instruction tuning with assistant-only loss masking
+3. **Merge**: LoRA adapters merged to base model
+4. **GGUF**: Q4_K_M quantization for mobile deployment
 
 ### Future Considerations
 - Custom Tamil-optimized tokenizer
@@ -808,5 +820,157 @@ VAZHI may not be the first Tamil mobile LLM, but the lessons learned here will h
 
 ---
 
+---
+
+## Phase 6: The Qwen3-0.6B Pivot (v0.8+)
+
+### The Gemma Tokenizer Corruption
+
+After v0.7's apparent success with Gemma-2B Tamil, GGUF conversion revealed a fatal flaw:
+
+**Error:** `GGML_ASSERT(id_to_token.size() == token_to_id.size()) failed`
+
+**Root Cause:** The source model `abhinand/gemma-2b-it-tamil-v0.1-alpha` had a corrupted tokenizer with "OrderedVocab holes at indices [1, 2]". This warning was visible during training but ignored. The corruption propagated through all training attempts and made GGUF conversion impossible.
+
+### Why Qwen3-0.6B?
+
+After consulting with GPT5.2 and analyzing the failure modes, the recommendation was clear:
+
+| Factor | Gemma-2B | Qwen3-0.6B |
+|--------|----------|------------|
+| Tokenizer | Corrupted (holes) | Clean |
+| Parameters | 2B | 600M |
+| GGUF target | 1.6GB | <1GB |
+| Thinking capability | None | Native `/think` mode |
+| Multilingual | Limited | Strong |
+
+### Two-Stage Training: The Key Insight
+
+**Problem:** Single-pass SFT causes either:
+- Tamil fluency loss (if using English-first model)
+- Instruction-following loss (if using DAPT only)
+
+**Solution:** Two-stage training pipeline:
+
+```
+Stage 1: Micro-DAPT (Continued Pretraining)
+├── 80% Vazhi outputs (Tamil text)
+├── 20% Sangraha corpus (AI4Bharat, CC-BY 4.0)
+└── Result: Tamil fluency boost
+
+Stage 2: SFT (Instruction Tuning)
+├── Full Vazhi Q&A pairs
+├── Assistant-only loss masking
+└── Result: Instruction-following capability
+```
+
+### Infrastructure Lessons
+
+The Kaggle training environment required specific fixes:
+
+| Issue | Fix |
+|-------|-----|
+| CUDA device selection | `CUDA_VISIBLE_DEVICES=0` |
+| Tokenizer parallelism warnings | `TOKENIZERS_PARALLELISM=false` |
+| T4 GPU precision | `fp16` (not bf16) |
+| Colab/Kaggle disconnects | HF Hub checkpointing every epoch |
+
+### Preflight Fail-Fast System
+
+Before committing to full training (hours), run a preflight check:
+
+```python
+# 1. Tiny Micro-DAPT (50 samples, 10 steps)
+# 2. Tiny SFT (50 samples, 10 steps)
+# 3. Merge LoRA
+# 4. Test output quality
+# 5. If garbage → pivot BEFORE wasting hours
+```
+
+This system would have saved days of wasted Gemma training.
+
+### Lesson #22-27: New Lessons from Phase 6
+
+- **#22**: NEVER ignore tokenizer warnings - "OrderedVocab holes" is fatal
+- **#23**: Two-stage training (DAPT→SFT) preserves both fluency AND instructions
+- **#24**: Preflight fail-fast saves days of wasted training
+- **#25**: Checkpoint to HF Hub frequently (Colab/Kaggle disconnect protection)
+- **#26**: Smaller models (0.6B) > larger models (2B) for <1GB target
+- **#27**: Verify base model tokenizer BEFORE training
+- **#28**: NEVER MIX DATA FORMATS in SFT training - Raw text belongs in DAPT, ChatML-formatted Q&A pairs belong in SFT. Mixing them causes model to output garbage (e.g., "systemsystemsystem...")
+
+---
+
+## Phase 7: The Data Format Crisis (v3.1 Training Failure)
+
+### What Happened
+
+Training v3.1 on Kaggle completed successfully:
+- Loss dropped from 3.39 to ~0.5
+- Training ran to completion without errors
+- Model uploaded to HuggingFace
+
+**But the model output was garbage:**
+```
+Q: வணக்கம்
+A: 'systemsystemsystemsystemsystem...
+
+Q: 2+2 என்ன?
+A: 4systemsystemsystemsystem...
+```
+
+### Root Cause: Mixed Data Formats
+
+The training dataset mixed **two incompatible formats**:
+
+| Source | Format | Count | Problem |
+|--------|--------|-------|---------|
+| `vazhi-tamil-v05` (existing) | RAW TEXT | ~3,836 | No ChatML structure |
+| IndicAlign + Manual | ChatML formatted | ~1,097 | Properly structured |
+
+The existing dataset contained:
+- Sangam poetry (raw text, no Q&A structure)
+- Thirukkural verses (raw text)
+- Mixed completion format samples
+
+The diverse samples were properly formatted:
+```
+<|im_start|>system
+நீங்கள் VAZHI...<|im_end|>
+<|im_start|>user
+தமிழ்நாட்டின் தலைநகரம்?<|im_end|>
+<|im_start|>assistant
+சென்னை.<|im_end|>
+```
+
+### The Fix
+
+**Option A: Use ONLY ChatML-formatted data for SFT**
+- Filter existing dataset for samples that already have `<|im_start|>` tags
+- Only include diverse samples (already formatted)
+- Raw text samples belong in DAPT stage, not SFT
+
+**Option B: Two-stage training (proper implementation)**
+- Stage 1 (Micro-DAPT): Raw Tamil text for fluency (no chat template)
+- Stage 2 (SFT): ChatML-formatted Q&A ONLY
+
+### Lesson #28: Data Format Consistency is Critical
+
+For SFT training:
+- **ALL** samples must have consistent chat template format
+- Raw text belongs in DAPT/continued pretraining, NOT in SFT
+- Mixing formats causes the model to learn garbage patterns
+- Loss can look good (0.5) while output is completely broken
+- Always verify format consistency before training with:
+  ```python
+  def is_chatml_formatted(text):
+      return "<|im_start|>" in text and "<|im_end|>" in text
+
+  chatml_pct = sum(1 for s in samples if is_chatml_formatted(s['text'])) / len(samples)
+  print(f"ChatML %: {chatml_pct:.1%}")  # Should be 100% for SFT
+  ```
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-08*
+*Last updated: 2026-02-10*

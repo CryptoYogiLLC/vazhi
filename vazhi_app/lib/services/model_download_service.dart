@@ -22,11 +22,7 @@ enum DownloadState {
 }
 
 /// Network type
-enum NetworkType {
-  wifi,
-  cellular,
-  none,
-}
+enum NetworkType { wifi, cellular, none }
 
 /// Download progress information
 class DownloadProgress {
@@ -106,11 +102,9 @@ class StorageInfo {
   final bool hasEnoughSpace;
   final bool isLowSpace;
 
-  StorageInfo({
-    required this.availableBytes,
-    required this.requiredBytes,
-  })  : hasEnoughSpace = availableBytes > requiredBytes,
-        isLowSpace = availableBytes < requiredBytes * 1.2; // 20% buffer
+  StorageInfo({required this.availableBytes, required this.requiredBytes})
+    : hasEnoughSpace = availableBytes > requiredBytes,
+      isLowSpace = availableBytes < requiredBytes * 1.2; // 20% buffer
 
   String get availableSpace => DownloadProgress._formatBytes(availableBytes);
   String get requiredSpace => DownloadProgress._formatBytes(requiredBytes);
@@ -238,23 +232,27 @@ class ModelDownloadService {
     final networkType = await getNetworkType();
 
     if (networkType == NetworkType.none) {
-      _emitProgress(DownloadProgress(
-        state: DownloadState.error,
-        errorMessage: 'இணைய இணைப்பு இல்லை',
-        networkType: networkType,
-      ));
+      _emitProgress(
+        DownloadProgress(
+          state: DownloadState.error,
+          errorMessage: 'இணைய இணைப்பு இல்லை',
+          networkType: networkType,
+        ),
+      );
       return;
     }
 
     // Check storage
     final storage = await checkStorage();
     if (!storage.hasEnoughSpace) {
-      _emitProgress(DownloadProgress(
-        state: DownloadState.error,
-        errorMessage:
-            'போதுமான சேமிப்பிடம் இல்லை. ${storage.requiredSpace} தேவை, ${storage.availableSpace} உள்ளது.',
-        networkType: networkType,
-      ));
+      _emitProgress(
+        DownloadProgress(
+          state: DownloadState.error,
+          errorMessage:
+              'போதுமான சேமிப்பிடம் இல்லை. ${storage.requiredSpace} தேவை, ${storage.availableSpace} உள்ளது.',
+          networkType: networkType,
+        ),
+      );
       return;
     }
 
@@ -266,13 +264,15 @@ class ModelDownloadService {
     if (!forceRestart && await partialFile.exists()) {
       _resumePosition = await partialFile.length();
       if (_resumePosition > 0) {
-        _emitProgress(DownloadProgress(
-          state: DownloadState.checking,
-          downloadedBytes: _resumePosition,
-          totalBytes: expectedModelSize,
-          progress: _resumePosition / expectedModelSize,
-          networkType: networkType,
-        ));
+        _emitProgress(
+          DownloadProgress(
+            state: DownloadState.checking,
+            downloadedBytes: _resumePosition,
+            totalBytes: expectedModelSize,
+            progress: _resumePosition / expectedModelSize,
+            networkType: networkType,
+          ),
+        );
       }
     } else if (await partialFile.exists()) {
       await partialFile.delete();
@@ -388,13 +388,15 @@ class ModelDownloadService {
         _lastSpeedUpdate = DateTime.now();
         _lastBytesForSpeed = downloadedBytes;
 
-        _emitProgress(DownloadProgress(
-          state: DownloadState.downloading,
-          downloadedBytes: downloadedBytes,
-          totalBytes: totalBytes,
-          progress: downloadedBytes / totalBytes,
-          networkType: networkType,
-        ));
+        _emitProgress(
+          DownloadProgress(
+            state: DownloadState.downloading,
+            downloadedBytes: downloadedBytes,
+            totalBytes: totalBytes,
+            progress: downloadedBytes / totalBytes,
+            networkType: networkType,
+          ),
+        );
 
         try {
           await for (final chunk in response.stream) {
@@ -405,13 +407,15 @@ class ModelDownloadService {
 
             if (_isPaused) {
               await sink.close();
-              _emitProgress(DownloadProgress(
-                state: DownloadState.paused,
-                downloadedBytes: downloadedBytes,
-                totalBytes: totalBytes,
-                progress: downloadedBytes / totalBytes,
-                networkType: networkType,
-              ));
+              _emitProgress(
+                DownloadProgress(
+                  state: DownloadState.paused,
+                  downloadedBytes: downloadedBytes,
+                  totalBytes: totalBytes,
+                  progress: downloadedBytes / totalBytes,
+                  networkType: networkType,
+                ),
+              );
               return;
             }
 
@@ -429,15 +433,17 @@ class ModelDownloadService {
               eta = Duration(seconds: secondsRemaining.toInt());
             }
 
-            _emitProgress(DownloadProgress(
-              state: DownloadState.downloading,
-              downloadedBytes: downloadedBytes,
-              totalBytes: totalBytes,
-              progress: downloadedBytes / totalBytes,
-              speedBytesPerSecond: _currentSpeed,
-              estimatedTimeRemaining: eta,
-              networkType: networkType,
-            ));
+            _emitProgress(
+              DownloadProgress(
+                state: DownloadState.downloading,
+                downloadedBytes: downloadedBytes,
+                totalBytes: totalBytes,
+                progress: downloadedBytes / totalBytes,
+                speedBytesPerSecond: _currentSpeed,
+                estimatedTimeRemaining: eta,
+                networkType: networkType,
+              ),
+            );
           }
 
           await sink.close();
@@ -447,13 +453,15 @@ class ModelDownloadService {
         }
 
         // Verify download
-        _emitProgress(DownloadProgress(
-          state: DownloadState.verifying,
-          downloadedBytes: downloadedBytes,
-          totalBytes: totalBytes,
-          progress: 1.0,
-          networkType: networkType,
-        ));
+        _emitProgress(
+          DownloadProgress(
+            state: DownloadState.verifying,
+            downloadedBytes: downloadedBytes,
+            totalBytes: totalBytes,
+            progress: 1.0,
+            networkType: networkType,
+          ),
+        );
 
         final verified = await _verifyDownload(partialPath);
         if (!verified) {
@@ -463,42 +471,52 @@ class ModelDownloadService {
         // Rename partial to final
         await File(partialPath).rename(finalPath);
 
-        _emitProgress(DownloadProgress(
-          state: DownloadState.completed,
-          downloadedBytes: downloadedBytes,
-          totalBytes: totalBytes,
-          progress: 1.0,
-          networkType: networkType,
-        ));
+        _emitProgress(
+          DownloadProgress(
+            state: DownloadState.completed,
+            downloadedBytes: downloadedBytes,
+            totalBytes: totalBytes,
+            progress: 1.0,
+            networkType: networkType,
+          ),
+        );
 
         return;
       }
 
       throw ModelDownloadException('Too many redirects');
     } on SocketException catch (e) {
-      _emitProgress(DownloadProgress(
-        state: DownloadState.error,
-        errorMessage: 'இணைய பிழை: ${e.message}',
-        networkType: networkType,
-      ));
+      _emitProgress(
+        DownloadProgress(
+          state: DownloadState.error,
+          errorMessage: 'இணைய பிழை: ${e.message}',
+          networkType: networkType,
+        ),
+      );
     } on HttpException catch (e) {
-      _emitProgress(DownloadProgress(
-        state: DownloadState.error,
-        errorMessage: 'HTTP பிழை: ${e.message}',
-        networkType: networkType,
-      ));
+      _emitProgress(
+        DownloadProgress(
+          state: DownloadState.error,
+          errorMessage: 'HTTP பிழை: ${e.message}',
+          networkType: networkType,
+        ),
+      );
     } on ModelDownloadException catch (e) {
-      _emitProgress(DownloadProgress(
-        state: DownloadState.error,
-        errorMessage: e.message,
-        networkType: networkType,
-      ));
+      _emitProgress(
+        DownloadProgress(
+          state: DownloadState.error,
+          errorMessage: e.message,
+          networkType: networkType,
+        ),
+      );
     } catch (e) {
-      _emitProgress(DownloadProgress(
-        state: DownloadState.error,
-        errorMessage: 'பிழை: $e',
-        networkType: networkType,
-      ));
+      _emitProgress(
+        DownloadProgress(
+          state: DownloadState.error,
+          errorMessage: 'பிழை: $e',
+          networkType: networkType,
+        ),
+      );
     } finally {
       _client?.close();
       _client = null;

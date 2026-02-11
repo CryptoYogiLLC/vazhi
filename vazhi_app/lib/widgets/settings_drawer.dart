@@ -36,9 +36,7 @@ class SettingsDrawer extends ConsumerWidget {
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                gradient: VazhiTheme.primaryGradient,
-              ),
+              decoration: BoxDecoration(gradient: VazhiTheme.primaryGradient),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -61,22 +59,23 @@ class SettingsDrawer extends ConsumerWidget {
                           child: Image.asset(
                             'assets/vazhi_logo_white.jpg',
                             fit: BoxFit.cover,
-                            errorBuilder: (context, error, stackTrace) => Container(
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: const Center(
-                                child: Text(
-                                  'வ',
-                                  style: TextStyle(
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.bold,
-                                    color: VazhiTheme.primaryColor,
+                            errorBuilder: (context, error, stackTrace) =>
+                                Container(
+                                  decoration: BoxDecoration(
+                                    color: Colors.white,
+                                    borderRadius: BorderRadius.circular(12),
+                                  ),
+                                  child: const Center(
+                                    child: Text(
+                                      'வ',
+                                      style: TextStyle(
+                                        fontSize: 28,
+                                        fontWeight: FontWeight.bold,
+                                        color: VazhiTheme.primaryColor,
+                                      ),
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ),
                           ),
                         ),
                       ),
@@ -115,7 +114,9 @@ class SettingsDrawer extends ConsumerWidget {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
-                      inferenceMode == InferenceMode.cloud ? '☁️ Cloud Mode' : '📱 Offline Mode',
+                      inferenceMode == InferenceMode.cloud
+                          ? '☁️ Cloud Mode'
+                          : '📱 Offline Mode',
                       style: const TextStyle(
                         color: Colors.white,
                         fontSize: 12,
@@ -147,26 +148,68 @@ class SettingsDrawer extends ConsumerWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           TextButton(
-                            onPressed: isTamil ? () => ref.read(languageProvider.notifier).state = false : null,
+                            onPressed: isTamil
+                                ? () =>
+                                      ref
+                                              .read(languageProvider.notifier)
+                                              .state =
+                                          false
+                                : null,
                             style: TextButton.styleFrom(
-                              backgroundColor: !isTamil ? VazhiTheme.primaryColor : Colors.transparent,
-                              foregroundColor: !isTamil ? Colors.white : VazhiTheme.textSecondary,
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                              backgroundColor: !isTamil
+                                  ? VazhiTheme.primaryColor
+                                  : Colors.transparent,
+                              foregroundColor: !isTamil
+                                  ? Colors.white
+                                  : VazhiTheme.textSecondary,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
                               minimumSize: Size.zero,
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
                             ),
-                            child: const Text('English', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                            child: const Text(
+                              'English',
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                           TextButton(
-                            onPressed: !isTamil ? () => ref.read(languageProvider.notifier).state = true : null,
+                            onPressed: !isTamil
+                                ? () =>
+                                      ref
+                                              .read(languageProvider.notifier)
+                                              .state =
+                                          true
+                                : null,
                             style: TextButton.styleFrom(
-                              backgroundColor: isTamil ? VazhiTheme.primaryColor : Colors.transparent,
-                              foregroundColor: isTamil ? Colors.white : VazhiTheme.textSecondary,
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                              backgroundColor: isTamil
+                                  ? VazhiTheme.primaryColor
+                                  : Colors.transparent,
+                              foregroundColor: isTamil
+                                  ? Colors.white
+                                  : VazhiTheme.textSecondary,
+                              padding: const EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 4,
+                              ),
                               minimumSize: Size.zero,
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(16),
+                              ),
                             ),
-                            child: const Text('Tamil', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                            child: const Text(
+                              'Tamil',
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
                         ],
                       ),
@@ -177,13 +220,25 @@ class SettingsDrawer extends ConsumerWidget {
 
                   // Inference Mode Section
                   _buildSectionHeader(t('Inference Mode', 'செயல்முறை')),
-                  _buildInferenceModeTile(context, ref, inferenceMode, modelStatus, isTamil),
+                  _buildInferenceModeTile(
+                    context,
+                    ref,
+                    inferenceMode,
+                    modelStatus,
+                    isTamil,
+                  ),
 
                   const Divider(height: 32),
 
                   // Model Management Section (always show)
                   _buildSectionHeader(t('Model', 'மாடல்')),
-                  _buildModelManagementTile(context, ref, modelStatus, downloadProgress, isTamil),
+                  _buildModelManagementTile(
+                    context,
+                    ref,
+                    modelStatus,
+                    downloadProgress,
+                    isTamil,
+                  ),
 
                   const Divider(height: 32),
 
@@ -192,10 +247,14 @@ class SettingsDrawer extends ConsumerWidget {
                   SwitchListTile(
                     secondary: const Icon(Icons.volume_up_outlined),
                     title: Text(t('Voice Output', 'குரல் வெளியீடு')),
-                    subtitle: Text(t('Read responses aloud', 'பதில்களை சத்தமாக படிக்கவும்')),
+                    subtitle: Text(
+                      t('Read responses aloud', 'பதில்களை சத்தமாக படிக்கவும்'),
+                    ),
                     value: voiceOutput.isEnabled,
                     onChanged: (value) {
-                      ref.read(voiceOutputStateProvider.notifier).toggleEnabled();
+                      ref
+                          .read(voiceOutputStateProvider.notifier)
+                          .toggleEnabled();
                     },
                   ),
                   if (voiceOutput.isEnabled)
@@ -209,7 +268,9 @@ class SettingsDrawer extends ConsumerWidget {
                         divisions: 15,
                         label: '${(voiceOutput.speed * 100).round()}%',
                         onChanged: (value) {
-                          ref.read(voiceOutputStateProvider.notifier).setSpeed(value);
+                          ref
+                              .read(voiceOutputStateProvider.notifier)
+                              .setSpeed(value);
                         },
                       ),
                     ),
@@ -219,16 +280,32 @@ class SettingsDrawer extends ConsumerWidget {
                   // Feedback Section
                   _buildSectionHeader(t('Feedback', 'கருத்து')),
                   ListTile(
-                    leading: const Icon(Icons.chat_outlined, color: Colors.green),
+                    leading: const Icon(
+                      Icons.chat_outlined,
+                      color: Colors.green,
+                    ),
                     title: Text(t('WhatsApp Community', 'WhatsApp சமூகம்')),
-                    subtitle: Text(t('Join discussion & give feedback', 'கலந்துரையாடலில் சேரவும்')),
+                    subtitle: Text(
+                      t(
+                        'Join discussion & give feedback',
+                        'கலந்துரையாடலில் சேரவும்',
+                      ),
+                    ),
                     trailing: const Icon(Icons.open_in_new, size: 18),
                     onTap: () => _openWhatsApp(context),
                   ),
                   ListTile(
-                    leading: const Icon(Icons.bug_report_outlined, color: Colors.orange),
+                    leading: const Icon(
+                      Icons.bug_report_outlined,
+                      color: Colors.orange,
+                    ),
                     title: Text(t('Report Issue', 'சிக்கலைப் புகாரளி')),
-                    subtitle: Text(t('Help us improve VAZHI', 'VAZHI-ஐ மேம்படுத்த உதவுங்கள்')),
+                    subtitle: Text(
+                      t(
+                        'Help us improve VAZHI',
+                        'VAZHI-ஐ மேம்படுத்த உதவுங்கள்',
+                      ),
+                    ),
                     trailing: const Icon(Icons.open_in_new, size: 18),
                     onTap: () => _openGitHub(context),
                   ),
@@ -240,14 +317,25 @@ class SettingsDrawer extends ConsumerWidget {
                   ListTile(
                     leading: const Icon(Icons.info_outline),
                     title: Text(t('About VAZHI', 'VAZHI பற்றி')),
-                    subtitle: Text('${t('Version', 'பதிப்பு')} ${AppConfig.appVersion}'),
+                    subtitle: Text(
+                      '${t('Version', 'பதிப்பு')} ${AppConfig.appVersion}',
+                    ),
                     onTap: () => _showAboutDialog(context, isTamil),
                   ),
                   ListTile(
-                    leading: const Icon(Icons.volunteer_activism_outlined,
-                        color: Colors.pink),
-                    title: Text(t('Support the Project', 'திட்டத்தை ஆதரிக்கவும்')),
-                    subtitle: Text(t('Help keep VAZHI free', 'VAZHI-ஐ இலவசமாக வைக்க உதவுங்கள்')),
+                    leading: const Icon(
+                      Icons.volunteer_activism_outlined,
+                      color: Colors.pink,
+                    ),
+                    title: Text(
+                      t('Support the Project', 'திட்டத்தை ஆதரிக்கவும்'),
+                    ),
+                    subtitle: Text(
+                      t(
+                        'Help keep VAZHI free',
+                        'VAZHI-ஐ இலவசமாக வைக்க உதவுங்கள்',
+                      ),
+                    ),
                     trailing: const Icon(Icons.open_in_new, size: 18),
                     onTap: () => _openDonation(context),
                   ),
@@ -259,12 +347,11 @@ class SettingsDrawer extends ConsumerWidget {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Text(
-                t('VAZHI ${AppConfig.appVersion} • Made with ❤️ for Tamil community',
-                  'VAZHI ${AppConfig.appVersion} • தமிழ் சமூகத்திற்காக ❤️ உடன் உருவாக்கப்பட்டது'),
-                style: TextStyle(
-                  fontSize: 11,
-                  color: VazhiTheme.textLight,
+                t(
+                  'VAZHI ${AppConfig.appVersion} • Made with ❤️ for Tamil community',
+                  'VAZHI ${AppConfig.appVersion} • தமிழ் சமூகத்திற்காக ❤️ உடன் உருவாக்கப்பட்டது',
                 ),
+                style: TextStyle(fontSize: 11, color: VazhiTheme.textLight),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -289,7 +376,13 @@ class SettingsDrawer extends ConsumerWidget {
     );
   }
 
-  Widget _buildInferenceModeTile(BuildContext context, WidgetRef ref, InferenceMode currentMode, ModelStatus modelStatus, bool isTamil) {
+  Widget _buildInferenceModeTile(
+    BuildContext context,
+    WidgetRef ref,
+    InferenceMode currentMode,
+    ModelStatus modelStatus,
+    bool isTamil,
+  ) {
     final bool canUseLocal = modelStatus == ModelStatus.ready;
 
     return Padding(
@@ -302,7 +395,8 @@ class SettingsDrawer extends ConsumerWidget {
               subtitle: isTamil ? 'இணையம் தேவை' : 'Needs internet',
               icon: Icons.cloud_outlined,
               isSelected: currentMode == InferenceMode.cloud,
-              onTap: () => ref.read(inferenceModeProvider.notifier).state = InferenceMode.cloud,
+              onTap: () => ref.read(inferenceModeProvider.notifier).state =
+                  InferenceMode.cloud,
             ),
           ),
           const SizedBox(width: 12),
@@ -316,16 +410,21 @@ class SettingsDrawer extends ConsumerWidget {
               isSelected: currentMode == InferenceMode.local,
               isDisabled: !canUseLocal,
               onTap: canUseLocal
-                  ? () => ref.read(inferenceModeProvider.notifier).state = InferenceMode.local
+                  ? () => ref.read(inferenceModeProvider.notifier).state =
+                        InferenceMode.local
                   : () {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text(isTamil
-                              ? 'முதலில் மாடலை பதிவிறக்கவும்'
-                              : 'Please download the model first'),
+                          content: Text(
+                            isTamil
+                                ? 'முதலில் மாடலை பதிவிறக்கவும்'
+                                : 'Please download the model first',
+                          ),
                           action: SnackBarAction(
                             label: isTamil ? 'பதிவிறக்கு' : 'Download',
-                            onPressed: () => ref.read(modelManagerProvider.notifier).downloadModel(),
+                            onPressed: () => ref
+                                .read(modelManagerProvider.notifier)
+                                .downloadModel(),
                           ),
                         ),
                       );
@@ -337,14 +436,22 @@ class SettingsDrawer extends ConsumerWidget {
     );
   }
 
-  Widget _buildModelManagementTile(BuildContext context, WidgetRef ref, ModelStatus status, double progress, bool isTamil) {
+  Widget _buildModelManagementTile(
+    BuildContext context,
+    WidgetRef ref,
+    ModelStatus status,
+    double progress,
+    bool isTamil,
+  ) {
     String statusText;
     Widget? trailing;
     VoidCallback? onTap;
 
     switch (status) {
       case ModelStatus.notDownloaded:
-        statusText = isTamil ? 'பதிவிறக்கவில்லை (~1.6 GB)' : 'Not downloaded (~1.6 GB)';
+        statusText = isTamil
+            ? 'பதிவிறக்கவில்லை (~1.6 GB)'
+            : 'Not downloaded (~1.6 GB)';
         trailing = ElevatedButton.icon(
           icon: const Icon(Icons.download, size: 18),
           label: Text(isTamil ? 'பதிவிறக்கு' : 'Download'),
@@ -370,9 +477,15 @@ class SettingsDrawer extends ConsumerWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              LinearProgressIndicator(value: progress, color: VazhiTheme.primaryColor),
+              LinearProgressIndicator(
+                value: progress,
+                color: VazhiTheme.primaryColor,
+              ),
               const SizedBox(height: 4),
-              Text('${(progress * 100).toInt()}%', style: const TextStyle(fontSize: 12)),
+              Text(
+                '${(progress * 100).toInt()}%',
+                style: const TextStyle(fontSize: 12),
+              ),
             ],
           ),
         );
@@ -398,7 +511,9 @@ class SettingsDrawer extends ConsumerWidget {
         );
         break;
       case ModelStatus.ready:
-        statusText = isTamil ? 'தயார் - ஆஃப்லைன் பயன்படுத்தலாம்' : 'Ready - Can use offline';
+        statusText = isTamil
+            ? 'தயார் - ஆஃப்லைன் பயன்படுத்தலாம்'
+            : 'Ready - Can use offline';
         trailing = Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -421,15 +536,20 @@ class SettingsDrawer extends ConsumerWidget {
             backgroundColor: Colors.orange,
             foregroundColor: Colors.white,
           ),
-          onPressed: () => ref.read(modelManagerProvider.notifier).downloadModel(),
+          onPressed: () =>
+              ref.read(modelManagerProvider.notifier).downloadModel(),
         );
         break;
     }
 
     return ListTile(
       leading: Icon(
-        status == ModelStatus.ready ? Icons.memory : Icons.cloud_download_outlined,
-        color: status == ModelStatus.ready ? Colors.green : VazhiTheme.primaryColor,
+        status == ModelStatus.ready
+            ? Icons.memory
+            : Icons.cloud_download_outlined,
+        color: status == ModelStatus.ready
+            ? Colors.green
+            : VazhiTheme.primaryColor,
       ),
       title: Text(isTamil ? 'VAZHI மாடல்' : 'VAZHI Model'),
       subtitle: Text(statusText),
@@ -443,9 +563,11 @@ class SettingsDrawer extends ConsumerWidget {
       context: context,
       builder: (context) => AlertDialog(
         title: Text(isTamil ? 'மாடலை நீக்கவா?' : 'Delete Model?'),
-        content: Text(isTamil
-            ? 'இது 1.6 GB சேமிப்பிடத்தை விடுவிக்கும். மீண்டும் பதிவிறக்க வேண்டும்.'
-            : 'This will free up 1.6 GB of storage. You will need to download again.'),
+        content: Text(
+          isTamil
+              ? 'இது 1.6 GB சேமிப்பிடத்தை விடுவிக்கும். மீண்டும் பதிவிறக்க வேண்டும்.'
+              : 'This will free up 1.6 GB of storage. You will need to download again.',
+        ),
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context),
@@ -457,9 +579,13 @@ class SettingsDrawer extends ConsumerWidget {
               Navigator.pop(context);
               ref.read(modelManagerProvider.notifier).deleteModel();
               // Switch back to cloud mode when model is deleted
-              ref.read(inferenceModeProvider.notifier).state = InferenceMode.cloud;
+              ref.read(inferenceModeProvider.notifier).state =
+                  InferenceMode.cloud;
             },
-            child: Text(isTamil ? 'நீக்கு' : 'Delete', style: const TextStyle(color: Colors.white)),
+            child: Text(
+              isTamil ? 'நீக்கு' : 'Delete',
+              style: const TextStyle(color: Colors.white),
+            ),
           ),
         ],
       ),
@@ -523,22 +649,22 @@ class SettingsDrawer extends ConsumerWidget {
           children: [
             Text(
               isTamil
-                ? 'இலவச உதவிகரமான AI வழி தோழன்'
-                : 'Voluntary AI with Zero-cost Helpful Intelligence',
+                  ? 'இலவச உதவிகரமான AI வழி தோழன்'
+                  : 'Voluntary AI with Zero-cost Helpful Intelligence',
               style: const TextStyle(fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 16),
             Text(
               isTamil
-                ? 'VAZHI (வழி) என்பது தமிழில் "பாதை" என்று பொருள். எல்லா இடங்களிலும் உள்ள தமிழர்களுக்கு AI-ஐ அணுகக்கூடியதாக ஆக்குவதன் மூலம் நாங்கள் வழி காட்டுகிறோம்.'
-                : 'VAZHI (வழி) means "path" or "way" in Tamil. We show the way by making AI accessible to Tamilians everywhere.',
+                  ? 'VAZHI (வழி) என்பது தமிழில் "பாதை" என்று பொருள். எல்லா இடங்களிலும் உள்ள தமிழர்களுக்கு AI-ஐ அணுகக்கூடியதாக ஆக்குவதன் மூலம் நாங்கள் வழி காட்டுகிறோம்.'
+                  : 'VAZHI (வழி) means "path" or "way" in Tamil. We show the way by making AI accessible to Tamilians everywhere.',
               style: const TextStyle(fontSize: 14, height: 1.5),
             ),
             const SizedBox(height: 16),
             Text(
               isTamil
-                ? '• 100% இலவசம், விளம்பரங்கள் இல்லை\n• ஆஃப்லைனில் வேலை செய்யும் (முழு பயன்முறை)\n• தமிழ் சமூகத்திற்காக உருவாக்கப்பட்டது'
-                : '• 100% Free, No Ads\n• Works Offline (Full mode)\n• Built for Tamil community',
+                  ? '• 100% இலவசம், விளம்பரங்கள் இல்லை\n• ஆஃப்லைனில் வேலை செய்யும் (முழு பயன்முறை)\n• தமிழ் சமூகத்திற்காக உருவாக்கப்பட்டது'
+                  : '• 100% Free, No Ads\n• Works Offline (Full mode)\n• Built for Tamil community',
               style: const TextStyle(fontSize: 13),
             ),
           ],
@@ -584,7 +710,9 @@ class _ModeCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: isDisabled
               ? Colors.grey[50]
-              : (isSelected ? VazhiTheme.primaryColor.withOpacity(0.1) : Colors.grey[100]),
+              : (isSelected
+                    ? VazhiTheme.primaryColor.withOpacity(0.1)
+                    : Colors.grey[100]),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: isDisabled
@@ -595,17 +723,15 @@ class _ModeCard extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Icon(
-              icon,
-              size: 28,
-              color: effectiveColor,
-            ),
+            Icon(icon, size: 28, color: effectiveColor),
             const SizedBox(height: 8),
             Text(
               title,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: isDisabled ? Colors.grey[400] : (isSelected ? VazhiTheme.primaryColor : Colors.grey[800]),
+                color: isDisabled
+                    ? Colors.grey[400]
+                    : (isSelected ? VazhiTheme.primaryColor : Colors.grey[800]),
               ),
             ),
             Text(
@@ -614,7 +740,9 @@ class _ModeCard extends StatelessWidget {
                 fontSize: 11,
                 color: isDisabled
                     ? Colors.grey[400]
-                    : (isSelected ? VazhiTheme.primaryColor.withOpacity(0.8) : Colors.grey[600]),
+                    : (isSelected
+                          ? VazhiTheme.primaryColor.withOpacity(0.8)
+                          : Colors.grey[600]),
               ),
             ),
           ],
@@ -623,4 +751,3 @@ class _ModeCard extends StatelessWidget {
     );
   }
 }
-

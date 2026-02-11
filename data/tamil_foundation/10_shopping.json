@@ -1,0 +1,618 @@
+[
+  {
+    "instruction": "கடையில் விலை கேட்பது எப்படி?",
+    "output": "இது எவ்வளவு? அல்லது இதோட விலை என்ன? என்று கேட்கலாம். விலை அதிகமாக இருந்தால் கொஞ்சம் குறைங்க என்று பேரம் பேசலாம்."
+  },
+  {
+    "instruction": "கோயம்பேடு மார்க்கெட்டில் என்ன வாங்கலாம்?",
+    "output": "கோயம்பேடு ஆசியாவின் மிகப்பெரிய மொத்த காய்கறி மார்க்கெட். இங்கே தக்காளி, வெங்காயம், உருளைக்கிழங்கு, கத்திரிக்காய், வெண்டைக்காய், பீன்ஸ், கேரட், முட்டைகோஸ், காலிஃப்ளவர், பூசணிக்காய், புடலங்காய், பாகற்காய் என அனைத்து காய்கறிகளும் மொத்த விலையில் கிடைக்கும்."
+  },
+  {
+    "instruction": "டி.நகர்ல என்ன ஷாப்பிங் பண்ணலாம்?",
+    "output": "டி.நகர் சென்னையின் பிரபல ஷாப்பிங் ஏரியா. நல்லி சில்க்ஸ், பொத்தீஸ், குமரன் சில்க்ஸ், ஆர்எம்கேவி போன்ற புடவை கடைகள் உண்டு. பொன்டி பஜார்ல நகைகள், ரங்கநாதன் தெருவில் ரெடிமேட் துணிகள், செருப்புகள், பேக்குகள் கிடைக்கும்."
+  },
+  {
+    "instruction": "பேரம் பேசும்போது என்ன சொல்லலாம்?",
+    "output": "கொஞ்சம் குறைங்க, ரொம்ப ஜாஸ்தி, லாஸ்ட் ரேட் சொல்லுங்க, வேற கடையில குறைவா இருக்கு, ரெகுலரா வர்றேன் கொஞ்சம் பாருங்க என்றெல்லாம் சொல்லலாம்."
+  },
+  {
+    "instruction": "காய்கறி வாங்கும்போது எப்படி தரம் பார்க்கணும்?",
+    "output": "காய்கறிகள் ஃப்ரெஷ்ஷா இருக்கணும். வாடக்கூடாது. தக்காளி கெட்டியா இருக்கணும். வெங்காயம் முளை விடக்கூடாது. கீரை பசுமையா இருக்கணும். கத்திரிக்காய், வெண்டைக்காய் மிருதுவா இருக்கணும்."
+  },
+  {
+    "instruction": "புடவை வாங்கும்போது என்னென்ன பார்க்கணும்?",
+    "output": "நெசவு தரம், ஜரிகை வேலைப்பாடு, கலர் ஃபாஸ்ட்னெஸ், துணியோட எடை, போர்டர் டிசைன், பாலிஷ் தரம் பாருங்க. காஞ்சிபுரம் பட்டா இருந்தா சில்க் மார்க் இருக்கா பாருங்க."
+  },
+  {
+    "instruction": "ஆன்லைன் ஷாப்பிங் எப்படி செய்வது?",
+    "output": "Amazon, Flipkart, Myntra போன்ற ஆப்களை டவுன்லோட் செய்யுங்க. அக்கவுண்ட் கிரியேட் பண்ணுங்க. பொருள் தேடி, கார்ட்ல சேருங்க. அட்ரஸ் கொடுத்து, பேமெண்ட் ஆப்ஷன் செலக்ட் பண்ணி ஆர்டர் பிளேஸ் பண்ணுங்க."
+  },
+  {
+    "instruction": "நகை கடையில் என்ன கேட்கணும்?",
+    "output": "தங்கத்தோட பியூரிட்டி கேளுங்க - 22 காரட்டா 24 காரட்டா? வேஸ்டேஜ் சார்ஜ், மேக்கிங் சார்ஜ் எவ்வளவு? ஹால்மார்க் இருக்கா? எக்ஸ்சேஞ்ச் ஆப்ஷன் உண்டா? என்று கேளுங்க."
+  },
+  {
+    "instruction": "கிலோ தக்காளி எவ்வளவு?",
+    "output": "தக்காளி விலை சீசனுக்கு ஏத்த மாதிரி மாறும். சாதாரணமா கிலோ 30 ரூபாய் முதல் 80 ரூபாய் வரை இருக்கும். மழைக்காலத்தில் விலை கூடும். கோயம்பேட்டில் மொத்தமா வாங்கினா கொஞ்சம் குறைவா கிடைக்கும்."
+  },
+  {
+    "instruction": "வெங்காயம் ஒரு கிலோ என்ன ரேட்?",
+    "output": "சின்ன வெங்காயம் கிலோ 60 ரூபாய் முதல் 120 ரூபாய் வரை இருக்கும். பெரிய வெங்காயம் கிலோ 30 முதல் 60 ரூபாய். நாசிக் வெங்காயம் கொஞ்சம் குறைவா இருக்கும்."
+  },
+  {
+    "instruction": "பழங்கள் எங்கே வாங்கலாம்?",
+    "output": "கோயம்பேடு பழ மார்க்கெட், ரிலையன்ஸ் ஃப்ரெஷ், பிக் பஜார், மோர் சூப்பர்மார்க்கெட், தள்ளுவண்டியில் எல்லாம் பழங்கள் கிடைக்கும். மொத்தமா வாங்கணும்னா மார்க்கெட் போங்க."
+  },
+  {
+    "instruction": "மாம்பழம் எப்படி செலக்ட் பண்றது?",
+    "output": "மாம்பழத்தை மூக்கில் வச்சு முகருங்க - நல்ல வாசனை வரணும். கொஞ்சம் அழுத்தினா மென்மையா இருக்கணும். தோல் சுருக்கம் இல்லாம இருக்கணும். கல் வைச்சு பழுக்க வச்சதா இல்லாம இயற்கையா பழுத்ததா பாருங்க."
+  },
+  {
+    "instruction": "அரிசி எந்த பிராண்ட் நல்லது?",
+    "output": "பொன்னி அரிசி, சம்பா அரிசி, பாஸ்மதி அரிசி, கைக்குத்தல் அரிசி எல்லாம் நல்லது. India Gate, Daawat பாஸ்மதிக்கு பேமஸ். சாதாரண சாப்பாட்டுக்கு பொன்னி நல்லது. பிரியாணிக்கு பாஸ்மதி அல்லது சீரக சம்பா."
+  },
+  {
+    "instruction": "எண்ணெய் எது நல்லது?",
+    "output": "நல்லெண்ணெய் - தமிழ்நாட்டு பாரம்பரியம், ஆரோக்கியமானது. தேங்காய் எண்ணெய் - சமையலுக்கு கேரளா ஸ்டைல். சூரியகாந்தி, ரைஸ் பிரான் ஆயில் ஹார்ட்க்கு நல்லது. Fortune, Saffola, Idhayam பிரபல பிராண்டுகள்."
+  },
+  {
+    "instruction": "கிராசரி லிஸ்ட் என்னென்ன போடணும்?",
+    "output": "அரிசி, பருப்பு வகைகள் (துவரம், உளுந்து, கடலை), எண்ணெய், சர்க்கரை, உப்பு, மிளகாய், மல்லி, சீரகம், மஞ்சள், கடுகு, உளுத்தம் பருப்பு, கறிவேப்பிலை, வெல்லம், தேங்காய் என்று போடுங்க."
+  },
+  {
+    "instruction": "புடவை என்ன விலையில் கிடைக்கும்?",
+    "output": "காட்டன் புடவை 500 ரூபாய் முதல், சில்க் காட்டன் 1500 முதல், காஞ்சிபுரம் பட்டு 5000 முதல், பனாரஸ் சில்க் 3000 முதல், டிசைனர் புடவை 10000 முதல் கிடைக்கும். டி.நகர், மயிலாப்பூர்ல நிறைய ஆப்ஷன்ஸ் உண்டு."
+  },
+  {
+    "instruction": "வேட்டி எங்கே வாங்கலாம்?",
+    "output": "ஆர்எம்கேவி, நல்லி, குமரன் சில்க்ஸ்ல நல்ல வேட்டிகள் கிடைக்கும். காட்டன் வேட்டி 300 ரூபாய் முதல், சில்க் வேட்டி 1500 முதல் கிடைக்கும். திருப்பூர், ஈரோடு வேட்டிகள் பேமஸ்."
+  },
+  {
+    "instruction": "செருப்பு வாங்கணும் எங்கே போகலாம்?",
+    "output": "Bata, Metro, Khadim's, Relaxo கடைகள் எல்லா இடத்திலும் உண்டு. ரங்கநாதன் தெருவில் வெரைட்டி அதிகம். Woodland, Red Tape, Clarks பிரீமியம் பிராண்டுகள். ஆன்லைன்ல Myntra, Ajio-ல நல்ல ஆஃபர்ஸ் கிடைக்கும்."
+  },
+  {
+    "instruction": "பேமெண்ட் எப்படி பண்ணலாம்?",
+    "output": "கேஷ், கார்டு (டெபிட்/கிரெடிட்), UPI (Google Pay, PhonePe, Paytm), நெட் பேங்கிங் மூலம் பேமெண்ட் பண்ணலாம். சின்ன கடைகளில் கேஷ் அல்லது UPI. பெரிய ஷாப்களில் எல்லா ஆப்ஷனும் உண்டு."
+  },
+  {
+    "instruction": "QR கோட் ஸ்கேன் பண்ணி எப்படி பே பண்றது?",
+    "output": "Google Pay அல்லது PhonePe ஓபன் பண்ணுங்க. ஸ்கேன் பட்டன் கிளிக் பண்ணுங்க. கடையோட QR கோட் காமிரா மூலம் ஸ்கேன் பண்ணுங்க. அமவுண்ட் என்டர் பண்ணி, PIN கொடுத்து பே பண்ணுங்க."
+  },
+  {
+    "instruction": "ஃபெஸ்டிவல் ஷாப்பிங்க்கு எப்போ போகணும்?",
+    "output": "தீபாவளிக்கு ஒரு மாசம் முன்னாடியே ஆரம்பிச்சிடுங்க. பொங்கலுக்கு இரண்டு வாரம் முன்னாடி. அப்போ ரஷ் குறைவா இருக்கும், நல்ல ஆப்ஷன்ஸ் கிடைக்கும். லாஸ்ட் மினிட்ல போனா கூட்டமும் விலையும் அதிகம்."
+  },
+  {
+    "instruction": "தீபாவளிக்கு என்னென்ன வாங்கணும்?",
+    "output": "புது துணிகள் - புடவை, வேட்டி, குழந்தைகளுக்கு டிரெஸ். பட்டாசு - ஸ்பார்க்ளர்ஸ், ராக்கெட், சக்கரம். இனிப்புகள் - லட்டு, ஜிலேபி, மைசூர் பாக். பூஜை சாமான்கள் - தீபம், விளக்கெண்ணெய், பூக்கள்."
+  },
+  {
+    "instruction": "பொங்கல் ஷாப்பிங் லிஸ்ட் என்ன?",
+    "output": "புது பானை, கரும்பு, மஞ்சள் கிழங்கு, மாவிலை, கோலப்பொடி, பொங்கல் அரிசி, வெல்லம், தேங்காய், வாழை இலை, பூக்கள், பசு மாடு கட்டுற தாம்பு எல்லாம் வாங்கணும்."
+  },
+  {
+    "instruction": "நவராத்திரி கொலு பொம்மை எங்கே கிடைக்கும்?",
+    "output": "மயிலாப்பூர் மாடவீதி, கூர்க்கா பீட்டர் ஸ்ட்ரீட், பாரிமுனை எல்லாம் கொலு பொம்மைகள் கிடைக்கும். மரப்பொம்மை, களிமண் பொம்மை, தஞ்சாவூர் தலையாட்டி பொம்மை என வகை வகையா உண்டு."
+  },
+  {
+    "instruction": "தங்கம் இன்னைக்கு என்ன ரேட்?",
+    "output": "தங்க விலை தினமும் மாறும். 22 காரட் 10 கிராம் சுமார் 55000 முதல் 60000 ரூபாய் வரை இருக்கும். 24 காரட் கொஞ்சம் அதிகம். அன்றைய ரேட் தெரிஞ்சுக்க Tanishq, GRT, Joyalukkas வெப்சைட் பாருங்க."
+  },
+  {
+    "instruction": "நகை மேக்கிங் சார்ஜ் எவ்வளவு நார்மல்?",
+    "output": "மேக்கிங் சார்ஜ் கிராமுக்கு 300 முதல் 800 ரூபாய் வரை இருக்கும். ஆன்டிக் வேலைப்பாடு, கல் பதிப்பு இருந்தா அதிகம். வேஸ்டேஜ் 3% முதல் 15% வரை. Tanishq, Kalyan-ல வேஸ்டேஜ் குறைவு."
+  },
+  {
+    "instruction": "வெள்ளி நகை எங்கே வாங்கலாம்?",
+    "output": "GRT, Saravana Stores, Kumaran Silks-ல வெள்ளி நகை கிடைக்கும். காலுண்டை, மொட்டி, மூக்குத்தி, வளையல், கொலுசு எல்லாம் உண்டு. கிராமுக்கு சுமார் 100 ரூபாய் விலை."
+  },
+  {
+    "instruction": "ஜவுளிக்கடையில் என்ன கேட்கணும்?",
+    "output": "இந்த துணி காட்டன்னா, சில்க்கா? கலர் போகுமா? ஃபேட் ஆகுமா? வாஷ் பண்ணினா சுருங்குமா? மீட்டர் என்ன ரேட்? அல்டரேஷன் உண்டா? ரிட்டர்ன் பாலிசி என்ன? என்றெல்லாம் கேளுங்க."
+  },
+  {
+    "instruction": "துணி மீட்டர் கணக்கு எப்படி?",
+    "output": "புடவை சாதாரணமா 5.5 மீட்டர் அல்லது 6 மீட்டர். சுடிதார் - டாப் 2.5 மீட்டர், பாட்டம் 2.5 மீட்டர், துப்பட்டா 2.5 மீட்டர். ஷர்ட் - 2.5 மீட்டர். பேண்ட் - 1.25 மீட்டர்."
+  },
+  {
+    "instruction": "சூப்பர் மார்க்கெட்ல எப்படி சேவ் பண்றது?",
+    "output": "மெம்பர்ஷிப் கார்டு எடுங்க. வீக்லி ஆஃபர்ஸ் பாருங்க. கூப்பன்ஸ் யூஸ் பண்ணுங்க. கேஷ்பேக் ஆப்ஸ் மூலம் பே பண்ணுங்க. மொத்தமா வாங்கினா ரேட் குறையும். எக்ஸ்பயரி டேட் பாருங்க."
+  },
+  {
+    "instruction": "மளிகை கடையில் என்னென்ன கிடைக்கும்?",
+    "output": "அரிசி, பருப்பு, மசாலா பொருட்கள், எண்ணெய், தேங்காய் எண்ணெய், சர்க்கரை, உப்பு, டீத்தூள், காபி பொடி, அவல், புழுங்கல் அரிசி, கடலை, முந்திரி, திராட்சை, ஊறுகாய், பாப்பட் எல்லாம் கிடைக்கும்."
+  },
+  {
+    "instruction": "ஃப்ரெஷ் மீன் எப்படி கண்டுபிடிக்கிறது?",
+    "output": "கண் தெளிவா இருக்கணும். செதில் பளபளப்பா இருக்கணும். செவுள் சிவப்பா இருக்கணும். துர்நாற்றம் இருக்கக்கூடாது. விரலால் அழுத்தினா உடனே பழைய நிலைக்கு வரணும். இவை எல்லாம் ஃப்ரெஷ் மீன் அடையாளம்."
+  },
+  {
+    "instruction": "சிக்கன் எங்கே வாங்கலாம்?",
+    "output": "நாட்டுக்கோழி - கிராமப்புற மார்க்கெட்ல கிடைக்கும். ப்ராய்லர் சிக்கன் - மீட் ஷாப், சூப்பர் மார்க்கெட். Licious, FreshToHome ஆப்ல ஆன்லைன் ஆர்டர் பண்ணலாம். கிலோ 150 முதல் 400 ரூபாய் வரை."
+  },
+  {
+    "instruction": "முட்டை ஃப்ரெஷ்ஷா இருக்கா பார்க்கிறது எப்படி?",
+    "output": "ஒரு கிளாஸ் தண்ணீர்ல முட்டையை போடுங்க. அடியில் படுத்தா ஃப்ரெஷ். நடுவில் நின்னா ஒரு வாரம் பழசு. மேலே மிதந்தா பழைய முட்டை - சாப்பிடக்கூடாது."
+  },
+  {
+    "instruction": "பால் எந்த பிராண்ட் நல்லது?",
+    "output": "ஆவின் (அரசு) - நம்பகமானது, நல்ல குவாலிட்டி. Arokya, Aavin Gold, Cavin's, Thirumala எல்லாம் நல்லது. டோன்டு, ஃபுல் க்ரீம், ஸ்டாண்டர்டைஸ்டு என வகை வகையா கிடைக்கும்."
+  },
+  {
+    "instruction": "தயிர் எப்படி செலக்ட் பண்றது?",
+    "output": "மேனுஃபேக்சர் டேட் பாருங்க. கெட்டியா இருக்கணும். புளிப்பு வாசனை இருக்கக்கூடாது. ஆவின், Milky Mist, Dodla தயிர் நல்லது. வீட்டு தயிர் வேணும்னா நல்ல பாலை காய்ச்சி ஆற வச்சு தயிர் ஊத்துங்க."
+  },
+  {
+    "instruction": "காபி பொடி எது நல்லது?",
+    "output": "Narasu's, Leo, Cothas, Bru, Nescafe எல்லாம் பிரபலம். ஃபில்டர் காபிக்கு Narasu's, Cothas நல்லது. 80-20 கலவை (80% காபி, 20% சிக்கரி) சுவையா இருக்கும். மைசூர், கூர்க் காபி பீன்ஸ் குவாலிட்டி."
+  },
+  {
+    "instruction": "மசாலா பொருட்கள் எப்படி வாங்கணும்?",
+    "output": "மிளகாய், மல்லி, சீரகம், மிளகு எல்லாம் முழுசா வாங்கி வீட்ல அரைச்சா நல்லது. ரெடிமேட் பொடி வாங்கினா Aachi, Everest, MDH பாருங்க. எக்ஸ்பயரி டேட் செக் பண்ணுங்க."
+  },
+  {
+    "instruction": "பருப்பு வகைகள் என்னென்ன?",
+    "output": "துவரம் பருப்பு - சாம்பாருக்கு. உளுந்து - வடை, இட்லிக்கு. கடலை பருப்பு - சட்னி, உசிலிக்கு. பாசிப்பருப்பு - பொங்கலுக்கு. மசூர் தால் - ராஜ்மா கறிக்கு. எல்லாமே புரோட்டீன் நிறைந்தது."
+  },
+  {
+    "instruction": "கீரை வாங்கும்போது என்ன பார்க்கணும்?",
+    "output": "இலை பச்சையா, ஃப்ரெஷ்ஷா இருக்கணும். மஞ்சளா மாறக்கூடாது. வாடக்கூடாது. புழு இருக்கக்கூடாது. முருங்கைக்கீரை, அரைக்கீரை, பொன்னாங்கண்ணி, பாலக், வெந்தயக்கீரை எல்லாம் ஆரோக்கியம்."
+  },
+  {
+    "instruction": "உருளைக்கிழங்கு எப்படி செலக்ட் பண்றது?",
+    "output": "கிழங்கு கெட்டியா இருக்கணும். முளை விடக்கூடாது. பச்சை கலர் இருக்கக்கூடாது. சுருக்கம் இருக்கக்கூடாது. மென்மையானது அழுகிய அறிகுறி. சிறிய, நடுத்தர சைஸ் வாங்குங்க."
+  },
+  {
+    "instruction": "தேங்காய் நல்லதா பார்க்கிறது எப்படி?",
+    "output": "தேங்காயை குலுக்குங்க - தண்ணீர் சத்தம் கேக்கணும். எடை இருக்கணும். கண்கள் கருப்பா இல்லாம இருக்கணும். ஓடு உடையாம இருக்கணும். இளநீர் தேங்காய் வேணும்னா இளசா இருக்கணும்."
+  },
+  {
+    "instruction": "பழங்கள் ஃப்ரெஷ்ஷா இருக்கா பார்க்கிறது?",
+    "output": "ஆப்பிள் - கெட்டியா, சுருக்கம் இல்லாம. ஆரஞ்சு - எடை இருக்கணும். வாழைப்பழம் - கருப்புப் புள்ளி குறைவா. திராட்சை - உதிரக்கூடாது. பப்பாளி - லேசா மஞ்சள். பேரிக்காய் - மென்மையா."
+  },
+  {
+    "instruction": "ஆன்லைன் ஷாப்பிங் ரிட்டர்ன் பாலிசி என்ன?",
+    "output": "Amazon, Flipkart-ல 7-10 நாள் ரிட்டர்ன் பாலிசி உண்டு. டேக் நீக்கக்கூடாது. ஒரிஜினல் பேக்கிங்ல ரிட்டர்ன் பண்ணணும். ஃபேஷன் ஐட்டம்ஸ்க்கு எக்ஸ்சேஞ்ச் ஆப்ஷன் உண்டு. எலக்ட்ரானிக்ஸ்க்கு ரிப்ளேஸ்மெண்ட் மட்டும்."
+  },
+  {
+    "instruction": "COD என்றால் என்ன?",
+    "output": "Cash On Delivery - பொருள் வந்ததும் கேஷ் கொடுக்கலாம். ஆன்லைன் ஷாப்பிங்ல இந்த ஆப்ஷன் இருக்கும். பொருள் சரியா இருக்கான்னு பார்த்துட்டு பணம் கொடுக்கலாம். சில ஷாப்ஸ் COD சார்ஜ் வசூலிக்கும்."
+  },
+  {
+    "instruction": "EMI என்றால் என்ன?",
+    "output": "Equated Monthly Installment - மாதத்தவணை. பெரிய தொகை பொருளை சிறு சிறு தவணையா கட்டலாம். மொபைல், TV, ஃப்ரிட்ஜ் வாங்கும்போது EMI ஆப்ஷன் இருக்கும். வட்டி இல்லாத EMI - No Cost EMI என்பர்."
+  },
+  {
+    "instruction": "ஆன்லைன்ல ஃபேக் புரொடக்ட் கண்டுபிடிக்கிறது எப்படி?",
+    "output": "விலை ரொம்ப குறைவா இருந்தா சந்தேகப்படுங்க. சிவாலர் ரேட்டிங் பாருங்க. ரிவியூஸ் படிங்க. Assured, FAssured, Prime டேக் பாருங்க. ஒரிஜினல் பிராண்ட் செல்லர்கிட்ட இருந்து வாங்குங்க."
+  },
+  {
+    "instruction": "கிரெடிட் கார்டு ஆஃபர்ஸ் எப்படி யூஸ் பண்றது?",
+    "output": "ஆன்லைன் ஷாப்பிங்ல கிரெடிட் கார்டு ஆஃபர்ஸ் செக் பண்ணுங்க. HDFC, ICICI, SBI கார்டுகளுக்கு பிரத்யேக டிஸ்கவுண்ட் உண்டு. No Cost EMI, கேஷ்பேக், அட்டிஷனல் டிஸ்கவுண்ட் பாருங்க."
+  },
+  {
+    "instruction": "கூப்பன் கோட் எங்கே கிடைக்கும்?",
+    "output": "CouponDunia, GrabOn, Desidime போன்ற வெப்சைட்ல கூப்பன் கோட் கிடைக்கும். Bank SMS-ல வரும். App notifications பாருங்க. First order கூப்பன், referral code எல்லாம் யூஸ் பண்ணுங்க."
+  },
+  {
+    "instruction": "மால்ல ஷாப்பிங் vs ஆன்லைன் எது நல்லது?",
+    "output": "மால் - துணி தொட்டுப் பார்க்கலாம், டிரையல் ரூம் உண்டு, உடனே கிடைக்கும். ஆன்லைன் - விலை குறைவு, வெரைட்டி அதிகம், வீட்டுக்கே வரும். இரண்டுக்கும் நன்மை தீமை உண்டு."
+  },
+  {
+    "instruction": "ஷூ சைஸ் எப்படி கண்டுபிடிக்கிறது?",
+    "output": "கால் நீளத்தை சென்டிமீட்டர்ல அளந்து சைஸ் சார்ட் பாருங்க. இந்தியன் சைஸ் 6, 7, 8 என்று. UK, US சைஸ் வேறு. மாலையில் கால் கொஞ்சம் வீங்கும், அப்போ ட்ரை பண்ணுங்க."
+  },
+  {
+    "instruction": "குழந்தை உடை எங்கே வாங்கலாம்?",
+    "output": "FirstCry, Hopscotch ஆன்லைன்ல நல்ல கலெக்ஷன். Max, Pantaloons, Reliance Trends-ல கிடைக்கும். Gini & Jony, United Colors of Benetton பிராண்டட். T.Nagar-ல Chennai Silks, Pothys-ல உண்டு."
+  },
+  {
+    "instruction": "லங்கா வாங்கணும் என்ன பார்க்கணும்?",
+    "output": "துணி தரம் - சில்க், பாலிஸ்டர், காட்டன். எம்ப்ராய்டரி வேலைப்பாடு. லெகிங்கா ஃபிட்டிங். துப்பட்டா மேட்ச். சைஸ் - கஸ்டமைஸ் பண்ண முடியுமா? திருமண லங்கா அல்லது பார்ட்டி வேர் என்று முடிவு பண்ணுங்க."
+  },
+  {
+    "instruction": "கல்யாண ஷாப்பிங் லிஸ்ட் என்ன?",
+    "output": "மணப்பெண் - பட்டுப்புடவை, நகைகள், காசு மாலை, தாலி. மணமகன் - பட்டு வேட்டி, ஜிப்பா, மோதிரம். பூஜை சாமான்கள் - தாம்பூலம், மஞ்சள், குங்குமம். அழைப்பிதழ், பந்தல் டெகோரேஷன்."
+  },
+  {
+    "instruction": "சல்வார் கமீஸ் வாங்கும்போது என்ன பார்க்கணும்?",
+    "output": "டாப் ஃபேப்ரிக் - காட்டன், சில்க், ஜார்ஜெட். பாட்டம் - சூடி, பட்டியாலா, பாலாஸோ. துப்பட்டா மேட்ச். ஸ்டிச்டா அன்ஸ்டிச்டா? சைஸ் சரியா இருக்கா? வாஷபிள் மெட்டீரியலா?"
+  },
+  {
+    "instruction": "ஜீன்ஸ் வாங்கும்போது என்ன கவனிக்கணும்?",
+    "output": "வேஸ்ட் சைஸ் - 28, 30, 32 என்று. Fit - Slim, Regular, Loose. Stretch இருக்கா? டெனிம் குவாலிட்டி. கலர் - ஃபேட் ஆகுமா? Levi's, Wrangler, Pepe பிராண்டட். Max, Lifestyle-ல பட்ஜெட் ஜீன்ஸ் உண்டு."
+  },
+  {
+    "instruction": "பேக் வாங்கணும் என்ன பார்க்கணும்?",
+    "output": "லெதர், rexine, கேன்வாஸ் - மெட்டீரியல். சைஸ் - நீங்க என்ன வச்சு போகணும். ஸ்ட்ராப் quality. ஜிப் smooth-ஆ இருக்கணும். பாக்கெட்ஸ் எத்தனை. Lavie, Caprese, Hidesign பிரபலம்."
+  },
+  {
+    "instruction": "வாட்ச் எங்கே வாங்கலாம்?",
+    "output": "Titan World, Fastrack stores, Helios எல்லாம் உண்டு. Analog, Digital, Smart watch என்று வகை. Titan, Fossil, Casio, Apple Watch பிரபலம். ஆன்லைன்ல Amazon, Flipkart-ல ஆஃபர்ஸ் பாருங்க."
+  },
+  {
+    "instruction": "கண்ணாடி வாங்கணும் எங்கே போகலாம்?",
+    "output": "Titan Eye+, Lenskart, Lawrence & Mayo-ல கண் டெஸ்ட் + கண்ணாடி கிடைக்கும். பவர் சரியா இருக்கணும். ஃப்ரேம் ஃபேஸ்க்கு சூட் ஆகணும். Anti-glare, Blue cut lens ஆப்ஷன் பாருங்க."
+  },
+  {
+    "instruction": "செல்போன் வாங்கணும் என்ன பார்க்கணும்?",
+    "output": "பட்ஜெட் எவ்வளவு? Samsung, iPhone, OnePlus, Vivo, Realme பிராண்டுகள். RAM, Storage, Camera, Battery, Processor specs பாருங்க. User reviews படிங்க. Warranty என்ன? சர்வீஸ் சென்டர் இருக்கா?"
+  },
+  {
+    "instruction": "லேப்டாப் எது நல்லது?",
+    "output": "Work-க்கு - Dell, HP, Lenovo. Gaming-க்கு - ASUS ROG, Acer Predator. Premium - MacBook, Dell XPS. i5/i7 processor, 8GB+ RAM, SSD storage பாருங்க. Windows அல்லது Mac OS. Extended warranty எடுங்க."
+  },
+  {
+    "instruction": "TV வாங்கணும் என்ன சைஸ் எடுக்கலாம்?",
+    "output": "அறை சைஸ்க்கு ஏத்த மாதிரி. சின்ன அறை - 32 inch. நடுத்தர - 43 inch. பெரிய அறை - 55 inch+. Smart TV-யா? 4K resolution வேணுமா? Samsung, LG, Sony, OnePlus, Mi பிரபலம்."
+  },
+  {
+    "instruction": "ஏசி வாங்கணும் எந்த டன் எடுக்கலாம்?",
+    "output": "சின்ன அறை (100 sq ft) - 1 டன். நடுத்தர (150 sq ft) - 1.5 டன். பெரிய அறை (200 sq ft) - 2 டன். Inverter AC சேமிக்கும். 5 Star rating எனர்ஜி எஃபிஷியன்ட். Daikin, LG, Voltas, Blue Star நல்லது."
+  },
+  {
+    "instruction": "ஃப்ரிட்ஜ் எது நல்லது?",
+    "output": "சிங்கிள் டோர் - சின்ன குடும்பம். டபுள் டோர் - 4+ பேர். Side by Side - பெரிய குடும்பம். 200L, 300L, 500L+ என்று capacity. Inverter compressor சேமிக்கும். LG, Samsung, Whirlpool, Haier பிரபலம்."
+  },
+  {
+    "instruction": "வாஷிங் மெஷின் எது நல்லது?",
+    "output": "Semi-automatic - விலை குறைவு, தண்ணீர் சேமிப்பு. Fully automatic - வசதி அதிகம். Top load vs Front load. 6kg, 7kg, 8kg capacity குடும்ப சைஸ்க்கு ஏத்த மாதிரி. LG, Samsung, IFB, Bosch நல்லது."
+  },
+  {
+    "instruction": "மிக்சி வாங்கணும் எது நல்லது?",
+    "output": "Preethi, Butterfly, Philips, Bajaj பிரபல பிராண்டுகள். 750W motor சக்தி வாய்ந்தது. 3 ஜார் கொண்டது நல்லது. wet & dry grinding. Overload protection இருக்கணும். Warranty பாருங்க."
+  },
+  {
+    "instruction": "கேஸ் ஸ்டவ் எது நல்லது?",
+    "output": "2 burner, 3 burner, 4 burner என்று வகை. Glass top, Stainless steel. Manual ignition vs Auto ignition. Prestige, Pigeon, Butterfly, Sunflame பிரபலம். ISI mark இருக்கணும். Warranty பாருங்க."
+  },
+  {
+    "instruction": "பிரஷர் குக்கர் எது நல்லது?",
+    "output": "Prestige, Hawkins, Pigeon பிரபலம். 3L சின்ன குடும்பம், 5L நடுத்தர, 7L+ பெரிய குடும்பம். Aluminium vs Stainless Steel. Induction base வேணுமா? Safety valve முக்கியம். ISI mark பாருங்க."
+  },
+  {
+    "instruction": "தண்ணீர் ஃபில்டர் எது நல்லது?",
+    "output": "RO+UV+UF combination நல்லது. Kent, Aquaguard, Pureit, Livpure பிரபலம். TDS level-க்கு ஏத்த மாதிரி RO அல்லது UV தேர்வு செய்யுங்க. 7L, 10L storage tank. AMC வசதி பாருங்க."
+  },
+  {
+    "instruction": "இன்வெர்ட்டர் வாங்கணும் என்ன பார்க்கணும்?",
+    "output": "VA rating - எத்தனை equipments ரன் பண்ணணும். 600VA, 900VA, 1500VA என்று வகை. Sine wave inverter better. Battery capacity - 100Ah, 150Ah. Luminous, Microtek, Exide பிரபலம். Warranty & service பாருங்க."
+  },
+  {
+    "instruction": "ஃபர்னிச்சர் எங்கே வாங்கலாம்?",
+    "output": "Pepperfry, Urban Ladder ஆன்லைன்ல நல்ல ஆப்ஷன்ஸ். IKEA Hyderabad, Bangalore-ல உண்டு. @Home, Hometown stores-ல கிடைக்கும். தச்சர்கிட்ட custom பண்ணிக்கலாம். Quality wood பாருங்க."
+  },
+  {
+    "instruction": "மெத்தை வாங்கணும் என்ன பார்க்கணும்?",
+    "output": "Foam, Coir, Spring, Memory foam என்று வகை. Ortho mattress முதுகு வலிக்கு நல்லது. Single, Double, Queen, King size. Sleepwell, Kurlon, Wakefit, Duroflex பிரபலம். Trial period பாருங்க."
+  },
+  {
+    "instruction": "பேரம் பேசும் முறைகள் என்ன?",
+    "output": "முதல்ல விலை கேளுங்க. ரொம்ப ஜாஸ்தின்னு சொல்லுங்க. வேற கடையில் குறைவா இருக்குன்னு சொல்லுங்க. போற மாதிரி நடிங்க. மொத்தமா வாங்கறேன் கொஞ்சம் குறையுங்கன்னு சொல்லுங்க. லாஸ்ட் ரேட் கேளுங்க."
+  },
+  {
+    "instruction": "எந்த நேரத்தில் மார்க்கெட் போகணும்?",
+    "output": "காலை 6-8 மணி - ஃப்ரெஷ் காய்கறி கிடைக்கும். மாலை 6+ - விலை குறையும், ஆனா ஃப்ரெஷ் குறையும். வீக்லி மார்க்கெட் - ஞாயிறு காலை. மொத்த மார்க்கெட் - அதிகாலை 4-6 மணி."
+  },
+  {
+    "instruction": "வெஜிடபிள் ஸ்டோர் பண்றது எப்படி?",
+    "output": "உருளை, வெங்காயம் - dry cool place. கீரை - ஃப்ரிட்ஜ்ல wet cloth-ல சுத்தி வையுங்க. தக்காளி - ஃப்ரிட்ஜ் வேண்டாம். வெண்டைக்காய் - paper bag-ல. கேரட், பீட்ரூட் - ஃப்ரிட்ஜ் vegetable drawer-ல."
+  },
+  {
+    "instruction": "சந்தையில் ஏமாறாம இருக்கிறது எப்படி?",
+    "output": "தராசு சரியா இருக்கான்னு பாருங்க. எடை போடும்போது கவனிங்க. கணக்கு சரிபாருங்க. கலப்படம் இல்லாம இருக்கான்னு பாருங்க. நம்பகமான கடையில வாங்குங்க. ரசீது வாங்குங்க."
+  },
+  {
+    "instruction": "காய்கறி மொத்த விலை என்ன?",
+    "output": "மொத்த மார்க்கெட்ல கிலோ 5-10 ரூபாய் குறைவா கிடைக்கும். கோயம்பேட்டில் 5 கிலோ மேல வாங்கினா மொத்த ரேட் கிடைக்கும். சீசன் காய்கறிகள் இன்னும் குறைவு."
+  },
+  {
+    "instruction": "ஆர்கானிக் காய்கறி எங்கே கிடைக்கும்?",
+    "output": "Organic Farmers Market ஞாயிறு காலை. Akshayakalpa, 24 Mantra ஸ்டோர்ஸ். BigBasket, Amazon Fresh-ல organic section. Naturals, FreshToHome-ல ஆர்டர் பண்ணலாம். விலை கொஞ்சம் அதிகம்."
+  },
+  {
+    "instruction": "பழைய புத்தகம் எங்கே வாங்கலாம்?",
+    "output": "Moore Market (Parry's Corner), Koyambedu book stall, Anna Salai footpath. Sunday book bazaar பல இடங்களில். Amazon, Flipkart-ல used books section. Crossword-ல exchange offer. 50% வரை save பண்ணலாம்."
+  },
+  {
+    "instruction": "ஸ்டேஷனரி எங்கே வாங்கலாம்?",
+    "output": "மவுண்ட் ரோட் - rathinam, Higginbothams. Parrys - மொத்த ஸ்டேஷனரி. Amazon, Flipkart-ல bulk order. Croma, Vijay Sales-ல office supplies. பள்ளி திறக்கும் முன் local shops-ல offer."
+  },
+  {
+    "instruction": "பூ எங்கே வாங்கலாம்?",
+    "output": "காய்கறி மார்க்கெட்ல பூ section. மயிலாப்பூர் கபாலீஸ்வரர் கோயில் சுற்று. கோயில் வாசல்ல தள்ளுவண்டி. Flower bazaar - Koyambedu, Perambur. தினமும் காலை ஃப்ரெஷ் பூ கிடைக்கும்."
+  },
+  {
+    "instruction": "விதை வாங்கணும் எங்கே கிடைக்கும்?",
+    "output": "Nungambakkam - seed shops row. Koyambedu agricultural market. Spencers, Big Bazaar-ல basic seeds. ஆன்லைன் - Ugaoo, Nurserylive. Organic seeds - Vanastree, Swaraj. Germination guarantee கேளுங்க."
+  },
+  {
+    "instruction": "செடி வாங்கணும் எங்கே போகலாம்?",
+    "output": "Nungambakkam plant nurseries. Anna Nagar tower park பக்கம். Horticultural society - Adyar. Kadai Thottam, Urban Taaza ஆன்லைன். Sunday nursery visits. Seasonal plants கேளுங்க."
+  },
+  {
+    "instruction": "பறவை கூடு, மீன் தொட்டி எங்கே?",
+    "output": "Sowcarpet - pet shops line. Broadway market. Perambur - bird shops. Amazon, Flipkart-ல aquarium, bird cage. Pet Zone stores. Quality & health certificate important."
+  },
+  {
+    "instruction": "கார் ஆக்ஸசரீஸ் எங்கே கிடைக்கும்?",
+    "output": "Perambur - car accessories wholesale. Richie Street - car stereos. Amazon-ல seat covers, mats. MyTVS stores. Blaupunkt, JBL speakers. Genuine vs duplicate பார்க்கணும்."
+  },
+  {
+    "instruction": "பைக் ஹெல்மெட் எங்கே வாங்கலாம்?",
+    "output": "Studds, Vega, Steelbird showrooms. Two-wheeler shops. Amazon, Flipkart-ல variety. ISI mark mandatory. Full face vs half face. Size try பண்ணி வாங்குங்க. Visor quality பாருங்க."
+  },
+  {
+    "instruction": "ஸ்போர்ட்ஸ் உபகரணம் எங்கே?",
+    "output": "Decathlon - complete sports store. Marina beach - cricket bats. Parrys - wholesale sports goods. Amazon Sports section. Nike, Adidas, Puma showrooms. Quality vs budget decide பண்ணுங்க."
+  },
+  {
+    "instruction": "யோகா மேட் எங்கே கிடைக்கும்?",
+    "output": "Decathlon-ல variety. Amazon-ல brands. Yoga studios nearby. Thickness 6mm+ recommended. Anti-slip surface. Kosha Yoga, Liforme premium. Basic mats local shops-ல கிடைக்கும்."
+  },
+  {
+    "instruction": "ஜிம் உபகரணம் வாங்கணும்?",
+    "output": "Decathlon - basic equipment. Amazon-ல dumbbells, resistance bands. Cosco, Nivia brands. Heavy equipment - Headstrong, PowerMax. Home gym setup vs gym membership compare பண்ணுங்க."
+  },
+  {
+    "instruction": "சமையல் பாத்திரம் எங்கே வாங்கலாம்?",
+    "output": "Saravana Stores, Kumaran Silks-ல complete range. Sowcarpet - stainless steel wholesale. Hawkins, Prestige authorized stores. Amazon-ல Pigeon, Wonderchef. Pongal-க்கு முன்னாடி offer அதிகம்."
+  },
+  {
+    "instruction": "பூஜை சாமான்கள் எங்கே கிடைக்கும்?",
+    "output": "கோயில் வாசல் shops. Mylapore temple street. கோயில் பக்கத்து bazaar. Poompuhar - traditional items. Amazon-ல brass puja items. விளக்கு, சாம்பிராணி, கற்பூரம், விபூதி எல்லாம் கிடைக்கும்."
+  },
+  {
+    "instruction": "தீபாவளி பட்டாசு எங்கே வாங்கலாம்?",
+    "output": "Sivakasi crackers wholesale - Koyambedu outskirts. Licensed cracker shops அக்டோபர்ல ஓபன் ஆகும். Standard, Coronation, Sony brands. Green crackers mandatory now. Bulk order discount உண்டு."
+  },
+  {
+    "instruction": "கார்ப்பெட் எங்கே வாங்கலாம்?",
+    "output": "Kashmir emporium - Silk carpets. Fabindia - Dhurries. Home Centre, @Home stores. IKEA - budget rugs. Amazon-ல variety. Machine wash vs handwash, size measure பண்ணி வாங்குங்க."
+  },
+  {
+    "instruction": "கர்டன் எங்கே வாங்கலாம்?",
+    "output": "D'decor, Curtains n More shops. Home Centre, Pepperfry. T.Nagar - curtain shops. Sowcarpet - fabric wholesale. Measure பண்ணி சரியான length வாங்குங்க. Blackout vs sheer decide பண்ணுங்க."
+  },
+  {
+    "instruction": "பெயிண்ட் வாங்கணும் எந்த brand?",
+    "output": "Asian Paints, Berger, Nerolac, Dulux பிரபலம். Interior vs Exterior paint. Primer + paint required. Emulsion, Distemper, Enamel என்று types. Color shade card பாருங்க. Washable better."
+  },
+  {
+    "instruction": "ஹார்ட்வேர் ஸ்டோர் எங்கே?",
+    "output": "Sowcarpet - hardware wholesale. Perambur industrial area. Local hardware shops எல்லா area-லும். Amazon basics - tools. Bosch, Stanley, Black+Decker power tools. Quality screws, nails important."
+  },
+  {
+    "instruction": "எலக்ட்ரிக்கல் items எங்கே வாங்கலாம்?",
+    "output": "Ritchie Street - எலக்ட்ரானிக்ஸ் hub. Burma Bazaar - wholesale. Sowcarpet - switches, wires. Havells, Anchor, Legrand brands. Genuine products பாருங்க. Fire safety important - ISI mark."
+  },
+  {
+    "instruction": "ப்ளம்பிங் items எங்கே?",
+    "output": "Sowcarpet plumbing section. Hardware stores. Jaquar, Parryware, Hindware showrooms. CPVC pipes - Astral, Supreme. Amazon basics. Quality important - leakage avoid பண்ண."
+  },
+  {
+    "instruction": "கார் வாங்கணும் எங்கே போகலாம்?",
+    "output": "Brand showrooms - Maruti, Hyundai, Tata, Mahindra. Used cars - OLX, Cars24, Spinny. Test drive முக்கியம். Finance options compare பண்ணுங்க. Insurance, registration சேர்த்து budget பாருங்க."
+  },
+  {
+    "instruction": "பைக் வாங்கணும் எங்கே?",
+    "output": "Brand showrooms - Hero, Honda, TVS, Bajaj, Royal Enfield. Anna Salai - two-wheeler hub. OLX-ல used bikes. Test ride முக்கியம். EMI options பாருங்க. Helmet free கிடைக்கும்."
+  },
+  {
+    "instruction": "சைக்கிள் எங்கே வாங்கலாம்?",
+    "output": "Decathlon - MTB, racing cycles. Hero, BSA, Firefox showrooms. Cycle stores - Pondy Bazaar. Second hand - OLX. Kids cycles Toys R Us, Hamleys. Size chart படி வாங்குங்க."
+  },
+  {
+    "instruction": "கிஃப்ட் ஐட்டம்ஸ் எங்கே கிடைக்கும்?",
+    "output": "Archies, Hallmark stores. Poompuhar - traditional gifts. Chumbak - quirky gifts. Amazon, Flipkart gift section. Personalised - Vistaprint, IGP. Budget wise - local fancy stores."
+  },
+  {
+    "instruction": "ஃபேன்சி ஸ்டோர்ல என்ன கிடைக்கும்?",
+    "output": "Hairbands, clips, bangles, earrings, chains, bags, wallets, toys, decorative items, stationery, small gifts எல்லாம் கிடைக்கும். T.Nagar, Pondy Bazaar-ல variety shops உண்டு."
+  },
+  {
+    "instruction": "காஸ்மெடிக்ஸ் எங்கே வாங்கலாம்?",
+    "output": "Nykaa stores, Health & Glow, NewU. Lakme, MAC counters malls-ல. Amazon, Nykaa online-ல offers. Maybelline, L'Oreal drugstore brands. Organic - Forest Essentials, Kama Ayurveda."
+  },
+  {
+    "instruction": "பெர்ஃப்யூம் எங்கே வாங்கலாம்?",
+    "output": "Shoppers Stop, Lifestyle perfume counters. Sephora stores. Parcos - branded perfumes. Body Shop, Bath & Body Works. Budget - Yardley, Engage. Premium - Chanel, Dior, Jo Malone."
+  },
+  {
+    "instruction": "ஹேர் ஆயில் எது நல்லது?",
+    "output": "நல்லெண்ணெய் - traditional best. தேங்காய் எண்ணெய் - moisturizing. Parachute, Dabur, Kesh King brands. Amla, Bhringraj oils hair growth-க்கு. Chemical-free better."
+  },
+  {
+    "instruction": "ஸ்கின் கேர் products எங்கே?",
+    "output": "Nykaa, Health & Glow stores. Dermat recommended - Cetaphil, Neutrogena. Ayurvedic - Himalaya, Biotique. Korean skincare - Nykaa, Amazon. Sunscreen SPF 30+ must."
+  },
+  {
+    "instruction": "Baby products எங்கே வாங்கலாம்?",
+    "output": "FirstCry - complete baby store. Mothercare stores. Mee Mee, Chicco, Fisher Price brands. Amazon Subscribe & Save diapers-க்கு. Johnson's, Himalaya baby care. Organic - Mamaearth, The Moms Co."
+  },
+  {
+    "instruction": "டையபர் எது நல்லது?",
+    "output": "Pampers, Huggies, MamyPoko popular brands. Newborn, Small, Medium, Large, XL sizes. Pants vs Tape style. Sensitive skin-க்கு Pampers Pure. Night-time diapers extra absorbent. Pack size economy பாருங்க."
+  },
+  {
+    "instruction": "மருந்து எங்கே வாங்கலாம்?",
+    "output": "Apollo Pharmacy, MedPlus, Netmeds stores. 1mg, PharmEasy online. Generic மருந்து Janaushadhi stores-ல cheap. Prescription required drugs doctor prescription காட்டணும். OTC medicines counter-ல கிடைக்கும்."
+  },
+  {
+    "instruction": "ஃபர்ஸ்ட் ஏய்ட் கிட் என்னென்ன இருக்கணும்?",
+    "output": "Bandages, cotton, dettol, burnol, pain balm, thermometer, scissors, ORS, paracetamol, Band-Aid, gauze, antiseptic cream இருக்கணும். Ready kit Amazon-ல கிடைக்கும்."
+  },
+  {
+    "instruction": "கண்ணாடிக்கடையில் என்ன கேட்கணும்?",
+    "output": "Eye test free-யா? Power check எத்தனை நாளைக்கு ஒரு தடவை? Frame material - plastic, metal. Lens - CR39, polycarbonate. Coatings - anti-glare, blue cut, photochromic. Warranty எவ்வளவு நாள்?"
+  },
+  {
+    "instruction": "சோலார் பேனல் எங்கே வாங்கலாம்?",
+    "output": "Tata Solar, Luminous, Havells dealers. MNRE approved vendors. Government subsidy apply பண்ணலாம். Rooftop installation service. Capacity - KW based on usage. 5-year warranty minimum."
+  },
+  {
+    "instruction": "LED பல்ப் எது நல்லது?",
+    "output": "Philips, Syska, Havells, Wipro brands. Wattage - 9W = 60W incandescent. Cool white vs Warm white. B22 vs E27 base. 5-star rated energy saving. 2-year warranty standard."
+  },
+  {
+    "instruction": "கால்குலேட்டர் வாங்கணும்?",
+    "output": "Casio, Orpat, Citizen brands. Basic, Scientific, Financial types. School-க்கு scientific - FX-991. Office-க்கு desktop printing calculator. Amazon, local stationery shops-ல கிடைக்கும்."
+  },
+  {
+    "instruction": "பிரின்டர் வாங்கணும் எது நல்லது?",
+    "output": "Home use - HP, Canon inkjet. Office - Epson tank printers. Laser - Brother, HP. Ink cost per page calculate பண்ணுங்க. Wireless, scanner combo better. Cartridge vs tank printer."
+  },
+  {
+    "instruction": "காமிரா வாங்கணும்?",
+    "output": "Beginner - Canon, Nikon entry DSLR. Mirrorless - Sony, Fujifilm. Action cam - GoPro. Mobile போதும் casual photography-க்கு. Lens separately வாங்கணும். Amazon, local camera shops."
+  },
+  {
+    "instruction": "பென் டிரைவ் எது நல்லது?",
+    "output": "SanDisk, HP, Kingston brands. 32GB, 64GB, 128GB sizes. USB 3.0 faster than 2.0. Metal body durable. OTG pendrive mobile-க்கும் use பண்ணலாம். Encrypted pendrive security-க்கு."
+  },
+  {
+    "instruction": "ஹெட்போன் எது நல்லது?",
+    "output": "Wired - Audio Technica, Sennheiser. Wireless - Sony, Bose, JBL. Budget - boAt, Noise. Noise cancelling - Sony WH1000XM. Gaming - HyperX, SteelSeries. Earbuds - AirPods, Galaxy Buds."
+  },
+  {
+    "instruction": "ஸ்பீக்கர் வாங்கணும்?",
+    "output": "Portable - JBL, Bose, Ultimate Ears. Home theatre - Sony, Samsung. Budget - boAt, Portronics. Bluetooth 5.0 better. Battery life check பண்ணுங்க. Waterproof outdoor use-க்கு."
+  },
+  {
+    "instruction": "டிவிடி/ப்ளூரே எங்கே கிடைக்கும்?",
+    "output": "Palika Bazaar type shops. Amazon-ல original Blu-rays. Music World stores. Prime Video, Netflix streaming better option now. Physical media becoming rare."
+  },
+  {
+    "instruction": "புக்ஸ் எங்கே வாங்கலாம்?",
+    "output": "Higginbothams, Landmark, Odyssey, Crossword stores. Amazon, Flipkart online. Second-hand - Moore Market. Library membership - Anna Centenary Library. Kindle ebooks option."
+  },
+  {
+    "instruction": "மேகஜின் எங்கே கிடைக்கும்?",
+    "output": "Railway station stalls, newspaper shops. Subscription - direct from publisher. Digital - Magzter, Kindle. Ananda Vikatan, Kumudam, India Today தமிழ். News stand-ல latest issues."
+  },
+  {
+    "instruction": "நியூஸ் பேப்பர் subscription எப்படி?",
+    "output": "டினமணி, தினத்தந்தி, The Hindu, Times of India - local agents. Online payment - newspaper website. ePaper subscription cheaper. Morning delivery 6 AM. Monthly, yearly plans."
+  },
+  {
+    "instruction": "டேப்லெட் வாங்கணும் எது நல்லது?",
+    "output": "iPad - premium, best performance. Samsung Tab - Android option. Amazon Fire - budget, kids-க்கு. Lenovo Tab - value for money. Usage - entertainment, work, kids education based on select பண்ணுங்க."
+  },
+  {
+    "instruction": "ஸ்மார்ட் வாட்ச் எது நல்லது?",
+    "output": "Apple Watch - iPhone users-க்கு. Samsung Galaxy Watch - Android. Fitness focus - Fitbit, Garmin. Budget - Noise, boAt, Amazfit. Heart rate, SpO2, GPS features பாருங்க."
+  },
+  {
+    "instruction": "பவர் பேங்க் எது நல்லது?",
+    "output": "10000mAh, 20000mAh popular sizes. Xiaomi, Samsung, Ambrane, boAt brands. Fast charging support. USB-C port better. Flight-ல 20000mAh limit. Warranty 6 months+."
+  },
+  {
+    "instruction": "மொபைல் கவர் எங்கே வாங்கலாம்?",
+    "output": "Richie Street - variety. Amazon, Flipkart-ல phone model specific. Spigen, UAG premium. Local mobile shops. Transparent, leather, armor types. Screen guard combo வாங்குங்க."
+  },
+  {
+    "instruction": "சார்ஜர் வாங்கணும்?",
+    "output": "Original charger best. Samsung, OnePlus fast chargers. Amazon Basics budget option. Wattage - 18W, 25W, 65W. USB-C universal now. Multi-port chargers travel-க்கு. Wireless chargers convenience."
+  },
+  {
+    "instruction": "ஃபோன் ரிப்பேர் எங்கே செய்யலாம்?",
+    "output": "Authorized service center - warranty-ல. Richie Street - local repair. iFixit - DIY. Cashify, Servify doorstep service. Screen replacement, battery change common. Genuine parts கேளுங்க."
+  },
+  {
+    "instruction": "செகண்ட் ஹேண்ட் போன் வாங்கலாம?",
+    "output": "OLX, Cashify, Quikr-ல used phones. Certified refurbished - Amazon Renewed, 2GUD. Physical condition, battery health, IMEI check முக்கியம். Bill, warranty transfer கேளுங்க."
+  },
+  {
+    "instruction": "ஸ்மார்ட் ஹோம் devices என்னென்ன?",
+    "output": "Amazon Echo, Google Home - voice assistants. Smart bulbs - Philips Hue, Wipro. Smart plugs, cameras. WiFi required. App control. Start with smart speaker, slowly expand."
+  },
+  {
+    "instruction": "ஏர் கூலர் எது நல்லது?",
+    "output": "Symphony, Bajaj, Crompton brands. Desert cooler - big rooms. Personal cooler - small rooms. Water tank capacity, air throw distance பாருங்க. Honeycomb pad better. AC alternative budget option."
+  },
+  {
+    "instruction": "வாக்யூம் க்ளீனர் எது நல்லது?",
+    "output": "Eureka Forbes, Philips, Dyson brands. Wet & dry type versatile. Cordless - convenience. HEPA filter allergy-க்கு. Robot vacuum - premium. Power wattage, tank size பாருங்க."
+  },
+  {
+    "instruction": "ஐரன் பாக்ஸ் எது நல்லது?",
+    "output": "Philips, Bajaj, Morphy Richards brands. Dry iron simple. Steam iron better results. Temperature control, non-stick soleplate முக்கியம். 1000W+ power. Auto-off safety feature."
+  },
+  {
+    "instruction": "ஹேர் டிரையர் எது நல்லது?",
+    "output": "Philips, Havells, Syska brands. 1000W-1800W range. Hot, cool, warm settings. Foldable travel-க்கு. Ionic technology frizz-க்கு. Concentrator nozzle precision-க்கு."
+  },
+  {
+    "instruction": "டிரிம்மர் எது நல்லது?",
+    "output": "Philips, Braun, Mi trimmer popular. Beard, body, nose - multi-purpose. Cordless vs corded. Battery life 60 mins+. Washable head cleaning-க்கு. Precision settings 0.5mm to 10mm."
+  },
+  {
+    "instruction": "ஷேவர் எது நல்லது?",
+    "output": "Electric - Philips, Braun. Manual - Gillette, Bombay Shaving Company. Sensitive skin-க்கு 5-blade. Shaving cream, after shave use பண்ணுங்க. Electric dry/wet both பாருங்க."
+  },
+  {
+    "instruction": "கிச்சன் சிங்க் வாங்கணும்?",
+    "output": "Stainless steel - Franke, Nirali. Granite - Carysil. Single bowl, double bowl options. Size kitchen counter-க்கு ஏத்த மாதிரி. Faucet compatibility. Anti-scratch coating better."
+  },
+  {
+    "instruction": "சிம்னி எது நல்லது?",
+    "output": "Elica, Faber, Glen, Hindware brands. Filterless vs Baffle filter. Suction power 1200+ m3/hr. Auto-clean feature. Size hob-க்கு match பண்ணுங்க. Wall mount, island types."
+  },
+  {
+    "instruction": "டைல்ஸ் எங்கே வாங்கலாம்?",
+    "output": "Kajaria, Somany, Johnson showrooms. Orient Bell, Nitco options. Floor, wall, bathroom different types. Size - 2x2, 2x4, 4x4 feet. Anti-skid bathroom-க்கு. Glossy vs matte finish."
+  },
+  {
+    "instruction": "சானிட்டரி வேர் எங்கே?",
+    "output": "Jaquar, Kohler, Parryware, Hindware showrooms. Western toilet, Indian toilet. Wall hung vs floor mount. Soft close seat. Matching basin, faucet. Warranty & service important."
+  },
+  {
+    "instruction": "வாட்டர் ஹீட்டர் எது நல்லது?",
+    "output": "Instant geyser - small family. Storage geyser - 15L, 25L larger family. AO Smith, Racold, Havells brands. 5-star rated. Temperature control. Safety valve, thermal cutout must."
+  },
+  {
+    "instruction": "மாட்டுப்பொங்கல்க்கு மாடுகளுக்கு என்ன வாங்கணும்?",
+    "output": "மஞ்சள் கயிறு, பூ மாலை, மணி, சாணை, bells, பெயின்ட் (கொம்புக்கு), புது கட்டுத்தாம்பு. கரும்பு, வாழை, grass feed. கோயம்பேடு cattle market பக்கம் கிடைக்கும்."
+  },
+  {
+    "instruction": "ஆடி ஷாப்பிங் என்ன special?",
+    "output": "ஆடி மாசம் - big discounts எல்லா கடைகளிலும். புடவை, நகை, எலக்ட்ரானிக்ஸ் எல்லாம் offer விலையில். ஆடி சேல் - T.Nagar கடைகள் பேமஸ். மொத்தமா வாங்க best time."
+  },
+  {
+    "instruction": "க்ரிஸ்துமஸ் ஷாப்பிங் எங்கே?",
+    "output": "Besant Nagar - Christmas tree, decorations. Pondy Bazaar - gifts. Express Avenue, Phoenix mall - Santa photo, events. Online - Christmas themed items Amazon-ல. Cake ordering - hot breads, French Loaf."
+  },
+  {
+    "instruction": "ஈஸ்டர் ஷாப்பிங் என்னென்ன?",
+    "output": "Easter eggs - chocolate shops, Amul, Cadbury. Easter bunny toys. New clothes - tradition. Church area shops - special items. Online - themed decorations, craft supplies."
+  },
+  {
+    "instruction": "ரம்ஜான் ஷாப்பிங் எங்கே?",
+    "output": "Triplicane, Royapettah - traditional shopping areas. புது உடை, perfumes, dates, dry fruits. Haleem ingredients. Flower market - mosque decoration. Late night shops open."
+  },
+  {
+    "instruction": "கூப்பன் apply பண்றது எப்படி?",
+    "output": "Cart page-ல coupon code box இருக்கும். Code enter பண்ணி Apply click பண்ணுங்க. Discount reflect ஆகும். Terms & conditions படிங்க - minimum order, specific products, validity date பாருங்க."
+  },
+  {
+    "instruction": "கேஷ்பேக் எப்படி கிடைக்கும்?",
+    "output": "Paytm, PhonePe, Amazon Pay மூலம் pay பண்ணினா cashback. Credit card offers. CRED coins. Specific bank offers. Cashback wallet-ல credit ஆகும், next purchase-ல use பண்ணலாம்."
+  },
+  {
+    "instruction": "ரெஃபரல் கோட் எப்படி யூஸ் பண்றது?",
+    "output": "New user-ஆ இருந்தா sign up-போது referral code enter பண்ணுங்க. Both referrer and referee-க்கு benefits கிடைக்கும். First order discount அல்லது cashback. Code share பண்ணி earn பண்ணலாம்."
+  },
+  {
+    "instruction": "வாரன்டி vs காரண்டி என்ன வித்தியாசம்?",
+    "output": "Warranty - defect இருந்தா free repair/replace. Guarantee - satisfaction இல்லன்னா money back. Extended warranty extra pay பண்ணி வாங்கலாம். Warranty card, bill safe-ஆ வச்சுக்குங்க."
+  },
+  {
+    "instruction": "ரிட்டர்ன் பண்றது எப்படி?",
+    "output": "App/website-ல return request raise பண்ணுங்க. Reason select பண்ணுங்க. Pickup schedule ஆகும். Original packing-ல கொடுங்க. Tags remove பண்ணக்கூடாது. Refund 5-7 days-ல credit ஆகும்."
+  },
+  {
+    "instruction": "ரீஃபண்ட் எப்போ வரும்?",
+    "output": "Return successful-ன்னு confirm ஆனதும் refund initiate ஆகும். Original payment method-க்கே வரும். UPI - 24 hours. Card - 5-7 business days. COD - bank account அல்லது wallet."
+  }
+]

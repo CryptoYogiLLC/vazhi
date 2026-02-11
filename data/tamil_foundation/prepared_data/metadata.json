@@ -1,0 +1,30 @@
+{
+  "total_items": 11696,
+  "train_items": 11112,
+  "val_items": 584,
+  "qa_items": 10986,
+  "completion_items": 710,
+  "sources": [
+    "bharathiar_corpus",
+    "27_guardrails.json",
+    "konrai_venthan_corpus",
+    "thirukkural_corpus",
+    "aathichoodi_corpus",
+    "15_madurai_dialect.json",
+    "07_education.json",
+    "32_avvaiyar.json",
+    "12_daily_routines.json",
+    "14_chennai_dialect.json",
+    "02_thirukkural.json",
+    "10_shopping.json",
+    "36_silapathikaram_corpus.json",
+    "16_kongu_dialect.json",
+    "13_emotions.json",
+    "06_health.json",
+    "03_numbers_time.json",
+    "38_sangam_corpus.json",
+    "09_weather.json"
+  ],
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "seed": 42
+}

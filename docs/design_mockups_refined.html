@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VAZHI App - Refined Design Concepts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            background: linear-gradient(135deg, #FF6B35, #FFB347);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #888;
+            margin-bottom: 50px;
+        }
+
+        .concepts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .concept {
+            background: #16213e;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .concept-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #1E3A5F, #0E2A4F);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .concept-title {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .concept-desc {
+            font-size: 0.85em;
+            color: #aaa;
+        }
+
+        .phone-frame {
+            width: 290px;
+            height: 600px;
+            margin: 30px auto;
+            border-radius: 35px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        .phone-notch {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90px;
+            height: 24px;
+            background: #000;
+            border-radius: 12px;
+            z-index: 10;
+        }
+
+        /* ===== VARIANT A: Bottom-Left Maa Kolam ===== */
+        .variant-a {
+            background: linear-gradient(180deg, #FFE4E1 0%, #F8F4FF 50%, #E6F3FF 100%);
+        }
+
+        /* Maa Kolam / Sikku Kolam - interlocking squiggly lines */
+        .maa-kolam-left {
+            position: absolute;
+            bottom: 50px;
+            left: -40px;
+            width: 180px;
+            height: 180px;
+            opacity: 0.09;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='%23FF6B35' stroke-width='2.5' stroke-linecap='round'%3E%3C!-- Outer squiggly loops --%3E%3Cpath d='M20 100 C20 60, 60 20, 100 20 C140 20, 180 60, 180 100 C180 140, 140 180, 100 180 C60 180, 20 140, 20 100'/%3E%3C!-- Inner interlocking curves --%3E%3Cpath d='M40 100 Q40 55, 100 40 Q160 55, 160 100 Q160 145, 100 160 Q40 145, 40 100'/%3E%3Cpath d='M60 100 Q75 70, 100 60 Q125 70, 140 100 Q125 130, 100 140 Q75 130, 60 100'/%3E%3C!-- Diagonal squiggles --%3E%3Cpath d='M30 30 Q50 50, 40 70 Q30 90, 50 100 Q70 110, 60 130 Q50 150, 70 170'/%3E%3Cpath d='M170 30 Q150 50, 160 70 Q170 90, 150 100 Q130 110, 140 130 Q150 150, 130 170'/%3E%3Cpath d='M30 170 Q50 150, 70 160 Q90 170, 100 150 Q110 130, 130 140 Q150 150, 170 130'/%3E%3Cpath d='M30 30 Q50 50, 70 40 Q90 30, 100 50 Q110 70, 130 60 Q150 50, 170 70'/%3E%3C!-- Center flower --%3E%3Cpath d='M100 80 Q90 90, 100 100 Q110 90, 100 80'/%3E%3Cpath d='M80 100 Q90 90, 100 100 Q90 110, 80 100'/%3E%3Cpath d='M100 120 Q110 110, 100 100 Q90 110, 100 120'/%3E%3Cpath d='M120 100 Q110 110, 100 100 Q110 90, 120 100'/%3E%3Ccircle cx='100' cy='100' r='6' fill='%23FF6B35'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        /* ===== VARIANT B: Bottom-Right Kuthu Vilakku ===== */
+        .variant-b {
+            background: linear-gradient(180deg, #FFE4E1 0%, #FFF8F5 50%, #E6F3FF 100%);
+        }
+
+        .kuthu-vilakku {
+            position: absolute;
+            bottom: 55px;
+            right: 8px;
+            width: 70px;
+            height: 110px;
+            opacity: 0.08;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 150'%3E%3Cg fill='%23B8860B'%3E%3C!-- Base --%3E%3Cellipse cx='50' cy='145' rx='35' ry='5'/%3E%3Crect x='40' y='130' width='20' height='15'/%3E%3Cellipse cx='50' cy='130' rx='15' ry='5'/%3E%3C!-- Stem --%3E%3Crect x='47' y='60' width='6' height='70'/%3E%3C!-- Bowl --%3E%3Cpath d='M25 60 Q25 40 50 35 Q75 40 75 60 Q75 70 50 75 Q25 70 25 60'/%3E%3C!-- Flame --%3E%3Cpath d='M50 35 Q45 20 50 5 Q55 20 50 35' fill='%23FF6B35'/%3E%3Cellipse cx='50' cy='35' rx='8' ry='5' fill='%23FFD700'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        /* ===== VARIANT C: Corner Maa Kolam + Lamp ===== */
+        .variant-c {
+            background: linear-gradient(180deg, #FFE8E0 0%, #FFF5F0 50%, #E8F4FF 100%);
+        }
+
+        .maa-kolam-corner {
+            position: absolute;
+            bottom: 45px;
+            left: -25px;
+            width: 140px;
+            height: 140px;
+            opacity: 0.1;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Cg fill='none' stroke='%23FF6B35' stroke-width='2' stroke-linecap='round'%3E%3C!-- Squiggly interlocking pattern --%3E%3Cpath d='M10 75 Q25 50, 50 40 Q75 30, 100 45 Q125 60, 140 75'/%3E%3Cpath d='M10 75 Q25 100, 50 110 Q75 120, 100 105 Q125 90, 140 75'/%3E%3Cpath d='M75 10 Q50 25, 40 50 Q30 75, 45 100 Q60 125, 75 140'/%3E%3Cpath d='M75 10 Q100 25, 110 50 Q120 75, 105 100 Q90 125, 75 140'/%3E%3C!-- Inner curves --%3E%3Cpath d='M35 75 Q50 55, 75 50 Q100 55, 115 75 Q100 95, 75 100 Q50 95, 35 75'/%3E%3Cpath d='M55 75 Q65 60, 75 58 Q85 60, 95 75 Q85 90, 75 92 Q65 90, 55 75'/%3E%3Ccircle cx='75' cy='75' r='5' fill='%23FF6B35'/%3E%3C!-- Corner dots --%3E%3Ccircle cx='20' cy='20' r='3' fill='%23FF6B35'/%3E%3Ccircle cx='130' cy='20' r='3' fill='%23FF6B35'/%3E%3Ccircle cx='20' cy='130' r='3' fill='%23FF6B35'/%3E%3Ccircle cx='130' cy='130' r='3' fill='%23FF6B35'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        /* ===== Common Elements ===== */
+
+        /* Compact top-left logo - Peacock-inspired */
+        .compact-header {
+            padding: 42px 12px 6px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-right: 30px; /* Space for settings icon */
+        }
+
+        /* Logo image */
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .logo-text-group {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-text-main {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: #1E3A5F;
+            letter-spacing: 1px;
+        }
+
+        .logo-text-tagline {
+            font-size: 0.32em;
+            color: #888;
+            font-weight: 400;
+            letter-spacing: 0.1px;
+            margin-top: 2px;
+            white-space: nowrap;
+        }
+
+        .logo-text-tagline b {
+            color: #FF6B35;
+            font-weight: 700;
+        }
+
+        .header-icons {
+            position: absolute;
+            top: 44px;
+            right: 12px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .header-icon {
+            width: 24px;
+            height: 24px;
+            background: rgba(30,58,95,0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7em;
+        }
+
+        /* Circular category carousel */
+        .category-carousel {
+            padding: 8px 0;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .category-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-track {
+            display: inline-flex;
+            gap: 16px;
+            padding: 0 15px;
+        }
+
+        .category-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .category-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            background: white;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .category-item.active .category-circle {
+            border-color: #FF6B35;
+            box-shadow: 0 4px 16px rgba(255,107,53,0.25);
+        }
+
+        /* Category with image background */
+        .category-circle.has-image {
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .category-circle.has-image::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: rgba(0,0,0,0.2);
+        }
+
+        .category-circle.has-image span {
+            position: relative;
+            z-index: 1;
+            filter: drop-shadow(0 1px 2px rgba(0,0,0,0.5));
+        }
+
+        .category-circle.culture-img {
+            background-image: url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=100&h=100&fit=crop');
+        }
+
+        .category-circle.education-img {
+            background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=100&h=100&fit=crop');
+        }
+
+        .category-circle.security-img {
+            background: linear-gradient(135deg, #4682B4, #1E3A5F);
+        }
+
+        .category-circle.legal-img {
+            background: linear-gradient(135deg, #6B3FA0, #4B2882);
+        }
+
+        .category-circle.govt-img {
+            background: linear-gradient(135deg, #1E3A5F, #0E2A4F);
+        }
+
+        .category-circle.health-img {
+            background: linear-gradient(135deg, #20B2AA, #008B8B);
+        }
+
+        .category-name {
+            font-size: 0.6em;
+            color: #666;
+            text-align: center;
+            max-width: 60px;
+            white-space: normal;
+            line-height: 1.2;
+        }
+
+        .category-item.active .category-name {
+            color: #FF6B35;
+            font-weight: 600;
+        }
+
+        /* Category Banner */
+        .category-banner {
+            margin: 8px 12px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            height: 80px;
+        }
+
+        .category-banner-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .category-banner-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 12px 16px;
+        }
+
+        /* Culture - Temple gopuram from Unsplash */
+        .category-banner.culture .category-banner-bg {
+            background-image: url('https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&h=300&fit=crop');
+        }
+        .category-banner.culture .category-banner-overlay {
+            background: linear-gradient(135deg, rgba(255,107,53,0.82), rgba(229,90,43,0.88));
+        }
+
+        /* Education - Students/books from Unsplash */
+        .category-banner.education .category-banner-bg {
+            background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=300&fit=crop');
+        }
+        .category-banner.education .category-banner-overlay {
+            background: linear-gradient(135deg, rgba(74,144,217,0.82), rgba(30,58,95,0.88));
+        }
+
+        /* Security - Digital security/shield from Unsplash */
+        .category-banner.security .category-banner-bg {
+            background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=300&fit=crop');
+        }
+        .category-banner.security .category-banner-overlay {
+            background: linear-gradient(135deg, rgba(70,130,180,0.85), rgba(30,58,95,0.9));
+        }
+
+        /* Legal - Scales of justice from Unsplash */
+        .category-banner.legal .category-banner-bg {
+            background-image: url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&h=300&fit=crop');
+        }
+        .category-banner.legal .category-banner-overlay {
+            background: linear-gradient(135deg, rgba(107,63,160,0.85), rgba(75,40,130,0.9));
+        }
+
+        /* Government - Government building from Unsplash */
+        .category-banner.govt .category-banner-bg {
+            background-image: url('https://images.unsplash.com/photo-1555848962-6e79363ec58f?w=600&h=300&fit=crop');
+        }
+        .category-banner.govt .category-banner-overlay {
+            background: linear-gradient(135deg, rgba(30,58,95,0.85), rgba(14,42,79,0.9));
+        }
+
+        /* Healthcare - Medical/herbs from Unsplash */
+        .category-banner.health .category-banner-bg {
+            background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&h=300&fit=crop');
+        }
+        .category-banner.health .category-banner-overlay {
+            background: linear-gradient(135deg, rgba(32,178,170,0.82), rgba(0,139,139,0.88));
+        }
+
+        .category-banner-title {
+            color: white;
+            font-size: 1.1em;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .category-banner-subtitle {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.7em;
+            margin-top: 4px;
+        }
+
+        /* Chat area */
+        .chat-area {
+            flex: 1;
+            padding: 6px 0;
+        }
+
+        .clean-bubble {
+            margin: 10px 15px;
+            padding: 12px 14px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .clean-bubble p {
+            color: #333;
+            font-size: 0.82em;
+            line-height: 1.5;
+        }
+
+        .clean-bubble.user {
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            margin-left: 50px;
+            border-bottom-right-radius: 4px;
+        }
+
+        .clean-bubble.user p {
+            color: white;
+        }
+
+        .clean-bubble.assistant {
+            margin-right: 50px;
+            border-bottom-left-radius: 4px;
+        }
+
+        .clean-input {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            right: 12px;
+            background: white;
+            border-radius: 26px;
+            padding: 8px 12px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            z-index: 5;
+            border: 2px solid #D4AF37;
+        }
+
+        .clean-input input {
+            border: none;
+            flex: 1;
+            font-size: 0.85em;
+            color: #333;
+            background: transparent;
+            outline: none;
+            padding: 0 8px;
+        }
+
+        .clean-input input::placeholder {
+            color: #999;
+        }
+
+        .mic-btn {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #FF6B35, #E55A2B);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1em;
+            box-shadow: 0 3px 10px rgba(255,107,53,0.3);
+            flex-shrink: 0;
+        }
+
+        /* Concept labels */
+        .concept-footer {
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .concept-footer h4 {
+            color: #FF6B35;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+        }
+
+        .concept-footer p {
+            font-size: 0.8em;
+            color: #888;
+            line-height: 1.6;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.7em;
+            margin: 8px 4px 0;
+        }
+
+        .badge-rec { background: #3498DB; color: white; }
+        .badge-subtle { background: #9B59B6; color: white; }
+
+        /* Section headers */
+        .section-title {
+            text-align: center;
+            color: #FF6B35;
+            font-size: 1.3em;
+            margin: 50px 0 20px;
+        }
+
+        .section-desc {
+            text-align: center;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>வழி VAZHI - Refined Concepts</h1>
+    <p class="subtitle">Clean design with subtle Tamil cultural accents</p>
+
+    <h2 class="section-title">Updated Design Variants</h2>
+    <p class="section-desc">Compact logo, circular swipeable categories, and subtle maa kolam patterns</p>
+
+    <div class="concepts-grid">
+        <!-- Variant A: White Logo + Maa Kolam -->
+        <div class="concept">
+            <div class="concept-header">
+                <div class="concept-title">Variant A: Clean & Modern</div>
+                <div class="concept-desc">White background logo (gradient text) + maa kolam</div>
+            </div>
+            <div class="phone-frame variant-a">
+                <div class="phone-notch"></div>
+                <div class="maa-kolam-left"></div>
+
+                <div class="compact-header">
+                    <div class="logo">
+                        <div class="logo-icon"><img src="assets/vazhi_logo_white.jpg" alt="VAZHI"></div>
+                        <div class="logo-text-group">
+                            <div class="logo-text-main">VAZHI</div>
+                            <div class="logo-text-tagline"><b>V</b>oluntary <b>A</b>I with <b>Z</b>ero-cost <b>H</b>elpful <b>I</b>ntelligence</div>
+                        </div>
+                    </div>
+                    <div class="header-icons">
+                        <div class="header-icon">⚙️</div>
+                    </div>
+                </div>
+
+                <div class="category-carousel">
+                    <div class="category-track">
+                        <div class="category-item active">
+                            <div class="category-circle culture-img has-image"><span>🪷</span></div>
+                            <div class="category-name">கலாச்சாரம்</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle education-img has-image"><span>📚</span></div>
+                            <div class="category-name">கல்வி</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle security-img has-image"><span>🛡️</span></div>
+                            <div class="category-name">பாதுகாப்பு</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle legal-img has-image"><span>⚖️</span></div>
+                            <div class="category-name">சட்டம்</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle govt-img has-image"><span>🏛️</span></div>
+                            <div class="category-name">அரசு</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle health-img has-image"><span>🏥</span></div>
+                            <div class="category-name">சுகாதாரம்</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-banner culture">
+                    <div class="category-banner-bg"></div>
+                    <div class="category-banner-overlay">
+                        <div class="category-banner-title">🪷 கலாச்சாரம்</div>
+                        <div class="category-banner-subtitle">Tamil Culture & Heritage</div>
+                    </div>
+                </div>
+
+                <div class="chat-area">
+                    <div class="clean-bubble user">
+                        <p>திருக்குறளின் முதல் குறள் என்ன?</p>
+                    </div>
+                    <div class="clean-bubble assistant">
+                        <p>"அகர முதல எழுத்தெல்லாம் ஆதி பகவன் முதற்றே உலகு" - எல்லா எழுத்துக்களும் அகரத்தை முதலாகக் கொண்டுள்ளன.</p>
+                    </div>
+                </div>
+
+                <div class="clean-input">
+                    <input type="text" placeholder="கேளுங்கள்...">
+                    <div class="mic-btn">🎤</div>
+                </div>
+            </div>
+            <div class="concept-footer">
+                <h4>Recommended: Clean & Versatile</h4>
+                <p>White logo + bold acronym tagline + category banner with background image.</p>
+                <span class="badge badge-rec">Recommended</span>
+            </div>
+        </div>
+
+        <!-- Variant B: Purple Logo + Kuthu Vilakku -->
+        <div class="concept">
+            <div class="concept-header">
+                <div class="concept-title">Variant B: Purple Peacock</div>
+                <div class="concept-desc">Purple/gold logo with trident + kuthu vilakku background</div>
+            </div>
+            <div class="phone-frame variant-b">
+                <div class="phone-notch"></div>
+                <div class="kuthu-vilakku"></div>
+
+                <div class="compact-header">
+                    <div class="logo">
+                        <div class="logo-icon"><img src="assets/vazhi_logo.png" alt="VAZHI"></div>
+                        <div class="logo-text-group">
+                            <div class="logo-text-main">VAZHI</div>
+                            <div class="logo-text-tagline"><b>V</b>oluntary <b>A</b>I with <b>Z</b>ero-cost <b>H</b>elpful <b>I</b>ntelligence</div>
+                        </div>
+                    </div>
+                    <div class="header-icons">
+                        <div class="header-icon">⚙️</div>
+                    </div>
+                </div>
+
+                <div class="category-carousel">
+                    <div class="category-track">
+                        <div class="category-item active">
+                            <div class="category-circle culture-img has-image"><span>🪷</span></div>
+                            <div class="category-name">கலாச்சாரம்</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle education-img has-image"><span>📚</span></div>
+                            <div class="category-name">கல்வி</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle security-img has-image"><span>🛡️</span></div>
+                            <div class="category-name">பாதுகாப்பு</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle legal-img has-image"><span>⚖️</span></div>
+                            <div class="category-name">சட்டம்</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle govt-img has-image"><span>🏛️</span></div>
+                            <div class="category-name">அரசு</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle health-img has-image"><span>🏥</span></div>
+                            <div class="category-name">சுகாதாரம்</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-banner education">
+                    <div class="category-banner-bg"></div>
+                    <div class="category-banner-overlay">
+                        <div class="category-banner-title">📚 கல்வி</div>
+                        <div class="category-banner-subtitle">Education & Learning</div>
+                    </div>
+                </div>
+
+                <div class="chat-area">
+                    <div class="clean-bubble user">
+                        <p>TN அரசு உதவித்தொகை எப்படி விண்ணப்பிப்பது?</p>
+                    </div>
+                    <div class="clean-bubble assistant">
+                        <p>தமிழ்நாடு அரசு உதவித்தொகைக்கு tnsocialwelfare.tn.gov.in இணையதளத்தில் விண்ணப்பிக்கலாம்.</p>
+                    </div>
+                </div>
+
+                <div class="clean-input">
+                    <input type="text" placeholder="கேளுங்கள்...">
+                    <div class="mic-btn">🎤</div>
+                </div>
+            </div>
+            <div class="concept-footer">
+                <h4>Purple Peacock + Lamp</h4>
+                <p>Purple logo + Education category banner with blue gradient overlay.</p>
+                <span class="badge badge-subtle">Classic</span>
+            </div>
+        </div>
+
+        <!-- Variant C: Watercolor Logo + Both elements -->
+        <div class="concept">
+            <div class="concept-header">
+                <div class="concept-title">Variant C: Artistic</div>
+                <div class="concept-desc">Watercolor teal logo + both kolam and lamp backgrounds</div>
+            </div>
+            <div class="phone-frame variant-c">
+                <div class="phone-notch"></div>
+                <div class="maa-kolam-corner"></div>
+                <div class="kuthu-vilakku" style="opacity: 0.06;"></div>
+
+                <div class="compact-header">
+                    <div class="logo">
+                        <div class="logo-icon"><img src="assets/vazhi_logo_teal_watercolor.jpg" alt="VAZHI"></div>
+                        <div class="logo-text-group">
+                            <div class="logo-text-main">VAZHI</div>
+                            <div class="logo-text-tagline"><b>V</b>oluntary <b>A</b>I with <b>Z</b>ero-cost <b>H</b>elpful <b>I</b>ntelligence</div>
+                        </div>
+                    </div>
+                    <div class="header-icons">
+                        <div class="header-icon">⚙️</div>
+                    </div>
+                </div>
+
+                <div class="category-carousel">
+                    <div class="category-track">
+                        <div class="category-item">
+                            <div class="category-circle culture-img has-image"><span>🪷</span></div>
+                            <div class="category-name">கலாச்சாரம்</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle education-img has-image"><span>📚</span></div>
+                            <div class="category-name">கல்வி</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle security-img has-image"><span>🛡️</span></div>
+                            <div class="category-name">பாதுகாப்பு</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle legal-img has-image"><span>⚖️</span></div>
+                            <div class="category-name">சட்டம்</div>
+                        </div>
+                        <div class="category-item">
+                            <div class="category-circle govt-img has-image"><span>🏛️</span></div>
+                            <div class="category-name">அரசு</div>
+                        </div>
+                        <div class="category-item active">
+                            <div class="category-circle health-img has-image"><span>🏥</span></div>
+                            <div class="category-name">சுகாதாரம்</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="category-banner health">
+                    <div class="category-banner-bg"></div>
+                    <div class="category-banner-overlay">
+                        <div class="category-banner-title">🏥 சுகாதாரம்</div>
+                        <div class="category-banner-subtitle">Healthcare & Wellness</div>
+                    </div>
+                </div>
+
+                <div class="chat-area">
+                    <div class="clean-bubble user">
+                        <p>சித்த மருத்துவத்தில் மஞ்சள் எதற்கு பயன்படுத்தப்படுகிறது?</p>
+                    </div>
+                    <div class="clean-bubble assistant">
+                        <p>மஞ்சள் அழற்சி எதிர்ப்பு, நோய் எதிர்ப்பு சக்தி அதிகரிப்பு, தோல் நோய்களுக்கு சிகிச்சை போன்றவற்றுக்கு பயன்படுத்தப்படுகிறது.</p>
+                    </div>
+                </div>
+
+                <div class="clean-input">
+                    <input type="text" placeholder="கேளுங்கள்...">
+                    <div class="mic-btn">🎤</div>
+                </div>
+            </div>
+            <div class="concept-footer">
+                <h4>Artistic Watercolor</h4>
+                <p>Watercolor logo + Healthcare banner with teal gradient. Different category selected.</p>
+                <span class="badge badge-subtle">Rich</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Features Highlight -->
+    <div style="max-width: 900px; margin: 60px auto; background: #16213e; border-radius: 24px; padding: 40px;">
+        <h2 style="text-align: center; color: #FF6B35; margin-bottom: 30px;">Design Updates Summary</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px;">
+                <h4 style="color: #D4AF37; margin-bottom: 12px;">🦚 Logo Options (5 total)</h4>
+                <p style="color: #aaa; font-size: 0.85em; line-height: 1.6;">
+                    <strong>A:</strong> vazhi_logo_white.jpg ⭐ (recommended)<br>
+                    <strong>B:</strong> vazhi_logo.png (purple + trident)<br>
+                    <strong>C:</strong> vazhi_logo_teal_watercolor.jpg
+                </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px;">
+                <h4 style="color: #FF6B35; margin-bottom: 12px;">🎯 Category Selection</h4>
+                <p style="color: #aaa; font-size: 0.85em; line-height: 1.6;">
+                    Circular icons + category banner with background image, Tamil title, and English subtitle when selected.
+                </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px;">
+                <h4 style="color: #FF6B35; margin-bottom: 12px;">🌀 Maa Kolam Pattern</h4>
+                <p style="color: #aaa; font-size: 0.85em; line-height: 1.6;">
+                    Sikku kolam with interlocking squiggly curves at 8-10% opacity. Positioned in corner, partially visible.
+                </p>
+            </div>
+
+            <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 16px;">
+                <h4 style="color: #D4AF37; margin-bottom: 12px;">💬 Golden Chat Border</h4>
+                <p style="color: #aaa; font-size: 0.85em; line-height: 1.6;">
+                    Chat input has golden border (#D4AF37), complementing the orange border on selected category.
+                </p>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: rgba(255,107,53,0.1); border-radius: 12px;">
+            <h4 style="color: #FF6B35; margin-bottom: 10px;">💡 Recommendation</h4>
+            <p style="color: #ccc; font-size: 0.9em; line-height: 1.6;">
+                <strong>Variant A (Maa Kolam)</strong> provides the best balance - the squiggly sikku pattern is distinctly Tamil, works at higher opacity without being overwhelming, and the corner placement keeps the main content area clean.
+            </p>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 40px; color: #666;">
+        <p>Refresh browser to see updates</p>
+        <p style="margin-top: 10px; color: #444;">docs/design_mockups_refined.html</p>
+        <p style="margin-top: 20px; padding: 15px; background: rgba(255,107,53,0.1); border-radius: 8px; color: #FF6B35; font-size: 0.85em;">
+            <strong>5 Logos in assets/:</strong> vazhi_logo_white.jpg ⭐ | vazhi_logo.png | vazhi_logo.jpg | vazhi_logo1.jpg | vazhi_logo_teal_watercolor.jpg
+        </p>
+    </div>
+</body>
+</html>

@@ -70,9 +70,7 @@ class VazhiLocalService {
   }
 
   /// Download the model with progress callback
-  Future<void> downloadModel({
-    Function(double progress)? onProgress,
-  }) async {
+  Future<void> downloadModel({Function(double progress)? onProgress}) async {
     final path = await modelPath;
     final file = File(path);
 
@@ -90,8 +88,10 @@ class VazhiLocalService {
         final request = http.Request('GET', url);
         response = await client.send(request);
 
-        if (response.statusCode == 301 || response.statusCode == 302 ||
-            response.statusCode == 303 || response.statusCode == 307) {
+        if (response.statusCode == 301 ||
+            response.statusCode == 302 ||
+            response.statusCode == 303 ||
+            response.statusCode == 307) {
           final location = response.headers['location'];
           if (location == null) {
             throw VazhiLocalException('Redirect without location header');
@@ -157,7 +157,8 @@ class VazhiLocalService {
     // Create new session if pack changed
     if (_session == null || _currentPack != pack) {
       _currentPack = pack;
-      final systemPrompt = packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
+      final systemPrompt =
+          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
       _session = ChatSession(_engine!, systemPrompt: systemPrompt);
     }
 
@@ -179,7 +180,8 @@ class VazhiLocalService {
     // Create new session if pack changed
     if (_session == null || _currentPack != pack) {
       _currentPack = pack;
-      final systemPrompt = packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
+      final systemPrompt =
+          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
       _session = ChatSession(_engine!, systemPrompt: systemPrompt);
     }
 

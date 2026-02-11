@@ -70,7 +70,9 @@ void main() {
 
       test('handles athikaram lookup with pattern', () async {
         // Use a pattern that's more likely to match
-        final classification = await queryRouter.classify('முதல் அதிகாரம் குறள்கள்');
+        final classification = await queryRouter.classify(
+          'முதல் அதிகாரம் குறள்கள்',
+        );
 
         // Athikaram may not have specific pattern - test that it doesn't crash
         expect(classification, isNotNull);
@@ -103,7 +105,9 @@ void main() {
       });
 
       test('returns hybrid for eligibility questions', () async {
-        final response = await knowledgeService.query('CMCHIS யாருக்கு தகுதி விளக்கம்');
+        final response = await knowledgeService.query(
+          'CMCHIS யாருக்கு தகுதி விளக்கம்',
+        );
 
         // May be deterministic or hybrid based on pattern matching
         expect(response.classification.category, KnowledgeCategory.schemes);
@@ -192,7 +196,9 @@ void main() {
 
     group('AI Required Queries', () {
       test('classifies how-to questions as AI required', () async {
-        final response = await knowledgeService.query('how to learn programming');
+        final response = await knowledgeService.query(
+          'how to learn programming',
+        );
 
         expect(response.classification.type, QueryType.aiRequired);
         expect(response.needsModel, isTrue);
@@ -205,13 +211,17 @@ void main() {
       });
 
       test('classifies opinion requests as AI required', () async {
-        final response = await knowledgeService.query('what do you think about AI');
+        final response = await knowledgeService.query(
+          'what do you think about AI',
+        );
 
         expect(response.classification.type, QueryType.aiRequired);
       });
 
       test('AI required returns no deterministic response', () async {
-        final response = await knowledgeService.query('explain machine learning');
+        final response = await knowledgeService.query(
+          'explain machine learning',
+        );
 
         expect(response.answeredDeterministically, isFalse);
         expect(response.hasResponse, isFalse);
@@ -264,7 +274,9 @@ void main() {
       });
 
       test('hybrid response has aiPromptSuggestion', () async {
-        final response = await knowledgeService.query('CMCHIS பற்றி விளக்கவும்');
+        final response = await knowledgeService.query(
+          'CMCHIS பற்றி விளக்கவும்',
+        );
 
         if (response.classification.type == QueryType.hybrid) {
           expect(response.aiPromptSuggestion, isNotNull);
