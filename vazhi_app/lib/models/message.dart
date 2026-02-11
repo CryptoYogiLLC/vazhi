@@ -3,7 +3,6 @@
 /// Represents a single message in a conversation.
 library;
 
-
 enum MessageRole { user, assistant, system }
 
 class Message {

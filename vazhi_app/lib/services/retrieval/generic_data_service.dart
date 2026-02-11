@@ -11,7 +11,9 @@ import 'retrieval_service.dart';
 
 class GenericDataService {
   /// Search scam patterns
-  Future<RetrievalResult<Map<String, dynamic>>> searchScams(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchScams(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.searchScamPatterns(query);
       if (results.isEmpty) {
@@ -60,13 +62,17 @@ class GenericDataService {
   }
 
   /// Search scholarships
-  Future<RetrievalResult<Map<String, dynamic>>> searchScholarships(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchScholarships(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.searchScholarships(query);
       if (results.isEmpty) {
         final all = await KnowledgeDatabase.getAllScholarships();
         if (all.isEmpty) {
-          return RetrievalResult.notFound(category: KnowledgeCategory.education);
+          return RetrievalResult.notFound(
+            category: KnowledgeCategory.education,
+          );
         }
         return RetrievalResult.list(
           all,
@@ -89,7 +95,9 @@ class GenericDataService {
   }
 
   /// Search exams
-  Future<RetrievalResult<Map<String, dynamic>>> searchExams(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchExams(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.getAllExams();
       if (results.isEmpty) {
@@ -108,7 +116,9 @@ class GenericDataService {
   }
 
   /// Search legal rights
-  Future<RetrievalResult<Map<String, dynamic>>> searchLegalRights(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchLegalRights(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.searchLegalRights(query);
       if (results.isEmpty) {
@@ -137,7 +147,9 @@ class GenericDataService {
   }
 
   /// Search legal templates
-  Future<RetrievalResult<Map<String, dynamic>>> searchLegalTemplates(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchLegalTemplates(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.getLegalTemplates();
       if (results.isEmpty) {
@@ -156,13 +168,17 @@ class GenericDataService {
   }
 
   /// Search siddha medicine
-  Future<RetrievalResult<Map<String, dynamic>>> searchSiddhaMedicine(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchSiddhaMedicine(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.searchSiddhaMedicine(query);
       if (results.isEmpty) {
         final all = await KnowledgeDatabase.getSiddhaMedicine();
         if (all.isEmpty) {
-          return RetrievalResult.notFound(category: KnowledgeCategory.siddhaMedicine);
+          return RetrievalResult.notFound(
+            category: KnowledgeCategory.siddhaMedicine,
+          );
         }
         return RetrievalResult.list(
           all,
@@ -180,18 +196,25 @@ class GenericDataService {
         totalCount: results.length,
       );
     } catch (e) {
-      return RetrievalResult.error('$e', category: KnowledgeCategory.siddhaMedicine);
+      return RetrievalResult.error(
+        '$e',
+        category: KnowledgeCategory.siddhaMedicine,
+      );
     }
   }
 
   /// Search festivals
-  Future<RetrievalResult<Map<String, dynamic>>> searchFestivals(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchFestivals(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.searchFestivals(query);
       if (results.isEmpty) {
         final all = await KnowledgeDatabase.getAllFestivals();
         if (all.isEmpty) {
-          return RetrievalResult.notFound(category: KnowledgeCategory.festivals);
+          return RetrievalResult.notFound(
+            category: KnowledgeCategory.festivals,
+          );
         }
         return RetrievalResult.list(
           all,
@@ -214,7 +237,9 @@ class GenericDataService {
   }
 
   /// Search siddhars
-  Future<RetrievalResult<Map<String, dynamic>>> searchSiddhars(String query) async {
+  Future<RetrievalResult<Map<String, dynamic>>> searchSiddhars(
+    String query,
+  ) async {
     try {
       final results = await KnowledgeDatabase.searchSiddhars(query);
       if (results.isEmpty) {
@@ -246,18 +271,23 @@ class GenericDataService {
 
   String _formatScamPatterns(List<Map<String, dynamic>> items) {
     final buffer = StringBuffer();
-    buffer.writeln('🛡️ **மோசடி எச்சரிக்கைகள் / Scam Alerts** (${items.length})');
+    buffer.writeln(
+      '🛡️ **மோசடி எச்சரிக்கைகள் / Scam Alerts** (${items.length})',
+    );
     buffer.writeln();
     for (final item in items.take(5)) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final type = item['type'] ?? '';
       buffer.writeln('⚠️ **$name**  ');
       if (type.isNotEmpty) buffer.writeln('வகை: $type  ');
-      final desc = item['description_tamil'] ?? item['description_english'] ?? '';
+      final desc =
+          item['description_tamil'] ?? item['description_english'] ?? '';
       if (desc.isNotEmpty) buffer.writeln('$desc');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} முடிவுகள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} முடிவுகள்');
+    }
     return buffer.toString();
   }
 
@@ -272,7 +302,9 @@ class GenericDataService {
       if (desc.isNotEmpty) buffer.writeln('$desc');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} குறிப்புகள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} குறிப்புகள்');
+    }
     return buffer.toString();
   }
 
@@ -289,13 +321,17 @@ class GenericDataService {
       if (amount.isNotEmpty) buffer.writeln('தொகை: $amount');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} உதவித்தொகைகள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} உதவித்தொகைகள்');
+    }
     return buffer.toString();
   }
 
   String _formatExams(List<Map<String, dynamic>> items) {
     final buffer = StringBuffer();
-    buffer.writeln('📝 **போட்டித் தேர்வுகள் / Competitive Exams** (${items.length})');
+    buffer.writeln(
+      '📝 **போட்டித் தேர்வுகள் / Competitive Exams** (${items.length})',
+    );
     buffer.writeln();
     for (final item in items.take(5)) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
@@ -304,7 +340,9 @@ class GenericDataService {
       if (conductor.isNotEmpty) buffer.writeln('நடத்துபவர்: $conductor');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} தேர்வுகள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} தேர்வுகள்');
+    }
     return buffer.toString();
   }
 
@@ -319,7 +357,9 @@ class GenericDataService {
       if (category.isNotEmpty) buffer.writeln('பிரிவு: $category');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} உரிமைகள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} உரிமைகள்');
+    }
     return buffer.toString();
   }
 
@@ -334,13 +374,17 @@ class GenericDataService {
       if (type.isNotEmpty) buffer.writeln('வகை: $type');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} மாதிரிகள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} மாதிரிகள்');
+    }
     return buffer.toString();
   }
 
   String _formatSiddhaMedicine(List<Map<String, dynamic>> items) {
     final buffer = StringBuffer();
-    buffer.writeln('🌿 **சித்த மருத்துவம் / Siddha Medicine** (${items.length})');
+    buffer.writeln(
+      '🌿 **சித்த மருத்துவம் / Siddha Medicine** (${items.length})',
+    );
     buffer.writeln();
     for (final item in items.take(5)) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
@@ -349,7 +393,9 @@ class GenericDataService {
       if (use.isNotEmpty) buffer.writeln('பயன்: $use');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} மருந்துகள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} மருந்துகள்');
+    }
     return buffer.toString();
   }
 
@@ -364,7 +410,9 @@ class GenericDataService {
       if (month.isNotEmpty) buffer.writeln('மாதம்: $month');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} திருவிழாக்கள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} திருவிழாக்கள்');
+    }
     return buffer.toString();
   }
 
@@ -379,7 +427,9 @@ class GenericDataService {
       if (period.isNotEmpty) buffer.writeln('காலம்: $period');
       buffer.writeln();
     }
-    if (items.length > 5) buffer.writeln('...மேலும் ${items.length - 5} சித்தர்கள்');
+    if (items.length > 5) {
+      buffer.writeln('...மேலும் ${items.length - 5} சித்தர்கள்');
+    }
     return buffer.toString();
   }
 }

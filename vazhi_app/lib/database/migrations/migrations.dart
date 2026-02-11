@@ -21,12 +21,7 @@ class MigrationException implements Exception {
 }
 
 /// Status of a migration
-enum MigrationStatus {
-  pending,
-  applied,
-  failed,
-  rolledBack,
-}
+enum MigrationStatus { pending, applied, failed, rolledBack }
 
 /// A single migration record
 class MigrationRecord {
@@ -179,7 +174,10 @@ class MigrationRunner {
         // Check for Dart migration
         final migrated = await _executeDartMigration(db, version);
         if (!migrated) {
-          throw MigrationException('No migration found for version $version', version);
+          throw MigrationException(
+            'No migration found for version $version',
+            version,
+          );
         }
       }
 

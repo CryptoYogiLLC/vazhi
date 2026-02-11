@@ -3,23 +3,22 @@
 /// Represents user feedback on a model response.
 library;
 
-
 enum FeedbackType {
-  positive,   // 👍 - Response was helpful
-  negative,   // 👎 - Response was wrong/unhelpful
+  positive, // 👍 - Response was helpful
+  negative, // 👎 - Response was wrong/unhelpful
   correction, // ✏️ - User provided correct answer
 }
 
 class UserFeedback {
   final String id;
   final String messageId;
-  final String question;        // Original user question
-  final String modelResponse;   // What the model said
+  final String question; // Original user question
+  final String modelResponse; // What the model said
   final FeedbackType type;
-  final String? correction;     // User's correction (if type == correction)
-  final String? pack;           // Which knowledge pack was used
+  final String? correction; // User's correction (if type == correction)
+  final String? pack; // Which knowledge pack was used
   final DateTime timestamp;
-  final bool synced;            // Has been synced to backend
+  final bool synced; // Has been synced to backend
 
   UserFeedback({
     required this.id,

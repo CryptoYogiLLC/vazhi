@@ -4,7 +4,6 @@
 /// Uses encrypted Hive storage to protect user data.
 library;
 
-
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
@@ -89,10 +88,7 @@ class FeedbackService {
       final cipher = HiveAesCipher(encryptionKey);
 
       // Open encrypted box
-      _box = await Hive.openBox(
-        _boxName,
-        encryptionCipher: cipher,
-      );
+      _box = await Hive.openBox(_boxName, encryptionCipher: cipher);
     } catch (e) {
       // Fallback to unencrypted if secure storage fails (e.g., in tests)
       if (kDebugMode) {
@@ -120,7 +116,9 @@ class FeedbackService {
   /// Save feedback to local storage
   Future<void> _save() async {
     if (_box == null) return;
-    final jsonString = jsonEncode(_feedbackList.map((f) => f.toJson()).toList());
+    final jsonString = jsonEncode(
+      _feedbackList.map((f) => f.toJson()).toList(),
+    );
     await _box!.put('feedback_list', jsonString);
   }
 
@@ -134,7 +132,9 @@ class FeedbackService {
     await initialize();
 
     // Check if feedback already exists for this message
-    final existingIndex = _feedbackList.indexWhere((f) => f.messageId == messageId);
+    final existingIndex = _feedbackList.indexWhere(
+      (f) => f.messageId == messageId,
+    );
     if (existingIndex >= 0) {
       _feedbackList.removeAt(existingIndex);
     }
@@ -160,7 +160,9 @@ class FeedbackService {
     await initialize();
 
     // Check if feedback already exists for this message
-    final existingIndex = _feedbackList.indexWhere((f) => f.messageId == messageId);
+    final existingIndex = _feedbackList.indexWhere(
+      (f) => f.messageId == messageId,
+    );
     if (existingIndex >= 0) {
       _feedbackList.removeAt(existingIndex);
     }
@@ -187,7 +189,9 @@ class FeedbackService {
     await initialize();
 
     // Check if feedback already exists for this message
-    final existingIndex = _feedbackList.indexWhere((f) => f.messageId == messageId);
+    final existingIndex = _feedbackList.indexWhere(
+      (f) => f.messageId == messageId,
+    );
     if (existingIndex >= 0) {
       _feedbackList.removeAt(existingIndex);
     }

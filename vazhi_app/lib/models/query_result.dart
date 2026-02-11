@@ -3,7 +3,6 @@
 /// Models for query classification and routing in the hybrid architecture.
 library;
 
-
 /// Type of query handling required
 enum QueryType {
   /// Can be answered entirely from SQLite database (no model needed)

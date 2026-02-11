@@ -3,7 +3,6 @@
 /// Represents a government welfare scheme with eligibility and documents.
 library;
 
-
 class Scheme {
   final String id;
   final String nameTamil;
@@ -96,7 +95,8 @@ class Scheme {
   }
 
   /// Check if has online application
-  bool get hasOnlineApplication => applicationUrl != null && applicationUrl!.isNotEmpty;
+  bool get hasOnlineApplication =>
+      applicationUrl != null && applicationUrl!.isNotEmpty;
 }
 
 /// Eligibility criteria for a scheme

@@ -100,7 +100,9 @@ void main() {
   group('URL Validation - MITM Prevention', () {
     test('blocks redirect to attacker-controlled domain', () {
       // Simulating redirect from HF to attacker site
-      final maliciousRedirect = Uri.parse('https://attacker.com/fake-model.gguf');
+      final maliciousRedirect = Uri.parse(
+        'https://attacker.com/fake-model.gguf',
+      );
       expect(isAllowedUrl(maliciousRedirect), isFalse);
     });
 

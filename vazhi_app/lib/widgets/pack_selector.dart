@@ -3,7 +3,6 @@
 /// Horizontal scrollable list of knowledge packs.
 library;
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme.dart';
@@ -28,9 +27,7 @@ class PackSelector extends ConsumerWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border(
-          bottom: BorderSide(
-            color: Colors.grey.withValues(alpha: 0.2),
-          ),
+          bottom: BorderSide(color: Colors.grey.withValues(alpha: 0.2)),
         ),
       ),
       child: ListView.builder(
@@ -88,10 +85,7 @@ class _PackChip extends StatelessWidget {
         child: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(
-              pack.icon,
-              style: const TextStyle(fontSize: 14),
-            ),
+            Text(pack.icon, style: const TextStyle(fontSize: 14)),
             const SizedBox(width: 6),
             Text(
               pack.nameTamil,
@@ -141,19 +135,21 @@ class PackSelectorSheet extends ConsumerWidget {
           const SizedBox(height: 8),
           Text(
             'Choose a topic to get specialized answers',
-            style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: VazhiTheme.textSecondary,
-                ),
+            style: Theme.of(
+              context,
+            ).textTheme.bodyMedium?.copyWith(color: VazhiTheme.textSecondary),
           ),
           const SizedBox(height: 20),
-          ...packs.map((pack) => _PackTile(
-                pack: pack,
-                isSelected: pack.id == currentPack,
-                onTap: () {
-                  ref.read(currentPackProvider.notifier).state = pack.id;
-                  Navigator.pop(context);
-                },
-              )),
+          ...packs.map(
+            (pack) => _PackTile(
+              pack: pack,
+              isSelected: pack.id == currentPack,
+              onTap: () {
+                ref.read(currentPackProvider.notifier).state = pack.id;
+                Navigator.pop(context);
+              },
+            ),
+          ),
           const SizedBox(height: 8),
         ],
       ),
@@ -203,10 +199,7 @@ class _PackTile extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Center(
-                child: Text(
-                  pack.icon,
-                  style: const TextStyle(fontSize: 22),
-                ),
+                child: Text(pack.icon, style: const TextStyle(fontSize: 22)),
               ),
             ),
             const SizedBox(width: 12),
@@ -247,10 +240,7 @@ class _PackTile extends StatelessWidget {
               ),
             ),
             if (isSelected)
-              Icon(
-                Icons.check_circle,
-                color: VazhiTheme.primaryColor,
-              ),
+              Icon(Icons.check_circle, color: VazhiTheme.primaryColor),
           ],
         ),
       ),

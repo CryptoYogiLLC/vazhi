@@ -3,7 +3,6 @@
 /// Displays cycling example questions to inspire users.
 library;
 
-
 import 'dart:async';
 import 'package:flutter/material.dart';
 import '../config/theme.dart';
@@ -11,10 +10,7 @@ import '../config/theme.dart';
 class RotatingSuggestions extends StatefulWidget {
   final Function(String) onSuggestionTap;
 
-  const RotatingSuggestions({
-    super.key,
-    required this.onSuggestionTap,
-  });
+  const RotatingSuggestions({super.key, required this.onSuggestionTap});
 
   @override
   State<RotatingSuggestions> createState() => _RotatingSuggestionsState();
@@ -115,9 +111,7 @@ class _RotatingSuggestionsState extends State<RotatingSuggestions>
       return Container(
         width: 44,
         height: 44,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-        ),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(8)),
         clipBehavior: Clip.antiAlias,
         child: Image.asset(
           suggestion['imagePath'] as String,
@@ -221,11 +215,10 @@ class QuickSuggestionChips extends StatelessWidget {
           label: Text(text),
           onPressed: () => onTap(text),
           backgroundColor: VazhiTheme.surfaceColor,
-          side: BorderSide(color: VazhiTheme.primaryColor.withValues(alpha: 0.3)),
-          labelStyle: TextStyle(
-            color: VazhiTheme.primaryColor,
-            fontSize: 13,
+          side: BorderSide(
+            color: VazhiTheme.primaryColor.withValues(alpha: 0.3),
           ),
+          labelStyle: TextStyle(color: VazhiTheme.primaryColor, fontSize: 13),
         );
       }).toList(),
     );

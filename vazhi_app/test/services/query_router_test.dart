@@ -157,12 +157,15 @@ void main() {
       expect(result.category, KnowledgeCategory.safety);
     });
 
-    test('classifies "why scholarship important" as hybrid education', () async {
-      final result = await router.classify('why is scholarship important?');
+    test(
+      'classifies "why scholarship important" as hybrid education',
+      () async {
+        final result = await router.classify('why is scholarship important?');
 
-      expect(result.type, QueryType.hybrid);
-      expect(result.category, KnowledgeCategory.education);
-    });
+        expect(result.type, QueryType.hybrid);
+        expect(result.category, KnowledgeCategory.education);
+      },
+    );
 
     test('classifies plain keyword as deterministic', () async {
       final result = await router.classify('rti');

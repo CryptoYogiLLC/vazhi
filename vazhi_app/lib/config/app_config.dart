@@ -3,7 +3,6 @@
 /// Defines app variants, API endpoints, and feature flags.
 library;
 
-
 enum AppVariant { lite, full }
 
 class AppConfig {
@@ -46,7 +45,8 @@ class AppConfig {
   static const String appName = 'VAZHI';
   static const String appNameTamil = 'வழி';
   static const String appVersion = '1.0.0';
-  static const String appTagline = 'Voluntary AI with Zero-cost Helpful Intelligence';
+  static const String appTagline =
+      'Voluntary AI with Zero-cost Helpful Intelligence';
   static const String appTaglineTamil = 'தமிழ் AI உதவியாளர்';
 
   // Support

@@ -97,11 +97,7 @@ void main() {
     });
 
     test('null field handling', () {
-      final result = {
-        'id': 1,
-        'name_tamil': 'தமிழ்',
-        'name_english': null,
-      };
+      final result = {'id': 1, 'name_tamil': 'தமிழ்', 'name_english': null};
 
       expect(result['name_tamil'], 'தமிழ்');
       expect(result['name_english'], isNull);

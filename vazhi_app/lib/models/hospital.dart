@@ -3,7 +3,6 @@
 /// Represents a hospital or health facility.
 library;
 
-
 class Hospital {
   final int id;
   final String? nameTamil;
@@ -145,12 +144,7 @@ class Hospital {
 }
 
 /// Hospital type enum
-enum HospitalType {
-  govt,
-  private,
-  phc,
-  ghq,
-}
+enum HospitalType { govt, private, phc, ghq }
 
 extension HospitalTypeExtension on HospitalType {
   String get value {

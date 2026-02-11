@@ -3,7 +3,6 @@
 /// Handles deterministic retrieval of hospitals and health facilities.
 library;
 
-
 import '../../database/knowledge_database.dart';
 import '../../models/hospital.dart';
 import '../../models/query_result.dart';
@@ -145,9 +144,9 @@ class HealthcareService extends RetrievalService {
     final buffer = StringBuffer();
 
     buffer.writeln('🏥 **${hospital.displayName}**');
-    buffer.writeln('${hospital.nameEnglish}');
+    buffer.writeln(hospital.nameEnglish);
     buffer.writeln();
-    buffer.writeln('${hospital.typeDisplay}');
+    buffer.writeln(hospital.typeDisplay);
     buffer.writeln();
 
     // Contact info

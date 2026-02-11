@@ -3,7 +3,6 @@
 /// Handles deterministic retrieval of emergency contacts and helplines.
 library;
 
-
 import '../../database/knowledge_database.dart';
 import '../../models/emergency_contact.dart';
 import '../../models/query_result.dart';
@@ -231,7 +230,7 @@ class EmergencyService extends RetrievalService {
 
     final icon = _getTypeIcon(contact.type);
     buffer.writeln('$icon **${contact.nameTamil}**');
-    buffer.writeln('${contact.nameEnglish}');
+    buffer.writeln(contact.nameEnglish);
     buffer.writeln();
     buffer.writeln('📞 **${contact.phone}**');
     if (contact.alternatePhone != null) {

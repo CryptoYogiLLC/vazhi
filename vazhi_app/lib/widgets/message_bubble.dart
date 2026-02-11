@@ -3,7 +3,6 @@
 /// Displays a single chat message with appropriate styling.
 library;
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import '../config/theme.dart';
@@ -13,7 +12,7 @@ import 'feedback_buttons.dart';
 
 class MessageBubble extends StatelessWidget {
   final Message message;
-  final String? userQuestion;  // The question this response answers
+  final String? userQuestion; // The question this response answers
   final VoidCallback? onSpeak;
   final VoidCallback? onRetry;
   final FeedbackType? currentFeedback;
@@ -68,18 +67,17 @@ class MessageBubble extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4),
       child: Row(
-        mainAxisAlignment:
-            isUser ? MainAxisAlignment.end : MainAxisAlignment.start,
+        mainAxisAlignment: isUser
+            ? MainAxisAlignment.end
+            : MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          if (!isUser) ...[
-            _buildAvatar(isUser),
-            const SizedBox(width: 8),
-          ],
+          if (!isUser) ...[_buildAvatar(isUser), const SizedBox(width: 8)],
           Flexible(
             child: Column(
-              crossAxisAlignment:
-                  isUser ? CrossAxisAlignment.end : CrossAxisAlignment.start,
+              crossAxisAlignment: isUser
+                  ? CrossAxisAlignment.end
+                  : CrossAxisAlignment.start,
               children: [
                 Container(
                   constraints: BoxConstraints(
@@ -138,7 +136,9 @@ class MessageBubble extends StatelessWidget {
                               vertical: 2,
                             ),
                             decoration: BoxDecoration(
-                              color: VazhiTheme.primaryColor.withValues(alpha: 0.1),
+                              color: VazhiTheme.primaryColor.withValues(
+                                alpha: 0.1,
+                              ),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Text(
@@ -175,10 +175,7 @@ class MessageBubble extends StatelessWidget {
               ],
             ),
           ),
-          if (isUser) ...[
-            const SizedBox(width: 8),
-            _buildAvatar(isUser),
-          ],
+          if (isUser) ...[const SizedBox(width: 8), _buildAvatar(isUser)],
         ],
       ),
     );
@@ -251,8 +248,9 @@ class MessageBubble extends StatelessWidget {
           width: 8,
           height: 8,
           decoration: BoxDecoration(
-            color: VazhiTheme.textLight
-                .withValues(alpha: 0.3 + (0.7 * (1 - (value - value.floor())))),
+            color: VazhiTheme.textLight.withValues(
+              alpha: 0.3 + (0.7 * (1 - (value - value.floor()))),
+            ),
             shape: BoxShape.circle,
           ),
         );

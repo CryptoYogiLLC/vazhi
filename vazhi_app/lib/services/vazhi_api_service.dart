@@ -3,7 +3,6 @@
 /// Handles communication with the HuggingFace Spaces backend.
 library;
 
-
 import 'package:dio/dio.dart';
 import '../config/app_config.dart';
 
@@ -11,14 +10,14 @@ class VazhiApiService {
   late final Dio _dio;
 
   VazhiApiService() {
-    _dio = Dio(BaseOptions(
-      baseUrl: AppConfig.huggingFaceSpaceUrl,
-      connectTimeout: AppConfig.connectionTimeout,
-      receiveTimeout: AppConfig.apiTimeout,
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    ));
+    _dio = Dio(
+      BaseOptions(
+        baseUrl: AppConfig.huggingFaceSpaceUrl,
+        connectTimeout: AppConfig.connectionTimeout,
+        receiveTimeout: AppConfig.apiTimeout,
+        headers: {'Content-Type': 'application/json'},
+      ),
+    );
   }
 
   /// Send a chat message and get a response
@@ -71,9 +70,7 @@ class VazhiApiService {
           'இணைய இணைப்பு இல்லை. நெட்வொர்க் சரிபார்க்கவும்.',
         );
       } else {
-        throw VazhiApiException(
-          'பிணைய பிழை: ${e.message}',
-        );
+        throw VazhiApiException('பிணைய பிழை: ${e.message}');
       }
     } catch (e) {
       if (e is VazhiApiException) rethrow;
@@ -86,9 +83,7 @@ class VazhiApiService {
     try {
       final response = await _dio.get(
         '',
-        options: Options(
-          receiveTimeout: const Duration(seconds: 5),
-        ),
+        options: Options(receiveTimeout: const Duration(seconds: 5)),
       );
       return response.statusCode == 200;
     } catch (e) {

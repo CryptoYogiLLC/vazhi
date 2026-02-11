@@ -3,7 +3,6 @@
 /// Represents an emergency service contact number.
 library;
 
-
 class EmergencyContact {
   final int id;
   final String nameTamil;
@@ -83,15 +82,7 @@ class EmergencyContact {
 }
 
 /// Common emergency type enum
-enum EmergencyType {
-  police,
-  fire,
-  medical,
-  disaster,
-  women,
-  child,
-  other,
-}
+enum EmergencyType { police, fire, medical, disaster, women, child, other }
 
 extension EmergencyTypeExtension on EmergencyType {
   String get value {

@@ -414,7 +414,9 @@ class KnowledgeDatabase {
     if (oldVersion < 3) {
       // V2: Load all new data packs added for lite release
       // V3: Reload data with fixed SQL parser (handles semicolons in quotes)
-      _log('Upgrading from v$oldVersion to v$newVersion - reloading data packs');
+      _log(
+        'Upgrading from v$oldVersion to v$newVersion - reloading data packs',
+      );
       await _loadInitialData(db);
     }
   }
@@ -773,9 +775,7 @@ class KnowledgeDatabase {
   }
 
   /// Get Siddhar by name
-  static Future<List<Map<String, dynamic>>> searchSiddhars(
-    String query,
-  ) async {
+  static Future<List<Map<String, dynamic>>> searchSiddhars(String query) async {
     final sanitized = _sanitizeQuery(query, maxLength: 200);
     if (sanitized.isEmpty) return [];
 
@@ -858,13 +858,7 @@ class KnowledgeDatabase {
         description_tamil LIKE ? OR red_flags_tamil LIKE ? OR
         example_messages LIKE ?
       ''',
-      whereArgs: [
-        searchTerm,
-        searchTerm,
-        searchTerm,
-        searchTerm,
-        searchTerm,
-      ],
+      whereArgs: [searchTerm, searchTerm, searchTerm, searchTerm, searchTerm],
       limit: 20,
     );
   }
@@ -933,7 +927,8 @@ class KnowledgeDatabase {
     final searchTerm = '%$sanitized%';
     return db.query(
       'scholarships',
-      where: 'name_tamil LIKE ? OR name_english LIKE ? OR description_tamil LIKE ?',
+      where:
+          'name_tamil LIKE ? OR name_english LIKE ? OR description_tamil LIKE ?',
       whereArgs: [searchTerm, searchTerm, searchTerm],
       limit: 20,
     );
@@ -944,9 +939,7 @@ class KnowledgeDatabase {
   // ============================================================================
 
   /// Get all exams
-  static Future<List<Map<String, dynamic>>> getAllExams({
-    String? level,
-  }) async {
+  static Future<List<Map<String, dynamic>>> getAllExams({String? level}) async {
     final db = await database;
     if (level != null) {
       return db.query('exams', where: 'level = ?', whereArgs: [level]);

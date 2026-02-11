@@ -3,7 +3,6 @@
 /// Handles deterministic retrieval of government schemes, eligibility, and documents.
 library;
 
-
 import '../../database/knowledge_database.dart';
 import '../../models/scheme.dart';
 import '../../models/query_result.dart';
@@ -215,9 +214,9 @@ class SchemeService extends RetrievalService {
     final buffer = StringBuffer();
 
     buffer.writeln('🏛️ **${scheme.nameTamil}**');
-    buffer.writeln('${scheme.nameEnglish}');
+    buffer.writeln(scheme.nameEnglish);
     buffer.writeln();
-    buffer.writeln('${scheme.descriptionTamil}');
+    buffer.writeln(scheme.descriptionTamil);
     buffer.writeln();
 
     // Level badge

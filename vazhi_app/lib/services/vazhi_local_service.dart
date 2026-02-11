@@ -3,7 +3,6 @@
 /// Handles local GGUF model inference using llamadart.
 library;
 
-
 import 'dart:async';
 import 'dart:io';
 import 'package:llamadart/llamadart.dart';
@@ -359,4 +358,3 @@ class InferenceMetrics {
 
 /// Callback for streaming responses with metrics
 typedef StreamCallback = void Function(String token, InferenceMetrics metrics);
-

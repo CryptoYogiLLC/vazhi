@@ -4,7 +4,6 @@
 /// Routes queries to appropriate services based on classification.
 library;
 
-
 import '../../models/query_result.dart';
 import '../../database/knowledge_database.dart';
 import '../query_router.dart';

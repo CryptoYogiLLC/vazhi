@@ -111,7 +111,8 @@ void main() {
       final container = ProviderContainer();
       addTearDown(container.dispose);
 
-      container.read(inferenceModeProvider.notifier).state = InferenceMode.cloud;
+      container.read(inferenceModeProvider.notifier).state =
+          InferenceMode.cloud;
       expect(container.read(inferenceModeProvider), InferenceMode.cloud);
     });
   });

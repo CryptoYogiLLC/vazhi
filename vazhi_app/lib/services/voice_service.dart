@@ -4,6 +4,7 @@
 library;
 
 import 'package:flutter/foundation.dart';
+import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import '../config/app_config.dart';
@@ -62,7 +63,7 @@ class VoiceInputService {
     _isListening = true;
 
     await _speech.listen(
-      onResult: (result) {
+      onResult: (SpeechRecognitionResult result) {
         onResult(result.recognizedWords, result.finalResult);
         if (result.finalResult) {
           _isListening = false;
@@ -70,9 +71,11 @@ class VoiceInputService {
         }
       },
       localeId: AppConfig.tamilLocale,
-      listenMode: ListenMode.confirmation,
-      cancelOnError: true,
-      partialResults: true,
+      listenOptions: SpeechListenOptions(
+        listenMode: ListenMode.confirmation,
+        cancelOnError: true,
+        partialResults: true,
+      ),
     );
   }
 

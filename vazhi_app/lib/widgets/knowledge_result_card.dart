@@ -4,7 +4,6 @@
 /// Shows formatted content with actions and optional AI enhancement prompt.
 library;
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
@@ -110,7 +109,10 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
   }
 
   Widget _buildContent(
-      BuildContext context, String formattedResponse, String Function(String, String) t) {
+    BuildContext context,
+    String formattedResponse,
+    String Function(String, String) t,
+  ) {
     final color = _getCategoryColor(widget.response.classification.category);
     final isCollapsed = _needsExpansion && !_isExpanded;
 
@@ -137,7 +139,8 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
             Container(
               constraints: isCollapsed
                   ? BoxConstraints(
-                      maxHeight: KnowledgeResultCard._collapsedMaxHeight)
+                      maxHeight: KnowledgeResultCard._collapsedMaxHeight,
+                    )
                   : const BoxConstraints(),
               clipBehavior: isCollapsed ? Clip.hardEdge : Clip.none,
               decoration: const BoxDecoration(),
@@ -162,10 +165,7 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
                     gradient: LinearGradient(
                       begin: Alignment.topCenter,
                       end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0x00FFFFFF),
-                        Color(0xFFFFFFFF),
-                      ],
+                      colors: [Color(0x00FFFFFF), Color(0xFFFFFFFF)],
                     ),
                   ),
                 ),
@@ -208,7 +208,11 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
     );
   }
 
-  Widget _buildHeader(BuildContext context, KnowledgeCategory category, String Function(String, String) t) {
+  Widget _buildHeader(
+    BuildContext context,
+    KnowledgeCategory category,
+    String Function(String, String) t,
+  ) {
     final icon = _getCategoryIcon(category);
     final name = t(_getCategoryNameEnglish(category), category.nameTamil);
     final color = _getCategoryColor(category);
@@ -274,7 +278,11 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
     );
   }
 
-  Widget _buildActions(BuildContext context, String content, String Function(String, String) t) {
+  Widget _buildActions(
+    BuildContext context,
+    String content,
+    String Function(String, String) t,
+  ) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       decoration: BoxDecoration(
@@ -328,7 +336,10 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
     );
   }
 
-  Widget _buildAiPrompt(BuildContext context, String Function(String, String) t) {
+  Widget _buildAiPrompt(
+    BuildContext context,
+    String Function(String, String) t,
+  ) {
     return Container(
       margin: const EdgeInsets.fromLTRB(16, 0, 16, 16),
       padding: const EdgeInsets.all(12),
@@ -350,7 +361,10 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
     );
   }
 
-  Widget _buildDownloadPrompt(BuildContext context, String Function(String, String) t) {
+  Widget _buildDownloadPrompt(
+    BuildContext context,
+    String Function(String, String) t,
+  ) {
     return Row(
       children: [
         Container(
@@ -368,7 +382,10 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
             children: [
               Text(
                 t('Want deeper explanation?', 'ஆழமான விளக்கம் வேண்டுமா?'),
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                ),
               ),
               Text(
                 t('Download AI Brain', 'AI Brain பதிவிறக்கம் செய்யுங்கள்'),
@@ -392,7 +409,10 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
     );
   }
 
-  Widget _buildAskMorePrompt(BuildContext context, String Function(String, String) t) {
+  Widget _buildAskMorePrompt(
+    BuildContext context,
+    String Function(String, String) t,
+  ) {
     return Row(
       children: [
         Container(

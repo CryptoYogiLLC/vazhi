@@ -71,6 +71,14 @@ repos:
         files: ^vazhi_app/.*\.dart$
         pass_filenames: false
 
+      # Flutter tests (catches compilation errors + logic regressions)
+      - id: flutter-test
+        name: Flutter Tests
+        entry: sh -c 'cd vazhi_app && flutter test'
+        language: system
+        files: ^vazhi_app/(lib|test)/.*\.dart$
+        pass_filenames: false
+
       # Check for hardcoded API keys/secrets in Dart files
       - id: check-dart-secrets
         name: Check for hardcoded secrets in Dart

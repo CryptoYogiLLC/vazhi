@@ -4,7 +4,6 @@
 /// Each knowledge pack implements this interface for consistent API.
 library;
 
-
 import '../../models/query_result.dart';
 
 /// Result of a retrieval operation

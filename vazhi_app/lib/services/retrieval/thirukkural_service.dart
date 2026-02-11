@@ -3,7 +3,6 @@
 /// Handles deterministic retrieval of Thirukkural verses, athikarams, and search.
 library;
 
-
 import '../../database/knowledge_database.dart';
 import '../../models/thirukkural.dart';
 import '../../models/query_result.dart';
@@ -162,7 +161,7 @@ class ThirukkuralService extends RetrievalService {
       return RetrievalResult.list(
         kurals,
         category: category,
-        displayTitle: '$paal',
+        displayTitle: paal,
         formattedResponse: _formatSearchResponse(kurals, paal),
         totalCount: kurals.length,
       );
@@ -183,8 +182,8 @@ class ThirukkuralService extends RetrievalService {
 
     buffer.writeln('📜 **குறள் ${kural.kuralNumber}**');
     buffer.writeln();
-    buffer.writeln('${kural.verseLine1}');
-    buffer.writeln('${kural.verseLine2}');
+    buffer.writeln(kural.verseLine1);
+    buffer.writeln(kural.verseLine2);
     buffer.writeln();
     buffer.writeln('**பொருள்:** ${kural.meaningTamil}');
     buffer.writeln();
@@ -214,8 +213,8 @@ class ThirukkuralService extends RetrievalService {
 
     for (final kural in kurals) {
       buffer.writeln('**குறள் ${kural.kuralNumber}:**');
-      buffer.writeln('${kural.verseLine1}');
-      buffer.writeln('${kural.verseLine2}');
+      buffer.writeln(kural.verseLine1);
+      buffer.writeln(kural.verseLine2);
       buffer.writeln();
     }
 
@@ -252,8 +251,8 @@ class ThirukkuralService extends RetrievalService {
 
     for (final kural in kurals.take(5)) {
       buffer.writeln('**குறள் ${kural.kuralNumber}** (${kural.athikaram}):');
-      buffer.writeln('${kural.verseLine1}');
-      buffer.writeln('${kural.verseLine2}');
+      buffer.writeln(kural.verseLine1);
+      buffer.writeln(kural.verseLine2);
       buffer.writeln();
     }
 

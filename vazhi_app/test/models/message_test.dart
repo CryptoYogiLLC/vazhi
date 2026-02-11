@@ -106,8 +106,14 @@ void main() {
       final message = Message.user('Test');
       final after = DateTime.now();
 
-      expect(message.timestamp.isAfter(before.subtract(const Duration(seconds: 1))), isTrue);
-      expect(message.timestamp.isBefore(after.add(const Duration(seconds: 1))), isTrue);
+      expect(
+        message.timestamp.isAfter(before.subtract(const Duration(seconds: 1))),
+        isTrue,
+      );
+      expect(
+        message.timestamp.isBefore(after.add(const Duration(seconds: 1))),
+        isTrue,
+      );
     });
   });
 

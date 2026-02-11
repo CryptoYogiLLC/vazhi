@@ -3,7 +3,6 @@
 /// Text input with send and microphone buttons.
 library;
 
-
 import 'package:flutter/material.dart';
 import '../config/theme.dart';
 
@@ -42,10 +41,7 @@ class ChatInput extends StatelessWidget {
           children: [
             // Microphone button
             if (voiceAvailable)
-              _MicButton(
-                isListening: isListening,
-                onPressed: onMicPressed,
-              ),
+              _MicButton(isListening: isListening, onPressed: onMicPressed),
 
             const SizedBox(width: 8),
 
@@ -95,10 +91,7 @@ class _MicButton extends StatelessWidget {
   final bool isListening;
   final VoidCallback onPressed;
 
-  const _MicButton({
-    required this.isListening,
-    required this.onPressed,
-  });
+  const _MicButton({required this.isListening, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -106,9 +99,7 @@ class _MicButton extends StatelessWidget {
       button: true,
       enabled: true,
       onTap: onPressed,
-      label: isListening
-          ? 'Stop voice input'
-          : 'Start voice input',
+      label: isListening ? 'Stop voice input' : 'Start voice input',
       hint: isListening
           ? 'Double tap to stop listening'
           : 'Double tap to start voice input',
@@ -132,8 +123,7 @@ class _MicButton extends StatelessWidget {
                 color: isListening ? Colors.white : VazhiTheme.primaryColor,
                 size: 24,
               ),
-              if (isListening)
-                _PulsingCircle(),
+              if (isListening) _PulsingCircle(),
             ],
           ),
         ),
@@ -177,7 +167,9 @@ class _PulsingCircleState extends State<_PulsingCircle>
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
-              color: VazhiTheme.primaryColor.withValues(alpha: 1 - _controller.value),
+              color: VazhiTheme.primaryColor.withValues(
+                alpha: 1 - _controller.value,
+              ),
               width: 2,
             ),
           ),
@@ -209,11 +201,7 @@ class _SendButton extends StatelessWidget {
             gradient: VazhiTheme.primaryGradient,
             borderRadius: BorderRadius.circular(24),
           ),
-          child: const Icon(
-            Icons.send,
-            color: Colors.white,
-            size: 22,
-          ),
+          child: const Icon(Icons.send, color: Colors.white, size: 22),
         ),
       ),
     );

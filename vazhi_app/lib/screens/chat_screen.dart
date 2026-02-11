@@ -4,7 +4,6 @@
 /// Now supports hybrid retrieval architecture with knowledge base.
 library;
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme.dart';
@@ -32,7 +31,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   bool _showCategoryView = false;
-  bool _useHybridChat = true; // Feature flag for hybrid chat
+  final bool _useHybridChat = true; // Feature flag for hybrid chat
   late List<String> _shuffledCategoryIds;
 
   // Category card display info - using local assets for offline support
@@ -174,11 +173,11 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     final voiceInputState = ref.watch(voiceInputStateProvider);
 
     if (_useHybridChat) {
-      ref.listen(hybridChatProvider, (_, __) {
+      ref.listen(hybridChatProvider, (_, _) {
         Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
       });
     } else {
-      ref.listen(chatProvider, (_, __) {
+      ref.listen(chatProvider, (_, _) {
         Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
       });
     }
@@ -1019,7 +1018,10 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                colors: [color.withValues(alpha: 0.9), color.withValues(alpha: 0.75)],
+                colors: [
+                  color.withValues(alpha: 0.9),
+                  color.withValues(alpha: 0.75),
+                ],
               ),
             ),
           ),

@@ -3,7 +3,6 @@
 /// Shows 👍/👎/✏️ feedback buttons for AI responses.
 library;
 
-
 import 'package:flutter/material.dart';
 import '../config/theme.dart';
 import '../models/feedback.dart';
@@ -93,9 +92,7 @@ class _FeedbackButton extends StatelessWidget {
       selected: isActive,
       onTap: onTap,
       label: tooltip,
-      hint: isActive
-          ? 'Already selected'
-          : 'Double tap to select',
+      hint: isActive ? 'Already selected' : 'Double tap to select',
       child: Tooltip(
         message: tooltip,
         child: InkWell(
@@ -104,7 +101,9 @@ class _FeedbackButton extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
-              color: isActive ? activeColor.withValues(alpha: 0.1) : Colors.transparent,
+              color: isActive
+                  ? activeColor.withValues(alpha: 0.1)
+                  : Colors.transparent,
               borderRadius: BorderRadius.circular(16),
             ),
             child: Icon(
@@ -175,18 +174,11 @@ class _CorrectionDialogState extends State<CorrectionDialog> {
             // Title
             Row(
               children: [
-                Icon(
-                  Icons.edit,
-                  color: VazhiTheme.primaryColor,
-                  size: 24,
-                ),
+                Icon(Icons.edit, color: VazhiTheme.primaryColor, size: 24),
                 const SizedBox(width: 8),
                 const Text(
                   'பதிலைத் திருத்துங்கள்',
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
               ],
             ),
@@ -204,16 +196,10 @@ class _CorrectionDialogState extends State<CorrectionDialog> {
                 children: [
                   const Text(
                     'கேள்வி:',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey,
-                    ),
+                    style: TextStyle(fontSize: 12, color: Colors.grey),
                   ),
                   const SizedBox(height: 4),
-                  Text(
-                    widget.question,
-                    style: const TextStyle(fontSize: 14),
-                  ),
+                  Text(widget.question, style: const TextStyle(fontSize: 14)),
                 ],
               ),
             ),
@@ -222,10 +208,7 @@ class _CorrectionDialogState extends State<CorrectionDialog> {
             // Correction input
             const Text(
               'சரியான பதில்:',
-              style: TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-              ),
+              style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),
             ),
             const SizedBox(height: 8),
             TextField(

@@ -4,7 +4,6 @@
 /// based on pattern matching and query classification.
 library;
 
-
 import '../database/knowledge_database.dart';
 import '../models/query_result.dart';
 
@@ -111,7 +110,9 @@ class QueryRouter {
     return _compiledPatterns.putIfAbsent(pattern, () {
       // Validate pattern length
       if (pattern.length > _maxPatternLength) {
-        throw InvalidPatternException('Pattern too long: ${pattern.length} chars');
+        throw InvalidPatternException(
+          'Pattern too long: ${pattern.length} chars',
+        );
       }
 
       // Check for ReDoS patterns (nested quantifiers, catastrophic backtracking)
@@ -474,9 +475,22 @@ class QueryRouter {
   /// Check if this is an education query (scholarships, exams)
   bool _isEducationQuery(String query) {
     final patterns = [
-      'scholarship', 'உதவித்தொகை', 'exam', 'தேர்வு', 'neet', 'jee',
-      'tnpsc', 'upsc', 'competitive', 'போட்டி', 'entrance',
-      'நுழைவு', 'bank exam', 'ssc', 'gate', 'cat',
+      'scholarship',
+      'உதவித்தொகை',
+      'exam',
+      'தேர்வு',
+      'neet',
+      'jee',
+      'tnpsc',
+      'upsc',
+      'competitive',
+      'போட்டி',
+      'entrance',
+      'நுழைவு',
+      'bank exam',
+      'ssc',
+      'gate',
+      'cat',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -484,9 +498,21 @@ class QueryRouter {
   /// Check if this is a legal query
   bool _isLegalQuery(String query) {
     final patterns = [
-      'legal', 'சட்ட', 'right', 'உரிமை', 'rti', 'fir',
-      'consumer', 'நுகர்வோர்', 'template', 'மாதிரி', 'complaint',
-      'புகார்', 'law', 'fundamental', 'அடிப்படை உரிமை',
+      'legal',
+      'சட்ட',
+      'right',
+      'உரிமை',
+      'rti',
+      'fir',
+      'consumer',
+      'நுகர்வோர்',
+      'template',
+      'மாதிரி',
+      'complaint',
+      'புகார்',
+      'law',
+      'fundamental',
+      'அடிப்படை உரிமை',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -494,9 +520,17 @@ class QueryRouter {
   /// Check if this is a siddha medicine query
   bool _isSiddhaMedicineQuery(String query) {
     final patterns = [
-      'siddha', 'சித்த மருத்துவ', 'remedy', 'மருந்து',
-      'herbal', 'மூலிகை', 'ayurvedic', 'home remedy',
-      'இயற்கை மருத்துவம்', 'nattu maruthuvam', 'நாட்டு மருத்துவம்',
+      'siddha',
+      'சித்த மருத்துவ',
+      'remedy',
+      'மருந்து',
+      'herbal',
+      'மூலிகை',
+      'ayurvedic',
+      'home remedy',
+      'இயற்கை மருத்துவம்',
+      'nattu maruthuvam',
+      'நாட்டு மருத்துவம்',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -504,9 +538,19 @@ class QueryRouter {
   /// Check if this is a festival query
   bool _isFestivalQuery(String query) {
     final patterns = [
-      'festival', 'திருவிழா', 'பண்டிகை', 'pongal', 'பொங்கல்',
-      'deepavali', 'தீபாவளி', 'நவராத்திரி', 'navaratri',
-      'vinayagar', 'விநாயகர்', 'celebration', 'கொண்டாட்டம்',
+      'festival',
+      'திருவிழா',
+      'பண்டிகை',
+      'pongal',
+      'பொங்கல்',
+      'deepavali',
+      'தீபாவளி',
+      'நவராத்திரி',
+      'navaratri',
+      'vinayagar',
+      'விநாயகர்',
+      'celebration',
+      'கொண்டாட்டம்',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -514,9 +558,18 @@ class QueryRouter {
   /// Check if this is a siddhar query
   bool _isSiddharQuery(String query) {
     final patterns = [
-      'siddhar', 'சித்தர்', 'agathiyar', 'அகத்தியர்',
-      'thirumoolar', 'திருமூலர்', 'bogar', 'போகர்',
-      'korakkar', 'கொரக்கர்', '18 siddhar', 'பதினெண் சித்தர்',
+      'siddhar',
+      'சித்தர்',
+      'agathiyar',
+      'அகத்தியர்',
+      'thirumoolar',
+      'திருமூலர்',
+      'bogar',
+      'போகர்',
+      'korakkar',
+      'கொரக்கர்',
+      '18 siddhar',
+      'பதினெண் சித்தர்',
     ];
     return patterns.any((p) => query.contains(p));
   }

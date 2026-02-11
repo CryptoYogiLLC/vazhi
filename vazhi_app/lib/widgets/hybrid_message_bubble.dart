@@ -4,7 +4,6 @@
 /// handling both knowledge-based and AI responses.
 library;
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme.dart';
@@ -83,7 +82,10 @@ class HybridMessageBubble extends ConsumerWidget {
     );
   }
 
-  Widget _buildLoadingMessage(BuildContext context, String Function(String, String) t) {
+  Widget _buildLoadingMessage(
+    BuildContext context,
+    String Function(String, String) t,
+  ) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(
@@ -179,7 +181,10 @@ class HybridMessageBubble extends ConsumerWidget {
     );
   }
 
-  Widget _buildAiResponse(BuildContext context, String Function(String, String) t) {
+  Widget _buildAiResponse(
+    BuildContext context,
+    String Function(String, String) t,
+  ) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(

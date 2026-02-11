@@ -4,7 +4,6 @@
 /// falls back to AI when needed.
 library;
 
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/message.dart';
 import '../models/query_result.dart';

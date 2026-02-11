@@ -280,8 +280,14 @@ void main() {
       );
       final after = DateTime.now();
 
-      expect(feedback.timestamp.isAfter(before.subtract(const Duration(seconds: 1))), isTrue);
-      expect(feedback.timestamp.isBefore(after.add(const Duration(seconds: 1))), isTrue);
+      expect(
+        feedback.timestamp.isAfter(before.subtract(const Duration(seconds: 1))),
+        isTrue,
+      );
+      expect(
+        feedback.timestamp.isBefore(after.add(const Duration(seconds: 1))),
+        isTrue,
+      );
     });
   });
 }

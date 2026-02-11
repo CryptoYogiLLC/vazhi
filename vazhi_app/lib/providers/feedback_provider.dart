@@ -3,7 +3,6 @@
 /// Manages user feedback state and service for Riverpod.
 library;
 
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/feedback.dart';
 import '../services/feedback_service.dart';
@@ -60,10 +59,7 @@ class FeedbackNotifier extends StateNotifier<FeedbackState> {
       feedbackMap[feedback.messageId] = feedback.type;
     }
 
-    state = state.copyWith(
-      messageFeedback: feedbackMap,
-      isLoading: false,
-    );
+    state = state.copyWith(messageFeedback: feedbackMap, isLoading: false);
   }
 
   /// Add positive feedback for a message
@@ -142,8 +138,9 @@ class FeedbackNotifier extends StateNotifier<FeedbackState> {
 }
 
 /// Provider for feedback state
-final feedbackProvider =
-    StateNotifierProvider<FeedbackNotifier, FeedbackState>((ref) {
-  final service = ref.watch(feedbackServiceProvider);
-  return FeedbackNotifier(service);
-});
+final feedbackProvider = StateNotifierProvider<FeedbackNotifier, FeedbackState>(
+  (ref) {
+    final service = ref.watch(feedbackServiceProvider);
+    return FeedbackNotifier(service);
+  },
+);

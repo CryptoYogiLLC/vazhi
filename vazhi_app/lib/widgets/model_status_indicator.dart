@@ -3,7 +3,6 @@
 /// Shows the current status of the AI model (download progress, ready state).
 library;
 
-
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme.dart';
