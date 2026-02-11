@@ -1,6 +1,8 @@
 /// Emergency Contact Model
 ///
 /// Represents an emergency service contact number.
+library;
+
 
 class EmergencyContact {
   final int id;

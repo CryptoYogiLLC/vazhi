@@ -2,6 +2,8 @@
 ///
 /// SQLite database manager for deterministic data retrieval.
 /// Handles initialization, migrations, and provides access to knowledge data.
+library;
+
 
 import 'dart:io';
 import 'package:flutter/foundation.dart';

@@ -1,6 +1,8 @@
 /// Healthcare Service
 ///
 /// Handles deterministic retrieval of hospitals and health facilities.
+library;
+
 
 import '../../database/knowledge_database.dart';
 import '../../models/hospital.dart';

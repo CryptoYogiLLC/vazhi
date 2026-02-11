@@ -1,6 +1,8 @@
 /// Voice Service
 ///
 /// Handles speech-to-text and text-to-speech functionality.
+library;
+
 
 import 'package:flutter/foundation.dart';
 import 'package:speech_to_text/speech_to_text.dart';

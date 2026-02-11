@@ -2,6 +2,8 @@
 ///
 /// Clean, simple, elegant chat interface for VAZHI.
 /// Now supports hybrid retrieval architecture with knowledge base.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -535,7 +537,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   'A free Tamil AI assistant for Tamilians worldwide. Ask questions about government schemes, legal rights, health, education, culture & identify scams - all in Tamil or Tanglish.',
                   style: TextStyle(
                     fontSize: 13,
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.white.withValues(alpha: 0.9),
                     height: 1.4,
                   ),
                 ),
@@ -544,7 +546,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   'தமிழர்களுக்கான இலவச AI வழி தோழன்',
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.white.withOpacity(0.7),
+                    color: Colors.white.withValues(alpha: 0.7),
                     fontStyle: FontStyle.italic,
                   ),
                 ),
@@ -625,7 +627,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
           borderRadius: BorderRadius.circular(14),
           boxShadow: [
             BoxShadow(
-              color: color.withOpacity(0.3),
+              color: color.withValues(alpha: 0.3),
               blurRadius: 8,
               offset: const Offset(0, 4),
             ),
@@ -637,7 +639,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
-                  colors: [color, color.withOpacity(0.85)],
+                  colors: [color, color.withValues(alpha: 0.85)],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
                 ),
@@ -654,9 +656,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                       colors: [
-                        Colors.white.withOpacity(0.7),
-                        Colors.white.withOpacity(0.45),
-                        Colors.white.withOpacity(0.15),
+                        Colors.white.withValues(alpha: 0.7),
+                        Colors.white.withValues(alpha: 0.45),
+                        Colors.white.withValues(alpha: 0.15),
                         Colors.transparent,
                       ],
                       stops: const [0.0, 0.35, 0.65, 0.95],
@@ -703,7 +705,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                     subtitle,
                     style: TextStyle(
                       fontSize: 11,
-                      color: Colors.white.withOpacity(0.8),
+                      color: Colors.white.withValues(alpha: 0.8),
                     ),
                   ),
                   const SizedBox(height: 2),
@@ -711,7 +713,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                     description,
                     style: TextStyle(
                       fontSize: 10,
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withValues(alpha: 0.7),
                     ),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
@@ -995,7 +997,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.3),
+            color: color.withValues(alpha: 0.3),
             blurRadius: 8,
             offset: const Offset(0, 4),
           ),
@@ -1017,7 +1019,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
               gradient: LinearGradient(
                 begin: Alignment.centerLeft,
                 end: Alignment.centerRight,
-                colors: [color.withOpacity(0.9), color.withOpacity(0.75)],
+                colors: [color.withValues(alpha: 0.9), color.withValues(alpha: 0.75)],
               ),
             ),
           ),
@@ -1047,7 +1049,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                   subtitle,
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.white.withValues(alpha: 0.9),
                   ),
                 ),
               ],
@@ -1118,12 +1120,12 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(12),
                           border: Border.all(
-                            color: color.withOpacity(0.3),
+                            color: color.withValues(alpha: 0.3),
                             width: 1.5,
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: color.withOpacity(0.1),
+                              color: color.withValues(alpha: 0.1),
                               blurRadius: 8,
                               offset: const Offset(0, 2),
                             ),

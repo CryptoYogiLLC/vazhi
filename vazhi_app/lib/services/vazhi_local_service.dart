@@ -1,6 +1,8 @@
 /// VAZHI Local Inference Service
 ///
 /// Handles local GGUF model inference using llamadart.
+library;
+
 
 import 'dart:async';
 import 'dart:io';

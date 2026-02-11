@@ -1,6 +1,8 @@
 /// Feedback Service
 ///
 /// Handles storing user feedback locally and syncing to backend.
+library;
+
 
 import 'dart:convert';
 import 'package:hive/hive.dart';

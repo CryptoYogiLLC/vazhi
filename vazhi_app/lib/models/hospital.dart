@@ -1,6 +1,8 @@
 /// Hospital Model
 ///
 /// Represents a hospital or health facility.
+library;
+
 
 class Hospital {
   final int id;

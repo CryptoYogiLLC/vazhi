@@ -1,6 +1,8 @@
 /// Chat Input Widget
 ///
 /// Text input with send and microphone buttons.
+library;
+
 
 import 'package:flutter/material.dart';
 import '../config/theme.dart';
@@ -29,7 +31,7 @@ class ChatInput extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),
@@ -109,7 +111,7 @@ class _MicButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: isListening
               ? VazhiTheme.primaryColor
-              : VazhiTheme.primaryColor.withOpacity(0.1),
+              : VazhiTheme.primaryColor.withValues(alpha: 0.1),
           borderRadius: BorderRadius.circular(24),
         ),
         child: Stack(
@@ -164,7 +166,7 @@ class _PulsingCircleState extends State<_PulsingCircle>
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
-              color: VazhiTheme.primaryColor.withOpacity(1 - _controller.value),
+              color: VazhiTheme.primaryColor.withValues(alpha: 1 - _controller.value),
               width: 2,
             ),
           ),

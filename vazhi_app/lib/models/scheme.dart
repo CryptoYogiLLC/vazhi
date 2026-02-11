@@ -1,6 +1,8 @@
 /// Scheme Model
 ///
 /// Represents a government welfare scheme with eligibility and documents.
+library;
+
 
 class Scheme {
   final String id;

@@ -1,6 +1,8 @@
 /// VAZHI - Tamil AI Assistant
 ///
 /// Main entry point for the application.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

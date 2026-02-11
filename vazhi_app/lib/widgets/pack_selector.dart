@@ -1,6 +1,8 @@
 /// Pack Selector Widget
 ///
 /// Horizontal scrollable list of knowledge packs.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -27,7 +29,7 @@ class PackSelector extends ConsumerWidget {
         color: Colors.white,
         border: Border(
           bottom: BorderSide(
-            color: Colors.grey.withOpacity(0.2),
+            color: Colors.grey.withValues(alpha: 0.2),
           ),
         ),
       ),
@@ -74,12 +76,12 @@ class _PackChip extends StatelessWidget {
         decoration: BoxDecoration(
           color: isSelected
               ? VazhiTheme.primaryColor
-              : VazhiTheme.primaryColor.withOpacity(0.08),
+              : VazhiTheme.primaryColor.withValues(alpha: 0.08),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
             color: isSelected
                 ? VazhiTheme.primaryColor
-                : VazhiTheme.primaryColor.withOpacity(0.3),
+                : VazhiTheme.primaryColor.withValues(alpha: 0.3),
             width: 1,
           ),
         ),
@@ -180,13 +182,13 @@ class _PackTile extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 8),
         decoration: BoxDecoration(
           color: isSelected
-              ? VazhiTheme.primaryColor.withOpacity(0.1)
+              ? VazhiTheme.primaryColor.withValues(alpha: 0.1)
               : Colors.transparent,
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: isSelected
                 ? VazhiTheme.primaryColor
-                : Colors.grey.withOpacity(0.2),
+                : Colors.grey.withValues(alpha: 0.2),
           ),
         ),
         child: Row(
@@ -197,7 +199,7 @@ class _PackTile extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isSelected
                     ? VazhiTheme.primaryColor
-                    : VazhiTheme.primaryColor.withOpacity(0.1),
+                    : VazhiTheme.primaryColor.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(12),
               ),
               child: Center(

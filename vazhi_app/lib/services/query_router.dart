@@ -2,6 +2,8 @@
 ///
 /// Routes user queries to deterministic (SQLite) or AI (LLM) paths
 /// based on pattern matching and query classification.
+library;
+
 
 import '../database/knowledge_database.dart';
 import '../models/query_result.dart';

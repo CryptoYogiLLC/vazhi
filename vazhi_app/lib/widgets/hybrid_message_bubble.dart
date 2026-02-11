@@ -2,6 +2,8 @@
 ///
 /// Displays messages from the hybrid chat system,
 /// handling both knowledge-based and AI responses.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

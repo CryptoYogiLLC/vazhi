@@ -2,6 +2,8 @@
 ///
 /// Abstract base class for deterministic data retrieval services.
 /// Each knowledge pack implements this interface for consistent API.
+library;
+
 
 import '../../models/query_result.dart';
 

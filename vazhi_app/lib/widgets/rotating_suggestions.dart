@@ -1,6 +1,8 @@
 /// Rotating Suggestions Widget
 ///
 /// Displays cycling example questions to inspire users.
+library;
+
 
 import 'dart:async';
 import 'package:flutter/material.dart';
@@ -145,11 +147,11 @@ class _RotatingSuggestionsState extends State<RotatingSuggestions>
             color: VazhiTheme.surfaceColor,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: VazhiTheme.primaryColor.withOpacity(0.2),
+              color: VazhiTheme.primaryColor.withValues(alpha: 0.2),
             ),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.05),
+                color: Colors.black.withValues(alpha: 0.05),
                 blurRadius: 10,
                 offset: const Offset(0, 4),
               ),
@@ -185,7 +187,7 @@ class _RotatingSuggestionsState extends State<RotatingSuggestions>
               Icon(
                 Icons.arrow_forward_ios,
                 size: 16,
-                color: VazhiTheme.primaryColor.withOpacity(0.5),
+                color: VazhiTheme.primaryColor.withValues(alpha: 0.5),
               ),
             ],
           ),
@@ -219,7 +221,7 @@ class QuickSuggestionChips extends StatelessWidget {
           label: Text(text),
           onPressed: () => onTap(text),
           backgroundColor: VazhiTheme.surfaceColor,
-          side: BorderSide(color: VazhiTheme.primaryColor.withOpacity(0.3)),
+          side: BorderSide(color: VazhiTheme.primaryColor.withValues(alpha: 0.3)),
           labelStyle: TextStyle(
             color: VazhiTheme.primaryColor,
             fontSize: 13,

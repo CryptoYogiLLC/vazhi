@@ -1,6 +1,8 @@
 /// Emergency Service
 ///
 /// Handles deterministic retrieval of emergency contacts and helplines.
+library;
+
 
 import '../../database/knowledge_database.dart';
 import '../../models/emergency_contact.dart';

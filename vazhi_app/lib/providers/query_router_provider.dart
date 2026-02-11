@@ -1,6 +1,8 @@
 /// Query Router Provider
 ///
 /// Riverpod provider for query classification and routing.
+library;
+
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../services/query_router.dart';

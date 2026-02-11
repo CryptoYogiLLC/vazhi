@@ -1,6 +1,8 @@
 /// Feedback Provider
 ///
 /// Manages user feedback state and service for Riverpod.
+library;
+
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/feedback.dart';

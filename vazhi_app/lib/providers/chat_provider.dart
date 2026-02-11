@@ -2,6 +2,8 @@
 ///
 /// Manages chat state using Riverpod.
 /// Supports both local GGUF inference and cloud API.
+library;
+
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/message.dart';

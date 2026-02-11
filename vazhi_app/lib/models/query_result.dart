@@ -1,6 +1,8 @@
 /// Query Result Models
 ///
 /// Models for query classification and routing in the hybrid architecture.
+library;
+
 
 /// Type of query handling required
 enum QueryType {

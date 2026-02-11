@@ -1,6 +1,8 @@
 /// Knowledge Provider
 ///
 /// Riverpod provider for knowledge database access.
+library;
+
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../database/knowledge_database.dart';

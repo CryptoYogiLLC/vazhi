@@ -1,6 +1,8 @@
 /// Knowledge Service Provider
 ///
 /// Riverpod provider for the unified knowledge retrieval service.
+library;
+
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../services/retrieval/knowledge_service.dart';

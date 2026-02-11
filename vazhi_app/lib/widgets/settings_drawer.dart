@@ -1,6 +1,8 @@
 /// Settings Drawer
 ///
 /// Provides intuitive access to app settings and customization.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -49,7 +51,7 @@ class SettingsDrawer extends ConsumerWidget {
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.2),
+                              color: Colors.black.withValues(alpha: 0.2),
                               blurRadius: 4,
                             ),
                           ],
@@ -110,7 +112,7 @@ class SettingsDrawer extends ConsumerWidget {
                       vertical: 6,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
+                      color: Colors.white.withValues(alpha: 0.2),
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
@@ -141,7 +143,7 @@ class SettingsDrawer extends ConsumerWidget {
                     trailing: Container(
                       padding: const EdgeInsets.symmetric(horizontal: 4),
                       decoration: BoxDecoration(
-                        color: VazhiTheme.primaryColor.withOpacity(0.1),
+                        color: VazhiTheme.primaryColor.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(20),
                       ),
                       child: Row(
@@ -711,7 +713,7 @@ class _ModeCard extends StatelessWidget {
           color: isDisabled
               ? Colors.grey[50]
               : (isSelected
-                    ? VazhiTheme.primaryColor.withOpacity(0.1)
+                    ? VazhiTheme.primaryColor.withValues(alpha: 0.1)
                     : Colors.grey[100]),
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
@@ -741,7 +743,7 @@ class _ModeCard extends StatelessWidget {
                 color: isDisabled
                     ? Colors.grey[400]
                     : (isSelected
-                          ? VazhiTheme.primaryColor.withOpacity(0.8)
+                          ? VazhiTheme.primaryColor.withValues(alpha: 0.8)
                           : Colors.grey[600]),
               ),
             ),

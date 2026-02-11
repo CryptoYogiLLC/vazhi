@@ -1,6 +1,8 @@
 /// Message Bubble Widget
 ///
 /// Displays a single chat message with appropriate styling.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
@@ -136,7 +138,7 @@ class MessageBubble extends StatelessWidget {
                               vertical: 2,
                             ),
                             decoration: BoxDecoration(
-                              color: VazhiTheme.primaryColor.withOpacity(0.1),
+                              color: VazhiTheme.primaryColor.withValues(alpha: 0.1),
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Text(
@@ -250,7 +252,7 @@ class MessageBubble extends StatelessWidget {
           height: 8,
           decoration: BoxDecoration(
             color: VazhiTheme.textLight
-                .withOpacity(0.3 + (0.7 * (1 - (value - value.floor())))),
+                .withValues(alpha: 0.3 + (0.7 * (1 - (value - value.floor())))),
             shape: BoxShape.circle,
           ),
         );
@@ -273,7 +275,7 @@ class MessageBubble extends StatelessWidget {
               ),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
-                color: VazhiTheme.errorColor.withOpacity(0.1),
+                color: VazhiTheme.errorColor.withValues(alpha: 0.1),
                 borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(16),
                   topRight: Radius.circular(16),
@@ -281,7 +283,7 @@ class MessageBubble extends StatelessWidget {
                   bottomRight: Radius.circular(16),
                 ),
                 border: Border.all(
-                  color: VazhiTheme.errorColor.withOpacity(0.3),
+                  color: VazhiTheme.errorColor.withValues(alpha: 0.3),
                 ),
               ),
               child: Column(

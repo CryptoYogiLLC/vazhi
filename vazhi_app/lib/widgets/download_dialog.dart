@@ -2,6 +2,8 @@
 ///
 /// Dialog for AI model download with progress, pause/resume,
 /// and network information.
+library;
+
 
 import 'dart:async';
 import 'package:flutter/material.dart';

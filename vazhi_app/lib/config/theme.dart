@@ -1,6 +1,8 @@
 /// VAZHI App Theme
 ///
 /// Defines colors, typography, and styling for the app.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

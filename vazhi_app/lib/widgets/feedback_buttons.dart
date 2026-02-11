@@ -1,6 +1,8 @@
 /// Feedback Buttons Widget
 ///
 /// Shows 👍/👎/✏️ feedback buttons for AI responses.
+library;
+
 
 import 'package:flutter/material.dart';
 import '../config/theme.dart';
@@ -93,7 +95,7 @@ class _FeedbackButton extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(6),
           decoration: BoxDecoration(
-            color: isActive ? activeColor.withOpacity(0.1) : Colors.transparent,
+            color: isActive ? activeColor.withValues(alpha: 0.1) : Colors.transparent,
             borderRadius: BorderRadius.circular(16),
           ),
           child: Icon(
@@ -184,7 +186,7 @@ class _CorrectionDialogState extends State<CorrectionDialog> {
             Container(
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.1),
+                color: Colors.grey.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Column(

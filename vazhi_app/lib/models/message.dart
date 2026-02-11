@@ -1,6 +1,8 @@
 /// Chat Message Model
 ///
 /// Represents a single message in a conversation.
+library;
+
 
 enum MessageRole { user, assistant, system }
 

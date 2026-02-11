@@ -1,6 +1,8 @@
 /// Voice Provider
 ///
 /// Manages voice input/output state using Riverpod.
+library;
+
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../services/voice_service.dart';

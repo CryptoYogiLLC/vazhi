@@ -1,6 +1,8 @@
 /// Thirukkural Model
 ///
 /// Represents a single Thirukkural verse with metadata.
+library;
+
 
 class Thirukkural {
   final int kuralNumber;

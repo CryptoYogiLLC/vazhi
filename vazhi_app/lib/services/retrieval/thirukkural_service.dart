@@ -1,6 +1,8 @@
 /// Thirukkural Retrieval Service
 ///
 /// Handles deterministic retrieval of Thirukkural verses, athikarams, and search.
+library;
+
 
 import '../../database/knowledge_database.dart';
 import '../../models/thirukkural.dart';

@@ -2,6 +2,8 @@
 ///
 /// Manages hybrid chat flow: tries deterministic retrieval first,
 /// falls back to AI when needed.
+library;
+
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/message.dart';

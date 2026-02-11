@@ -1,6 +1,8 @@
 /// VAZHI App Configuration
 ///
 /// Defines app variants, API endpoints, and feature flags.
+library;
+
 
 enum AppVariant { lite, full }
 

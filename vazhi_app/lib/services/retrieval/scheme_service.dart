@@ -1,6 +1,8 @@
 /// Scheme Retrieval Service
 ///
 /// Handles deterministic retrieval of government schemes, eligibility, and documents.
+library;
+
 
 import '../../database/knowledge_database.dart';
 import '../../models/scheme.dart';

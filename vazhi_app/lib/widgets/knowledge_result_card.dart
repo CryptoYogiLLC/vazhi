@@ -2,6 +2,8 @@
 ///
 /// Displays deterministic results from SQLite knowledge base.
 /// Shows formatted content with actions and optional AI enhancement prompt.
+library;
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

@@ -2,6 +2,8 @@
 ///
 /// Enhanced download service with pause/resume, network detection,
 /// storage checks, and progress tracking.
+library;
+
 
 import 'dart:async';
 import 'dart:io';

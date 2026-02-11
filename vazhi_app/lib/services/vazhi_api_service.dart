@@ -1,6 +1,8 @@
 /// VAZHI API Service
 ///
 /// Handles communication with the HuggingFace Spaces backend.
+library;
+
 
 import 'package:dio/dio.dart';
 import '../config/app_config.dart';

@@ -1,6 +1,8 @@
 /// Feedback Model
 ///
 /// Represents user feedback on a model response.
+library;
+
 
 enum FeedbackType {
   positive,   // 👍 - Response was helpful
