@@ -194,8 +194,38 @@ class QueryRouter {
     );
   }
 
+  /// Tamil ordinal to number mapping
+  static const Map<String, int> _tamilOrdinals = {
+    'முதல்': 1,
+    'முதலாம்': 1,
+    'first': 1,
+    'இரண்டாம்': 2,
+    'இரண்டாவது': 2,
+    'second': 2,
+    'மூன்றாம்': 3,
+    'மூன்றாவது': 3,
+    'third': 3,
+    'நான்காம்': 4,
+    'நான்காவது': 4,
+    'ஐந்தாம்': 5,
+    'ஆறாம்': 6,
+    'ஏழாம்': 7,
+    'எட்டாம்': 8,
+    'ஒன்பதாம்': 9,
+    'பத்தாம்': 10,
+    'கடைசி': 1330,
+    'last': 1330,
+  };
+
   /// Extract Thirukkural number from query
   int? _extractKuralNumber(String query) {
+    // First check for Tamil ordinals like "முதல் குறள்", "கடைசி குறள்"
+    for (final entry in _tamilOrdinals.entries) {
+      if (query.contains(entry.key)) {
+        return entry.value;
+      }
+    }
+
     // Match patterns like "குறள் 42", "kural 42", "thirukkural 42", "#42"
     final patterns = [
       RegExp(r'குறள்\s*(\d+)'),
