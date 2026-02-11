@@ -1,0 +1,145 @@
+name: VAZHI CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel in-progress runs when a new run is triggered
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Flutter build and test
+  flutter:
+    name: Flutter Build & Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.24.0'
+          channel: 'stable'
+          cache: true
+
+      - name: Get Flutter dependencies
+        working-directory: vazhi_app
+        run: flutter pub get
+
+      - name: Dart Format Check
+        working-directory: vazhi_app
+        run: dart format --set-exit-if-changed lib/
+
+      - name: Dart Analyze
+        working-directory: vazhi_app
+        run: dart analyze --fatal-infos lib/
+
+      - name: Run Tests
+        working-directory: vazhi_app
+        run: flutter test
+        continue-on-error: true  # Don't fail if no tests yet
+
+      - name: Build APK (Android)
+        working-directory: vazhi_app
+        run: flutter build apk --debug
+        continue-on-error: true  # Advisory only
+
+  # Python linting for scripts
+  python:
+    name: Python Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install linting tools
+        run: pip install flake8 black bandit
+
+      - name: Check Python formatting
+        run: |
+          if ls scripts/*.py 1> /dev/null 2>&1; then
+            black --check scripts/*.py || echo "Format issues found"
+          fi
+        continue-on-error: true
+
+      - name: Lint Python scripts
+        run: |
+          if ls scripts/*.py 1> /dev/null 2>&1; then
+            flake8 scripts/*.py --max-line-length=120 --extend-ignore=E203,W503,E501 || echo "Lint issues found"
+          fi
+        continue-on-error: true
+
+      - name: Security scan Python
+        run: |
+          if ls scripts/*.py 1> /dev/null 2>&1; then
+            bandit -ll scripts/*.py || echo "Security issues found"
+          fi
+        continue-on-error: true
+
+  # Security scanning
+  security:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Gitleaks Secret Scan
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true  # Advisory - don't block PRs
+
+      - name: Check for hardcoded secrets
+        run: |
+          echo "Scanning for potential secrets..."
+          ! grep -r -E "(api[_-]?key|secret|token|password).*=.*['\"][A-Za-z0-9+/]{20,}['\"]" \
+            --include="*.dart" --include="*.py" --include="*.json" \
+            --exclude-dir=build --exclude-dir=.dart_tool . || \
+            echo "Potential secrets found - please review"
+        continue-on-error: true
+
+      - name: Check for HuggingFace tokens
+        run: |
+          ! grep -rE "hf_[A-Za-z0-9]{30,}" --include="*.py" --include="*.dart" --include="*.json" . || \
+            echo "HuggingFace token found - use secrets instead"
+        continue-on-error: true
+
+  # Status check that summarizes results
+  status:
+    name: CI Status
+    runs-on: ubuntu-latest
+    needs: [flutter, python, security]
+    if: always()
+
+    steps:
+      - name: Check Results
+        run: |
+          echo "Flutter: ${{ needs.flutter.result }}"
+          echo "Python: ${{ needs.python.result }}"
+          echo "Security: ${{ needs.security.result }}"
+
+          if [ "${{ needs.flutter.result }}" == "failure" ]; then
+            echo "Flutter checks failed - please fix before merging"
+            exit 1
+          fi
+
+          echo "CI checks completed successfully"

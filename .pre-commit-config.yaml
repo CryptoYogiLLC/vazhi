@@ -1,0 +1,108 @@
+# Pre-commit hooks for VAZHI project
+# Install: pip install pre-commit && pre-commit install
+
+repos:
+  # Secret Detection - Critical for API keys, tokens
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+
+  # Basic file checks - Fast and essential
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: check-yaml
+        args: ['--unsafe']
+      - id: check-json
+      - id: check-toml
+      - id: check-merge-conflict
+      - id: check-case-conflict
+      - id: detect-private-key
+      - id: end-of-file-fixer
+        exclude: '\.(png|jpg|jpeg|gif|ico|ttf|woff|woff2|gguf|bin|db)$'
+      - id: trailing-whitespace
+        exclude: '\.(png|jpg|jpeg|gif|ico|ttf|woff|woff2|gguf|bin|db|md)$'
+      - id: mixed-line-ending
+      - id: check-added-large-files
+        args: ['--maxkb=500']
+        exclude: '^(models/|data/|.*\.gguf|.*\.bin|.*\.db)$'
+
+  # Python Security Linting
+  - repo: https://github.com/pycqa/bandit
+    rev: 1.7.9
+    hooks:
+      - id: bandit
+        args: ['-ll', '--skip', 'B101,B311']
+        files: ^scripts/.*\.py$
+        exclude: '^(notebooks/|tests/)'
+
+  # Python Code Formatting
+  - repo: https://github.com/psf/black
+    rev: 24.4.2
+    hooks:
+      - id: black
+        files: ^scripts/.*\.py$
+
+  # Python Linting
+  - repo: https://github.com/pycqa/flake8
+    rev: 7.1.0
+    hooks:
+      - id: flake8
+        args: ['--max-line-length=120', '--extend-ignore=E203,W503,E501']
+        files: ^scripts/.*\.py$
+
+  # Dart/Flutter checks
+  - repo: local
+    hooks:
+      # Dart format check
+      - id: dart-format
+        name: Dart Format
+        entry: dart format --set-exit-if-changed
+        language: system
+        files: ^vazhi_app/.*\.dart$
+        pass_filenames: true
+
+      # Dart analyze (linting)
+      - id: dart-analyze
+        name: Dart Analyze
+        entry: sh -c 'cd vazhi_app && dart analyze --fatal-infos lib/'
+        language: system
+        files: ^vazhi_app/.*\.dart$
+        pass_filenames: false
+
+      # Check for hardcoded API keys/secrets in Dart files
+      - id: check-dart-secrets
+        name: Check for hardcoded secrets in Dart
+        entry: sh -c 'git diff --staged --name-only | grep "\.dart$" | xargs -I {} grep -lE "(api[_-]?key|secret|token|password)\s*[:=]\s*[\"'\''][^\"'\'']{8,}[\"'\'']" {} 2>/dev/null && echo "Found potential hardcoded secrets in Dart files!" && exit 1 || exit 0'
+        language: system
+        files: ^vazhi_app/.*\.dart$
+        pass_filenames: false
+
+      # Check for HuggingFace tokens
+      - id: check-hf-tokens
+        name: Check for HuggingFace tokens
+        entry: sh -c 'git diff --staged --name-only | xargs grep -lE "hf_[A-Za-z0-9]{30,}" 2>/dev/null && echo "Found HuggingFace token!" && exit 1 || exit 0'
+        language: system
+        pass_filenames: false
+
+      # Block large model files from being committed
+      - id: block-model-files
+        name: Block model files (use Git LFS or external storage)
+        entry: sh -c 'git diff --staged --name-only | grep -E "\.(gguf|bin|safetensors|pt|pth|onnx)$" && echo "Model files should not be committed directly. Use Git LFS or external storage." && exit 1 || exit 0'
+        language: system
+        pass_filenames: false
+
+# Exclude patterns
+exclude: |
+  (?x)^(
+    vazhi_app/build/.*|
+    vazhi_app/.dart_tool/.*|
+    vazhi_app/android/.gradle/.*|
+    vazhi_app/ios/Pods/.*|
+    .*\.lock$|
+    .*\.g\.dart$
+  )$
+
+fail_fast: false
+default_stages: [pre-commit]

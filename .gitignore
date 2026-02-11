@@ -35,8 +35,13 @@ data/private/
 # Secrets
 .env
 *.env
+.env.*
 secrets/
 credentials/
+**/api_keys.dart
+**/secrets.dart
+.hf_token
+huggingface_token.txt
 
 # Build
 dist/
@@ -48,10 +53,19 @@ logs/
 *.log
 wandb/
 
-# Mobile
+# Mobile / Flutter
 node_modules/
 *.apk
 *.ipa
 .gradle/
 android/.gradle/
 ios/Pods/
+vazhi_app/build/
+vazhi_app/.dart_tool/
+vazhi_app/.flutter-plugins
+vazhi_app/.flutter-plugins-dependencies
+*.g.dart
+*.freezed.dart
+
+# Pre-commit
+.pre-commit-cache/
