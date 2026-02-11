@@ -87,21 +87,31 @@ class _FeedbackButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Tooltip(
-      message: tooltip,
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(16),
-        child: Container(
-          padding: const EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            color: isActive ? activeColor.withValues(alpha: 0.1) : Colors.transparent,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Icon(
-            isActive ? activeIcon : icon,
-            size: 18,
-            color: isActive ? activeColor : VazhiTheme.textLight,
+    return Semantics(
+      button: true,
+      enabled: true,
+      selected: isActive,
+      onTap: onTap,
+      label: tooltip,
+      hint: isActive
+          ? 'Already selected'
+          : 'Double tap to select',
+      child: Tooltip(
+        message: tooltip,
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(16),
+          child: Container(
+            padding: const EdgeInsets.all(6),
+            decoration: BoxDecoration(
+              color: isActive ? activeColor.withValues(alpha: 0.1) : Colors.transparent,
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: Icon(
+              isActive ? activeIcon : icon,
+              size: 18,
+              color: isActive ? activeColor : VazhiTheme.textLight,
+            ),
           ),
         ),
       ),

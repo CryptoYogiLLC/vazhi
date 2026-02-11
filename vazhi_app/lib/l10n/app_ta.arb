@@ -1,0 +1,65 @@
+{
+  "@@locale": "ta",
+  "@@last_modified": "2026-02-10",
+
+  "appTitle": "வழி VAZHI",
+  "appSubtitle": "தமிழ் AI உதவியாளர்",
+  "welcomeMessage": "தமிழர்களுக்கான இலவச AI வழி தோழன்",
+
+  "culturePack": "கலாச்சாரம்",
+  "cultureDescription": "திருக்குறள், கோவில்கள், திருவிழாக்கள்",
+
+  "educationPack": "கல்வி",
+  "educationDescription": "பள்ளிகள், தேர்வுகள், உதவித்தொகைகள்",
+
+  "healthPack": "சுகாதாரம்",
+  "healthDescription": "மருத்துவமனைகள், திட்டங்கள், ஆரோக்கியம்",
+
+  "govtPack": "அரசு",
+  "govtDescription": "திட்டங்கள், ஆவணங்கள், சேவைகள்",
+
+  "emergencyPack": "அவசரம்",
+  "emergencyDescription": "உதவி எண்கள், முதலுதவி, பாதுகாப்பு",
+
+  "legalPack": "சட்டம்",
+  "legalDescription": "உரிமைகள், ஆவணங்கள், நடைமுறைகள்",
+
+  "securityPack": "பாதுகாப்பு",
+  "securityDescription": "மோசடி எச்சரிக்கைகள், இணைய பாதுகாப்பு",
+
+  "sendMessage": "செய்தி அனுப்பு",
+  "voiceInputHint": "பேச தட்டவும்",
+  "voiceInputListening": "கேட்கிறது...",
+  "stopListening": "நிறுத்து",
+  "typeMessage": "தமிழ் அல்லது ஆங்கிலத்தில் கேளுங்கள்...",
+
+  "feedbackPositive": "உதவியாக இருந்தது",
+  "feedbackNegative": "உதவியாக இல்லை",
+  "feedbackCorrection": "திருத்தம் பரிந்துரை",
+
+  "settingsTitle": "அமைப்புகள்",
+  "settingsLanguage": "மொழி",
+  "settingsVoice": "குரல்",
+  "settingsAbout": "பற்றி",
+
+  "loading": "ஏற்றுகிறது...",
+  "error": "ஏதோ தவறு ஏற்பட்டது",
+  "retry": "மீண்டும் முயற்சி",
+  "cancel": "ரத்து",
+  "ok": "சரி",
+  "yes": "ஆம்",
+  "no": "இல்லை",
+
+  "noResults": "முடிவுகள் இல்லை",
+  "searchHint": "தேடு...",
+
+  "offlineMode": "ஆஃப்லைன் பயன்முறை",
+  "offlineModeDescription": "சில அம்சங்கள் வரையறுக்கப்படலாம்",
+
+  "downloadModel": "AI மாடலை பதிவிறக்கு",
+  "downloadModelDescription": "ஆஃப்லைன் பயன்பாட்டிற்கு தேவை (~1.6 GB)",
+  "downloadProgress": "பதிவிறக்கம்: {progress}%",
+
+  "kuralNumber": "குறள் {number}",
+  "athikaramNumber": "அதிகாரம் {number}"
+}

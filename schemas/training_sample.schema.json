@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://vazhi.app/schemas/training_sample.schema.json",
+  "title": "VAZHI Training Sample",
+  "description": "Schema for validating VAZHI training data samples",
+  "type": "object",
+  "required": ["instruction", "output"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the sample",
+      "minLength": 1
+    },
+    "instruction": {
+      "type": "string",
+      "description": "The input prompt or question",
+      "minLength": 5,
+      "maxLength": 2000
+    },
+    "input": {
+      "type": "string",
+      "description": "Optional additional context or input",
+      "maxLength": 5000
+    },
+    "output": {
+      "type": "string",
+      "description": "The expected response or answer",
+      "minLength": 10,
+      "maxLength": 10000
+    },
+    "pack": {
+      "type": "string",
+      "description": "Knowledge pack category",
+      "enum": [
+        "culture",
+        "education",
+        "security",
+        "legal",
+        "govt",
+        "health",
+        "emergency",
+        "dialects",
+        "general"
+      ]
+    },
+    "category": {
+      "type": "string",
+      "description": "Sub-category within the pack",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "source": {
+      "type": "string",
+      "description": "Data source attribution",
+      "maxLength": 200
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Additional metadata about the sample",
+      "properties": {
+        "source": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "tamil_percentage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "quality_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "dialect": {
+          "type": "string",
+          "enum": ["standard", "chennai", "madurai", "kongu", "nellai", "malaysia", "singapore", "sri_lanka"]
+        },
+        "complexity": {
+          "type": "string",
+          "enum": ["basic", "intermediate", "advanced"]
+        }
+      },
+      "additionalProperties": true
+    },
+    "kural_number": {
+      "type": "integer",
+      "description": "For Thirukkural entries, the kural number",
+      "minimum": 1,
+      "maximum": 1330
+    },
+    "athikaram": {
+      "type": "string",
+      "description": "Athikaram (chapter) name for Thirukkural"
+    },
+    "athikaram_number": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 133
+    }
+  },
+  "additionalProperties": true
+}

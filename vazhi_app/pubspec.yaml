@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # Internationalization
+  intl: ^0.20.2
 
   # UI
   cupertino_icons: ^1.0.8
@@ -41,6 +46,9 @@ dependencies:
   connectivity_plus: ^6.1.1
   crypto: ^3.0.6
 
+  # Secure Storage
+  flutter_secure_storage: ^9.2.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -50,6 +58,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   assets:
     - assets/images/

@@ -190,6 +190,71 @@ class VazhiLocalService {
     yield* _session!.chat(message);
   }
 
+  /// Stream chat response with metrics tracking
+  Stream<(String token, InferenceMetrics metrics)> chatStreamWithMetrics(
+    String message, {
+    String pack = 'culture',
+  }) async* {
+    if (!_isModelLoaded || _engine == null) {
+      throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
+    }
+
+    // Create new session if pack changed
+    if (_session == null || _currentPack != pack) {
+      _currentPack = pack;
+      final systemPrompt =
+          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
+      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
+    }
+
+    final metrics = InferenceMetrics()..startInference();
+
+    await for (final token in _session!.chat(message)) {
+      metrics.onToken();
+      yield (token, metrics);
+    }
+
+    metrics.endInference();
+    _lastMetrics = metrics;
+  }
+
+  /// Last recorded inference metrics
+  InferenceMetrics? _lastMetrics;
+
+  /// Get the last recorded inference metrics
+  InferenceMetrics? get lastMetrics => _lastMetrics;
+
+  /// Send a chat message with metrics and get response + metrics
+  Future<(String response, InferenceMetrics metrics)> chatWithMetrics(
+    String message, {
+    String pack = 'culture',
+  }) async {
+    if (!_isModelLoaded || _engine == null) {
+      throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
+    }
+
+    // Create new session if pack changed
+    if (_session == null || _currentPack != pack) {
+      _currentPack = pack;
+      final systemPrompt =
+          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
+      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
+    }
+
+    final metrics = InferenceMetrics()..startInference();
+    final buffer = StringBuffer();
+
+    await for (final token in _session!.chat(message)) {
+      metrics.onToken();
+      buffer.write(token);
+    }
+
+    metrics.endInference();
+    _lastMetrics = metrics;
+
+    return (buffer.toString().trim(), metrics);
+  }
+
   /// Clear the chat session (start fresh conversation)
   void clearSession() {
     _session = null;
@@ -224,3 +289,74 @@ class VazhiLocalException implements Exception {
   @override
   String toString() => message;
 }
+
+/// Metrics collected during inference
+class InferenceMetrics {
+  final Stopwatch _stopwatch = Stopwatch();
+  int _tokenCount = 0;
+  int _firstTokenMs = 0;
+  bool _firstTokenRecorded = false;
+
+  /// Start tracking inference
+  void startInference() {
+    _stopwatch.reset();
+    _stopwatch.start();
+    _tokenCount = 0;
+    _firstTokenMs = 0;
+    _firstTokenRecorded = false;
+  }
+
+  /// Record first token arrival
+  void onFirstToken() {
+    if (!_firstTokenRecorded) {
+      _firstTokenMs = _stopwatch.elapsedMilliseconds;
+      _firstTokenRecorded = true;
+    }
+  }
+
+  /// Record a token
+  void onToken() {
+    _tokenCount++;
+    if (!_firstTokenRecorded) {
+      onFirstToken();
+    }
+  }
+
+  /// End tracking inference
+  void endInference() {
+    _stopwatch.stop();
+  }
+
+  /// Total inference time in milliseconds
+  int get totalMs => _stopwatch.elapsedMilliseconds;
+
+  /// Time to first token in milliseconds
+  int get firstTokenMs => _firstTokenMs;
+
+  /// Number of tokens generated
+  int get tokenCount => _tokenCount;
+
+  /// Tokens per second throughput
+  double get tokensPerSecond {
+    if (totalMs == 0) return 0;
+    return _tokenCount / (totalMs / 1000);
+  }
+
+  /// Convert to JSON-serializable map
+  Map<String, dynamic> toJson() => {
+    'total_ms': totalMs,
+    'first_token_ms': _firstTokenMs,
+    'token_count': _tokenCount,
+    'tokens_per_second': tokensPerSecond.toStringAsFixed(2),
+    'timestamp': DateTime.now().toIso8601String(),
+  };
+
+  @override
+  String toString() =>
+      'InferenceMetrics(total: ${totalMs}ms, firstToken: ${_firstTokenMs}ms, '
+      'tokens: $_tokenCount, tps: ${tokensPerSecond.toStringAsFixed(1)})';
+}
+
+/// Callback for streaming responses with metrics
+typedef StreamCallback = void Function(String token, InferenceMetrics metrics);
+

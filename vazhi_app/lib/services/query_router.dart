@@ -8,6 +8,14 @@ library;
 import '../database/knowledge_database.dart';
 import '../models/query_result.dart';
 
+/// Exception for invalid regex patterns
+class InvalidPatternException implements Exception {
+  final String message;
+  InvalidPatternException(this.message);
+  @override
+  String toString() => 'InvalidPatternException: $message';
+}
+
 class QueryRouter {
   // Cached patterns from database
   List<PatternMatch>? _cachedPatterns;
@@ -15,22 +23,47 @@ class QueryRouter {
   // Compiled regex patterns
   final Map<String, RegExp> _compiledPatterns = {};
 
+  // Input limits
+  static const int _maxQueryLength = 500;
+  static const int _maxPatternLength = 200;
+
   /// Classify a query and determine routing
   Future<QueryClassification> classify(String query) async {
-    final normalizedQuery = _normalizeQuery(query);
+    // Validate and sanitize input
+    final sanitizedQuery = _sanitizeQuery(query);
+    if (sanitizedQuery.isEmpty) {
+      return QueryClassification(
+        type: QueryType.aiRequired,
+        category: KnowledgeCategory.general,
+        confidence: 0.0,
+        query: query,
+      );
+    }
+
+    final normalizedQuery = _normalizeQuery(sanitizedQuery);
 
     // Try to match against database patterns first
     final dbMatch = await _matchDatabasePatterns(normalizedQuery);
     if (dbMatch != null) {
       return _buildClassification(
-        query: query,
+        query: sanitizedQuery,
         normalizedQuery: normalizedQuery,
         match: dbMatch,
       );
     }
 
     // Fall back to built-in pattern matching
-    return _classifyWithBuiltInPatterns(query, normalizedQuery);
+    return _classifyWithBuiltInPatterns(sanitizedQuery, normalizedQuery);
+  }
+
+  /// Sanitize user query to prevent injection and DoS
+  String _sanitizeQuery(String query) {
+    // Truncate if too long
+    if (query.length > _maxQueryLength) {
+      query = query.substring(0, _maxQueryLength);
+    }
+    // Remove null bytes and control characters
+    return query.replaceAll(RegExp(r'[\x00-\x1F\x7F]'), '').trim();
   }
 
   /// Normalize query for matching
@@ -73,12 +106,39 @@ class QueryRouter {
     }
   }
 
-  /// Get or compile a regex pattern
+  /// Get or compile a regex pattern with validation
   RegExp _getCompiledPattern(String pattern) {
-    return _compiledPatterns.putIfAbsent(
-      pattern,
-      () => RegExp(pattern, caseSensitive: false),
-    );
+    return _compiledPatterns.putIfAbsent(pattern, () {
+      // Validate pattern length
+      if (pattern.length > _maxPatternLength) {
+        throw InvalidPatternException('Pattern too long: ${pattern.length} chars');
+      }
+
+      // Check for ReDoS patterns (nested quantifiers, catastrophic backtracking)
+      if (_isPotentialReDoS(pattern)) {
+        throw InvalidPatternException('Potential ReDoS pattern detected');
+      }
+
+      return RegExp(pattern, caseSensitive: false);
+    });
+  }
+
+  /// Check for patterns that could cause ReDoS (Regular expression Denial of Service)
+  bool _isPotentialReDoS(String pattern) {
+    // Detect nested quantifiers like (a+)+ or (a*)*
+    if (RegExp(r'\([^)]*[+*]\)[+*]').hasMatch(pattern)) {
+      return true;
+    }
+    // Detect alternation with overlapping patterns like (a|a)+
+    if (RegExp(r'\([^)]*\|[^)]*\)[+*]').hasMatch(pattern)) {
+      return true;
+    }
+    // Detect deeply nested groups
+    final openParens = pattern.split('(').length - 1;
+    if (openParens > 5) {
+      return true;
+    }
+    return false;
   }
 
   /// Build classification from pattern match

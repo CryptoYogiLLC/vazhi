@@ -1,0 +1,120 @@
+{
+  "@@locale": "en",
+  "@@last_modified": "2026-02-10",
+
+  "appTitle": "VAZHI வழி",
+  "@appTitle": {
+    "description": "The app title shown in the app bar"
+  },
+
+  "appSubtitle": "Tamil AI Assistant",
+  "@appSubtitle": {
+    "description": "App subtitle or tagline"
+  },
+
+  "welcomeMessage": "Free AI companion for Tamil people",
+  "@welcomeMessage": {
+    "description": "Welcome message on the home screen"
+  },
+
+  "culturePack": "Culture",
+  "@culturePack": {
+    "description": "Culture knowledge pack name"
+  },
+  "cultureDescription": "Thirukkural, temples, festivals",
+
+  "educationPack": "Education",
+  "educationDescription": "Schools, exams, scholarships",
+
+  "healthPack": "Health",
+  "healthDescription": "Hospitals, schemes, wellness",
+
+  "govtPack": "Government",
+  "govtDescription": "Schemes, documents, services",
+
+  "emergencyPack": "Emergency",
+  "emergencyDescription": "Helplines, first aid, safety",
+
+  "legalPack": "Legal",
+  "legalDescription": "Rights, documents, procedures",
+
+  "securityPack": "Security",
+  "securityDescription": "Scam alerts, cyber safety",
+
+  "sendMessage": "Send message",
+  "@sendMessage": {
+    "description": "Send button accessibility label"
+  },
+
+  "voiceInputHint": "Tap to speak",
+  "@voiceInputHint": {
+    "description": "Voice input button hint"
+  },
+
+  "voiceInputListening": "Listening...",
+  "@voiceInputListening": {
+    "description": "Shown when voice input is active"
+  },
+
+  "stopListening": "Stop listening",
+  "@stopListening": {
+    "description": "Stop voice input accessibility label"
+  },
+
+  "typeMessage": "Ask anything in Tamil or English...",
+  "@typeMessage": {
+    "description": "Placeholder text in the message input"
+  },
+
+  "feedbackPositive": "Helpful",
+  "feedbackNegative": "Not helpful",
+  "feedbackCorrection": "Suggest correction",
+
+  "settingsTitle": "Settings",
+  "settingsLanguage": "Language",
+  "settingsVoice": "Voice",
+  "settingsAbout": "About",
+
+  "loading": "Loading...",
+  "error": "Something went wrong",
+  "retry": "Retry",
+  "cancel": "Cancel",
+  "ok": "OK",
+  "yes": "Yes",
+  "no": "No",
+
+  "noResults": "No results found",
+  "searchHint": "Search...",
+
+  "offlineMode": "Offline Mode",
+  "offlineModeDescription": "Some features may be limited",
+
+  "downloadModel": "Download AI Model",
+  "downloadModelDescription": "Required for offline use (~1.6 GB)",
+  "downloadProgress": "Downloading: {progress}%",
+  "@downloadProgress": {
+    "placeholders": {
+      "progress": {
+        "type": "int"
+      }
+    }
+  },
+
+  "kuralNumber": "Kural {number}",
+  "@kuralNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+
+  "athikaramNumber": "Chapter {number}",
+  "@athikaramNumber": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  }
+}

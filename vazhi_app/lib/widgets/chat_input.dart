@@ -102,29 +102,40 @@ class _MicButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return Semantics(
+      button: true,
+      enabled: true,
       onTap: onPressed,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 200),
-        width: 48,
-        height: 48,
-        decoration: BoxDecoration(
-          color: isListening
-              ? VazhiTheme.primaryColor
-              : VazhiTheme.primaryColor.withValues(alpha: 0.1),
-          borderRadius: BorderRadius.circular(24),
-        ),
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Icon(
-              isListening ? Icons.mic : Icons.mic_none,
-              color: isListening ? Colors.white : VazhiTheme.primaryColor,
-              size: 24,
-            ),
-            if (isListening)
-              _PulsingCircle(),
-          ],
+      label: isListening
+          ? 'Stop voice input'
+          : 'Start voice input',
+      hint: isListening
+          ? 'Double tap to stop listening'
+          : 'Double tap to start voice input',
+      child: GestureDetector(
+        onTap: onPressed,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          width: 48,
+          height: 48,
+          decoration: BoxDecoration(
+            color: isListening
+                ? VazhiTheme.primaryColor
+                : VazhiTheme.primaryColor.withValues(alpha: 0.1),
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Icon(
+                isListening ? Icons.mic : Icons.mic_none,
+                color: isListening ? Colors.white : VazhiTheme.primaryColor,
+                size: 24,
+              ),
+              if (isListening)
+                _PulsingCircle(),
+            ],
+          ),
         ),
       ),
     );
@@ -183,19 +194,26 @@ class _SendButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return Semantics(
+      button: true,
+      enabled: true,
       onTap: onPressed,
-      child: Container(
-        width: 48,
-        height: 48,
-        decoration: BoxDecoration(
-          gradient: VazhiTheme.primaryGradient,
-          borderRadius: BorderRadius.circular(24),
-        ),
-        child: const Icon(
-          Icons.send,
-          color: Colors.white,
-          size: 22,
+      label: 'Send message',
+      hint: 'Double tap to send your message',
+      child: GestureDetector(
+        onTap: onPressed,
+        child: Container(
+          width: 48,
+          height: 48,
+          decoration: BoxDecoration(
+            gradient: VazhiTheme.primaryGradient,
+            borderRadius: BorderRadius.circular(24),
+          ),
+          child: const Icon(
+            Icons.send,
+            color: Colors.white,
+            size: 22,
+          ),
         ),
       ),
     );

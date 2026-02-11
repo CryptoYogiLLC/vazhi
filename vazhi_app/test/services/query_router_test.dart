@@ -166,14 +166,18 @@ void main() {
     test('handles empty query', () async {
       final result = await router.classify('');
 
-      expect(result.type, QueryType.hybrid);
+      // Empty queries return low-confidence AI required (after input validation)
+      expect(result.type, QueryType.aiRequired);
       expect(result.category, KnowledgeCategory.general);
+      expect(result.confidence, 0.0);
     });
 
     test('handles query with only spaces', () async {
       final result = await router.classify('   ');
 
-      expect(result.type, QueryType.hybrid);
+      // Whitespace-only queries return low-confidence AI required (after sanitization)
+      expect(result.type, QueryType.aiRequired);
+      expect(result.confidence, 0.0);
     });
 
     test('handles mixed Tamil and English', () async {

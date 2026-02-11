@@ -1,19 +1,48 @@
 /// Feedback Service
 ///
 /// Handles storing user feedback locally and syncing to backend.
+/// Uses encrypted Hive storage to protect user data.
 library;
 
 
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:hive/hive.dart';
 import '../models/feedback.dart';
 
 class FeedbackService {
   static const String _boxName = 'vazhi_feedback';
+  static const String _encryptionKeyName = 'vazhi_hive_key';
 
   Box? _box;
   List<UserFeedback> _feedbackList = [];
   bool _initialized = false;
+
+  /// Get or generate encryption key for Hive
+  static Future<List<int>> _getEncryptionKey() async {
+    const secureStorage = FlutterSecureStorage(
+      aOptions: AndroidOptions(encryptedSharedPreferences: true),
+      iOptions: IOSOptions(accessibility: KeychainAccessibility.first_unlock),
+    );
+
+    // Try to get existing key
+    final existingKey = await secureStorage.read(key: _encryptionKeyName);
+
+    if (existingKey != null) {
+      // Decode existing key
+      return base64Decode(existingKey);
+    }
+
+    // Generate new key
+    final newKey = Hive.generateSecureKey();
+    await secureStorage.write(
+      key: _encryptionKeyName,
+      value: base64Encode(newKey),
+    );
+
+    return newKey;
+  }
 
   /// Get all feedback
   List<UserFeedback> get allFeedback => List.unmodifiable(_feedbackList);
@@ -54,7 +83,24 @@ class FeedbackService {
   Future<void> initialize() async {
     if (_initialized) return;
 
-    _box = await Hive.openBox(_boxName);
+    try {
+      // Get encryption key from secure storage
+      final encryptionKey = await _getEncryptionKey();
+      final cipher = HiveAesCipher(encryptionKey);
+
+      // Open encrypted box
+      _box = await Hive.openBox(
+        _boxName,
+        encryptionCipher: cipher,
+      );
+    } catch (e) {
+      // Fallback to unencrypted if secure storage fails (e.g., in tests)
+      if (kDebugMode) {
+        debugPrint('FeedbackService: Falling back to unencrypted storage: $e');
+      }
+      _box = await Hive.openBox(_boxName);
+    }
+
     final jsonString = _box?.get('feedback_list');
 
     if (jsonString != null) {

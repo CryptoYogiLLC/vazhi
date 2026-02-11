@@ -13,9 +13,31 @@ import 'package:sqflite/sqflite.dart';
 class KnowledgeDatabase {
   static const String _dbName = 'vazhi_knowledge.db';
   static const int _dbVersion = 1;
+  static const int _maxQueryLength = 500;
+  static const int _maxSearchResults = 50;
 
   static Database? _database;
   static bool _isInitialized = false;
+
+  /// Sanitize and validate user input to prevent SQL injection and DoS
+  static String _sanitizeQuery(String query, {int? maxLength}) {
+    final limit = maxLength ?? _maxQueryLength;
+    // Truncate if too long
+    if (query.length > limit) {
+      query = query.substring(0, limit);
+    }
+    // Remove null bytes and other control characters
+    query = query.replaceAll(RegExp(r'[\x00-\x1F\x7F]'), '');
+    return query.trim();
+  }
+
+  /// Validate integer input within range
+  static int? _validateIntRange(int value, int min, int max) {
+    if (value < min || value > max) {
+      return null;
+    }
+    return value;
+  }
 
   /// Debug logging helper - only logs in debug mode
   static void _log(String message) {
@@ -314,11 +336,17 @@ class KnowledgeDatabase {
 
   /// Get Thirukkural by number
   static Future<Map<String, dynamic>?> getKuralByNumber(int number) async {
+    // Validate kural number range (1-1330)
+    final validNumber = _validateIntRange(number, 1, 1330);
+    if (validNumber == null) {
+      return null;
+    }
+
     final db = await database;
     final result = await db.query(
       'thirukkural',
       where: 'kural_number = ?',
-      whereArgs: [number],
+      whereArgs: [validNumber],
     );
     return result.isNotEmpty ? result.first : null;
   }
@@ -327,11 +355,17 @@ class KnowledgeDatabase {
   static Future<List<Map<String, dynamic>>> getKuralsByAthikaram(
     int athikaramNumber,
   ) async {
+    // Validate athikaram number range (1-133)
+    final validNumber = _validateIntRange(athikaramNumber, 1, 133);
+    if (validNumber == null) {
+      return [];
+    }
+
     final db = await database;
     return db.query(
       'thirukkural',
       where: 'athikaram_number = ?',
-      whereArgs: [athikaramNumber],
+      whereArgs: [validNumber],
       orderBy: 'kural_number ASC',
     );
   }
@@ -348,8 +382,14 @@ class KnowledgeDatabase {
 
   /// Search Thirukkural
   static Future<List<Map<String, dynamic>>> searchKurals(String query) async {
+    // Validate and sanitize input
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) {
+      return [];
+    }
+
     final db = await database;
-    final searchTerm = '%$query%';
+    final searchTerm = '%$sanitized%';
     return db.query(
       'thirukkural',
       where: '''
@@ -495,8 +535,14 @@ class KnowledgeDatabase {
   static Future<List<Map<String, dynamic>>> searchHospitals(
     String query,
   ) async {
+    // Validate and sanitize input
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) {
+      return [];
+    }
+
     final db = await database;
-    final searchTerm = '%$query%';
+    final searchTerm = '%$sanitized%';
     return db.query(
       'hospitals',
       where: 'name_english LIKE ? OR name_tamil LIKE ? OR city LIKE ?',
@@ -515,6 +561,21 @@ class KnowledgeDatabase {
     String? categoryId,
     int limit = 20,
   }) async {
+    // Validate and sanitize input
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) {
+      return [];
+    }
+
+    // Sanitize FTS5 special characters to prevent query injection
+    final ftsQuery = _sanitizeFtsQuery(sanitized);
+    if (ftsQuery.isEmpty) {
+      return [];
+    }
+
+    // Clamp limit to prevent DoS
+    final safeLimit = limit.clamp(1, _maxSearchResults);
+
     final db = await database;
 
     String sql = '''
@@ -524,15 +585,15 @@ class KnowledgeDatabase {
       WHERE search_index MATCH ?
     ''';
 
-    final args = <dynamic>[query];
+    final args = <dynamic>[ftsQuery];
 
     if (categoryId != null) {
       sql += ' AND category_id = ?';
-      args.add(categoryId);
+      args.add(_sanitizeQuery(categoryId, maxLength: 50));
     }
 
     sql += ' ORDER BY rank LIMIT ?';
-    args.add(limit);
+    args.add(safeLimit);
 
     try {
       return db.rawQuery(sql, args);
@@ -540,6 +601,16 @@ class KnowledgeDatabase {
       // Fallback if FTS fails
       return [];
     }
+  }
+
+  /// Sanitize FTS5 query to prevent query injection
+  static String _sanitizeFtsQuery(String query) {
+    // Remove FTS5 special operators that could be abused
+    // Keep alphanumeric, Tamil unicode, spaces, and basic punctuation
+    return query
+        .replaceAll(RegExp(r'["\*\-\+\(\)\{\}\[\]\^~]'), ' ')
+        .replaceAll(RegExp(r'\s+'), ' ')
+        .trim();
   }
 
   // ============================================================================
