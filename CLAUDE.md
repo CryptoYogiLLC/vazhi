@@ -26,7 +26,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - Flutter app with chat UI, voice I/O (Tamil STT/TTS), hybrid retrieval, model download manager
 - 6 knowledge packs: Security (468), Government (467), Education (602), Legal (610), Healthcare (460), Culture (400) = 3,007 bilingual training pairs
 - Security hardened: encrypted storage, input validation, ReDoS protection, URL allowlist, SHA256 verification
-- 228 tests passing, CI/CD via GitHub Actions
+- 232 tests passing, CI/CD via GitHub Actions
 - 19 code review issues identified and closed (#22-40)
 
 **What's blocking:**
@@ -93,6 +93,7 @@ vazhi/
 ├── CLAUDE.md                     # This file — project context for CC agents
 ├── README.md                     # Public-facing project overview
 ├── vazhi_app/                    # Flutter mobile app
+│   ├── APP_CHANGELOG.md          # App feature history & architecture decisions
 │   ├── lib/
 │   │   ├── database/migrations/  # Versioned schema changes
 │   │   ├── l10n/                 # i18n (English + Tamil ARB files)
@@ -125,10 +126,11 @@ vazhi/
 ## Key Documents (Read Order for New Agents)
 
 1. **This file** — start here
-2. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
-3. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
-4. **`docs/LESSONS_LEARNED.md`** — 39 hard-won lessons, ideal training pipeline
-5. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
+2. **`vazhi_app/APP_CHANGELOG.md`** — app feature history, architecture decisions, and lessons learned
+3. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
+4. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
+5. **`docs/LESSONS_LEARNED.md`** — 39 hard-won lessons, ideal training pipeline
+6. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
 
 ## Development Commands
 
@@ -136,7 +138,7 @@ vazhi/
 # Flutter app
 cd vazhi_app
 flutter pub get
-flutter test                      # Run all 228 tests
+flutter test                      # Run all 232 tests
 flutter run                       # Run on connected device/simulator
 flutter analyze                   # Dart static analysis
 
