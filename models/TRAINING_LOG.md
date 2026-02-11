@@ -15,8 +15,11 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | v0.5 | 2026-02-07 | ❌ Failed | SLM approach with Qwen2.5-0.5B - LoRA corrupted model |
 | v0.6 | 2026-02-07 | ❌ Failed | Sarvam-2B + IndicAlign Anudesh - 4-bit training corrupted model |
 | v0.7 | 2026-02-08 | ❌ Failed | Gemma-2B Tamil - Training worked but GGUF conversion failed (tokenizer holes) |
-| v0.8 | 2026-02-09 | 🔄 In Progress | Qwen3-0.6B - Two-stage Micro-DAPT + SFT on Kaggle |
+| v0.8 | 2026-02-09 | ⏸️ Superseded | Qwen3-0.6B - Two-stage Micro-DAPT + SFT on Kaggle (superseded by v3.x series) |
 | v3.1 | 2026-02-10 | ❌ Failed | Qwen3-0.6B SFT - Mixed data formats caused "systemsystemsystem..." output |
+| v3.2 | 2026-02-10 | ❌ Failed | Qwen3-0.6B SFT - ChatML-only fix, fp16 on T4, but fp16 training issues |
+| v3.3 | 2026-02-10 | ❌ Failed | Qwen3-0.6B (instruct) - `<think>` tokens conflicted with ChatML, LR too aggressive |
+| v3.4 | 2026-02-11 | ⏳ Pending | Qwen3-0.6B-**Base** (not instruct) - LR 2e-5, LoRA r=32, 3 epochs |
 
 ---
 
@@ -1035,6 +1038,175 @@ final_samples = [s for s in all_samples if is_chatml_formatted(s["text"])]
 
 ---
 
+## v3.2 Training Run (Failed - fp16 Issues)
+
+**Date:** 2026-02-10
+**Status:** ❌ Failed
+**Base Model:** Qwen/Qwen3-0.6B (instruct)
+**Training Platform:** Kaggle (T4/P100 GPU)
+
+### What We Fixed from v3.1
+
+1. **ChatML-only data** — filtered out all raw text samples from existing dataset
+2. **Thirukkural downsampled** — from 71% to ~25% of dataset
+3. **Diverse samples added** — ~1,050 from IndicAlign (Dolly_T, WikiHow, Wiki_Conv, OpenAssistant_T) + ~47 manual samples
+4. **100% ChatML verification** — `is_chatml_formatted()` check before training
+5. **Single GPU forced** — `CUDA_VISIBLE_DEVICES=0` at top of notebook
+6. **fp16 training** — for T4 compatibility
+
+### Training Configuration
+
+```python
+Base Model: Qwen/Qwen3-0.6B (instruct)
+Quantization: 4-bit QLoRA (NF4)
+Compute dtype: float16
+LoRA: r=16, alpha=32, all 7 modules
+Learning Rate: 1e-4
+Epochs: 2
+Batch: 2 x 8 = 16 effective
+Max Length: 512
+```
+
+### Result
+
+Training had fp16-related issues on T4. The Qwen3 model has internal bf16 operations that conflict with fp16 AMP training on non-Ampere GPUs. Led to v3.3 with FP32 training mode.
+
+### Dataset Created
+
+`CryptoYogi/vazhi-tamil-sft-v3_2` on HuggingFace — balanced, ChatML-only SFT dataset.
+
+### Files Created
+- Notebook: `/notebooks/Vazhi_SFT_v3_2_Fixed.ipynb`
+
+---
+
+## v3.3 Training Run (Failed - Instruct Model Conflict)
+
+**Date:** 2026-02-10
+**Status:** ❌ Failed
+**Base Model:** Qwen/Qwen3-0.6B (instruct)
+**Training Platform:** Kaggle (P100 GPU)
+
+### What We Fixed from v3.2
+
+1. **FP32 training mode** — disabled both fp16 and bf16 flags to work around Qwen3's internal bf16 ops on P100
+2. **Reused v3.2's balanced dataset** — `CryptoYogi/vazhi-tamil-sft-v3_3` (same data, new repo for tracking)
+3. **SKIP_DATA_PREP logic** — avoids redundant IndicAlign extraction if dataset already exists on HF
+
+### Training Configuration
+
+```python
+Base Model: Qwen/Qwen3-0.6B (instruct)
+Quantization: 4-bit QLoRA (NF4)
+Compute dtype: float16 (model loading), FP32 (training)
+fp16: False, bf16: False  # FP32 mode for P100 compatibility
+LoRA: r=16, alpha=32, all 7 modules
+Learning Rate: 1e-4
+Epochs: 2
+Batch: 1 x 16 = 16 effective
+Max Length: 512
+```
+
+### Result: ❌ Failed
+
+Model output was broken — likely producing `<think>` reasoning tokens or nonsensical output.
+
+### Root Cause Analysis
+
+| Factor | Assessment |
+|--------|------------|
+| `<think>` token conflict | **Primary cause** — Qwen3-0.6B is instruction-tuned with native `/think` reasoning mode. Our ChatML format (`<\|im_start\|>`) conflicted with its native chat template that expects `<think>` blocks |
+| Learning rate (1e-4) | **Contributing** — too aggressive for fine-tuning an already instruction-tuned model, causing catastrophic forgetting of the base model's capabilities |
+| FP32 training | Not the issue — this was a correct fix for P100 compatibility |
+
+### Key Insight
+
+**Instruct models have their own chat format.** Qwen3-0.6B (instruct) expects:
+```
+<think>reasoning here</think>
+response here
+```
+
+When we force ChatML format (`<|im_start|>system/user/assistant<|im_end|>`), it conflicts with the model's training. The model tries to produce `<think>` tokens within our ChatML structure.
+
+**Solution:** Use the **base** model (`Qwen3-0.6B-Base`) which has no pre-existing chat template, so it can cleanly learn our ChatML format.
+
+### Files Created
+- Notebook: `/notebooks/Vazhi_SFT_v3_3_Clean.ipynb`
+- Dataset: `CryptoYogi/vazhi-tamil-sft-v3_3` on HuggingFace
+
+---
+
+## v3.4 Training Run (Pending - Base Model Approach)
+
+**Date:** 2026-02-11
+**Status:** ⏳ Pending (not yet run on Kaggle)
+**Base Model:** Qwen/Qwen3-0.6B-**Base** (NOT instruct)
+**Training Platform:** Kaggle (P100 GPU)
+
+### Why Base Model?
+
+After v3.3's failure, the key insight is that instruction-tuned models fight against new chat templates. Using the base model:
+
+| Factor | Qwen3-0.6B (instruct) | Qwen3-0.6B-Base |
+|--------|----------------------|-----------------|
+| Pre-existing chat format | Yes (`<think>` mode) | None |
+| ChatML compatibility | Conflicting | Clean slate |
+| SFT risk | Catastrophic forgetting | No existing behavior to forget |
+| LoRA rank needed | Lower (preserving existing) | Higher (learning from scratch) |
+
+### Training Configuration
+
+```python
+Base Model: Qwen/Qwen3-0.6B-Base  # KEY CHANGE
+Quantization: 4-bit QLoRA (NF4)
+Compute dtype: float16 (model loading), FP32 (training)
+fp16: False, bf16: False  # FP32 mode for P100
+
+LoRA: r=32, alpha=64, all 7 modules  # Increased from r=16 for base model
+Learning Rate: 2e-5  # MUCH lower: 5x reduction from v3.3's 1e-4
+Epochs: 3  # Increased from 2 (base model needs more training)
+Batch: 1 x 16 = 16 effective
+Max Length: 512
+
+# ChatML special tokens added to tokenizer since base model doesn't have them
+special_tokens: ["<|im_start|>", "<|im_end|>"]
+```
+
+### Changes from v3.3
+
+| Setting | v3.3 (failed) | v3.4 |
+|---------|--------------|------|
+| Base Model | Qwen3-0.6B (instruct) | Qwen3-0.6B-**Base** |
+| Learning Rate | 1e-4 | 2e-5 |
+| Epochs | 2 | 3 |
+| LoRA Rank | 16 | 32 |
+| Special Tokens | Already present | Added `<\|im_start\|>`, `<\|im_end\|>` |
+
+### Risk Assessment
+
+| Risk | Mitigation |
+|------|------------|
+| Base model has zero instruction-following | 3 epochs of SFT + higher LoRA rank |
+| Adding special tokens changes vocab size | `model.resize_token_embeddings()` called |
+| `pad_token = eos_token` in base model | Carefully handled (lesson from v0.7) |
+| May need two-stage (DAPT+SFT) | Can fall back to v0.8's two-stage approach if single SFT fails |
+
+### Existing Models to Test First
+
+Before running v3.4, the `Test_Existing_Models.ipynb` notebook tests whether any previously uploaded HF models still work:
+- `CryptoYogi/vazhi-qwen3-lora-best` (v0.8 cycle best)
+- `CryptoYogi/vazhi-qwen3-lora-cycle-6` (last cycle checkpoint)
+- `CryptoYogi/qwen3-0.6b-vazhi` (v3.3 merged)
+
+If any produce coherent Tamil, we can skip v3.4 and continue from that checkpoint.
+
+### Files Created
+- Notebook: `/notebooks/Vazhi_SFT_v3_4_Base.ipynb`
+- Test notebook: `/notebooks/Test_Existing_Models.ipynb`
+
+---
+
 ## Architectural Decisions
 
 ### ADR-001: Why Not RAG?
@@ -1193,6 +1365,8 @@ Implement a hybrid architecture with two paths:
 16. **Verify base model tokenizer BEFORE training** - A corrupted source model will produce corrupted outputs
 17. **NEVER mix data formats in SFT** - Raw text and ChatML-formatted samples CANNOT be trained together. Raw text → DAPT stage. ChatML → SFT stage. Mixing causes "systemsystemsystem..." output.
 18. **Verify format consistency before training** - Use `is_chatml_formatted()` check to ensure 100% of SFT samples have proper chat template
+19. **Don't SFT on instruct models with conflicting chat formats** - If the base model already has a native format (e.g., Qwen3's `<think>` mode), your ChatML will conflict. Use the **base** (non-instruct) model instead
+20. **Lower the learning rate for instruct models** - 1e-4 is too aggressive for models that already have instruction-following capability; causes catastrophic forgetting. Use 2e-5 or lower
 
 ---
 
@@ -1246,7 +1420,12 @@ Implement a hybrid architecture with two paths:
 ## References
 
 ### Training Notebooks
-- v0.7 Training notebook (CURRENT): `/notebooks/Vazhi_Training_Fixed.ipynb`
+- v3.4 Base model notebook (LATEST): `/notebooks/Vazhi_SFT_v3_4_Base.ipynb`
+- v3.3 Clean training: `/notebooks/Vazhi_SFT_v3_3_Clean.ipynb`
+- v3.2 Fixed training: `/notebooks/Vazhi_SFT_v3_2_Fixed.ipynb`
+- v3.1 Balanced SFT: `/notebooks/Vazhi_SFT_v3_1_Balanced.ipynb`
+- Test existing models: `/notebooks/Test_Existing_Models.ipynb`
+- v0.7 Training notebook: `/notebooks/Vazhi_Training_Fixed.ipynb`
 - v0.7 Fork base model: `/notebooks/Vazhi_Fork_Base_Model.ipynb`
 - v0.6 Sarvam-2B notebook: `/notebooks/Vazhi_Sarvam2B_Finetune.ipynb`
 - v0.5 Qwen-0.5B notebook: `/notebooks/Vazhi_Qwen05B_Training.ipynb`

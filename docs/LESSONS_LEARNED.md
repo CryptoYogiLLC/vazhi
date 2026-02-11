@@ -520,6 +520,10 @@ For conversational content:
 | 33 | Accessibility from the start | Semantics widgets are easy to add early |
 | 34 | Migration frameworks prevent data loss | Track schema versions from day one |
 | 35 | i18n infrastructure early | ARB files scale better than hardcoded strings |
+| 36 | **Don't SFT on instruct models with conflicting chat formats** | Qwen3's native `<think>` mode conflicts with ChatML — use base model instead |
+| 37 | Lower LR for instruct models (2e-5 not 1e-4) | 1e-4 causes catastrophic forgetting of existing instruction-following |
+| 38 | Qwen3 has internal bf16 ops incompatible with P100/T4 | Use FP32 training mode (fp16=False, bf16=False) on non-Ampere GPUs |
+| 39 | Test existing HF checkpoints before new training runs | A previously uploaded model may still work — check before wasting compute |
 
 ---
 
@@ -1049,5 +1053,41 @@ The code review revealed that many security features (encrypted storage, input v
 
 ---
 
+## Phase 9: The Instruct vs Base Model Discovery (v3.2-v3.4)
+
+### v3.2: Fixed Data Format, New Issues
+
+After v3.1's data format crisis, v3.2 correctly filtered for ChatML-only data and added diverse samples from IndicAlign. However, the Qwen3-0.6B model has internal bf16 operations that caused fp16 training issues on T4 GPUs.
+
+### v3.3: FP32 Training, Wrong Base Model
+
+v3.3 fixed the precision issue by training in FP32 mode (both fp16 and bf16 disabled). Training completed but the model output was broken.
+
+**Root Cause:** Qwen3-0.6B is an **instruct** model with native `<think>` reasoning tokens. Our ChatML format (`<|im_start|>system/user/assistant<|im_end|>`) conflicted with its native chat template. The model tried to produce `<think>` blocks within our structure, producing broken output.
+
+Additionally, learning rate 1e-4 was too aggressive for an already instruction-tuned model, causing catastrophic forgetting.
+
+### v3.4: The Base Model Pivot
+
+**Key Insight:** When the target model already has instruction-tuning with a specific chat format, SFT with a different format fights against the model's existing behavior. Using the **base** (non-instruct) variant provides a clean slate.
+
+**v3.4 Changes:**
+- **Qwen3-0.6B-Base** instead of Qwen3-0.6B (instruct)
+- LR reduced from 1e-4 to 2e-5 (safer for fine-tuning)
+- LoRA rank increased from 16 to 32 (base model needs more capacity to learn instruction-following)
+- 3 epochs instead of 2 (base model needs more training passes)
+- ChatML special tokens (`<|im_start|>`, `<|im_end|>`) explicitly added to tokenizer since base model doesn't have them
+
+**Status:** Not yet validated on Kaggle. Also created `Test_Existing_Models.ipynb` to check if any previously uploaded HF models still work before investing in a new training run.
+
+### Lessons Learned from Phase 9
+
+- **#36**: Don't SFT on instruct models with conflicting chat formats — use the base model
+- **#37**: Lower LR for instruct models (2e-5 not 1e-4) — prevents catastrophic forgetting
+- **#38**: Qwen3 has internal bf16 ops — use FP32 training on non-Ampere GPUs (P100, T4)
+- **#39**: Test existing HF checkpoints before new training runs — don't waste compute
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-10*
+*Last updated: 2026-02-11*

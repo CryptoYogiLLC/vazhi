@@ -3,11 +3,13 @@
 ## Status
 **Accepted** - 2026-02-08
 
+> **Note (Feb 2026):** The model reference below (Gemma-2B Tamil, 1.63GB) is outdated. Gemma-2B was attempted in v0.7 but failed due to tokenizer corruption. The current target is Qwen3-0.6B-Base (<1GB GGUF). The hybrid architecture design itself remains fully valid and implemented. See `models/TRAINING_LOG.md` for current model status.
+
 ## Context
 
 VAZHI is designed as an offline-first Tamil AI assistant. The core challenge is:
 
-1. **Model size**: The LLM (Gemma-2B Tamil Q4_K_M) is 1.63 GB
+1. **Model size**: The target LLM is <1GB GGUF (currently Qwen3-0.6B-Base)
 2. **App store limits**: Play Store recommends <150 MB initial download
 3. **User acquisition**: Large apps have lower install rates
 4. **Inference costs**: Cloud fallback would incur ongoing API costs

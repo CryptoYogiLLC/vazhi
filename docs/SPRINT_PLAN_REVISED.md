@@ -171,12 +171,21 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - [ ] Full Thirukkural database (1,330 verses)
 - [ ] Complete government schemes database
 - [ ] Hospital directory population
-- [ ] **NEW TARGET: Qwen3-0.6B (<1GB GGUF)** - Two-stage training in progress
-- [ ] Micro-DAPT + SFT pipeline on Kaggle
+- [ ] **AI Model: Qwen3-0.6B-Base SFT (<1GB GGUF target)**
+- [ ] Validate v3.4 notebook on Kaggle (or test existing HF checkpoints first)
+- [ ] GGUF conversion and Tamil output quality validation
 
-**Model Pivot (2026-02-09):** Pivoted from Gemma-2B to Qwen3-0.6B due to tokenizer corruption in Gemma base model (OrderedVocab holes at indices 1,2). New approach uses two-stage training:
-1. **Micro-DAPT**: 80% Vazhi outputs + 20% Sangraha Tamil corpus for fluency
-2. **SFT**: Instruction tuning with assistant-only loss masking
+**Model Training History (9 failed attempts):**
+- v0.1-v0.4: Qwen2.5-3B — data quality issues then GGUF broke Tamil
+- v0.5: Qwen2.5-0.5B — LoRA corrupted model
+- v0.6: Sarvam-2B — 4-bit training instability
+- v0.7: Gemma-2B Tamil — tokenizer corruption broke GGUF
+- v3.1: Qwen3-0.6B — mixed data formats (raw + ChatML)
+- v3.2: Qwen3-0.6B — fp16 issues on T4
+- v3.3: Qwen3-0.6B (instruct) — native `<think>` tokens conflicted with ChatML
+- **v3.4 (LATEST):** Qwen3-0.6B-**Base** — clean slate, LR 2e-5, LoRA r=32, 3 epochs. Not yet run.
+
+See `models/TRAINING_LOG.md` for full details and 39 lessons learned.
 
 ### Phase 4: Polish & Launch
 - [ ] Expert directory feature
@@ -201,8 +210,8 @@ Multi-agent code review completed with 19 GitHub issues closed.
 | Testing Infrastructure | Local only | HuggingFace Space | Fast iteration during development |
 | Model Hosting | Self-hosted | HuggingFace | Free hosting, easy access |
 | MVP Inference | Cloud API | On-device GGUF | Offline-first is core to VAZHI vision |
-| AI Model | Gemma-2B Tamil (1.6GB) | **Qwen3-0.6B (<1GB)** | Gemma tokenizer corrupted; Qwen3 has native thinking, better size |
-| Training Approach | Single SFT pass | **Two-stage (Micro-DAPT → SFT)** | Preserves Tamil fluency AND instruction-following |
+| AI Model | Gemma-2B Tamil (1.6GB) | **Qwen3-0.6B-Base (<1GB)** | Gemma tokenizer corrupted; Qwen3 instruct conflicted with ChatML; using base model |
+| Training Approach | Single SFT pass | **ChatML SFT on base model** | Instruct model's `<think>` tokens conflicted; base model is clean slate |
 
 **Note**: HuggingFace Space is for development/testing only. The MVP will have fully offline on-device inference.
 
@@ -230,9 +239,10 @@ Multi-agent code review completed with 19 GitHub issues closed.
 
 ---
 
-*Last updated: February 10, 2026*
+*Last updated: February 11, 2026*
 *Code Review: 19 issues closed, 228 tests passing*
-*Training: Qwen3-0.6B Micro-DAPT + SFT in progress on Kaggle*
+*Training: v3.4 (Qwen3-0.6B-Base SFT) pending validation on Kaggle*
 *Current milestone: Phase 3 - Data Population & AI Model*
 *Architecture: Hybrid Retrieval (Deterministic + Optional AI)*
-*Target Model: Qwen3-0.6B (<1GB GGUF) with two-stage training*
+*Target Model: Qwen3-0.6B-Base (<1GB GGUF) with ChatML SFT*
+*Training attempts: 9 failed, 39 lessons documented*

@@ -135,7 +135,17 @@ class KnowledgeDatabase {
       'lib/database/data/emergency_contacts.sql',
       'lib/database/data/thirukkural.sql',
       'lib/database/data/schemes.sql',
+      'lib/database/data/schemes_additional.sql',
       'lib/database/data/hospitals.sql',
+      'lib/database/data/siddhars.sql',
+      'lib/database/data/festivals.sql',
+      'lib/database/data/scam_patterns.sql',
+      'lib/database/data/cyber_safety_tips.sql',
+      'lib/database/data/scholarships.sql',
+      'lib/database/data/exams.sql',
+      'lib/database/data/legal_rights.sql',
+      'lib/database/data/legal_templates.sql',
+      'lib/database/data/siddha_medicine.sql',
     ];
 
     _log('Starting _loadInitialData');
@@ -259,6 +269,96 @@ class KnowledgeDatabase {
           type,
           'emergency அவசரம் ' || type || ' ' || COALESCE(district, '')
         FROM emergency_contacts
+      ''');
+
+      // Populate from siddhars
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'siddhar',
+          'culture',
+          name_tamil,
+          name_english,
+          brief_tamil || ' ' || COALESCE(teachings, ''),
+          brief_english || ' ' || COALESCE(expertise, ''),
+          'சித்தர் siddhar ' || name_tamil || ' ' || name_english
+        FROM siddhars
+      ''');
+
+      // Populate from festivals
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'festival',
+          'culture',
+          name_tamil,
+          name_english,
+          significance_tamil || ' ' || COALESCE(rituals_tamil, ''),
+          significance_english || ' ' || COALESCE(rituals_english, ''),
+          'திருவிழா festival ' || COALESCE(type, '') || ' ' || COALESCE(tamil_month, '')
+        FROM festivals
+      ''');
+
+      // Populate from siddha_medicine
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'siddha_medicine',
+          'health',
+          name_tamil,
+          COALESCE(name_english, name_tamil),
+          description_tamil || ' ' || COALESCE(preparation, ''),
+          COALESCE(description_english, ''),
+          'சித்த மருத்துவம் siddha medicine ' || COALESCE(category, '') || ' ' || COALESCE(traditional_use, '')
+        FROM siddha_medicine
+      ''');
+
+      // Populate from cyber_safety_tips
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'cyber_safety_tip',
+          'security',
+          title_tamil,
+          title_english,
+          tip_tamil,
+          tip_english,
+          'இணைய பாதுகாப்பு cyber safety ' || COALESCE(category, '')
+        FROM cyber_safety_tips
+      ''');
+
+      // Populate from exams
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'exam',
+          'education',
+          COALESCE(name_tamil, name_english),
+          name_english,
+          COALESCE(eligibility_tamil, '') || ' ' || COALESCE(exam_pattern, ''),
+          COALESCE(eligibility_english, ''),
+          'தேர்வு exam ' || COALESCE(conducting_body, '') || ' ' || COALESCE(level, '')
+        FROM exams
+      ''');
+
+      // Populate from legal_rights
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'legal_right',
+          'legal',
+          title_tamil,
+          title_english,
+          description_tamil || ' ' || COALESCE(how_to_claim_tamil, ''),
+          description_english || ' ' || COALESCE(how_to_claim_english, ''),
+          'உரிமை rights சட்டம் legal ' || COALESCE(category, '') || ' ' || COALESCE(act_name, '')
+        FROM legal_rights
       ''');
 
       final newCount = await db.rawQuery(
@@ -624,6 +724,309 @@ class KnowledgeDatabase {
   }
 
   // ============================================================================
+  // SIDDHARS QUERIES
+  // ============================================================================
+
+  /// Get all Siddhars
+  static Future<List<Map<String, dynamic>>> getAllSiddhars() async {
+    final db = await database;
+    return db.query('siddhars', orderBy: 'id ASC');
+  }
+
+  /// Get Siddhar by name
+  static Future<List<Map<String, dynamic>>> searchSiddhars(
+    String query,
+  ) async {
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) return [];
+
+    final db = await database;
+    final searchTerm = '%$sanitized%';
+    return db.query(
+      'siddhars',
+      where: 'name_tamil LIKE ? OR name_english LIKE ? OR expertise LIKE ?',
+      whereArgs: [searchTerm, searchTerm, searchTerm],
+      limit: 20,
+    );
+  }
+
+  // ============================================================================
+  // FESTIVALS QUERIES
+  // ============================================================================
+
+  /// Get all festivals
+  static Future<List<Map<String, dynamic>>> getAllFestivals({
+    String? type,
+  }) async {
+    final db = await database;
+    if (type != null) {
+      return db.query(
+        'festivals',
+        where: 'type = ?',
+        whereArgs: [type],
+        orderBy: 'id ASC',
+      );
+    }
+    return db.query('festivals', orderBy: 'id ASC');
+  }
+
+  /// Search festivals
+  static Future<List<Map<String, dynamic>>> searchFestivals(
+    String query,
+  ) async {
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) return [];
+
+    final db = await database;
+    final searchTerm = '%$sanitized%';
+    return db.query(
+      'festivals',
+      where:
+          'name_tamil LIKE ? OR name_english LIKE ? OR significance_tamil LIKE ?',
+      whereArgs: [searchTerm, searchTerm, searchTerm],
+      limit: 20,
+    );
+  }
+
+  // ============================================================================
+  // SCAM PATTERNS QUERIES
+  // ============================================================================
+
+  /// Get all scam patterns
+  static Future<List<Map<String, dynamic>>> getAllScamPatterns({
+    String? type,
+  }) async {
+    final db = await database;
+    if (type != null) {
+      return db.query('scam_patterns', where: 'type = ?', whereArgs: [type]);
+    }
+    return db.query('scam_patterns');
+  }
+
+  /// Search scam patterns
+  static Future<List<Map<String, dynamic>>> searchScamPatterns(
+    String query,
+  ) async {
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) return [];
+
+    final db = await database;
+    final searchTerm = '%$sanitized%';
+    return db.query(
+      'scam_patterns',
+      where: '''
+        name_tamil LIKE ? OR name_english LIKE ? OR
+        description_tamil LIKE ? OR red_flags_tamil LIKE ? OR
+        example_messages LIKE ?
+      ''',
+      whereArgs: [
+        searchTerm,
+        searchTerm,
+        searchTerm,
+        searchTerm,
+        searchTerm,
+      ],
+      limit: 20,
+    );
+  }
+
+  // ============================================================================
+  // CYBER SAFETY TIPS QUERIES
+  // ============================================================================
+
+  /// Get all cyber safety tips
+  static Future<List<Map<String, dynamic>>> getCyberSafetyTips({
+    String? category,
+  }) async {
+    final db = await database;
+    if (category != null) {
+      return db.query(
+        'cyber_safety_tips',
+        where: 'category = ?',
+        whereArgs: [category],
+        orderBy: 'priority ASC',
+      );
+    }
+    return db.query('cyber_safety_tips', orderBy: 'priority ASC');
+  }
+
+  // ============================================================================
+  // SCHOLARSHIPS QUERIES
+  // ============================================================================
+
+  /// Get all scholarships
+  static Future<List<Map<String, dynamic>>> getAllScholarships({
+    String? educationLevel,
+    String? category,
+    bool activeOnly = true,
+  }) async {
+    final db = await database;
+    final conditions = <String>[];
+    final args = <dynamic>[];
+
+    if (educationLevel != null) {
+      conditions.add('education_level = ?');
+      args.add(educationLevel);
+    }
+    if (category != null) {
+      conditions.add('category = ?');
+      args.add(category);
+    }
+    if (activeOnly) {
+      conditions.add('is_active = 1');
+    }
+
+    return db.query(
+      'scholarships',
+      where: conditions.isNotEmpty ? conditions.join(' AND ') : null,
+      whereArgs: args.isNotEmpty ? args : null,
+    );
+  }
+
+  /// Search scholarships
+  static Future<List<Map<String, dynamic>>> searchScholarships(
+    String query,
+  ) async {
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) return [];
+
+    final db = await database;
+    final searchTerm = '%$sanitized%';
+    return db.query(
+      'scholarships',
+      where: 'name_tamil LIKE ? OR name_english LIKE ? OR description_tamil LIKE ?',
+      whereArgs: [searchTerm, searchTerm, searchTerm],
+      limit: 20,
+    );
+  }
+
+  // ============================================================================
+  // EXAMS QUERIES
+  // ============================================================================
+
+  /// Get all exams
+  static Future<List<Map<String, dynamic>>> getAllExams({
+    String? level,
+  }) async {
+    final db = await database;
+    if (level != null) {
+      return db.query('exams', where: 'level = ?', whereArgs: [level]);
+    }
+    return db.query('exams');
+  }
+
+  /// Get exam by ID
+  static Future<Map<String, dynamic>?> getExamById(String id) async {
+    final db = await database;
+    final result = await db.query('exams', where: 'id = ?', whereArgs: [id]);
+    return result.isNotEmpty ? result.first : null;
+  }
+
+  // ============================================================================
+  // LEGAL QUERIES
+  // ============================================================================
+
+  /// Get all legal rights
+  static Future<List<Map<String, dynamic>>> getLegalRights({
+    String? category,
+  }) async {
+    final db = await database;
+    if (category != null) {
+      return db.query(
+        'legal_rights',
+        where: 'category = ?',
+        whereArgs: [category],
+      );
+    }
+    return db.query('legal_rights');
+  }
+
+  /// Search legal rights
+  static Future<List<Map<String, dynamic>>> searchLegalRights(
+    String query,
+  ) async {
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) return [];
+
+    final db = await database;
+    final searchTerm = '%$sanitized%';
+    return db.query(
+      'legal_rights',
+      where: '''
+        title_tamil LIKE ? OR title_english LIKE ? OR
+        description_tamil LIKE ? OR act_name LIKE ?
+      ''',
+      whereArgs: [searchTerm, searchTerm, searchTerm, searchTerm],
+      limit: 20,
+    );
+  }
+
+  /// Get all legal templates
+  static Future<List<Map<String, dynamic>>> getLegalTemplates({
+    String? category,
+  }) async {
+    final db = await database;
+    if (category != null) {
+      return db.query(
+        'legal_templates',
+        where: 'category = ?',
+        whereArgs: [category],
+      );
+    }
+    return db.query('legal_templates');
+  }
+
+  /// Get legal template by ID
+  static Future<Map<String, dynamic>?> getLegalTemplateById(String id) async {
+    final db = await database;
+    final result = await db.query(
+      'legal_templates',
+      where: 'id = ?',
+      whereArgs: [id],
+    );
+    return result.isNotEmpty ? result.first : null;
+  }
+
+  // ============================================================================
+  // SIDDHA MEDICINE QUERIES
+  // ============================================================================
+
+  /// Get all Siddha medicine entries
+  static Future<List<Map<String, dynamic>>> getSiddhaMedicine({
+    String? category,
+  }) async {
+    final db = await database;
+    if (category != null) {
+      return db.query(
+        'siddha_medicine',
+        where: 'category = ?',
+        whereArgs: [category],
+      );
+    }
+    return db.query('siddha_medicine');
+  }
+
+  /// Search Siddha medicine
+  static Future<List<Map<String, dynamic>>> searchSiddhaMedicine(
+    String query,
+  ) async {
+    final sanitized = _sanitizeQuery(query, maxLength: 200);
+    if (sanitized.isEmpty) return [];
+
+    final db = await database;
+    final searchTerm = '%$sanitized%';
+    return db.query(
+      'siddha_medicine',
+      where: '''
+        name_tamil LIKE ? OR name_english LIKE ? OR
+        description_tamil LIKE ? OR traditional_use LIKE ?
+      ''',
+      whereArgs: [searchTerm, searchTerm, searchTerm, searchTerm],
+      limit: 20,
+    );
+  }
+
+  // ============================================================================
   // STATISTICS
   // ============================================================================
 
@@ -640,6 +1043,12 @@ class KnowledgeDatabase {
       'hospitals',
       'emergency_contacts',
       'scam_patterns',
+      'cyber_safety_tips',
+      'scholarships',
+      'exams',
+      'legal_rights',
+      'legal_templates',
+      'siddha_medicine',
     ];
 
     for (final table in tables) {

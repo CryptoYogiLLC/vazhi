@@ -69,6 +69,7 @@ flutter:
     - assets/vazhi_logo_teal_watercolor.jpg
     - lib/database/migrations/
     - lib/database/data/
+    - assets/privacy_policy.md
 
   fonts:
     - family: NotoSansTamil

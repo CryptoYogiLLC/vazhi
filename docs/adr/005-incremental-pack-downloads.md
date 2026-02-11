@@ -1,7 +1,9 @@
 # ADR-005: Incremental Pack Downloads (Base + Pick Strategy)
 
 ## Status
-Accepted
+Accepted (PARTIALLY STALE — model size assumptions below are outdated)
+
+> **Note (Feb 2026):** The model size references in this ADR (Qwen 2.5 3B, 1.7GB base) are from the initial plan. The current target is Qwen3-0.6B-Base with <1GB GGUF. All size calculations, storage scenarios, and download flows need to be recalculated once the final model size is known. The overall Base + Pick Packs strategy remains valid. See `models/TRAINING_LOG.md` for current model status.
 
 ## Date
 2026-02-05

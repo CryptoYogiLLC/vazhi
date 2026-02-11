@@ -1,5 +1,7 @@
 # VAZHI Training Data Regeneration Plan
 
+> **STATUS: ARCHIVED** — This plan was created during the v0.2 data crisis (Feb 6, 2026) and has been fully executed. The data was regenerated into 11,696 samples with ~85% Tamil content. See `models/TRAINING_LOG.md` for the full history.
+
 ## Problem Statement
 
 Current training data (v0.2) has critical issues:

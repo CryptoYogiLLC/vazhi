@@ -7,7 +7,7 @@ DELETE FROM scheme_eligibility;
 DELETE FROM scheme_documents;
 
 -- Tamil Nadu State Schemes
-INSERT OR REPLACE INTO schemes (id, name_tamil, name_english, description_tamil, description_english, level, department, website_url, is_active) VALUES
+INSERT OR REPLACE INTO schemes (id, name_tamil, name_english, description_tamil, description_english, level, department, application_url, is_active) VALUES
 ('tn-cmchis', 'முதலமைச்சர் மருத்துவ காப்பீட்டுத் திட்டம்', 'CM Comprehensive Health Insurance Scheme',
 'தமிழ்நாடு அரசின் இலவச மருத்துவ காப்பீட்டுத் திட்டம். குடும்பத்திற்கு ரூ.5 லட்சம் வரை இலவச சிகிச்சை.',
 'Free health insurance scheme by Tamil Nadu Government. Up to Rs.5 lakh free treatment per family.',
@@ -44,7 +44,7 @@ INSERT OR REPLACE INTO schemes (id, name_tamil, name_english, description_tamil,
 'state', 'Agriculture Department', 'https://www.tnagri.org', 1);
 
 -- Central Government Schemes
-INSERT OR REPLACE INTO schemes (id, name_tamil, name_english, description_tamil, description_english, level, department, website_url, is_active) VALUES
+INSERT OR REPLACE INTO schemes (id, name_tamil, name_english, description_tamil, description_english, level, department, application_url, is_active) VALUES
 ('cg-pmjay', 'ஆயுஷ்மான் பாரத்', 'Ayushman Bharat - PMJAY',
 'மத்திய அரசின் ஆரோக்கிய காப்பீட்டுத் திட்டம். குடும்பத்திற்கு ரூ.5 லட்சம் வரை இலவச சிகிச்சை.',
 'Central government health insurance scheme. Up to Rs.5 lakh free treatment per family.',
@@ -76,7 +76,7 @@ INSERT OR REPLACE INTO schemes (id, name_tamil, name_english, description_tamil,
 'central', 'Ministry of Finance', 'https://www.mudra.org.in', 1);
 
 -- Eligibility criteria
-INSERT OR REPLACE INTO scheme_eligibility (scheme_id, criteria_tamil, criteria_english, criteria_type, criteria_value) VALUES
+INSERT OR REPLACE INTO scheme_eligibility (scheme_id, criteria_tamil, criteria_english, criteria_type, allowed_values) VALUES
 ('tn-cmchis', 'அரசு குடும்ப அட்டை வைத்திருத்தல்', 'Must have family ration card', 'document', 'ration_card'),
 ('tn-cmchis', 'ஆண்டு வருமானம் ரூ.72,000 க்குள்', 'Annual income below Rs.72,000', 'income', '72000'),
 ('tn-kalaignar-magalir', '21 வயதுக்கு மேற்பட்ட பெண்', 'Woman above 21 years', 'age', '21'),
@@ -88,7 +88,7 @@ INSERT OR REPLACE INTO scheme_eligibility (scheme_id, criteria_tamil, criteria_e
 ('cg-pmkisan', '2 ஹெக்டேர் வரை நிலம்', 'Land up to 2 hectares', 'land_size', '2_hectare');
 
 -- Required documents
-INSERT OR REPLACE INTO scheme_documents (scheme_id, document_name_tamil, document_name_english, is_mandatory) VALUES
+INSERT OR REPLACE INTO scheme_documents (scheme_id, document_tamil, document_english, is_mandatory) VALUES
 ('tn-cmchis', 'ஆதார் அட்டை', 'Aadhaar Card', 1),
 ('tn-cmchis', 'குடும்ப அட்டை', 'Ration Card', 1),
 ('tn-cmchis', 'வருமான சான்றிதழ்', 'Income Certificate', 1),

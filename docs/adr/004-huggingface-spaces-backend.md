@@ -1,7 +1,9 @@
 # ADR-004: HuggingFace Spaces as VAZHI Lite Backend
 
 ## Status
-Accepted
+Accepted (PARTIALLY STALE — model references below are outdated; Space is now dev/testing only, not production backend)
+
+> **Note (Feb 2026):** The model references in this ADR (Qwen2.5-3B, 1.7GB) are from the initial plan. The project has since gone through 9+ training iterations and the current target is Qwen3-0.6B-Base (<1GB GGUF). The HuggingFace Space is used for development/testing only; production inference is on-device. See `models/TRAINING_LOG.md` for current model status.
 
 ## Date
 2026-02-05
