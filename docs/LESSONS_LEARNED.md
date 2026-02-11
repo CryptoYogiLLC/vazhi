@@ -513,6 +513,13 @@ For conversational content:
 | 26 | Smaller models (0.6B) > larger models (2B) for <1GB target | Less quantization degradation |
 | 27 | Verify base model tokenizer before training | Corrupted source = corrupted output |
 | 28 | **NEVER mix data formats in SFT** | Raw text + ChatML mixed = "systemsystemsystem..." garbage |
+| 29 | Input validation is non-negotiable | Sanitize ALL user input at service boundaries |
+| 30 | Encrypt sensitive local storage | Hive alone is not secure, use flutter_secure_storage |
+| 31 | Use allowlists for external URLs | Never trust user-provided URLs for downloads |
+| 32 | Verify downloads with checksums | Prevent tampered model files with SHA256 |
+| 33 | Accessibility from the start | Semantics widgets are easy to add early |
+| 34 | Migration frameworks prevent data loss | Track schema versions from day one |
+| 35 | i18n infrastructure early | ARB files scale better than hardcoded strings |
 
 ---
 
@@ -969,6 +976,76 @@ For SFT training:
   chatml_pct = sum(1 for s in samples if is_chatml_formatted(s['text'])) / len(samples)
   print(f"ChatML %: {chatml_pct:.1%}")  # Should be 100% for SFT
   ```
+
+---
+
+## Phase 8: Code Quality & Security Hardening (v0.8.1)
+
+### Multi-Agent Code Review
+
+After completing the hybrid architecture, we conducted a comprehensive code review using a multi-agent system. The review identified 19 issues across critical, high, and medium priority.
+
+**Review Process:**
+1. Four specialized agents analyzed different aspects of the codebase
+2. Consensus report generated with unified recommendations
+3. All 19 issues created as GitHub issues
+4. All issues implemented and closed
+
+### Issues Closed
+
+| Priority | Issues | Description |
+|----------|--------|-------------|
+| **Critical** | #22-25 | URL validation, hash verification, secure timeouts |
+| **High** | #26-32 | Input sanitization, HTTP enforcement, provider namespacing |
+| **High** | #27, #29 | Encrypted storage, training data rebalancing |
+| **Medium** | #33-40 | Migration framework, i18n, accessibility, metrics |
+
+### Security Enhancements Implemented
+
+| Feature | Implementation | File |
+|---------|----------------|------|
+| **Encrypted Storage** | AES cipher + flutter_secure_storage | `feedback_service.dart` |
+| **Input Validation** | SQL/FTS5 injection prevention | `knowledge_database.dart` |
+| **ReDoS Protection** | Regex complexity detection | `query_router.dart` |
+| **URL Allowlist** | Only trusted domains for downloads | `model_download_service.dart` |
+| **SHA256 Verification** | Checksum validation for downloads | `model_download_service.dart` |
+| **Secure Timeouts** | 10-second limits on operations | Throughout services |
+
+### Infrastructure Added
+
+| Component | Purpose | Files |
+|-----------|---------|-------|
+| **Migration Framework** | Versioned schema changes | `lib/database/migrations/` |
+| **i18n/l10n** | English + Tamil localization | `lib/l10n/app_en.arb`, `app_ta.arb` |
+| **Accessibility** | Screen reader support | `widgets/chat_input.dart`, `feedback_buttons.dart` |
+| **Inference Metrics** | First token latency, tokens/sec | `vazhi_local_service.dart` |
+| **JSON Schema** | Training data validation | `schemas/training_sample.schema.json` |
+| **Preflight Validation** | Pre-training checks | `scripts/preflight_validation.py` |
+| **Data Rebalancer** | Thirukkural 71%→25% | `scripts/rebalance_training_data.py` |
+
+### Test Coverage
+
+| Before Review | After Review |
+|---------------|--------------|
+| 85 tests | 228 tests |
+
+### Lessons Learned from Code Review
+
+- **#29**: Input validation is non-negotiable - sanitize ALL user input at service boundaries
+- **#30**: Encrypt sensitive local storage - Hive alone is not secure
+- **#31**: Use allowlists for external URLs - don't trust user-provided URLs
+- **#32**: Verify downloads with checksums - prevent tampered model files
+- **#33**: Accessibility from the start - Semantics widgets are easy to add
+- **#34**: Migration frameworks prevent data loss - track schema versions
+- **#35**: i18n infrastructure early - ARB files scale better than hardcoded strings
+
+### Key Insight
+
+> **Security and accessibility are not afterthoughts — they're architectural decisions.**
+
+The code review revealed that many security features (encrypted storage, input validation) and accessibility patterns (Semantics widgets) could have been built in from the start with minimal overhead. Retrofitting them later required touching many files.
+
+**Recommendation:** For future projects, include security and accessibility in the initial architecture template.
 
 ---
 

@@ -196,9 +196,31 @@ VAZHI now uses a **Hybrid Retrieval Architecture** that works immediately after 
 - [x] Model download: Pause/resume, network detection, storage validation
 - [x] Voice input/output: Tamil STT/TTS
 - [x] Feedback system: In-app with WhatsApp integration
+- [x] **Security hardening: Encrypted storage, input validation** ✅
+- [x] **Code quality: 228 tests passing, 19 issues closed** ✅
 - [ ] AI model training: **Qwen3-0.6B (v0.8) in progress on Kaggle**
 - [ ] Full database population: Pending
 - [ ] App store release: Planned
+
+### Security & Privacy Features
+
+VAZHI takes user privacy seriously. The app includes multiple layers of protection:
+
+| Feature | Description |
+|---------|-------------|
+| **Encrypted Storage** | User feedback encrypted with AES cipher (flutter_secure_storage) |
+| **Input Validation** | SQL/FTS5 injection prevention, query sanitization |
+| **ReDoS Protection** | Regular expression denial-of-service detection |
+| **Secure Downloads** | URL allowlist + SHA256 checksum verification |
+| **Zero Tracking** | No analytics, no telemetry, no cloud sync |
+| **Offline-First** | All data stays on device, no server required |
+
+### Accessibility
+
+- Screen reader support (Semantics widgets)
+- Voice input/output (Tamil STT/TTS)
+- High contrast UI options
+- Large text support
 
 ---
 
@@ -336,12 +358,22 @@ vazhi/
 ├── data/                    # Training datasets
 ├── models/                  # Model training logs
 ├── notebooks/               # Training notebooks (Colab/Kaggle)
+├── schemas/                 # JSON schemas for validation
 ├── scripts/                 # Data processing scripts
+│   ├── preflight_validation.py    # Pre-training checks
+│   ├── rebalance_training_data.py # Dataset balancer
+│   └── validate_training_data.py  # Schema validation
 ├── vazhi_app/               # Flutter mobile app
+│   ├── lib/
+│   │   ├── database/migrations/   # DB migration framework
+│   │   ├── l10n/                  # i18n ARB files (en/ta)
+│   │   ├── services/              # Query router, API, voice
+│   │   └── widgets/               # Accessible UI components
+│   └── test/                      # 228 tests
 ├── huggingface-space/       # Test API
 └── docs/                    # Documentation
     ├── LESSONS_LEARNED.md   # What we learned
-    ├── plans/               # Execution plans
+    ├── SPRINT_PLAN_REVISED.md # Current roadmap
     └── TRAINING_LOG.md      # Training history
 ```
 
@@ -385,4 +417,4 @@ This is a community project. No corporation owns it. You own it.
 
 ---
 
-*Last updated: February 9, 2026*
+*Last updated: February 10, 2026*
