@@ -13,7 +13,9 @@ CREATE TABLE IF NOT EXISTS categories (
     description     TEXT,
     icon            TEXT,
     color           TEXT,
-    sort_order      INTEGER DEFAULT 0
+    sort_order      INTEGER DEFAULT 0,
+    created_at      TEXT DEFAULT (datetime('now')),
+    updated_at      TEXT DEFAULT (datetime('now'))
 );
 
 -- Query Patterns: For routing queries to deterministic vs AI path
@@ -103,7 +105,9 @@ CREATE TABLE IF NOT EXISTS schemes (
     how_to_apply_english    TEXT,
     application_url         TEXT,
     is_active               INTEGER DEFAULT 1,
-    last_updated            TEXT
+    last_updated            TEXT,
+    created_at              TEXT DEFAULT (datetime('now')),
+    updated_at              TEXT DEFAULT (datetime('now'))
 );
 
 CREATE INDEX IF NOT EXISTS idx_schemes_level ON schemes(level);
@@ -284,7 +288,9 @@ CREATE TABLE IF NOT EXISTS hospitals (
     has_emergency   INTEGER DEFAULT 0,
     has_ambulance   INTEGER DEFAULT 0,
     accepts_cmchis  INTEGER DEFAULT 0,
-    accepts_ayushman INTEGER DEFAULT 0
+    accepts_ayushman INTEGER DEFAULT 0,
+    created_at      TEXT DEFAULT (datetime('now')),
+    updated_at      TEXT DEFAULT (datetime('now'))
 );
 
 CREATE INDEX IF NOT EXISTS idx_hosp_district ON hospitals(district);
@@ -338,7 +344,9 @@ CREATE TABLE IF NOT EXISTS scam_patterns (
     prevention_tamil        TEXT,
     prevention_english      TEXT,
     report_to               TEXT,
-    report_number           TEXT
+    report_number           TEXT,
+    created_at              TEXT DEFAULT (datetime('now')),
+    updated_at              TEXT DEFAULT (datetime('now'))
 );
 
 CREATE INDEX IF NOT EXISTS idx_scam_type ON scam_patterns(type);
@@ -375,18 +383,163 @@ CREATE VIRTUAL TABLE IF NOT EXISTS search_index USING fts5(
 );
 
 -- ============================================================================
+-- FTS5 AUTO-POPULATION TRIGGERS
+-- ============================================================================
+
+-- Trigger: Auto-populate search_index when Thirukkural is inserted
+CREATE TRIGGER IF NOT EXISTS fts_thirukkural_insert AFTER INSERT ON thirukkural
+BEGIN
+    INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+    VALUES (
+        NEW.kural_number,
+        'thirukkural',
+        'culture',
+        NEW.athikaram || ' - குறள் ' || NEW.kural_number,
+        NEW.athikaram_english || ' - Kural ' || NEW.kural_number,
+        NEW.verse_full || ' ' || COALESCE(NEW.meaning_tamil, ''),
+        COALESCE(NEW.meaning_english, ''),
+        COALESCE(NEW.keywords_tamil, '') || ' ' || COALESCE(NEW.keywords_english, '')
+    );
+END;
+
+-- Trigger: Auto-populate search_index when schemes are inserted
+CREATE TRIGGER IF NOT EXISTS fts_schemes_insert AFTER INSERT ON schemes
+BEGIN
+    INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+    VALUES (
+        NEW.id,
+        'scheme',
+        'govt',
+        NEW.name_tamil,
+        NEW.name_english,
+        NEW.description_tamil || ' ' || COALESCE(NEW.how_to_apply_tamil, ''),
+        NEW.description_english || ' ' || COALESCE(NEW.how_to_apply_english, ''),
+        COALESCE(NEW.department, '') || ' ' || COALESCE(NEW.benefit_type, '')
+    );
+END;
+
+-- Trigger: Auto-populate search_index when hospitals are inserted
+CREATE TRIGGER IF NOT EXISTS fts_hospitals_insert AFTER INSERT ON hospitals
+BEGIN
+    INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+    VALUES (
+        NEW.id,
+        'hospital',
+        'health',
+        COALESCE(NEW.name_tamil, NEW.name_english),
+        NEW.name_english,
+        COALESCE(NEW.address, '') || ' ' || COALESCE(NEW.city, '') || ' ' || NEW.district,
+        NEW.type || ' ' || COALESCE(NEW.specialty, ''),
+        NEW.district || ' ' || NEW.type
+    );
+END;
+
+-- Trigger: Auto-populate search_index when scam_patterns are inserted
+CREATE TRIGGER IF NOT EXISTS fts_scam_patterns_insert AFTER INSERT ON scam_patterns
+BEGIN
+    INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+    VALUES (
+        NEW.id,
+        'scam_pattern',
+        'security',
+        NEW.name_tamil,
+        NEW.name_english,
+        NEW.description_tamil || ' ' || NEW.red_flags_tamil || ' ' || COALESCE(NEW.prevention_tamil, ''),
+        NEW.description_english || ' ' || NEW.red_flags_english || ' ' || COALESCE(NEW.prevention_english, ''),
+        NEW.type || ' scam fraud மோசடி'
+    );
+END;
+
+-- Trigger: Auto-populate search_index when emergency_contacts are inserted
+CREATE TRIGGER IF NOT EXISTS fts_emergency_insert AFTER INSERT ON emergency_contacts
+BEGIN
+    INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+    VALUES (
+        NEW.id,
+        'emergency_contact',
+        'health',
+        NEW.name_tamil,
+        NEW.name_english,
+        NEW.phone || ' ' || COALESCE(NEW.alternate_phone, ''),
+        NEW.type,
+        'emergency அவசரம் ' || NEW.type || ' ' || COALESCE(NEW.district, '')
+    );
+END;
+
+-- Trigger: Auto-populate search_index when legal_templates are inserted
+CREATE TRIGGER IF NOT EXISTS fts_legal_templates_insert AFTER INSERT ON legal_templates
+BEGIN
+    INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+    VALUES (
+        NEW.id,
+        'legal_template',
+        'legal',
+        NEW.name_tamil,
+        NEW.name_english,
+        NEW.template_tamil || ' ' || COALESCE(NEW.instructions_tamil, ''),
+        COALESCE(NEW.template_english, '') || ' ' || COALESCE(NEW.instructions_english, ''),
+        COALESCE(NEW.category, '') || ' legal சட்டம்'
+    );
+END;
+
+-- Trigger: Auto-populate search_index when scholarships are inserted
+CREATE TRIGGER IF NOT EXISTS fts_scholarships_insert AFTER INSERT ON scholarships
+BEGIN
+    INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+    VALUES (
+        NEW.id,
+        'scholarship',
+        'education',
+        NEW.name_tamil,
+        NEW.name_english,
+        COALESCE(NEW.description_tamil, '') || ' ' || COALESCE(NEW.amount, ''),
+        COALESCE(NEW.description_english, ''),
+        'scholarship உதவித்தொகை ' || COALESCE(NEW.education_level, '') || ' ' || COALESCE(NEW.category, '')
+    );
+END;
+
+-- ============================================================================
 -- METADATA
 -- ============================================================================
 
 -- Database Info: Track schema version and last update
 CREATE TABLE IF NOT EXISTS db_info (
     key             TEXT PRIMARY KEY,
-    value           TEXT NOT NULL
+    value           TEXT NOT NULL,
+    updated_at      TEXT DEFAULT (datetime('now'))
 );
 
 -- Insert initial metadata
 INSERT OR REPLACE INTO db_info (key, value) VALUES ('schema_version', '1');
 INSERT OR REPLACE INTO db_info (key, value) VALUES ('created_at', datetime('now'));
+
+-- ============================================================================
+-- AUTO-UPDATE TRIGGERS FOR updated_at COLUMNS
+-- ============================================================================
+
+-- Trigger: Auto-update updated_at when categories are modified
+CREATE TRIGGER IF NOT EXISTS categories_updated_at AFTER UPDATE ON categories
+BEGIN
+    UPDATE categories SET updated_at = datetime('now') WHERE id = NEW.id;
+END;
+
+-- Trigger: Auto-update updated_at when schemes are modified
+CREATE TRIGGER IF NOT EXISTS schemes_updated_at AFTER UPDATE ON schemes
+BEGIN
+    UPDATE schemes SET updated_at = datetime('now') WHERE id = NEW.id;
+END;
+
+-- Trigger: Auto-update updated_at when hospitals are modified
+CREATE TRIGGER IF NOT EXISTS hospitals_updated_at AFTER UPDATE ON hospitals
+BEGIN
+    UPDATE hospitals SET updated_at = datetime('now') WHERE id = NEW.id;
+END;
+
+-- Trigger: Auto-update updated_at when scam_patterns are modified
+CREATE TRIGGER IF NOT EXISTS scam_patterns_updated_at AFTER UPDATE ON scam_patterns
+BEGIN
+    UPDATE scam_patterns SET updated_at = datetime('now') WHERE id = NEW.id;
+END;
 
 -- Initial data is loaded from separate SQL files in lib/database/data/
 -- See: categories.sql, emergency_contacts.sql, thirukkural.sql, schemes.sql, hospitals.sql

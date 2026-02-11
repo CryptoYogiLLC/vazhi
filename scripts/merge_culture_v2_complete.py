@@ -53,7 +53,10 @@ def load_culture_v2_data() -> list:
     return all_pairs
 
 def complete_merge():
-    """Merge by keeping ALL old data and adding ALL v2 data."""
+    """Merge by keeping ALL old data and adding ALL v2 data.
+
+    IDEMPOTENT: Safe to run multiple times - skips existing IDs.
+    """
 
     # Load existing training data
     with open(DATA_DIR / "vazhi_train.json", "r", encoding="utf-8") as f:
@@ -64,6 +67,10 @@ def complete_merge():
     all_existing = train_data + val_data
     print(f"Loaded {len(all_existing)} existing samples")
 
+    # Build set of existing IDs for idempotent merge
+    existing_ids = {x.get("id") for x in all_existing if x.get("id")}
+    print(f"Found {len(existing_ids)} existing IDs")
+
     # Count old culture data
     old_culture = [x for x in all_existing if x.get("pack") in ["vazhi_panpaadu", "vazhi_culture"]]
     old_thirukkural = [x for x in old_culture if x.get("category") == "thirukkural"]
@@ -73,8 +80,14 @@ def complete_merge():
     v2_data = load_culture_v2_data()
     print(f"Loaded {len(v2_data)} culture v2 samples")
 
-    # Complete merge: ALL existing + ALL v2
-    final_data = all_existing + v2_data
+    # IDEMPOTENT merge: Filter out v2 items that already exist
+    new_v2_data = [x for x in v2_data if x.get("id") not in existing_ids]
+    skipped_count = len(v2_data) - len(new_v2_data)
+    if skipped_count > 0:
+        print(f"Skipped {skipped_count} already-existing v2 samples (idempotent)")
+
+    # Complete merge: ALL existing + NEW v2 only
+    final_data = all_existing + new_v2_data
 
     print(f"\nFinal dataset: {len(final_data)} samples")
 
@@ -118,16 +131,18 @@ def complete_merge():
         json.dump(final_data, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"COMPLETE MERGE SUMMARY")
+    print(f"COMPLETE MERGE SUMMARY (IDEMPOTENT)")
     print(f"{'='*50}")
     print(f"Old data kept:        {len(all_existing)}")
-    print(f"V2 data added:        {len(v2_data)}")
+    print(f"V2 data total:        {len(v2_data)}")
+    print(f"V2 data new (added):  {len(new_v2_data)}")
+    print(f"V2 data skipped:      {skipped_count}")
     print(f"Total:                {len(final_data)}")
     print(f"  - Training:         {len(train_data)}")
     print(f"  - Validation:       {len(val_data)}")
     print(f"\nThirukkural coverage:")
     print(f"  - Old (thematic):   {len(old_thirukkural)}")
-    v2_thirukkural = [x for x in v2_data if "thirukkural" in x.get("category", "")]
+    v2_thirukkural = [x for x in new_v2_data if "thirukkural" in x.get("category", "")]
     print(f"  - V2 (foundational):{len(v2_thirukkural)}")
     print(f"  - Combined:         {len(old_thirukkural) + len(v2_thirukkural)}")
 

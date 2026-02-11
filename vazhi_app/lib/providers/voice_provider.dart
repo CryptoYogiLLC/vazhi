@@ -3,19 +3,22 @@
 /// Manages voice input/output state using Riverpod.
 library;
 
-
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../services/voice_service.dart';
 import '../config/app_config.dart';
 
-/// Voice input service provider
+/// Voice input service provider - with proper disposal
 final voiceInputProvider = Provider<VoiceInputService>((ref) {
-  return VoiceInputService();
+  final service = VoiceInputService();
+  ref.onDispose(() => service.dispose());
+  return service;
 });
 
-/// Voice output service provider
+/// Voice output service provider - with proper disposal to prevent memory leaks
 final voiceOutputProvider = Provider<VoiceOutputService>((ref) {
-  return VoiceOutputService();
+  final service = VoiceOutputService();
+  ref.onDispose(() => service.dispose());
+  return service;
 });
 
 /// Voice input state
@@ -99,12 +102,14 @@ class VoiceInputNotifier extends StateNotifier<VoiceInputState> {
   }
 }
 
-/// Voice input state provider
+/// Voice input state provider - autoDispose for automatic cleanup
 final voiceInputStateProvider =
-    StateNotifierProvider<VoiceInputNotifier, VoiceInputState>((ref) {
-  final service = ref.watch(voiceInputProvider);
-  return VoiceInputNotifier(service);
-});
+    StateNotifierProvider.autoDispose<VoiceInputNotifier, VoiceInputState>((
+      ref,
+    ) {
+      final service = ref.watch(voiceInputProvider);
+      return VoiceInputNotifier(service);
+    });
 
 /// Voice output state
 class VoiceOutputState {
@@ -181,9 +186,11 @@ class VoiceOutputNotifier extends StateNotifier<VoiceOutputState> {
   }
 }
 
-/// Voice output state provider
+/// Voice output state provider - autoDispose for automatic cleanup
 final voiceOutputStateProvider =
-    StateNotifierProvider<VoiceOutputNotifier, VoiceOutputState>((ref) {
-  final service = ref.watch(voiceOutputProvider);
-  return VoiceOutputNotifier(service);
-});
+    StateNotifierProvider.autoDispose<VoiceOutputNotifier, VoiceOutputState>((
+      ref,
+    ) {
+      final service = ref.watch(voiceOutputProvider);
+      return VoiceOutputNotifier(service);
+    });

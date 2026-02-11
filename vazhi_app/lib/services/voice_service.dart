@@ -3,7 +3,6 @@
 /// Handles speech-to-text and text-to-speech functionality.
 library;
 
-
 import 'package:flutter/foundation.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 import 'package:flutter_tts/flutter_tts.dart';
@@ -14,6 +13,7 @@ class VoiceInputService {
   final SpeechToText _speech = SpeechToText();
   bool _isInitialized = false;
   bool _isListening = false;
+  bool _isDisposed = false;
 
   bool get isListening => _isListening;
   bool get isAvailable => _isInitialized;
@@ -95,6 +95,13 @@ class VoiceInputService {
     if (!_isInitialized) await initialize();
     return await _speech.locales();
   }
+
+  /// Dispose resources
+  Future<void> dispose() async {
+    if (_isDisposed) return;
+    _isDisposed = true;
+    await cancel();
+  }
 }
 
 /// Text-to-Speech Service
@@ -102,6 +109,7 @@ class VoiceOutputService {
   final FlutterTts _tts = FlutterTts();
   bool _isInitialized = false;
   bool _isSpeaking = false;
+  bool _isDisposed = false;
   double _speed = AppConfig.defaultTtsSpeed;
 
   bool get isSpeaking => _isSpeaking;
@@ -172,9 +180,19 @@ class VoiceOutputService {
   /// Check if a Tamil voice is available
   Future<bool> hasTamilVoice() async {
     final voices = await getVoices();
-    return voices.any((v) =>
-        v['locale'].toString().toLowerCase().contains('ta') ||
-        v['name'].toString().toLowerCase().contains('tamil'));
+    return voices.any(
+      (v) =>
+          v['locale'].toString().toLowerCase().contains('ta') ||
+          v['name'].toString().toLowerCase().contains('tamil'),
+    );
+  }
+
+  /// Dispose resources - CRITICAL: Must be called to prevent memory leaks
+  Future<void> dispose() async {
+    if (_isDisposed) return;
+    _isDisposed = true;
+    await stop();
+    await _tts.stop();
   }
 }
 

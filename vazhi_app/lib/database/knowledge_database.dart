@@ -4,7 +4,6 @@
 /// Handles initialization, migrations, and provides access to knowledge data.
 library;
 
-
 import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -18,6 +17,13 @@ class KnowledgeDatabase {
   static Database? _database;
   static bool _isInitialized = false;
 
+  /// Debug logging helper - only logs in debug mode
+  static void _log(String message) {
+    if (kDebugMode) {
+      debugPrint('KnowledgeDatabase: $message');
+    }
+  }
+
   /// Get the database instance (singleton)
   static Future<Database> get database async {
     if (_database != null && _isInitialized) {
@@ -30,14 +36,14 @@ class KnowledgeDatabase {
 
   /// Initialize the database
   static Future<Database> _initDatabase() async {
-    print('🔧 KnowledgeDatabase: _initDatabase called');
+    _log('_initDatabase called');
     final dbPath = await getDatabasesPath();
     final path = join(dbPath, _dbName);
-    print('   DB path: $path');
+    _log('DB exists check at path');
 
     // Check if database exists
     final exists = await databaseExists(path);
-    print('   DB exists: $exists');
+    _log('DB exists: $exists');
 
     if (!exists) {
       // Create directory if needed
@@ -56,16 +62,12 @@ class KnowledgeDatabase {
     }
 
     // Open existing database
-    return openDatabase(
-      path,
-      version: _dbVersion,
-      onUpgrade: _onUpgrade,
-    );
+    return openDatabase(path, version: _dbVersion, onUpgrade: _onUpgrade);
   }
 
   /// Create database tables (called on first creation)
   static Future<void> _onCreate(Database db, int version) async {
-    print('🔧 KnowledgeDatabase: _onCreate called with version $version');
+    _log('_onCreate called with version $version');
 
     // Load and execute the initial schema SQL
     String schema;
@@ -73,9 +75,9 @@ class KnowledgeDatabase {
       schema = await rootBundle.loadString(
         'lib/database/migrations/v1_initial_schema.sql',
       );
-      print('✅ Schema loaded: ${schema.length} chars');
+      _log('Schema loaded: ${schema.length} chars');
     } catch (e) {
-      print('❌ FATAL: Cannot load schema: $e');
+      _log('FATAL: Cannot load schema: $e');
       rethrow;
     }
 
@@ -114,14 +116,12 @@ class KnowledgeDatabase {
       'lib/database/data/hospitals.sql',
     ];
 
-    // Use print for stdout visibility
-    print('🔧 KnowledgeDatabase: Starting _loadInitialData');
+    _log('Starting _loadInitialData');
 
     for (final file in dataFiles) {
       try {
-        print('📂 Loading: $file');
         final sql = await rootBundle.loadString(file);
-        print('✅ Loaded $file (${sql.length} chars)');
+        _log('Loaded ${file.split('/').last} (${sql.length} chars)');
 
         // Remove comment lines first, then split by semicolon
         final cleanedSql = sql
@@ -140,29 +140,120 @@ class KnowledgeDatabase {
             await db.execute('$statement;');
             successCount++;
           } catch (e) {
-            print('⚠️ Statement error in $file: $e');
+            _log('Statement error in ${file.split('/').last}: $e');
           }
         }
-        print('✅ Executed $successCount statements from $file');
+        _log('Executed $successCount statements from ${file.split('/').last}');
       } catch (e) {
-        print('❌ Failed to load $file: $e');
-        // Also print the stack trace for debugging
-        print('   Stack: $e');
+        _log('Failed to load ${file.split('/').last}: $e');
       }
     }
 
     // Verify data loaded
     try {
-      final kuralCount = await db.rawQuery('SELECT COUNT(*) as count FROM thirukkural');
-      print('📊 Thirukkural count: ${kuralCount.first['count']}');
+      final kuralCount = await db.rawQuery(
+        'SELECT COUNT(*) as count FROM thirukkural',
+      );
+      _log('Thirukkural count: ${kuralCount.first['count']}');
     } catch (e) {
-      print('❌ Cannot count thirukkural: $e');
+      _log('Cannot count thirukkural: $e');
     }
-    print('🔧 KnowledgeDatabase: _loadInitialData complete');
+
+    // Populate FTS index for existing data (in case triggers didn't fire)
+    await _populateFtsIndex(db);
+
+    _log('_loadInitialData complete');
+  }
+
+  /// Populate FTS5 search index for existing data
+  static Future<void> _populateFtsIndex(Database db) async {
+    _log('Populating FTS index');
+
+    try {
+      // Check if FTS is already populated
+      final ftsCount = await db.rawQuery(
+        'SELECT COUNT(*) as count FROM search_index',
+      );
+      if ((ftsCount.first['count'] as int) > 0) {
+        _log('FTS index already populated');
+        return;
+      }
+
+      // Populate from Thirukkural
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          kural_number,
+          'thirukkural',
+          'culture',
+          athikaram || ' - குறள் ' || kural_number,
+          athikaram_english || ' - Kural ' || kural_number,
+          verse_full || ' ' || COALESCE(meaning_tamil, ''),
+          COALESCE(meaning_english, ''),
+          COALESCE(keywords_tamil, '') || ' ' || COALESCE(keywords_english, '')
+        FROM thirukkural
+      ''');
+
+      // Populate from schemes
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'scheme',
+          'govt',
+          name_tamil,
+          name_english,
+          description_tamil || ' ' || COALESCE(how_to_apply_tamil, ''),
+          description_english || ' ' || COALESCE(how_to_apply_english, ''),
+          COALESCE(department, '') || ' ' || COALESCE(benefit_type, '')
+        FROM schemes
+      ''');
+
+      // Populate from hospitals
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'hospital',
+          'health',
+          COALESCE(name_tamil, name_english),
+          name_english,
+          COALESCE(address, '') || ' ' || COALESCE(city, '') || ' ' || district,
+          type || ' ' || COALESCE(specialty, ''),
+          district || ' ' || type
+        FROM hospitals
+      ''');
+
+      // Populate from emergency_contacts
+      await db.execute('''
+        INSERT INTO search_index (content_id, content_type, category_id, title_tamil, title_english, content_tamil, content_english, keywords)
+        SELECT
+          id,
+          'emergency_contact',
+          'health',
+          name_tamil,
+          name_english,
+          phone || ' ' || COALESCE(alternate_phone, ''),
+          type,
+          'emergency அவசரம் ' || type || ' ' || COALESCE(district, '')
+        FROM emergency_contacts
+      ''');
+
+      final newCount = await db.rawQuery(
+        'SELECT COUNT(*) as count FROM search_index',
+      );
+      _log('FTS index populated with ${newCount.first['count']} entries');
+    } catch (e) {
+      _log('FTS population error: $e');
+    }
   }
 
   /// Handle database upgrades
-  static Future<void> _onUpgrade(Database db, int oldVersion, int newVersion) async {
+  static Future<void> _onUpgrade(
+    Database db,
+    int oldVersion,
+    int newVersion,
+  ) async {
     // Future migrations go here
     // if (oldVersion < 2) { await _migrateToV2(db); }
   }
@@ -303,11 +394,7 @@ class KnowledgeDatabase {
   /// Get scheme by ID
   static Future<Map<String, dynamic>?> getSchemeById(String id) async {
     final db = await database;
-    final result = await db.query(
-      'schemes',
-      where: 'id = ?',
-      whereArgs: [id],
-    );
+    final result = await db.query('schemes', where: 'id = ?', whereArgs: [id]);
     return result.isNotEmpty ? result.first : null;
   }
 
@@ -364,7 +451,8 @@ class KnowledgeDatabase {
   }
 
   /// Get national emergency numbers
-  static Future<List<Map<String, dynamic>>> getNationalEmergencyNumbers() async {
+  static Future<List<Map<String, dynamic>>>
+  getNationalEmergencyNumbers() async {
     final db = await database;
     return db.query(
       'emergency_contacts',
@@ -404,7 +492,9 @@ class KnowledgeDatabase {
   }
 
   /// Search hospitals
-  static Future<List<Map<String, dynamic>>> searchHospitals(String query) async {
+  static Future<List<Map<String, dynamic>>> searchHospitals(
+    String query,
+  ) async {
     final db = await database;
     final searchTerm = '%$query%';
     return db.query(
@@ -483,7 +573,9 @@ class KnowledgeDatabase {
 
     for (final table in tables) {
       try {
-        final result = await db.rawQuery('SELECT COUNT(*) as count FROM $table');
+        final result = await db.rawQuery(
+          'SELECT COUNT(*) as count FROM $table',
+        );
         stats[table] = result.first['count'] as int;
       } catch (_) {
         stats[table] = 0;

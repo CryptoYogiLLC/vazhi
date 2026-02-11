@@ -4,7 +4,6 @@
 /// storage checks, and progress tracking.
 library;
 
-
 import 'dart:async';
 import 'dart:io';
 import 'package:connectivity_plus/connectivity_plus.dart';
@@ -130,8 +129,25 @@ class ModelDownloadService {
   /// Minimum required space (model size + 200MB buffer)
   static const int requiredSpace = expectedModelSize + 200 * 1024 * 1024;
 
-  /// Expected MD5 checksum (optional - for verification)
-  static const String? expectedChecksum = null; // Set when available
+  /// Expected SHA256 checksum for model integrity verification
+  /// TODO: Update this when new model is published
+  static const String? expectedSha256 =
+      null; // Set to actual hash when available
+
+  /// Allowed hosts for redirect validation (security: prevent MITM redirect attacks)
+  static const Set<String> _allowedHosts = {
+    'huggingface.co',
+    'cdn-lfs.huggingface.co',
+    'cdn-lfs-us-1.huggingface.co',
+    'cdn-lfs-us-2.huggingface.co',
+    'cdn-lfs-eu-1.huggingface.co',
+    'cdn-lfs-eu-2.huggingface.co',
+    'cdn-lfs.hf.co',
+    's3.amazonaws.com', // HF uses S3 for some CDN
+  };
+
+  /// Maximum redirects to follow
+  static const int _maxRedirects = 5;
 
   final _progressController = StreamController<DownloadProgress>.broadcast();
   http.Client? _client;
@@ -144,6 +160,17 @@ class ModelDownloadService {
 
   /// Stream of download progress updates
   Stream<DownloadProgress> get progressStream => _progressController.stream;
+
+  /// Validate that a URL is from an allowed host (security: prevent redirect attacks)
+  bool _isAllowedUrl(Uri url) {
+    if (!url.hasScheme || url.scheme != 'https') {
+      return false; // Only HTTPS allowed
+    }
+    final host = url.host.toLowerCase();
+    return _allowedHosts.any(
+      (allowed) => host == allowed || host.endsWith('.$allowed'),
+    );
+  }
 
   /// Get current network type
   Future<NetworkType> getNetworkType() async {
@@ -339,15 +366,20 @@ class ModelDownloadService {
       // Follow redirects and get final URL
       var url = Uri.parse(modelUrl);
 
+      // Validate initial URL
+      if (!_isAllowedUrl(url)) {
+        throw ModelDownloadException('பாதுகாப்பு பிழை: அனுமதிக்கப்படாத URL');
+      }
+
       // Create request with range header for resume
       final headers = <String, String>{};
       if (_resumePosition > 0) {
         headers['Range'] = 'bytes=$_resumePosition-';
       }
 
-      // Follow redirects
+      // Follow redirects with security validation
       http.StreamedResponse response;
-      for (var i = 0; i < 5; i++) {
+      for (var i = 0; i < _maxRedirects; i++) {
         final request = http.Request('GET', url);
         request.headers.addAll(headers);
         response = await _client!.send(request);
@@ -360,10 +392,26 @@ class ModelDownloadService {
           if (location == null) {
             throw ModelDownloadException('Redirect without location');
           }
-          url = Uri.parse(location);
-          if (!url.hasScheme) {
-            url = Uri.parse(modelUrl).resolve(location);
+
+          // Parse and validate redirect URL
+          Uri redirectUrl;
+          try {
+            redirectUrl = Uri.parse(location);
+            if (!redirectUrl.hasScheme) {
+              redirectUrl = url.resolve(location);
+            }
+          } catch (e) {
+            throw ModelDownloadException('Invalid redirect URL');
           }
+
+          // Security: Validate redirect destination is allowed
+          if (!_isAllowedUrl(redirectUrl)) {
+            throw ModelDownloadException(
+              'பாதுகாப்பு பிழை: அனுமதிக்கப்படாத redirect URL',
+            );
+          }
+
+          url = redirectUrl;
           await response.stream.drain();
           continue;
         }
@@ -540,7 +588,7 @@ class ModelDownloadService {
     }
   }
 
-  /// Verify downloaded file
+  /// Verify downloaded file with SHA256 hash
   Future<bool> _verifyDownload(String path) async {
     final file = File(path);
     if (!await file.exists()) return false;
@@ -548,14 +596,35 @@ class ModelDownloadService {
     final size = await file.length();
     if (size < 1000000000) return false; // At least 1GB
 
-    // If we have a checksum, verify it
-    if (expectedChecksum != null) {
-      final bytes = await file.readAsBytes();
-      final digest = md5.convert(bytes);
-      return digest.toString() == expectedChecksum;
+    // If we have a SHA256 checksum, verify it
+    if (expectedSha256 != null) {
+      try {
+        // Stream-based SHA256 for large files (memory efficient)
+        final hash = await _computeSha256(file);
+        if (hash != expectedSha256) {
+          return false;
+        }
+      } catch (e) {
+        // Hash verification failed
+        return false;
+      }
     }
 
     return true;
+  }
+
+  /// Compute SHA256 hash of a file using streaming (memory efficient for large files)
+  Future<String> _computeSha256(File file) async {
+    final sink = _DigestSink();
+    final input = sha256.startChunkedConversion(sink);
+
+    final stream = file.openRead();
+    await for (final chunk in stream) {
+      input.add(chunk);
+    }
+    input.close();
+
+    return sink.value.toString();
   }
 
   void _emitProgress(DownloadProgress progress) {
@@ -579,4 +648,20 @@ class ModelDownloadException implements Exception {
 
   @override
   String toString() => message;
+}
+
+/// Helper sink for computing SHA256 in chunks.
+/// Implements Sink to receive the final digest value.
+class _DigestSink implements Sink<Digest> {
+  Digest? _value;
+
+  Digest get value => _value!;
+
+  @override
+  void add(Digest data) {
+    _value = data;
+  }
+
+  @override
+  void close() {}
 }
