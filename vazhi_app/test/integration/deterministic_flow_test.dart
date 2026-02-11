@@ -178,7 +178,7 @@ void main() {
         final response = await knowledgeService.query('OTP மோசடி');
 
         expect(response.classification.category, KnowledgeCategory.safety);
-        expect(response.classification.type, QueryType.hybrid);
+        expect(response.classification.type, QueryType.deterministic);
       });
 
       test('classifies bank fraud as safety', () async {

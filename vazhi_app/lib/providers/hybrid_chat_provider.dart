@@ -110,6 +110,30 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     this._ref,
   ) : super([]);
 
+  /// Map KnowledgeCategory to pack ID for auto-switching the pack selector
+  static String _categoryToPackId(KnowledgeCategory category) {
+    switch (category) {
+      case KnowledgeCategory.thirukkural:
+      case KnowledgeCategory.siddhars:
+      case KnowledgeCategory.festivals:
+        return 'culture';
+      case KnowledgeCategory.schemes:
+        return 'govt';
+      case KnowledgeCategory.emergency:
+      case KnowledgeCategory.health:
+      case KnowledgeCategory.siddhaMedicine:
+        return 'health';
+      case KnowledgeCategory.safety:
+        return 'security';
+      case KnowledgeCategory.education:
+        return 'education';
+      case KnowledgeCategory.legal:
+        return 'legal';
+      case KnowledgeCategory.general:
+        return 'culture'; // Default fallback
+    }
+  }
+
   /// Send a message with hybrid handling
   Future<void> sendMessage(String text) async {
     if (text.trim().isEmpty) return;
@@ -123,17 +147,21 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     state = [...state, loadingMessage];
 
     try {
-      final pack = _ref.read(currentPackProvider);
-
       // First, try knowledge service
       final knowledgeResponse = await _knowledgeService.query(text);
+
+      // Auto-switch pack selector to match the response category
+      final matchedPack = _categoryToPackId(
+        knowledgeResponse.classification.category,
+      );
+      _ref.read(currentPackProvider.notifier).state = matchedPack;
 
       if (knowledgeResponse.answeredDeterministically &&
           knowledgeResponse.hasResponse) {
         // We have a deterministic answer
         state = [
           ...state.where((m) => m.id != loadingMessage.id),
-          HybridMessage.knowledge(knowledgeResponse, pack: pack),
+          HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
         ];
         return;
       }
@@ -149,17 +177,17 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
         if (modelStatus == ModelStatus.ready &&
             inferenceMode == InferenceMode.local) {
           // Use local AI
-          final aiResponse = await _localService.chat(text, pack: pack);
+          final aiResponse = await _localService.chat(text, pack: matchedPack);
           state = [
             ...state.where((m) => m.id != loadingMessage.id),
-            HybridMessage.ai(aiResponse, pack: pack),
+            HybridMessage.ai(aiResponse, pack: matchedPack),
           ];
         } else if (inferenceMode == InferenceMode.cloud) {
           // Use cloud API
-          final aiResponse = await _apiService.chat(text, pack: pack);
+          final aiResponse = await _apiService.chat(text, pack: matchedPack);
           state = [
             ...state.where((m) => m.id != loadingMessage.id),
-            HybridMessage.ai(aiResponse, pack: pack),
+            HybridMessage.ai(aiResponse, pack: matchedPack),
           ];
         } else {
           // No AI available, show knowledge result with download prompt
@@ -167,7 +195,7 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
           if (knowledgeResponse.hasResponse) {
             state = [
               ...state.where((m) => m.id != loadingMessage.id),
-              HybridMessage.knowledge(knowledgeResponse, pack: pack),
+              HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
             ];
           } else {
             state = [
@@ -183,11 +211,11 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
         if (knowledgeResponse.hasResponse) {
           state = [
             ...state.where((m) => m.id != loadingMessage.id),
-            HybridMessage.knowledge(knowledgeResponse, pack: pack),
+            HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
           ];
         } else {
           // Try AI as fallback
-          await _tryAiFallback(text, pack, loadingMessage);
+          await _tryAiFallback(text, matchedPack, loadingMessage);
         }
       }
     } catch (e) {

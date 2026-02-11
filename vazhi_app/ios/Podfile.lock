@@ -1,8 +1,12 @@
 PODS:
+  - connectivity_plus (0.0.1):
+    - Flutter
   - CwlCatchException (2.2.1):
     - CwlCatchExceptionSupport (~> 2.2.1)
   - CwlCatchExceptionSupport (2.2.1)
   - Flutter (1.0.0)
+  - flutter_secure_storage (6.0.0):
+    - Flutter
   - flutter_tts (0.0.1):
     - Flutter
   - package_info_plus (0.4.5):
@@ -20,7 +24,9 @@ PODS:
     - Flutter
 
 DEPENDENCIES:
+  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/ios`)
   - Flutter (from `Flutter`)
+  - flutter_secure_storage (from `.symlinks/plugins/flutter_secure_storage/ios`)
   - flutter_tts (from `.symlinks/plugins/flutter_tts/ios`)
   - package_info_plus (from `.symlinks/plugins/package_info_plus/ios`)
   - share_plus (from `.symlinks/plugins/share_plus/ios`)
@@ -34,8 +40,12 @@ SPEC REPOS:
     - CwlCatchExceptionSupport
 
 EXTERNAL SOURCES:
+  connectivity_plus:
+    :path: ".symlinks/plugins/connectivity_plus/ios"
   Flutter:
     :path: Flutter
+  flutter_secure_storage:
+    :path: ".symlinks/plugins/flutter_secure_storage/ios"
   flutter_tts:
     :path: ".symlinks/plugins/flutter_tts/ios"
   package_info_plus:
@@ -50,9 +60,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/url_launcher_ios/ios"
 
 SPEC CHECKSUMS:
+  connectivity_plus: cb623214f4e1f6ef8fe7403d580fdad517d2f7dd
   CwlCatchException: 7acc161b299a6de7f0a46a6ed741eae2c8b4d75a
   CwlCatchExceptionSupport: 54ccab8d8c78907b57f99717fb19d4cc3bce02dc
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
+  flutter_secure_storage: 1ed9476fba7e7a782b22888f956cce43e2c62f13
   flutter_tts: 35ac3c7d42412733e795ea96ad2d7e05d0a75113
   package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
   share_plus: 50da8cb520a8f0f65671c6c6a99b3617ed10a58a

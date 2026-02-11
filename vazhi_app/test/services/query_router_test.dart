@@ -128,10 +128,10 @@ void main() {
   });
 
   group('QueryRouter - Safety patterns', () {
-    test('classifies "OTP மோசடி" as hybrid safety', () async {
+    test('classifies "OTP மோசடி" as deterministic safety', () async {
       final result = await router.classify('OTP மோசடி');
 
-      expect(result.type, QueryType.hybrid);
+      expect(result.type, QueryType.deterministic);
       expect(result.category, KnowledgeCategory.safety);
     });
 
@@ -142,9 +142,40 @@ void main() {
     });
   });
 
+  group('QueryRouter - Conversational queries route as hybrid', () {
+    test('classifies "how to file RTI" as hybrid legal', () async {
+      final result = await router.classify('how to file RTI?');
+
+      expect(result.type, QueryType.hybrid);
+      expect(result.category, KnowledgeCategory.legal);
+    });
+
+    test('classifies "how to report scam" as hybrid safety', () async {
+      final result = await router.classify('how to report a scam?');
+
+      expect(result.type, QueryType.hybrid);
+      expect(result.category, KnowledgeCategory.safety);
+    });
+
+    test('classifies "why scholarship important" as hybrid education', () async {
+      final result = await router.classify('why is scholarship important?');
+
+      expect(result.type, QueryType.hybrid);
+      expect(result.category, KnowledgeCategory.education);
+    });
+
+    test('classifies plain keyword as deterministic', () async {
+      final result = await router.classify('rti');
+
+      expect(result.type, QueryType.deterministic);
+      expect(result.category, KnowledgeCategory.legal);
+    });
+  });
+
   group('QueryRouter - AI-required patterns', () {
     test('classifies "how to" questions as AI-required', () async {
-      final result = await router.classify('how to file RTI?');
+      // Query with no deterministic keywords falls through to AI-required
+      final result = await router.classify('how to improve my skills?');
 
       expect(result.type, QueryType.aiRequired);
     });

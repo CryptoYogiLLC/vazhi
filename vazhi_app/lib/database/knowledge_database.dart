@@ -12,7 +12,7 @@ import 'package:sqflite/sqflite.dart';
 
 class KnowledgeDatabase {
   static const String _dbName = 'vazhi_knowledge.db';
-  static const int _dbVersion = 1;
+  static const int _dbVersion = 3;
   static const int _maxQueryLength = 500;
   static const int _maxSearchResults = 50;
 
@@ -37,6 +37,56 @@ class KnowledgeDatabase {
       return null;
     }
     return value;
+  }
+
+  /// Split SQL text into individual statements, respecting quoted strings.
+  /// Naive split by ';' breaks when semicolons appear inside string literals.
+  static List<String> _splitSqlStatements(String sql) {
+    final statements = <String>[];
+    final buffer = StringBuffer();
+    bool inString = false;
+
+    for (int i = 0; i < sql.length; i++) {
+      final char = sql[i];
+
+      if (char == "'" && !inString) {
+        inString = true;
+        buffer.write(char);
+      } else if (char == "'" && inString) {
+        // Check for escaped quote ('')
+        if (i + 1 < sql.length && sql[i + 1] == "'") {
+          buffer.write("''");
+          i++; // Skip next quote
+        } else {
+          inString = false;
+          buffer.write(char);
+        }
+      } else if (char == ';' && !inString) {
+        final stmt = buffer.toString().trim();
+        if (stmt.isNotEmpty) {
+          statements.add(stmt);
+        }
+        buffer.clear();
+      } else {
+        buffer.write(char);
+      }
+    }
+
+    // Handle last statement without trailing semicolon
+    final remaining = buffer.toString().trim();
+    if (remaining.isNotEmpty) {
+      statements.add(remaining);
+    }
+
+    return statements;
+  }
+
+  /// Remove SQL comment lines (lines starting with --)
+  static String _removeComments(String sql) {
+    return sql
+        .split('\n')
+        .where((line) => !line.trim().startsWith('--'))
+        .join('\n');
   }
 
   /// Debug logging helper - only logs in debug mode
@@ -103,17 +153,9 @@ class KnowledgeDatabase {
       rethrow;
     }
 
-    // Split by semicolon and execute each statement
-    // First, remove all SQL comments (lines starting with --)
-    final cleanedSchema = schema
-        .split('\n')
-        .where((line) => !line.trim().startsWith('--'))
-        .join('\n');
-
-    final statements = cleanedSchema
-        .split(';')
-        .map((s) => s.trim())
-        .where((s) => s.isNotEmpty);
+    // Split by semicolon (respecting quoted strings) and execute each statement
+    final cleanedSchema = _removeComments(schema);
+    final statements = _splitSqlStatements(cleanedSchema);
 
     for (final statement in statements) {
       try {
@@ -155,16 +197,9 @@ class KnowledgeDatabase {
         final sql = await rootBundle.loadString(file);
         _log('Loaded ${file.split('/').last} (${sql.length} chars)');
 
-        // Remove comment lines first, then split by semicolon
-        final cleanedSql = sql
-            .split('\n')
-            .where((line) => !line.trim().startsWith('--'))
-            .join('\n');
-
-        final statements = cleanedSql
-            .split(';')
-            .map((s) => s.trim())
-            .where((s) => s.isNotEmpty);
+        // Remove comment lines first, then split by semicolon (respecting quotes)
+        final cleanedSql = _removeComments(sql);
+        final statements = _splitSqlStatements(cleanedSql);
 
         int successCount = 0;
         for (final statement in statements) {
@@ -376,8 +411,12 @@ class KnowledgeDatabase {
     int oldVersion,
     int newVersion,
   ) async {
-    // Future migrations go here
-    // if (oldVersion < 2) { await _migrateToV2(db); }
+    if (oldVersion < 3) {
+      // V2: Load all new data packs added for lite release
+      // V3: Reload data with fixed SQL parser (handles semicolons in quotes)
+      _log('Upgrading from v$oldVersion to v$newVersion - reloading data packs');
+      await _loadInitialData(db);
+    }
   }
 
   /// Get schema version
@@ -680,7 +719,7 @@ class KnowledgeDatabase {
 
     String sql = '''
       SELECT content_id, content_type, category_id, title_tamil, title_english,
-             snippet(search_index, 5, '<b>', '</b>', '...', 32) as snippet
+             snippet(search_index, 5, '<b>', '</b>', '...', 64) as snippet
       FROM search_index
       WHERE search_index MATCH ?
     ''';

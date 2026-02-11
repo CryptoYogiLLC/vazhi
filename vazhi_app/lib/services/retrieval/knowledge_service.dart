@@ -13,6 +13,7 @@ import 'thirukkural_service.dart';
 import 'scheme_service.dart';
 import 'emergency_service.dart';
 import 'healthcare_service.dart';
+import 'generic_data_service.dart';
 
 /// Response from the knowledge service
 class KnowledgeResponse {
@@ -99,6 +100,7 @@ class KnowledgeService {
   final SchemeService _schemeService;
   final EmergencyService _emergencyService;
   final HealthcareService _healthcareService;
+  final GenericDataService _genericDataService;
 
   KnowledgeService({
     QueryRouter? router,
@@ -106,11 +108,13 @@ class KnowledgeService {
     SchemeService? schemeService,
     EmergencyService? emergencyService,
     HealthcareService? healthcareService,
+    GenericDataService? genericDataService,
   }) : _router = router ?? QueryRouter(),
        _thirukkuralService = thirukkuralService ?? ThirukkuralService(),
        _schemeService = schemeService ?? SchemeService(),
        _emergencyService = emergencyService ?? EmergencyService(),
-       _healthcareService = healthcareService ?? HealthcareService();
+       _healthcareService = healthcareService ?? HealthcareService(),
+       _genericDataService = genericDataService ?? GenericDataService();
 
   /// Process a query and return the best response
   Future<KnowledgeResponse> query(String userQuery) async {
@@ -184,9 +188,35 @@ class KnowledgeService {
         return _handleHealth(classification);
 
       case KnowledgeCategory.safety:
-        // Safety queries could use emergency service for numbers
-        // but primarily need AI for explanations
-        return _emergencyService.search(classification.query);
+        return _genericDataService.searchScams(classification.query);
+
+      case KnowledgeCategory.education:
+        if (classification.query.toLowerCase().contains('exam') ||
+            classification.query.toLowerCase().contains('தேர்வு') ||
+            classification.query.toLowerCase().contains('neet') ||
+            classification.query.toLowerCase().contains('tnpsc') ||
+            classification.query.toLowerCase().contains('upsc')) {
+          return _genericDataService.searchExams(classification.query);
+        }
+        return _genericDataService.searchScholarships(classification.query);
+
+      case KnowledgeCategory.legal:
+        if (classification.query.toLowerCase().contains('template') ||
+            classification.query.toLowerCase().contains('மாதிரி') ||
+            classification.query.toLowerCase().contains('rti') ||
+            classification.query.toLowerCase().contains('fir')) {
+          return _genericDataService.searchLegalTemplates(classification.query);
+        }
+        return _genericDataService.searchLegalRights(classification.query);
+
+      case KnowledgeCategory.siddhaMedicine:
+        return _genericDataService.searchSiddhaMedicine(classification.query);
+
+      case KnowledgeCategory.festivals:
+        return _genericDataService.searchFestivals(classification.query);
+
+      case KnowledgeCategory.siddhars:
+        return _genericDataService.searchSiddhars(classification.query);
 
       default:
         // Try full-text search
@@ -322,9 +352,9 @@ class KnowledgeService {
       final contentType = result['content_type'] ?? '';
       final snippet = result['snippet'] ?? '';
 
-      buffer.writeln('• **$title** [$contentType]');
+      buffer.writeln('• **$title** [$contentType]  ');
       if (snippet.isNotEmpty) {
-        buffer.writeln('  $snippet');
+        buffer.writeln('$snippet');
       }
       buffer.writeln();
     }

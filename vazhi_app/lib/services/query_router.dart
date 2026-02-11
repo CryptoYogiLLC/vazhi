@@ -217,8 +217,9 @@ class QueryRouter {
 
     // Check for hospital/health patterns
     if (_isHealthQuery(normalizedQuery)) {
+      final needsExplanation = _needsExplanation(normalizedQuery);
       return QueryClassification(
-        type: QueryType.deterministic,
+        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
         category: KnowledgeCategory.health,
         confidence: 0.8,
         query: query,
@@ -227,10 +228,66 @@ class QueryRouter {
 
     // Check for scam/safety patterns
     if (_isSafetyQuery(normalizedQuery)) {
+      final needsExplanation = _needsExplanation(normalizedQuery);
       return QueryClassification(
-        type: QueryType.hybrid,
+        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
         category: KnowledgeCategory.safety,
-        confidence: 0.75,
+        confidence: 0.85,
+        query: query,
+      );
+    }
+
+    // Check for education patterns (scholarships, exams)
+    if (_isEducationQuery(normalizedQuery)) {
+      final needsExplanation = _needsExplanation(normalizedQuery);
+      return QueryClassification(
+        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        category: KnowledgeCategory.education,
+        confidence: 0.85,
+        query: query,
+      );
+    }
+
+    // Check for legal patterns
+    if (_isLegalQuery(normalizedQuery)) {
+      final needsExplanation = _needsExplanation(normalizedQuery);
+      return QueryClassification(
+        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        category: KnowledgeCategory.legal,
+        confidence: 0.85,
+        query: query,
+      );
+    }
+
+    // Check for siddha medicine patterns
+    if (_isSiddhaMedicineQuery(normalizedQuery)) {
+      final needsExplanation = _needsExplanation(normalizedQuery);
+      return QueryClassification(
+        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        category: KnowledgeCategory.siddhaMedicine,
+        confidence: 0.85,
+        query: query,
+      );
+    }
+
+    // Check for festival patterns
+    if (_isFestivalQuery(normalizedQuery)) {
+      final needsExplanation = _needsExplanation(normalizedQuery);
+      return QueryClassification(
+        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        category: KnowledgeCategory.festivals,
+        confidence: 0.85,
+        query: query,
+      );
+    }
+
+    // Check for siddhar patterns
+    if (_isSiddharQuery(normalizedQuery)) {
+      final needsExplanation = _needsExplanation(normalizedQuery);
+      return QueryClassification(
+        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        category: KnowledgeCategory.siddhars,
+        confidence: 0.85,
         query: query,
       );
     }
@@ -410,6 +467,56 @@ class QueryRouter {
       'fake',
       'போலி',
       'cheating',
+    ];
+    return patterns.any((p) => query.contains(p));
+  }
+
+  /// Check if this is an education query (scholarships, exams)
+  bool _isEducationQuery(String query) {
+    final patterns = [
+      'scholarship', 'உதவித்தொகை', 'exam', 'தேர்வு', 'neet', 'jee',
+      'tnpsc', 'upsc', 'competitive', 'போட்டி', 'entrance',
+      'நுழைவு', 'bank exam', 'ssc', 'gate', 'cat',
+    ];
+    return patterns.any((p) => query.contains(p));
+  }
+
+  /// Check if this is a legal query
+  bool _isLegalQuery(String query) {
+    final patterns = [
+      'legal', 'சட்ட', 'right', 'உரிமை', 'rti', 'fir',
+      'consumer', 'நுகர்வோர்', 'template', 'மாதிரி', 'complaint',
+      'புகார்', 'law', 'fundamental', 'அடிப்படை உரிமை',
+    ];
+    return patterns.any((p) => query.contains(p));
+  }
+
+  /// Check if this is a siddha medicine query
+  bool _isSiddhaMedicineQuery(String query) {
+    final patterns = [
+      'siddha', 'சித்த மருத்துவ', 'remedy', 'மருந்து',
+      'herbal', 'மூலிகை', 'ayurvedic', 'home remedy',
+      'இயற்கை மருத்துவம்', 'nattu maruthuvam', 'நாட்டு மருத்துவம்',
+    ];
+    return patterns.any((p) => query.contains(p));
+  }
+
+  /// Check if this is a festival query
+  bool _isFestivalQuery(String query) {
+    final patterns = [
+      'festival', 'திருவிழா', 'பண்டிகை', 'pongal', 'பொங்கல்',
+      'deepavali', 'தீபாவளி', 'நவராத்திரி', 'navaratri',
+      'vinayagar', 'விநாயகர்', 'celebration', 'கொண்டாட்டம்',
+    ];
+    return patterns.any((p) => query.contains(p));
+  }
+
+  /// Check if this is a siddhar query
+  bool _isSiddharQuery(String query) {
+    final patterns = [
+      'siddhar', 'சித்தர்', 'agathiyar', 'அகத்தியர்',
+      'thirumoolar', 'திருமூலர்', 'bogar', 'போகர்',
+      'korakkar', 'கொரக்கர்', '18 siddhar', 'பதினெண் சித்தர்',
     ];
     return patterns.any((p) => query.contains(p));
   }

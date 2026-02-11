@@ -25,6 +25,9 @@ enum KnowledgeCategory {
   festivals,
   siddhars,
   safety,
+  education,
+  legal,
+  siddhaMedicine,
   general,
 }
 
@@ -45,6 +48,12 @@ extension KnowledgeCategoryExtension on KnowledgeCategory {
         return 'siddhars';
       case KnowledgeCategory.safety:
         return 'safety';
+      case KnowledgeCategory.education:
+        return 'education';
+      case KnowledgeCategory.legal:
+        return 'legal';
+      case KnowledgeCategory.siddhaMedicine:
+        return 'siddha_medicine';
       case KnowledgeCategory.general:
         return 'general';
     }
@@ -66,6 +75,12 @@ extension KnowledgeCategoryExtension on KnowledgeCategory {
         return 'சித்தர்கள்';
       case KnowledgeCategory.safety:
         return 'பாதுகாப்பு';
+      case KnowledgeCategory.education:
+        return 'கல்வி';
+      case KnowledgeCategory.legal:
+        return 'சட்டம்';
+      case KnowledgeCategory.siddhaMedicine:
+        return 'சித்த மருத்துவம்';
       case KnowledgeCategory.general:
         return 'பொது';
     }
@@ -88,6 +103,12 @@ extension KnowledgeCategoryExtension on KnowledgeCategory {
         return KnowledgeCategory.siddhars;
       case 'safety':
         return KnowledgeCategory.safety;
+      case 'education':
+        return KnowledgeCategory.education;
+      case 'legal':
+        return KnowledgeCategory.legal;
+      case 'siddha_medicine':
+        return KnowledgeCategory.siddhaMedicine;
       default:
         return KnowledgeCategory.general;
     }

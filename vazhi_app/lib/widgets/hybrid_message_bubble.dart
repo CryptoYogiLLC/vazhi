@@ -12,6 +12,7 @@ import '../models/message.dart';
 import '../providers/hybrid_chat_provider.dart';
 import '../providers/chat_provider.dart';
 import 'knowledge_result_card.dart';
+import 'settings_drawer.dart';
 
 class HybridMessageBubble extends ConsumerWidget {
   final HybridMessage message;
@@ -29,6 +30,9 @@ class HybridMessageBubble extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final isTamil = ref.watch(languageProvider);
+    String t(String en, String ta) => isTamil ? ta : en;
+
     // User message
     if (message.role == MessageRole.user) {
       return _buildUserMessage(context);
@@ -36,7 +40,7 @@ class HybridMessageBubble extends ConsumerWidget {
 
     // Loading state
     if (message.isLoading) {
-      return _buildLoadingMessage(context);
+      return _buildLoadingMessage(context, t);
     }
 
     // Error state
@@ -50,7 +54,7 @@ class HybridMessageBubble extends ConsumerWidget {
     }
 
     // AI response
-    return _buildAiResponse(context);
+    return _buildAiResponse(context, t);
   }
 
   Widget _buildUserMessage(BuildContext context) {
@@ -79,7 +83,7 @@ class HybridMessageBubble extends ConsumerWidget {
     );
   }
 
-  Widget _buildLoadingMessage(BuildContext context) {
+  Widget _buildLoadingMessage(BuildContext context, String Function(String, String) t) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(
@@ -108,7 +112,7 @@ class HybridMessageBubble extends ConsumerWidget {
             ),
             const SizedBox(width: 12),
             Text(
-              'சிந்தித்துக் கொண்டிருக்கிறேன்...',
+              t('Thinking...', 'சிந்தித்துக் கொண்டிருக்கிறேன்...'),
               style: TextStyle(color: Colors.grey[600], fontSize: 14),
             ),
           ],
@@ -175,7 +179,7 @@ class HybridMessageBubble extends ConsumerWidget {
     );
   }
 
-  Widget _buildAiResponse(BuildContext context) {
+  Widget _buildAiResponse(BuildContext context, String Function(String, String) t) {
     return Align(
       alignment: Alignment.centerLeft,
       child: Container(
@@ -203,7 +207,7 @@ class HybridMessageBubble extends ConsumerWidget {
                   ),
                   const SizedBox(width: 4),
                   Text(
-                    'AI விளக்கம்',
+                    t('AI Explanation', 'AI விளக்கம்'),
                     style: TextStyle(
                       fontSize: 11,
                       color: VazhiTheme.primaryColor,
