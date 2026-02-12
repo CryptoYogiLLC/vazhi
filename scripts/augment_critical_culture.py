@@ -103,36 +103,50 @@ def create_augmented_data():
 
     # First Kural variations
     for i, q in enumerate(FIRST_KURAL_VARIATIONS):
-        augmented.append({
-            "instruction": q,
-            "output": FIRST_KURAL_ANSWER,
-            "language": "tanglish" if "first" in q.lower() or "kural" in q.lower() else "pure_tamil",
-            "pack": "vazhi_panpaadu",
-            "category": "thirukkural_critical",
-            "id": f"CULT_AUG_KURAL1_{i:03d}"
-        })
+        augmented.append(
+            {
+                "instruction": q,
+                "output": FIRST_KURAL_ANSWER,
+                "language": (
+                    "tanglish"
+                    if "first" in q.lower() or "kural" in q.lower()
+                    else "pure_tamil"
+                ),
+                "pack": "vazhi_panpaadu",
+                "category": "thirukkural_critical",
+                "id": f"CULT_AUG_KURAL1_{i:03d}",
+            }
+        )
 
     # Agathiyar variations
     for i, q in enumerate(AGATHIYAR_VARIATIONS):
-        augmented.append({
-            "instruction": q,
-            "output": AGATHIYAR_ANSWER,
-            "language": "tanglish" if "agathiyar" in q.lower() or "agasthya" in q.lower() else "pure_tamil",
-            "pack": "vazhi_panpaadu",
-            "category": "siddhars_critical",
-            "id": f"CULT_AUG_AGAT_{i:03d}"
-        })
+        augmented.append(
+            {
+                "instruction": q,
+                "output": AGATHIYAR_ANSWER,
+                "language": (
+                    "tanglish"
+                    if "agathiyar" in q.lower() or "agasthya" in q.lower()
+                    else "pure_tamil"
+                ),
+                "pack": "vazhi_panpaadu",
+                "category": "siddhars_critical",
+                "id": f"CULT_AUG_AGAT_{i:03d}",
+            }
+        )
 
     # Siddhars variations
     for i, q in enumerate(SIDDHARS_VARIATIONS):
-        augmented.append({
-            "instruction": q,
-            "output": SIDDHARS_ANSWER,
-            "language": "tanglish" if "siddhar" in q.lower() else "pure_tamil",
-            "pack": "vazhi_panpaadu",
-            "category": "siddhars_critical",
-            "id": f"CULT_AUG_SIDD_{i:03d}"
-        })
+        augmented.append(
+            {
+                "instruction": q,
+                "output": SIDDHARS_ANSWER,
+                "language": "tanglish" if "siddhar" in q.lower() else "pure_tamil",
+                "pack": "vazhi_panpaadu",
+                "category": "siddhars_critical",
+                "id": f"CULT_AUG_SIDD_{i:03d}",
+            }
+        )
 
     return augmented
 
@@ -170,19 +184,19 @@ def merge_with_training_data():
         json.dump(all_data, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"v0.3 DATA SUMMARY")
+    print("v0.3 DATA SUMMARY")
     print(f"{'='*50}")
     print(f"Training samples: {len(train_data)}")
     print(f"Validation samples: {len(val_data)}")
     print(f"Total: {len(all_data)}")
-    print(f"\nAugmented entries:")
+    print("\nAugmented entries:")
     print(f"  - First Kural variations: {len(FIRST_KURAL_VARIATIONS)}")
     print(f"  - Agathiyar variations: {len(AGATHIYAR_VARIATIONS)}")
     print(f"  - Siddhars variations: {len(SIDDHARS_VARIATIONS)}")
-    print(f"\nFiles saved:")
-    print(f"  - vazhi_train_v03.json")
-    print(f"  - vazhi_val_v03.json")
-    print(f"  - vazhi_training_merged_v03.json")
+    print("\nFiles saved:")
+    print("  - vazhi_train_v03.json")
+    print("  - vazhi_val_v03.json")
+    print("  - vazhi_training_merged_v03.json")
 
 
 if __name__ == "__main__":

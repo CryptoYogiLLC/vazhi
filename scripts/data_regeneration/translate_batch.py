@@ -25,7 +25,7 @@ def load_regenerate_samples() -> Dict[str, List[Dict]]:
     # Group by pack
     by_pack = {}
     for sample in samples:
-        pack = sample.get('pack', 'unknown')
+        pack = sample.get("pack", "unknown")
         if pack not in by_pack:
             by_pack[pack] = []
         by_pack[pack].append(sample)
@@ -49,7 +49,7 @@ def prepare_batch(samples: List[Dict], batch_num: int, pack_name: str) -> Dict:
                 "target_language": determine_target_language(s),
             }
             for i, s in enumerate(samples)
-        ]
+        ],
     }
 
 
@@ -58,9 +58,7 @@ def determine_target_language(sample: Dict) -> str:
     instruction = sample.get("instruction", "").lower()
 
     # If instruction has significant English, use Tanglish
-    english_words = len(re.findall(r'[a-zA-Z]+', instruction))
-    tamil_chars = len(re.findall(r'[\u0B80-\u0BFF]', instruction))
-
+    english_words = len(re.findall(r"[a-zA-Z]+", instruction))
     if english_words > 3 or "?" in instruction and english_words > 1:
         return "tanglish"
     return "pure_tamil"
@@ -115,7 +113,9 @@ CULTURE PACK GUIDELINES:
 """,
     }
 
-    return guidelines.get(pack, "Use natural Tamil with English technical terms in bilingual format.")
+    return guidelines.get(
+        pack, "Use natural Tamil with English technical terms in bilingual format."
+    )
 
 
 def validate_translation(original: Dict, translated: Dict) -> Dict:
@@ -124,13 +124,13 @@ def validate_translation(original: Dict, translated: Dict) -> Dict:
     output = translated.get("output", "")
 
     # Calculate Tamil percentage
-    tamil_chars = len(re.findall(r'[\u0B80-\u0BFF]', output))
-    english_chars = len(re.findall(r'[a-zA-Z]', output))
+    tamil_chars = len(re.findall(r"[\u0B80-\u0BFF]", output))
+    english_chars = len(re.findall(r"[a-zA-Z]", output))
     total = tamil_chars + english_chars
     tamil_pct = (tamil_chars / total * 100) if total > 0 else 0
 
     # Check for structure
-    has_structure = bool(re.search(r'[•📍📚🔢📖📜💡✍️🏥⚖️🛕🙏🚨🛡️💊🌿🎓]', output))
+    has_structure = bool(re.search(r"[•📍📚🔢📖📜💡✍️🏥⚖️🛕🙏🚨🛡️💊🌿🎓]", output))
 
     # Check length
     adequate_length = len(output) >= 100
@@ -183,13 +183,15 @@ def prepare_all_batches(batch_size: int = 25):
         batch_files[pack] = []
 
         for i in range(0, len(samples), batch_size):
-            batch_samples = samples[i:i+batch_size]
+            batch_samples = samples[i : i + batch_size]
             batch_num = i // batch_size + 1
 
             file_path = save_batch_for_translation(pack, batch_num, batch_samples)
             batch_files[pack].append(str(file_path))
 
-            print(f"  Batch {batch_num}: {len(batch_samples)} samples -> {file_path.name}")
+            print(
+                f"  Batch {batch_num}: {len(batch_samples)} samples -> {file_path.name}"
+            )
 
     # Save batch manifest
     manifest = {
@@ -202,7 +204,7 @@ def prepare_all_batches(batch_size: int = 25):
                 "batch_files": batch_files[pack],
             }
             for pack, samples in by_pack.items()
-        }
+        },
     }
 
     manifest_file = OUTPUT_DIR / "batches" / "manifest.json"
@@ -210,7 +212,7 @@ def prepare_all_batches(batch_size: int = 25):
         json.dump(manifest, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*60}")
-    print(f"BATCH PREPARATION COMPLETE")
+    print("BATCH PREPARATION COMPLETE")
     print(f"{'='*60}")
     print(f"Total batches: {sum(len(bf) for bf in batch_files.values())}")
     print(f"Manifest: {manifest_file}")

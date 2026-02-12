@@ -440,44 +440,54 @@ def generate_thirukkural_samples() -> List[Dict]:
 
         # Special questions for famous kurals
         if kural_num == 1:
-            questions.extend([
-                ("திருக்குறளின் முதல் குறள் என்ன?", "pure_tamil"),
-                ("Thirukkural first kural என்ன?", "tanglish"),
-                ("திருக்குறளின் first குறள் சொல்லுங்கள்", "tanglish"),
-                ("அகர முதல குறள் சொல்லுங்க", "pure_tamil"),
-                ("கடவுள் வாழ்த்து முதல் குறள் என்ன?", "pure_tamil"),
-                ("திருவள்ளுவர் எழுதிய முதல் குறள்", "pure_tamil"),
-                ("குறள் 1 என்ன?", "pure_tamil"),
-                ("Kural number 1 சொல்லுங்க", "tanglish"),
-                ("திருக்குறளின் ஆரம்ப குறள் என்ன?", "pure_tamil"),
-                ("அகர முதல எழுத்தெல்லாம் - இது எந்த குறள்?", "pure_tamil"),
-            ])
+            questions.extend(
+                [
+                    ("திருக்குறளின் முதல் குறள் என்ன?", "pure_tamil"),
+                    ("Thirukkural first kural என்ன?", "tanglish"),
+                    ("திருக்குறளின் first குறள் சொல்லுங்கள்", "tanglish"),
+                    ("அகர முதல குறள் சொல்லுங்க", "pure_tamil"),
+                    ("கடவுள் வாழ்த்து முதல் குறள் என்ன?", "pure_tamil"),
+                    ("திருவள்ளுவர் எழுதிய முதல் குறள்", "pure_tamil"),
+                    ("குறள் 1 என்ன?", "pure_tamil"),
+                    ("Kural number 1 சொல்லுங்க", "tanglish"),
+                    ("திருக்குறளின் ஆரம்ப குறள் என்ன?", "pure_tamil"),
+                    ("அகர முதல எழுத்தெல்லாம் - இது எந்த குறள்?", "pure_tamil"),
+                ]
+            )
 
         if kural_num == 2:
-            questions.extend([
-                ("கற்றதனால் ஆய பயனென்கொல் என்ற குறள் முழுமையாக சொல்லுங்கள்", "pure_tamil"),
-                ("கற்றதனால் ஆய பயன் என்ற குறள்", "pure_tamil"),
-                ("கற்றதனால் ஆய பயனென்கொல் full kural", "tanglish"),
-            ])
+            questions.extend(
+                [
+                    ("கற்றதனால் ஆய பயனென்கொல் என்ற குறள் முழுமையாக சொல்லுங்கள்", "pure_tamil"),
+                    ("கற்றதனால் ஆய பயன் என்ற குறள்", "pure_tamil"),
+                    ("கற்றதனால் ஆய பயனென்கொல் full kural", "tanglish"),
+                ]
+            )
 
         if kural_num == 10:
-            questions.extend([
-                ("பிறவிப் பெருங்கடல் என்ற குறள் என்ன?", "pure_tamil"),
-                ("பிறவிப் பெருங்கடல் குறள் சொல்லுங்க", "pure_tamil"),
-                ("Piravi perunkadal kural", "tanglish"),
-            ])
+            questions.extend(
+                [
+                    ("பிறவிப் பெருங்கடல் என்ற குறள் என்ன?", "pure_tamil"),
+                    ("பிறவிப் பெருங்கடல் குறள் சொல்லுங்க", "pure_tamil"),
+                    ("Piravi perunkadal kural", "tanglish"),
+                ]
+            )
 
         if kural_num == 391:
-            questions.extend([
-                ("கற்க கசடற கற்பவை என்ற குறள்", "pure_tamil"),
-                ("கல்வி பற்றிய புகழ்பெற்ற குறள்", "pure_tamil"),
-            ])
+            questions.extend(
+                [
+                    ("கற்க கசடற கற்பவை என்ற குறள்", "pure_tamil"),
+                    ("கல்வி பற்றிய புகழ்பெற்ற குறள்", "pure_tamil"),
+                ]
+            )
 
         if kural_num == 101:
-            questions.extend([
-                ("செய்ந்நன்றி அறிதல் குறள்", "pure_tamil"),
-                ("நன்றி பற்றிய குறள்", "pure_tamil"),
-            ])
+            questions.extend(
+                [
+                    ("செய்ந்நன்றி அறிதல் குறள்", "pure_tamil"),
+                    ("நன்றி பற்றிய குறள்", "pure_tamil"),
+                ]
+            )
 
         # Add athikaram-specific question
         questions.append(
@@ -485,14 +495,16 @@ def generate_thirukkural_samples() -> List[Dict]:
         )
 
         for q, lang in questions:
-            samples.append({
-                "instruction": q,
-                "output": answer,
-                "language": lang,
-                "pack": "vazhi_panpaadu",
-                "category": "thirukkural_authoritative",
-                "id": f"KURAL_{kural_num:03d}_{len(samples):04d}",
-            })
+            samples.append(
+                {
+                    "instruction": q,
+                    "output": answer,
+                    "language": lang,
+                    "pack": "vazhi_panpaadu",
+                    "category": "thirukkural_authoritative",
+                    "id": f"KURAL_{kural_num:03d}_{len(samples):04d}",
+                }
+            )
 
     return samples
 
@@ -502,10 +514,12 @@ def generate_siddhar_samples() -> List[Dict]:
     samples = []
 
     # 18 Siddhars list question
-    siddhars_list = "\n".join([
-        f"{i+1}. {s['name']} ({s['english']}) - {s['title']}"
-        for i, s in enumerate(SIDDHARS_DATA)
-    ])
+    siddhars_list = "\n".join(
+        [
+            f"{i+1}. {s['name']} ({s['english']}) - {s['title']}"
+            for i, s in enumerate(SIDDHARS_DATA)
+        ]
+    )
 
     siddhars_overview = f"""🙏 பதினெண் சித்தர்கள் (18 Siddhars):
 
@@ -530,14 +544,16 @@ def generate_siddhar_samples() -> List[Dict]:
     ]
 
     for q, lang in list_questions:
-        samples.append({
-            "instruction": q,
-            "output": siddhars_overview,
-            "language": lang,
-            "pack": "vazhi_panpaadu",
-            "category": "siddhars_authoritative",
-            "id": f"SIDD_LIST_{len(samples):04d}",
-        })
+        samples.append(
+            {
+                "instruction": q,
+                "output": siddhars_overview,
+                "language": lang,
+                "pack": "vazhi_panpaadu",
+                "category": "siddhars_authoritative",
+                "id": f"SIDD_LIST_{len(samples):04d}",
+            }
+        )
 
     # Individual siddhar details
     for siddhar in SIDDHARS_DATA:
@@ -567,31 +583,39 @@ def generate_siddhar_samples() -> List[Dict]:
         ]
 
         # Special questions for famous siddhars
-        if siddhar['english'] == "Agasthya":
-            questions.extend([
-                ("அகத்திய முனிவர் யார்?", "pure_tamil"),
-                ("தமிழின் தந்தை யார்?", "pure_tamil"),
-            ])
-        elif siddhar['english'] == "Thirumoolar":
-            questions.extend([
-                ("திருமந்திரம் எழுதியவர் யார்?", "pure_tamil"),
-                ("அன்பே சிவம் என்று சொன்னவர் யார்?", "pure_tamil"),
-            ])
-        elif siddhar['english'] == "Bogar":
-            questions.extend([
-                ("பழனி முருகன் சிலை செய்தவர் யார்?", "pure_tamil"),
-                ("நவபாஷாண சித்தர் யார்?", "pure_tamil"),
-            ])
+        if siddhar["english"] == "Agasthya":
+            questions.extend(
+                [
+                    ("அகத்திய முனிவர் யார்?", "pure_tamil"),
+                    ("தமிழின் தந்தை யார்?", "pure_tamil"),
+                ]
+            )
+        elif siddhar["english"] == "Thirumoolar":
+            questions.extend(
+                [
+                    ("திருமந்திரம் எழுதியவர் யார்?", "pure_tamil"),
+                    ("அன்பே சிவம் என்று சொன்னவர் யார்?", "pure_tamil"),
+                ]
+            )
+        elif siddhar["english"] == "Bogar":
+            questions.extend(
+                [
+                    ("பழனி முருகன் சிலை செய்தவர் யார்?", "pure_tamil"),
+                    ("நவபாஷாண சித்தர் யார்?", "pure_tamil"),
+                ]
+            )
 
         for q, lang in questions:
-            samples.append({
-                "instruction": q,
-                "output": answer,
-                "language": lang,
-                "pack": "vazhi_panpaadu",
-                "category": "siddhars_authoritative",
-                "id": f"SIDD_{siddhar['english'].upper()[:4]}_{len(samples):04d}",
-            })
+            samples.append(
+                {
+                    "instruction": q,
+                    "output": answer,
+                    "language": lang,
+                    "pack": "vazhi_panpaadu",
+                    "category": "siddhars_authoritative",
+                    "id": f"SIDD_{siddhar['english'].upper()[:4]}_{len(samples):04d}",
+                }
+            )
 
     return samples
 
@@ -638,14 +662,16 @@ def generate_siddha_medicine_samples() -> List[Dict]:
     ]
 
     for q, lang in questions:
-        samples.append({
-            "instruction": q,
-            "output": siddha_overview,
-            "language": lang,
-            "pack": "vazhi_panpaadu",
-            "category": "siddha_medicine_authoritative",
-            "id": f"SIDDHA_MED_{len(samples):04d}",
-        })
+        samples.append(
+            {
+                "instruction": q,
+                "output": siddha_overview,
+                "language": lang,
+                "pack": "vazhi_panpaadu",
+                "category": "siddha_medicine_authoritative",
+                "id": f"SIDDHA_MED_{len(samples):04d}",
+            }
+        )
 
     return samples
 
@@ -681,7 +707,7 @@ def generate_all_culture_data():
         json.dump(all_samples, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*60}")
-    print(f"CULTURE AUTHORITATIVE DATA GENERATED")
+    print("CULTURE AUTHORITATIVE DATA GENERATED")
     print(f"{'='*60}")
     print(f"Total samples: {len(all_samples)}")
     print(f"  - Thirukkural: {len(kural_samples)}")

@@ -16,6 +16,7 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "data"
 CULTURE_V2_DIR = DATA_DIR / "culture_v2"
 
+
 def load_culture_v2_data() -> list:
     """Load all culture v2 JSON files."""
     all_pairs = []
@@ -52,6 +53,7 @@ def load_culture_v2_data() -> list:
 
     return all_pairs
 
+
 def complete_merge():
     """Merge by keeping ALL old data and adding ALL v2 data.
 
@@ -72,9 +74,13 @@ def complete_merge():
     print(f"Found {len(existing_ids)} existing IDs")
 
     # Count old culture data
-    old_culture = [x for x in all_existing if x.get("pack") in ["vazhi_panpaadu", "vazhi_culture"]]
+    old_culture = [
+        x for x in all_existing if x.get("pack") in ["vazhi_panpaadu", "vazhi_culture"]
+    ]
     old_thirukkural = [x for x in old_culture if x.get("category") == "thirukkural"]
-    print(f"Old culture data: {len(old_culture)} (including {len(old_thirukkural)} thirukkural)")
+    print(
+        f"Old culture data: {len(old_culture)} (including {len(old_thirukkural)} thirukkural)"
+    )
 
     # Load v2 culture data
     v2_data = load_culture_v2_data()
@@ -131,7 +137,7 @@ def complete_merge():
         json.dump(final_data, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"COMPLETE MERGE SUMMARY (IDEMPOTENT)")
+    print("COMPLETE MERGE SUMMARY (IDEMPOTENT)")
     print(f"{'='*50}")
     print(f"Old data kept:        {len(all_existing)}")
     print(f"V2 data total:        {len(v2_data)}")
@@ -140,11 +146,12 @@ def complete_merge():
     print(f"Total:                {len(final_data)}")
     print(f"  - Training:         {len(train_data)}")
     print(f"  - Validation:       {len(val_data)}")
-    print(f"\nThirukkural coverage:")
+    print("\nThirukkural coverage:")
     print(f"  - Old (thematic):   {len(old_thirukkural)}")
     v2_thirukkural = [x for x in new_v2_data if "thirukkural" in x.get("category", "")]
     print(f"  - V2 (foundational):{len(v2_thirukkural)}")
     print(f"  - Combined:         {len(old_thirukkural) + len(v2_thirukkural)}")
+
 
 if __name__ == "__main__":
     print("VAZHI v0.2 Complete Merge (Keep All + Add V2)")

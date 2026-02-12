@@ -20,8 +20,8 @@ OUTPUT_DIR = DATA_DIR / "v04" / "audit"
 
 def calculate_tamil_percentage(text: str) -> float:
     """Calculate percentage of Tamil characters vs English."""
-    tamil_chars = len(re.findall(r'[\u0B80-\u0BFF]', text))
-    english_chars = len(re.findall(r'[a-zA-Z]', text))
+    tamil_chars = len(re.findall(r"[\u0B80-\u0BFF]", text))
+    english_chars = len(re.findall(r"[a-zA-Z]", text))
     total = tamil_chars + english_chars
     if total == 0:
         return 0.0
@@ -30,15 +30,15 @@ def calculate_tamil_percentage(text: str) -> float:
 
 def categorize_sample(sample: dict) -> str:
     """Categorize sample based on actual Tamil content."""
-    output = sample.get('output', '')
+    output = sample.get("output", "")
     tamil_pct = calculate_tamil_percentage(output)
 
     if tamil_pct >= 70:
-        return 'keep'
+        return "keep"
     elif tamil_pct >= 30:
-        return 'review'
+        return "review"
     else:
-        return 'regenerate'
+        return "regenerate"
 
 
 def audit_training_data():
@@ -57,13 +57,13 @@ def audit_training_data():
     print(f"Total samples to audit: {len(all_data)}")
 
     # Categorize
-    categories = {'keep': [], 'review': [], 'regenerate': []}
+    categories = {"keep": [], "review": [], "regenerate": []}
 
     for sample in all_data:
         category = categorize_sample(sample)
-        tamil_pct = calculate_tamil_percentage(sample.get('output', ''))
-        sample['_tamil_percentage'] = round(tamil_pct, 1)
-        sample['_category'] = category
+        tamil_pct = calculate_tamil_percentage(sample.get("output", ""))
+        sample["_tamil_percentage"] = round(tamil_pct, 1)
+        sample["_category"] = category
         categories[category].append(sample)
 
     # Print summary
@@ -72,10 +72,12 @@ def audit_training_data():
     print("=" * 60)
 
     for cat, samples in categories.items():
-        print(f"\n{cat.upper()}: {len(samples)} samples ({len(samples)/len(all_data)*100:.1f}%)")
+        print(
+            f"\n{cat.upper()}: {len(samples)} samples ({len(samples)/len(all_data)*100:.1f}%)"
+        )
 
         # Breakdown by pack
-        pack_counts = Counter(s.get('pack', 'unknown') for s in samples)
+        pack_counts = Counter(s.get("pack", "unknown") for s in samples)
         for pack, count in pack_counts.most_common():
             print(f"  - {pack}: {count}")
 
@@ -92,19 +94,25 @@ def audit_training_data():
     report = {
         "total_samples": len(all_data),
         "keep": {
-            "count": len(categories['keep']),
-            "percentage": round(len(categories['keep']) / len(all_data) * 100, 1),
-            "by_pack": dict(Counter(s.get('pack', 'unknown') for s in categories['keep'])),
+            "count": len(categories["keep"]),
+            "percentage": round(len(categories["keep"]) / len(all_data) * 100, 1),
+            "by_pack": dict(
+                Counter(s.get("pack", "unknown") for s in categories["keep"])
+            ),
         },
         "review": {
-            "count": len(categories['review']),
-            "percentage": round(len(categories['review']) / len(all_data) * 100, 1),
-            "by_pack": dict(Counter(s.get('pack', 'unknown') for s in categories['review'])),
+            "count": len(categories["review"]),
+            "percentage": round(len(categories["review"]) / len(all_data) * 100, 1),
+            "by_pack": dict(
+                Counter(s.get("pack", "unknown") for s in categories["review"])
+            ),
         },
         "regenerate": {
-            "count": len(categories['regenerate']),
-            "percentage": round(len(categories['regenerate']) / len(all_data) * 100, 1),
-            "by_pack": dict(Counter(s.get('pack', 'unknown') for s in categories['regenerate'])),
+            "count": len(categories["regenerate"]),
+            "percentage": round(len(categories["regenerate"]) / len(all_data) * 100, 1),
+            "by_pack": dict(
+                Counter(s.get("pack", "unknown") for s in categories["regenerate"])
+            ),
         },
     }
 
@@ -119,7 +127,7 @@ def audit_training_data():
 def print_examples():
     """Print example samples from each category."""
 
-    for cat in ['keep', 'review', 'regenerate']:
+    for cat in ["keep", "review", "regenerate"]:
         file_path = OUTPUT_DIR / f"{cat}_samples.json"
         if not file_path.exists():
             continue

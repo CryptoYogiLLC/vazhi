@@ -18,7 +18,6 @@ from typing import Optional
 from dataclasses import dataclass
 
 try:
-    import jsonschema
     from jsonschema import validate, ValidationError
 except ImportError:
     print("Error: jsonschema not installed. Run: pip install jsonschema")
@@ -28,6 +27,7 @@ except ImportError:
 @dataclass
 class ValidationResult:
     """Result of validating a single sample."""
+
     index: int
     id: Optional[str]
     is_valid: bool
@@ -38,7 +38,7 @@ class ValidationResult:
 
 def load_schema(schema_path: str = "schemas/training_sample.schema.json") -> dict:
     """Load the JSON schema."""
-    with open(schema_path, 'r', encoding='utf-8') as f:
+    with open(schema_path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
@@ -48,9 +48,9 @@ def calculate_tamil_percentage(text: str) -> float:
         return 0.0
 
     # Tamil Unicode range: U+0B80 to U+0BFF
-    tamil_chars = len(re.findall(r'[\u0B80-\u0BFF]', text))
+    tamil_chars = len(re.findall(r"[\u0B80-\u0BFF]", text))
     # Count only letters (exclude spaces, numbers, punctuation)
-    all_letters = len(re.findall(r'[a-zA-Z\u0B80-\u0BFF]', text))
+    all_letters = len(re.findall(r"[a-zA-Z\u0B80-\u0BFF]", text))
 
     if all_letters == 0:
         return 0.0
@@ -62,7 +62,7 @@ def validate_sample(sample: dict, schema: dict, index: int) -> ValidationResult:
     """Validate a single training sample."""
     errors = []
     warnings = []
-    sample_id = sample.get('id', f'sample_{index}')
+    sample_id = sample.get("id", f"sample_{index}")
 
     # Schema validation
     try:
@@ -71,14 +71,14 @@ def validate_sample(sample: dict, schema: dict, index: int) -> ValidationResult:
         errors.append(f"Schema error: {e.message}")
 
     # Check instruction quality
-    instruction = sample.get('instruction', '')
+    instruction = sample.get("instruction", "")
     if len(instruction) < 5:
         errors.append("Instruction too short (< 5 chars)")
     elif len(instruction) < 10:
         warnings.append("Instruction is very short")
 
     # Check output quality
-    output = sample.get('output', '')
+    output = sample.get("output", "")
     if len(output) < 10:
         errors.append("Output too short (< 10 chars)")
     elif len(output) < 20:
@@ -89,13 +89,13 @@ def validate_sample(sample: dict, schema: dict, index: int) -> ValidationResult:
 
     # Check for garbage patterns
     garbage_patterns = [
-        r'system\s*system',
-        r'<think>',
-        r'</think>',
-        r'\[INST\]',
-        r'\[/INST\]',
-        r'<\|.*?\|>',
-        r'###\s*Instruction:',
+        r"system\s*system",
+        r"<think>",
+        r"</think>",
+        r"\[INST\]",
+        r"\[/INST\]",
+        r"<\|.*?\|>",
+        r"###\s*Instruction:",
     ]
 
     for pattern in garbage_patterns:
@@ -103,11 +103,13 @@ def validate_sample(sample: dict, schema: dict, index: int) -> ValidationResult:
             errors.append(f"Garbage pattern detected: {pattern}")
 
     # Check for mostly English when Tamil expected
-    if sample.get('pack') in ['culture', 'dialects'] and tamil_pct < 30:
-        warnings.append(f"Low Tamil content ({tamil_pct:.1f}%) for {sample.get('pack')} pack")
+    if sample.get("pack") in ["culture", "dialects"] and tamil_pct < 30:
+        warnings.append(
+            f"Low Tamil content ({tamil_pct:.1f}%) for {sample.get('pack')} pack"
+        )
 
     # Check for empty fields that should have content
-    if sample.get('pack') and not sample.get('category'):
+    if sample.get("pack") and not sample.get("category"):
         warnings.append("Has pack but no category")
 
     return ValidationResult(
@@ -124,21 +126,21 @@ def validate_file(file_path: str, schema: dict) -> tuple[list[ValidationResult],
     """Validate all samples in a JSON file."""
     results = []
     stats = {
-        'total': 0,
-        'valid': 0,
-        'invalid': 0,
-        'warnings': 0,
-        'avg_tamil_pct': 0.0,
+        "total": 0,
+        "valid": 0,
+        "invalid": 0,
+        "warnings": 0,
+        "avg_tamil_pct": 0.0,
     }
 
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
 
     if isinstance(data, dict):
         # Single sample
         data = [data]
 
-    stats['total'] = len(data)
+    stats["total"] = len(data)
     tamil_pcts = []
     seen_ids = set()
 
@@ -147,12 +149,12 @@ def validate_file(file_path: str, schema: dict) -> tuple[list[ValidationResult],
         results.append(result)
 
         if result.is_valid:
-            stats['valid'] += 1
+            stats["valid"] += 1
         else:
-            stats['invalid'] += 1
+            stats["invalid"] += 1
 
         if result.warnings:
-            stats['warnings'] += len(result.warnings)
+            stats["warnings"] += len(result.warnings)
 
         tamil_pcts.append(result.tamil_percentage)
 
@@ -162,21 +164,27 @@ def validate_file(file_path: str, schema: dict) -> tuple[list[ValidationResult],
         seen_ids.add(result.id)
 
     if tamil_pcts:
-        stats['avg_tamil_pct'] = sum(tamil_pcts) / len(tamil_pcts)
+        stats["avg_tamil_pct"] = sum(tamil_pcts) / len(tamil_pcts)
 
     return results, stats
 
 
-def print_report(file_path: str, results: list[ValidationResult], stats: dict, verbose: bool = False):
+def print_report(
+    file_path: str, results: list[ValidationResult], stats: dict, verbose: bool = False
+):
     """Print validation report."""
     print(f"\n{'='*60}")
     print(f"Validation Report: {file_path}")
     print(f"{'='*60}")
 
-    print(f"\nSummary:")
+    print("\nSummary:")
     print(f"  Total samples:     {stats['total']}")
-    print(f"  Valid:             {stats['valid']} ({stats['valid']/stats['total']*100:.1f}%)")
-    print(f"  Invalid:           {stats['invalid']} ({stats['invalid']/stats['total']*100:.1f}%)")
+    print(
+        f"  Valid:             {stats['valid']} ({stats['valid']/stats['total']*100:.1f}%)"
+    )
+    print(
+        f"  Invalid:           {stats['invalid']} ({stats['invalid']/stats['total']*100:.1f}%)"
+    )
     print(f"  Warnings:          {stats['warnings']}")
     print(f"  Avg Tamil content: {stats['avg_tamil_pct']:.1f}%")
 
@@ -206,26 +214,33 @@ def print_report(file_path: str, results: list[ValidationResult], stats: dict, v
     medium_tamil = [r for r in results if 30 <= r.tamil_percentage < 70]
     high_tamil = [r for r in results if r.tamil_percentage >= 70]
 
-    print(f"\nTamil Content Distribution:")
+    print("\nTamil Content Distribution:")
     print(f"  High (≥70%):     {len(high_tamil)} samples")
     print(f"  Medium (30-70%): {len(medium_tamil)} samples")
     print(f"  Low (<30%):      {len(low_tamil)} samples")
 
-    return stats['invalid'] == 0
+    return stats["invalid"] == 0
 
 
 def main():
     """Main entry point."""
     import argparse
 
-    parser = argparse.ArgumentParser(description='Validate VAZHI training data')
-    parser.add_argument('files', nargs='+', help='JSON files to validate')
-    parser.add_argument('--schema', default='schemas/training_sample.schema.json',
-                        help='Path to JSON schema')
-    parser.add_argument('-v', '--verbose', action='store_true',
-                        help='Show warnings and details')
-    parser.add_argument('--fail-on-warning', action='store_true',
-                        help='Exit with error if warnings found')
+    parser = argparse.ArgumentParser(description="Validate VAZHI training data")
+    parser.add_argument("files", nargs="+", help="JSON files to validate")
+    parser.add_argument(
+        "--schema",
+        default="schemas/training_sample.schema.json",
+        help="Path to JSON schema",
+    )
+    parser.add_argument(
+        "-v", "--verbose", action="store_true", help="Show warnings and details"
+    )
+    parser.add_argument(
+        "--fail-on-warning",
+        action="store_true",
+        help="Exit with error if warnings found",
+    )
 
     args = parser.parse_args()
 
@@ -245,7 +260,7 @@ def main():
 
     for file_pattern in args.files:
         # Support glob patterns
-        if '*' in file_pattern:
+        if "*" in file_pattern:
             files = list(project_root.glob(file_pattern))
         else:
             files = [Path(file_pattern)]
@@ -260,7 +275,7 @@ def main():
 
             if not is_valid:
                 all_valid = False
-            total_warnings += stats['warnings']
+            total_warnings += stats["warnings"]
 
     print(f"\n{'='*60}")
     if all_valid:
@@ -275,5 +290,5 @@ def main():
         sys.exit(1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

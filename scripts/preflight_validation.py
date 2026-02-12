@@ -18,9 +18,7 @@ import os
 import re
 import sys
 import json
-import tempfile
 import subprocess
-from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional
 
@@ -28,6 +26,7 @@ from typing import Optional
 @dataclass
 class PreflightResult:
     """Result of a preflight check."""
+
     passed: bool
     check_name: str
     message: str
@@ -36,6 +35,7 @@ class PreflightResult:
 
 class PreflightError(Exception):
     """Raised when preflight validation fails."""
+
     pass
 
 
@@ -45,9 +45,9 @@ def calculate_tamil_percentage(text: str) -> float:
         return 0.0
 
     # Tamil Unicode range: U+0B80 to U+0BFF
-    tamil_chars = len(re.findall(r'[\u0B80-\u0BFF]', text))
+    tamil_chars = len(re.findall(r"[\u0B80-\u0BFF]", text))
     # Count only letters (exclude spaces, numbers, punctuation)
-    all_letters = len(re.findall(r'[a-zA-Z\u0B80-\u0BFF]', text))
+    all_letters = len(re.findall(r"[a-zA-Z\u0B80-\u0BFF]", text))
 
     if all_letters == 0:
         return 0.0
@@ -58,13 +58,13 @@ def calculate_tamil_percentage(text: str) -> float:
 def check_garbage_patterns(text: str) -> list[str]:
     """Check for known garbage patterns in output."""
     garbage_patterns = [
-        (r'system\s*system\s*system', 'Repeated "system" tokens'),
-        (r'<think>.*?</think>', 'Thinking tags in output'),
-        (r'\[INST\]|\[/INST\]', 'Raw instruction markers'),
-        (r'<\|.*?\|>', 'Special token markers'),
-        (r'###\s*(Instruction|Response):', 'Alpaca format markers'),
-        (r'(\w)\1{10,}', 'Character repetition (10+)'),
-        (r'(..+)\1{5,}', 'Pattern repetition (5+)'),
+        (r"system\s*system\s*system", 'Repeated "system" tokens'),
+        (r"<think>.*?</think>", "Thinking tags in output"),
+        (r"\[INST\]|\[/INST\]", "Raw instruction markers"),
+        (r"<\|.*?\|>", "Special token markers"),
+        (r"###\s*(Instruction|Response):", "Alpaca format markers"),
+        (r"(\w)\1{10,}", "Character repetition (10+)"),
+        (r"(..+)\1{5,}", "Pattern repetition (5+)"),
     ]
 
     issues = []
@@ -80,20 +80,20 @@ def validate_training_data(data_path: str, sample_size: int = 50) -> PreflightRe
     print(f"  Checking training data: {data_path}")
 
     try:
-        with open(data_path, 'r', encoding='utf-8') as f:
+        with open(data_path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception as e:
         return PreflightResult(
             passed=False,
-            check_name='training_data',
-            message=f'Failed to load training data: {e}'
+            check_name="training_data",
+            message=f"Failed to load training data: {e}",
         )
 
     if not isinstance(data, list) or len(data) == 0:
         return PreflightResult(
             passed=False,
-            check_name='training_data',
-            message='Training data is empty or invalid format'
+            check_name="training_data",
+            message="Training data is empty or invalid format",
         )
 
     # Check sample
@@ -103,11 +103,11 @@ def validate_training_data(data_path: str, sample_size: int = 50) -> PreflightRe
 
     for i, item in enumerate(sample):
         # Check required fields
-        if 'instruction' not in item or 'output' not in item:
+        if "instruction" not in item or "output" not in item:
             issues.append(f"Sample {i}: Missing instruction or output")
             continue
 
-        output = item.get('output', '')
+        output = item.get("output", "")
 
         # Check output length
         if len(output) < 10:
@@ -122,25 +122,29 @@ def validate_training_data(data_path: str, sample_size: int = 50) -> PreflightRe
         tamil_pct = calculate_tamil_percentage(output)
         tamil_percentages.append(tamil_pct)
 
-    avg_tamil = sum(tamil_percentages) / len(tamil_percentages) if tamil_percentages else 0
+    avg_tamil = (
+        sum(tamil_percentages) / len(tamil_percentages) if tamil_percentages else 0
+    )
 
     if issues:
         return PreflightResult(
             passed=False,
-            check_name='training_data',
-            message=f'Found {len(issues)} issues in training data',
-            details={'issues': issues[:10], 'avg_tamil_pct': avg_tamil}
+            check_name="training_data",
+            message=f"Found {len(issues)} issues in training data",
+            details={"issues": issues[:10], "avg_tamil_pct": avg_tamil},
         )
 
     return PreflightResult(
         passed=True,
-        check_name='training_data',
-        message=f'Training data OK ({len(sample)} samples, {avg_tamil:.1f}% Tamil)',
-        details={'sample_size': len(sample), 'avg_tamil_pct': avg_tamil}
+        check_name="training_data",
+        message=f"Training data OK ({len(sample)} samples, {avg_tamil:.1f}% Tamil)",
+        details={"sample_size": len(sample), "avg_tamil_pct": avg_tamil},
     )
 
 
-def validate_model_output(model_path: str, test_prompts: Optional[list] = None) -> PreflightResult:
+def validate_model_output(
+    model_path: str, test_prompts: Optional[list] = None
+) -> PreflightResult:
     """Validate model output quality."""
     print(f"  Testing model output: {model_path}")
 
@@ -155,8 +159,8 @@ def validate_model_output(model_path: str, test_prompts: Optional[list] = None) 
     if not os.path.exists(model_path):
         return PreflightResult(
             passed=False,
-            check_name='model_output',
-            message=f'Model file not found: {model_path}'
+            check_name="model_output",
+            message=f"Model file not found: {model_path}",
         )
 
     issues = []
@@ -172,13 +176,13 @@ def validate_model_output(model_path: str, test_prompts: Optional[list] = None) 
 
             # Check response length
             if len(response) < 10:
-                issues.append(f'Response too short for: {prompt[:30]}...')
+                issues.append(f"Response too short for: {prompt[:30]}...")
                 continue
 
             # Check for garbage
             garbage = check_garbage_patterns(response)
             if garbage:
-                issues.append(f'Garbage in response: {garbage}')
+                issues.append(f"Garbage in response: {garbage}")
                 continue
 
             # Check Tamil percentage
@@ -186,17 +190,17 @@ def validate_model_output(model_path: str, test_prompts: Optional[list] = None) 
             tamil_percentages.append(tamil_pct)
 
             if tamil_pct < 30:
-                issues.append(f'Low Tamil ({tamil_pct:.1f}%) for: {prompt[:30]}...')
+                issues.append(f"Low Tamil ({tamil_pct:.1f}%) for: {prompt[:30]}...")
 
         except Exception as e:
-            issues.append(f'Inference error: {e}')
+            issues.append(f"Inference error: {e}")
 
     if not tamil_percentages:
         return PreflightResult(
             passed=True,
-            check_name='model_output',
-            message='Skipped: No inference tool available (install llama.cpp)',
-            details={'skipped': True}
+            check_name="model_output",
+            message="Skipped: No inference tool available (install llama.cpp)",
+            details={"skipped": True},
         )
 
     avg_tamil = sum(tamil_percentages) / len(tamil_percentages)
@@ -204,27 +208,29 @@ def validate_model_output(model_path: str, test_prompts: Optional[list] = None) 
     if issues:
         return PreflightResult(
             passed=False,
-            check_name='model_output',
-            message=f'Model output issues: {len(issues)}',
-            details={'issues': issues, 'avg_tamil_pct': avg_tamil}
+            check_name="model_output",
+            message=f"Model output issues: {len(issues)}",
+            details={"issues": issues, "avg_tamil_pct": avg_tamil},
         )
 
     return PreflightResult(
         passed=True,
-        check_name='model_output',
-        message=f'Model output OK ({avg_tamil:.1f}% Tamil)',
-        details={'avg_tamil_pct': avg_tamil}
+        check_name="model_output",
+        message=f"Model output OK ({avg_tamil:.1f}% Tamil)",
+        details={"avg_tamil_pct": avg_tamil},
     )
 
 
-def _run_inference(model_path: str, prompt: str, max_tokens: int = 100) -> Optional[str]:
+def _run_inference(
+    model_path: str, prompt: str, max_tokens: int = 100
+) -> Optional[str]:
     """Run inference using llama.cpp CLI."""
     # Try to find llama.cpp main binary
     llama_bins = [
-        'llama-cli',
-        'main',  # older llama.cpp
-        '/usr/local/bin/llama-cli',
-        os.path.expanduser('~/llama.cpp/main'),
+        "llama-cli",
+        "main",  # older llama.cpp
+        "/usr/local/bin/llama-cli",
+        os.path.expanduser("~/llama.cpp/main"),
     ]
 
     llama_bin = None
@@ -240,10 +246,13 @@ def _run_inference(model_path: str, prompt: str, max_tokens: int = 100) -> Optio
         result = subprocess.run(
             [
                 llama_bin,
-                '-m', model_path,
-                '-p', prompt,
-                '-n', str(max_tokens),
-                '--no-display-prompt',
+                "-m",
+                model_path,
+                "-p",
+                prompt,
+                "-n",
+                str(max_tokens),
+                "--no-display-prompt",
             ],
             capture_output=True,
             text=True,
@@ -257,7 +266,7 @@ def _run_inference(model_path: str, prompt: str, max_tokens: int = 100) -> Optio
 def _which(program: str) -> Optional[str]:
     """Find program in PATH."""
     try:
-        result = subprocess.run(['which', program], capture_output=True, text=True)
+        result = subprocess.run(["which", program], capture_output=True, text=True)
         if result.returncode == 0:
             return result.stdout.strip()
     except Exception:
@@ -272,40 +281,38 @@ def validate_tokenizer(tokenizer_path: str) -> PreflightResult:
     if not os.path.exists(tokenizer_path):
         return PreflightResult(
             passed=True,
-            check_name='tokenizer',
-            message='Skipped: tokenizer.json not found (using model default)',
-            details={'skipped': True}
+            check_name="tokenizer",
+            message="Skipped: tokenizer.json not found (using model default)",
+            details={"skipped": True},
         )
 
     try:
-        with open(tokenizer_path, 'r', encoding='utf-8') as f:
+        with open(tokenizer_path, "r", encoding="utf-8") as f:
             tokenizer = json.load(f)
 
-        vocab = tokenizer.get('model', {}).get('vocab', {})
+        vocab = tokenizer.get("model", {}).get("vocab", {})
 
         # Check for Tamil tokens
-        tamil_tokens = [k for k in vocab.keys() if re.search(r'[\u0B80-\u0BFF]', k)]
+        tamil_tokens = [k for k in vocab.keys() if re.search(r"[\u0B80-\u0BFF]", k)]
 
         if len(tamil_tokens) < 100:
             return PreflightResult(
                 passed=False,
-                check_name='tokenizer',
-                message=f'Low Tamil vocabulary: only {len(tamil_tokens)} Tamil tokens',
-                details={'tamil_tokens': len(tamil_tokens)}
+                check_name="tokenizer",
+                message=f"Low Tamil vocabulary: only {len(tamil_tokens)} Tamil tokens",
+                details={"tamil_tokens": len(tamil_tokens)},
             )
 
         return PreflightResult(
             passed=True,
-            check_name='tokenizer',
-            message=f'Tokenizer OK ({len(tamil_tokens)} Tamil tokens)',
-            details={'tamil_tokens': len(tamil_tokens)}
+            check_name="tokenizer",
+            message=f"Tokenizer OK ({len(tamil_tokens)} Tamil tokens)",
+            details={"tamil_tokens": len(tamil_tokens)},
         )
 
     except Exception as e:
         return PreflightResult(
-            passed=False,
-            check_name='tokenizer',
-            message=f'Tokenizer error: {e}'
+            passed=False, check_name="tokenizer", message=f"Tokenizer error: {e}"
         )
 
 
@@ -342,8 +349,8 @@ def run_preflight(
         print(f"{status} {result.check_name}: {result.message}")
         if not result.passed:
             all_passed = False
-            if result.details and 'issues' in result.details:
-                for issue in result.details['issues'][:5]:
+            if result.details and "issues" in result.details:
+                for issue in result.details["issues"][:5]:
                     print(f"   - {issue}")
 
     print("-" * 50)
@@ -360,20 +367,20 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description='VAZHI Preflight Training Validation',
+        description="VAZHI Preflight Training Validation",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   %(prog)s --data training.json
   %(prog)s --data training.json --model model.gguf
   %(prog)s --data training.json --tokenizer tokenizer.json --model model.gguf
-        """
+        """,
     )
 
-    parser.add_argument('--data', '-d', help='Training data JSON file')
-    parser.add_argument('--model', '-m', help='GGUF model file to test')
-    parser.add_argument('--tokenizer', '-t', help='Tokenizer JSON file')
-    parser.add_argument('--quiet', '-q', action='store_true', help='Quiet mode')
+    parser.add_argument("--data", "-d", help="Training data JSON file")
+    parser.add_argument("--model", "-m", help="GGUF model file to test")
+    parser.add_argument("--tokenizer", "-t", help="Tokenizer JSON file")
+    parser.add_argument("--quiet", "-q", action="store_true", help="Quiet mode")
 
     args = parser.parse_args()
 
@@ -391,5 +398,5 @@ Examples:
     sys.exit(0 if passed else 1)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

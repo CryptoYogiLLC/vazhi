@@ -11,10 +11,12 @@ Can work in multiple modes:
 
 import json
 import re
-import os
 from pathlib import Path
-from typing import List, Dict, Optional
-from templates import TEMPLATES, TAMIL_TERMS, THIRUKKURAL_AUTHORITATIVE, SIDDHARS_AUTHORITATIVE
+from typing import List
+from templates import (
+    THIRUKKURAL_AUTHORITATIVE,
+    SIDDHARS_AUTHORITATIVE,
+)
 
 DATA_DIR = Path(__file__).parent.parent.parent / "data"
 AUDIT_DIR = DATA_DIR / "v04" / "audit"
@@ -24,13 +26,13 @@ OUTPUT_DIR = DATA_DIR / "v04" / "regenerated"
 def create_regeneration_prompt(sample: dict) -> str:
     """Create a prompt for LLM to regenerate the response in Tamil."""
 
-    pack = sample.get('pack', '')
-    instruction = sample.get('instruction', '')
-    current_output = sample.get('output', '')
-    category = sample.get('category', '')
+    pack = sample.get("pack", "")
+    instruction = sample.get("instruction", "")
+    current_output = sample.get("output", "")
+    category = sample.get("category", "")
 
     # Determine target language style
-    if 'panpaadu' in pack or 'culture' in pack:
+    if "panpaadu" in pack or "culture" in pack:
         lang_style = "pure Tamil (முழு தமிழ்)"
         extra_instruction = """
 IMPORTANT: For Thirukkural, use CITATION format with quotation marks:
@@ -39,7 +41,7 @@ IMPORTANT: For Thirukkural, use CITATION format with quotation marks:
 - Provide meaning (பொருள்) and explanation (விளக்கம்)
 - DO NOT make up kurals - use only authentic Thirukkural text
 """
-    elif 'kaval' in pack or 'security' in pack:
+    elif "kaval" in pack or "security" in pack:
         lang_style = "Tanglish (natural Tamil-English mix as Tamils actually speak)"
         extra_instruction = "Use scam/cyber security terms naturally mixed with Tamil."
     else:
@@ -69,7 +71,9 @@ Please provide the Tamil version:"""
     return prompt
 
 
-def export_for_manual_regeneration(samples: List[dict], output_file: str, batch_size: int = 50):
+def export_for_manual_regeneration(
+    samples: List[dict], output_file: str, batch_size: int = 50
+):
     """Export samples in a format suitable for manual regeneration via Claude.ai."""
 
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -77,7 +81,7 @@ def export_for_manual_regeneration(samples: List[dict], output_file: str, batch_
     # Group by pack for easier processing
     by_pack = {}
     for sample in samples:
-        pack = sample.get('pack', 'unknown')
+        pack = sample.get("pack", "unknown")
         if pack not in by_pack:
             by_pack[pack] = []
         by_pack[pack].append(sample)
@@ -89,14 +93,14 @@ def export_for_manual_regeneration(samples: List[dict], output_file: str, batch_
 
         # Split into batches
         for i in range(0, len(pack_samples), batch_size):
-            batch = pack_samples[i:i+batch_size]
+            batch = pack_samples[i : i + batch_size]
             batch_file = pack_dir / f"batch_{i//batch_size + 1}.json"
 
             # Create prompts for each sample
             batch_with_prompts = []
             for sample in batch:
                 sample_copy = sample.copy()
-                sample_copy['_regeneration_prompt'] = create_regeneration_prompt(sample)
+                sample_copy["_regeneration_prompt"] = create_regeneration_prompt(sample)
                 batch_with_prompts.append(sample_copy)
 
             with open(batch_file, "w", encoding="utf-8") as f:
@@ -107,7 +111,8 @@ def export_for_manual_regeneration(samples: List[dict], output_file: str, batch_
     # Create master instruction file
     instruction_file = OUTPUT_DIR / "for_manual" / "REGENERATION_INSTRUCTIONS.md"
     with open(instruction_file, "w", encoding="utf-8") as f:
-        f.write("""# VAZHI Data Regeneration Instructions
+        f.write(
+            """# VAZHI Data Regeneration Instructions
 
 ## How to Regenerate Samples
 
@@ -141,7 +146,8 @@ After regeneration, ensure:
 - [ ] Information is accurate (not made up)
 - [ ] Thirukkural quotes are authentic
 - [ ] Format is structured and readable
-""")
+"""
+        )
     print(f"\nCreated instructions: {instruction_file}")
 
 
@@ -162,19 +168,23 @@ def regenerate_culture_pack():
         ]
 
         if kural_num == 1:
-            questions.extend([
-                "திருக்குறளின் முதல் குறள் என்ன?",
-                "Thirukkural முதல் குறள் என்ன?",
-                "அகர முதல குறள் சொல்லுங்க",
-                "கடவுள் வாழ்த்து முதல் குறள்",
-                "திருவள்ளுவர் எழுதிய முதல் குறள்",
-            ])
+            questions.extend(
+                [
+                    "திருக்குறளின் முதல் குறள் என்ன?",
+                    "Thirukkural முதல் குறள் என்ன?",
+                    "அகர முதல குறள் சொல்லுங்க",
+                    "கடவுள் வாழ்த்து முதல் குறள்",
+                    "திருவள்ளுவர் எழுதிய முதல் குறள்",
+                ]
+            )
 
         if kural_num == 10:
-            questions.extend([
-                "பிறவிப் பெருங்கடல் என்ற குறள் என்ன?",
-                "பிறவிப் பெருங்கடல் குறள் சொல்லுங்க",
-            ])
+            questions.extend(
+                [
+                    "பிறவிப் பெருங்கடல் என்ற குறள் என்ன?",
+                    "பிறவிப் பெருங்கடல் குறள் சொல்லுங்க",
+                ]
+            )
 
         answer = f"""📖 திருக்குறள் - {kural_data['athikaram']} அதிகாரம், குறள் {kural_num}:
 
@@ -190,20 +200,24 @@ def regenerate_culture_pack():
 📖 அதிகாரம்: {kural_data['athikaram']}"""
 
         for q in questions:
-            regenerated.append({
-                "instruction": q,
-                "output": answer,
-                "language": "pure_tamil",
-                "pack": "vazhi_panpaadu",
-                "category": "thirukkural_authoritative",
-                "id": f"KURAL_AUTH_{kural_num}_{len(regenerated):03d}",
-            })
+            regenerated.append(
+                {
+                    "instruction": q,
+                    "output": answer,
+                    "language": "pure_tamil",
+                    "pack": "vazhi_panpaadu",
+                    "category": "thirukkural_authoritative",
+                    "id": f"KURAL_AUTH_{kural_num}_{len(regenerated):03d}",
+                }
+            )
 
     # Generate 18 Siddhars Q&As
-    siddhars_list = "\n".join([
-        f"{i+1}. {s['name']} ({s['english']}) - {s['specialty']}"
-        for i, s in enumerate(SIDDHARS_AUTHORITATIVE)
-    ])
+    siddhars_list = "\n".join(
+        [
+            f"{i+1}. {s['name']} ({s['english']}) - {s['specialty']}"
+            for i, s in enumerate(SIDDHARS_AUTHORITATIVE)
+        ]
+    )
 
     siddhars_answer = f"""🙏 பதினெண் சித்தர்கள் (18 Siddhars):
 
@@ -227,14 +241,16 @@ def regenerate_culture_pack():
     ]
 
     for q in siddhars_questions:
-        regenerated.append({
-            "instruction": q,
-            "output": siddhars_answer,
-            "language": "pure_tamil" if "Tamil" not in q else "tanglish",
-            "pack": "vazhi_panpaadu",
-            "category": "siddhars_authoritative",
-            "id": f"SIDD_AUTH_{len(regenerated):03d}",
-        })
+        regenerated.append(
+            {
+                "instruction": q,
+                "output": siddhars_answer,
+                "language": "pure_tamil" if "Tamil" not in q else "tanglish",
+                "pack": "vazhi_panpaadu",
+                "category": "siddhars_authoritative",
+                "id": f"SIDD_AUTH_{len(regenerated):03d}",
+            }
+        )
 
     # Save
     with open(culture_output, "w", encoding="utf-8") as f:
@@ -248,16 +264,16 @@ def regenerate_culture_pack():
 
 def validate_regenerated_sample(sample: dict) -> dict:
     """Validate a regenerated sample."""
-    output = sample.get('output', '')
+    output = sample.get("output", "")
 
     # Calculate Tamil percentage
-    tamil_chars = len(re.findall(r'[\u0B80-\u0BFF]', output))
-    english_chars = len(re.findall(r'[a-zA-Z]', output))
+    tamil_chars = len(re.findall(r"[\u0B80-\u0BFF]", output))
+    english_chars = len(re.findall(r"[a-zA-Z]", output))
     total = tamil_chars + english_chars
     tamil_pct = (tamil_chars / total * 100) if total > 0 else 0
 
     # Check for structure
-    has_structure = bool(re.search(r'[•📍📚🔢📖📜💡✍️🏥⚖️🛕🙏]', output))
+    has_structure = bool(re.search(r"[•📍📚🔢📖📜💡✍️🏥⚖️🛕🙏]", output))
 
     # Check length
     is_adequate_length = len(output) >= 100
@@ -276,6 +292,7 @@ def run_audit_and_export():
     # First run audit
     print("Step 1: Running audit...")
     import audit_data
+
     audit_data.audit_training_data()
 
     # Load regenerate samples
@@ -297,10 +314,10 @@ def run_audit_and_export():
     print("\n" + "=" * 60)
     print("EXPORT COMPLETE")
     print("=" * 60)
-    print(f"\nNext steps:")
+    print("\nNext steps:")
     print(f"1. Check {OUTPUT_DIR / 'for_manual'} for batch files")
-    print(f"2. Use Claude.ai to regenerate each batch")
-    print(f"3. Run validation after regeneration")
+    print("2. Use Claude.ai to regenerate each batch")
+    print("3. Run validation after regeneration")
 
 
 if __name__ == "__main__":

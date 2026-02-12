@@ -13,7 +13,6 @@ This script:
 import json
 import random
 from pathlib import Path
-from datetime import datetime
 
 # Paths
 DATA_DIR = Path(__file__).parent.parent / "data"
@@ -31,12 +30,14 @@ CATEGORY_MAP = {
     "temple_festival": "temples_festivals",
 }
 
+
 def get_category(filename: str) -> str:
     """Determine category from filename."""
     for key, category in CATEGORY_MAP.items():
         if key in filename:
             return category
     return "culture_general"
+
 
 def load_culture_v2_data() -> list:
     """Load all culture v2 JSON files and add required fields."""
@@ -61,6 +62,7 @@ def load_culture_v2_data() -> list:
 
     return all_pairs
 
+
 def load_existing_training_data() -> tuple:
     """Load existing v0.1 training data."""
     train_file = OUTPUT_DIR / "vazhi_train.json"
@@ -74,11 +76,13 @@ def load_existing_training_data() -> tuple:
 
     return train_data, val_data
 
+
 def remove_old_culture_data(data: list) -> list:
     """Remove old culture pack data to replace with v2."""
     # Filter out old culture pack entries
     filtered = [
-        item for item in data
+        item
+        for item in data
         if item.get("pack") not in ["vazhi_panpaadu", "vazhi_culture"]
     ]
     removed = len(data) - len(filtered)
@@ -86,7 +90,10 @@ def remove_old_culture_data(data: list) -> list:
         print(f"Removed {removed} old culture entries")
     return filtered
 
-def merge_and_split(existing_train: list, existing_val: list, new_culture: list) -> tuple:
+
+def merge_and_split(
+    existing_train: list, existing_val: list, new_culture: list
+) -> tuple:
     """Merge data and create new train/val splits."""
     # Combine existing train and val (we'll re-split)
     all_existing = existing_train + existing_val
@@ -108,10 +115,9 @@ def merge_and_split(existing_train: list, existing_val: list, new_culture: list)
 
     return train_data, val_data
 
+
 def save_data(train_data: list, val_data: list):
     """Save merged training data."""
-    timestamp = datetime.now().strftime("%Y%m%d")
-
     # Save v0.2 training files
     train_file = OUTPUT_DIR / "vazhi_train_v02.json"
     val_file = OUTPUT_DIR / "vazhi_val_v02.json"
@@ -127,10 +133,11 @@ def save_data(train_data: list, val_data: list):
     with open(merged_file, "w", encoding="utf-8") as f:
         json.dump(train_data + val_data, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved:")
+    print("\nSaved:")
     print(f"  - {train_file} ({len(train_data)} samples)")
     print(f"  - {val_file} ({len(val_data)} samples)")
     print(f"  - {merged_file} ({len(train_data) + len(val_data)} total)")
+
 
 def print_stats(train_data: list, val_data: list, culture_v2: list):
     """Print dataset statistics."""
@@ -142,9 +149,9 @@ def print_stats(train_data: list, val_data: list, culture_v2: list):
         pack = item.get("pack", "unknown")
         pack_counts[pack] = pack_counts.get(pack, 0) + 1
 
-    print("\n" + "="*50)
+    print("\n" + "=" * 50)
     print("VAZHI v0.2 Training Data Statistics")
-    print("="*50)
+    print("=" * 50)
     print(f"\nTotal samples: {len(all_data)}")
     print(f"  - Training: {len(train_data)}")
     print(f"  - Validation: {len(val_data)}")
@@ -152,6 +159,7 @@ def print_stats(train_data: list, val_data: list, culture_v2: list):
     print("\nSamples by pack:")
     for pack, count in sorted(pack_counts.items()):
         print(f"  - {pack}: {count}")
+
 
 def main():
     print("VAZHI v0.2 Training Data Merge")
@@ -175,6 +183,7 @@ def main():
     save_data(train_data, val_data)
 
     print("\nDone! Ready for v0.2 training.")
+
 
 if __name__ == "__main__":
     main()

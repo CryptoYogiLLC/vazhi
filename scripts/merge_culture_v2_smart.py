@@ -25,6 +25,7 @@ REPLACE_CATEGORIES = {"thirukkural", "siddhars", "siddhar_teachings", "siddha_me
 # Categories to MERGE (keep old + add v2)
 MERGE_CATEGORIES = {"temples_heritage", "temples_festivals"}
 
+
 def load_culture_v2_data() -> list:
     """Load all culture v2 JSON files."""
     all_pairs = []
@@ -58,6 +59,7 @@ def load_culture_v2_data() -> list:
             all_pairs.append(pair)
 
     return all_pairs
+
 
 def smart_merge():
     """Perform smart merge keeping good old data."""
@@ -97,7 +99,7 @@ def smart_merge():
             # Default: keep unknown categories
             old_culture_keep.append(item)
 
-    print(f"\nOld culture data breakdown:")
+    print("\nOld culture data breakdown:")
     print(f"  - KEEP (arts, saints): {len(old_culture_keep)}")
     print(f"  - REPLACE (thirukkural, siddhars): {len(old_culture_replace)}")
     print(f"  - MERGE (temples): {len(old_culture_merge)}")
@@ -159,12 +161,13 @@ def smart_merge():
     with open(DATA_DIR / "vazhi_training_merged_v02.json", "w", encoding="utf-8") as f:
         json.dump(final_data, f, ensure_ascii=False, indent=2)
 
-    print(f"\nSaved:")
+    print("\nSaved:")
     print(f"  - vazhi_train_v02.json ({len(train_data)} samples)")
     print(f"  - vazhi_val_v02.json ({len(val_data)} samples)")
     print(f"  - Total: {len(final_data)} samples")
 
     return final_data
+
 
 if __name__ == "__main__":
     print("VAZHI v0.2 Smart Merge")

@@ -173,14 +173,16 @@ def create_heavy_augmented_data():
     for qa_list, answer, category in all_qa_sets:
         for rep in range(REPETITIONS):
             for question, lang in qa_list:
-                augmented.append({
-                    "instruction": question,
-                    "output": answer,
-                    "language": lang,
-                    "pack": "vazhi_panpaadu",
-                    "category": category,
-                    "id": f"CULT_HEAVY_{idx:04d}"
-                })
+                augmented.append(
+                    {
+                        "instruction": question,
+                        "output": answer,
+                        "language": lang,
+                        "pack": "vazhi_panpaadu",
+                        "category": category,
+                        "id": f"CULT_HEAVY_{idx:04d}",
+                    }
+                )
                 idx += 1
 
     return augmented
@@ -220,14 +222,18 @@ def merge_heavy():
         json.dump(all_data, f, ensure_ascii=False, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"v0.3 HEAVY AUGMENTATION SUMMARY")
+    print("v0.3 HEAVY AUGMENTATION SUMMARY")
     print(f"{'='*50}")
     print(f"Training samples: {len(train_data)}")
     print(f"Validation samples: {len(val_data)}")
     print(f"Total: {len(all_data)}")
-    print(f"\nCritical entries now repeated 5x each:")
-    print(f"  - First Kural: {len(FIRST_KURAL_QA)} questions × 5 = {len(FIRST_KURAL_QA)*5}")
-    print(f"  - கற்றதனால்: {len(KATTRATHANAL_QA)} questions × 5 = {len(KATTRATHANAL_QA)*5}")
+    print("\nCritical entries now repeated 5x each:")
+    print(
+        f"  - First Kural: {len(FIRST_KURAL_QA)} questions × 5 = {len(FIRST_KURAL_QA)*5}"
+    )
+    print(
+        f"  - கற்றதனால்: {len(KATTRATHANAL_QA)} questions × 5 = {len(KATTRATHANAL_QA)*5}"
+    )
     print(f"  - பிறவிப்: {len(PIRAVI_QA)} questions × 5 = {len(PIRAVI_QA)*5}")
     print(f"  - Siddhars: {len(SIDDHARS_QA)} questions × 5 = {len(SIDDHARS_QA)*5}")
     print(f"  - Agathiyar: {len(AGATHIYAR_QA)} questions × 5 = {len(AGATHIYAR_QA)*5}")

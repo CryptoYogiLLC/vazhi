@@ -34,18 +34,17 @@ random.seed(42)
 
 # Thirukkural patterns to identify
 KURAL_PATTERNS = [
-    r'குறள்\s*\d+',
-    r'திருக்குறள்',
-    r'அதிகாரம்',
-    r'பொருள்:',
-    r'அர்த்தம்',
-    r'வள்ளுவர்',
+    r"குறள்\s*\d+",
+    r"திருக்குறள்",
+    r"அதிகாரம்",
+    r"பொருள்:",
+    r"அர்த்தம்",
+    r"வள்ளுவர்",
 ]
 
 
 def is_kural_sample(text: str) -> bool:
     """Check if sample is Thirukkural-related."""
-    text_lower = text.lower()
     for pattern in KURAL_PATTERNS:
         if re.search(pattern, text, re.IGNORECASE):
             return True
@@ -56,16 +55,16 @@ def is_kural_interpretation(text: str) -> bool:
     """Check if sample is Thirukkural interpretation (not verbatim)."""
     # Interpretation samples typically ask about meaning
     interpretation_patterns = [
-        r'என்ன\s+சொல்கிறது',
-        r'கருத்து\s+என்ன',
-        r'அர்த்தம்\s+என்ன',
-        r'பொருள்\s+என்ன',
-        r'விளக்கம்\s+தருக',
-        r'என்ன\s+பொருள்',
-        r'எப்படி\s+பொருந்தும்',
-        r'வாழ்க்கையில்',
-        r'decision\s+making',
-        r'applicable',
+        r"என்ன\s+சொல்கிறது",
+        r"கருத்து\s+என்ன",
+        r"அர்த்தம்\s+என்ன",
+        r"பொருள்\s+என்ன",
+        r"விளக்கம்\s+தருக",
+        r"என்ன\s+பொருள்",
+        r"எப்படி\s+பொருந்தும்",
+        r"வாழ்க்கையில்",
+        r"decision\s+making",
+        r"applicable",
     ]
     for pattern in interpretation_patterns:
         if re.search(pattern, text, re.IGNORECASE):
@@ -80,7 +79,7 @@ def load_existing_data() -> List[Dict]:
 
     print(f"📚 Loading existing data from {train_path}")
 
-    with open(train_path, 'r', encoding='utf-8') as f:
+    with open(train_path, "r", encoding="utf-8") as f:
         for line in f:
             if line.strip():
                 samples.append(json.loads(line))
@@ -95,11 +94,11 @@ def load_diverse_qa() -> List[Dict]:
 
     if not diverse_path.exists():
         print(f"   ⚠️ Diverse QA pack not found at {diverse_path}")
-        print(f"   Run create_diverse_qa_pack.py first!")
+        print("   Run create_diverse_qa_pack.py first!")
         return []
 
     samples = []
-    with open(diverse_path, 'r', encoding='utf-8') as f:
+    with open(diverse_path, "r", encoding="utf-8") as f:
         for line in f:
             if line.strip():
                 samples.append(json.loads(line))
@@ -113,37 +112,44 @@ def categorize_samples(samples: List[Dict]) -> Dict[str, List[Dict]]:
     categories = defaultdict(list)
 
     for s in samples:
-        text = s.get('text', '')
+        text = s.get("text", "")
 
         if is_kural_sample(text):
             if is_kural_interpretation(text):
-                categories['kural_interpretation'].append(s)
+                categories["kural_interpretation"].append(s)
             else:
-                categories['kural_verbatim'].append(s)
-        elif 'vazhi_' in s.get('source', '').lower() or 'pack' in s.get('source', '').lower():
-            categories['domain'].append(s)
-        elif any(dialect in text.lower() for dialect in ['டா', 'மா', 'டே', 'லே']):
-            categories['conversational'].append(s)
+                categories["kural_verbatim"].append(s)
+        elif (
+            "vazhi_" in s.get("source", "").lower()
+            or "pack" in s.get("source", "").lower()
+        ):
+            categories["domain"].append(s)
+        elif any(dialect in text.lower() for dialect in ["டா", "மா", "டே", "லே"]):
+            categories["conversational"].append(s)
         elif len(text) < 300:
-            categories['short_response'].append(s)
+            categories["short_response"].append(s)
         else:
-            categories['general'].append(s)
+            categories["general"].append(s)
 
     return dict(categories)
 
 
-def downsample_kural(categories: Dict[str, List[Dict]],
-                     target_kural_pct: float = 0.25) -> Dict[str, List[Dict]]:
+def downsample_kural(
+    categories: Dict[str, List[Dict]], target_kural_pct: float = 0.25
+) -> Dict[str, List[Dict]]:
     """Downsample Thirukkural samples to target percentage."""
 
     # Calculate current and target
-    kural_verbatim = categories.get('kural_verbatim', [])
-    kural_interp = categories.get('kural_interpretation', [])
+    kural_verbatim = categories.get("kural_verbatim", [])
+    kural_interp = categories.get("kural_interpretation", [])
     total_kural = len(kural_verbatim) + len(kural_interp)
-    total_other = sum(len(v) for k, v in categories.items()
-                      if k not in ['kural_verbatim', 'kural_interpretation'])
+    total_other = sum(
+        len(v)
+        for k, v in categories.items()
+        if k not in ["kural_verbatim", "kural_interpretation"]
+    )
 
-    print(f"\n📊 Before downsampling:")
+    print("\n📊 Before downsampling:")
     print(f"   Kural verbatim: {len(kural_verbatim)}")
     print(f"   Kural interpretation: {len(kural_interp)}")
     print(f"   Total kural: {total_kural}")
@@ -155,24 +161,28 @@ def downsample_kural(categories: Dict[str, List[Dict]],
     # kural = 0.25 * other / 0.75
     target_kural = int(target_kural_pct * total_other / (1 - target_kural_pct))
 
-    print(f"\n🎯 Target kural count: {target_kural} ({100*target_kural_pct:.0f}% of total)")
+    print(
+        f"\n🎯 Target kural count: {target_kural} ({100*target_kural_pct:.0f}% of total)"
+    )
 
     # Keep all interpretation samples (valuable)
     keep_interpretation = kural_interp
 
     # Downsample verbatim (less valuable since SQLite handles exact lookup)
     remaining_budget = max(0, target_kural - len(keep_interpretation))
-    keep_verbatim = random.sample(kural_verbatim, min(remaining_budget, len(kural_verbatim)))
+    keep_verbatim = random.sample(
+        kural_verbatim, min(remaining_budget, len(kural_verbatim))
+    )
 
     # Update categories
-    categories['kural_verbatim'] = keep_verbatim
-    categories['kural_interpretation'] = keep_interpretation
+    categories["kural_verbatim"] = keep_verbatim
+    categories["kural_interpretation"] = keep_interpretation
 
     # Recalculate
     new_total_kural = len(keep_verbatim) + len(keep_interpretation)
     new_total = new_total_kural + total_other
 
-    print(f"\n📊 After downsampling:")
+    print("\n📊 After downsampling:")
     print(f"   Kural verbatim: {len(keep_verbatim)}")
     print(f"   Kural interpretation: {len(keep_interpretation)}")
     print(f"   Total kural: {new_total_kural}")
@@ -205,24 +215,24 @@ def create_balanced_dataset():
     all_samples = []
     for cat, samples in categories.items():
         for s in samples:
-            s['category'] = cat
+            s["category"] = cat
             all_samples.append(s)
 
     # Add diverse QA
     for s in diverse_qa:
-        s['category'] = s.get('category', 'diverse_qa')
+        s["category"] = s.get("category", "diverse_qa")
         all_samples.append(s)
 
     # Shuffle
     random.shuffle(all_samples)
 
-    print(f"\n📊 Final dataset:")
+    print("\n📊 Final dataset:")
     print(f"   Total samples: {len(all_samples)}")
 
     # Final distribution
     final_dist = defaultdict(int)
     for s in all_samples:
-        final_dist[s.get('category', 'unknown')] += 1
+        final_dist[s.get("category", "unknown")] += 1
 
     print("\n📈 Final category distribution:")
     for cat, count in sorted(final_dist.items(), key=lambda x: -x[1]):
@@ -236,17 +246,17 @@ def create_balanced_dataset():
 
     # Save train
     train_path = OUTPUT_DIR / "train.jsonl"
-    with open(train_path, 'w', encoding='utf-8') as f:
+    with open(train_path, "w", encoding="utf-8") as f:
         for s in train_samples:
             # Only keep 'text' field for training
-            f.write(json.dumps({"text": s["text"]}, ensure_ascii=False) + '\n')
+            f.write(json.dumps({"text": s["text"]}, ensure_ascii=False) + "\n")
     print(f"\n💾 Saved {len(train_samples)} train samples to {train_path}")
 
     # Save val
     val_path = OUTPUT_DIR / "val.jsonl"
-    with open(val_path, 'w', encoding='utf-8') as f:
+    with open(val_path, "w", encoding="utf-8") as f:
         for s in val_samples:
-            f.write(json.dumps({"text": s["text"]}, ensure_ascii=False) + '\n')
+            f.write(json.dumps({"text": s["text"]}, ensure_ascii=False) + "\n")
     print(f"💾 Saved {len(val_samples)} val samples to {val_path}")
 
     # Save metadata
@@ -260,11 +270,11 @@ def create_balanced_dataset():
             "Downsampled Thirukkural verbatim from ~7000 to ~2500",
             "Added diverse QA pack (~1000 samples)",
             "Kept all Thirukkural interpretation samples",
-            "Target: 25% kural, 30% domain, 30% general, 15% conversational"
-        ]
+            "Target: 25% kural, 30% domain, 30% general, 15% conversational",
+        ],
     }
 
-    with open(OUTPUT_DIR / "metadata.json", 'w', encoding='utf-8') as f:
+    with open(OUTPUT_DIR / "metadata.json", "w", encoding="utf-8") as f:
         json.dump(metadata, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 60)
