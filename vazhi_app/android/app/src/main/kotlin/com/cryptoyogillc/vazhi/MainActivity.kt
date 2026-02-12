@@ -1,4 +1,4 @@
-package com.cryptoyogillc.vazhi_app
+package com.cryptoyogillc.vazhi
 
 import io.flutter.embedding.android.FlutterActivity
 
