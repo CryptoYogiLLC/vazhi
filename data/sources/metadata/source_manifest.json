@@ -1,0 +1,96 @@
+{
+  "version": "1.0",
+  "description": "Source manifest for VAZHI training data pipeline. See ADR-010.",
+  "files": [
+    {
+      "path": "data/sources/dapt/36_silapathikaram_corpus.json",
+      "intended_use": "DAPT",
+      "description": "Silapathikaram literary corpus text",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/dapt/37_thirukkural_corpus.json",
+      "intended_use": "DAPT",
+      "description": "Thirukkural raw verse corpus text",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/dapt/38_sangam_corpus.json",
+      "intended_use": "DAPT",
+      "description": "Sangam literature corpus text",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/dapt/39_aathichoodi_corpus.json",
+      "intended_use": "DAPT",
+      "description": "Aathichoodi corpus text",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/dapt/40_bharathiar_corpus.json",
+      "intended_use": "DAPT",
+      "description": "Bharathiar poetry corpus text",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/vazhi-packs/security.json",
+      "intended_use": "SFT",
+      "description": "Security domain Q&A pairs flattened from vazhi-packs",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/vazhi-packs/govt.json",
+      "intended_use": "SFT",
+      "description": "Government domain Q&A pairs flattened from vazhi-packs",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/vazhi-packs/education.json",
+      "intended_use": "SFT",
+      "description": "Education domain Q&A pairs flattened from vazhi-packs",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/vazhi-packs/legal.json",
+      "intended_use": "SFT",
+      "description": "Legal domain Q&A pairs flattened from vazhi-packs",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/vazhi-packs/healthcare.json",
+      "intended_use": "SFT",
+      "description": "Healthcare domain Q&A pairs flattened from vazhi-packs",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/vazhi-packs/culture.json",
+      "intended_use": "SFT",
+      "description": "Culture domain Q&A pairs flattened from vazhi-packs",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/handcrafted/refusal.json",
+      "intended_use": "SFT",
+      "description": "Refusal samples for boundary behavior training",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/handcrafted/brevity.json",
+      "intended_use": "SFT",
+      "description": "Short-answer brevity discipline samples",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/handcrafted/greeting.json",
+      "intended_use": "SFT",
+      "description": "Conversational greeting and farewell samples",
+      "version": "1.0"
+    },
+    {
+      "path": "data/sources/sft/handcrafted/guardrails.json",
+      "intended_use": "SFT",
+      "description": "Safety guardrail samples (violence, illegal, privacy, etc.)",
+      "version": "1.0"
+    }
+  ]
+}

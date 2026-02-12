@@ -26,6 +26,20 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 
 ---
 
+## Data Pipeline Restructure (ADR-010) — 2026-02-12
+
+Starting with v4.0+, training datasets are constructed by the **Dataset Factory notebook** (`notebooks/Vazhi_Dataset_Factory_v4_0.ipynb`) per [ADR-010](../docs/adr/010-data-pipeline-architecture.md).
+
+Key changes from v3.x dataset construction:
+- **vazhi-packs (3,007 Q&A pairs) now included** — previously excluded from training
+- **IndicAlign diversity >= 30%** — prevents memorization
+- **Thirukkural hard-capped at <= 15%** — verbatim Q&As rejected
+- **Hard composition enforcement** — Factory fails if targets violated
+- **Stratified train/eval split** (90/10) by source bucket
+- **Local data restructured** — DAPT and SFT physically separated in `data/sources/`
+
+---
+
 ## v0.1 Training Run
 
 **Date:** 2026-02-05

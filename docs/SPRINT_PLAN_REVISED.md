@@ -168,9 +168,11 @@ Multi-agent code review completed with 19 GitHub issues closed.
 **Issues Closed**: #22-32, #27, #29, #33-40 (19 total from code review)
 
 ### Phase 3: Data Population & AI 🔄 IN PROGRESS
+- [x] **Data pipeline restructure (ADR-010)** — four-layer pipeline, composition enforcement, anti-memorization
 - [ ] Full Thirukkural database (1,330 verses)
 - [ ] Complete government schemes database
 - [ ] Hospital directory population
+- [ ] **Run Dataset Factory** (`Vazhi_Dataset_Factory_v4_0.ipynb`) on Kaggle to produce v4.0 curated dataset
 - [ ] **AI Model: Qwen3-0.6B SFT (<1GB GGUF target)**
 - [ ] Run v3.7 notebook on Kaggle (fp16 LoRA merge fix)
 - [ ] GGUF conversion and Tamil output quality validation

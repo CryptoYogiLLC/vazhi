@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# LEGACY — Superseded by notebooks/Vazhi_Dataset_Factory_v4_0.ipynb (ADR-010)
+# Kept for historical reference. Do not use for new datasets.
+raise RuntimeError(
+    "This script is LEGACY and superseded by notebooks/Vazhi_Dataset_Factory_v4_0.ipynb. "
+    "Do not use it for new datasets. See docs/adr/010-data-pipeline-architecture.md."
+)
 """
 Create Balanced SFT Dataset for VAZHI v3.1
 ==========================================
@@ -15,12 +21,12 @@ Target distribution:
 - Conversational: 10-15%
 """
 
-import json
-import random
-import re
-from pathlib import Path
-from collections import defaultdict
-from typing import List, Dict
+import json  # noqa: E402
+import random  # noqa: E402
+import re  # noqa: E402
+from pathlib import Path  # noqa: E402
+from collections import defaultdict  # noqa: E402
+from typing import List, Dict  # noqa: E402
 
 # Paths
 BASE_DIR = Path(__file__).parent.parent

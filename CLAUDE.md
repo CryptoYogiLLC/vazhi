@@ -92,6 +92,15 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Smaller models quantize better** — less absolute precision loss
 - **Tamil tokenization overhead** (3-4 tokens/char) compounds quantization errors
 
+### Data Pipeline Rules (ADR-010)
+- **NEVER mix DAPT and SFT data** — physically separated in `data/sources/dapt/` and `data/sources/sft/`
+- **vazhi-packs MUST be in training** — flattened copies in `data/sources/sft/vazhi-packs/`
+- **IndicAlign diversity >= 30%** of SFT dataset — prevents memorization and improves generalization
+- **Thirukkural hard-capped at <= 15%** — verbatim Q&As rejected, only interpretive Q&As allowed
+- **Composition targets are hard constraints** — Dataset Factory fails if violated, not aspirational
+- **Dataset Factory notebook** (`notebooks/Vazhi_Dataset_Factory_v4_0.ipynb`) constructs curated datasets on Kaggle
+- **Legacy scripts raise RuntimeError** — `create_diverse_qa_pack.py` and `create_balanced_sft_dataset.py` are superseded
+
 ### App/Security Rules
 - **Input validation is non-negotiable** — sanitize ALL user input at service boundaries
 - **Encrypt sensitive local storage** — Hive alone is not secure, use flutter_secure_storage
@@ -113,12 +122,19 @@ vazhi/
 │   │   ├── widgets/              # Accessible UI components
 │   │   └── providers/            # Riverpod state management
 │   └── test/                     # 232 tests
-├── data/                         # Training datasets
-│   ├── tamil_foundation/         # 19 JSON files, 11K+ samples
-│   └── v04/                      # Regenerated training data
+├── data/                         # Training data pipeline (ADR-010)
+│   ├── sources/                  # Source data, organized by intended use
+│   │   ├── dapt/                 # Raw Tamil text for DAPT (NEVER for SFT)
+│   │   ├── sft/
+│   │   │   ├── vazhi-packs/      # Flattened Q&A from 6 domain packs
+│   │   │   └── handcrafted/      # Refusal, brevity, greeting, guardrails
+│   │   └── metadata/             # source_manifest.json (intended_use per file)
+│   ├── curated/                  # Local backups of HF datasets
+│   └── LEGACY/                   # Archived pre-pipeline data (read-only)
 ├── models/
 │   └── TRAINING_LOG.md           # Detailed log of all 12 training attempts
 ├── notebooks/                    # Kaggle/Colab training notebooks
+│   ├── Vazhi_Dataset_Factory_v4_0.ipynb # Dataset construction (ADR-010)
 │   ├── Vazhi_SFT_v3_7_MergeFix.ipynb # LATEST — Fix LoRA merge (fp16 not 4-bit)
 │   ├── Vazhi_SFT_v3_6_Instruct.ipynb # FAILED — LoRA merge corruption
 │   ├── Vazhi_SFT_v3_5_Masked.ipynb # FAILED — Base model SFT-only
@@ -127,24 +143,25 @@ vazhi/
 │   └── [13 more historical notebooks]
 ├── scripts/                      # Data processing, validation, rebalancing
 ├── schemas/                      # JSON schemas for training data validation
-├── vazhi-packs/                  # 6 domain-specific knowledge packs
+├── vazhi-packs/                  # 6 domain-specific knowledge packs (app references these)
 ├── huggingface-space/            # Gradio test API (submodule)
 └── docs/
     ├── SPRINT_PLAN_REVISED.md    # Roadmap and phase tracking
     ├── LESSONS_LEARNED.md        # 46 lessons from training journey
     ├── CODE_REVIEW_CONSENSUS_REPORT.md
     ├── DATA_REGENERATION_PLAN.md # Historical — v0.2 data crisis
-    └── adr/                      # 9 Architecture Decision Records
+    └── adr/                      # 10 Architecture Decision Records
 ```
 
 ## Key Documents (Read Order for New Agents)
 
 1. **This file** — start here
 2. **`vazhi_app/APP_CHANGELOG.md`** — app feature history, architecture decisions, and lessons learned
-3. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
-4. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
-5. **`docs/LESSONS_LEARNED.md`** — 46 hard-won lessons, ideal training pipeline
-6. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
+3. **`docs/adr/010-data-pipeline-architecture.md`** — data pipeline design, composition targets, anti-memorization rules
+4. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
+5. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
+6. **`docs/LESSONS_LEARNED.md`** — 46 hard-won lessons, ideal training pipeline
+7. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
 
 ## Development Commands
 

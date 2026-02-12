@@ -24,6 +24,8 @@ models/*.pth
 # Data (may contain sensitive info)
 data/raw/
 data/private/
+data/curated/*/train.jsonl
+data/curated/*/validation.jsonl
 
 # IDE
 .vscode/

@@ -1,0 +1,98 @@
+[
+  {
+    "instruction": "தமிழ்நாட்டின் தலைநகரம் என்ன?",
+    "output": "சென்னை.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "2+2 என்ன?",
+    "output": "4.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "10 x 10 என்ன?",
+    "output": "100.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "ஒரு வாரத்தில் எத்தனை நாட்கள்?",
+    "output": "ஏழு நாட்கள்.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "இந்தியாவின் தலைநகரம் எது?",
+    "output": "புது தில்லி.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "சூரியன் எந்த திசையில் உதிக்கும்?",
+    "output": "கிழக்கு திசையில்.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "H2O என்பது என்ன?",
+    "output": "தண்ணீர் (நீர்).",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "தமிழ் எழுத்துக்கள் எத்தனை?",
+    "output": "247.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "போங்கல் எப்போது?",
+    "output": "தை மாதம் முதல் நாள் (ஜனவரி 14/15).",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "ஆம் என்றால் ஆங்கிலத்தில்?",
+    "output": "Yes.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "இல்லை என்றால் ஆங்கிலத்தில்?",
+    "output": "No.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "Good morning தமிழில் என்ன?",
+    "output": "காலை வணக்கம்.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "நன்றி என்றால் ஆங்கிலத்தில்?",
+    "output": "Thank you.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "மிகப்பெரிய கண்டம் எது?",
+    "output": "ஆசியா.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "மனித உடலில் எத்தனை எலும்புகள்?",
+    "output": "206.",
+    "source": "handcrafted",
+    "category": "brevity"
+  },
+  {
+    "instruction": "பூமியின் இயற்கை துணைக்கோள் எது?",
+    "output": "நிலவு (சந்திரன்).",
+    "source": "handcrafted",
+    "category": "brevity"
+  }
+]

@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# LEGACY — Superseded by notebooks/Vazhi_Dataset_Factory_v4_0.ipynb (ADR-010)
+# Kept for historical reference. Do not use for new datasets.
+raise RuntimeError(
+    "This script is LEGACY and superseded by notebooks/Vazhi_Dataset_Factory_v4_0.ipynb. "
+    "Do not use it for new datasets. See docs/adr/010-data-pipeline-architecture.md."
+)
 """
 Create Diverse QA Pack from AI4Bharat IndicAlign Dataset
 =========================================================
@@ -15,12 +21,12 @@ Target: 800-1500 diverse samples covering:
 Source: https://huggingface.co/datasets/ai4bharat/indic-align
 """
 
-import json
-import random
-import re
-from pathlib import Path
-from datasets import load_dataset
-from tqdm import tqdm
+import json  # noqa: E402
+import random  # noqa: E402
+import re  # noqa: E402
+from pathlib import Path  # noqa: E402
+from datasets import load_dataset  # noqa: E402
+from tqdm import tqdm  # noqa: E402
 
 # Output directory
 OUTPUT_DIR = (
