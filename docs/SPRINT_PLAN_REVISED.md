@@ -168,16 +168,26 @@ Multi-agent code review completed with 19 GitHub issues closed.
 **Issues Closed**: #22-32, #27, #29, #33-40 (19 total from code review)
 
 ### Phase 3: Data Population & AI 🔄 IN PROGRESS
+
+#### Data Pipeline ✅
 - [x] **Data pipeline restructure (ADR-010)** — four-layer pipeline, composition enforcement, anti-memorization
+- [x] **Dataset Factory v4.0** (`Vazhi_Dataset_Factory_v4_0.ipynb`) — ran on Kaggle, produced 3,365 curated SFT samples
+- [x] **DAPT data prep notebook** (`Vazhi_DAPT_Data_v1_0.ipynb`) — CPU-only, streams Sangraha, filters, packs 30M tokens
+- [x] **DAPT training notebook** (`Vazhi_DAPT_v1_0_Tamil.ipynb`) — GPU, QLoRA on Qwen3-0.6B-Base, produces reusable Tamil base
+
+#### Database Population (not blocked)
 - [ ] Full Thirukkural database (1,330 verses)
 - [ ] Complete government schemes database
 - [ ] Hospital directory population
-- [ ] **Run Dataset Factory** (`Vazhi_Dataset_Factory_v4_0.ipynb`) on Kaggle to produce v4.0 curated dataset
-- [ ] **AI Model: Qwen3-0.6B SFT (<1GB GGUF target)**
-- [ ] Run v3.7 notebook on Kaggle (fp16 LoRA merge fix)
-- [ ] GGUF conversion and Tamil output quality validation
 
-**Model Training History (12 failed attempts):**
+#### AI Model Training 🔄
+**Current approach: 3-step pipeline (DAPT → SFT → GGUF)**
+- [ ] **Step 1: Run DAPT data prep** on Kaggle CPU — filter Sangraha, pack sequences, upload to HF
+- [ ] **Step 2: Run DAPT training** on Kaggle GPU — produce `CryptoYogi/qwen3-0.6b-tamil` (reusable Tamil base)
+- [ ] **Step 3: Run SFT** on DAPT-adapted model with v4.0 dataset (3,365 samples)
+- [ ] **Step 4: GGUF conversion** and Tamil output quality validation
+
+**Model Training History (13 failed attempts):**
 - v0.1-v0.4: Qwen2.5-3B — data quality issues then GGUF broke Tamil
 - v0.5: Qwen2.5-0.5B — LoRA corrupted model
 - v0.6: Sarvam-2B — 4-bit training instability
@@ -186,11 +196,13 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - v3.2: Qwen3-0.6B — fp16 issues on T4
 - v3.3: Qwen3-0.6B (instruct) — native `<think>` tokens conflicted with ChatML
 - v3.4: Qwen3-0.6B-Base — base model approach, not validated
-- v3.5: Qwen3-0.6B — dataset construction bugs (format/dedup issues)
+- v3.5: Qwen3-0.6B — SFT-only on base model produced code garbage (no DAPT)
 - v3.6: Qwen3-0.6B — training succeeded but LoRA merge into 4-bit model corrupted output
-- **v3.7 (LATEST):** Qwen3-0.6B — same training as v3.6 but saves LoRA adapter → reloads base in fp16 → merges in fp16. Not yet run.
+- v3.7: Qwen3-0.6B — superseded by v3.8 (v4.0 dataset)
+- **v3.8 (FAILED):** Qwen3-0.6B (instruct) — SFT-only with v4.0 dataset, 0/12 eval, no DAPT = gibberish Tamil
+- **DAPT v1.0 (PENDING):** Qwen3-0.6B-Base + 30M tokens Sangraha → reusable Tamil base model, then SFT
 
-See `models/TRAINING_LOG.md` for full details and 46 lessons learned.
+See `models/TRAINING_LOG.md` for full details and 50 lessons learned.
 
 ### Phase 3.5: App Store Prep 🔄 PARTIAL
 - [x] App icon updated (VAZHI peacock logo, replaces Flutter default)
@@ -224,7 +236,7 @@ See `models/TRAINING_LOG.md` for full details and 46 lessons learned.
 | Model Hosting | Self-hosted | HuggingFace | Free hosting, easy access |
 | MVP Inference | Cloud API | On-device GGUF | Offline-first is core to VAZHI vision |
 | AI Model | Gemma-2B Tamil (1.6GB) | **Qwen3-0.6B (<1GB)** | Gemma tokenizer corrupted; Qwen3-0.6B is instruct-capable with clean ChatML support |
-| Training Approach | Single SFT pass | **4-bit QLoRA + fp16 merge** | Train in 4-bit for GPU efficiency; merge LoRA adapter in fp16 to avoid quantization corruption |
+| Training Approach | Single SFT pass | **DAPT (Base) → SFT (instruct-style)** | SFT-only cannot teach Tamil; DAPT on Sangraha corpus first, then SFT with ChatML dataset |
 
 **Note**: HuggingFace Space is for development/testing only. The MVP will have fully offline on-device inference.
 
@@ -245,7 +257,7 @@ See `models/TRAINING_LOG.md` for full details and 46 lessons learned.
 
 | Risk | Status | Mitigation |
 |------|--------|------------|
-| Training fails | 🔄 Active | 12 failed attempts; v3.7 pending (fp16 merge fix) |
+| Training fails | 🔄 Active | 13 failed attempts; DAPT v1.0 pipeline pending (3-step: data prep → DAPT → SFT) |
 | Model too slow | 🔄 Active | Using CPU bfloat16, consider Pro for GPU |
 | HuggingFace bugs | 🔄 Active | Pinned pydantic <2.11.0 |
 | App store rejection | ⏳ Future | Prepare documentation |
@@ -254,8 +266,8 @@ See `models/TRAINING_LOG.md` for full details and 46 lessons learned.
 
 *Last updated: February 12, 2026*
 *Code Review: 19 issues closed, 232 tests passing*
-*Training: v3.7 (Qwen3-0.6B fp16 merge fix) pending on Kaggle*
+*Training: DAPT v1.0 pipeline pending (3-step: data prep → DAPT → SFT)*
 *Current milestone: Phase 3 - Data Population & AI Model*
 *Architecture: Hybrid Retrieval (Deterministic + Optional AI)*
-*Target Model: Qwen3-0.6B (<1GB GGUF) with 4-bit QLoRA + fp16 merge*
-*Training attempts: 12 failed, 46 lessons documented*
+*Target Model: Qwen3-0.6B (<1GB GGUF) with DAPT (Base) → SFT → GGUF*
+*Training attempts: 13 failed, 50 lessons documented*

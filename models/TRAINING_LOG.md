@@ -22,7 +22,9 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | v3.4 | 2026-02-11 | ⏸️ Superseded | Qwen3-0.6B-**Base** (not instruct) - LR 2e-5, LoRA r=32, 3 epochs. Never run — missing completion-only masking |
 | v3.5 | 2026-02-11 | ❌ Failed | Qwen3-0.6B-Base + DataCollatorForCompletionOnlyLM — completion-only masking worked but SFT-only on base model without DAPT produced code/HTML garbage instead of Tamil |
 | v3.6 | 2026-02-12 | ❌ Failed | Return to Qwen3-0.6B instruct — dataset + masking + training all correct, but LoRA merge into 4-bit model corrupted weights. Output: random punctuation/operators (0% Tamil) |
-| v3.7 | 2026-02-12 | ⏳ Pending | Same as v3.6 but fix LoRA merge: save adapter → reload base in fp16 → merge in fp16. Also: disable gradient checkpointing before eval, add text-based loss logging |
+| v3.7 | 2026-02-12 | ⏸️ Superseded | Same as v3.6 but fix LoRA merge: save adapter → reload base in fp16 → merge in fp16. Superseded by v3.8 (v4.0 dataset) |
+| v3.8 | 2026-02-12 | ❌ Failed | Dataset Factory v4.0 (3,365 samples) + fp16 merge fix — SFT-only on instruct model. 0/12 eval passed, avg Tamil 52%, `<think>` leaking, gibberish content. Root cause: no DAPT stage |
+| DAPT v1.0 | 2026-02-12 | ⏳ Pending | Two-notebook pipeline: data prep (CPU) + DAPT training (GPU). Qwen3-0.6B-Base + 30M tokens from Sangraha Tamil corpus. Produces reusable Tamil base model for SFT |
 
 ---
 
@@ -1485,6 +1487,122 @@ merged_model.config.use_cache = True
 
 ### Files
 - Notebook: `/notebooks/Vazhi_SFT_v3_7_MergeFix.ipynb`
+- **Status:** ⏸️ Superseded by v3.8 (which uses Dataset Factory v4.0 output instead of v3.6 dataset)
+
+---
+
+## v3.8 Training Run (Failed — SFT-only, No DAPT)
+
+**Date:** 2026-02-12
+**Status:** ❌ Failed
+**Base Model:** Qwen/Qwen3-0.6B (INSTRUCT)
+**Training Platform:** Kaggle (P100 GPU)
+**Dataset:** `CryptoYogi/vazhi-tamil-sft-v4_0` (3,365 samples from Dataset Factory v4.0)
+**Output Model:** Not uploaded (failed)
+
+### What Changed from v3.7
+
+1. **New dataset** — Dataset Factory v4.0 output with composition enforcement:
+   - 45% domain packs (vazhi-packs), 30% IndicAlign, 15% Kural interpretive, 3% handcrafted, 7% general
+   - Anti-memorization filter for verbatim Thirukkural Q&As
+   - Strict ChatML validation, dedup, length filter
+2. **fp16 LoRA merge** — fixed from v3.6 (merge in fp16, not 4-bit)
+3. **Gradient checkpointing disabled before eval**
+4. **Text-based loss logging**
+
+### Results: 0/12 Eval Passed
+
+| Metric | Value |
+|--------|-------|
+| Eval pass rate | 0/12 (0%) |
+| Avg Tamil char % | 52% |
+| `<think>` token leaking | Yes |
+| Content quality | Gibberish — not coherent Tamil |
+| Loss curve | Converged (low loss) but misleading |
+
+### Root Cause Analysis
+
+**SFT alone cannot teach Tamil to a model that doesn't know it.** The Qwen3-0.6B instruct model was pre-trained on English/Chinese/code — it has minimal Tamil capability. ~3,365 SFT samples are not enough to teach a new language. The model learned to produce tokens that minimize loss on the response template but never learned Tamil as a language.
+
+This confirms lesson #21: "SFT-only CANNOT teach a new language — you MUST do DAPT first."
+
+### Decision: Pivot to DAPT-First Architecture
+
+After 13 failed training attempts across 5 base models, the pattern is clear:
+- **Instruct models** (v3.1-v3.3, v3.6, v3.8): Have instruction-following but no Tamil → SFT produces Tamil-shaped gibberish
+- **Base models** (v3.5): Have neither Tamil nor instruction-following → SFT produces code garbage
+- **Missing piece:** DAPT stage to teach Tamil fluency BEFORE SFT
+
+**New training architecture (3-step):**
+1. **DAPT** — Train Qwen3-0.6B-Base on 30M tokens of raw Tamil text (Sangraha corpus) → produces `CryptoYogi/qwen3-0.6b-tamil`
+2. **SFT** — Fine-tune the Tamil-adapted model on curated ChatML dataset (v4.0) → produces `CryptoYogi/vazhi-qwen3-v4_0`
+3. **GGUF** — Quantize to Q4_K_M for mobile deployment
+
+### Files
+- Dataset Factory notebook: `/notebooks/Vazhi_Dataset_Factory_v4_0.ipynb`
+- v3.8 was run using v3.7 notebook with v4.0 dataset
+
+---
+
+## DAPT v1.0 Strategy (Pending — Two-Notebook Pipeline)
+
+**Date:** 2026-02-12
+**Status:** ⏳ Pending
+**Base Model:** Qwen/Qwen3-0.6B-Base (NOT instruct — per GPT5.2 review)
+**Training Platform:** Kaggle (GPU for training; CPU for data prep)
+**Corpus:** AI4Bharat Sangraha `verified/tam` split (~290K+ docs, ~724M+ chars)
+**Output Model:** `CryptoYogi/qwen3-0.6b-tamil` (reusable Tamil base for all future SFT)
+
+### Architecture: Separated Data Prep + Training
+
+**Key insight:** If DAPT training fails, we should NOT have to redo data preparation. The pipeline is split into two independent notebooks:
+
+#### Notebook 1: Data Prep (CPU-only)
+- **File:** `/notebooks/Vazhi_DAPT_Data_v1_0.ipynb`
+- **Runs on:** Local Mac, Kaggle CPU, or Colab CPU — no GPU needed
+- **Input:** Streams `ai4bharat/sangraha` verified/tam split
+- **Processing:** Filter (Tamil >= 50%, 200-8000 chars, dedup, repetition check) → tokenize → pack into 1024-token blocks → train/val split
+- **Output:** `CryptoYogi/vazhi-dapt-tamil-v1_0` on HuggingFace (pre-tokenized, ready for training)
+- **Token target:** 30M tokens (sweet spot for 0.6B model)
+
+#### Notebook 2: DAPT Training (GPU)
+- **File:** `/notebooks/Vazhi_DAPT_v1_0_Tamil.ipynb`
+- **Runs on:** Kaggle P100 GPU
+- **Input:** Loads pre-built dataset from HF (`CryptoYogi/vazhi-dapt-tamil-v1_0`)
+- **Training:** QLoRA r=16 alpha=32, LR 2e-5, batch 4 × grad_accum 8 = effective 32, max 2 epochs, token budget 30M
+- **Output:** Adapter backup (`CryptoYogi/qwen3-0.6b-tamil-lora`) + merged fp16 model (`CryptoYogi/qwen3-0.6b-tamil`)
+
+### GPT5.2 Review: 9 Critical Fixes Incorporated
+
+1. **Use Base model, not Instruct** — cleaner DAPT without washing out chat behavior
+2. **Measure actual tokens with tokenizer** — not estimate from chars (Tamil has 3-4x overhead)
+3. **Token budget, not epochs** — control training by target tokens and max_steps
+4. **r=16 not r=32** — smaller rank sufficient for DAPT, less risk of catastrophic forgetting
+5. **Pack sequences** — concatenate docs into continuous token stream, split into 1024 blocks (no padding waste)
+6. **Filter Sangraha** — Tamil% >= 50%, dedup, length 200-8000, repetition ratio < 0.5
+7. **Real eval harness** — 8 Tamil text continuation prompts testing Tamil%, uniqueness, repetition, code detection
+8. **Validate v3.6+v4.0 combined dataset** — ensure SFT dataset is compatible with DAPT-adapted model
+9. **Save adapter separately** — backup LoRA adapter before merge
+
+### Sangraha Corpus Verification
+
+Verified all three Sangraha configs to avoid IndicAlign-style schema surprises:
+- `verified/tam`: columns `['doc_id', 'type', 'text']` — `text` is plain string
+- `unverified/tam`: columns `['doc_id', 'text']` — same structure
+- `synthetic/tam_Taml`: columns `['doc_id', 'text']` — same structure
+
+Quality analysis of 500 verified Tamil docs:
+- Tamil char % range: 51-94% (median 85%)
+- Doc types: web (88.6%), pdf (10.8%), speech (0.6%)
+- No HTML, no empty docs, only 4.6% over 8000 chars
+- Very clean data — filters are appropriate
+
+### What Happens After DAPT
+
+The DAPT-adapted model (`CryptoYogi/qwen3-0.6b-tamil`) becomes the permanent base for SFT:
+- **Reusable:** One DAPT run, unlimited SFT iterations
+- **SFT uses v4.0 dataset** from Dataset Factory (3,365 samples with composition enforcement)
+- **SFT notebook:** To be created as v4.0 SFT (loads DAPT model instead of vanilla Qwen3)
 
 ---
 
@@ -1656,6 +1774,10 @@ Implement a hybrid architecture with two paths:
 26. **Use simpler response template for masking** - `"<|im_start|>assistant"` (without trailing newline) is more robust than `"<|im_start|>assistant\n"` — the newline can tokenize differently depending on surrounding context
 27. **NEVER merge LoRA into a 4-bit quantized model** — `model.merge_and_unload()` on a 4-bit model causes catastrophic rounding errors, producing garbage output. Instead: save LoRA adapter → reload base model in fp16 → load adapter onto fp16 model → merge in full precision. The 4-bit model is for training memory efficiency only, not for the final merge
 28. **Disable gradient checkpointing before eval** — gradient checkpointing conflicts with `use_cache=True` during generation, forcing `past_key_values=None`. Call `model.gradient_checkpointing_disable()` before any `generate()` calls. Also log loss values as text (not just HTML widgets) to verify training convergence from notebook output
+29. **Separate data prep from training** — if DAPT/SFT training fails, you shouldn't have to redo corpus filtering, tokenization, and packing. Data prep runs on CPU and uploads to HF; training loads pre-built dataset from HF
+30. **Use Base model for DAPT, not Instruct** — instruct models have chat behaviors that DAPT would wash out. Base models are a clean slate for language adaptation. Use instruct model only for SFT stage
+31. **Token budget, not epochs** — control DAPT training by target token count and max_steps. Epochs are misleading when corpus size varies. Cap at 2 epochs max to prevent catastrophic forgetting
+32. **Verify corpus schema before coding** — always inspect actual HuggingFace dataset columns and sample data before writing processing code. The IndicAlign debacle (assumed schema, broke at runtime) must never repeat
 
 ---
 
@@ -1709,7 +1831,10 @@ Implement a hybrid architecture with two paths:
 ## References
 
 ### Training Notebooks
-- v3.7 LoRA merge fix (LATEST): `/notebooks/Vazhi_SFT_v3_7_MergeFix.ipynb`
+- DAPT data prep (CPU): `/notebooks/Vazhi_DAPT_Data_v1_0.ipynb`
+- DAPT training (GPU, LATEST): `/notebooks/Vazhi_DAPT_v1_0_Tamil.ipynb`
+- Dataset Factory v4.0: `/notebooks/Vazhi_Dataset_Factory_v4_0.ipynb`
+- v3.7 LoRA merge fix (superseded): `/notebooks/Vazhi_SFT_v3_7_MergeFix.ipynb`
 - v3.6 Return to instruct (FAILED — merge corruption): `/notebooks/Vazhi_SFT_v3_6_Instruct.ipynb`
 - v3.5 Completion-only masking (FAILED): `/notebooks/Vazhi_SFT_v3_5_Masked.ipynb`
 - v3.4 Base model notebook (superseded): `/notebooks/Vazhi_SFT_v3_4_Base.ipynb`
