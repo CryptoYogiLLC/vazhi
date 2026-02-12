@@ -1082,12 +1082,118 @@ Additionally, learning rate 1e-4 was too aggressive for an already instruction-t
 
 ### Lessons Learned from Phase 9
 
-- **#36**: Don't SFT on instruct models with conflicting chat formats — use the base model
+- **#36**: Handle instruct model format conflicts with token suppression, not by pivoting to base model *(updated after v3.5 failure)*
 - **#37**: Lower LR for instruct models (2e-5 not 1e-4) — prevents catastrophic forgetting
 - **#38**: Qwen3 has internal bf16 ops — use FP32 training on non-Ampere GPUs (P100, T4)
 - **#39**: Test existing HF checkpoints before new training runs — don't waste compute
 
 ---
 
+## Phase 10: The Base Model SFT-Only Disaster (v3.5)
+
+### The Pivot That Shouldn't Have Happened
+
+After v3.3's `<think>` token issues with the Qwen3-0.6B instruct model, v3.4/v3.5 pivoted to the **base** model (Qwen3-0.6B-Base) to avoid the conflict. v3.5 also added DataCollatorForCompletionOnlyLM for completion-only masking — a technically correct improvement.
+
+**The masking worked perfectly.** Preflight checks confirmed system/user tokens were masked with -100 and only assistant tokens were trained. Training completed all 795 steps with a healthy-looking loss curve (1.56 → 1.04).
+
+### The Devastating Result
+
+Every single eval response was **complete garbage** — code tokens, HTML attributes, JSON schemas, variable names, Chinese characters. The model was regurgitating its pre-training data instead of Tamil:
+
+```
+Q: வணக்கம்
+A: _year_that=True_email="#_verified=True_date_group_url_count_role_order...
+
+Q: தமிழ்நாட்டின் தலைநகரம் என்ன?
+A: \\' />", // The data is not a valid JSON...
+```
+
+The eval script marked 12/12 tests as "passed" because it only checked for loops, system leaks, and empty responses — none of which matched code garbage.
+
+### Why It Failed
+
+**SFT-only on a base model CANNOT teach a new language.** Qwen3-0.6B-Base was pre-trained on code, web content, English, and Chinese. ~3K Tamil SFT samples are a drop in the ocean compared to its pre-training corpus. The model's "default mode" remained code/web generation. DAPT (domain-adaptive pretraining on raw Tamil text) was required first to shift the model's language distribution before SFT could teach it to follow instructions in Tamil.
+
+**This was a known risk we documented ourselves.** Lesson #13 explicitly states: "Don't use single-pass SFT for language adaptation." We violated our own rule.
+
+### The Real Mistake: Abandoning What Worked
+
+v3.3 (instruct model) was **producing Tamil output**. It had specific, fixable issues:
+1. `<think>` tags in output → fixable with token suppression during generation
+2. LR 1e-4 too aggressive → fixable by reducing to 2e-5
+3. Thirukkural-style responses → fixable with dataset rebalancing
+
+Instead of spending ~1 hour fixing these issues, we spent hours on a pivot to base model SFT-only that produced a worse outcome. This is the most expensive lesson of the project so far.
+
+### Lessons Learned from Phase 10
+
+- **#40**: SFT-only on a base model CANNOT teach a new language — DAPT is required first to shift the language distribution
+- **#41**: Iterate on working approaches rather than pivoting to untested ones — v3.3 produced Tamil with fixable issues, pivoting to base model was a regression
+- **#42**: Eval must check output QUALITY (Tamil character %, coherence, semantic relevance), not just pattern absence (no loops, no leaks, not empty)
+- **#43**: A healthy loss curve does NOT mean the model learned — loss can decrease on a subset of found samples while the model learns nothing useful
+- **#44**: Strict ChatML validation (regex) before training — every SFT sample MUST have both user AND assistant segments with non-empty content; samples missing either contribute zero or wrong training signal
+
+### Decision for v3.6
+
+Return to the **instruct model** (Qwen3-0.6B) which already has Tamil capability and instruction-following. Fix the v3.3 issues:
+1. Suppress `<think>` tokens during generation (not during training)
+2. Use LR 2e-5 (not 1e-4)
+3. Add completion-only masking (the one good thing from v3.5)
+4. Strict ChatML validation + robust response template
+5. Rebalanced dataset: Practical packs 40-50%, Conversational 20-30%, General knowledge 15-25%, Thirukkural/culture 10-20%
+6. Early evaluation (after 50 steps) with Tamil character % check
+
+---
+
+## Phase 11: The LoRA Merge to 4-bit Catastrophe (v3.6)
+
+### Everything Worked Except the Merge
+
+v3.6 returned to the instruct model as planned. Everything was correct: strict ChatML validation (3,667 samples, all validated), preflight masking verified (35.5% trainable tokens), training completed without errors. The dataset was well-balanced with 15% Kural, 33 refusal/brevity/greeting samples added.
+
+Then the merge step destroyed everything.
+
+### The Corruption Mechanism
+
+The model was loaded in 4-bit NF4 quantization for memory-efficient training. After training, `model.merge_and_unload()` was called on the 4-bit model. PEFT warned explicitly:
+
+> "Merge lora module to 4-bit linear may get different generations due to rounding errors."
+
+This was not a minor warning — it was catastrophic. The merge process:
+1. Dequantizes 4-bit weights (massive precision loss already)
+2. Adds LoRA delta (float16)
+3. Stores result — but the dequantized 4-bit values are too imprecise for the sum to be meaningful
+
+The result: 0/12 eval prompts produced any Tamil. Output was random punctuation/operators: `ooks = 1)0]:,. is:.. = *="-1., of,.....`
+
+### Secondary Issue: Gradient Checkpointing During Eval
+
+The eval code set `use_cache=True` but gradient checkpointing was still active from training. Transformers overrode to `use_cache=False` and `past_key_values=None`. This made generation run without KV cache — not the primary failure cause, but a bug that could cause subtle issues.
+
+### A Third Unknown: Was Training Successful?
+
+The loss curve was rendered as an HTML widget (`<IPython.core.display.HTML object>`) and not captured as text. We have no evidence that training actually converged. v3.7 must log loss values as text.
+
+### Lessons Learned from Phase 11
+
+- **#45**: NEVER merge LoRA into a 4-bit quantized model — the rounding errors destroy model output. After 4-bit QLoRA training, save the LoRA adapter separately, reload the base model in fp16 (full precision), apply the adapter to the fp16 model, then merge. The 4-bit quantization is for training memory only, not for the final merge
+- **#46**: Disable gradient checkpointing before inference — `gradient_checkpointing` conflicts with `use_cache=True`, forcing generation to run without KV cache. Call `model.gradient_checkpointing_disable()` before any `generate()` calls. Also: always log loss values as text (not just HTML widgets) so convergence can be verified from notebook output
+
+### Decision for v3.7
+
+**Minimal fix** — v3.6's dataset, training config, and masking were all correct. Only change the post-training merge/eval pipeline:
+
+1. Save LoRA adapter only (not merged model)
+2. Delete 4-bit training model from GPU memory
+3. Reload base model in fp16 (~1.5GB, fits easily on P100)
+4. Load LoRA adapter onto fp16 model
+5. Merge in fp16 — no rounding errors
+6. Disable gradient checkpointing before eval
+7. Eval the merged fp16 model
+8. Push clean fp16 merged model to HuggingFace
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-11*
+*Last updated: 2026-02-12 (v3.6 failed, v3.7 pending)*

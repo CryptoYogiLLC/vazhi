@@ -137,7 +137,7 @@ vazhi_app/
 - [x] Storage validation ✅
 - [x] Voice input/output (STT/TTS) ✅
 - [x] Feedback system ✅
-- [x] Integration tests (228 passing) ✅
+- [x] Integration tests (232 passing) ✅
 
 ### Phase 2.5: Code Quality & Security ✅ COMPLETE (Feb 10, 2026)
 
@@ -160,7 +160,7 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - [x] Preflight validation script for training runs
 
 #### Code Quality ✅
-- [x] Test coverage: 228 tests passing
+- [x] Test coverage: 232 tests passing
 - [x] Training data rebalancer (Thirukkural 71%→25% target)
 - [x] Comprehensive error handling throughout
 - [x] Deprecated API cleanup (provider namespacing)
@@ -171,11 +171,11 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - [ ] Full Thirukkural database (1,330 verses)
 - [ ] Complete government schemes database
 - [ ] Hospital directory population
-- [ ] **AI Model: Qwen3-0.6B-Base SFT (<1GB GGUF target)**
-- [ ] Validate v3.4 notebook on Kaggle (or test existing HF checkpoints first)
+- [ ] **AI Model: Qwen3-0.6B SFT (<1GB GGUF target)**
+- [ ] Run v3.7 notebook on Kaggle (fp16 LoRA merge fix)
 - [ ] GGUF conversion and Tamil output quality validation
 
-**Model Training History (9 failed attempts):**
+**Model Training History (12 failed attempts):**
 - v0.1-v0.4: Qwen2.5-3B — data quality issues then GGUF broke Tamil
 - v0.5: Qwen2.5-0.5B — LoRA corrupted model
 - v0.6: Sarvam-2B — 4-bit training instability
@@ -183,16 +183,27 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - v3.1: Qwen3-0.6B — mixed data formats (raw + ChatML)
 - v3.2: Qwen3-0.6B — fp16 issues on T4
 - v3.3: Qwen3-0.6B (instruct) — native `<think>` tokens conflicted with ChatML
-- **v3.4 (LATEST):** Qwen3-0.6B-**Base** — clean slate, LR 2e-5, LoRA r=32, 3 epochs. Not yet run.
+- v3.4: Qwen3-0.6B-Base — base model approach, not validated
+- v3.5: Qwen3-0.6B — dataset construction bugs (format/dedup issues)
+- v3.6: Qwen3-0.6B — training succeeded but LoRA merge into 4-bit model corrupted output
+- **v3.7 (LATEST):** Qwen3-0.6B — same training as v3.6 but saves LoRA adapter → reloads base in fp16 → merges in fp16. Not yet run.
 
-See `models/TRAINING_LOG.md` for full details and 39 lessons learned.
+See `models/TRAINING_LOG.md` for full details and 46 lessons learned.
+
+### Phase 3.5: App Store Prep 🔄 PARTIAL
+- [x] App icon updated (VAZHI peacock logo, replaces Flutter default)
+- [x] Display name set to "VAZHI - வழி"
+- [x] Application ID changed to `com.cryptoyogillc.vazhi`
+- [x] Release AAB built and uploaded to Google Play
+- [ ] Google Play developer account verification (requires Android phone)
+- [ ] Publish internal testing link for testers
+- [ ] Apple App Store: TestFlight submission (icon/name/bundle ID already set)
 
 ### Phase 4: Polish & Launch
 - [ ] Expert directory feature
 - [ ] FTS5 Tamil search optimization
 - [ ] Demo video recording
-- [ ] App store preparation
-- [ ] TestFlight / Play Store submission
+- [ ] TestFlight submission (Apple)
 
 ### Phase 5: Community & Scale
 - [ ] Pack contribution workflow
@@ -210,8 +221,8 @@ See `models/TRAINING_LOG.md` for full details and 39 lessons learned.
 | Testing Infrastructure | Local only | HuggingFace Space | Fast iteration during development |
 | Model Hosting | Self-hosted | HuggingFace | Free hosting, easy access |
 | MVP Inference | Cloud API | On-device GGUF | Offline-first is core to VAZHI vision |
-| AI Model | Gemma-2B Tamil (1.6GB) | **Qwen3-0.6B-Base (<1GB)** | Gemma tokenizer corrupted; Qwen3 instruct conflicted with ChatML; using base model |
-| Training Approach | Single SFT pass | **ChatML SFT on base model** | Instruct model's `<think>` tokens conflicted; base model is clean slate |
+| AI Model | Gemma-2B Tamil (1.6GB) | **Qwen3-0.6B (<1GB)** | Gemma tokenizer corrupted; Qwen3-0.6B is instruct-capable with clean ChatML support |
+| Training Approach | Single SFT pass | **4-bit QLoRA + fp16 merge** | Train in 4-bit for GPU efficiency; merge LoRA adapter in fp16 to avoid quantization corruption |
 
 **Note**: HuggingFace Space is for development/testing only. The MVP will have fully offline on-device inference.
 
@@ -232,17 +243,17 @@ See `models/TRAINING_LOG.md` for full details and 39 lessons learned.
 
 | Risk | Status | Mitigation |
 |------|--------|------------|
-| Training fails | ✅ Resolved | Completed successfully |
+| Training fails | 🔄 Active | 12 failed attempts; v3.7 pending (fp16 merge fix) |
 | Model too slow | 🔄 Active | Using CPU bfloat16, consider Pro for GPU |
 | HuggingFace bugs | 🔄 Active | Pinned pydantic <2.11.0 |
 | App store rejection | ⏳ Future | Prepare documentation |
 
 ---
 
-*Last updated: February 11, 2026*
-*Code Review: 19 issues closed, 228 tests passing*
-*Training: v3.4 (Qwen3-0.6B-Base SFT) pending validation on Kaggle*
+*Last updated: February 12, 2026*
+*Code Review: 19 issues closed, 232 tests passing*
+*Training: v3.7 (Qwen3-0.6B fp16 merge fix) pending on Kaggle*
 *Current milestone: Phase 3 - Data Population & AI Model*
 *Architecture: Hybrid Retrieval (Deterministic + Optional AI)*
-*Target Model: Qwen3-0.6B-Base (<1GB GGUF) with ChatML SFT*
-*Training attempts: 9 failed, 39 lessons documented*
+*Target Model: Qwen3-0.6B (<1GB GGUF) with 4-bit QLoRA + fp16 merge*
+*Training attempts: 12 failed, 46 lessons documented*

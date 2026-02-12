@@ -30,10 +30,14 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - 19 code review issues identified and closed (#22-40)
 
 **What's blocking:**
-- AI model training — 9 failed attempts across 4 base models (see Training History below)
-- Latest approach: v3.4 using Qwen3-0.6B-**Base** (not instruct) — not yet validated on Kaggle
+- AI model training — 12 failed attempts across 4 base models (see Training History below)
+- Latest approach: v3.7 — same training as v3.6, but fixes LoRA merge (merge in fp16, not 4-bit)
+
+**What's done (app distribution):**
+- Google Play: App icon (peacock logo), display name ("VAZHI - வழி"), application ID (`com.cryptoyogillc.vazhi`), AAB uploaded — awaiting developer account verification (needs Android phone) before internal testing can go live
 
 **What's pending (not blocked):**
+- Apple App Store: TestFlight submission
 - Full Thirukkural database (1,330 verses)
 - Government schemes database population
 - Hospital directory population
@@ -50,16 +54,19 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 | v3.1 | Qwen3-0.6B | Failed | Mixed raw text + ChatML in SFT = "systemsystem..." garbage |
 | v3.2 | Qwen3-0.6B | Failed | fp16 training issue on T4; dataset reused in v3.3 |
 | v3.3 | Qwen3-0.6B (instruct) | Failed | Native `<think>` tokens conflicted with ChatML; LR 1e-4 too aggressive |
-| v3.4 | Qwen3-0.6B-**Base** | Pending | New hypothesis: use base model to avoid `<think>` conflict, LR 2e-5 |
+| v3.4 | Qwen3-0.6B-Base | Superseded | Never run — missing completion-only masking |
+| v3.5 | Qwen3-0.6B-Base | Failed | SFT-only on base model produced code garbage — base model has no Tamil without DAPT |
+| v3.6 | Qwen3-0.6B (instruct) | Failed | Dataset + masking + training correct, but LoRA merge into 4-bit model corrupted weights → 0% Tamil |
+| v3.7 | Qwen3-0.6B (instruct) | Pending | Same as v3.6 but merge LoRA in fp16 (not 4-bit), disable gradient checkpointing before eval |
 
-**Fallback if v3.4 fails:**
-- Primary: Try two-stage DAPT+SFT (domain-adaptive pretraining first, then SFT)
+**Fallback if v3.7 fails:**
+- Primary: Check if training itself learned (loss curve now visible as text); if not, add Micro-DAPT stage
 - Secondary: Sarvam-1 IQ3_M (1.17GB, proven Tamil, exceeds <1GB hard limit)
 - Last resort: Gemma-2B Tamil Q4_K_M (1.63GB, works but far exceeds size target)
 
 **Data source for SQLite population:** Open data scraping from Tamil Nadu government websites and Tamil databases.
 
-## Key Rules (From 39 Lessons Learned)
+## Key Rules (From 46 Lessons Learned)
 
 ### Data Rules
 - **NEVER trust data labels** — verify with character-level Tamil % analysis
@@ -73,7 +80,12 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Two-stage training** (DAPT then SFT) preserves both Tamil fluency AND instruction-following
 - **Preflight fail-fast** — run tiny DAPT+SFT before full training to catch issues early
 - **Checkpoint to HF Hub** every epoch (Colab/Kaggle disconnect protection)
-- **Use base models for SFT** when the instruct model's native format conflicts with your chat template
+- **Suppress conflicting tokens instead of pivoting to base model** — instruct models have language capability; base models with SFT-only produce garbage
+- **Iterate on what works** — fix specific issues (token suppression, LR) rather than pivoting to untested approaches
+- **Strict ChatML validation** (regex) before training — reject samples missing user/assistant segments
+- **Eval must check output QUALITY** — Tamil char %, coherence, not just pattern absence
+- **NEVER merge LoRA into 4-bit model** — save adapter → reload base in fp16 → merge in fp16. 4-bit is for training memory only
+- **Disable gradient checkpointing before eval** — conflicts with use_cache, forces generation without KV cache
 
 ### Quantization Rules
 - **Q4_K_M is minimum viable** for Tamil — Q3 and below cause visible degradation
@@ -100,14 +112,16 @@ vazhi/
 │   │   ├── services/             # Query router, APIs, voice, downloads
 │   │   ├── widgets/              # Accessible UI components
 │   │   └── providers/            # Riverpod state management
-│   └── test/                     # 228 tests
+│   └── test/                     # 232 tests
 ├── data/                         # Training datasets
 │   ├── tamil_foundation/         # 19 JSON files, 11K+ samples
 │   └── v04/                      # Regenerated training data
 ├── models/
-│   └── TRAINING_LOG.md           # Detailed log of all 9+ training attempts
+│   └── TRAINING_LOG.md           # Detailed log of all 12 training attempts
 ├── notebooks/                    # Kaggle/Colab training notebooks
-│   ├── Vazhi_SFT_v3_4_Base.ipynb # LATEST — Qwen3-0.6B-Base approach
+│   ├── Vazhi_SFT_v3_7_MergeFix.ipynb # LATEST — Fix LoRA merge (fp16 not 4-bit)
+│   ├── Vazhi_SFT_v3_6_Instruct.ipynb # FAILED — LoRA merge corruption
+│   ├── Vazhi_SFT_v3_5_Masked.ipynb # FAILED — Base model SFT-only
 │   ├── Vazhi_SFT_v3_3_Clean.ipynb
 │   ├── Vazhi_SFT_v3_2_Fixed.ipynb
 │   └── [13 more historical notebooks]
@@ -117,7 +131,7 @@ vazhi/
 ├── huggingface-space/            # Gradio test API (submodule)
 └── docs/
     ├── SPRINT_PLAN_REVISED.md    # Roadmap and phase tracking
-    ├── LESSONS_LEARNED.md        # 35+ lessons from training journey
+    ├── LESSONS_LEARNED.md        # 46 lessons from training journey
     ├── CODE_REVIEW_CONSENSUS_REPORT.md
     ├── DATA_REGENERATION_PLAN.md # Historical — v0.2 data crisis
     └── adr/                      # 9 Architecture Decision Records
@@ -129,7 +143,7 @@ vazhi/
 2. **`vazhi_app/APP_CHANGELOG.md`** — app feature history, architecture decisions, and lessons learned
 3. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
 4. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
-5. **`docs/LESSONS_LEARNED.md`** — 39 hard-won lessons, ideal training pipeline
+5. **`docs/LESSONS_LEARNED.md`** — 46 hard-won lessons, ideal training pipeline
 6. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
 
 ## Development Commands
@@ -160,6 +174,6 @@ gh workflow run ci.yml            # Trigger GitHub Actions
 ## HuggingFace Resources
 
 - Dataset: `CryptoYogi/vazhi-tamil-v05` (11,696 items)
-- Balanced SFT dataset: `CryptoYogi/vazhi-tamil-sft-v3_3`
+- Balanced SFT dataset: `CryptoYogi/vazhi-tamil-sft-v3_6` (3,667 samples, used by v3.7)
 - Forked base model: `CryptoYogi/gemma-2b-tamil-base` (historical, corrupted tokenizer)
 - Space: `CryptoYogi/vazhi` (Gradio test API)
