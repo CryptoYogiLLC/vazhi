@@ -11,25 +11,25 @@ An Architecture Decision Record captures an important architectural decision mad
 
 ## ADR Index
 
-| ADR | Title | Status | Freshness | Summary |
-|-----|-------|--------|-----------|---------|
-| [001](001-hybrid-app-strategy.md) | Hybrid App Strategy | Accepted | Current | Two app variants: VAZHI Lite (cloud) + VAZHI Full (offline) |
-| [002](002-flutter-framework-selection.md) | Flutter Framework Selection | Accepted | Current | Use Flutter for cross-platform development |
-| [003](003-community-whatsapp-engagement.md) | Community WhatsApp Engagement | Accepted | Current | WhatsApp for feedback and community content creation |
-| [004](004-huggingface-spaces-backend.md) | HuggingFace Spaces Backend | Accepted | **Partially Stale** | Free HuggingFace Spaces — now dev/testing only, not production |
-| [005](005-incremental-pack-downloads.md) | Incremental Pack Downloads | Accepted | **Partially Stale** | Base + Pick Packs strategy — model size refs (1.7GB) are outdated |
-| [006](006-voice-integration-strategy.md) | Voice Integration Strategy | Accepted | Current | Native platform STT/TTS for voice input/output |
-| [007](007-free-donations-monetization.md) | Free + Donations Monetization | Accepted | Current | 100% free app with optional donation support |
-| [008](008-app-store-distribution.md) | App Store Distribution | Accepted | Current | Google Play + Apple App Store + F-Droid |
-| [009](009-hybrid-retrieval-architecture.md) | Hybrid Retrieval Architecture | Accepted | **Partially Stale** | Deterministic SQLite + AI paths — Gemma-2B ref outdated, now Qwen3-0.6B |
+| ADR | Title | Status | Summary |
+|-----|-------|--------|---------|
+| [001](001-hybrid-app-strategy.md) | Hybrid App Strategy | **Superseded** by 009 | Two-variant strategy replaced by single-app hybrid retrieval |
+| [002](002-flutter-framework-selection.md) | Flutter Framework Selection | Accepted | Use Flutter for cross-platform development |
+| [003](003-community-whatsapp-engagement.md) | Community WhatsApp Engagement | Accepted | WhatsApp for feedback and community content creation |
+| [004](004-huggingface-spaces-backend.md) | HuggingFace Spaces Backend | Partially Stale | Free HuggingFace Spaces — now dev/testing only, not production |
+| [005](005-incremental-pack-downloads.md) | Incremental Pack Downloads | **Superseded** by 009 | LoRA pack downloads replaced by bundled SQLite data |
+| [006](006-voice-integration-strategy.md) | Voice Integration Strategy | Accepted | Native platform STT/TTS for voice input/output |
+| [007](007-free-donations-monetization.md) | Free + Donations Monetization | Accepted | 100% free app with optional donation support |
+| [008](008-app-store-distribution.md) | App Store Distribution | Accepted | Google Play + Apple App Store + F-Droid |
+| [009](009-hybrid-retrieval-architecture.md) | Hybrid Retrieval Architecture | **Accepted (Current)** | Deterministic SQLite + optional AI — 10 categories, 232 tests |
 
-### Staleness Notes
+### Superseded & Stale ADRs
 
-Three ADRs contain outdated model references from earlier in the project. Each has an inline note at the top explaining what changed. The **architectural decisions themselves remain valid** — only specific model names and sizes are outdated.
+**ADR-001 (Superseded):** Originally proposed two app variants (VAZHI Lite + VAZHI Full) as separate APKs. The hybrid retrieval architecture (ADR-009) eliminated this need — a single app works offline from install via SQLite, with the AI model as an optional download. No separate Lite variant is needed.
 
-- **ADR-004**: References Qwen2.5-3B (1.7GB). Current target is Qwen3-0.6B-Base (<1GB). Also, the HF Space is now used for dev/testing only, not as a production backend.
-- **ADR-005**: Size calculations reference 1.7GB base model. Need recalculation once final GGUF size is known. The Base + Pick Packs strategy is still the plan.
-- **ADR-009**: Originally referenced Gemma-2B Tamil (1.63GB). Now targets Qwen3-0.6B-Base (<1GB). The hybrid retrieval architecture design is fully implemented and current.
+**ADR-005 (Superseded):** Originally proposed downloading a base GGUF model plus separate LoRA adapter packs (~60MB each) per domain. In practice, all domain knowledge is bundled as SQLite data (~1.5MB) within the app. The AI model is a single optional GGUF download, not per-domain LoRA adapters.
+
+**ADR-004 (Partially Stale):** The HF Space was designed as the VAZHI Lite production backend. With ADR-001 superseded, it's now used for dev/testing only. The Gradio setup and deployment approach remain valid for that purpose. Model refs are outdated (now Qwen3-0.6B-Base, not Qwen2.5-3B).
 
 ## Key Decisions Summary
 

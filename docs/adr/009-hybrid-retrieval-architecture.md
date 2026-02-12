@@ -1,9 +1,9 @@
 # ADR-009: Hybrid Retrieval Architecture
 
 ## Status
-**Accepted** - 2026-02-08
+**Accepted** - 2026-02-08 | **Last Updated:** 2026-02-11
 
-> **Note (Feb 2026):** The model reference below (Gemma-2B Tamil, 1.63GB) is outdated. Gemma-2B was attempted in v0.7 but failed due to tokenizer corruption. The current target is Qwen3-0.6B-Base (<1GB GGUF). The hybrid architecture design itself remains fully valid and implemented. See `models/TRAINING_LOG.md` for current model status.
+> **Note (Feb 2026):** Model target is Qwen3-0.6B-Base (<1GB GGUF), not the originally referenced Gemma-2B. See `models/TRAINING_LOG.md` for training status. This ADR supersedes [ADR-001](001-hybrid-app-strategy.md) (two-variant strategy) and [ADR-005](005-incremental-pack-downloads.md) (LoRA pack downloads) — the hybrid retrieval architecture solved both problems with a single app and bundled SQLite data.
 
 ## Context
 
@@ -65,20 +65,20 @@ User Query
 
 | Type | Route | Description | Example |
 |------|-------|-------------|---------|
-| **Deterministic** | SQLite only | Exact lookups, lists | "குறள் 1", "emergency numbers" |
-| **AI Required** | LLM only | Explanations, advice | "Is this a scam?", "explain RTI" |
-| **Hybrid** | SQLite + LLM | Retrieve + explain | "குறள் 1 அர்த்தம் என்ன?" |
+| **Deterministic** | SQLite only | Exact lookups, keyword-only queries | "குறள் 1", "emergency numbers", "RTI" |
+| **Hybrid** | SQLite + LLM | Category keyword + conversational pattern | "how to file RTI?", "why is scholarship important?" |
+| **AI Required** | LLM only | No category match, pure conversation | "What should I study?", "tell me about yourself" |
 
 ### Routing Logic
 
+The query router uses a two-step classification: (1) detect category keywords, then (2) check for conversational patterns via `_needsExplanation()` (detects "how", "why", "explain", "what is", etc.).
+
 | Query Pattern | Route | Example |
 |---------------|-------|---------|
-| Exact reference lookup | Deterministic | "குறள் 1", "CMCHIS phone number" |
+| Category keyword only | Deterministic | "குறள் 1", "RTI", "OTP மோசடி" |
+| Category keyword + conversational pattern | Hybrid | "how to file RTI?", "explain குறள் 1" |
 | List/browse request | Deterministic | "அதிகாரங்கள் list", "TN schemes" |
-| Explanation request | AI | "குறள் 1 meaning", "explain RTI" |
-| How-to questions | AI | "How to apply for ration card?" |
-| Advice/analysis | AI | "Is this a scam?", "What should I study?" |
-| Hybrid (retrieve + explain) | Both | "குறள் 1 அர்த்தம் என்ன?" |
+| No category match | AI Required | "What should I study?", "Is this message safe?" |
 
 ## Consequences
 
@@ -101,29 +101,30 @@ User Query
 
 ## Data Categories
 
-### Deterministic (Structured Data)
-| Pack | Data Type | Records | Storage |
-|------|-----------|---------|---------|
-| Culture | Thirukkural verses | 1,330 | ~500 KB |
-| Culture | Siddhars info | 18 | ~20 KB |
-| Culture | Festivals | ~50 | ~30 KB |
-| Govt | Schemes | ~100 | ~200 KB |
-| Govt | Documents | ~30 | ~50 KB |
-| Education | Scholarships | ~50 | ~100 KB |
-| Education | Institutions | ~200 | ~150 KB |
-| Legal | Templates | ~20 | ~50 KB |
-| Legal | Rights info | ~50 | ~80 KB |
-| Health | Hospitals | ~500 | ~200 KB |
-| Health | Siddha remedies | ~100 | ~80 KB |
-| Security | Scam patterns | ~50 | ~50 KB |
-| Security | Emergency contacts | ~30 | ~20 KB |
-| **Total** | | ~2,500+ | **~1.5 MB** |
+### Deterministic (Structured SQLite Data)
+| Category | Data Type | Records | Service |
+|----------|-----------|---------|---------|
+| Thirukkural | Verses + athikarams | 1,330 | ThirukkuralService |
+| Schemes | Govt schemes + eligibility + documents | 14+ | SchemeService |
+| Emergency | National + district contacts | 30+ | EmergencyService |
+| Health | Hospitals + facilities | 25+ | HealthcareService |
+| Safety | Scam patterns + cyber safety tips | 40 | GenericDataService |
+| Education | Scholarships + competitive exams | 35 | GenericDataService |
+| Legal | Legal rights + templates | 35 | GenericDataService |
+| Siddha Medicine | Traditional remedies | 20 | GenericDataService |
+| Festivals | Tamil festivals | 15 | GenericDataService |
+| Siddhars | Siddhar biographies | 18 | GenericDataService |
+| **Total** | **10 categories** | **~390+** | **~1.5 MB** |
+
+All data is bundled with the app in SQL files and loaded into SQLite with FTS5 indexing at first launch. No downloads required.
+
+### AI-Enhanced (LLM adds explanation to SQLite results)
+- Contextual explanations of factual data
+- Follow-up conversations about retrieved content
+- Comparative analysis across categories
 
 ### AI-Required (LLM Only)
-- Personalized advice
-- Complex explanations
-- Comparative analysis
-- Follow-up conversations
+- Personalized advice with no category match
 - Ambiguous query interpretation
 - Creative responses
 
@@ -151,23 +152,24 @@ User Query
 
 ## Implementation Status
 
-### Completed
-- Query Router (`lib/services/query_router.dart`)
+### Completed (all items as of v0.5.1, 2026-02-11)
+- Query Router with 10 category matchers + `_needsExplanation()` hybrid check (`lib/services/query_router.dart`)
 - Retrieval Services (`lib/services/retrieval/`)
-  - ThirukkuralService
-  - SchemesService
-  - EmergencyService
-  - HealthService
-  - EducationService
+  - ThirukkuralService — verse/athikaram lookup, search, random
+  - SchemeService — schemes, eligibility, documents, by level
+  - EmergencyService — contacts by type, district, national
+  - HealthcareService — hospitals by district, type, CMCHIS, emergency
+  - GenericDataService — scams, cyber safety, scholarships, exams, legal rights, legal templates, siddha medicine, festivals, siddhars
 - Hybrid Chat Provider (`lib/providers/hybrid_chat_provider.dart`)
-- Knowledge Result Cards (`lib/widgets/knowledge_result_card.dart`)
+- Knowledge Result Cards with expand/collapse and bilingual UI (`lib/widgets/knowledge_result_card.dart`)
+- Hybrid Message Bubble with bilingual labels (`lib/widgets/hybrid_message_bubble.dart`)
 - Model Status Indicator (`lib/widgets/model_status_indicator.dart`)
-- Model Download Service (`lib/services/model_download_service.dart`)
-
-### Pending
-- Full Thirukkural database population (1,330 verses)
-- Complete schemes database
-- FTS5 Tamil search optimization
+- Model Download Service with pause/resume (`lib/services/model_download_service.dart`)
+- Full Thirukkural database (1,330 verses)
+- Government schemes database (14+ schemes with eligibility and documents)
+- FTS5 search with triggers and bulk population
+- All 10 knowledge categories populated with ~390 records
+- 232 tests passing (unit, integration, widget, security)
 
 ## Related ADRs
 - [ADR-001: Hybrid App Strategy](001-hybrid-app-strategy.md)

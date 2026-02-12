@@ -1,9 +1,9 @@
 # ADR-005: Incremental Pack Downloads (Base + Pick Strategy)
 
 ## Status
-Accepted (PARTIALLY STALE — model size assumptions below are outdated)
+**Superseded** by [ADR-009: Hybrid Retrieval Architecture](009-hybrid-retrieval-architecture.md)
 
-> **Note (Feb 2026):** The model size references in this ADR (Qwen 2.5 3B, 1.7GB base) are from the initial plan. The current target is Qwen3-0.6B-Base with <1GB GGUF. All size calculations, storage scenarios, and download flows need to be recalculated once the final model size is known. The overall Base + Pick Packs strategy remains valid. See `models/TRAINING_LOG.md` for current model status.
+> **Superseded (Feb 2026):** The "Base + Pick Packs" strategy described here — downloading a base GGUF model plus separate LoRA adapter packs (~60MB each) per domain — was never implemented. The hybrid retrieval architecture (ADR-009) took a fundamentally different approach: all domain knowledge is bundled as SQLite data within the app (~1.5MB total), and the AI model is a single optional GGUF download for conversational capabilities. There are no separate LoRA packs, no per-domain model downloads, and no pack manifest from HuggingFace Hub. The app provides full knowledge coverage (10 categories, ~390 records) immediately at install from SQLite alone.
 
 ## Date
 2026-02-05

@@ -1,9 +1,9 @@
 # ADR-004: HuggingFace Spaces as VAZHI Lite Backend
 
 ## Status
-Accepted (PARTIALLY STALE — model references below are outdated; Space is now dev/testing only, not production backend)
+**Partially Stale** — dev/testing only, not production backend
 
-> **Note (Feb 2026):** The model references in this ADR (Qwen2.5-3B, 1.7GB) are from the initial plan. The project has since gone through 9+ training iterations and the current target is Qwen3-0.6B-Base (<1GB GGUF). The HuggingFace Space is used for development/testing only; production inference is on-device. See `models/TRAINING_LOG.md` for current model status.
+> **Note (Feb 2026):** This ADR described the HF Space as the production backend for "VAZHI Lite." With [ADR-001](001-hybrid-app-strategy.md) superseded (no separate Lite variant), the HF Space is used for development/testing only. Production is fully on-device via hybrid retrieval ([ADR-009](009-hybrid-retrieval-architecture.md)). Model target is now Qwen3-0.6B-Base (<1GB GGUF). The Gradio API and deployment approach described here remain valid for dev/testing use.
 
 ## Date
 2026-02-05

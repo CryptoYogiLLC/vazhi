@@ -1,7 +1,9 @@
 # ADR-001: Hybrid App Strategy (Lite + Full Variants)
 
 ## Status
-Accepted
+**Superseded** by [ADR-009: Hybrid Retrieval Architecture](009-hybrid-retrieval-architecture.md)
+
+> **Superseded (Feb 2026):** The two-variant strategy (VAZHI Lite + VAZHI Full as separate APKs) was never implemented. Instead, ADR-009's hybrid retrieval architecture solved the same problem with a single app: SQLite provides immediate value without any download, and the AI model is an optional enhancement. This eliminates the need for two app variants, two builds, and the cloud backend dependency for Lite users. The original problem (serving both connectivity-limited and storage-limited users) is better addressed by one app that works offline from install.
 
 ## Date
 2026-02-05
