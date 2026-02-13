@@ -524,6 +524,10 @@ For conversational content:
 | 37 | Lower LR for instruct models (2e-5 not 1e-4) | 1e-4 causes catastrophic forgetting of existing instruction-following |
 | 38 | Qwen3 has internal bf16 ops incompatible with P100/T4 | Use FP32 training mode (fp16=False, bf16=False) on non-Ampere GPUs |
 | 39 | Test existing HF checkpoints before new training runs | A previously uploaded model may still work — check before wasting compute |
+| 40 | **4-bit quantization bypasses Tensor Cores** | bitsandbytes dequantization prevents fp16 speedup — if model fits in fp16, skip 4-bit entirely |
+| 41 | **0.6B models don't need 4-bit for training** | 596M params in fp16 = 1.2GB, fits easily on T4/P100 — 4-bit adds overhead for no benefit |
+| 42 | **Qwen3's 151K vocab creates huge logits** | [batch, seq, 151669] tensor limits max batch size — batch 8 OOMs on 15GB T4 |
+| 43 | **Checkpoint frequently on Kaggle** | Save every 125 steps — compute quotas can cut sessions short, but any checkpoint is usable |
 
 ---
 
@@ -1195,5 +1199,38 @@ The loss curve was rendered as an HTML widget (`<IPython.core.display.HTML objec
 
 ---
 
+## Phase 12: DAPT v1.0 — First Successful Training (Feb 12, 2026)
+
+After 13 consecutive failures, DAPT v1.0 is the first training run that produced a working Tamil model.
+
+### What Changed
+
+The key insight was **separating language learning (DAPT) from instruction-following (SFT)**. All previous attempts tried to teach Tamil AND instruction-following in a single SFT pass — this consistently failed because:
+- SFT-only on instruct models: model already knows instructions but can't learn Tamil fluency from Q&A pairs alone
+- SFT-only on base models: model has no Tamil foundation, produces code/HTML garbage
+
+DAPT trains on raw Tamil text (Sangraha corpus) to teach the model Tamil patterns, vocabulary, and structure. SFT comes after to add instruction-following.
+
+### Training Details
+
+- **Data prep (Colab CPU):** Streamed Sangraha verified Tamil → filtered 16,450 docs → packed 32,244 blocks of 1024 tokens → uploaded to HF
+- **Training (Kaggle T4):** fp16 (no 4-bit), LoRA r=16, batch 4 × grad_accum 8, LR 2e-5 cosine, 375/500 steps (~3.5 hours)
+- **Results:** Val loss 1.045 → 1.016, eval 8/8 passed, avg Tamil 66%, avg unique 97%
+
+### Key Technical Lessons
+
+1. **4-bit quantization was the speed bottleneck** — bitsandbytes dequantization bypasses Tensor Cores entirely, causing identical 0.03 it/s on P100 and T4. Removing 4-bit and loading in fp16 directly was faster AND simpler.
+2. **Qwen3's 151K vocab creates massive logits tensors** — [8, 1024, 151669] in float32 = ~5GB, making batch 8 impossible on 15GB T4.
+3. **Gradient checkpointing is essential on T4** — without it, batch 4 OOMs during backward pass.
+4. **Checkpoint early, checkpoint often** — Kaggle compute quotas can cut sessions short. Saving at steps 125/250/375 meant we got a usable model even when stopping at step 375.
+
+### Artifacts
+
+- Merged fp16 model: `CryptoYogi/qwen3-0.6b-tamil`
+- LoRA adapter backup: `CryptoYogi/qwen3-0.6b-tamil-lora`
+- DAPT dataset: `CryptoYogi/vazhi-dapt-tamil-v1_0`
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-12 (v3.6 failed, v3.7 pending)*
+*Last updated: 2026-02-12 (DAPT v1.0 succeeded — first working Tamil model)*

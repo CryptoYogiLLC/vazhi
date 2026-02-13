@@ -24,7 +24,7 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | v3.6 | 2026-02-12 | ❌ Failed | Return to Qwen3-0.6B instruct — dataset + masking + training all correct, but LoRA merge into 4-bit model corrupted weights. Output: random punctuation/operators (0% Tamil) |
 | v3.7 | 2026-02-12 | ⏸️ Superseded | Same as v3.6 but fix LoRA merge: save adapter → reload base in fp16 → merge in fp16. Superseded by v3.8 (v4.0 dataset) |
 | v3.8 | 2026-02-12 | ❌ Failed | Dataset Factory v4.0 (3,365 samples) + fp16 merge fix — SFT-only on instruct model. 0/12 eval passed, avg Tamil 52%, `<think>` leaking, gibberish content. Root cause: no DAPT stage |
-| DAPT v1.0 | 2026-02-12 | ⏳ Pending | Two-notebook pipeline: data prep (CPU) + DAPT training (GPU). Qwen3-0.6B-Base + 30M tokens from Sangraha Tamil corpus. Produces reusable Tamil base model for SFT |
+| DAPT v1.0 | 2026-02-12 | ✅ Complete | Two-notebook pipeline: data prep (CPU) + DAPT training (GPU). Qwen3-0.6B-Base + 16M tokens Sangraha Tamil (375 steps). Val loss 1.045→1.016, eval 8/8 passed (66% Tamil, 97% unique). Model: `CryptoYogi/qwen3-0.6b-tamil` |
 
 ---
 
@@ -1544,10 +1544,10 @@ After 13 failed training attempts across 5 base models, the pattern is clear:
 
 ---
 
-## DAPT v1.0 Strategy (Pending — Two-Notebook Pipeline)
+## DAPT v1.0 Training Run (Complete — Tamil Base Model)
 
 **Date:** 2026-02-12
-**Status:** ⏳ Pending
+**Status:** ✅ Complete
 **Base Model:** Qwen/Qwen3-0.6B-Base (NOT instruct — per GPT5.2 review)
 **Training Platform:** Kaggle (GPU for training; CPU for data prep)
 **Corpus:** AI4Bharat Sangraha `verified/tam` split (~290K+ docs, ~724M+ chars)
@@ -1597,12 +1597,53 @@ Quality analysis of 500 verified Tamil docs:
 - No HTML, no empty docs, only 4.6% over 8000 chars
 - Very clean data — filters are appropriate
 
+### Training Results
+
+**Data prep (CPU — Colab):**
+- Corpus: Sangraha `verified/tam` split
+- Filtered: 16,450 docs kept (Tamil >= 40%, 200-8000 chars, dedup, repetition < 0.5)
+- Packed: 32,244 blocks of 1024 tokens (31,599 train / 645 val)
+- Total tokens: ~33M available, ~16M trained on (375 steps × 32,768 tokens/step)
+
+**Training (GPU — Kaggle T4x2, single GPU used):**
+- fp16 (no 4-bit quantization — 0.6B model fits in 1.2GB fp16)
+- LoRA r=16, alpha=32, 7 target modules, dropout 0.05
+- Batch 4, grad accum 8, effective batch 32
+- LR 2e-5, cosine decay, 5% warmup
+- Gradient checkpointing enabled (required for T4 15GB with Qwen3's 151K vocab)
+- 375/500 steps completed (~3.5 hours, stopped early due to Kaggle compute quota)
+
+| Eval Step | Train Loss | Val Loss | Perplexity |
+|-----------|-----------|---------|------------|
+| 62 | 1.0596 | 1.0449 | 2.8 |
+| 124 | 1.0442 | 1.0338 | 2.8 |
+| 186 | 1.0428 | 1.0257 | 2.8 |
+| 248 | 1.0424 | 1.0197 | 2.8 |
+| 310 | 1.0273 | 1.0155 | 2.8 |
+
+**Eval (8 Tamil text continuation prompts):**
+- 8/8 passed (no empty, no code, no repetition loops)
+- Avg Tamil%: 66%
+- Avg unique word ratio: 97%
+- Model generates coherent Tamil prose continuations (expected for base model, not instruction-following)
+
+**Key issues resolved during training:**
+- 4-bit quantization bypassed Tensor Cores → removed, loaded fp16 directly
+- Batch 8 OOM'd due to Qwen3's 151K vocab logits tensor → reduced to batch 4
+- `total_mem` AttributeError → fixed to `total_memory`
+- `eval_ppl` NameError (cosmetic) — variable was in interrupted training cell
+
+**Artifacts uploaded to HuggingFace:**
+- Merged fp16 model: `CryptoYogi/qwen3-0.6b-tamil`
+- LoRA adapter backup: `CryptoYogi/qwen3-0.6b-tamil-lora`
+
 ### What Happens After DAPT
 
 The DAPT-adapted model (`CryptoYogi/qwen3-0.6b-tamil`) becomes the permanent base for SFT:
 - **Reusable:** One DAPT run, unlimited SFT iterations
 - **SFT uses v4.0 dataset** from Dataset Factory (3,365 samples with composition enforcement)
-- **SFT notebook:** To be created as v4.0 SFT (loads DAPT model instead of vanilla Qwen3)
+- **SFT notebook:** To be created as `Vazhi_SFT_v3_9_OnDAPT.ipynb` (loads DAPT model instead of vanilla Qwen3)
+- **Incremental DAPT (optional):** Can load this model as base and train on remaining ~17M tokens in a future session
 
 ---
 

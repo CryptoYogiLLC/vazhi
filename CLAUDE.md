@@ -30,9 +30,9 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - 19 code review issues identified and closed (#22-40)
 
 **What's blocking:**
-- AI model training — 13 failed attempts across 5 base models (see Training History below)
-- Latest approach: DAPT v1.0 — 3-step pipeline: data prep (CPU) → DAPT on Qwen3-0.6B-Base with 30M tokens Sangraha Tamil → SFT with v4.0 dataset
-- DAPT data prep and training notebooks created, pending execution on Kaggle
+- AI model training — 13 failed SFT attempts across 5 base models, but **DAPT v1.0 succeeded**
+- DAPT complete: `CryptoYogi/qwen3-0.6b-tamil` — Tamil base model (375 steps, val loss 1.016, 8/8 eval passed)
+- Next step: SFT on DAPT'd model with v4.0 ChatML dataset (notebook to be created)
 
 **What's done (app distribution):**
 - Google Play: App icon (peacock logo), display name ("VAZHI - வழி"), application ID (`com.cryptoyogillc.vazhi`), AAB uploaded — awaiting developer account verification (needs Android phone) before internal testing can go live
@@ -60,12 +60,13 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 | v3.6 | Qwen3-0.6B (instruct) | Failed | Dataset + masking + training correct, but LoRA merge into 4-bit model corrupted weights → 0% Tamil |
 | v3.7 | Qwen3-0.6B (instruct) | Superseded | Same as v3.6 but merge fix — superseded by v3.8 (v4.0 dataset) |
 | v3.8 | Qwen3-0.6B (instruct) | Failed | SFT-only with Dataset Factory v4.0 (3,365 samples), 0/12 eval, avg Tamil 52%, gibberish — no DAPT |
-| DAPT v1.0 | Qwen3-0.6B-Base | Pending | 3-step: data prep (CPU) → DAPT 30M tokens Sangraha → SFT. Produces reusable Tamil base model |
+| DAPT v1.0 | Qwen3-0.6B-Base | **Success** | DAPT 16M tokens Sangraha, 375 steps, val loss 1.016, 8/8 eval passed. Model: `CryptoYogi/qwen3-0.6b-tamil` |
 
 **Current strategy (DAPT-first):**
-- **Step 1:** Data prep — filter Sangraha Tamil corpus, pack into 30M tokens (`Vazhi_DAPT_Data_v1_0.ipynb`, CPU)
-- **Step 2:** DAPT — train Qwen3-0.6B-Base on Tamil corpus → `CryptoYogi/qwen3-0.6b-tamil` (`Vazhi_DAPT_v1_0_Tamil.ipynb`, GPU)
-- **Step 3:** SFT — fine-tune Tamil base on v4.0 ChatML dataset (notebook to be created)
+- **Step 1:** Data prep — filter Sangraha Tamil corpus, pack into 33M tokens (`Vazhi_DAPT_Data_v1_0.ipynb`, CPU) ✅ DONE
+- **Step 2:** DAPT — train Qwen3-0.6B-Base on 16M tokens → `CryptoYogi/qwen3-0.6b-tamil` (`Vazhi_DAPT_v1_0_Tamil.ipynb`, GPU) ✅ DONE
+- **Step 3:** SFT — fine-tune Tamil base on v4.0 ChatML dataset (`Vazhi_SFT_v3_9_OnDAPT.ipynb`, to be created)
+- **Optional:** Incremental DAPT — load DAPT'd model, train on remaining ~17M tokens
 - **Fallback:** Sarvam-1 IQ3_M (1.17GB, proven Tamil, exceeds <1GB hard limit)
 
 **Data source for SQLite population:** Open data scraping from Tamil Nadu government websites and Tamil databases.
@@ -205,9 +206,9 @@ gh workflow run ci.yml            # Trigger GitHub Actions
 ## HuggingFace Resources
 
 - Curated SFT dataset v4.0: `CryptoYogi/vazhi-tamil-sft-v4_0` (3,365 samples, Dataset Factory output)
-- DAPT dataset (pending): `CryptoYogi/vazhi-dapt-tamil-v1_0` (pre-tokenized packed Sangraha Tamil)
-- DAPT model (pending): `CryptoYogi/qwen3-0.6b-tamil` (reusable Tamil base for SFT)
-- DAPT adapter backup (pending): `CryptoYogi/qwen3-0.6b-tamil-lora`
+- DAPT dataset: `CryptoYogi/vazhi-dapt-tamil-v1_0` (32,244 packed 1024-token blocks from Sangraha Tamil)
+- DAPT model: `CryptoYogi/qwen3-0.6b-tamil` (reusable Tamil base for SFT — DAPT v1.0 complete)
+- DAPT adapter backup: `CryptoYogi/qwen3-0.6b-tamil-lora` (LoRA adapter for recovery)
 - Legacy SFT dataset: `CryptoYogi/vazhi-tamil-sft-v3_6` (3,667 samples)
 - Legacy dataset: `CryptoYogi/vazhi-tamil-v05` (11,696 items)
 - Forked base model: `CryptoYogi/gemma-2b-tamil-base` (historical, corrupted tokenizer)

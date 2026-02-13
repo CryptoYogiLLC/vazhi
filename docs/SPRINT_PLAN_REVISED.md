@@ -182,12 +182,19 @@ Multi-agent code review completed with 19 GitHub issues closed.
 
 #### AI Model Training 🔄
 **Current approach: 3-step pipeline (DAPT → SFT → GGUF)**
-- [ ] **Step 1: Run DAPT data prep** on Kaggle CPU — filter Sangraha, pack sequences, upload to HF
-- [ ] **Step 2: Run DAPT training** on Kaggle GPU — produce `CryptoYogi/qwen3-0.6b-tamil` (reusable Tamil base)
+- [x] **Step 1: Run DAPT data prep** on Colab CPU — filter Sangraha, pack 33M tokens, upload to HF ✅
+- [x] **Step 2: Run DAPT training** on Kaggle T4 GPU — produced `CryptoYogi/qwen3-0.6b-tamil` (375 steps, val loss 1.016, 8/8 eval passed) ✅
 - [ ] **Step 3: Run SFT** on DAPT-adapted model with v4.0 dataset (3,365 samples)
 - [ ] **Step 4: GGUF conversion** and Tamil output quality validation
 
-**Model Training History (13 failed attempts):**
+**DAPT v1.0 Results (Feb 12, 2026):**
+- Data: 16,450 Sangraha docs → 32,244 packed 1024-token blocks
+- Training: 375/500 steps on Kaggle T4, fp16, LoRA r=16, ~3.5 hours
+- Val loss: 1.045 → 1.016 (steady improvement)
+- Eval: 8/8 Tamil continuations passed, avg 66% Tamil, 97% unique words
+- Artifacts: `CryptoYogi/qwen3-0.6b-tamil` (merged fp16) + `CryptoYogi/qwen3-0.6b-tamil-lora` (adapter backup)
+
+**Model Training History (13 failed attempts, 1 DAPT success):**
 - v0.1-v0.4: Qwen2.5-3B — data quality issues then GGUF broke Tamil
 - v0.5: Qwen2.5-0.5B — LoRA corrupted model
 - v0.6: Sarvam-2B — 4-bit training instability
@@ -199,10 +206,10 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - v3.5: Qwen3-0.6B — SFT-only on base model produced code garbage (no DAPT)
 - v3.6: Qwen3-0.6B — training succeeded but LoRA merge into 4-bit model corrupted output
 - v3.7: Qwen3-0.6B — superseded by v3.8 (v4.0 dataset)
-- **v3.8 (FAILED):** Qwen3-0.6B (instruct) — SFT-only with v4.0 dataset, 0/12 eval, no DAPT = gibberish Tamil
-- **DAPT v1.0 (PENDING):** Qwen3-0.6B-Base + 30M tokens Sangraha → reusable Tamil base model, then SFT
+- v3.8 (FAILED): Qwen3-0.6B (instruct) — SFT-only with v4.0 dataset, 0/12 eval, no DAPT = gibberish Tamil
+- **DAPT v1.0 (SUCCESS):** Qwen3-0.6B-Base + 16M tokens Sangraha → Tamil base model, 8/8 eval passed
 
-See `models/TRAINING_LOG.md` for full details and 50 lessons learned.
+See `models/TRAINING_LOG.md` for full details and lessons learned.
 
 ### Phase 3.5: App Store Prep 🔄 PARTIAL
 - [x] App icon updated (VAZHI peacock logo, replaces Flutter default)
@@ -257,7 +264,7 @@ See `models/TRAINING_LOG.md` for full details and 50 lessons learned.
 
 | Risk | Status | Mitigation |
 |------|--------|------------|
-| Training fails | 🔄 Active | 13 failed attempts; DAPT v1.0 pipeline pending (3-step: data prep → DAPT → SFT) |
+| Training fails | 🟡 Partial | DAPT v1.0 succeeded (Tamil base model); SFT pending as final step |
 | Model too slow | 🔄 Active | Using CPU bfloat16, consider Pro for GPU |
 | HuggingFace bugs | 🔄 Active | Pinned pydantic <2.11.0 |
 | App store rejection | ⏳ Future | Prepare documentation |
@@ -266,8 +273,8 @@ See `models/TRAINING_LOG.md` for full details and 50 lessons learned.
 
 *Last updated: February 12, 2026*
 *Code Review: 19 issues closed, 232 tests passing*
-*Training: DAPT v1.0 pipeline pending (3-step: data prep → DAPT → SFT)*
+*Training: DAPT v1.0 complete (Tamil base model on HF), SFT pending*
 *Current milestone: Phase 3 - Data Population & AI Model*
 *Architecture: Hybrid Retrieval (Deterministic + Optional AI)*
 *Target Model: Qwen3-0.6B (<1GB GGUF) with DAPT (Base) → SFT → GGUF*
-*Training attempts: 13 failed, 50 lessons documented*
+*Training attempts: 13 failed, DAPT v1.0 succeeded*
