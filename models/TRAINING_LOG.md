@@ -27,7 +27,7 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | DAPT v1.0 | 2026-02-12 | ✅ Complete | Two-notebook pipeline: data prep (CPU) + DAPT training (GPU). Qwen3-0.6B-Base + 16M tokens Sangraha Tamil (375 steps). Val loss 1.045→1.016, eval 8/8 passed (66% Tamil, 97% unique). Model: `CryptoYogi/qwen3-0.6b-tamil` |
 | DAPT v1.1 | 2026-02-13 | ✅ Complete | Instruct model (not Base), 55M tokens NFKC-cleaned, dual T4 DataParallel. Train loss 1.427→0.964 (-32.5%), PPL 2.6. DAPT wins 7/8 vs vanilla (+55% char, +63% word). Model: `CryptoYogi/qwen3-0.6b-tamil-v1_1` |
 | SFT v4.0 | 2026-02-13 | ❌ Failed | DAPT v1.1 + SFT (1,365 train, LoRA r=16, 3 epochs, LR 2e-5). Train loss 1.43→1.03, eval loss 1.33→1.23. `<think>` suppression broken (transformers bug). Content is Tamil gibberish — wrong facts, hallucinated data. DAPT > SFT > Vanilla by Tamil%. Model: `CryptoYogi/vazhi-v4_0` |
-| Data v4.1 | 2026-02-13 | ✅ Complete | 3-stage pipeline: Retrieve ~520K raw → Curate with ML (fasttext, dedup, PPL, SBERT) → Compose ~10K SFT. max_seq_length=2048. Datasets: `vazhi-raw-tamil-qa-v1`, `vazhi-curated-tamil-qa-v1`, `vazhi-tamil-sft-v4_1` |
+| Data v4.1 | 2026-02-13 | ✅ Complete | 3-stage pipeline: Retrieve ~34K (6 IndicAlign subsets + local, capped 2-3x) → Curate with ML (fasttext, dedup, PPL, SBERT) → Compose ~17.6K SFT. max_seq_length=2048. Dropped: tamil-orca (misaligned Q&A), GSM8K_TAMIL (irrelevant), OpenAssistant_T/Anudesh/Wiki_Chat (unverified/irrelevant). Datasets: `vazhi-raw-tamil-qa-v1`, `vazhi-curated-tamil-qa-v1`, `vazhi-tamil-sft-v4_1` |
 
 ---
 
@@ -45,7 +45,7 @@ SFT v4.0 failed (gibberish) due to:
 
 - **max_seq_length=2048**: Controls training window, not response length. Stops rejection cascade
 - **3-stage pipeline** (Retrieve→Curate→Compose): Each stage uploads to HF for checkpointing
-- **Broad retrieval**: ~520K+ raw from IndicAlign (9 subsets), tamil-orca, GSM8K_TAMIL, local sources
+- **Focused retrieval**: ~34K raw from IndicAlign (6 verified subsets, capped 2-3x) + local sources (vazhi-packs, handcrafted, general). Dropped tamil-orca (misaligned Q&A), GSM8K_TAMIL (irrelevant math), OpenAssistant_T (world knowledge not relevant to VAZHI users), Anudesh/Wiki_Chat (unverified Tamil data in API)
 - **ML curation**: fasttext lang-id, MinHash dedup, perplexity (DAPT v1.1), IndicSBERT + HDBSCAN
 - **Absolute count targets**: No percentage anchoring — prevents cascading downsampling
 - **Safety routing**: Toxic_Matrix/HHRLHF_T refusal pairs → safety bucket (not filtered)

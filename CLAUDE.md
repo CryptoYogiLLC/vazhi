@@ -32,7 +32,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 **What's blocking:**
 - AI model training — 13 failed SFT attempts across 5 base models, **DAPT v1.0 + v1.1 both succeeded**
 - DAPT v1.1 complete: `CryptoYogi/qwen3-0.6b-tamil-v1_1` — Tamil instruct model (55M tokens, PPL 2.6, +55% Tamil vs vanilla)
-- Next step: SFT v4.1 on DAPT'd instruct model — 3-stage pipeline (retrieve ~520K, curate with ML, compose ~10K) with max_seq_length=2048
+- Next step: SFT v4.1 on DAPT'd instruct model — 3-stage pipeline (retrieve ~34K from verified sources, curate with ML, compose ~17.6K) with max_seq_length=2048
 
 **What's done (app distribution):**
 - Google Play: App icon (peacock logo), display name ("VAZHI - வழி"), application ID (`com.cryptoyogillc.vazhi`), AAB uploaded — awaiting developer account verification (needs Android phone) before internal testing can go live
@@ -67,13 +67,13 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 **Current strategy (DAPT-first):**
 - **Step 1:** Data prep — filter Sangraha Tamil corpus, NFKC normalize, pack into 55M tokens (`Vazhi_DAPT_Data_v1_1.ipynb`, CPU) ✅ DONE
 - **Step 2:** DAPT — train Qwen3-0.6B (instruct) on 55M tokens → `CryptoYogi/qwen3-0.6b-tamil-v1_1` (`Vazhi_DAPT_v1_1_Tamil.ipynb`, GPU) ✅ DONE
-- **Step 2.5:** Dataset Factory v4.1 — 3-stage pipeline (Retrieve→Curate→Compose), ~10K SFT samples from ~520K raw (`Vazhi_Dataset_Factory_v4_1.ipynb`, GPU)
+- **Step 2.5:** Dataset Factory v4.1 — 3-stage pipeline (Retrieve→Curate→Compose), ~17.6K SFT samples from ~34K raw (`Vazhi_Dataset_Factory_v4_1.ipynb`, GPU)
 - **Step 3:** SFT — fine-tune DAPT'd instruct model on v4.1 dataset with max_seq_length=2048, conservative LoRA (r=8, q_proj+v_proj, 2 epochs)
 - **Fallback:** Sarvam-1 IQ3_M (1.17GB, proven Tamil, exceeds <1GB hard limit)
 
 **Data source for SQLite population:** Open data scraping from Tamil Nadu government websites and Tamil databases.
 
-## Key Rules (From 56 Lessons Learned)
+## Key Rules (From 59 Lessons Learned)
 
 ### Data Rules
 - **NEVER trust data labels** — verify with character-level Tamil % analysis
@@ -111,7 +111,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Dataset Factory notebook** (`notebooks/Vazhi_Dataset_Factory_v4_1.ipynb`) constructs curated datasets on Kaggle (v4.0 superseded)
 - **Legacy scripts raise RuntimeError** — `create_diverse_qa_pack.py` and `create_balanced_sft_dataset.py` are superseded
 - **Validate tokenized length, not just character length** — Tamil uses 3-4 tokens/char, so 1500-char samples can exceed `max_seq_length` after tokenization. Dataset Factory must check `len(tokenizer.encode(text))` against training `max_seq_length`
-- **3-stage data pipeline** (v4.1+): Retrieve broadly (all sources, no caps) → Curate with ML (fasttext lang-id, heuristics, dedup, perplexity, semantic clustering) → Compose with absolute count targets. Each stage uploads to HF for checkpointing
+- **3-stage data pipeline** (v4.1+): Retrieve from verified sources with 2-3x caps (6 IndicAlign subsets + local, ~34K) → Curate with ML (fasttext lang-id, heuristics, dedup, perplexity, semantic clustering) → Compose with absolute count targets (~17.6K). Each stage uploads to HF for checkpointing
 - **max_seq_length=2048 for SFT** — controls training window, not response length. Using 1024 caused 74% domain pack rejection due to system prompt overhead
 - **Store raw and curated datasets separately on HF** — enables flexible reuse without re-running expensive retrieval/curation
 - **Two-pass curation** — cheap CPU filters first (lang-id, heuristics, dedup), GPU scoring on candidates only
@@ -182,7 +182,7 @@ vazhi/
 ├── huggingface-space/            # Gradio test API (submodule)
 └── docs/
     ├── SPRINT_PLAN_REVISED.md    # Roadmap and phase tracking
-    ├── LESSONS_LEARNED.md        # 56 lessons from training journey
+    ├── LESSONS_LEARNED.md        # 59 lessons from training journey
     ├── CODE_REVIEW_CONSENSUS_REPORT.md
     ├── DATA_REGENERATION_PLAN.md # Historical — v0.2 data crisis
     └── adr/                      # 10 Architecture Decision Records
@@ -225,9 +225,9 @@ gh workflow run ci.yml            # Trigger GitHub Actions
 
 ## HuggingFace Resources
 
-- Raw Tamil Q&A v1: `CryptoYogi/vazhi-raw-tamil-qa-v1` (~520K+ raw pairs from all sources)
+- Raw Tamil Q&A v1: `CryptoYogi/vazhi-raw-tamil-qa-v1` (~34K raw pairs from 6 IndicAlign subsets + local)
 - Curated Tamil Q&A v1: `CryptoYogi/vazhi-curated-tamil-qa-v1` (ML-curated with quality scores)
-- SFT dataset v4.1: `CryptoYogi/vazhi-tamil-sft-v4_1` (~10K samples, 3-stage pipeline)
+- SFT dataset v4.1: `CryptoYogi/vazhi-tamil-sft-v4_1` (~17.6K samples, 3-stage pipeline)
 - SFT v4.0 model (FAILED): `CryptoYogi/vazhi-v4_0` (gibberish output — LoRA overfit)
 - SFT v4.0 adapter: `CryptoYogi/vazhi-v4_0-lora`
 - Curated SFT dataset v4.0 (superseded): `CryptoYogi/vazhi-tamil-sft-v4_0` (1,514 samples: 1,365 train / 149 eval)

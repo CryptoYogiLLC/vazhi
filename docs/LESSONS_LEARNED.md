@@ -541,6 +541,9 @@ For conversational content:
 | 54 | **Two-pass curation: cheap CPU filters first, GPU scoring on candidates** | Saves GPU hours by reducing pool before expensive PPL/embedding computation |
 | 55 | **PPL is a fluency metric, not quality** | Use as weak signal for garbage detection (>200), not as a gate — fluent gibberish is possible |
 | 56 | **Toxic_Matrix is safety training data** | Don't filter with toxicity wordlist — route toxic prompt + safe refusal pairs to safety bucket |
+| 57 | **Spot-check EVERY source before committing** | tamil-orca had misaligned Q&A (answers didn't match questions); 2-3 samples per source catches catastrophic issues |
+| 58 | **Retrieve lean (2-3x), not broad** | 520K retrieval for 10K target is wasteful; can always do a targeted second pull if a bucket falls short |
+| 59 | **Match data sources to product mission** | VAZHI users need scam protection, govt benefits, health, culture — not Commodore 64 trivia or math word problems |
 
 ---
 
@@ -1273,11 +1276,11 @@ SFT v4.0 used a monolithic Dataset Factory that retrieved, filtered, and compose
 **Lesson #51: Separate retrieval from curation from composition.** Each concern has different compute requirements and failure modes. Separating them with HF uploads between stages provides:
 - **Checkpoint recovery** — if Stage 3 fails, Stage 1-2 data is preserved
 - **Flexible reuse** — raw and curated datasets can be recomposed without re-retrieval
-- **Independent iteration** — can improve curation without re-downloading 520K samples
+- **Independent iteration** — can improve curation without re-downloading raw samples
 
 **Lesson #52: max_seq_length controls training window, not response length.** The model learns from actual data lengths, not max_seq_length. Using 2048 simply prevents the training collator from truncating/skipping samples that exceeded the 1024 window. This single change recovered 74% of domain pack samples.
 
-**Lesson #53: Store raw and curated datasets separately on HF.** The raw dataset (`vazhi-raw-tamil-qa-v1`) is expensive to collect (~30 min of streaming 520K+ samples). The curated dataset adds ML-derived quality signals. Storing both enables recomposition with different quality thresholds without re-running curation.
+**Lesson #53: Store raw and curated datasets separately on HF.** The raw dataset (`vazhi-raw-tamil-qa-v1`) is moderately expensive to collect (streaming from multiple HF sources). The curated dataset adds ML-derived quality signals. Storing both enables recomposition with different quality thresholds without re-running curation.
 
 ### Two-Pass Curation
 
@@ -1299,8 +1302,11 @@ SFT v4.0 used a monolithic Dataset Factory that retrieved, filtered, and compose
 - **#54**: Two-pass curation — cheap CPU filters first (lang-id, heuristics, dedup), GPU scoring on candidates only
 - **#55**: PPL is a fluency metric, not quality — use as weak signal for garbage detection (>200), not as a gate
 - **#56**: Toxic_Matrix is safety training data — don't filter with toxicity wordlist, route to safety bucket
+- **#57**: Spot-check EVERY source before committing to it — tamil-orca had misaligned Q&A (answers didn't match questions), GSM8K_TAMIL had irrelevant content (math word problems). 2-3 samples per source catches catastrophic issues
+- **#58**: Retrieve lean (2-3x of target), not broad — 520K retrieval for 10K target is wasteful. Can always do a targeted second pull if a specific bucket falls short
+- **#59**: Match data sources to product mission — VAZHI serves rural Tamil Nadu users (scam protection, govt benefits, health, culture). World knowledge Q&A (Commodore 64, economics) and math word problems don't serve these users
 
 ---
 
 *Document created: 2026-02-07*
-*Last updated: 2026-02-13 (Dataset Factory v4.1 — 3-stage pipeline for SFT data)*
+*Last updated: 2026-02-13 (Dataset Factory v4.1 — focused retrieval, source quality verification)*
