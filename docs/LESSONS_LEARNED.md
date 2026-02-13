@@ -528,6 +528,19 @@ For conversational content:
 | 41 | **0.6B models don't need 4-bit for training** | 596M params in fp16 = 1.2GB, fits easily on T4/P100 — 4-bit adds overhead for no benefit |
 | 42 | **Qwen3's 151K vocab creates huge logits** | [batch, seq, 151669] tensor limits max batch size — batch 8 OOMs on 15GB T4 |
 | 43 | **Checkpoint frequently on Kaggle** | Save every 125 steps — compute quotas can cut sessions short, but any checkpoint is usable |
+| 44 | Strict ChatML validation (regex) before training | Every SFT sample must have both user AND assistant segments with non-empty content |
+| 45 | **NEVER merge LoRA into 4-bit model** | Save adapter → reload base in fp16 → merge in fp16. 4-bit is for training memory only |
+| 46 | **Disable gradient checkpointing before eval** | Conflicts with use_cache, forces generation without KV cache |
+| 47 | Validate **tokenized length**, not just character length | Tamil 3-4 tokens/char + ChatML overhead can exceed max_seq_length |
+| 48 | **Automated eval metrics produce false positives** | 12/12 passed but all gibberish — eval must include factual accuracy checks |
+| 49 | **LoRA r=16 on 7 modules too aggressive for ~1K samples** | Overparameterized, overfits to surface patterns. Use r=8 on q_proj+v_proj |
+| 50 | **Clear generation_config.suppress_tokens before generating** | Avoids transformers CPU/CUDA device mismatch bug |
+| 51 | **Separate retrieval from curation from composition** | Don't mix concerns — each stage uploads to HF for checkpointing |
+| 52 | **max_seq_length controls training window, not response length** | Use 2048 to avoid rejecting 74% of domain packs due to 1024 window |
+| 53 | **Store raw and curated datasets separately on HF** | Enables flexible reuse without re-running expensive retrieval/curation |
+| 54 | **Two-pass curation: cheap CPU filters first, GPU scoring on candidates** | Saves GPU hours by reducing pool before expensive PPL/embedding computation |
+| 55 | **PPL is a fluency metric, not quality** | Use as weak signal for garbage detection (>200), not as a gate — fluent gibberish is possible |
+| 56 | **Toxic_Matrix is safety training data** | Don't filter with toxicity wordlist — route toxic prompt + safe refusal pairs to safety bucket |
 
 ---
 
@@ -1232,5 +1245,62 @@ DAPT trains on raw Tamil text (Sangraha corpus) to teach the model Tamil pattern
 
 ---
 
+## Phase 13: SFT v4.0 — Instruction Fine-Tuning on DAPT v1.1 (Feb 13, 2026)
+
+### Lessons Learned
+
+- **#47**: Dataset Factory must validate **tokenized length**, not just character length — a 1500-char character filter allows samples that exceed `max_seq_length` (1024 tokens) after tokenization due to Tamil's 3-4 token/char ratio + ChatML overhead. The `DataCollatorForCompletionOnlyLM` gracefully skips these (loses them from training), but the data is wasted. Fix: add a tokenizer-based length check in the Dataset Factory that rejects any sample whose tokenized form exceeds `max_seq_length`
+
+- **#48**: **Automated eval metrics produce false positives** — SFT v4.0 scored 12/12 on automated checks (Tamil %, repeat ratio, code detection, emptiness) but EVERY response was semantic gibberish. Tamil char % was 61% average — "Tamil-looking text" ≠ "coherent Tamil answers." Eval MUST include factual accuracy checks (e.g., "Capital of TN" must contain "சென்னை") and human-readable content review, not just automated metrics
+
+- **#49**: **LoRA r=16 targeting all 7 projection modules is too aggressive for ~1K samples** — With only 1,365 training samples, LoRA r=16 on q/k/v/o/gate/up/down gives too many trainable parameters relative to data. The model overfits to surface patterns (produces Tamil-looking token sequences with random numbers, English fragments, and nonsensical content). SFT v4.0 result: DAPT (89% Tamil, fluent text continuation) > SFT (81% Tamil, gibberish with formatting) > Vanilla (75%). Next iteration: r=8 targeting only q_proj+v_proj, 2 epochs instead of 3
+
+- **#50**: **Clear `generation_config.suppress_tokens` before generating** — When a model is saved with `suppress_tokens` in its `generation_config.json`, `generate()` auto-injects the built-in `SuppressTokensLogitsProcessor` which has a CPU/CUDA device mismatch bug in transformers 2.8.0 (`RuntimeError: Expected all tensors to be on the same device`). Fix: always `model.generation_config.suppress_tokens = None` before calling `generate()`, and use a custom logits processor for token suppression
+
+---
+
+## Phase 14: 3-Stage Data Pipeline (Dataset Factory v4.1)
+
+### The v4.0 Failure Analysis
+
+SFT v4.0 used a monolithic Dataset Factory that retrieved, filtered, and composed in a single pass. This caused:
+1. **Cascading downsampling** — percentage-based composition anchored on domain_packs, so shrinking one bucket shrank everything
+2. **74% domain pack rejection** — max_seq_length=1024 was too small after Tamil tokenization (3-4 tokens/char) + system prompt overhead (~100 tokens)
+3. **Only 1,365 training samples** — too few for LoRA r=16 on 7 modules to generalize
+
+### The 3-Stage Solution
+
+**Lesson #51: Separate retrieval from curation from composition.** Each concern has different compute requirements and failure modes. Separating them with HF uploads between stages provides:
+- **Checkpoint recovery** — if Stage 3 fails, Stage 1-2 data is preserved
+- **Flexible reuse** — raw and curated datasets can be recomposed without re-retrieval
+- **Independent iteration** — can improve curation without re-downloading 520K samples
+
+**Lesson #52: max_seq_length controls training window, not response length.** The model learns from actual data lengths, not max_seq_length. Using 2048 simply prevents the training collator from truncating/skipping samples that exceeded the 1024 window. This single change recovered 74% of domain pack samples.
+
+**Lesson #53: Store raw and curated datasets separately on HF.** The raw dataset (`vazhi-raw-tamil-qa-v1`) is expensive to collect (~30 min of streaming 520K+ samples). The curated dataset adds ML-derived quality signals. Storing both enables recomposition with different quality thresholds without re-running curation.
+
+### Two-Pass Curation
+
+**Lesson #54: Cheap CPU filters first, GPU scoring on candidates only.** Pass 1 (CPU, ~15-30 min) runs fasttext language detection, heuristic quality filters, MinHash deduplication, and toxicity screening. This typically reduces the pool by 40-60%. Pass 2 (GPU, ~2-4 hours) then runs perplexity scoring and semantic clustering on the surviving candidates only — saving hours of GPU time.
+
+### Perplexity as Signal, Not Gate
+
+**Lesson #55: PPL is a fluency metric, not quality.** Low perplexity means the text is fluent according to the scoring model (DAPT v1.1). But fluent gibberish is possible — SFT v4.0 produced text that was 81% Tamil characters but completely nonsensical. PPL > 200 reliably detects garbage (random tokens, code fragments), but PPL < 50 does NOT guarantee the content is correct, coherent, or useful. Use PPL as a weak garbage filter, not a quality gate.
+
+### Safety Data Routing
+
+**Lesson #56: Toxic_Matrix is safety training data, not noise.** IndicAlign's Toxic_Matrix (~90K samples) and HHRLHF_T (~33K samples) contain toxic prompts paired with safe refusal responses. A naive toxicity wordlist would filter these out entirely. Instead, source-aware classification checks: if the toxic content is in the instruction AND the output is a clean refusal, route to the safety bucket. This teaches the model to refuse harmful requests — exactly the behavior we want.
+
+### Lessons Learned from Phase 14
+
+- **#51**: Separate retrieval from curation from composition — don't mix concerns. Each stage uploads to HF for checkpointing
+- **#52**: max_seq_length controls training window, not response length — use 2048 to avoid rejecting 74% of domain packs
+- **#53**: Store raw and curated datasets separately on HF — enables flexible reuse without re-running expensive retrieval/curation
+- **#54**: Two-pass curation — cheap CPU filters first (lang-id, heuristics, dedup), GPU scoring on candidates only
+- **#55**: PPL is a fluency metric, not quality — use as weak signal for garbage detection (>200), not as a gate
+- **#56**: Toxic_Matrix is safety training data — don't filter with toxicity wordlist, route to safety bucket
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-12 (DAPT v1.0 succeeded — first working Tamil model)*
+*Last updated: 2026-02-13 (Dataset Factory v4.1 — 3-stage pipeline for SFT data)*
