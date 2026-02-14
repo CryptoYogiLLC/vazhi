@@ -1,0 +1,28 @@
+{
+  "input_count": 596,
+  "removed": {
+    "too_short": 0,
+    "low_tamil": 0,
+    "duplicate": 1,
+    "tier_filtered": 33
+  },
+  "category_distribution": {
+    "philosophy": 35,
+    "daily_life": 201,
+    "festivals": 10,
+    "health_wellness": 163,
+    "culture": 54,
+    "family": 42,
+    "youth": 18,
+    "food_diet": 18,
+    "emotions": 12,
+    "inspiration": 9
+  },
+  "tier_breakdown": {
+    "tier1": 434,
+    "tier2": 93,
+    "tier3": 35
+  },
+  "output_count": 562,
+  "avg_word_count": 741
+}

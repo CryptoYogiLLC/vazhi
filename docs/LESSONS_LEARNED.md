@@ -1306,7 +1306,45 @@ SFT v4.0 used a monolithic Dataset Factory that retrieved, filtered, and compose
 - **#58**: Retrieve lean (2-3x of target), not broad — 520K retrieval for 10K target is wasteful. Can always do a targeted second pull if a specific bucket falls short
 - **#59**: Match data sources to product mission — VAZHI serves rural Tamil Nadu users (scam protection, govt benefits, health, culture). World knowledge Q&A (Commodore 64, economics) and math word problems don't serve these users
 
+### Lessons Learned from Phase 15 — Pipeline Execution on Colab Pro
+
+- **#60**: HDBSCAN is O(n²) and impractical for 35K+ high-dimensional samples — 22+ min on 35K × 768-dim embeddings with no progress. Use keyword-based domain classifier instead: instant, human-readable labels, directly supports selective domain emphasis in future SFT
+- **#61**: Source-aware filtering is essential — hand-curated product data (vazhi_packs, handcrafted) must bypass ALL automated quality filters (lang-id, tamil_pct, quality_score, PPL). These define the product voice and were manually vetted. Automated filters kill Tanglish content
+- **#62**: Checkpoint after expensive GPU steps — PPL scoring takes 15+ min on GPU. Save results to local JSON immediately after completion. Add a checkpoint resume cell at notebook start to skip Pass 1 + PPL on Colab restart
+- **#63**: Qwen3's 151K vocab needs VRAM-aware batch sizing — logits tensor = batch × seq × 151K × dtype_bytes. batch=64 × 512 × 151K × 2 = ~10GB → OOM on L4 (22GB). Use VRAM-based scaling: 8 (T4), 16 (L4), 32 (A100)
+- **#64**: Keyword domain classifier beats unsupervised clustering for known domains — when target domains are predefined (healthcare, legal, education, security, government, culture), keyword matching with 2-hit minimum is faster, more interpretable, and more actionable than HDBSCAN clusters
+- **#65**: Route safety samples by dataset subset name, not toxicity wordlist — a 12-phrase wordlist catches <3% of Toxic_Matrix/HHRLHF_T. Route ALL samples from these subsets to safety bucket by subset field. For a 0.6B model, safety data must be in main SFT (catastrophic forgetting risk with separate fine-tuning)
+
+### Lessons Learned from Phase 16 — SFT v4.1 Notebook Design
+
+- **#66**: Never rely on loss curves alone to validate training — SFT v4.0 had healthy loss (1.43→1.03) but all outputs were Tamil gibberish. Add mid-training generation checks (`MidTrainingGenCheck` callback) that generate actual Tamil responses at each eval step to catch garbage during training, not just at the end
+- **#67**: Eval must test conversational quality, NOT factual accuracy — the model is not a knowledge base. Factual lookups (capital of TN, Pongal dates, etc.) are handled by the hybrid architecture (SQLite). SFT eval should test: Tamil fluency, instruction-following, appropriate tone, safety (no hallucinated contacts), coherent responses. Automated Tamil% metrics gave 12/12 false positives in v4.0 — conversational quality checks (repetition, code garbage, empty responses, hallucinated contact info) catch what metrics miss
+- **#68**: LoRA r=16 on 7 modules is overparameterized for ~1K samples — too many trainable parameters causes overfitting to surface patterns (fluent-looking Tamil with no semantic content). Use r=8 on q_proj+v_proj for datasets under 15K samples
+- **#69**: max_seq_length must account for system prompt overhead — Tamil uses 3-4 tokens/char, and ChatML system prompts add ~200 tokens. max_seq_length=1024 rejected 74% of domain packs. Use 2048 for training window (controls context, not response length)
+
+### Lessons Learned from Phase 17 — SFT v4.1 Training + DAPT Failure Diagnosis
+
+- **#70**: DAPT on instruct model can destroy instruction-following — DAPT v1.1 (LR 5e-5, full epoch 55M tokens, LoRA r=16 on instruct model) completely overwrote chat behavior. Raw text next-token prediction shifted the model toward continuation, not instruction-following. Vanilla Qwen3-0.6B responds correctly to greetings and follows system prompts; DAPT model produces gibberish/echoes/repetitive loops on the same prompts
+- **#71**: Instruction-preserving DAPT requires constraints — if DAPT on instruct model is needed, use: (1) lower LR (1-2e-5 not 5e-5), (2) smaller token budget (5-15M not 55M), (3) 5-15% chat/instruction data replay mixed into the DAPT dataloader to keep the model "remembering" chat behavior
+- **#72**: "Healthy loss curves" + "passes automated metrics" does NOT mean success — SFT v4.1 had train loss 0.93→0.79 (healthy), eval loss stable at 0.86, AND 16/16 eval prompts "passed" automated checks (high Tamil %, zero repetition, no code garbage). But ALL outputs were semantic gibberish (Tamil word soup). The eval criteria need to test MEANING not just surface signals. This is now the second time (v4.0: 12/12, v4.1: 16/16) that automated eval gave false positives
+- **#73**: Always establish a no-DAPT baseline first — before investing in DAPT+SFT, run SFT directly on the vanilla instruct model to isolate whether the SFT pipeline works. If SFT-on-vanilla produces coherent output, DAPT was the variable. If it doesn't, the problem is in the SFT pipeline itself. This prevents wasting multiple runs diagnosing a DAPT problem when you think it's an SFT problem (or vice versa)
+- **#74**: Hub checkpoints need full training completion — SFT v4.1 interrupted at step 3068/3272 (94%), and only the step-1635 checkpoint (1 epoch) was on Hub. The final save at step 3272 never happened. Local checkpoints lost on Colab session restart. Always ensure training runs to completion, or save more frequently (save_steps = steps_per_epoch // 2)
+
+### Lessons Learned from Phase 18 — SFT v4.2 Training (Vanilla Baseline) + Eval Failure
+
+- **#75**: Tamil char % is a fundamentally broken eval metric — SFT v4.2 outputs are transliterated English gibberish in Tamil script (e.g., "ஜென்னுஸ் ரெஃப்ஸ் ஹோர்ட் பிளாஸ்ட்" = "Genus Refs Hort Blast"). This scores 75-88% Tamil chars and PASSES automated eval, but every word is nonsensical. Need Tamil WORD validation: dictionary-based lookup, Tamil bigram frequency analysis, or Tamil LM perplexity scoring on responses. Character-level metrics cannot distinguish real Tamil from transliterated foreign language
+- **#76**: SFT can catastrophically forget Tamil on small models — vanilla Qwen3-0.6B produces coherent short Tamil ("வணக்கம் 😊"), but after LoRA SFT (r=8, LR 5e-5, 2 epochs, 13K samples), ALL outputs are long incoherent gibberish. This is the SAME catastrophic forgetting pattern seen in DAPT but reversed: DAPT forgets instruction-following, SFT forgets Tamil. The 0.6B model may lack capacity to retain one capability while acquiring another
+- **#77**: Four consecutive false positive evals (v3.8 0/12, v4.0 12/12, v4.1 16/16, v4.2 16/16) prove that automated eval must be fixed BEFORE more training runs — each run takes 30-45 min of Colab Pro GPU time plus iteration time. Without reliable eval, every training run is a coin flip that wastes resources. Priority order: fix eval → inspect dataset → then retrain
+
+### Lessons Learned from Phase 19 — Dataset v5.0 Build (Two-Source Tamil Strategy)
+
+- **#78**: Two-source Tamil data strategy works — (1) Sadhguru Tamil articles restructured into Q&A by CC agents (97-98% Tamil, no translation needed), (2) domain packs regenerated with Tamil responses. This eliminates the 75.8% garbage English that plagued v4.1. Key insight: use existing high-quality Tamil text as source material for Q&A pairs rather than relying on LLM Tamil generation
+- **#79**: CC agents can't reliably bulk-generate Tamil for 300+ items — healthcare/security/culture packs succeeded (78-86% Tamil), but legal/education/govt all failed (3-8% Tamil). Agents either wrote Python scripts instead of Tamil content, or produced English despite explicit instructions. Template-based generation (hardcoded Tamil per category, matched by keyword patterns) is deterministic and reliable for domain packs
+- **#80**: Sadhguru's Tamil article corpus is a goldmine — 596 articles (3,419 total on site), covering health, daily life, culture, festivals, family. Articles are natural, high-quality Tamil prose. CC agents restructured 562 filtered articles into 615 Q&A pairs averaging 97-98% Tamil. The key is that the Tamil words come FROM the articles; the agent only restructures into Q&A format
+- **#81**: Thirukkural verbatim recitation is dangerous for SFT — of 426 Thirukkural items in v4.1, 258 were verbatim "recite this kural" items that could cause the model to parrot Kural-style responses for unrelated questions. Filtered to 168 Q&A-format items only (interpretive questions about Kural meaning/application)
+- **#82**: Dataset quality trumps quantity — v4.1 had 13K samples but 75.8% garbage; v5.0 has 5.7K samples but 82.7% Tamil avg. A small clean dataset is far more valuable than a large contaminated one for teaching Tamil to a 0.6B model
+
 ---
 
 *Document created: 2026-02-07*
-*Last updated: 2026-02-13 (Dataset Factory v4.1 — focused retrieval, source quality verification)*
+*Last updated: 2026-02-14 (Dataset v5.0 complete — two-source Tamil strategy, 5,688 samples on HuggingFace)*

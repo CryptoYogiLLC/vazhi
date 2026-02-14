@@ -27,7 +27,10 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | DAPT v1.0 | 2026-02-12 | ✅ Complete | Two-notebook pipeline: data prep (CPU) + DAPT training (GPU). Qwen3-0.6B-Base + 16M tokens Sangraha Tamil (375 steps). Val loss 1.045→1.016, eval 8/8 passed (66% Tamil, 97% unique). Model: `CryptoYogi/qwen3-0.6b-tamil` |
 | DAPT v1.1 | 2026-02-13 | ✅ Complete | Instruct model (not Base), 55M tokens NFKC-cleaned, dual T4 DataParallel. Train loss 1.427→0.964 (-32.5%), PPL 2.6. DAPT wins 7/8 vs vanilla (+55% char, +63% word). Model: `CryptoYogi/qwen3-0.6b-tamil-v1_1` |
 | SFT v4.0 | 2026-02-13 | ❌ Failed | DAPT v1.1 + SFT (1,365 train, LoRA r=16, 3 epochs, LR 2e-5). Train loss 1.43→1.03, eval loss 1.33→1.23. `<think>` suppression broken (transformers bug). Content is Tamil gibberish — wrong facts, hallucinated data. DAPT > SFT > Vanilla by Tamil%. Model: `CryptoYogi/vazhi-v4_0` |
-| Data v4.1 | 2026-02-13 | ✅ Complete | 3-stage pipeline: Retrieve ~34K (6 IndicAlign subsets + local, capped 2-3x) → Curate with ML (fasttext, dedup, PPL, SBERT) → Compose ~17.6K SFT. max_seq_length=2048. Dropped: tamil-orca (misaligned Q&A), GSM8K_TAMIL (irrelevant), OpenAssistant_T/Anudesh/Wiki_Chat (unverified/irrelevant). Datasets: `vazhi-raw-tamil-qa-v1`, `vazhi-curated-tamil-qa-v1`, `vazhi-tamil-sft-v4_1` |
+| SFT v4.1 | 2026-02-13 | ❌ Failed | DAPT v1.1 + SFT (13,083 train, LoRA r=8 q_proj+v_proj, LR 5e-5, 2 epochs). Train loss 0.93→0.79, eval loss 0.90→0.86. 16/16 eval "passed" but ALL outputs Tamil gibberish (false positive). Root cause: DAPT v1.1 destroyed instruction-following. Vanilla Qwen3-0.6B follows instructions; DAPT model produces gibberish/echoes/loops. Model: `CryptoYogi/vazhi-v4_1` |
+| SFT v4.2 | 2026-02-13 | ❌ Failed | Vanilla Qwen3-0.6B + SFT (13,083 train, LoRA r=8 q_proj+v_proj, LR 5e-5, 2 epochs). Train loss 1.29→0.86, eval loss 0.92, gap -0.003. 16/16 eval "passed" — 4th consecutive false positive. ALL outputs transliterated English gibberish in Tamil script (e.g., "ஜென்னுஸ் ரெஃப்ஸ் ஹோர்ட் பிளாஸ்ட்" = "Genus Refs Hort Blast"). SFT catastrophically forgot Tamil. Model: `CryptoYogi/vazhi-v4_2` |
+| Data v4.1.3 | 2026-02-13 | ✅ Complete | 3-stage pipeline: Retrieve 37,947 (6 IndicAlign subsets + local) → Curate 35,047 (fasttext, dedup, PPL, keyword domain classifier) → Compose 14,535 SFT (13,083 train / 1,452 eval). v4.1.3 fixed safety routing (subset name, not wordlist: 105→2,000) and vazhi_packs bypass (2,429→2,956). max_seq_length=2048. Colab Pro L4 GPU. Notebooks: `v4_1.ipynb` (Stage 1 CPU), `v4_1_2.ipynb` (Stage 2+3 GPU), `v4_1_3.ipynb` (Stage 3 re-compose fix). Datasets: `vazhi-raw-tamil-qa-v1`, `vazhi-curated-tamil-qa-v1`, `vazhi-tamil-sft-v4_1` |
+| Data v5.0 | 2026-02-14 | ✅ Complete | Full dataset rebuild — two-source Tamil data strategy. (1) Scraped 596 Sadhguru Tamil articles from isha.sadhguru.org/ta/, filtered to 562, CC agents restructured into 848 Tamil Q&A pairs (85.2% Tamil avg). (2) Regenerated all 6 vazhi-packs with Tamil responses: healthcare/security/culture via CC agents, legal/education/govt via template-based generator. (3) Extracted safety (1,800), thirukkural Q&A (168, no verbatim), handcrafted (120), general (24) from v4.1 HF dataset. Final: 5,921 samples (5,328 train / 593 eval), 85.2% Tamil avg, 41 words avg. Dataset: `CryptoYogi/vazhi-tamil-sft-v5_0` |
 
 ---
 
@@ -46,16 +49,33 @@ SFT v4.0 failed (gibberish) due to:
 - **max_seq_length=2048**: Controls training window, not response length. Stops rejection cascade
 - **3-stage pipeline** (Retrieve→Curate→Compose): Each stage uploads to HF for checkpointing
 - **Focused retrieval**: ~34K raw from IndicAlign (6 verified subsets, capped 2-3x) + local sources (vazhi-packs, handcrafted, general). Dropped tamil-orca (misaligned Q&A), GSM8K_TAMIL (irrelevant math), OpenAssistant_T (world knowledge not relevant to VAZHI users), Anudesh/Wiki_Chat (unverified Tamil data in API)
-- **ML curation**: fasttext lang-id, MinHash dedup, perplexity (DAPT v1.1), IndicSBERT + HDBSCAN
+- **ML curation**: fasttext lang-id, heuristics (repetition, echo, format sanity), exact dedup, perplexity scoring (DAPT v1.1 model), keyword-based domain classification (6 VAZHI domains + safety + general)
 - **Absolute count targets**: No percentage anchoring — prevents cascading downsampling
-- **Safety routing**: Toxic_Matrix/HHRLHF_T refusal pairs → safety bucket (not filtered)
+- **Safety routing**: ALL Toxic_Matrix/HHRLHF_T samples → safety bucket by subset name (not narrow toxicity wordlist)
+- **Source-aware filtering**: vazhi_packs/handcrafted bypass quality_score, PPL, and tamil_pct filters (hand-curated product voice)
+- **HDBSCAN replaced**: O(n²) on 35K × 768-dim was impractical (22+ min). Replaced with instant keyword-based domain classifier
+
+### Actual Pipeline Results
+
+| Stage | Output | Samples |
+|-------|--------|---------|
+| Stage 1 (Retrieve) | `vazhi-raw-tamil-qa-v1` | 37,947 |
+| Stage 2 (Curate) | `vazhi-curated-tamil-qa-v1` | 35,047 |
+| Stage 3 (Compose v4.1.2) | `vazhi-tamil-sft-v4_1` | 15,165 (13,650 / 1,515) |
+| Stage 3 (Re-compose v4.1.3) | `vazhi-tamil-sft-v4_1` | 14,535 (13,083 / 1,452) |
+
+**v4.1.3 bucket distribution:** indicalign 61.5%, vazhi_packs 20.3%, safety 13.8%, general 3.4%, handcrafted 0.9%
+
+**v4.1.3 fixes:** safety 105→2,000 (route by subset name), vazhi_packs 2,429→2,956 (bypass quality/PPL filters). indicalign dropped to 8,946 (below 10K min) because Toxic_Matrix/HHRLHF_T samples correctly moved to safety bucket
+
+**Runtime:** ~45 min on Colab Pro L4 GPU (22GB VRAM)
 
 ### Artifacts
 
 - Raw dataset: `CryptoYogi/vazhi-raw-tamil-qa-v1`
 - Curated dataset: `CryptoYogi/vazhi-curated-tamil-qa-v1`
 - Final SFT dataset: `CryptoYogi/vazhi-tamil-sft-v4_1`
-- Notebook: `notebooks/Vazhi_Dataset_Factory_v4_1.ipynb`
+- Notebooks: `Vazhi_Dataset_Factory_v4_1.ipynb` (Stage 1), `v4_1_2.ipynb` (Stage 2+3), `v4_1_3.ipynb` (Stage 3 re-compose fix)
 
 ---
 
@@ -1866,6 +1886,192 @@ See "Mistakes to Avoid" #33-35 (added from this run).
 
 ---
 
+## SFT v4.1 Training Run (FAILED — DAPT Destroyed Instruction-Following)
+
+**Date:** 2026-02-13
+**Status:** ❌ Failed
+**Base Model:** `CryptoYogi/qwen3-0.6b-tamil-v1_1` (DAPT v1.1 Tamil instruct model)
+**Training Platform:** Colab Pro L4 (22GB VRAM)
+**Dataset:** `CryptoYogi/vazhi-tamil-sft-v4_1` (14,535 samples: 13,083 train / 1,452 eval)
+**Output Model:** `CryptoYogi/vazhi-v4_1` (merged fp16)
+**Adapter:** `CryptoYogi/vazhi-v4_1-lora`
+**Notebook:** `notebooks/Vazhi_SFT_v4_1_OnDAPT.ipynb`
+
+### What Changed from v4.0
+
+| Parameter | v4.0 (FAILED) | v4.1 |
+|-----------|---------------|------|
+| Train samples | 1,365 | **13,083** (10x) |
+| LoRA r | 16 | **8** |
+| Target modules | 7 (all proj) | **2 (q_proj, v_proj)** |
+| Epochs | 3 | **2** |
+| LR | 2e-5 | **5e-5** |
+| max_seq_length | 1024 | **2048** |
+| GPU | Kaggle T4 x2 | **Colab Pro L4** |
+| Dtype | fp16 | **bf16 (auto-detected)** |
+| Think suppression | suppress_tokens kwarg (broken) | **Custom LogitsProcessor** |
+| Eval | Tamil % only (false positives) | **Conversational quality (fluency, intent, no hallucinations)** |
+| Hub checkpoint | No | **Yes (every save_steps)** |
+| Mid-training checks | No | **Yes (gen check at each eval step)** |
+
+### Training Config
+
+```python
+DAPT_MODEL = "CryptoYogi/qwen3-0.6b-tamil-v1_1"
+SFT_DATASET = "CryptoYogi/vazhi-tamil-sft-v4_1"
+LORA_R = 8, LORA_ALPHA = 16
+TARGET_MODULES = ["q_proj", "v_proj"]
+LR = 5e-5, EPOCHS = 2, BATCH = 4 × 1 GPU × 2 grad_accum = 8 effective
+MAX_SEQ_LENGTH = 2048
+```
+
+### Key Improvements Over v4.0
+
+1. **10x more training data** — 13,083 vs 1,365 samples, from 3-stage Dataset Factory v4.1.3
+2. **Conservative LoRA** — r=8 on q_proj+v_proj only (was r=16 on 7 modules). Prevents overparameterization
+3. **2 epochs** — Reduced from 3 to prevent memorization
+4. **max_seq_length=2048** — v4.0's 1024 rejected 74% of domain packs due to system prompt overhead
+5. **Mid-training generation checks** — `MidTrainingGenCheck` callback generates actual Tamil responses at each eval step. Tests greeting, factual (capital of TN → must contain சென்னை), and math (2+2 → must contain 4). Catches gibberish during training, not after
+6. **Conversational quality eval** — 16 prompts testing Tamil fluency, instruction-following, appropriate tone, safety (no hallucinated contacts), and identity recognition. NOT factual recall (handled by hybrid SQLite layer). Pass: overall >= 60%, avg Tamil > 30%, avg repeat < 0.15, no hallucinated contact info
+7. **Hub checkpointing** — `push_to_hub=True, hub_strategy="every_save"` for Colab disconnect protection
+8. **Custom LogitsProcessor** — `SuppressThinkTokens` class suppresses `<think>` token IDs (151667, 151668) instead of broken `suppress_tokens` kwarg
+
+### Expected Metrics
+
+| Metric | v4.0 (overfit) | v4.1 (expected) |
+|--------|----------------|-----------------|
+| Starting loss | 1.43 | ~1.3-1.5 |
+| Final loss | 1.03 | ~1.1-1.3 (higher = healthier) |
+| Eval loss | 1.23 | ~1.2-1.4 |
+| Train/eval gap | 0.20 | <0.15 |
+| Steps | ~255 | ~3,270 |
+| Runtime | <1 hour | ~30-45 min on L4 |
+
+### Abort Conditions
+
+| Condition | When | Action |
+|-----------|------|--------|
+| DAPT PPL > vanilla | Pre-SFT | Hard abort — DAPT damaged |
+| Loss not decreasing after 200 steps | Training | Stop, check config |
+| Loss < 0.5 | Training | Stop, overfitting |
+| Eval loss increase > 0.2 | Post-training | Possible overfit |
+| VRAM > 90% | Preflight | Reduce batch to 2 |
+| Conv quality < 60% | Eval | SFT failed |
+| Safety hallucinations | Eval | Needs more safety refusal data |
+| Mid-training gen check all garbage | Training | Stop early, investigate |
+
+### Actual Training Results
+
+- **Train loss:** 0.93 → 0.79 (15% drop)
+- **Eval loss:** 0.90 → 0.86 (stable, gap < 0.15)
+- **Steps completed:** 3068/3272 (94% — session restart lost remaining steps)
+- **Hub checkpoint:** Only step 1635 saved (1 epoch). Merged model from 1-epoch checkpoint
+- **Mid-training gen checks:** ALL GARBAGE at all checkpoints (steps 817, 1634, 2451)
+- **Eval:** 16/16 "passed" — **FALSE POSITIVE**. All responses were Tamil word soup that passed automated metrics (high Tamil %, zero repetition) but had zero semantic meaning
+
+### Root Cause Analysis
+
+**DAPT v1.1 destroyed instruction-following capability.** Diagnostic comparison:
+
+| Prompt | Vanilla Qwen3-0.6B | DAPT v1.1 |
+|--------|---------------------|-----------|
+| வணக்கம் | Correct Tamil greeting | Gibberish/echo |
+| நன்றி | Appropriate acknowledgment | Repetitive loops |
+| காலையில் என்ன சாப்பிடலாம்? | "தெரியவில்லை" (per system prompt) | Tamil word soup |
+
+**Why DAPT damaged the model (per GPT5.2 analysis):**
+- LR 5e-5 too aggressive for DAPT on instruct model
+- Full epoch over 55M tokens too much raw text continuation
+- LoRA r=16 amplified the shift
+- Raw text next-token prediction overwrote chat/instruction behaviors
+
+**Fix (for future DAPT):** Instruction-preserving DAPT — lower LR (1-2e-5), smaller token budget (5-15M), and 5-15% chat data replay during DAPT.
+
+### Decision
+
+Skip DAPT. Proceed with SFT v4.2 on vanilla Qwen3-0.6B instruct (instruction-following intact).
+If v4.2 works but Tamil is weak → instruction-preserving DAPT, then re-SFT.
+
+---
+
+## SFT v4.2 Training Run (FAILED — SFT Catastrophically Forgot Tamil)
+
+**Date:** 2026-02-13
+**Status:** ❌ Failed — 4th consecutive false positive eval
+**Base Model:** `Qwen/Qwen3-0.6B` (vanilla instruct — DAPT skipped)
+**Training Platform:** Colab Pro L4 (22GB VRAM)
+**Dataset:** `CryptoYogi/vazhi-tamil-sft-v4_1` (14,535 samples: 13,083 train / 1,452 eval)
+**Output Model:** `CryptoYogi/vazhi-v4_2` (merged fp16)
+**Adapter:** `CryptoYogi/vazhi-v4_2-lora`
+**Notebook:** `notebooks/Vazhi_SFT_v4_2_OnVanilla.ipynb`
+
+### Training Config
+
+```python
+BASE_MODEL = "Qwen/Qwen3-0.6B"  # vanilla instruct (not DAPT)
+SFT_DATASET = "CryptoYogi/vazhi-tamil-sft-v4_1"
+LORA_R = 8, LORA_ALPHA = 16
+TARGET_MODULES = ["q_proj", "v_proj"]
+LR = 5e-5, EPOCHS = 2, BATCH = 4 × 1 GPU × 2 grad_accum = 8 effective
+MAX_SEQ_LENGTH = 2048
+```
+
+### Training Results
+
+| Metric | Value |
+|--------|-------|
+| Train loss | 1.2931 → 0.8552 (33.9% drop) |
+| Eval loss | 0.9812 → 0.9151 |
+| Final gap | -0.003 (zero overfitting) |
+| Steps | 3,270 |
+| Runtime | ~45 min on L4 |
+
+Mid-training gen checks:
+- Step 817: 1/3 garbage (greeting repetitive loop)
+- Step 1634: 3/3 "OK" (but actually meaningless Tamil rambling)
+- Step 2451: 1/3 garbage (help prompt echo loop)
+- Step 3268: 3/3 "OK" (same meaningless rambling)
+
+### The Failure: Transliterated English Gibberish
+
+**Pre-SFT vanilla model:** Short, coherent Tamil — "வணக்கம் 😊", "நன்றி! 😊"
+**After SFT:** Long transliterated English gibberish in Tamil script:
+
+- "ஜென்னுஸ் ரெஃப்ஸ் ஹோர்ட் பிளாஸ்ட்" = "Genus Refs Hort Blast"
+- "ஜோர்க்ஸ் ஓப்பூர், ஃபெஸ்ட்ரோனியந் திரோப்ளீஸ்" = "George Opur, Festroniyen Throplees"
+- "ஐப்ளேன்ஷாஃப்ட்" = "Iplaneshaft"
+- "ஸ்ரஸ்ஷோச் ஃபேஜ்" = "Srasshoch Phase"
+
+Tamil char % scores 75-88% (PASSES eval) because Tamil script characters are used, but the WORDS are nonsensical transliterated English.
+
+### Root Cause Analysis
+
+The third possible outcome from our diagnostic was confirmed: **SFT pipeline itself degrades the model**.
+
+| Observation | Implication |
+|-------------|------------|
+| Vanilla produces coherent short Tamil | Model HAS Tamil capability |
+| SFT destroys it → transliterated English gibberish | SFT is overwriting Tamil with garbage patterns |
+| v4.1 (DAPT base) → Tamil word soup gibberish | Different base, different gibberish flavor |
+| v4.2 (vanilla base) → transliterated English gibberish | Different base, different gibberish flavor |
+| Both have healthy loss curves and zero overfitting | Loss metrics cannot detect semantic quality collapse |
+| 4 consecutive 16/16 false positive evals | Tamil char % eval is fundamentally broken |
+
+**This is the SAME catastrophic forgetting pattern in both directions:**
+- DAPT: learning Tamil → forgets instruction-following
+- SFT: learning instructions → forgets Tamil
+
+The 0.6B model may lack capacity to retain one capability while acquiring another through LoRA fine-tuning.
+
+### Candidate Root Causes (to investigate)
+
+1. **LR 5e-5 too aggressive** — same LR that destroyed instruction-following in DAPT v1.1. May need 1e-5 or 2e-5 for 0.6B
+2. **Dataset contamination** — SFT dataset may contain transliterated English that model learned to reproduce
+3. **0.6B model too small** — Tamil needs 3-4 tokens/char; effective model capacity for Tamil may be insufficient for conversational SFT
+4. **LoRA merge corruption** — mid-training (adapter active) produces different output than merged model. Need to test adapter directly
+
+---
+
 ## Architectural Decisions
 
 ### ADR-001: Why Not RAG?
@@ -2094,7 +2300,9 @@ Implement a hybrid architecture with two paths:
 ## References
 
 ### Training Notebooks
-- Dataset Factory v4.1 (3-stage pipeline, LATEST): `/notebooks/Vazhi_Dataset_Factory_v4_1.ipynb`
+- Dataset Factory v4.1 Stage 1 Retrieve (CPU, LATEST): `/notebooks/Vazhi_Dataset_Factory_v4_1.ipynb`
+- Dataset Factory v4.1 Stage 2+3 Curate+Compose (GPU, LATEST): `/notebooks/Vazhi_Dataset_Factory_v4_1_2.ipynb`
+- Dataset Factory v4.1 Stage 3 Re-compose Fix (CPU): `/notebooks/Vazhi_Dataset_Factory_v4_1_3.ipynb`
 - SFT v4.0 training (GPU, FAILED): `/notebooks/Vazhi_SFT_v4_0_OnDAPT.ipynb`
 - SFT v4.0 eval (standalone): `/notebooks/Vazhi_Eval_v4_0.ipynb`
 - DAPT v1.1 data prep (CPU): `/notebooks/Vazhi_DAPT_Data_v1_1.ipynb`

@@ -30,9 +30,14 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - 19 code review issues identified and closed (#22-40)
 
 **What's blocking:**
-- AI model training — 13 failed SFT attempts across 5 base models, **DAPT v1.0 + v1.1 both succeeded**
-- DAPT v1.1 complete: `CryptoYogi/qwen3-0.6b-tamil-v1_1` — Tamil instruct model (55M tokens, PPL 2.6, +55% Tamil vs vanilla)
-- Next step: SFT v4.1 on DAPT'd instruct model — 3-stage pipeline (retrieve ~34K from verified sources, curate with ML, compose ~17.6K) with max_seq_length=2048
+- AI model training — 16 failed SFT attempts across 5 base models, **4th consecutive false positive eval**
+- SFT v4.2 on vanilla Qwen3-0.6B: training healthy (loss 1.29→0.86, eval 0.92, gap -0.003) but **ALL outputs are transliterated English gibberish in Tamil script** (e.g., "ஜென்னுஸ் ரெஃப்ஸ் ஹோர்ட் பிளாஸ்ட்" = "Genus Refs Hort Blast"). 16/16 eval "passed" — Tamil char % metric is fundamentally broken
+- Pattern: vanilla model produces short coherent Tamil → SFT destroys it → long gibberish. Same catastrophic forgetting as DAPT but reversed (DAPT forgets instructions, SFT forgets Tamil)
+- Root cause candidates: (1) LR 5e-5 too aggressive for 0.6B SFT, (2) SFT dataset contains transliterated English, (3) 0.6B model too small for Tamil conversational SFT
+- **Next steps:** SFT v5.0 training with clean dataset → fix eval (Tamil WORD validation, not char %) → conservative LoRA (r=8, q_proj+v_proj, LR 1e-5, 1 epoch)
+- **Dataset v5.0 complete**: Two-source Tamil data strategy — 5,921 samples (85.2% Tamil avg, 41 words avg) on `CryptoYogi/vazhi-tamil-sft-v5_0`. Sources: Sadhguru Tamil Q&A (848), vazhi-packs v5 (2,961), IndicAlign safety (1,800), Thirukkural Q&A (168), handcrafted (120), general (24)
+- Dataset Factory v4.1.3 (superseded): 3-stage pipeline → 14,535 SFT on `CryptoYogi/vazhi-tamil-sft-v4_1` — 75.8% garbage English
+- **Fallback:** Sarvam-1 IQ3_M (1.17GB, proven Tamil, exceeds <1GB hard limit)
 
 **What's done (app distribution):**
 - Google Play: App icon (peacock logo), display name ("VAZHI - வழி"), application ID (`com.cryptoyogillc.vazhi`), AAB uploaded — awaiting developer account verification (needs Android phone) before internal testing can go live
@@ -63,17 +68,20 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 | DAPT v1.0 | Qwen3-0.6B-Base | Superseded | DAPT 16M tokens Sangraha, 375 steps. Comparison showed -2% vs vanilla Base — DAPT didn't help |
 | DAPT v1.1 | Qwen3-0.6B (instruct) | **Success** | DAPT 55M tokens NFKC Sangraha, 1645 steps, PPL 2.6, 7/8 eval, +55% Tamil vs vanilla. Model: `CryptoYogi/qwen3-0.6b-tamil-v1_1` |
 | SFT v4.0 | DAPT v1.1 + LoRA | Failed | Training healthy (loss 1.43→1.03) but content is Tamil gibberish. LoRA r=16 on 7 modules overfit 1,365 samples. DAPT > SFT > Vanilla. Model: `CryptoYogi/vazhi-v4_0` |
+| SFT v4.1 | DAPT v1.1 + LoRA | Failed | Training healthy (loss 0.93→0.79, eval 0.90→0.86) but ALL outputs Tamil gibberish. Root cause: DAPT v1.1 destroyed instruction-following. 16/16 eval "passed" (false positive — metric-only). Model: `CryptoYogi/vazhi-v4_1` |
+| SFT v4.2 | Vanilla Qwen3-0.6B + LoRA | Failed | Training healthy (loss 1.29→0.86, eval 0.92, gap -0.003) but ALL outputs transliterated English gibberish in Tamil script. SFT catastrophically forgot Tamil. 16/16 eval false positive (4th consecutive). Model: `CryptoYogi/vazhi-v4_2` |
+| Data v5.0 | Dataset rebuild | **Complete** | Two-source Tamil strategy: (1) 848 Sadhguru Tamil Q&A (restructured from 562 scraped articles, 97-98% Tamil), (2) 2,961 vazhi-packs v5 (all 6 domains regenerated in Tamil), (3) 1,800 IndicAlign safety, (4) 168 Thirukkural Q&A (no verbatim), (5) 120 handcrafted, (6) 24 general. Total: 5,921 (85.2% Tamil avg, 41 words avg). Dataset: `CryptoYogi/vazhi-tamil-sft-v5_0` |
 
-**Current strategy (DAPT-first):**
-- **Step 1:** Data prep — filter Sangraha Tamil corpus, NFKC normalize, pack into 55M tokens (`Vazhi_DAPT_Data_v1_1.ipynb`, CPU) ✅ DONE
-- **Step 2:** DAPT — train Qwen3-0.6B (instruct) on 55M tokens → `CryptoYogi/qwen3-0.6b-tamil-v1_1` (`Vazhi_DAPT_v1_1_Tamil.ipynb`, GPU) ✅ DONE
-- **Step 2.5:** Dataset Factory v4.1 — 3-stage pipeline (Retrieve→Curate→Compose), ~17.6K SFT samples from ~34K raw (`Vazhi_Dataset_Factory_v4_1.ipynb`, GPU)
-- **Step 3:** SFT — fine-tune DAPT'd instruct model on v4.1 dataset with max_seq_length=2048, conservative LoRA (r=8, q_proj+v_proj, 2 epochs)
+**Current strategy (clean dataset ready, train next):**
+- **Step 1 (DONE):** Dataset v5.0 — rebuilt from scratch with two-source Tamil strategy (Sadhguru articles + Tamil packs)
+- **Step 2:** Fix eval — replace Tamil char % with Tamil WORD validation (dictionary-based or perplexity-based)
+- **Step 3:** SFT v5.0 training — conservative LoRA (r=8, q_proj+v_proj, LR 1e-5, 1 epoch) on vanilla Qwen3-0.6B
+- **Step 4:** Test adapter vs merged model — verify LoRA merge doesn't corrupt
 - **Fallback:** Sarvam-1 IQ3_M (1.17GB, proven Tamil, exceeds <1GB hard limit)
 
 **Data source for SQLite population:** Open data scraping from Tamil Nadu government websites and Tamil databases.
 
-## Key Rules (From 59 Lessons Learned)
+## Key Rules (From 77 Lessons Learned)
 
 ### Data Rules
 - **NEVER trust data labels** — verify with character-level Tamil % analysis
@@ -91,7 +99,9 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Iterate on what works** — fix specific issues (token suppression, LR) rather than pivoting to untested approaches
 - **Strict ChatML validation** (regex) before training — reject samples missing user/assistant segments
 - **Eval must check output QUALITY** — Tamil char %, coherence, not just pattern absence. Automated metrics can false-positive (SFT v4.0: 12/12 "passed" but all gibberish)
-- **Eval needs factual accuracy checks** — e.g., "Capital of TN" must contain "Chennai/சென்னை". Metric-only eval misses semantic gibberish
+- **Eval needs conversational quality checks** — test Tamil fluency, instruction-following, appropriate tone, no hallucinated contacts. NOT factual recall (handled by hybrid SQLite layer). Metric-only eval (Tamil %) misses semantic gibberish
+- **Tamil char % is fundamentally broken as eval** — transliterated English in Tamil script ("ஜென்னுஸ் ரெஃப்ஸ்") scores 75-88% Tamil chars but is complete gibberish. Need Tamil WORD validation: dictionary lookup, bigram frequency, or Tamil LM perplexity scoring
+- **SFT can catastrophically forget Tamil on small models** — vanilla Qwen3-0.6B produces coherent short Tamil, but LR 5e-5 LoRA SFT (r=8, 2 epochs, 13K samples) destroyed it. Same forgetting pattern as DAPT destroying instruction-following. 0.6B may lack capacity to retain one capability while learning another
 - **NEVER merge LoRA into 4-bit model** — save adapter → reload base in fp16 → merge in fp16. 4-bit is for training memory only
 - **Clear `generation_config.suppress_tokens` before generating** — models saved with suppress_tokens cause transformers to inject buggy built-in SuppressTokensLogitsProcessor (CPU/CUDA device mismatch). Always clear and use custom logits processor
 - **LoRA r=16 on 7 modules is too aggressive for ~1K samples** — overparameterized, overfits to surface patterns. Use r=8 targeting q_proj+v_proj for small datasets
@@ -108,10 +118,14 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **IndicAlign diversity >= 30%** of SFT dataset — prevents memorization and improves generalization
 - **Thirukkural hard-capped at <= 15%** — verbatim Q&As rejected, only interpretive Q&As allowed
 - **Composition targets are hard constraints** — Dataset Factory fails if violated, not aspirational
-- **Dataset Factory notebook** (`notebooks/Vazhi_Dataset_Factory_v4_1.ipynb`) constructs curated datasets on Kaggle (v4.0 superseded)
+- **Dataset Factory notebooks** (`notebooks/Vazhi_Dataset_Factory_v4_1*.ipynb`) construct curated datasets on Colab Pro (v4.0 superseded)
 - **Legacy scripts raise RuntimeError** — `create_diverse_qa_pack.py` and `create_balanced_sft_dataset.py` are superseded
 - **Validate tokenized length, not just character length** — Tamil uses 3-4 tokens/char, so 1500-char samples can exceed `max_seq_length` after tokenization. Dataset Factory must check `len(tokenizer.encode(text))` against training `max_seq_length`
-- **3-stage data pipeline** (v4.1+): Retrieve from verified sources with 2-3x caps (6 IndicAlign subsets + local, ~34K) → Curate with ML (fasttext lang-id, heuristics, dedup, perplexity, semantic clustering) → Compose with absolute count targets (~17.6K). Each stage uploads to HF for checkpointing
+- **3-stage data pipeline** (v4.1+): Retrieve from verified sources (6 IndicAlign subsets + local, 37,947 raw) → Curate with ML (fasttext lang-id, heuristics, exact dedup, perplexity, keyword domain classification → 35,047 curated) → Compose with absolute count targets (14,535 SFT). Each stage uploads to HF for checkpointing
+- **Source-aware filtering** — vazhi_packs/handcrafted bypass quality_score, PPL, and tamil_pct filters (hand-curated product voice data)
+- **Route safety by subset name** — Toxic_Matrix/HHRLHF_T → safety bucket by subset field, not by narrow toxicity wordlist
+- **Checkpoint after expensive GPU steps** — save PPL scores to local JSON before continuing; enables resume on Colab disconnect
+- **Qwen3 151K vocab needs VRAM-aware batch sizing** — batch × seq × 151K × dtype = massive logits tensor; use VRAM-based PPL_BATCH_SIZE (8/16/32)
 - **max_seq_length=2048 for SFT** — controls training window, not response length. Using 1024 caused 74% domain pack rejection due to system prompt overhead
 - **Store raw and curated datasets separately on HF** — enables flexible reuse without re-running expensive retrieval/curation
 - **Two-pass curation** — cheap CPU filters first (lang-id, heuristics, dedup), GPU scoring on candidates only
@@ -119,6 +133,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Toxic_Matrix is safety training data** — toxic prompt + safe refusal = route to safety bucket, don't filter
 
 ### DAPT Rules
+- **DAPT on instruct model needs instruction-preservation** — v1.1 (LR 5e-5, full epoch 55M tokens, LoRA r=16) destroyed instruction-following. Raw text next-token prediction overwrites chat behavior on small models. Fix: lower LR (1-2e-5), smaller token budget (5-15M), and 5-15% chat data replay during DAPT
 - **Use Instruct model for DAPT** — v1.0 used Base (per GPT5.2), showed -2% vs vanilla. v1.1 used Instruct, showed +55%. Instruct model has existing multilingual capability; DAPT deepens it
 - **NFKC normalize all corpus text** — prevents \ufffd corruption and zero-width char issues
 - **Tamil threshold >= 70%** — v1.0 used 50% and got noisy mixed-language docs; 70% is cleaner
@@ -164,11 +179,15 @@ vazhi/
 ├── notebooks/                    # Kaggle/Colab training notebooks
 │   ├── Vazhi_DAPT_Data_v1_1.ipynb   # DAPT v1.1 data prep (CPU) — NFKC, 70% Tamil, 55M tokens
 │   ├── Vazhi_DAPT_v1_1_Tamil.ipynb  # DAPT v1.1 training (GPU) — complete, instruct model
+│   ├── Vazhi_SFT_v4_2_OnVanilla.ipynb # SFT v4.2 on vanilla Qwen3-0.6B — skip DAPT, baseline test
+│   ├── Vazhi_SFT_v4_1_OnDAPT.ipynb # SFT v4.1 on DAPT v1.1 — FAILED (DAPT destroyed instruction-following)
 │   ├── Vazhi_SFT_v4_0_OnDAPT.ipynb # SFT v4.0 on DAPT v1.1 — FAILED (gibberish)
 │   ├── Vazhi_Eval_v4_0.ipynb        # Standalone eval with think suppression fix
 │   ├── Vazhi_DAPT_Data_v1_0.ipynb   # DAPT v1.0 data prep (CPU) — superseded
 │   ├── Vazhi_DAPT_v1_0_Tamil.ipynb  # DAPT v1.0 training (GPU) — superseded
-│   ├── Vazhi_Dataset_Factory_v4_1.ipynb # 3-stage SFT dataset pipeline (Retrieve→Curate→Compose)
+│   ├── Vazhi_Dataset_Factory_v4_1.ipynb   # Stage 1: Retrieve (CPU) — 37,947 raw Tamil Q&A
+│   ├── Vazhi_Dataset_Factory_v4_1_2.ipynb # Stage 2+3: Curate (GPU) + Compose (CPU) — 35,047 curated → 15,165 SFT
+│   ├── Vazhi_Dataset_Factory_v4_1_3.ipynb # Stage 3 re-compose fix (CPU) — safety routing + vazhi_packs bypass
 │   ├── Vazhi_Dataset_Factory_v4_0.ipynb # SFT dataset construction (ADR-010) — superseded by v4.1
 │   ├── Vazhi_SFT_v3_7_MergeFix.ipynb # Superseded — fp16 merge fix
 │   ├── Vazhi_SFT_v3_6_Instruct.ipynb # FAILED — LoRA merge corruption
@@ -182,7 +201,7 @@ vazhi/
 ├── huggingface-space/            # Gradio test API (submodule)
 └── docs/
     ├── SPRINT_PLAN_REVISED.md    # Roadmap and phase tracking
-    ├── LESSONS_LEARNED.md        # 59 lessons from training journey
+    ├── LESSONS_LEARNED.md        # 77 lessons from training journey
     ├── CODE_REVIEW_CONSENSUS_REPORT.md
     ├── DATA_REGENERATION_PLAN.md # Historical — v0.2 data crisis
     └── adr/                      # 10 Architecture Decision Records
@@ -195,7 +214,7 @@ vazhi/
 3. **`docs/adr/010-data-pipeline-architecture.md`** — data pipeline design, composition targets, anti-memorization rules
 4. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
 5. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
-6. **`docs/LESSONS_LEARNED.md`** — 56 hard-won lessons, ideal training pipeline
+6. **`docs/LESSONS_LEARNED.md`** — 77 hard-won lessons, ideal training pipeline
 7. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
 
 ## Development Commands
@@ -225,9 +244,12 @@ gh workflow run ci.yml            # Trigger GitHub Actions
 
 ## HuggingFace Resources
 
-- Raw Tamil Q&A v1: `CryptoYogi/vazhi-raw-tamil-qa-v1` (~34K raw pairs from 6 IndicAlign subsets + local)
-- Curated Tamil Q&A v1: `CryptoYogi/vazhi-curated-tamil-qa-v1` (ML-curated with quality scores)
-- SFT dataset v4.1: `CryptoYogi/vazhi-tamil-sft-v4_1` (~17.6K samples, 3-stage pipeline)
+- Raw Tamil Q&A v1: `CryptoYogi/vazhi-raw-tamil-qa-v1` (37,947 raw pairs from 6 IndicAlign subsets + local)
+- Curated Tamil Q&A v1: `CryptoYogi/vazhi-curated-tamil-qa-v1` (35,047 ML-curated with quality scores, PPL, domain labels)
+- **SFT dataset v5.0: `CryptoYogi/vazhi-tamil-sft-v5_0`** (5,921 samples: 5,328 train / 593 eval, two-source Tamil strategy — Sadhguru Q&A + vazhi-packs v5 + safety + thirukkural Q&A + handcrafted + general)
+- SFT dataset v4.1 (superseded): `CryptoYogi/vazhi-tamil-sft-v4_1` (14,535 samples: 13,083 train / 1,452 eval, 3-stage pipeline v4.1.3 — 75.8% garbage)
+- SFT v4.2 model (FAILED): `CryptoYogi/vazhi-v4_2` (transliterated English gibberish — SFT forgot Tamil)
+- SFT v4.2 adapter: `CryptoYogi/vazhi-v4_2-lora`
 - SFT v4.0 model (FAILED): `CryptoYogi/vazhi-v4_0` (gibberish output — LoRA overfit)
 - SFT v4.0 adapter: `CryptoYogi/vazhi-v4_0-lora`
 - Curated SFT dataset v4.0 (superseded): `CryptoYogi/vazhi-tamil-sft-v4_0` (1,514 samples: 1,365 train / 149 eval)
