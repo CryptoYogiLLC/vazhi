@@ -4,6 +4,7 @@
 /// falls back to AI when needed.
 library;
 
+import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/message.dart';
 import '../models/query_result.dart';
@@ -109,6 +110,28 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     this._ref,
   ) : super([]);
 
+  /// Wait for model to become ready if it's currently loading.
+  /// Returns true if AI became available, false if timed out or not loading.
+  Future<bool> _waitForModelIfLoading() async {
+    final status = _ref.read(modelManagerProvider);
+    if (status == ModelStatus.ready) return true;
+    if (status != ModelStatus.loading && status != ModelStatus.downloaded) {
+      return false;
+    }
+
+    // Model is loading — poll until ready (max 30s)
+    for (var i = 0; i < 60; i++) {
+      await Future.delayed(const Duration(milliseconds: 500));
+      final current = _ref.read(modelManagerProvider);
+      if (current == ModelStatus.ready) return true;
+      if (current == ModelStatus.error ||
+          current == ModelStatus.notDownloaded) {
+        return false;
+      }
+    }
+    return false;
+  }
+
   /// Map KnowledgeCategory to pack ID for auto-switching the pack selector
   static String _categoryToPackId(KnowledgeCategory category) {
     switch (category) {
@@ -149,12 +172,21 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
       // First, try knowledge service for classification and lookup
       final knowledgeResponse = await _knowledgeService.query(text);
 
-      final modelStatus = _ref.read(modelManagerProvider);
+      var modelStatus = _ref.read(modelManagerProvider);
       final inferenceMode = _ref.read(inferenceModeProvider);
-      final aiReady =
+      var aiReady =
           (modelStatus == ModelStatus.ready &&
               inferenceMode == InferenceMode.local) ||
           inferenceMode == InferenceMode.cloud;
+
+      // If model is still loading, wait for it instead of falling back
+      if (!aiReady && inferenceMode == InferenceMode.local) {
+        final becameReady = await _waitForModelIfLoading();
+        if (becameReady) {
+          modelStatus = ModelStatus.ready;
+          aiReady = true;
+        }
+      }
 
       // Pack switching logic:
       // - No AI or first message: auto-switch freely
