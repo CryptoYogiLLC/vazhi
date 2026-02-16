@@ -226,7 +226,7 @@ class ModelStatusIndicator extends ConsumerWidget {
   String _getDescription(ModelStatus status) {
     switch (status) {
       case ModelStatus.notDownloaded:
-        return 'ஆழமான AI விளக்கங்களுக்கு பதிவிறக்கவும் (1.6 GB)';
+        return 'ஆழமான AI விளக்கங்களுக்கு பதிவிறக்கவும் (806 MB)';
       case ModelStatus.downloading:
         return 'சிறிது நேரம் ஆகும்...';
       case ModelStatus.downloaded:
@@ -338,7 +338,7 @@ class DownloadPromptBanner extends ConsumerWidget {
             children: [
               Expanded(
                 child: Text(
-                  '📦 1.6 GB  •  📱 ஆஃப்லைன் வேலை செய்யும்',
+                  '📦 806 MB  •  📱 ஆஃப்லைன் வேலை செய்யும்',
                   style: TextStyle(fontSize: 11, color: Colors.grey[600]),
                 ),
               ),

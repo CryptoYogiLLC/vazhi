@@ -146,75 +146,85 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     state = [...state, loadingMessage];
 
     try {
-      // First, try knowledge service
+      // First, try knowledge service for classification and lookup
       final knowledgeResponse = await _knowledgeService.query(text);
 
-      // Auto-switch pack selector to match the response category
-      final matchedPack = _categoryToPackId(
-        knowledgeResponse.classification.category,
-      );
-      _ref.read(currentPackProvider.notifier).state = matchedPack;
-
-      if (knowledgeResponse.answeredDeterministically &&
-          knowledgeResponse.hasResponse) {
-        // We have a deterministic answer
-        state = [
-          ...state.where((m) => m.id != loadingMessage.id),
-          HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
-        ];
-        return;
-      }
-
-      // Check if AI is needed and available
       final modelStatus = _ref.read(modelManagerProvider);
       final inferenceMode = _ref.read(inferenceModeProvider);
+      final aiReady =
+          (modelStatus == ModelStatus.ready &&
+              inferenceMode == InferenceMode.local) ||
+          inferenceMode == InferenceMode.cloud;
 
-      if (knowledgeResponse.classification.type == QueryType.aiRequired ||
-          (knowledgeResponse.classification.type == QueryType.hybrid &&
-              !knowledgeResponse.hasResponse)) {
-        // AI is needed
-        if (modelStatus == ModelStatus.ready &&
-            inferenceMode == InferenceMode.local) {
-          // Use local AI
-          final aiResponse = await _localService.chat(text, pack: matchedPack);
+      // Pack switching logic:
+      // - No AI or first message: auto-switch freely
+      // - Active AI conversation: only switch when user explicitly asks
+      //   about a DIFFERENT specific topic (not vague follow-ups)
+      final detectedCategory = knowledgeResponse.classification.category;
+      final detectedPack = _categoryToPackId(detectedCategory);
+      final currentPack = _ref.read(currentPackProvider);
+      final hasHistory =
+          state.where((m) => m.role == MessageRole.user).length > 1;
+      final isSpecificNewTopic =
+          detectedCategory != KnowledgeCategory.general &&
+          detectedPack != currentPack;
+
+      if (!aiReady || !hasHistory || isSpecificNewTopic) {
+        _ref.read(currentPackProvider.notifier).state = detectedPack;
+      }
+      final matchedPack = _ref.read(currentPackProvider);
+
+      // RAG flow: SQLite provides factual context, AI generates response.
+      // Exact lookups (Thirukkural by number, emergency contacts) bypass AI.
+      if (aiReady) {
+        final isExactLookup =
+            knowledgeResponse.answeredDeterministically &&
+            knowledgeResponse.hasResponse &&
+            !knowledgeResponse.suggestAiEnhancement &&
+            (knowledgeResponse.classification.category ==
+                    KnowledgeCategory.thirukkural ||
+                knowledgeResponse.classification.category ==
+                    KnowledgeCategory.emergency);
+
+        if (isExactLookup) {
           state = [
             ...state.where((m) => m.id != loadingMessage.id),
-            HybridMessage.ai(aiResponse, pack: matchedPack),
+            HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
           ];
-        } else if (inferenceMode == InferenceMode.cloud) {
-          // Use cloud API
-          final aiResponse = await _apiService.chat(text, pack: matchedPack);
-          state = [
-            ...state.where((m) => m.id != loadingMessage.id),
-            HybridMessage.ai(aiResponse, pack: matchedPack),
-          ];
-        } else {
-          // No AI available, show knowledge result with download prompt
-          // or show "AI required" message
-          if (knowledgeResponse.hasResponse) {
-            state = [
-              ...state.where((m) => m.id != loadingMessage.id),
-              HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
-            ];
-          } else {
-            state = [
-              ...state.where((m) => m.id != loadingMessage.id),
-              HybridMessage.error(
-                'இந்த கேள்விக்கு AI தேவை. AI Brain பதிவிறக்கம் செய்யுங்கள்.',
-              ),
-            ];
-          }
+          return;
         }
+
+        // RAG: if SQLite has relevant context, inject it into the AI prompt
+        final context = knowledgeResponse.hasResponse
+            ? knowledgeResponse.formattedResponse
+            : null;
+        await _tryAiWithContext(text, matchedPack, loadingMessage, context);
       } else {
-        // Hybrid or fallback - show what we have
-        if (knowledgeResponse.hasResponse) {
+        // No AI available — use deterministic answers when possible
+        if (knowledgeResponse.answeredDeterministically &&
+            knowledgeResponse.hasResponse) {
+          state = [
+            ...state.where((m) => m.id != loadingMessage.id),
+            HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
+          ];
+        } else if (knowledgeResponse.hasResponse) {
           state = [
             ...state.where((m) => m.id != loadingMessage.id),
             HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
           ];
         } else {
-          // Try AI as fallback
-          await _tryAiFallback(text, matchedPack, loadingMessage);
+          // Show contextual message based on model state
+          final isLoading =
+              modelStatus == ModelStatus.loading ||
+              modelStatus == ModelStatus.downloaded;
+          state = [
+            ...state.where((m) => m.id != loadingMessage.id),
+            HybridMessage.error(
+              isLoading
+                  ? 'AI மாடல் ஏற்றப்படுகிறது... சில விநாடிகள் காத்திருந்து மீண்டும் முயற்சிக்கவும்.'
+                  : 'இந்த கேள்விக்கு AI தேவை. AI Brain பதிவிறக்கம் செய்யுங்கள்.',
+            ),
+          ];
         }
       }
     } catch (e) {
@@ -225,24 +235,39 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     }
   }
 
-  /// Try AI as fallback when knowledge service fails
-  Future<void> _tryAiFallback(
+  /// Build a RAG-augmented prompt: inject SQLite context so the AI
+  /// generates a grounded response instead of hallucinating.
+  static String _buildRagPrompt(String userQuery, String? context) {
+    if (context == null || context.isEmpty) return userQuery;
+
+    return 'கீழே கொடுக்கப்பட்ட தகவல்களை அடிப்படையாகக் கொண்டு பதிலளியுங்கள்:\n'
+        '---\n'
+        '$context\n'
+        '---\n\n'
+        'பயனர் கேள்வி: $userQuery\n\n'
+        'மேலே உள்ள தகவல்களை பயன்படுத்தி தமிழில் விளக்கமாக பதிலளியுங்கள்.';
+  }
+
+  /// Send query to AI, optionally augmented with SQLite context (RAG).
+  Future<void> _tryAiWithContext(
     String text,
     String pack,
     HybridMessage loadingMessage,
+    String? context,
   ) async {
     final modelStatus = _ref.read(modelManagerProvider);
     final inferenceMode = _ref.read(inferenceModeProvider);
+    final prompt = _buildRagPrompt(text, context);
 
     if (modelStatus == ModelStatus.ready &&
         inferenceMode == InferenceMode.local) {
-      final aiResponse = await _localService.chat(text, pack: pack);
+      final aiResponse = await _localService.chat(prompt, pack: pack);
       state = [
         ...state.where((m) => m.id != loadingMessage.id),
         HybridMessage.ai(aiResponse, pack: pack),
       ];
     } else if (inferenceMode == InferenceMode.cloud) {
-      final aiResponse = await _apiService.chat(text, pack: pack);
+      final aiResponse = await _apiService.chat(prompt, pack: pack);
       state = [
         ...state.where((m) => m.id != loadingMessage.id),
         HybridMessage.ai(aiResponse, pack: pack),
@@ -261,10 +286,10 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
   Future<void> enhanceWithAi(HybridMessage message) async {
     if (message.knowledgeResponse == null) return;
 
-    // Get the AI prompt
-    final prompt =
-        message.knowledgeResponse!.aiPromptSuggestion ??
-        'விளக்கம் தாருங்கள்: ${message.content}';
+    // Build RAG prompt with SQLite context
+    final context = message.knowledgeResponse!.formattedResponse;
+    final userQuery = message.knowledgeResponse!.classification.query;
+    final prompt = _buildRagPrompt('விளக்கம் தாருங்கள்: $userQuery', context);
 
     // Add loading
     final loadingMessage = HybridMessage.loading();

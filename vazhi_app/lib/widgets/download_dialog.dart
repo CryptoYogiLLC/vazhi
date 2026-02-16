@@ -10,6 +10,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme.dart';
 import '../services/model_download_service.dart';
 import '../providers/chat_provider.dart';
+import 'settings_drawer.dart' show languageProvider;
 
 /// Download dialog provider
 final downloadServiceProvider = Provider<ModelDownloadService>((ref) {
@@ -46,6 +47,8 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
   bool _hasStarted = false;
   StorageInfo? _storageInfo;
   String? _storageError;
+  bool _isLoadingModel = false;
+  String? _loadError;
 
   @override
   void initState() {
@@ -89,6 +92,28 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
     }
   }
 
+  Future<void> _loadModel() async {
+    setState(() {
+      _isLoadingModel = true;
+      _loadError = null;
+    });
+
+    try {
+      ref.read(modelManagerProvider.notifier).setDownloaded();
+      await ref.read(modelManagerProvider.notifier).loadModel();
+      if (mounted) {
+        Navigator.pop(context, true);
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _isLoadingModel = false;
+          _loadError = 'மாடல் ஏற்றம் தோல்வி: $e';
+        });
+      }
+    }
+  }
+
   Future<void> _startDownload({bool forceRestart = false}) async {
     final service = ref.read(downloadServiceProvider);
 
@@ -127,7 +152,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
                 ),
                 SizedBox(height: 8),
                 Text(
-                  'AI Brain பதிவிறக்கம் ~1.6 GB. WiFi பயன்படுத்த பரிந்துரைக்கப்படுகிறது.',
+                  'AI Brain பதிவிறக்கம் ~806 MB. WiFi பயன்படுத்த பரிந்துரைக்கப்படுகிறது.',
                 ),
                 SizedBox(height: 8),
                 Text(
@@ -157,6 +182,17 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
 
   @override
   Widget build(BuildContext context) {
+    // If we're in the model loading phase, show load UI independent of stream
+    if (_isLoadingModel || _loadError != null) {
+      return Dialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: _buildLoadModelContent(),
+        ),
+      );
+    }
+
     final progressAsync = ref.watch(downloadProgressStreamProvider);
 
     return Dialog(
@@ -169,6 +205,88 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
           error: (error, _) => _buildErrorContent(error.toString()),
         ),
       ),
+    );
+  }
+
+  Widget _buildLoadModelContent() {
+    final isTamil = ref.watch(languageProvider);
+    String t(String en, String ta) => isTamil ? ta : en;
+
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        _buildHeader(),
+        const SizedBox(height: 24),
+        if (_isLoadingModel) ...[
+          const SizedBox(
+            height: 80,
+            width: 80,
+            child: CircularProgressIndicator(strokeWidth: 6),
+          ),
+          const SizedBox(height: 16),
+          Text(
+            t('Loading AI Brain...', 'AI Brain ஏற்றுகிறது...'),
+            style: const TextStyle(fontWeight: FontWeight.w500),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            t('Please wait', 'சிறிது நேரம் காத்திருங்கள்'),
+            style: TextStyle(fontSize: 13, color: Colors.grey[600]),
+          ),
+        ],
+        if (_loadError != null) ...[
+          const Icon(Icons.error_outline, size: 48, color: Colors.red),
+          const SizedBox(height: 16),
+          Text(
+            t('Model loading failed', 'மாடல் ஏற்றம் தோல்வி'),
+            style: const TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: Colors.red,
+            ),
+          ),
+          const SizedBox(height: 12),
+          Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: Colors.red.withValues(alpha: 0.1),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Text(
+              _loadError!,
+              style: const TextStyle(color: Colors.red, fontSize: 13),
+              textAlign: TextAlign.center,
+            ),
+          ),
+          const SizedBox(height: 24),
+          Row(
+            children: [
+              Expanded(
+                child: ElevatedButton.icon(
+                  onPressed: _loadModel,
+                  icon: const Icon(Icons.refresh),
+                  label: Text(t('Retry', 'மீண்டும் முயற்சி')),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.orange,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                  ),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: OutlinedButton(
+                  onPressed: () => Navigator.pop(context, false),
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                  ),
+                  child: Text(t('Close', 'மூடு')),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ],
     );
   }
 
@@ -271,7 +389,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
       ),
       child: Column(
         children: [
-          _buildInfoRow(Icons.storage, 'கோப்பு அளவு', '~1.6 GB'),
+          _buildInfoRow(Icons.storage, 'கோப்பு அளவு', '~806 MB'),
           const Divider(height: 16),
           _buildInfoRow(Icons.offline_bolt, 'ஆஃப்லைன் பயன்', 'ஆம்'),
           const Divider(height: 16),
@@ -507,23 +625,72 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
     final state = progress?.state ?? DownloadState.idle;
 
     if (state == DownloadState.completed) {
-      return Row(
+      return Column(
+        mainAxisSize: MainAxisSize.min,
         children: [
-          Expanded(
-            child: ElevatedButton.icon(
-              onPressed: () {
-                // Load the model
-                ref.read(modelManagerProvider.notifier).loadModel();
-                Navigator.pop(context, true);
-              },
-              icon: const Icon(Icons.play_arrow),
-              label: const Text('AI ஏற்று'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 14),
+          if (_loadError != null)
+            Padding(
+              padding: const EdgeInsets.only(bottom: 12),
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                decoration: BoxDecoration(
+                  color: Colors.red.withValues(alpha: 0.1),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  children: [
+                    const Icon(
+                      Icons.error_outline,
+                      color: Colors.red,
+                      size: 20,
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        _loadError!,
+                        style: const TextStyle(color: Colors.red, fontSize: 13),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
+          Row(
+            children: [
+              Expanded(
+                child: ElevatedButton.icon(
+                  onPressed: _isLoadingModel ? null : _loadModel,
+                  icon: _isLoadingModel
+                      ? const SizedBox(
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: Colors.white,
+                          ),
+                        )
+                      : const Icon(Icons.play_arrow),
+                  label: Text(_isLoadingModel ? 'ஏற்றுகிறது...' : 'AI ஏற்று'),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.green,
+                    foregroundColor: Colors.white,
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                  ),
+                ),
+              ),
+              if (!_isLoadingModel) ...[
+                const SizedBox(width: 12),
+                Expanded(
+                  child: OutlinedButton(
+                    onPressed: () => Navigator.pop(context, false),
+                    style: OutlinedButton.styleFrom(
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                    ),
+                    child: const Text('பின்னர்'),
+                  ),
+                ),
+              ],
+            ],
           ),
         ],
       );

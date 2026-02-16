@@ -451,8 +451,8 @@ class SettingsDrawer extends ConsumerWidget {
     switch (status) {
       case ModelStatus.notDownloaded:
         statusText = isTamil
-            ? 'பதிவிறக்கவில்லை (~1.6 GB)'
-            : 'Not downloaded (~1.6 GB)';
+            ? 'பதிவிறக்கவில்லை (~806 MB)'
+            : 'Not downloaded (~806 MB)';
         trailing = ElevatedButton.icon(
           icon: const Icon(Icons.download, size: 18),
           label: Text(isTamil ? 'பதிவிறக்கு' : 'Download'),
@@ -500,7 +500,22 @@ class SettingsDrawer extends ConsumerWidget {
             backgroundColor: Colors.green,
             foregroundColor: Colors.white,
           ),
-          onPressed: () => ref.read(modelManagerProvider.notifier).loadModel(),
+          onPressed: () async {
+            try {
+              await ref.read(modelManagerProvider.notifier).loadModel();
+            } catch (e) {
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      '${isTamil ? "ஏற்றம் தோல்வி" : "Load failed"}: $e',
+                    ),
+                    duration: const Duration(seconds: 10),
+                  ),
+                );
+              }
+            }
+          },
         );
         break;
       case ModelStatus.loading:
@@ -537,8 +552,32 @@ class SettingsDrawer extends ConsumerWidget {
             backgroundColor: Colors.orange,
             foregroundColor: Colors.white,
           ),
-          onPressed: () =>
-              ref.read(modelManagerProvider.notifier).downloadModel(),
+          onPressed: () async {
+            try {
+              // Check if model file exists — retry load, not download
+              await ref.read(modelManagerProvider.notifier).checkStatus();
+              final currentStatus = ref.read(modelManagerProvider);
+              if (currentStatus == ModelStatus.downloaded) {
+                await ref.read(modelManagerProvider.notifier).loadModel();
+              } else {
+                // File missing — need to re-download
+                if (!context.mounted) return;
+                final result = await DownloadDialog.show(context);
+                if (result == true) {
+                  await ref.read(modelManagerProvider.notifier).loadModel();
+                }
+              }
+            } catch (e) {
+              if (context.mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text('${isTamil ? "பிழை" : "Error"}: $e'),
+                    duration: const Duration(seconds: 10),
+                  ),
+                );
+              }
+            }
+          },
         );
         break;
     }
@@ -566,8 +605,8 @@ class SettingsDrawer extends ConsumerWidget {
         title: Text(isTamil ? 'மாடலை நீக்கவா?' : 'Delete Model?'),
         content: Text(
           isTamil
-              ? 'இது 1.6 GB சேமிப்பிடத்தை விடுவிக்கும். மீண்டும் பதிவிறக்க வேண்டும்.'
-              : 'This will free up 1.6 GB of storage. You will need to download again.',
+              ? 'இது 806 MB சேமிப்பிடத்தை விடுவிக்கும். மீண்டும் பதிவிறக்க வேண்டும்.'
+              : 'This will free up 806 MB of storage. You will need to download again.',
         ),
         actions: [
           TextButton(

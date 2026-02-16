@@ -133,7 +133,7 @@ class AppLocalizationsTa extends AppLocalizations {
 
   @override
   String get downloadModelDescription =>
-      'ஆஃப்லைன் பயன்பாட்டிற்கு தேவை (~1.6 GB)';
+      'ஆஃப்லைன் பயன்பாட்டிற்கு தேவை (~806 MB)';
 
   @override
   String downloadProgress(int progress) {

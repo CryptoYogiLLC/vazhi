@@ -31,6 +31,166 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | SFT v4.2 | 2026-02-13 | ❌ Failed | Vanilla Qwen3-0.6B + SFT (13,083 train, LoRA r=8 q_proj+v_proj, LR 5e-5, 2 epochs). Train loss 1.29→0.86, eval loss 0.92, gap -0.003. 16/16 eval "passed" — 4th consecutive false positive. ALL outputs transliterated English gibberish in Tamil script (e.g., "ஜென்னுஸ் ரெஃப்ஸ் ஹோர்ட் பிளாஸ்ட்" = "Genus Refs Hort Blast"). SFT catastrophically forgot Tamil. Model: `CryptoYogi/vazhi-v4_2` |
 | Data v4.1.3 | 2026-02-13 | ✅ Complete | 3-stage pipeline: Retrieve 37,947 (6 IndicAlign subsets + local) → Curate 35,047 (fasttext, dedup, PPL, keyword domain classifier) → Compose 14,535 SFT (13,083 train / 1,452 eval). v4.1.3 fixed safety routing (subset name, not wordlist: 105→2,000) and vazhi_packs bypass (2,429→2,956). max_seq_length=2048. Colab Pro L4 GPU. Notebooks: `v4_1.ipynb` (Stage 1 CPU), `v4_1_2.ipynb` (Stage 2+3 GPU), `v4_1_3.ipynb` (Stage 3 re-compose fix). Datasets: `vazhi-raw-tamil-qa-v1`, `vazhi-curated-tamil-qa-v1`, `vazhi-tamil-sft-v4_1` |
 | Data v5.0 | 2026-02-14 | ✅ Complete | Full dataset rebuild — two-source Tamil data strategy. (1) Scraped 596 Sadhguru Tamil articles from isha.sadhguru.org/ta/, filtered to 562, CC agents restructured into 848 Tamil Q&A pairs (85.2% Tamil avg). (2) Regenerated all 6 vazhi-packs with Tamil responses: healthcare/security/culture via CC agents, legal/education/govt via template-based generator. (3) Extracted safety (1,800), thirukkural Q&A (168, no verbatim), handcrafted (120), general (24) from v4.1 HF dataset. Final: 5,921 samples (5,328 train / 593 eval), 85.2% Tamil avg, 41 words avg. Dataset: `CryptoYogi/vazhi-tamil-sft-v5_0` |
+| SFT v5.0 | 2026-02-14 | ✅ Complete | Vanilla Qwen3-0.6B + LoRA (r=16, 7 modules, LR 1e-5, 1 epoch). Dataset v5.0 (5,328 train). Tamil WORD validation eval (not char %). Training healthy. First model with real Tamil output. Model: `CryptoYogi/vazhi-v5_0` |
+| Data v5.1 | 2026-02-14 | ✅ Complete | Safety rebalanced — cut from 1,800 (30.6%) to 200 (4.6%) to fix safety mode collapse ("தீங்கு" in every response). Sadhguru Q&A audit found critical quality issues but kept for v5.1. Total: 4,321 samples. Dataset: `CryptoYogi/vazhi-tamil-sft-v5_1` |
+| SFT v5.1a | 2026-02-14 | ✅ Complete | v5.0 model + v5.1 dataset (1 epoch, ~486 steps). Fixed safety mode collapse. Used as base for v5.3. Model: `CryptoYogi/vazhi-v5_1a` |
+| Data v5.2 | 2026-02-14 | ✅ Complete | Added conversational fundamentals (200 items: greetings, identity, chitchat, colloquial TN Tamil) + VAZHI behavior pack (60 items). Dropped Sadhguru Q&A (quality audit failed). Safety further cut to ~45 (1%). Total: 3,579 samples. Dataset: `CryptoYogi/vazhi-tamil-sft-v5_2` |
+| Data v5.3 | 2026-02-14 | ✅ Complete | Sadhguru Q&A v2 RESTORED — direct article text as answers (not LLM-generated). v1 had 35% duplicates, 41% Q-A echo, 20% identical clichés. v2: 562 pairs, 100% unique, avg 734 words. Script: `create_sadhguru_qa_v2.py`. Total: 4,264 samples (3,837 train + 427 eval). Dataset: `CryptoYogi/vazhi-tamil-sft-v5_3` |
+| SFT v5.3 | 2026-02-15 | ⚠️ Partial | v5.1a model + v5.3 dataset (2 epochs, ~958 steps). Training healthy (loss 1.09→1.01, eval 1.08→1.03). 16/16 eval "passed" (94% Tamil word) but outputs are **semantic gibberish** with made-up words ("ஏற்றுக்ஷோரம்", "முக்ளிஞ்ணுக்ஸ்"). English baseline: 13/13 coherent — model can reason but can't do it in Tamil. **Proves SFT without DAPT is insufficient.** Model: `CryptoYogi/vazhi-v5_3` |
+| DAPT v2.0 Data | 2026-02-15 | ✅ Complete | Clean Tamil corpus from own sources: Sadhguru articles (562), Thirukkural (1,330), Bharathiar (109), Sangam (63), Silapathikaram (142), chat replay (384 ChatML). Tamil >=90%, NFKC normalized. 4,683 blocks × 1024 tokens = 4,795,392 tokens. Qwen3 tokenizer is ~1 token/char for Tamil (not 3.5 as estimated). Dataset: `CryptoYogi/vazhi-dapt-tamil-v2_0`. Sources hosted on `CryptoYogi/vazhi-dapt-sources-v2_0`. Notebook: `Vazhi_DAPT_Data_v2_0.ipynb` |
+| DAPT v2.0 | 2026-02-15 | ⚠️ Partial | Clean DAPT on v5.3 model (incremental). 2 epochs (584 steps total), LoRA r=16, LR 1e-5. Loss: 1.225→1.048 (epoch 1, 14.5% drop) → 1.025→1.004 (epoch 2, 2.0% drop). Tamil improved: char 61%→81% (+20%), word 76%→92% (+16%). Instruction following preserved (9/9). **BUT outputs still semantic gibberish with fabricated Tamil words** — same pattern as v5.3 just with more Tamil characters. 4.8M tokens insufficient for language acquisition (v1.1 used 55M). English factual accuracy slightly degraded ("warangalinga" as TN capital). Model: `CryptoYogi/vazhi-v5_3-dapt`, Adapter: `CryptoYogi/vazhi-v5_3-dapt-lora` |
+| DAPT v2.1 Data | 2026-02-15 | ✅ Complete | 5-source high-quality Tamil corpus: Wiki_Chat 27.2M (70%), Chat replay 4.2M (11%, from OpenAssistant_T + Indic_ShareLlama + Dolly_T + local SFT), Sadhguru 3.9M (10%), WikiHow 3.3M (8%), Classical 360K (1%). Tamil >=90%, NFKC normalized. 38,580 blocks × 1024 = 39.5M tokens (8.2x larger than v2.0). Dataset: `CryptoYogi/vazhi-dapt-tamil-v2_1`. Notebook: `Vazhi_DAPT_Data_v2_1.ipynb` (Colab Pro, CPU, High RAM) |
+| DAPT v2.1 | 2026-02-15 | ✅ Complete | Vanilla Qwen3-0.6B (fresh start), LoRA r=16, LR 1e-5, 2 epochs (2,412 steps) on A100-80GB, batch 32. Loss 1.31→0.83 (37% drop). Tamil word 2%→56% (+54%), instruction following 9/9 preserved, English coherent. GO verdict. Model: `CryptoYogi/vazhi-dapt-v2_1`, Adapter: `CryptoYogi/vazhi-dapt-v2_1-lora`. Notebook: `Vazhi_DAPT_v2_1_Tamil.ipynb` |
+| SFT v6.0 | 2026-02-15 | ❌ Failed | DAPT v2.1 + SFT (3,837 train, LoRA r=16, LR 1e-5, 1 epoch, 479 steps) on L4-24GB. Loss 1.37→0.94 (31% drop), eval loss 0.99. 16/16 eval "passed" (78% Tamil word) but **outputs still semantic gibberish** — same pattern as v5.3. Made-up words, Wikipedia-style noise, no correct answers. Tamil word actually decreased (94%→78%) — SFT on task behavior may have traded off raw Tamil fluency. MAX_LENGTH remained at 2048, 12.9% of samples truncated (long Sadhguru articles). DAPT v2.1 (39.5M tokens) + SFT (3.8K samples) insufficient for 0.6B model to learn Tamil semantics. Model: `CryptoYogi/vazhi-v6_0`, Adapter: `CryptoYogi/vazhi-v6_0-lora`. Notebook: `Vazhi_SFT_v6_0_OnDAPT.ipynb` |
+
+---
+
+## Critical Analysis: Why SFT-Only Is Insufficient (Feb 2026)
+
+### The Fundamental Mistake
+
+We spent v5.0 → v5.1a → v5.3 doing SFT without DAPT — trying to teach the model Tamil tasks without first teaching it Tamil language. This is like teaching someone to write legal briefs in French when they only know 50 French words. No amount of task training helps if they can't construct coherent sentences.
+
+### What ~2100 Cumulative Steps of SFT Actually Did
+
+SFT teaches **task behavior** (how to respond to instructions, what format to use). It does NOT teach **language**. After v5.0 (666 steps) + v5.1a (486 steps) + v5.3 (958 steps), the model genuinely improved:
+- **Before SFT (vanilla):** Repetitive loops ("மக்கள், மக்கள், மக்கள்"), no structure, copy-paste patterns
+- **After SFT (v5.3):** Structured responses with numbered lists, bold headers, varied vocabulary, zero repetition (0.00 avg repeat)
+- SFT successfully taught the model response *format and behavior* — this is real measurable progress
+
+But SFT did NOT teach the model Tamil *language*:
+- The well-structured responses contain made-up words and semantically incoherent content
+- The model learned "produce Tamil-looking tokens in a structured format" but NOT "how Tamil grammar works, how to form coherent Tamil sentences"
+- It's like a student who learned essay structure (intro, body, conclusion) but writes in a language they don't understand
+
+### Evidence from v5.3 Eval (Latest Run — Feb 15, 2026)
+
+**English baseline on vanilla Qwen3-0.6B** (13/13 coherent):
+- Identity: "I am a language model designed to assist with various tasks"
+- Safety: "If you received a suspicious message... you should immediately stop providing them"
+- Reasoning: "Education is important because it helps people learn and grow"
+- Domain: Structured, factual responses about pensions, ration cards, health advice
+- **Conclusion: The model CAN reason and follow instructions — in English**
+
+**Vanilla Qwen3-0.6B Tamil baseline** (5/5 "coherent" but repetitive):
+- Produces repetitive loops: "தமிழ்நாட்டுக்குச் பெரியான சாப்பிடலாம், தமிழ்நாட்டுக்குச் பெரியான சாப்பிடலாம்"
+- Can greet ("வணக்கம்! 😊") but can't form coherent multi-sentence Tamil
+
+**v5.1a baseline** (pre-v5.3 training, 5/5 "coherent"):
+- Slightly better structure but still loops: "தீர்வு விண்ணப்பிக்கவும். தீர்வு விண்ணப்பிக்கவும்."
+- Word score drops to 40% on complex prompts (e.g., "காலையில் என்ன சாப்பிடலாம்?")
+
+**SFT v5.3 outputs** (2 epochs on v5.1a, 16/16 "passed", 94% avg word score):
+- Real Tamil words arranged into **semantic nonsense** with fabricated words:
+  - "ஏற்றுக்ஷோரம்", "முக்ளிஞ்ணுக்ஸ்", "ஏற்றுக்ஷோழியங்ங" — completely made-up
+  - "இணைப் போகும் பிணையா!" — sounds Tamil but means nothing
+  - "காப்போர் அறிஞர்: காச்சலிற்கு ஒரு வாழ்க்கை ரூபம்" — for a fever query, responds with gibberish philosophy
+  - Formatted lists and percentages that look structured but contain incoherent content
+- The Tamil WORD validator scores 94% because individual tokens have Tamil structure, but the sentences have no semantic meaning
+- **The model learned formatting from SFT (numbered lists, bold headers, quotes) but has no Tamil language understanding to fill those structures with**
+
+### Why We Wrongly Abandoned DAPT
+
+DAPT v1.1 actually worked for Tamil — it showed **+55% Tamil improvement**. The problems were:
+
+1. **Bad data quality** — the Sangraha corpus had English/Tanglish contamination even after 70% Tamil threshold filtering
+2. **Too aggressive parameters** — 55M tokens, LR 5e-5, full epoch on a 0.6B model
+3. **No instruction preservation** — pure next-token prediction with zero chat data replay overwrote instruction-following
+
+**We blamed DAPT as a methodology when the real culprit was data quality.** Then we over-corrected by skipping DAPT entirely and running SFT-only (v5.0 onwards).
+
+### The Correct Path: Clean DAPT v2.0 → SFT
+
+The model already has English reasoning capability (proven in baseline). What it lacks is Tamil fluency. The two-stage approach is:
+
+**Step 1: Clean DAPT v2.0** — teach the model Tamil language
+- High-quality Tamil corpus (>90% Tamil, proper grammar, diverse topics)
+- Sources need investigation: Tamil Wikipedia, Tamil news, Sadhguru articles, government docs, IndicAlign Wiki_Chat/Wiki_Conv (never quality-evaluated, skipped for OOM reasons)
+- Instruction preservation: 5-15% chat data replay during DAPT
+- Conservative: LR 1-2e-5, 10-20M token budget (NOT 55M like v1.1)
+- Goal: model learns Tamil grammar, vocabulary, sentence patterns
+
+**Step 2: SFT** — teach the model Tamil tasks
+- Use existing v5.3 dataset (already clean and ready, 4,264 samples)
+- Conservative LoRA as proven in v5.0/v5.1a
+- Goal: model follows instructions and responds coherently IN Tamil
+
+### Open Questions for DAPT v2.0 (RESOLVED in v2.1)
+
+1. **Clean Tamil corpus sources** — RESOLVED: IndicAlign Wiki_Chat (97.6% Tamil avg, diverse topics), Wiki_Conv rejected (too short/formulaic). Also added WikiHow, OpenAssistant_T, Indic_ShareLlama, Dolly_T for chat replay diversity
+2. **Instruction preservation recipe** — RESOLVED: 10.9% chat replay (4.2M tokens from 4 sources formatted as ChatML). GPT5.2 recommended 5-10%, we hit 11%
+3. **Token budget** — RESOLVED: 39.5M tokens (v2.0 had 4.8M — insufficient). Within 30-50M safe adaptation band for 0.6B model
+
+---
+
+## Clean DAPT v2.1 — 5-Source Tamil Corpus (Feb 2026)
+
+### Why v2.1?
+
+DAPT v2.0 used only our own sources (Sadhguru + classical + chat replay = 4.8M tokens). This was 8x too small for language acquisition on a 0.6B model — outputs were still semantic gibberish despite +20% Tamil char improvement. GPT5.2 recommended:
+1. **Cap Wiki_Chat at 60-70%** — prevent encyclopedic tone drift
+2. **Boost chat replay to 5-10%** (2-5M tokens) — critical for instruction preservation (v2.0 had only 1.4%)
+3. **Keep classical small** (~5% max)
+4. **Fresh start on vanilla Qwen3-0.6B** — 39.5M tokens is enough for full DAPT, no need to build on v5.3
+
+### Data Investigation Results
+
+| Source | Tamil% | Quality | Decision |
+|--------|--------|---------|----------|
+| Wiki_Chat | 97.6% avg, 99.6% ≥90% | Long-form (4854 chars/doc), diverse topics (wildlife, politics, movies, literature) | ✅ Primary source (70%) |
+| Wiki_Conv | 96% avg | Too short (115 chars/turn), formulaic ("Where is X?" / "Sure, what do you want?") | ❌ Rejected |
+| OpenAssistant_T | 96.5% avg | 1662 chars/doc, good conversational quality | ✅ Chat replay |
+| Indic_ShareLlama | 96.6% avg | 2360 chars/doc, instruction-following pairs | ✅ Chat replay |
+| Dolly_T | 97.0% avg | 584 chars/doc, shorter but diverse | ✅ Chat replay |
+| Anudesh | English-only | Different schema (`interactions` column), no Tamil | ❌ Skipped |
+
+### Final Corpus Composition
+
+| Source | Docs | Tokens | % |
+|--------|------|--------|---|
+| Wiki_Chat | 13,649 | 27,247,265 | 70% |
+| Chat replay (4 sources) | 3,607 | 4,233,178 | 11% |
+| Sadhguru articles | 561 | 3,877,822 | 10% |
+| WikiHow | 606 | 3,289,273 | 8% |
+| Classical (Thirukkural + Bharathiar + Sangam + Silapathikaram + Aathichoodi) | 1,844 | 359,635 | 1% |
+| **Total** | **20,267** | **39,505,920** | **100%** |
+
+38,580 blocks × 1024 tokens. Average Tamil: 97.6%. All quality gates passed.
+
+### Key Decisions
+
+- **Vanilla Qwen3-0.6B as base** — with 39.5M tokens, we can do full DAPT from scratch. No need to build incrementally on v5.3 (which has SFT artifacts that may interfere)
+- **Multi-epoch with interim eval gates** — train epoch 1 → eval → decide on epoch 2. Fresh cosine LR per epoch (new Trainer instance)
+- **LoRA r=16 on 7 modules** — same as all successful runs
+- **LR 1e-5** — conservative (v1.1 used 5e-5 and destroyed instruction-following)
+
+### Training Notebook Structure
+
+| Cell | Purpose |
+|------|---------|
+| 1-3 | Dependencies, Config, HF Login |
+| 4-5 | Load dataset (39.5M tokens), Tokenizer + Helpers |
+| 6 | Load Qwen3-0.6B vanilla + LoRA (r=16, 7 modules) |
+| 7-8 | Pre-DAPT baselines (Tamil quality + instruction following) |
+| 9 | Calculate training steps |
+| 10 | Train Epoch 1 (cosine LR, push to Hub) |
+| 10r | Resume cell (Colab disconnect recovery) |
+| 11 | Interim eval — decide: continue or stop? |
+| 12 | Train Epoch 2 (fresh Trainer = fresh cosine cycle) |
+| 13 | Interim eval after Epoch 2 |
+| 14 | Save adapter + merge LoRA into fp16 |
+| 15-16 | Post-DAPT eval (Tamil + instruction following) |
+| 17 | Side-by-side comparison table + GO/NO-GO verdict |
+| 18 | Upload merged model to HuggingFace |
+| 19 | Summary |
+
+### Artifacts
+
+- Data prep notebook: `notebooks/Vazhi_DAPT_Data_v2_1.ipynb`
+- Training notebook: `notebooks/Vazhi_DAPT_v2_1_Tamil.ipynb`
+- Dataset: `CryptoYogi/vazhi-dapt-tamil-v2_1` (38,580 blocks × 1024 tokens)
+- Output model (pending): `CryptoYogi/vazhi-dapt-v2_1`
+- Output adapter (pending): `CryptoYogi/vazhi-dapt-v2_1-lora`
 
 ---
 
@@ -2297,9 +2457,205 @@ Implement a hybrid architecture with two paths:
 
 ---
 
+## SFT v5.0 Training (Feb 2026)
+
+First successful SFT run producing coherent Tamil output. Key changes from v4.x:
+- **Dataset v5.0**: Two-source Tamil strategy (5,328 train samples, 85.2% Tamil avg)
+- **Conservative LoRA**: r=16 on all 7 modules (expanded from v4.2's r=8 on 2 modules), but LR 1e-5 (5x lower than v4.2's 5e-5)
+- **Tamil WORD validation**: Replaced broken Tamil char % eval with bigram-based Tamil word validator
+- **Vanilla base**: Skipped DAPT — used vanilla Qwen3-0.6B (instruct) directly
+- **1 epoch only**: Prevented catastrophic forgetting seen in v4.2 (2 epochs)
+
+Model: `CryptoYogi/vazhi-v5_0`
+
+---
+
+## Dataset v5.1 — Safety Rebalancing (Feb 2026)
+
+v5.0 model had mode collapse to safety vocabulary — every response included "தீங்கு" (harm) due to safety data being 30.6% of the dataset.
+
+- Safety cut from 1,800 (30.6%) to 200 (4.6%)
+- Intelligent downsampling: Toxic_Matrix 50 diverse questions, HHRLHF_T 150 deduplicated responses
+- All other sources unchanged from v5.0
+
+Dataset: `CryptoYogi/vazhi-tamil-sft-v5_1` (~4,321 samples)
+
+---
+
+## SFT v5.1a — Safety Fix on v5.0 Model (Feb 2026)
+
+Quick experiment: run v5.1 rebalanced data on the v5.0 SFT model to fix mode collapse without losing Tamil capability.
+
+- Base: `CryptoYogi/vazhi-v5_0` (already has Tamil patterns)
+- Dataset: v5.1 (safety 4.6%, down from 30.6%)
+- Training: 1 epoch, ~486 steps
+- Purpose: Fix "தீங்கு" mode collapse with rebalanced data
+
+Model: `CryptoYogi/vazhi-v5_1a`
+
+---
+
+## Dataset v5.2 — Conversational Fundamentals (Feb 2026)
+
+v5.1 had only 5 conversational items out of 4,321 samples. A 0.6B model can't infer conversational behavior from a system prompt alone.
+
+Key additions:
+- **Conversational fundamentals pack** (200 items): greetings, identity, chitchat, wellbeing, farewells, meta-conversation, emotional support, capabilities, language preferences, colloquial TN Tamil
+- **VAZHI behavior pack** (60 items): identity responses, capability descriptions, personality traits
+- **Sadhguru Q&A DROPPED**: Quality audit found critical issues (see below)
+- **Safety further reduced**: ~45 items (1% of dataset)
+
+Dataset: `CryptoYogi/vazhi-tamil-sft-v5_2` (3,579 samples)
+
+---
+
+## Sadhguru Q&A v1 Quality Audit (Feb 2026)
+
+Critical quality issues found in the multi-agent sonnet Q&A generation (v1):
+- **35% duplicates**: 4 blocks of 50x identical generic clichés
+- **41% Q-A echo**: Agents copy-pasted article opening sentence as both question and answer
+- **7% generic motivational content**: Not from Sadhguru articles at all
+- **Only 38% of 562 articles used**: Agents skipped most articles
+- **Short answers**: ~300 chars avg vs 5,500+ char articles
+
+Root cause: Multi-agent sonnet system broke articles into tiny pieces and generated content rather than using the actual article text. The LLM agents hallucinated rather than extracting.
+
+---
+
+## Dataset v5.3 — Sadhguru Q&A v2 Restored (Feb 2026)
+
+Fix for the v1 quality issues. Created `scripts/create_sadhguru_qa_v2.py`:
+- Uses raw article text directly as answers (no LLM generation)
+- Extracts questions from article titles or opening "கேள்வி:" markers
+- Cleans HTML artifacts: `[pullquote]`, `[SadhguruImage]`, `[separator]`, `[photocredit]`, footnotes, URLs
+- One Q&A pair per article (not fragmented into chunks)
+
+**v2 results**: 562 pairs, 100% unique, avg 734 words per answer
+
+**v5.3 composition** (4,264 total, 3,837 train + 427 eval):
+| Bucket | Count | Pct |
+|--------|-------|-----|
+| vazhi_packs | 2,958 | 69.4% |
+| sadhguru_qa | 562 | 13.2% |
+| conversational | 200 | 6.3% |
+| thirukkural | 169 | 3.9% |
+| handcrafted | 120 | 2.8% |
+| behavior | 60 | 2.7% |
+| safety | 45 | 1.1% |
+| general | 27 | 0.6% |
+
+Scripts: `scripts/create_sadhguru_qa_v2.py`, `scripts/assemble_dataset_v5_3.py`
+Dataset: `CryptoYogi/vazhi-tamil-sft-v5_3`
+
+---
+
+## SFT v5.3 — Sadhguru Q&A v2 Training (Feb 2026, PREPARED)
+
+Training notebook ready, not yet run.
+
+- Base: `CryptoYogi/vazhi-v5_1a` (2 epochs of Tamil SFT)
+- Dataset: v5.3 (4,264 samples, Sadhguru Q&A v2 restored)
+- Lineage: vanilla → v5.0 (1 epoch) → v5.1a (1 epoch) → v5.3 (this run)
+- LoRA: r=16, 7 modules, LR 1e-5, 1 epoch
+- Dual baseline eval: vanilla Qwen3-0.6B + v5.1a model
+- Output: `CryptoYogi/vazhi-v5_3`
+- Notebook: `notebooks/Vazhi_SFT_v5_3.ipynb`
+
+---
+
+## Model Comparison v1 — 7-Model Tamil Benchmark (Feb 2026)
+
+**Date:** 2026-02-15
+**Status:** ✅ Complete
+**Notebook:** `notebooks/Vazhi_Model_Comparison_v1.ipynb`
+
+### Purpose
+
+After 20 training attempts on Qwen3-0.6B (v0.1→v6.0) all failed to produce coherent Tamil, we ran a systematic side-by-side comparison of 7 models to determine the best path forward.
+
+### Models Tested
+
+| # | Model | Params | fp16 Size | Q4_K_M GGUF | Family |
+|---|-------|--------|-----------|-------------|--------|
+| 1 | Vanilla Qwen3-0.6B | 0.75B | 1.5 GB | 0.45 GB | qwen3 |
+| 2 | DAPT v2.1 (CryptoYogi/vazhi-dapt-v2_1) | 0.75B | 1.5 GB | 0.45 GB | qwen3 |
+| 3 | SFT v6.0 (CryptoYogi/vazhi-v6_0) | 0.75B | 1.5 GB | 0.45 GB | qwen3 |
+| 4 | Sarvam-1 (sarvamai/sarvam-1) | 2.0B | 4.0 GB | 1.20 GB | sarvam |
+| 5 | **Gemma 3 1B-it** (google/gemma-3-1b-it) | ~1.0B | 2.0 GB | 0.60 GB | instruct |
+| 6 | Gemma 3n E2B-it (google/gemma-3n-E2B-it) | **6.0B raw** (2B eff.) | 12.0 GB | 3.60 GB | instruct |
+| 7 | Navarasa 2.0 (Telugu-LLM-Labs/Indic-gemma-2b-finetuned-sft-Navarasa-2.0) | 2.5B | 5.0 GB | 1.50 GB | instruct |
+
+### Test Prompts (5 Tamil + 5 English)
+
+Tamil: வணக்கம், நீங்கள் யார்? | தமிழ்நாட்டின் தலைநகரம் எது? | திருக்குறளின் முதல் குறள் என்ன? | ஒரு தெரியாத எண்ணில் இருந்து மெசேஜ் வந்தது. என்ன செய்வது? | நீரிழிவு நோய் பற்றி சொல்லுங்கள்
+
+English: Who are you? | What is the capital of Tamil Nadu? | How to file an FIR? | Tell me about Thirukkural | What should I do if I receive a scam call?
+
+### Results
+
+| Model | Real Tamil? | Relevant Answers? | Structured? | Q4_K_M | Rating |
+|-------|------------|-------------------|-------------|--------|--------|
+| Vanilla Qwen3-0.6B | ❌ Bengali/Hindi confusion | ❌ | ❌ | 0.45 GB | 1/5 |
+| DAPT v2.1 | ❌ Fake/made-up words | ❌ | ❌ | 0.45 GB | 1/5 |
+| SFT v6.0 | ❌ Fake words + structure | ❌ | ✅ | 0.45 GB | 2/5 |
+| Sarvam-1 | ✅ Real Tamil words | ⚠️ Partial | ❌ Base model, no instruction-following | 1.20 GB | 3/5 |
+| **Gemma 3 1B-it** | **✅ Real Tamil** | **✅ Relevant** | **✅ Structured** | **0.60 GB** | **4/5** |
+| Gemma 3n E2B-it | ✅ Best quality | ✅ Relevant | ✅ Structured | 3.60 GB ❌ | 5/5 (benchmark only) |
+| Navarasa 2.0 | ✅ Real Tamil words | ❌ Broken instruction-following | ❌ | 1.50 GB | 1/5 |
+
+### Key Findings
+
+1. **Gemma 3 1B-it is the clear winner for VAZHI:** Real Tamil + relevant answers + structured output + fits <1GB GGUF (0.60GB Q4_K_M)
+2. **Model architecture > training data:** Gemma 3 1B-it with zero fine-tuning outperforms 20 Qwen3-0.6B training attempts. Google's 2T-token multilingual pretraining (140+ languages, 262K vocab) provides genuine Tamil that 15-40M token DAPT on 151K vocab never could
+3. **Qwen3-0.6B is fundamentally incapable of Tamil:** All 3 Qwen3 variants (vanilla, DAPT, SFT) produce fake Tamil words. The model's 151K vocab and 0.6B params cannot represent Tamil semantics
+4. **Sarvam-1 has Tamil but no instruction-following:** Base model produces real Tamil words but doesn't follow prompts. Also exceeds <1GB limit (1.20GB Q4_K_M)
+5. **Gemma 3n E2B-it "2B effective" is misleading:** Raw model has 6B params. GGUF must include all params = 3.60GB Q4_K_M. Impossible for mobile deployment
+6. **Navarasa 2.0 fine-tuning destroyed instruction-following:** Base Gemma model had Tamil capability but SFT broke it — cautionary tale for our own SFT
+
+### Gemma 3 1B-it Issues to Fix via SFT v7.0
+
+- Response degeneration at end (garbage tokens: 冲突, Netanyahu, "Reply suppress", "EOS")
+- Factual hallucinations (Thanjavur as capital instead of Chennai)
+- Identity: says "VAZI" not "VAZHI" (close but needs correction)
+- English questions get Tamil responses (system prompt bias — may be desired for VAZHI)
+
+### Decision
+
+**PIVOT from Qwen3-0.6B to Gemma 3 1B-it as base model.**
+
+New strategy:
+- No DAPT needed (model already knows Tamil from pretraining)
+- SFT v7.0: teach VAZHI personality, domain knowledge, Tamil Nadu facts
+- Dataset: v5.3 (4,264 samples) converted from ChatML to Gemma format
+- GGUF: Q4_K_M = 0.60GB (well within <1GB limit)
+
+---
+
+## SFT v7.0 — Gemma 3 SFT for VAZHI (Feb 2026, PLANNED)
+
+**Base Model:** `google/gemma-3-1b-it` (~1B params, 262K vocab, native Tamil from 2T-token pretraining)
+**Dataset:** `CryptoYogi/vazhi-tamil-sft-v5_3` (4,264 samples, converted from ChatML to Gemma format)
+**Output:** `CryptoYogi/vazhi-v7_0`
+**Notebook:** `notebooks/Vazhi_SFT_v7_0_Gemma3.ipynb`
+
+Key differences from Qwen3 training:
+- No DAPT needed — model already has genuine Tamil capability
+- Different chat template (Gemma turns vs ChatML)
+- Larger model (1B vs 0.6B) — may need different batch sizes
+- No `<think>` token suppression needed
+- 262K vocab (vs 151K) — better multilingual tokenization
+- Conservative LoRA to avoid Navarasa-style catastrophic forgetting
+
+---
+
 ## References
 
 ### Training Notebooks
+- SFT v7.0 Gemma 3 (GPU, PLANNED): `/notebooks/Vazhi_SFT_v7_0_Gemma3.ipynb`
+- Model Comparison v1 (GPU, COMPLETE): `/notebooks/Vazhi_Model_Comparison_v1.ipynb`
+- SFT v5.3 training (GPU, READY): `/notebooks/Vazhi_SFT_v5_3.ipynb`
+- SFT v5.1a training (GPU, COMPLETE): `/notebooks/Vazhi_SFT_v5_1a.ipynb`
+- SFT v5.0 training (GPU, COMPLETE): `/notebooks/Vazhi_SFT_v5_0.ipynb`
 - Dataset Factory v4.1 Stage 1 Retrieve (CPU, LATEST): `/notebooks/Vazhi_Dataset_Factory_v4_1.ipynb`
 - Dataset Factory v4.1 Stage 2+3 Curate+Compose (GPU, LATEST): `/notebooks/Vazhi_Dataset_Factory_v4_1_2.ipynb`
 - Dataset Factory v4.1 Stage 3 Re-compose Fix (CPU): `/notebooks/Vazhi_Dataset_Factory_v4_1_3.ipynb`

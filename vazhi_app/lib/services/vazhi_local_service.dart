@@ -14,7 +14,6 @@ class VazhiLocalService {
   LlamaEngine? _engine;
   ChatSession? _session;
   bool _isModelLoaded = false;
-  String? _currentPack;
 
   /// Model download URL from HuggingFace
   /// Gemma 3 1B-it SFT v7.1, Q4_K_M quantization (~806MB)
@@ -48,6 +47,32 @@ class VazhiLocalService {
 சுகாதாரம், சித்த மருத்துவம், அரசு மருத்துவ திட்டங்கள் பற்றி உதவுங்கள்.
 தமிழில் தெளிவாகவும் உதவியாகவும் பதிலளியுங்கள்.''',
   };
+
+  /// Generation params with stop sequences to prevent hallucinated multi-turn chat.
+  /// NOTE: Do NOT include `<start_of_turn>` or `<end_of_turn>` here — those are
+  /// Gemma 3's native EOG tokens (token 106) and llama.cpp handles them
+  /// automatically. Adding them as explicit text-based stop sequences conflicts
+  /// with native EOG detection and causes empty responses.
+  static const _generationParams = GenerationParams(
+    maxTokens: 1024,
+    temp: 0.7,
+    stopSequences: ['<|im_start|>', '<|im_end|>', '\nuser\n', '\nUser:'],
+  );
+
+  /// Regex to strip any leaked chat format tokens from output
+  /// Only strip the token markers themselves (with optional role label),
+  /// NOT everything after them — greedy .* with dotAll was wiping responses.
+  static final _chatTokenPattern = RegExp(
+    r'<\|im_start\|>(system|user|assistant)?\n?'
+    r'|<\|im_end\|>'
+    r'|<start_of_turn>(user|model)?\n?'
+    r'|<end_of_turn>',
+  );
+
+  /// Clean model output by stripping leaked chat tokens
+  static String _cleanOutput(String text) {
+    return text.replaceAll(_chatTokenPattern, '').trim();
+  }
 
   /// Check if model is loaded and ready
   bool get isReady => _isModelLoaded;
@@ -145,8 +170,31 @@ class VazhiLocalService {
     }
 
     _engine = LlamaEngine(LlamaBackend());
-    await _engine!.loadModel(path);
+    try {
+      await _engine!.setLogLevel(LlamaLogLevel.info);
+      await _engine!.loadModel(
+        path,
+        modelParams: const ModelParams(
+          gpuLayers: 0, // CPU-only — avoids Vulkan issues on phones
+          contextSize: 2048,
+        ),
+      );
+    } catch (e) {
+      _engine = null;
+      throw VazhiLocalException('Model load failed: $e');
+    }
     _isModelLoaded = true;
+  }
+
+  /// Ensure a session exists. Reuses the current session to preserve
+  /// conversation history (critical for multi-turn RAG). Only creates
+  /// a new session on first use or after explicit `clearSession()`.
+  void _ensureSession(String pack) {
+    if (_session == null) {
+      final systemPrompt =
+          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
+      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
+    }
   }
 
   /// Send a chat message and get a response
@@ -155,21 +203,19 @@ class VazhiLocalService {
       throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
     }
 
-    // Create new session if pack changed
-    if (_session == null || _currentPack != pack) {
-      _currentPack = pack;
-      final systemPrompt =
-          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
-      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
-    }
+    _ensureSession(pack);
 
-    // Collect the streamed response
     final buffer = StringBuffer();
-    await for (final token in _session!.chat(message)) {
-      buffer.write(token);
+    await for (final chunk in _session!.create([
+      LlamaTextContent(message),
+    ], params: _generationParams)) {
+      final content = chunk.choices.first.delta.content;
+      if (content != null) {
+        buffer.write(content);
+      }
     }
 
-    return buffer.toString().trim();
+    return _cleanOutput(buffer.toString());
   }
 
   /// Stream chat response token by token
@@ -178,15 +224,20 @@ class VazhiLocalService {
       throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
     }
 
-    // Create new session if pack changed
-    if (_session == null || _currentPack != pack) {
-      _currentPack = pack;
-      final systemPrompt =
-          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
-      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
-    }
+    _ensureSession(pack);
 
-    yield* _session!.chat(message);
+    await for (final chunk in _session!.create([
+      LlamaTextContent(message),
+    ], params: _generationParams)) {
+      final content = chunk.choices.first.delta.content;
+      if (content != null && content.isNotEmpty) {
+        // Strip any partial chat tokens from streamed chunks
+        final cleaned = _cleanOutput(content);
+        if (cleaned.isNotEmpty) {
+          yield cleaned;
+        }
+      }
+    }
   }
 
   /// Stream chat response with metrics tracking
@@ -198,19 +249,18 @@ class VazhiLocalService {
       throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
     }
 
-    // Create new session if pack changed
-    if (_session == null || _currentPack != pack) {
-      _currentPack = pack;
-      final systemPrompt =
-          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
-      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
-    }
+    _ensureSession(pack);
 
     final metrics = InferenceMetrics()..startInference();
 
-    await for (final token in _session!.chat(message)) {
-      metrics.onToken();
-      yield (token, metrics);
+    await for (final chunk in _session!.create([
+      LlamaTextContent(message),
+    ], params: _generationParams)) {
+      final content = chunk.choices.first.delta.content;
+      if (content != null && content.isNotEmpty) {
+        metrics.onToken();
+        yield (content, metrics);
+      }
     }
 
     metrics.endInference();
@@ -232,32 +282,30 @@ class VazhiLocalService {
       throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
     }
 
-    // Create new session if pack changed
-    if (_session == null || _currentPack != pack) {
-      _currentPack = pack;
-      final systemPrompt =
-          packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
-      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
-    }
+    _ensureSession(pack);
 
     final metrics = InferenceMetrics()..startInference();
     final buffer = StringBuffer();
 
-    await for (final token in _session!.chat(message)) {
-      metrics.onToken();
-      buffer.write(token);
+    await for (final chunk in _session!.create([
+      LlamaTextContent(message),
+    ], params: _generationParams)) {
+      final content = chunk.choices.first.delta.content;
+      if (content != null && content.isNotEmpty) {
+        metrics.onToken();
+        buffer.write(content);
+      }
     }
 
     metrics.endInference();
     _lastMetrics = metrics;
 
-    return (buffer.toString().trim(), metrics);
+    return (_cleanOutput(buffer.toString()), metrics);
   }
 
   /// Clear the chat session (start fresh conversation)
   void clearSession() {
     _session = null;
-    _currentPack = null;
   }
 
   /// Dispose of resources

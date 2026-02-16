@@ -167,6 +167,8 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   Future<void> _checkModelStatus() async {
     if (await _localService.isModelDownloaded()) {
       state = ModelStatus.downloaded;
+      // Auto-load on startup so users don't have to manually tap "Load"
+      await loadModel();
     } else {
       state = ModelStatus.notDownloaded;
     }

@@ -57,7 +57,7 @@
   "offlineModeDescription": "சில அம்சங்கள் வரையறுக்கப்படலாம்",
 
   "downloadModel": "AI மாடலை பதிவிறக்கு",
-  "downloadModelDescription": "ஆஃப்லைன் பயன்பாட்டிற்கு தேவை (~1.6 GB)",
+  "downloadModelDescription": "ஆஃப்லைன் பயன்பாட்டிற்கு தேவை (~806 MB)",
   "downloadProgress": "பதிவிறக்கம்: {progress}%",
 
   "kuralNumber": "குறள் {number}",

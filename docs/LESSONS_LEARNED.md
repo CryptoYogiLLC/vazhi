@@ -5,9 +5,9 @@
 **Project:** VAZHI (வழி) - **V**oluntary **A**I with **Z**ero-cost **H**elpful **I**ntelligence
 **Vision:** An open-source Tamil LLM that runs **offline on mobile phones** - free, transparent, Tamil-first
 **Goal:** Deploy a Tamil-capable LLM on mobile devices (<1GB target)
-**Current Target:** Qwen3-0.6B with two-stage training (Micro-DAPT → SFT)
+**Current Target:** Qwen3-0.6B with two-stage training (DAPT → SFT)
 **Timeline:** February 2026
-**Status:** v0.8+ Qwen3-0.6B Training in Progress
+**Status:** Clean DAPT v2.1 data prep complete (39.5M tokens, 5-source corpus). Training notebook ready for Colab Pro GPU
 
 ---
 
@@ -544,6 +544,15 @@ For conversational content:
 | 57 | **Spot-check EVERY source before committing** | tamil-orca had misaligned Q&A (answers didn't match questions); 2-3 samples per source catches catastrophic issues |
 | 58 | **Retrieve lean (2-3x), not broad** | 520K retrieval for 10K target is wasteful; can always do a targeted second pull if a bucket falls short |
 | 59 | **Match data sources to product mission** | VAZHI users need scam protection, govt benefits, health, culture — not Commodore 64 trivia or math word problems |
+| 60 | **SFT teaches task behavior, NOT language** | SFT (v5.0→v5.1a→v5.3) genuinely improved output — eliminated repetition loops, added structured formatting, varied vocabulary. But content is semantic gibberish because the model learned format without Tamil language understanding. SFT progress is real but insufficient without DAPT |
+| 61 | **Don't blame the methodology — blame the data** | DAPT v1.1 was abandoned because it "destroyed instruction-following", but the real culprit was contaminated corpus (English/Tanglish in Sangraha at 70% threshold). DAPT as a methodology is correct |
+| 62 | **DAPT before SFT is non-negotiable for low-resource languages** | Trying to teach Tamil tasks (SFT) before teaching Tamil language (DAPT) is like teaching legal writing in a language the student barely knows |
+| 63 | **High Tamil WORD score ≠ coherent Tamil** | v5.1a scored 95% Tamil word validation but outputs were semantic nonsense — individual words look real but sentences have no meaning |
+| 64 | **70% Tamil threshold is too low for DAPT corpus** | Sangraha filtered at 70% still contained significant English/Tanglish contamination. Use >90% for clean DAPT |
+| 65 | **Instruction preservation requires chat data replay** | DAPT v1.1 used 0% chat replay → destroyed instruction-following. Need 5-15% chat data mixed into DAPT to preserve existing capabilities |
+| 66 | **Smaller DAPT token budget for 0.6B models** | 55M tokens overwhelmed the 0.6B model. Target 10-20M tokens with LR 1-2e-5 |
+| 67 | **Never run data pipelines locally that belong on Colab** | Heavy data processing (filtering large HF datasets, computing embeddings) should run on Colab/Kaggle — local OOM crashes waste time and risk system stability |
+| 68 | **Investigate skipped data sources before acquiring new ones** | IndicAlign Wiki_Chat/Wiki_Conv were skipped for OOM reasons (infrastructure), not quality reasons — they were never evaluated and could be significant Tamil sources |
 
 ---
 
@@ -1344,7 +1353,45 @@ SFT v4.0 used a monolithic Dataset Factory that retrieved, filtered, and compose
 - **#81**: Thirukkural verbatim recitation is dangerous for SFT — of 426 Thirukkural items in v4.1, 258 were verbatim "recite this kural" items that could cause the model to parrot Kural-style responses for unrelated questions. Filtered to 168 Q&A-format items only (interpretive questions about Kural meaning/application)
 - **#82**: Dataset quality trumps quantity — v4.1 had 13K samples but 75.8% garbage; v5.0 has 5.7K samples but 82.7% Tamil avg. A small clean dataset is far more valuable than a large contaminated one for teaching Tamil to a 0.6B model
 
+### Lessons Learned from Phase 20 — SFT v5.0 Training + Safety Mode Collapse
+
+- **#83**: Conservative LoRA (LR 1e-5, 1 epoch) on vanilla model WORKS — v5.0 was the first run to produce coherent Tamil output. The key was: (1) LR 5x lower than v4.2's catastrophic 5e-5, (2) single epoch prevents forgetting, (3) clean dataset (85.2% Tamil vs v4.1's 75.8% garbage). Sometimes less is more for 0.6B models
+- **#84**: Safety data percentage is critical for small models — v5.0 had 1,800 safety items (30.6% of dataset), causing mode collapse where every response included "தீங்கு" (harm). A 0.6B model over-indexes on high-frequency patterns. Cutting to 200 (4.6%) in v5.1, then to 45 (1%) in v5.2, progressively fixed the issue
+- **#85**: Tamil WORD validation catches what char % misses — bigram-based Tamil word validator (checking word structure, virama usage, common Tamil trigrams) correctly identifies transliterated English gibberish that scores 75-88% on char %. This fixed the 4 consecutive false positive evals (v3.8-v4.2)
+
+### Lessons Learned from Phase 21 — Iterative SFT (v5.0 → v5.1a) + Conversational Data
+
+- **#86**: Iterative single-epoch training preserves capabilities — training v5.1a on top of v5.0 (rather than from vanilla) successfully preserved Tamil patterns while adding new data. The lineage vanilla → v5.0 → v5.1a works because each epoch is conservative (LR 1e-5) and doesn't overwrite previous learning
+- **#87**: Conversational fundamentals must be explicitly in the dataset — v5.1 had only 5 conversational items out of 4,321. A 0.6B model cannot infer greeting/identity/chitchat behavior from a system prompt alone. Adding 200 explicit conversational items (greetings, identity, farewells, colloquial TN Tamil) in v5.2 was necessary
+
+### Lessons Learned from Phase 22 — Sadhguru Q&A v1 Audit + v2 Fix
+
+- **#88**: Multi-agent LLM pipelines can silently produce garbage at scale — Sadhguru Q&A v1 used CC sonnet agents to generate 1,001 Q&A pairs from 562 articles. Audit found: 35% duplicates (4 blocks of 50x identical generic text), 41% Q-A echo (copy-pasted opening sentence as both Q and A), only 38% of articles used, avg answer ~300 chars vs 5,500+ char articles. The agents hallucinated rather than extracted
+- **#89**: Use source text directly instead of LLM-generated content when possible — Sadhguru Q&A v2 bypasses LLM generation entirely, using the raw article text as answers. Result: 562 pairs (100% unique, avg 734 words) vs v1's 1,001 pairs (652 unique, ~300 chars). Direct extraction produces higher quality and longer-form training data than LLM restructuring
+- **#90**: HTML artifacts survive multiple processing stages — even after the initial scraping pipeline cleaned articles, 56 entries still had `[pullquote]`, `[SadhguruImage]`, `[separator]` artifacts. Case-insensitive regex and catch-all bracket tag removal (`re.sub(r'\[/?[A-Za-z]+[^\]]*\]', '', text)`) was needed as a final safety net
+- **#91**: Long-form answers are valuable for SFT — short answers (~300 chars) teach the model to give terse responses. Sadhguru articles averaging 734 words provide diverse, substantive Tamil prose that teaches the model both vocabulary breadth and the ability to give detailed explanations. The max_seq_length=2048 truncation is acceptable since the model learns voice/style from the opening content
+
+### Lessons Learned from Phase 23 — Clean DAPT v2.0 (Data Prep + Training)
+
+- **#92**: Qwen3 tokenizer is ~1 token/char for Tamil, not 3.5 — the 3.5 tokens/char estimate (common for other tokenizers) is wildly wrong for Qwen3's 151K vocab. This means the same text corpus produces ~3.5x fewer tokens than expected. Plan estimated ~15M tokens from 4.4M chars but got only 4.8M. Always compute actual token counts with the target tokenizer before committing to a training plan
+- **#93**: 4.8M DAPT tokens is insufficient for language acquisition on 0.6B models — v2.0 showed directional improvement (Tamil char +20%, word +16%) but the model still produces fabricated Tamil words. v1.1 used 55M tokens and showed +55% improvement. There's likely a critical mass threshold (~30-50M+ tokens) below which the model can't learn real vocabulary. Metrics improve (more Tamil-looking tokens) before actual language quality does
+- **#94**: Multi-epoch DAPT with interim eval gates beats fixed epoch count — train 1 epoch → eval → decide. Epoch 1 showed 14.5% loss drop and +19% word improvement. Epoch 2 showed only 2.0% loss drop and no quality improvement (plateaued at 95% word). Stopping after 2 instead of blindly running 3-4 epochs saved compute
+- **#95**: Cosine LR schedule decays to ~0 by epoch end — if doing multi-epoch DAPT with separate training passes, create a fresh Trainer for each epoch to get a new cosine warmup→decay cycle. Resuming with the old optimizer's near-zero LR wastes the entire epoch
+- **#96**: Host DAPT source files on HuggingFace for reproducible Colab runs — upload source files to an HF dataset repo (`vazhi-dapt-sources-v2_0`), download in Colab via `hf_hub_download`. Eliminates manual file uploads, makes notebooks reproducible, and enables sharing with collaborators
+- **#97**: tamil_char_pct denominator must exclude whitespace and digits — including spaces/digits in the denominator artificially deflates Tamil percentage. 562 Sadhguru articles showed 87% Tamil with naive denominator vs 97% with corrected denominator `sum(1 for c in text if not c.isspace() and not c.isdigit())`. The 10% difference caused an assertion failure
+- **#98**: DAPT methodology is confirmed correct — DAPT v2.0 improved Tamil metrics, preserved instruction following (9/9), and used clean data (>=90% Tamil). The direction is right: clean data + conservative LR + chat replay works. The only issue is volume — need 30-50M+ tokens, not 4.8M. Data acquisition is the bottleneck, not methodology
+
+### Lessons Learned from Phase 24 — Clean DAPT v2.1 Data Prep
+
+- **#99**: IndicAlign Wiki_Chat is excellent DAPT source — 97.6% Tamil avg, 99.6% docs ≥90%, long-form (4854 chars/doc, 1755 chars/turn), diverse topics (wildlife, politics, movies, literature, history, cricket). 32 parquet shards with potentially 160K+ Tamil docs. Use `tam_Taml` column for Tamil text
+- **#100**: IndicAlign Wiki_Conv is useless for DAPT — 115 chars/turn (too short), formulaic factoid Q&A ("Where is X?" / "Sure, what do you want to know?"). High Tamil % (96%) but zero depth or language diversity. Reject for DAPT
+- **#101**: Cap any single DAPT source at 60-70% — encyclopedic dominance (Wiki_Chat) risks tone drift. GPT5.2 recommended 60-70% max. Diverse source mix (conversational + procedural + literary + encyclopedic) produces better language models than volume from one source
+- **#102**: Chat replay must be 5-10% of DAPT tokens, not 1% — v2.0 had 1.4% (200K tokens) which is too thin. GPT5.2 recommended 5-10% (2-5M tokens). v2.1 achieved 10.9% (4.2M tokens from OpenAssistant_T + Indic_ShareLlama + Dolly_T + local SFT). Critical for preserving instruction-following during DAPT
+- **#103**: IndicAlign Anudesh has no Tamil — different schema (`interactions` column with English text, not `tam_Taml`). Don't assume all IndicAlign configs have Tamil. Check schema first
+- **#104**: Streaming IndicAlign at scale needs Colab High RAM — local machine OOM'd when scanning 32 parquet shards. Data prep is CPU-only but memory-intensive. Run on Colab Pro with High RAM option
+- **#105**: Fresh start on vanilla model when token budget is sufficient — with 39.5M tokens (8.2x v2.0), no need to build incrementally on v5.3 (which has SFT artifacts). Clean DAPT from scratch avoids inheriting v5.3's semantic gibberish patterns
+
 ---
 
 *Document created: 2026-02-07*
-*Last updated: 2026-02-14 (Dataset v5.0 complete — two-source Tamil strategy, 5,688 samples on HuggingFace)*
+*Last updated: 2026-02-15 (DAPT v2.1 data prep complete, training notebook ready, 105 lessons learned)*

@@ -41,7 +41,7 @@ dependencies:
   path: ^1.8.3
   share_plus: ^10.1.2
   package_info_plus: ^8.1.2
-  llamadart: ^0.4.0
+  llamadart: ^0.5.3
   http: ^1.6.0
   connectivity_plus: ^6.1.1
   crypto: ^3.0.6

@@ -347,7 +347,7 @@ abstract class AppLocalizations {
   /// No description provided for @downloadModelDescription.
   ///
   /// In en, this message translates to:
-  /// **'Required for offline use (~1.6 GB)'**
+  /// **'Required for offline use (~806 MB)'**
   String get downloadModelDescription;
 
   /// No description provided for @downloadProgress.

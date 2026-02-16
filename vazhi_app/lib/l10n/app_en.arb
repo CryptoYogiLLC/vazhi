@@ -90,7 +90,7 @@
   "offlineModeDescription": "Some features may be limited",
 
   "downloadModel": "Download AI Model",
-  "downloadModelDescription": "Required for offline use (~1.6 GB)",
+  "downloadModelDescription": "Required for offline use (~806 MB)",
   "downloadProgress": "Downloading: {progress}%",
   "@downloadProgress": {
     "placeholders": {

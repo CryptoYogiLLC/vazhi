@@ -132,7 +132,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get downloadModel => 'Download AI Model';
 
   @override
-  String get downloadModelDescription => 'Required for offline use (~1.6 GB)';
+  String get downloadModelDescription => 'Required for offline use (~806 MB)';
 
   @override
   String downloadProgress(int progress) {
