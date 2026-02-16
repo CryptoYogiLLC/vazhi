@@ -42,11 +42,6 @@ enum ModelStatus {
   error,
 }
 
-/// Model status provider
-final modelStatusProvider = StateProvider<ModelStatus>(
-  (ref) => ModelStatus.notDownloaded,
-);
-
 /// Download progress provider (0.0 to 1.0)
 final downloadProgressProvider = StateProvider<double>((ref) => 0.0);
 
@@ -174,8 +169,9 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
         state = ModelStatus.notDownloaded;
       }
     } catch (_) {
-      // loadModel already sets state to error; swallow here to prevent
-      // unhandled async exception from crashing the app on startup.
+      // Covers both isModelDownloaded() (filesystem errors) and loadModel()
+      // failures. Always set error state so the UI reflects the actual status.
+      state = ModelStatus.error;
     }
   }
 

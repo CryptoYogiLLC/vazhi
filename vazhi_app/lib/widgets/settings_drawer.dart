@@ -501,19 +501,15 @@ class SettingsDrawer extends ConsumerWidget {
             foregroundColor: Colors.white,
           ),
           onPressed: () async {
-            try {
-              await ref.read(modelManagerProvider.notifier).loadModel();
-            } catch (e) {
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text(
-                      '${isTamil ? "ஏற்றம் தோல்வி" : "Load failed"}: $e',
-                    ),
-                    duration: const Duration(seconds: 10),
-                  ),
-                );
-              }
+            await ref.read(modelManagerProvider.notifier).loadModel();
+            final loadedStatus = ref.read(modelManagerProvider);
+            if (loadedStatus == ModelStatus.error && context.mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(isTamil ? 'ஏற்றம் தோல்வி' : 'Load failed'),
+                  duration: const Duration(seconds: 10),
+                ),
+              );
             }
           },
         );
@@ -553,29 +549,24 @@ class SettingsDrawer extends ConsumerWidget {
             foregroundColor: Colors.white,
           ),
           onPressed: () async {
-            try {
-              // Check if model file exists — retry load, not download
-              await ref.read(modelManagerProvider.notifier).checkStatus();
-              final currentStatus = ref.read(modelManagerProvider);
-              if (currentStatus == ModelStatus.downloaded) {
-                await ref.read(modelManagerProvider.notifier).loadModel();
-              } else {
-                // File missing — need to re-download
-                if (!context.mounted) return;
-                final result = await DownloadDialog.show(context);
-                if (result == true) {
-                  await ref.read(modelManagerProvider.notifier).loadModel();
-                }
-              }
-            } catch (e) {
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    content: Text('${isTamil ? "பிழை" : "Error"}: $e'),
-                    duration: const Duration(seconds: 10),
-                  ),
-                );
-              }
+            // Check if model file exists — retry load, not download
+            await ref.read(modelManagerProvider.notifier).checkStatus();
+            final currentStatus = ref.read(modelManagerProvider);
+            if (currentStatus == ModelStatus.ready) {
+              // checkStatus auto-loaded successfully
+              return;
+            }
+            if (currentStatus == ModelStatus.notDownloaded) {
+              // File missing — need to re-download
+              if (!context.mounted) return;
+              await DownloadDialog.show(context);
+            } else if (currentStatus == ModelStatus.error && context.mounted) {
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text(isTamil ? 'ஏற்றம் தோல்வி' : 'Load failed'),
+                  duration: const Duration(seconds: 10),
+                ),
+              );
             }
           },
         );

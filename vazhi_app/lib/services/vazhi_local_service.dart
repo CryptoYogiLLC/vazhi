@@ -3,7 +3,6 @@
 /// Handles local GGUF model inference using llamadart.
 library;
 
-import 'dart:async';
 import 'dart:io';
 import 'package:llamadart/llamadart.dart';
 import 'package:path_provider/path_provider.dart';
@@ -13,6 +12,7 @@ import 'package:http/http.dart' as http;
 class VazhiLocalService {
   LlamaEngine? _engine;
   ChatSession? _session;
+  String? _currentPack;
   bool _isModelLoaded = false;
 
   /// Model download URL from HuggingFace
@@ -76,6 +76,13 @@ class VazhiLocalService {
 
   /// Check if model is loaded and ready
   bool get isReady => _isModelLoaded;
+
+  /// Throw if model is not loaded. Guards all inference methods.
+  void _assertReady() {
+    if (!_isModelLoaded || _engine == null) {
+      throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
+    }
+  }
 
   /// Get the local model file path
   Future<String> get modelPath async {
@@ -158,6 +165,30 @@ class VazhiLocalService {
     }
   }
 
+  /// GGUF magic bytes: 'GGUF' = [0x47, 0x47, 0x55, 0x46]
+  static const _ggufMagic = [0x47, 0x47, 0x55, 0x46];
+
+  /// Validate GGUF file header before passing to native llama.cpp.
+  /// Catches corrupt/partial downloads that would cause native SIGSEGV.
+  Future<void> _validateGgufHeader(String path) async {
+    final file = File(path);
+    final raf = await file.open();
+    try {
+      final header = await raf.read(4);
+      if (header.length < 4 ||
+          header[0] != _ggufMagic[0] ||
+          header[1] != _ggufMagic[1] ||
+          header[2] != _ggufMagic[2] ||
+          header[3] != _ggufMagic[3]) {
+        throw VazhiLocalException(
+          'மாடல் கோப்பு சிதைந்துள்ளது. மீண்டும் பதிவிறக்கம் செய்யுங்கள்.',
+        );
+      }
+    } finally {
+      await raf.close();
+    }
+  }
+
   /// Initialize the engine and load the model
   Future<void> initialize() async {
     if (_isModelLoaded) return;
@@ -168,6 +199,9 @@ class VazhiLocalService {
         'மாடல் கோப்பு இல்லை. முதலில் பதிவிறக்கம் செய்யுங்கள்.',
       );
     }
+
+    // Validate GGUF header before native load to prevent SIGSEGV on corrupt files
+    await _validateGgufHeader(path);
 
     _engine = LlamaEngine(LlamaBackend());
     try {
@@ -186,22 +220,22 @@ class VazhiLocalService {
     _isModelLoaded = true;
   }
 
-  /// Ensure a session exists. Reuses the current session to preserve
-  /// conversation history (critical for multi-turn RAG). Only creates
-  /// a new session on first use or after explicit `clearSession()`.
+  /// Ensure a session exists with the correct pack's system prompt.
+  /// Recreates the session when the pack changes so the system prompt
+  /// matches the selected knowledge domain. Preserves session within
+  /// the same pack for multi-turn RAG continuity.
   void _ensureSession(String pack) {
-    if (_session == null) {
+    if (_session == null || _currentPack != pack) {
       final systemPrompt =
           packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
       _session = ChatSession(_engine!, systemPrompt: systemPrompt);
+      _currentPack = pack;
     }
   }
 
   /// Send a chat message and get a response
   Future<String> chat(String message, {String pack = 'culture'}) async {
-    if (!_isModelLoaded || _engine == null) {
-      throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
-    }
+    _assertReady();
 
     _ensureSession(pack);
 
@@ -209,6 +243,7 @@ class VazhiLocalService {
     await for (final chunk in _session!.create([
       LlamaTextContent(message),
     ], params: _generationParams)) {
+      if (chunk.choices.isEmpty) continue;
       final content = chunk.choices.first.delta.content;
       if (content != null) {
         buffer.write(content);
@@ -218,99 +253,16 @@ class VazhiLocalService {
     return _cleanOutput(buffer.toString());
   }
 
-  /// Stream chat response token by token
-  Stream<String> chatStream(String message, {String pack = 'culture'}) async* {
-    if (!_isModelLoaded || _engine == null) {
-      throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
-    }
-
-    _ensureSession(pack);
-
-    await for (final chunk in _session!.create([
-      LlamaTextContent(message),
-    ], params: _generationParams)) {
-      final content = chunk.choices.first.delta.content;
-      if (content != null && content.isNotEmpty) {
-        // Strip any partial chat tokens from streamed chunks
-        final cleaned = _cleanOutput(content);
-        if (cleaned.isNotEmpty) {
-          yield cleaned;
-        }
-      }
-    }
-  }
-
-  /// Stream chat response with metrics tracking
-  Stream<(String token, InferenceMetrics metrics)> chatStreamWithMetrics(
-    String message, {
-    String pack = 'culture',
-  }) async* {
-    if (!_isModelLoaded || _engine == null) {
-      throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
-    }
-
-    _ensureSession(pack);
-
-    final metrics = InferenceMetrics()..startInference();
-
-    await for (final chunk in _session!.create([
-      LlamaTextContent(message),
-    ], params: _generationParams)) {
-      final content = chunk.choices.first.delta.content;
-      if (content != null && content.isNotEmpty) {
-        metrics.onToken();
-        yield (content, metrics);
-      }
-    }
-
-    metrics.endInference();
-    _lastMetrics = metrics;
-  }
-
-  /// Last recorded inference metrics
-  InferenceMetrics? _lastMetrics;
-
-  /// Get the last recorded inference metrics
-  InferenceMetrics? get lastMetrics => _lastMetrics;
-
-  /// Send a chat message with metrics and get response + metrics
-  Future<(String response, InferenceMetrics metrics)> chatWithMetrics(
-    String message, {
-    String pack = 'culture',
-  }) async {
-    if (!_isModelLoaded || _engine == null) {
-      throw VazhiLocalException('மாடல் ஏற்றப்படவில்லை');
-    }
-
-    _ensureSession(pack);
-
-    final metrics = InferenceMetrics()..startInference();
-    final buffer = StringBuffer();
-
-    await for (final chunk in _session!.create([
-      LlamaTextContent(message),
-    ], params: _generationParams)) {
-      final content = chunk.choices.first.delta.content;
-      if (content != null && content.isNotEmpty) {
-        metrics.onToken();
-        buffer.write(content);
-      }
-    }
-
-    metrics.endInference();
-    _lastMetrics = metrics;
-
-    return (_cleanOutput(buffer.toString()), metrics);
-  }
-
   /// Clear the chat session (start fresh conversation)
   void clearSession() {
     _session = null;
+    _currentPack = null;
   }
 
   /// Dispose of resources
   Future<void> dispose() async {
     _session = null;
+    _currentPack = null;
     await _engine?.dispose();
     _engine = null;
     _isModelLoaded = false;
@@ -336,73 +288,3 @@ class VazhiLocalException implements Exception {
   @override
   String toString() => message;
 }
-
-/// Metrics collected during inference
-class InferenceMetrics {
-  final Stopwatch _stopwatch = Stopwatch();
-  int _tokenCount = 0;
-  int _firstTokenMs = 0;
-  bool _firstTokenRecorded = false;
-
-  /// Start tracking inference
-  void startInference() {
-    _stopwatch.reset();
-    _stopwatch.start();
-    _tokenCount = 0;
-    _firstTokenMs = 0;
-    _firstTokenRecorded = false;
-  }
-
-  /// Record first token arrival
-  void onFirstToken() {
-    if (!_firstTokenRecorded) {
-      _firstTokenMs = _stopwatch.elapsedMilliseconds;
-      _firstTokenRecorded = true;
-    }
-  }
-
-  /// Record a token
-  void onToken() {
-    _tokenCount++;
-    if (!_firstTokenRecorded) {
-      onFirstToken();
-    }
-  }
-
-  /// End tracking inference
-  void endInference() {
-    _stopwatch.stop();
-  }
-
-  /// Total inference time in milliseconds
-  int get totalMs => _stopwatch.elapsedMilliseconds;
-
-  /// Time to first token in milliseconds
-  int get firstTokenMs => _firstTokenMs;
-
-  /// Number of tokens generated
-  int get tokenCount => _tokenCount;
-
-  /// Tokens per second throughput
-  double get tokensPerSecond {
-    if (totalMs == 0) return 0;
-    return _tokenCount / (totalMs / 1000);
-  }
-
-  /// Convert to JSON-serializable map
-  Map<String, dynamic> toJson() => {
-    'total_ms': totalMs,
-    'first_token_ms': _firstTokenMs,
-    'token_count': _tokenCount,
-    'tokens_per_second': tokensPerSecond.toStringAsFixed(2),
-    'timestamp': DateTime.now().toIso8601String(),
-  };
-
-  @override
-  String toString() =>
-      'InferenceMetrics(total: ${totalMs}ms, firstToken: ${_firstTokenMs}ms, '
-      'tokens: $_tokenCount, tps: ${tokensPerSecond.toStringAsFixed(1)})';
-}
-
-/// Callback for streaming responses with metrics
-typedef StreamCallback = void Function(String token, InferenceMetrics metrics);

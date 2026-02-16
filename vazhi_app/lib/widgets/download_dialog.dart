@@ -98,19 +98,20 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
       _loadError = null;
     });
 
-    try {
-      ref.read(modelManagerProvider.notifier).setDownloaded();
-      await ref.read(modelManagerProvider.notifier).loadModel();
-      if (mounted) {
-        Navigator.pop(context, true);
-      }
-    } catch (e) {
-      if (mounted) {
-        setState(() {
-          _isLoadingModel = false;
-          _loadError = 'மாடல் ஏற்றம் தோல்வி: $e';
-        });
-      }
+    ref.read(modelManagerProvider.notifier).setDownloaded();
+    await ref.read(modelManagerProvider.notifier).loadModel();
+
+    if (!mounted) return;
+
+    // loadModel() no longer throws — check state to determine success
+    final status = ref.read(modelManagerProvider);
+    if (status == ModelStatus.ready) {
+      Navigator.pop(context, true);
+    } else {
+      setState(() {
+        _isLoadingModel = false;
+        _loadError = 'மாடல் ஏற்றம் தோல்வி. மீண்டும் முயற்சிக்கவும்.';
+      });
     }
   }
 

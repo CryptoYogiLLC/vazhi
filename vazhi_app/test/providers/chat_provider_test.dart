@@ -5,7 +5,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vazhi_app/providers/chat_provider.dart';
-import 'package:vazhi_app/models/message.dart';
 
 void main() {
   group('InferenceMode', () {
@@ -114,16 +113,6 @@ void main() {
       container.read(inferenceModeProvider.notifier).state =
           InferenceMode.cloud;
       expect(container.read(inferenceModeProvider), InferenceMode.cloud);
-    });
-  });
-
-  group('modelStatusProvider', () {
-    test('defaults to notDownloaded', () {
-      final container = ProviderContainer();
-      addTearDown(container.dispose);
-
-      final status = container.read(modelStatusProvider);
-      expect(status, ModelStatus.notDownloaded);
     });
   });
 

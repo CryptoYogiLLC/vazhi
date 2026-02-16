@@ -110,6 +110,11 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     this._ref,
   ) : super([]);
 
+  /// Replace the loading placeholder with a final message.
+  void _replaceLoading(HybridMessage loading, HybridMessage replacement) {
+    state = [...state.where((m) => m.id != loading.id), replacement];
+  }
+
   /// Wait for model to become ready if it's currently loading.
   /// Returns true if AI became available, false if timed out or not loading.
   Future<bool> _waitForModelIfLoading() async {
@@ -120,14 +125,16 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     }
 
     // Model is loading — poll until ready (max 30s)
+    // Check first, then delay — avoids unnecessary 500ms wait if model
+    // became ready between the initial read and the loop entry.
     for (var i = 0; i < 60; i++) {
-      await Future.delayed(const Duration(milliseconds: 500));
       final current = _ref.read(modelManagerProvider);
       if (current == ModelStatus.ready) return true;
       if (current == ModelStatus.error ||
           current == ModelStatus.notDownloaded) {
         return false;
       }
+      await Future.delayed(const Duration(milliseconds: 500));
     }
     return false;
   }
@@ -172,7 +179,7 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
       // First, try knowledge service for classification and lookup
       final knowledgeResponse = await _knowledgeService.query(text);
 
-      var modelStatus = _ref.read(modelManagerProvider);
+      final modelStatus = _ref.read(modelManagerProvider);
       final inferenceMode = _ref.read(inferenceModeProvider);
       var aiReady =
           (modelStatus == ModelStatus.ready &&
@@ -181,11 +188,7 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
 
       // If model is still loading, wait for it instead of falling back
       if (!aiReady && inferenceMode == InferenceMode.local) {
-        final becameReady = await _waitForModelIfLoading();
-        if (becameReady) {
-          modelStatus = ModelStatus.ready;
-          aiReady = true;
-        }
+        aiReady = await _waitForModelIfLoading();
       }
 
       // Pack switching logic:
@@ -219,10 +222,10 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
                     KnowledgeCategory.emergency);
 
         if (isExactLookup) {
-          state = [
-            ...state.where((m) => m.id != loadingMessage.id),
+          _replaceLoading(
+            loadingMessage,
             HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
-          ];
+          );
           return;
         }
 
@@ -232,38 +235,29 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
             : null;
         await _tryAiWithContext(text, matchedPack, loadingMessage, context);
       } else {
-        // No AI available — use deterministic answers when possible
-        if (knowledgeResponse.answeredDeterministically &&
-            knowledgeResponse.hasResponse) {
-          state = [
-            ...state.where((m) => m.id != loadingMessage.id),
+        // No AI available — show whatever knowledge we have
+        if (knowledgeResponse.hasResponse) {
+          _replaceLoading(
+            loadingMessage,
             HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
-          ];
-        } else if (knowledgeResponse.hasResponse) {
-          state = [
-            ...state.where((m) => m.id != loadingMessage.id),
-            HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
-          ];
+          );
         } else {
           // Show contextual message based on model state
           final isLoading =
               modelStatus == ModelStatus.loading ||
               modelStatus == ModelStatus.downloaded;
-          state = [
-            ...state.where((m) => m.id != loadingMessage.id),
+          _replaceLoading(
+            loadingMessage,
             HybridMessage.error(
               isLoading
                   ? 'AI மாடல் ஏற்றப்படுகிறது... சில விநாடிகள் காத்திருந்து மீண்டும் முயற்சிக்கவும்.'
                   : 'இந்த கேள்விக்கு AI தேவை. AI Brain பதிவிறக்கம் செய்யுங்கள்.',
             ),
-          ];
+          );
         }
       }
     } catch (e) {
-      state = [
-        ...state.where((m) => m.id != loadingMessage.id),
-        HybridMessage.error('பிழை: $e'),
-      ];
+      _replaceLoading(loadingMessage, HybridMessage.error('பிழை: $e'));
     }
   }
 
@@ -280,6 +274,21 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
         'மேலே உள்ள தகவல்களை பயன்படுத்தி தமிழில் விளக்கமாக பதிலளியுங்கள்.';
   }
 
+  /// Route a prompt to local or cloud AI. Returns null if AI is unavailable.
+  Future<String?> _callAi(String prompt, {required String pack}) async {
+    final modelStatus = _ref.read(modelManagerProvider);
+    final inferenceMode = _ref.read(inferenceModeProvider);
+
+    if (modelStatus == ModelStatus.ready &&
+        inferenceMode == InferenceMode.local) {
+      return _localService.chat(prompt, pack: pack);
+    }
+    if (inferenceMode == InferenceMode.cloud) {
+      return _apiService.chat(prompt, pack: pack);
+    }
+    return null;
+  }
+
   /// Send query to AI, optionally augmented with SQLite context (RAG).
   Future<void> _tryAiWithContext(
     String text,
@@ -287,30 +296,18 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     HybridMessage loadingMessage,
     String? context,
   ) async {
-    final modelStatus = _ref.read(modelManagerProvider);
-    final inferenceMode = _ref.read(inferenceModeProvider);
     final prompt = _buildRagPrompt(text, context);
+    final aiResponse = await _callAi(prompt, pack: pack);
 
-    if (modelStatus == ModelStatus.ready &&
-        inferenceMode == InferenceMode.local) {
-      final aiResponse = await _localService.chat(prompt, pack: pack);
-      state = [
-        ...state.where((m) => m.id != loadingMessage.id),
-        HybridMessage.ai(aiResponse, pack: pack),
-      ];
-    } else if (inferenceMode == InferenceMode.cloud) {
-      final aiResponse = await _apiService.chat(prompt, pack: pack);
-      state = [
-        ...state.where((m) => m.id != loadingMessage.id),
-        HybridMessage.ai(aiResponse, pack: pack),
-      ];
+    if (aiResponse != null) {
+      _replaceLoading(loadingMessage, HybridMessage.ai(aiResponse, pack: pack));
     } else {
-      state = [
-        ...state.where((m) => m.id != loadingMessage.id),
+      _replaceLoading(
+        loadingMessage,
         HybridMessage.error(
           'தகவல் கிடைக்கவில்லை. AI Brain பதிவிறக்கம் செய்யுங்கள்.',
         ),
-      ];
+      );
     }
   }
 
@@ -323,38 +320,26 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     final userQuery = message.knowledgeResponse!.classification.query;
     final prompt = _buildRagPrompt('விளக்கம் தாருங்கள்: $userQuery', context);
 
-    // Add loading
     final loadingMessage = HybridMessage.loading();
     state = [...state, loadingMessage];
 
     try {
-      final modelStatus = _ref.read(modelManagerProvider);
-      final inferenceMode = _ref.read(inferenceModeProvider);
       final pack = _ref.read(currentPackProvider);
+      final aiResponse = await _callAi(prompt, pack: pack);
 
-      String aiResponse;
-      if (modelStatus == ModelStatus.ready &&
-          inferenceMode == InferenceMode.local) {
-        aiResponse = await _localService.chat(prompt, pack: pack);
-      } else if (inferenceMode == InferenceMode.cloud) {
-        aiResponse = await _apiService.chat(prompt, pack: pack);
+      if (aiResponse != null) {
+        _replaceLoading(
+          loadingMessage,
+          HybridMessage.ai(aiResponse, pack: pack),
+        );
       } else {
-        state = [
-          ...state.where((m) => m.id != loadingMessage.id),
+        _replaceLoading(
+          loadingMessage,
           HybridMessage.error('AI கிடைக்கவில்லை'),
-        ];
-        return;
+        );
       }
-
-      state = [
-        ...state.where((m) => m.id != loadingMessage.id),
-        HybridMessage.ai(aiResponse, pack: pack),
-      ];
     } catch (e) {
-      state = [
-        ...state.where((m) => m.id != loadingMessage.id),
-        HybridMessage.error('AI பிழை: $e'),
-      ];
+      _replaceLoading(loadingMessage, HybridMessage.error('AI பிழை: $e'));
     }
   }
 
@@ -381,16 +366,3 @@ final hybridChatProvider =
         ref,
       );
     });
-
-/// Check if model is ready for AI queries
-final isModelReadyProvider = Provider<bool>((ref) {
-  final status = ref.watch(modelManagerProvider);
-  return status == ModelStatus.ready;
-});
-
-/// Check if any AI is available (local or cloud)
-final isAiAvailableProvider = Provider<bool>((ref) {
-  final status = ref.watch(modelManagerProvider);
-  final mode = ref.watch(inferenceModeProvider);
-  return status == ModelStatus.ready || mode == InferenceMode.cloud;
-});
