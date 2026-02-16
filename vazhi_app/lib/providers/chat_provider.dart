@@ -165,12 +165,17 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   }
 
   Future<void> _checkModelStatus() async {
-    if (await _localService.isModelDownloaded()) {
-      state = ModelStatus.downloaded;
-      // Auto-load on startup so users don't have to manually tap "Load"
-      await loadModel();
-    } else {
-      state = ModelStatus.notDownloaded;
+    try {
+      if (await _localService.isModelDownloaded()) {
+        state = ModelStatus.downloaded;
+        // Auto-load on startup so users don't have to manually tap "Load"
+        await loadModel();
+      } else {
+        state = ModelStatus.notDownloaded;
+      }
+    } catch (_) {
+      // loadModel already sets state to error; swallow here to prevent
+      // unhandled async exception from crashing the app on startup.
     }
   }
 
@@ -190,7 +195,6 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
       state = ModelStatus.downloaded;
     } catch (e) {
       state = ModelStatus.error;
-      rethrow;
     }
   }
 
@@ -223,7 +227,9 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
       _ref.read(inferenceModeProvider.notifier).state = InferenceMode.local;
     } catch (e) {
       state = ModelStatus.error;
-      rethrow;
+      // Don't rethrow — state is set, callers check modelManagerProvider.
+      // Rethrowing from fire-and-forget _checkModelStatus causes unhandled
+      // async exceptions that crash the app (especially on Android).
     }
   }
 
