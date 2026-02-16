@@ -115,16 +115,16 @@ class StorageInfo {
 class ModelDownloadService {
   /// Model download URL
   static const String modelUrl =
-      'https://huggingface.co/CryptoYogi/vazhi-gguf/resolve/main/vazhi-v1.gguf';
+      'https://huggingface.co/CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF/resolve/main/vazhi-v7_1-q4_k_m.gguf';
 
   /// Model filename
-  static const String modelFilename = 'vazhi-v1.gguf';
+  static const String modelFilename = 'vazhi-v7_1-q4_k_m.gguf';
 
   /// Partial download filename
-  static const String partialFilename = 'vazhi-v1.gguf.partial';
+  static const String partialFilename = 'vazhi-v7_1-q4_k_m.gguf.partial';
 
-  /// Expected model size (~1.6 GB)
-  static const int expectedModelSize = 1630000000;
+  /// Expected model size (~806 MB)
+  static const int expectedModelSize = 806000000;
 
   /// Minimum required space (model size + 200MB buffer)
   static const int requiredSpace = expectedModelSize + 200 * 1024 * 1024;
@@ -238,7 +238,7 @@ class ModelDownloadService {
     final file = File(path);
     if (await file.exists()) {
       final size = await file.length();
-      return size > 1000000000; // At least 1GB
+      return size > 500000000; // At least 500MB for Q4_K_M GGUF
     }
     return false;
   }
@@ -594,7 +594,7 @@ class ModelDownloadService {
     if (!await file.exists()) return false;
 
     final size = await file.length();
-    if (size < 1000000000) return false; // At least 1GB
+    if (size < 500000000) return false; // At least 500MB for Q4_K_M GGUF
 
     // If we have a SHA256 checksum, verify it
     if (expectedSha256 != null) {

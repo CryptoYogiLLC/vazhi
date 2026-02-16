@@ -183,9 +183,9 @@ void main() {
       expect(ModelDownloadService.modelFilename, endsWith('.gguf'));
     });
 
-    test('expectedModelSize is approximately 1.6GB', () {
-      expect(ModelDownloadService.expectedModelSize, greaterThan(1500000000));
-      expect(ModelDownloadService.expectedModelSize, lessThan(2000000000));
+    test('expectedModelSize is approximately 806MB', () {
+      expect(ModelDownloadService.expectedModelSize, greaterThan(500000000));
+      expect(ModelDownloadService.expectedModelSize, lessThan(1000000000));
     });
 
     test('requiredSpace includes buffer', () {

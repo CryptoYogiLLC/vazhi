@@ -17,15 +17,15 @@ class VazhiLocalService {
   String? _currentPack;
 
   /// Model download URL from HuggingFace
-  /// Q4_K_M quantization (~1.6GB) - good balance of size and quality
+  /// Gemma 3 1B-it SFT v7.1, Q4_K_M quantization (~806MB)
   static const String modelUrl =
-      'https://huggingface.co/CryptoYogi/vazhi-gguf/resolve/main/vazhi-v1.gguf';
+      'https://huggingface.co/CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF/resolve/main/vazhi-v7_1-q4_k_m.gguf';
 
   /// Model filename
-  static const String modelFilename = 'vazhi-v1.gguf';
+  static const String modelFilename = 'vazhi-v7_1-q4_k_m.gguf';
 
-  /// Expected model size in bytes (~1.6GB)
-  static const int expectedModelSize = 1630000000;
+  /// Expected model size in bytes (~806MB)
+  static const int expectedModelSize = 806000000;
 
   /// System prompts for each pack
   static const Map<String, String> packSystemPrompts = {
@@ -64,8 +64,8 @@ class VazhiLocalService {
     final file = File(path);
     if (await file.exists()) {
       final size = await file.length();
-      // Check if file size is reasonable (at least 1GB)
-      return size > 1000000000;
+      // Check if file size is reasonable (at least 500MB for Q4_K_M GGUF)
+      return size > 500000000;
     }
     return false;
   }
