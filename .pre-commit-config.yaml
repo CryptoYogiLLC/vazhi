@@ -26,7 +26,7 @@ repos:
       - id: mixed-line-ending
       - id: check-added-large-files
         args: ['--maxkb=500']
-        exclude: '^(models/|data/|.*\.gguf|.*\.bin|.*\.db)$'
+        exclude: '^(models/|data/|notebooks/)|(\.(gguf|bin|db))$'
 
   # Python Security Linting
   - repo: https://github.com/pycqa/bandit

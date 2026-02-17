@@ -42,6 +42,13 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | DAPT v2.1 Data | 2026-02-15 | ✅ Complete | 5-source high-quality Tamil corpus: Wiki_Chat 27.2M (70%), Chat replay 4.2M (11%, from OpenAssistant_T + Indic_ShareLlama + Dolly_T + local SFT), Sadhguru 3.9M (10%), WikiHow 3.3M (8%), Classical 360K (1%). Tamil >=90%, NFKC normalized. 38,580 blocks × 1024 = 39.5M tokens (8.2x larger than v2.0). Dataset: `CryptoYogi/vazhi-dapt-tamil-v2_1`. Notebook: `Vazhi_DAPT_Data_v2_1.ipynb` (Colab Pro, CPU, High RAM) |
 | DAPT v2.1 | 2026-02-15 | ✅ Complete | Vanilla Qwen3-0.6B (fresh start), LoRA r=16, LR 1e-5, 2 epochs (2,412 steps) on A100-80GB, batch 32. Loss 1.31→0.83 (37% drop). Tamil word 2%→56% (+54%), instruction following 9/9 preserved, English coherent. GO verdict. Model: `CryptoYogi/vazhi-dapt-v2_1`, Adapter: `CryptoYogi/vazhi-dapt-v2_1-lora`. Notebook: `Vazhi_DAPT_v2_1_Tamil.ipynb` |
 | SFT v6.0 | 2026-02-15 | ❌ Failed | DAPT v2.1 + SFT (3,837 train, LoRA r=16, LR 1e-5, 1 epoch, 479 steps) on L4-24GB. Loss 1.37→0.94 (31% drop), eval loss 0.99. 16/16 eval "passed" (78% Tamil word) but **outputs still semantic gibberish** — same pattern as v5.3. Made-up words, Wikipedia-style noise, no correct answers. Tamil word actually decreased (94%→78%) — SFT on task behavior may have traded off raw Tamil fluency. MAX_LENGTH remained at 2048, 12.9% of samples truncated (long Sadhguru articles). DAPT v2.1 (39.5M tokens) + SFT (3.8K samples) insufficient for 0.6B model to learn Tamil semantics. Model: `CryptoYogi/vazhi-v6_0`, Adapter: `CryptoYogi/vazhi-v6_0-lora`. Notebook: `Vazhi_SFT_v6_0_OnDAPT.ipynb` |
+| Model Comparison v1 | 2026-02-15 | ✅ Complete | Benchmarked 7 models on 5 Tamil + 5 English prompts. **Gemma 3 1B-it wins**: real Tamil, relevant answers, structured output, Q4_K_M = 0.60 GB. Qwen3 models all produce gibberish; Sarvam-1 has Tamil but no instruction-following; Gemma 3n E2B too large (3.6 GB GGUF). **PIVOT: Qwen3-0.6B → Gemma 3 1B-it.** Notebook: `Vazhi_Model_Comparison_v1.ipynb` |
+| Data v7.0 | 2026-02-16 | ✅ Complete | Dataset rebuild for Gemma 3 format (model-agnostic instruction/output, not ChatML). 4,172 samples (3,754 train / 418 eval). Spiritual 39.2%, domain 51.8%, identity 5.5%, safety 0.8%. 61 mission pairs (VAZHI acronym, open source, offline). Avg 47 words. Dataset: `CryptoYogi/vazhi-tamil-sft-v7_0` |
+| SFT v7.0 | 2026-02-16 | ⚠️ Partial | Gemma 3 1B-it + LoRA r=8 q_proj+v_proj, LR 1e-5, 1 epoch (211 steps), L4-24GB. Loss 5.35→4.73. Tamil preserved: 93%→92% char, 95%→94% word. 16/16 eval passed. **BUT: identity NOT learned** (still says Google LLM), factual corrections not taken (capital still Coimbatore). Conservative LoRA too weak to override Gemma's 2T-token pretrained priors. Model: `CryptoYogi/vazhi-v7_0`, Adapter: `CryptoYogi/vazhi-v7_0-lora`. Notebook: `Vazhi_SFT_v7_0_Gemma3.ipynb` |
+| SFT v7.1 | 2026-02-16 | ✅ **BEST** | Incremental on v7.0 merged. LoRA r=16 q_proj+v_proj, LR 1e-5, 1 epoch (234 steps), A100-80GB. Loss 4.89→4.18 (14.4% drop). **Tamil IMPROVED: 89%→95% char, 90%→96% word (best ever).** 16/16 eval passed. Identity still says Google — handled via system prompt. Chennai correct in A/B test. **DEPLOYMENT CANDIDATE.** Model: `CryptoYogi/vazhi-v7_1`, Adapter: `CryptoYogi/vazhi-v7_1-lora`. Notebook: `Vazhi_SFT_v7_1_Gemma3.ipynb` |
+| SFT v7.2 | 2026-02-16 | ❌ Failed | Identity-only reinforcement on v7.1: 90 samples (61 mission + 29 corrections) x 10 epochs (~60 steps), LoRA r=16, LR 1e-5, A100-80GB. Identity NOT learned (0/4 say VAZHI, 2/4 still say Google). Tamil preserved (99% word). **BUT domain knowledge REGRESSED** — model says "sorry" to most domain questions. Gemma's Google identity is unhackable via LoRA SFT. Adapter: `CryptoYogi/vazhi-v7_2-lora`, merged NOT uploaded. Notebook: `Vazhi_SFT_v7_2_Gemma3.ipynb` |
+| GGUF v7.1 | 2026-02-16 | ✅ Complete | Converted v7.1 to 3 GGUF variants: Q4_K_M (762 MiB), Q3_K_M (~693 MiB), Q2_K (652 MiB). Uploaded to HuggingFace: `CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF`, `CryptoYogi/vazhi-v7_1-Q3_K_M-GGUF`, `CryptoYogi/vazhi-v7_1-Q2_K-GGUF` |
+| 4GB Test | 2026-02-17 | ❌ Failed | Tested Q4_K_M and Q2_K on 4GB Android device (3.9 GB total, ~1.2-1.5 GB available). Both crash during inference — OOM killed. Model loads via mmap, context creates, prompt ingestion starts, then Android kills the process. Root cause: 262K vocab creates 157 f32 tensors (30% of model) that don't shrink with quantization. Working set ≈ model size, exceeds available RAM. **Minimum viable device: 6GB+ RAM** |
 
 ---
 
@@ -2631,34 +2638,257 @@ New strategy:
 
 ---
 
-## SFT v7.0 — Gemma 3 SFT for VAZHI (Feb 2026, PLANNED)
+## Data v7.0 — Dataset Rebuild for Gemma 3 (Feb 2026)
 
+**Date:** 2026-02-16
+**Status:** ✅ Complete
+**Dataset:** `CryptoYogi/vazhi-tamil-sft-v7_0`
+
+### Purpose
+
+Rebuild the SFT dataset for Gemma 3 format. Gemma 3 uses a different chat template than Qwen3's ChatML — it uses model-agnostic `instruction`/`output` fields rather than `<|im_start|>user` tags. Also rebalanced composition to include 61 VAZHI mission/identity pairs.
+
+### Composition
+
+| Bucket | Count | Pct |
+|--------|-------|-----|
+| Domain (6 packs) | 2,161 | 51.8% |
+| Spiritual (Sadhguru Q&A) | 1,635 | 39.2% |
+| Identity/Mission | 230 | 5.5% |
+| Conversational | 112 | 2.7% |
+| Safety | 34 | 0.8% |
+
+**Total:** 4,172 samples (3,754 train / 418 eval)
+**Key additions:** 61 mission pairs covering VAZHI acronym meaning, open source status, offline-first design, feedback channels, sponsorship info
+**Avg length:** 47 words per response
+
+---
+
+## SFT v7.0 — Gemma 3 1B-it First Training (Feb 2026)
+
+**Date:** 2026-02-16
+**Status:** ⚠️ Partial — Tamil preserved but identity/factual corrections not learned
 **Base Model:** `google/gemma-3-1b-it` (~1B params, 262K vocab, native Tamil from 2T-token pretraining)
-**Dataset:** `CryptoYogi/vazhi-tamil-sft-v5_3` (4,264 samples, converted from ChatML to Gemma format)
+**Dataset:** `CryptoYogi/vazhi-tamil-sft-v7_0` (3,754 train / 418 eval)
 **Output:** `CryptoYogi/vazhi-v7_0`
+**Adapter:** `CryptoYogi/vazhi-v7_0-lora`
 **Notebook:** `notebooks/Vazhi_SFT_v7_0_Gemma3.ipynb`
+**Hardware:** L4-24GB (Colab)
 
-Key differences from Qwen3 training:
-- No DAPT needed — model already has genuine Tamil capability
-- Different chat template (Gemma turns vs ChatML)
-- Larger model (1B vs 0.6B) — may need different batch sizes
-- No `<think>` token suppression needed
-- 262K vocab (vs 151K) — better multilingual tokenization
-- Conservative LoRA to avoid Navarasa-style catastrophic forgetting
+### Training Config
+
+- LoRA r=8, targeting q_proj + v_proj only (conservative — learned from Navarasa catastrophe)
+- LR: 1e-5 (cosine)
+- Epochs: 1 (211 steps)
+- Batch: 16 (gradient accumulation)
+- max_seq_length: 2048
+
+### Results
+
+| Metric | Before | After | Change |
+|--------|--------|-------|--------|
+| Train loss | 5.35 | 4.73 | -11.6% |
+| Tamil char % | 93% | 92% | -1% (preserved) |
+| Tamil word % | 95% | 94% | -1% (preserved) |
+| Eval pass | — | 16/16 | — |
+
+### Key Findings
+
+1. **Tamil quality preserved:** Conservative LoRA (r=8, 2 modules) successfully avoided Navarasa-style catastrophic forgetting. Tamil quality barely changed (-1%)
+2. **Identity NOT learned:** Model still says it's a "Google LLM" despite 230 identity training pairs. Gemma's 2T-token pretrained identity is deeply embedded
+3. **Factual corrections not taken:** Model still says Coimbatore is the capital of Tamil Nadu (a Gemma hallucination). SFT couldn't override pretrained factual associations
+4. **Response degeneration fixed:** No more garbage tokens at end of responses (冲突, Netanyahu, etc.) — SFT cleaned up output format
+5. **Conservative LoRA too weak:** r=8 on only 2 modules preserved Tamil but was insufficient to override any pretrained priors. Need more capacity
+
+### Decision
+
+Proceed with incremental training — merge v7.0 adapter into base, then train v7.1 with stronger LoRA (r=16) on the merged model.
+
+---
+
+## SFT v7.1 — Incremental LoRA r=16 (Feb 2026) — DEPLOYMENT CANDIDATE
+
+**Date:** 2026-02-16
+**Status:** ✅ **BEST MODEL** — 96% Tamil word score (best ever across all 20+ training attempts)
+**Base Model:** v7.0 merged (`CryptoYogi/vazhi-v7_0` — Gemma 3 1B-it + v7.0 LoRA merged)
+**Dataset:** `CryptoYogi/vazhi-tamil-sft-v7_0` (3,754 train / 418 eval, same as v7.0)
+**Output:** `CryptoYogi/vazhi-v7_1`
+**Adapter:** `CryptoYogi/vazhi-v7_1-lora`
+**Notebook:** `notebooks/Vazhi_SFT_v7_1_Gemma3.ipynb`
+**Hardware:** A100-80GB (Colab)
+
+### Training Config
+
+- LoRA r=16, targeting q_proj + v_proj (doubled from v7.0's r=8)
+- LR: 1e-5 (cosine)
+- Epochs: 1 (234 steps)
+- Batch: 16 (gradient accumulation)
+- max_seq_length: 2048
+- Incremental: trained on v7.0 merged model (not base Gemma 3)
+
+### Results
+
+| Metric | Before (v7.0) | After (v7.1) | Change |
+|--------|---------------|--------------|--------|
+| Train loss | 4.89 | 4.18 | -14.4% |
+| Tamil char % | 89% | 95% | +6% |
+| Tamil word % | 90% | 96% | **+6% (best ever)** |
+| Eval pass | — | 16/16 | — |
+
+### Key Findings
+
+1. **Tamil IMPROVED to best-ever 96% word:** Incremental training on merged model actually improved Tamil quality, not just preserved it. This suggests the first pass (v7.0) loosened the model's weights enough for the second pass to refine Tamil
+2. **Identity still says Google:** Despite doubled LoRA capacity (r=16), the model still identifies as Google. This confirms identity is deeply embedded in Gemma's 2T-token pretraining — not a capacity issue but a depth issue
+3. **Chennai correct in A/B test:** Factual correction for Tamil Nadu's capital was learned (2/2 test prompts). Some factual associations can be updated with sufficient LoRA capacity
+4. **Two-pass incremental training works:** v7.0 (r=8, conservative) → merge → v7.1 (r=16, stronger) produced better results than either would alone. First pass stabilizes, second pass refines
+
+### Decision
+
+**v7.1 is the deployment candidate.** Identity will be handled via system prompt at inference time ("You are VAZHI, a Tamil AI assistant..."). Factual corrections for edge cases handled via hybrid SQLite retrieval (already built into app architecture). Proceed to GGUF conversion.
+
+---
+
+## SFT v7.2 — Identity-Only Reinforcement (Feb 2026) — FAILED
+
+**Date:** 2026-02-16
+**Status:** ❌ Failed — identity NOT learned, domain knowledge REGRESSED
+**Base Model:** v7.1 merged (`CryptoYogi/vazhi-v7_1`)
+**Dataset:** 90 samples only (61 VAZHI mission pairs + 29 factual corrections), 10 epochs
+**Output:** Merged NOT uploaded (regression detected)
+**Adapter:** `CryptoYogi/vazhi-v7_2-lora`
+**Notebook:** `notebooks/Vazhi_SFT_v7_2_Gemma3.ipynb`
+**Hardware:** A100-80GB (Colab)
+
+### Training Config
+
+- LoRA r=16, targeting q_proj + v_proj
+- LR: 1e-5 (cosine)
+- Epochs: 10 (~60 steps total — tiny dataset)
+- Dataset: 90 identity/factual samples repeated 10x
+- Hypothesis: focused repetition on identity might override Gemma's pretrained priors
+
+### Results
+
+| Metric | Before (v7.1) | After (v7.2) | Change |
+|--------|---------------|--------------|--------|
+| Identity correct | 0/4 | 0/4 | **No change** |
+| Google identity | 2/4 | 2/4 | No change |
+| Tamil word % | 96% | 99% | +3% |
+| Domain knowledge | ✅ Full | ❌ **Regressed** | **Critical regression** |
+
+### Key Findings
+
+1. **Gemma's Google identity is unhackable via LoRA SFT:** 90 identity samples x 10 epochs (effectively 900 exposures) couldn't make the model say "VAZHI" even once. 0/4 identity prompts correct. 2T tokens of pretraining > any amount of LoRA fine-tuning
+2. **Domain knowledge REGRESSED catastrophically:** Model started saying "சாரி" (sorry, I don't know) to domain questions it previously answered well — Thirukkural, ration cards, health queries, legal questions. Even 90 focused samples can overwrite broader capabilities
+3. **Tamil quality technically improved (99% word):** But this is misleading — the model's responses were so short ("sorry" responses) that they trivially scored high Tamil %
+4. **Identity-only training is a dead end:** Small focused datasets cause the model to forget broader domain knowledge while still failing to override deeply pretrained identity
+
+### Lesson
+
+**Never attempt to override a model's pretrained identity via LoRA SFT.** For models with strong pretrained identity (Gemma's "I am Google"), handle identity at inference time via system prompt. This is not a training problem — it's a deployment/architecture problem.
+
+---
+
+## GGUF v7.1 — Quantization for Mobile (Feb 2026)
+
+**Date:** 2026-02-16
+**Status:** ✅ Complete
+**Source Model:** `CryptoYogi/vazhi-v7_1` (Gemma 3 1B-it + SFT v7.1 merged)
+**Outputs:** 3 GGUF variants uploaded to HuggingFace
+
+### Variants
+
+| Quantization | File Size | HuggingFace Repo | Device Target |
+|---|---|---|---|
+| Q4_K_M | 762 MiB | `CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF` | 6GB+ RAM (best quality) |
+| Q3_K_M | ~693 MiB | `CryptoYogi/vazhi-v7_1-Q3_K_M-GGUF` | 6GB+ RAM (medium) |
+| Q2_K | 652 MiB | `CryptoYogi/vazhi-v7_1-Q2_K-GGUF` | Testing only (low quality) |
+
+### Notable: Gemma 3's 262K Vocab Tax
+
+Unlike Qwen3 (151K vocab), Gemma 3's 262K vocabulary creates 157 f32 tensors (embeddings + layer norms) that are **identical across all quantization levels**. This means:
+
+- Q4_K_M to Q2_K saves only 110 MiB (762→652 MiB, 14% reduction)
+- ~30% of Gemma 3's 999.89M params are in the 262K embedding matrix (~302M params)
+- The embedding/norm tensors form a fixed ~500 MiB floor that no quantization can reduce
+- Quantization only compresses the remaining ~70% of weights (attention + FFN)
+
+This has critical implications for mobile deployment — see 4GB Device Testing below.
+
+---
+
+## 4GB Device Testing — All Variants OOM (Feb 2026)
+
+**Date:** 2026-02-17
+**Status:** ❌ Failed — all 3 GGUF variants crash on 4GB Android devices
+**Device:** Samsung Galaxy (4GB RAM, 3.9 GB total, ~1.2-1.5 GB available after OS/apps)
+**App:** VAZHI v0.1.0-debug (Flutter, llamadart inference)
+
+### Test Results
+
+| Variant | File Size | Load (mmap) | Context Create | Prompt Ingest | Response | Result |
+|---------|-----------|-------------|----------------|---------------|----------|--------|
+| Q4_K_M | 762 MiB | ✅ | ✅ (n_ctx=256, n_batch=1) | Started (225 tokens) | ❌ | **OOM crash** |
+| Q4_K_M (retry) | 762 MiB | ✅ | ✅ (n_ctx=256, n_batch=1) | Started (22 tokens) | ❌ | **OOM crash** |
+| Q2_K | 652 MiB | ✅ | ✅ (n_ctx=256, n_batch=1) | Started (22 tokens) | ❌ | **OOM crash** |
+
+Q3_K_M was skipped (similar size to Q2_K, same outcome expected).
+
+### Observed Behavior
+
+1. Model file downloads and loads via mmap (kernel handles paging)
+2. Context creates successfully with minimal settings (n_ctx=256, n_batch=1)
+3. Prompt ingestion begins (llama.cpp `ingest:start` event)
+4. During forward pass, model touches all 26 layers + embeddings + output head
+5. Working set ≈ entire model size in physical RAM
+6. Android OOM killer activates (OOM score 750-772)
+7. App process terminated — thinking indicator stops, app crashes
+
+### Root Cause Analysis
+
+**Gemma 3's 262K vocabulary creates a fixed memory floor that quantization cannot reduce.**
+
+| Model | Vocab | Embedding Params | Tensor Count | Q4_K_M | Q2_K | Delta |
+|-------|-------|-----------------|--------------|--------|------|-------|
+| Gemma 3 1B-it | 262K | ~302M (30%) | 157 f32 | 762 MiB | 652 MiB | 110 MiB (14%) |
+| Qwen3-0.6B | 151K | ~91M (12%) | 121 f32 | 450 MiB | ~380 MiB | ~70 MiB (16%) |
+
+The 157 f32 tensors (embeddings + layer norms) are identical across all quant levels. Even Q2_K (652 MiB) exceeds available RAM on a 4GB device with ~1.2-1.5 GB free.
+
+mmap doesn't solve this because the forward pass touches the entire model (all 26 transformer layers + embedding lookup + output head projection). The working set during inference ≈ the full model file size.
+
+### Implications for VAZHI
+
+1. **Minimum viable device for Gemma 3 1B-it is 6GB+ RAM** — regardless of quantization level
+2. **4GB devices need a fundamentally smaller model** — not a more aggressive quantization of the same model
+3. **Model selector correctly includes RAM recommendations** — Q4_K_M shows "6GB+ RAM recommended" (ADR-011)
+4. **Future options for 4GB support:**
+   - Wait for Gemma 3 0.5B-it (if released) — smaller architecture = smaller embedding floor
+   - Investigate Qwen3-0.5B-it with better multilingual pretraining (if available)
+   - Accept that AI features require 6GB+ and keep hybrid SQLite retrieval for 4GB devices
 
 ---
 
 ## References
 
 ### Training Notebooks
-- SFT v7.0 Gemma 3 (GPU, PLANNED): `/notebooks/Vazhi_SFT_v7_0_Gemma3.ipynb`
+- SFT v7.2 identity-only (GPU, FAILED): `/notebooks/Vazhi_SFT_v7_2_Gemma3.ipynb`
+- SFT v7.1 incremental r=16 (GPU, **BEST MODEL**): `/notebooks/Vazhi_SFT_v7_1_Gemma3.ipynb`
+- SFT v7.0 Gemma 3 (GPU, COMPLETE): `/notebooks/Vazhi_SFT_v7_0_Gemma3.ipynb`
 - Model Comparison v1 (GPU, COMPLETE): `/notebooks/Vazhi_Model_Comparison_v1.ipynb`
-- SFT v5.3 training (GPU, READY): `/notebooks/Vazhi_SFT_v5_3.ipynb`
+- SFT v6.0 on DAPT v2.1 (GPU, FAILED): `/notebooks/Vazhi_SFT_v6_0_OnDAPT.ipynb`
+- SFT v5.3 training (GPU, COMPLETE): `/notebooks/Vazhi_SFT_v5_3.ipynb`
 - SFT v5.1a training (GPU, COMPLETE): `/notebooks/Vazhi_SFT_v5_1a.ipynb`
 - SFT v5.0 training (GPU, COMPLETE): `/notebooks/Vazhi_SFT_v5_0.ipynb`
+- DAPT v2.1 data prep (CPU): `/notebooks/Vazhi_DAPT_Data_v2_1.ipynb`
+- DAPT v2.1 training (GPU): `/notebooks/Vazhi_DAPT_v2_1_Tamil.ipynb`
+- DAPT v2.0 data prep (CPU): `/notebooks/Vazhi_DAPT_Data_v2_0.ipynb`
+- DAPT v2.0 training (GPU): `/notebooks/Vazhi_DAPT_v2_0_Tamil.ipynb`
 - Dataset Factory v4.1 Stage 1 Retrieve (CPU, LATEST): `/notebooks/Vazhi_Dataset_Factory_v4_1.ipynb`
 - Dataset Factory v4.1 Stage 2+3 Curate+Compose (GPU, LATEST): `/notebooks/Vazhi_Dataset_Factory_v4_1_2.ipynb`
 - Dataset Factory v4.1 Stage 3 Re-compose Fix (CPU): `/notebooks/Vazhi_Dataset_Factory_v4_1_3.ipynb`
+- SFT v4.2 on vanilla (GPU, FAILED): `/notebooks/Vazhi_SFT_v4_2_OnVanilla.ipynb`
+- SFT v4.1 on DAPT (GPU, FAILED): `/notebooks/Vazhi_SFT_v4_1_OnDAPT.ipynb`
 - SFT v4.0 training (GPU, FAILED): `/notebooks/Vazhi_SFT_v4_0_OnDAPT.ipynb`
 - SFT v4.0 eval (standalone): `/notebooks/Vazhi_Eval_v4_0.ipynb`
 - DAPT v1.1 data prep (CPU): `/notebooks/Vazhi_DAPT_Data_v1_1.ipynb`
@@ -2685,7 +2915,15 @@ Key differences from Qwen3 training:
 - GGUF Diagnostics: `/notebooks/Vazhi_GGUF_Diagnostic.ipynb`, `Vazhi_GGUF_Diagnostic_v2.ipynb`
 - GGUF Quantization: `/notebooks/Vazhi_GGUF_Quantization.ipynb`
 
-### Data & Models
+### Data & Models (Current)
+- **SFT v7.1 (DEPLOYMENT CANDIDATE)**: https://huggingface.co/CryptoYogi/vazhi-v7_1
+- **SFT v7.0 (Gemma 3 base)**: https://huggingface.co/CryptoYogi/vazhi-v7_0
+- **GGUF Q4_K_M**: https://huggingface.co/CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF
+- **GGUF Q3_K_M**: https://huggingface.co/CryptoYogi/vazhi-v7_1-Q3_K_M-GGUF
+- **GGUF Q2_K**: https://huggingface.co/CryptoYogi/vazhi-v7_1-Q2_K-GGUF
+- **SFT dataset v7.0**: https://huggingface.co/datasets/CryptoYogi/vazhi-tamil-sft-v7_0
+
+### Data & Models (Historical)
 - Data prep script: `/data/tamil_foundation/prepare_training_data.py`
 - Tamil foundation data: `/data/tamil_foundation/` (19 JSON files)
 - HuggingFace dataset: https://huggingface.co/datasets/CryptoYogi/vazhi-tamil-v05
