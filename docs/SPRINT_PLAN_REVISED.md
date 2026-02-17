@@ -175,39 +175,31 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - [x] **DAPT data prep notebook** (`Vazhi_DAPT_Data_v1_0.ipynb`) — CPU-only, streams Sangraha, filters, packs 30M tokens
 - [x] **DAPT training notebook** (`Vazhi_DAPT_v1_0_Tamil.ipynb`) — GPU, QLoRA on Qwen3-0.6B-Base, produces reusable Tamil base
 
+#### App Model Selector ✅ (Feb 17, 2026)
+- [x] **Model selector architecture (ADR-011)** — ModelVariant + ModelRegistry single source of truth
+- [x] **3 GGUF variants** — Q4_K_M (806MB, best), Q3_K_M (722MB, medium), Q2_K (690MB, low)
+- [x] **Persisted selection** — SharedPreferences + Riverpod StateNotifier
+- [x] **Bottom sheet UI** — radio-style cards with bilingual quality labels
+- [x] **DRY violation eliminated** — services accept ModelVariant via constructor injection
+- [x] **247 tests passing** (15 new model variant tests)
+
 #### Database Population (not blocked)
 - [ ] Full Thirukkural database (1,330 verses)
 - [ ] Complete government schemes database
 - [ ] Hospital directory population
 
-#### AI Model Training 🔄
-**Current approach: 3-step pipeline (DAPT → SFT → GGUF)**
-- [x] **Step 1: Run DAPT data prep** on Colab CPU — filter Sangraha, pack 33M tokens, upload to HF ✅
-- [x] **Step 2: Run DAPT training** on Kaggle T4 GPU — produced `CryptoYogi/qwen3-0.6b-tamil` (375 steps, val loss 1.016, 8/8 eval passed) ✅
-- [ ] **Step 3: Run SFT** on DAPT-adapted model with v4.0 dataset (3,365 samples)
-- [ ] **Step 4: GGUF conversion** and Tamil output quality validation
+#### AI Model Training ✅ PIVOTED TO GEMMA 3
+**Final approach: Gemma 3 1B-it + SFT → GGUF (no DAPT needed)**
 
-**DAPT v1.0 Results (Feb 12, 2026):**
-- Data: 16,450 Sangraha docs → 32,244 packed 1024-token blocks
-- Training: 375/500 steps on Kaggle T4, fp16, LoRA r=16, ~3.5 hours
-- Val loss: 1.045 → 1.016 (steady improvement)
-- Eval: 8/8 Tamil continuations passed, avg 66% Tamil, 97% unique words
-- Artifacts: `CryptoYogi/qwen3-0.6b-tamil` (merged fp16) + `CryptoYogi/qwen3-0.6b-tamil-lora` (adapter backup)
+**Gemma 3 Pivot (Feb 2026):**
+After 20 failed Qwen3-0.6B training attempts (v0.1→v6.0), Model Comparison v1 benchmarked 7 models. **Gemma 3 1B-it is the clear winner**: real Tamil output, relevant answers, structured output, Q4_K_M = 0.60GB. Google's 2T-token multilingual pretraining provides native Tamil — no DAPT required.
 
-**Model Training History (13 failed attempts, 1 DAPT success):**
-- v0.1-v0.4: Qwen2.5-3B — data quality issues then GGUF broke Tamil
-- v0.5: Qwen2.5-0.5B — LoRA corrupted model
-- v0.6: Sarvam-2B — 4-bit training instability
-- v0.7: Gemma-2B Tamil — tokenizer corruption broke GGUF
-- v3.1: Qwen3-0.6B — mixed data formats (raw + ChatML)
-- v3.2: Qwen3-0.6B — fp16 issues on T4
-- v3.3: Qwen3-0.6B (instruct) — native `<think>` tokens conflicted with ChatML
-- v3.4: Qwen3-0.6B-Base — base model approach, not validated
-- v3.5: Qwen3-0.6B — SFT-only on base model produced code garbage (no DAPT)
-- v3.6: Qwen3-0.6B — training succeeded but LoRA merge into 4-bit model corrupted output
-- v3.7: Qwen3-0.6B — superseded by v3.8 (v4.0 dataset)
-- v3.8 (FAILED): Qwen3-0.6B (instruct) — SFT-only with v4.0 dataset, 0/12 eval, no DAPT = gibberish Tamil
-- **DAPT v1.0 (SUCCESS):** Qwen3-0.6B-Base + 16M tokens Sangraha → Tamil base model, 8/8 eval passed
+- [x] **SFT v7.0** — Gemma 3 1B-it + LoRA r=8, Tamil 94% word. Identity/factual not learned (conservative LoRA) ✅
+- [x] **SFT v7.1** — incremental r=16 on v7.0, **Tamil 96% word (best ever)** — DEPLOYMENT CANDIDATE ✅
+- [x] **SFT v7.2** — identity-only reinforcement — FAILED (Gemma's Google identity unhackable via LoRA) ✅
+- [x] **GGUF conversion** — Q4_K_M, Q3_K_M, Q2_K uploaded to HuggingFace ✅
+- [x] **App integration** — model selector wired to all 3 variants, download/load working ✅
+- [ ] **Step 7: Test GGUF output quality** on mobile device (Tamil coherence after quantization)
 
 See `models/TRAINING_LOG.md` for full details and lessons learned.
 
@@ -242,8 +234,9 @@ See `models/TRAINING_LOG.md` for full details and lessons learned.
 | Testing Infrastructure | Local only | HuggingFace Space | Fast iteration during development |
 | Model Hosting | Self-hosted | HuggingFace | Free hosting, easy access |
 | MVP Inference | Cloud API | On-device GGUF | Offline-first is core to VAZHI vision |
-| AI Model | Gemma-2B Tamil (1.6GB) | **Qwen3-0.6B (<1GB)** | Gemma tokenizer corrupted; Qwen3-0.6B is instruct-capable with clean ChatML support |
-| Training Approach | Single SFT pass | **DAPT (Base) → SFT (instruct-style)** | SFT-only cannot teach Tamil; DAPT on Sangraha corpus first, then SFT with ChatML dataset |
+| AI Model | Gemma-2B Tamil (1.6GB) | **Gemma 3 1B-it (<1GB)** | Google's 2T-token multilingual pretraining provides native Tamil; 20 Qwen3-0.6B attempts all failed |
+| Training Approach | Single SFT pass | **SFT-only on Gemma 3 1B-it** | Gemma 3 has native Tamil — no DAPT needed. Identity handled via system prompt, facts via SQLite hybrid retrieval |
+| Model Selection | Hardcoded single model | **ModelVariant + ModelRegistry (ADR-011)** | 3 GGUF variants for different device capabilities; single source of truth eliminates DRY violation |
 
 **Note**: HuggingFace Space is for development/testing only. The MVP will have fully offline on-device inference.
 
@@ -271,10 +264,10 @@ See `models/TRAINING_LOG.md` for full details and lessons learned.
 
 ---
 
-*Last updated: February 12, 2026*
-*Code Review: 19 issues closed, 232 tests passing*
-*Training: DAPT v1.0 complete (Tamil base model on HF), SFT pending*
-*Current milestone: Phase 3 - Data Population & AI Model*
-*Architecture: Hybrid Retrieval (Deterministic + Optional AI)*
-*Target Model: Qwen3-0.6B (<1GB GGUF) with DAPT (Base) → SFT → GGUF*
-*Training attempts: 13 failed, DAPT v1.0 succeeded*
+*Last updated: February 17, 2026*
+*Code Review: 19 issues closed, 247 tests passing*
+*Training: SFT v7.1 on Gemma 3 1B-it — DEPLOYMENT CANDIDATE (96% Tamil word)*
+*Current milestone: Phase 3 - GGUF mobile testing + app store submission*
+*Architecture: Hybrid Retrieval (Deterministic + Optional AI) + Model Selector (ADR-011)*
+*Target Model: Gemma 3 1B-it SFT v7.1 — 3 GGUF variants (Q4_K_M, Q3_K_M, Q2_K)*
+*Training attempts: 20 Qwen3 failed → Gemma 3 pivot → v7.1 succeeded*

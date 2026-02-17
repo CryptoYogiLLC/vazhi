@@ -5,9 +5,9 @@
 **Project:** VAZHI (வழி) - **V**oluntary **A**I with **Z**ero-cost **H**elpful **I**ntelligence
 **Vision:** An open-source Tamil LLM that runs **offline on mobile phones** - free, transparent, Tamil-first
 **Goal:** Deploy a Tamil-capable LLM on mobile devices (<1GB target)
-**Current Target:** Qwen3-0.6B with two-stage training (DAPT → SFT)
+**Current Target:** Gemma 3 1B-it SFT v7.1 (deployment candidate — 96% Tamil word score)
 **Timeline:** February 2026
-**Status:** Clean DAPT v2.1 data prep complete (39.5M tokens, 5-source corpus). Training notebook ready for Colab Pro GPU
+**Status:** Model training complete. App v0.6.0 with model selector (3 GGUF variants). 247 tests passing. Awaiting GGUF mobile quality testing
 
 ---
 
@@ -553,6 +553,10 @@ For conversational content:
 | 66 | **Smaller DAPT token budget for 0.6B models** | 55M tokens overwhelmed the 0.6B model. Target 10-20M tokens with LR 1-2e-5 |
 | 67 | **Never run data pipelines locally that belong on Colab** | Heavy data processing (filtering large HF datasets, computing embeddings) should run on Colab/Kaggle — local OOM crashes waste time and risk system stability |
 | 68 | **Investigate skipped data sources before acquiring new ones** | IndicAlign Wiki_Chat/Wiki_Conv were skipped for OOM reasons (infrastructure), not quality reasons — they were never evaluated and could be significant Tamil sources |
+| 106 | Hardcoded constants across multiple files is a maintenance time bomb | ModelVariant data class eliminates duplication and manual calculation errors |
+| 107 | Dart `static const` can't use list indexing | Use getter: `static ModelVariant get defaultVariant => variants[0]` |
+| 108 | Riverpod provider dependency chains handle reactive model switching | `ref.watch()` propagates selectedModelProvider changes through the graph |
+| 109 | Constructor injection > static constants for testability | `VazhiLocalService(ModelVariant model)` is trivially testable |
 
 ---
 
@@ -1393,5 +1397,28 @@ SFT v4.0 used a monolithic Dataset Factory that retrieved, filtered, and compose
 
 ---
 
+## Phase 25: Model Selector Architecture (v0.6.0) — Feb 17, 2026
+
+### The DRY Violation Problem
+
+After discovering Q4_K_M (806MB) OOMs on 4GB devices through 14 debug builds, the need for model variant selection was clear. But the model metadata (URL, filename, expected size) was hardcoded in two separate services (`VazhiLocalService` and `ModelDownloadService`), with `'~806 MB'` strings scattered across 4 UI widgets.
+
+### The Solution: Single Source of Truth
+
+`ModelVariant` data class + `ModelRegistry` static list + Riverpod `SelectedModelNotifier` with SharedPreferences persistence. Services accept `ModelVariant` via constructor injection. Adding a new model = one registry entry, zero service changes.
+
+### Lessons Learned
+
+- **#106**: **Hardcoded constants across multiple files is a maintenance time bomb** — model URL, filename, and expected size were duplicated in `VazhiLocalService` and `ModelDownloadService`. When values diverge (and they will), bugs are subtle and hard to trace. A data class (`ModelVariant`) with computed properties (partialFilename, minimumValidSizeBytes, requiredSpaceBytes) eliminates both duplication and manual calculation errors
+- **#107**: **Dart `static const` can't use list indexing** — `static const ModelVariant defaultVariant = variants[0]` fails because `[]` operator isn't a const expression in Dart. Use a getter instead: `static ModelVariant get defaultVariant => variants[0]`. This is a common Dart gotcha that wastes time during compilation
+- **#108**: **Riverpod provider dependency chains handle reactive model switching** — when `selectedModelProvider` changes, all dependent providers (`vazhiLocalServiceProvider`, `downloadServiceProvider`) automatically rebuild their services with the new `ModelVariant`. No manual wiring needed — Riverpod's `ref.watch()` propagates changes through the entire dependency graph
+- **#109**: **Constructor injection > static constants for testability** — `VazhiLocalService(ModelVariant model)` is trivially testable (pass any variant). Static constants like `VazhiLocalService.modelUrl` couple the class to a specific model, making tests brittle and requiring test-specific overrides
+
+### Architecture Decision
+
+Documented in [ADR-011](adr/011-model-selector-architecture.md).
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-15 (DAPT v2.1 data prep complete, training notebook ready, 105 lessons learned)*
+*Last updated: 2026-02-17 (Model selector v0.6.0, Gemma 3 1B-it SFT v7.1 deployment candidate, 109 lessons learned)*

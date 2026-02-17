@@ -22,6 +22,8 @@ An Architecture Decision Record captures an important architectural decision mad
 | [007](007-free-donations-monetization.md) | Free + Donations Monetization | Accepted | 100% free app with optional donation support |
 | [008](008-app-store-distribution.md) | App Store Distribution | Accepted | Google Play + Apple App Store + F-Droid |
 | [009](009-hybrid-retrieval-architecture.md) | Hybrid Retrieval Architecture | **Accepted (Current)** | Deterministic SQLite + optional AI — 10 categories, 232 tests |
+| [010](010-data-pipeline-architecture.md) | Data Pipeline Architecture | Accepted | Four-layer data pipeline: Source → Factory → Training → Artifacts |
+| [011](011-model-selector-architecture.md) | Model Selector Architecture | **Accepted (Current)** | ModelVariant + ModelRegistry single source of truth for GGUF model selection |
 
 ### Superseded & Stale ADRs
 

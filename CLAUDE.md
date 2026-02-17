@@ -24,9 +24,10 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 
 **What's done:**
 - Flutter app with chat UI, voice I/O (Tamil STT/TTS), hybrid retrieval, model download manager
+- **Model selector** (v0.6.0, ADR-011): 3 GGUF variants (Q4_K_M/Q3_K_M/Q2_K) with `ModelVariant` single source of truth, `ModelRegistry`, SharedPreferences persistence, bottom sheet UI
 - 6 knowledge packs: Security (468), Government (467), Education (602), Legal (610), Healthcare (460), Culture (400) = 3,007 bilingual training pairs
 - Security hardened: encrypted storage, input validation, ReDoS protection, URL allowlist, SHA256 verification
-- 232 tests passing, CI/CD via GitHub Actions
+- 247 tests passing, CI/CD via GitHub Actions
 - 19 code review issues identified and closed (#22-40)
 
 **What's in progress:**
@@ -189,6 +190,8 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Encrypt sensitive local storage** — Hive alone is not secure, use flutter_secure_storage
 - **Use allowlists for external URLs** — never trust user-provided URLs for model downloads
 - **Verify downloads with SHA256 checksums**
+- **Single source of truth for model metadata** — all GGUF model info (URL, filename, size, quality) lives in `ModelVariant` + `ModelRegistry`. Services accept `ModelVariant` via constructor injection. Adding a new model = one registry entry, zero service changes (ADR-011)
+- **Persist user preferences with SharedPreferences** — model selection, language preference, etc. Use Riverpod `StateNotifier` + SharedPreferences pattern for reactive persistence
 
 ## Project Structure
 
@@ -201,9 +204,10 @@ vazhi/
 │   ├── lib/
 │   │   ├── database/migrations/  # Versioned schema changes
 │   │   ├── l10n/                 # i18n (English + Tamil ARB files)
-│   │   ├── services/             # Query router, APIs, voice, downloads
-│   │   ├── widgets/              # Accessible UI components
-│   │   └── providers/            # Riverpod state management
+│   │   ├── models/model_variant.dart  # ModelVariant + ModelRegistry (single source of truth for GGUF models)
+│   │   ├── providers/            # Riverpod state management (incl. model_provider.dart for model selection)
+│   │   ├── services/             # Query router, APIs, voice, downloads (accept ModelVariant via constructor)
+│   │   └── widgets/              # Accessible UI components (incl. model_selector_sheet.dart)
 │   └── test/                     # 232 tests
 ├── data/                         # Training data pipeline (ADR-010)
 │   ├── sources/                  # Source data, organized by intended use
@@ -263,11 +267,12 @@ vazhi/
 
 1. **This file** — start here
 2. **`vazhi_app/APP_CHANGELOG.md`** — app feature history, architecture decisions, and lessons learned
-3. **`docs/adr/010-data-pipeline-architecture.md`** — data pipeline design, composition targets, anti-memorization rules
-4. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
-5. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
-6. **`docs/LESSONS_LEARNED.md`** — 98 hard-won lessons, ideal training pipeline
-7. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
+3. **`docs/adr/011-model-selector-architecture.md`** — model selector pattern (ModelVariant + ModelRegistry + SharedPreferences)
+4. **`docs/adr/010-data-pipeline-architecture.md`** — data pipeline design, composition targets, anti-memorization rules
+5. **`models/TRAINING_LOG.md`** — detailed training history, decisions, and failure analysis
+6. **`docs/SPRINT_PLAN_REVISED.md`** — roadmap, phases, what's done vs pending
+7. **`docs/LESSONS_LEARNED.md`** — 105 hard-won lessons, ideal training pipeline
+8. **`docs/CODE_REVIEW_CONSENSUS_REPORT.md`** — security findings (all 19 fixed)
 
 ## Development Commands
 

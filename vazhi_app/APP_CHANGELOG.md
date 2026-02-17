@@ -16,19 +16,64 @@ For model training history, see [`models/TRAINING_LOG.md`](../models/TRAINING_LO
 | v0.4.0 | 2026-02-11 | `708ca7c` | Full data population, app store prep |
 | v0.5.0 | 2026-02-11 | `82a15bc` | Expandable content, bilingual UI, smart routing |
 | v0.5.1 | 2026-02-11 | `82a52c0` | Lint cleanup, pre-commit hooks |
+| v0.6.0 | 2026-02-17 | `fefaf2b` | Model selector, single source of truth (ADR-011) |
 
 ---
 
-## Current State (v0.5.1)
+## Current State (v0.6.0)
 
-- **232 tests** passing (unit, integration, widget, security)
+- **247 tests** passing (unit, integration, widget, security)
 - **0 dart analyze issues** (fatal-infos clean)
 - **6 knowledge packs** fully populated in SQLite
 - **10 knowledge categories** routed (Thirukkural, schemes, emergency, health, safety, education, legal, siddha medicine, festivals, siddhars)
 - **Bilingual UI** (English + Tamil) across all result cards and chat bubbles
+- **Model selector**: 3 GGUF variants (Q4_K_M, Q3_K_M, Q2_K) with persisted selection
 - **Pre-commit hooks**: dart format, dart analyze, flutter test, secret detection
 - **CI/CD**: GitHub Actions for build, lint, security scan
-- **AI model**: Optional download (not yet trained successfully — see training log)
+- **AI model**: Gemma 3 1B-it SFT v7.1 — 3 quantization variants available for download
+
+---
+
+## v0.6.0 — Model Selector & Single Source of Truth
+
+**Date:** 2026-02-17
+**Commit:** `fefaf2b`
+**Tests:** 247 passing (up from 232)
+
+### Features
+
+1. **Model Selector Bottom Sheet** (`model_selector_sheet.dart`)
+   - Radio-style cards for 3 GGUF variants: Q4_K_M (Best), Q3_K_M (Medium), Q2_K (Low)
+   - Color-coded quality badges (green/orange/red) with bilingual labels (English + Tamil)
+   - "Recommended" tag on Q4_K_M, warning icon on Q2_K
+   - Accessible from download dialog ("Change" link) and settings drawer ("Change Model" option)
+
+2. **ModelVariant Data Class** (`model_variant.dart`)
+   - Single source of truth for all model metadata: id, quantization, filename, URL, size, quality
+   - Computed properties: `partialFilename`, `minimumValidSizeBytes` (90% of expected), `requiredSpaceBytes` (+200MB buffer)
+   - `ModelRegistry` with static const list of 3 variants and `findById()` for persistence
+
+3. **Persisted Model Selection** (`model_provider.dart`)
+   - `SelectedModelNotifier` (Riverpod StateNotifier) saves selection to SharedPreferences
+   - Selection survives app restarts
+   - `selectedModelProvider` reactively drives service and UI updates
+
+### Refactoring
+
+- **Eliminated DRY violation**: Removed hardcoded model constants from both `VazhiLocalService` and `ModelDownloadService`
+- **Constructor injection**: Both services now accept `ModelVariant` as constructor parameter
+- **Dynamic UI**: Replaced hardcoded `'~806 MB'` strings in `download_dialog.dart`, `settings_drawer.dart`, and `model_status_indicator.dart` with `model.displaySize`
+- **Provider dependency chain**: `selectedModelProvider` → `vazhiLocalServiceProvider` / `downloadServiceProvider` — services rebuild when model changes
+
+### New Dependencies
+- `shared_preferences: ^2.3.4`
+
+### Architecture Decision
+- Documented in [ADR-011](../docs/adr/011-model-selector-architecture.md)
+
+### Reason for Change
+
+After 14 debug builds troubleshooting Android crashes on a 4GB device, Q4_K_M (806MB) was confirmed to OOM on that hardware. Users need the ability to choose smaller model variants. The DRY violation (model metadata duplicated across 2 services and 4 widgets) also made maintenance error-prone.
 
 ---
 
@@ -293,7 +338,8 @@ This phase focused primarily on training data creation and model training experi
 | Encrypted Storage | Hive + flutter_secure_storage |
 | Voice Input | speech_to_text (Tamil STT) |
 | Voice Output | flutter_tts (Tamil TTS) |
-| AI Model | Qwen3-0.6B GGUF (optional, not yet trained) |
+| AI Model | Gemma 3 1B-it SFT v7.1 GGUF (3 variants: Q4_K_M, Q3_K_M, Q2_K) |
+| Model Selection | SharedPreferences-persisted user choice |
 
 ### File Structure (Key Files)
 
@@ -303,6 +349,7 @@ vazhi_app/lib/
 │   ├── knowledge_database.dart     # SQLite facade (all tables, FTS5, queries)
 │   └── migrations/migrations.dart  # Versioned schema changes
 ├── models/
+│   ├── model_variant.dart          # ModelVariant + ModelRegistry (single source of truth)
 │   ├── query_result.dart           # RetrievalResult<T> generic result type
 │   ├── thirukkural.dart            # Thirukkural + Athikaram models
 │   ├── scheme.dart                 # Scheme + Eligibility + Document models
@@ -310,6 +357,7 @@ vazhi_app/lib/
 │   └── emergency_contact.dart      # EmergencyContact model
 ├── providers/
 │   ├── hybrid_chat_provider.dart   # Main chat state (knowledge + AI)
+│   ├── model_provider.dart         # Model selection state (SharedPreferences)
 │   └── knowledge_provider.dart     # Knowledge retrieval state
 ├── services/
 │   ├── query_router.dart           # Query classification (10 categories)
@@ -327,6 +375,7 @@ vazhi_app/lib/
     ├── knowledge_result_card.dart  # Expandable result display (bilingual)
     ├── hybrid_message_bubble.dart  # All message types (bilingual)
     ├── download_dialog.dart        # Model download UI
+    ├── model_selector_sheet.dart   # Bottom sheet for variant selection
     └── ...
 ```
 
