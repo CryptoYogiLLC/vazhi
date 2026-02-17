@@ -10,7 +10,9 @@ import '../config/app_config.dart';
 import '../config/theme.dart';
 import '../providers/voice_provider.dart';
 import '../providers/chat_provider.dart';
+import '../providers/model_provider.dart';
 import 'download_dialog.dart';
+import 'model_selector_sheet.dart';
 
 // Language provider (true = Tamil, false = English)
 final languageProvider = StateProvider<bool>((ref) => false);
@@ -444,6 +446,7 @@ class SettingsDrawer extends ConsumerWidget {
     double progress,
     bool isTamil,
   ) {
+    final model = ref.watch(selectedModelProvider);
     String statusText;
     Widget? trailing;
     VoidCallback? onTap;
@@ -451,8 +454,8 @@ class SettingsDrawer extends ConsumerWidget {
     switch (status) {
       case ModelStatus.notDownloaded:
         statusText = isTamil
-            ? 'பதிவிறக்கவில்லை (~806 MB)'
-            : 'Not downloaded (~806 MB)';
+            ? 'பதிவிறக்கவில்லை (${model.displaySize})'
+            : 'Not downloaded (${model.displaySize})';
         trailing = ElevatedButton.icon(
           icon: const Icon(Icons.download, size: 18),
           label: Text(isTamil ? 'பதிவிறக்கு' : 'Download'),
@@ -540,64 +543,130 @@ class SettingsDrawer extends ConsumerWidget {
         );
         break;
       case ModelStatus.error:
-        statusText = isTamil ? 'பிழை ஏற்பட்டது' : 'Error occurred';
-        trailing = ElevatedButton.icon(
-          icon: const Icon(Icons.refresh, size: 18),
-          label: Text(isTamil ? 'மீண்டும்' : 'Retry'),
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.orange,
-            foregroundColor: Colors.white,
-          ),
-          onPressed: () async {
-            // Check if model file exists — retry load, not download
-            await ref.read(modelManagerProvider.notifier).checkStatus();
-            final currentStatus = ref.read(modelManagerProvider);
-            if (currentStatus == ModelStatus.ready) {
-              // checkStatus auto-loaded successfully
-              return;
-            }
-            if (currentStatus == ModelStatus.notDownloaded) {
-              // File missing — need to re-download
-              if (!context.mounted) return;
-              await DownloadDialog.show(context);
-            } else if (currentStatus == ModelStatus.error && context.mounted) {
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  content: Text(isTamil ? 'ஏற்றம் தோல்வி' : 'Load failed'),
-                  duration: const Duration(seconds: 10),
-                ),
-              );
-            }
-          },
+        statusText = isTamil ? 'பிழை ஏற்பட்டது' : 'Error loading model';
+        trailing = Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            ElevatedButton.icon(
+              icon: const Icon(Icons.refresh, size: 18),
+              label: Text(isTamil ? 'மீண்டும்' : 'Retry'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.orange,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () async {
+                // Force retry: clears diagnostic file and attempts fresh load
+                await ref
+                    .read(modelManagerProvider.notifier)
+                    .checkStatus(forceRetry: true);
+                final currentStatus = ref.read(modelManagerProvider);
+                if (currentStatus == ModelStatus.ready) return;
+                if (currentStatus == ModelStatus.notDownloaded) {
+                  if (!context.mounted) return;
+                  await DownloadDialog.show(context);
+                }
+              },
+            ),
+            const SizedBox(height: 4),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.delete_outline, size: 18),
+              label: Text(isTamil ? 'நீக்கு' : 'Delete Model'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.red,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () {
+                ref.read(lastCrashDiagnosticProvider.notifier).state = null;
+                ref.read(modelManagerProvider.notifier).deleteModel();
+              },
+            ),
+          ],
         );
         break;
     }
 
-    return ListTile(
-      leading: Icon(
-        status == ModelStatus.ready
-            ? Icons.memory
-            : Icons.cloud_download_outlined,
-        color: status == ModelStatus.ready
-            ? Colors.green
-            : VazhiTheme.primaryColor,
-      ),
-      title: Text(isTamil ? 'VAZHI மாடல்' : 'VAZHI Model'),
-      subtitle: Text(statusText),
-      trailing: trailing,
-      onTap: onTap,
+    final crashDiagForDisplay = status == ModelStatus.error
+        ? ref.watch(lastCrashDiagnosticProvider)
+        : null;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ListTile(
+          leading: Icon(
+            status == ModelStatus.ready
+                ? Icons.memory
+                : Icons.cloud_download_outlined,
+            color: status == ModelStatus.ready
+                ? Colors.green
+                : status == ModelStatus.error
+                ? Colors.red
+                : VazhiTheme.primaryColor,
+          ),
+          title: Text(isTamil ? 'VAZHI மாடல்' : 'VAZHI Model'),
+          subtitle: Text(
+            '${model.quantization} • $statusText',
+            style: TextStyle(
+              fontSize: 14,
+              color: status == ModelStatus.error ? Colors.red : null,
+            ),
+          ),
+          trailing: trailing,
+          onTap: onTap,
+        ),
+        // Show diagnostic log below the tile when in error state
+        if (crashDiagForDisplay != null)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(8),
+              decoration: BoxDecoration(
+                color: Colors.red.withValues(alpha: 0.05),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.red.withValues(alpha: 0.2)),
+              ),
+              child: SelectableText(
+                crashDiagForDisplay,
+                style: const TextStyle(
+                  fontSize: 10,
+                  fontFamily: 'monospace',
+                  color: Colors.red,
+                  height: 1.4,
+                ),
+              ),
+            ),
+          ),
+        // Change Model option — only when not busy
+        if (status != ModelStatus.downloading && status != ModelStatus.loading)
+          ListTile(
+            leading: const Icon(Icons.swap_horiz),
+            title: Text(isTamil ? 'மாடல் மாற்று' : 'Change Model'),
+            subtitle: Text(
+              '${model.quantization} (${model.displaySize})',
+              style: const TextStyle(fontSize: 12),
+            ),
+            onTap: () async {
+              final picked = await ModelSelectorSheet.show(context, ref);
+              if (picked != null) {
+                ref.read(selectedModelProvider.notifier).select(picked);
+              }
+            },
+          ),
+      ],
     );
   }
 
   void _confirmDeleteModel(BuildContext context, WidgetRef ref, bool isTamil) {
+    final model = ref.read(selectedModelProvider);
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
         title: Text(isTamil ? 'மாடலை நீக்கவா?' : 'Delete Model?'),
         content: Text(
           isTamil
-              ? 'இது 806 MB சேமிப்பிடத்தை விடுவிக்கும். மீண்டும் பதிவிறக்க வேண்டும்.'
-              : 'This will free up 806 MB of storage. You will need to download again.',
+              ? 'இது ${model.displaySize} சேமிப்பிடத்தை விடுவிக்கும். மீண்டும் பதிவிறக்க வேண்டும்.'
+              : 'This will free up ${model.displaySize} of storage. You will need to download again.',
         ),
         actions: [
           TextButton(

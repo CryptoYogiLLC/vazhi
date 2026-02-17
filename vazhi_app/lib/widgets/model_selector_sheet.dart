@@ -1,0 +1,208 @@
+/// Model Selector Bottom Sheet
+///
+/// Radio-style card list for choosing a GGUF model variant.
+library;
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../config/theme.dart';
+import '../models/model_variant.dart';
+import '../providers/model_provider.dart';
+
+class ModelSelectorSheet extends StatelessWidget {
+  const ModelSelectorSheet._();
+
+  /// Show the sheet and return the selected variant, or null if dismissed.
+  static Future<ModelVariant?> show(BuildContext context, WidgetRef ref) {
+    return showModalBottomSheet<ModelVariant>(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (_) => const ModelSelectorSheet._(),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Consumer(
+      builder: (context, ref, _) {
+        final variants = ref.watch(availableModelsProvider);
+        final selected = ref.watch(selectedModelProvider);
+
+        return Padding(
+          padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // Drag handle
+              Container(
+                width: 40,
+                height: 4,
+                margin: const EdgeInsets.only(bottom: 16),
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+              const Text(
+                'Select Model',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 16),
+              ...variants.map(
+                (v) => _VariantCard(
+                  variant: v,
+                  isSelected: v.id == selected.id,
+                  onTap: () => Navigator.pop(context, v),
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    );
+  }
+}
+
+class _VariantCard extends StatelessWidget {
+  final ModelVariant variant;
+  final bool isSelected;
+  final VoidCallback onTap;
+
+  const _VariantCard({
+    required this.variant,
+    required this.isSelected,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final isDefault = variant.id == ModelRegistry.defaultVariant.id;
+    final isLow = variant.quality == ModelQuality.low;
+
+    final Color badgeColor;
+    switch (variant.quality) {
+      case ModelQuality.high:
+        badgeColor = Colors.green;
+      case ModelQuality.medium:
+        badgeColor = Colors.orange;
+      case ModelQuality.low:
+        badgeColor = Colors.red;
+    }
+
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        margin: const EdgeInsets.only(bottom: 10),
+        padding: const EdgeInsets.all(14),
+        decoration: BoxDecoration(
+          color: isSelected
+              ? VazhiTheme.primaryColor.withValues(alpha: 0.08)
+              : Colors.grey[50],
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: isSelected ? VazhiTheme.primaryColor : Colors.grey[300]!,
+            width: isSelected ? 2 : 1,
+          ),
+        ),
+        child: Row(
+          children: [
+            // Radio indicator
+            Icon(
+              isSelected
+                  ? Icons.radio_button_checked
+                  : Icons.radio_button_unchecked,
+              color: isSelected ? VazhiTheme.primaryColor : Colors.grey,
+              size: 22,
+            ),
+            const SizedBox(width: 12),
+            // Details
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        variant.quantization,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 8,
+                          vertical: 2,
+                        ),
+                        decoration: BoxDecoration(
+                          color: badgeColor.withValues(alpha: 0.15),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: Text(
+                          '${variant.qualityLabel} / ${variant.qualityLabelTamil}',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w600,
+                            color: badgeColor,
+                          ),
+                        ),
+                      ),
+                      if (isDefault) ...[
+                        const SizedBox(width: 6),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 6,
+                            vertical: 2,
+                          ),
+                          decoration: BoxDecoration(
+                            color: VazhiTheme.primaryColor.withValues(
+                              alpha: 0.15,
+                            ),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Text(
+                            'Recommended',
+                            style: TextStyle(
+                              fontSize: 10,
+                              fontWeight: FontWeight.w600,
+                              color: VazhiTheme.primaryColor,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                  const SizedBox(height: 4),
+                  Row(
+                    children: [
+                      Text(
+                        variant.displaySize,
+                        style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                      ),
+                      const SizedBox(width: 12),
+                      Text(
+                        'RAM ${(variant.recommendedRamMB / 1024).toStringAsFixed(0)} GB+',
+                        style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                      ),
+                      if (isLow) ...[
+                        const SizedBox(width: 8),
+                        Icon(
+                          Icons.warning_amber_rounded,
+                          size: 14,
+                          color: Colors.orange[700],
+                        ),
+                      ],
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

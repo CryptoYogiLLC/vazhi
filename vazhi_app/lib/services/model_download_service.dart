@@ -10,6 +10,7 @@ import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:crypto/crypto.dart';
 import 'package:http/http.dart' as http;
 import 'package:path_provider/path_provider.dart';
+import '../models/model_variant.dart';
 
 /// Download state
 enum DownloadState {
@@ -113,26 +114,9 @@ class StorageInfo {
 
 /// Model download service
 class ModelDownloadService {
-  /// Model download URL
-  static const String modelUrl =
-      'https://huggingface.co/CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF/resolve/main/vazhi-v7_1-q4_k_m.gguf';
+  final ModelVariant _model;
 
-  /// Model filename
-  static const String modelFilename = 'vazhi-v7_1-q4_k_m.gguf';
-
-  /// Partial download filename
-  static const String partialFilename = 'vazhi-v7_1-q4_k_m.gguf.partial';
-
-  /// Expected model size (~806 MB)
-  static const int expectedModelSize = 806000000;
-
-  /// Minimum required space (model size + 200MB buffer)
-  static const int requiredSpace = expectedModelSize + 200 * 1024 * 1024;
-
-  /// Expected SHA256 checksum for model integrity verification
-  /// TODO: Update this when new model is published
-  static const String? expectedSha256 =
-      null; // Set to actual hash when available
+  ModelDownloadService(this._model);
 
   /// Allowed hosts for redirect validation (security: prevent MITM redirect attacks)
   static const Set<String> _allowedHosts = {
@@ -216,20 +200,20 @@ class ModelDownloadService {
 
     return StorageInfo(
       availableBytes: availableBytes,
-      requiredBytes: requiredSpace,
+      requiredBytes: _model.requiredSpaceBytes,
     );
   }
 
   /// Get model file path
   Future<String> get modelPath async {
     final dir = await getApplicationDocumentsDirectory();
-    return '${dir.path}/$modelFilename';
+    return '${dir.path}/${_model.filename}';
   }
 
   /// Get partial file path
   Future<String> get _partialPath async {
     final dir = await getApplicationDocumentsDirectory();
-    return '${dir.path}/$partialFilename';
+    return '${dir.path}/${_model.partialFilename}';
   }
 
   /// Check if model is downloaded
@@ -238,7 +222,7 @@ class ModelDownloadService {
     final file = File(path);
     if (await file.exists()) {
       final size = await file.length();
-      return size > 500000000; // At least 500MB for Q4_K_M GGUF
+      return size > _model.minimumValidSizeBytes;
     }
     return false;
   }
@@ -297,8 +281,8 @@ class ModelDownloadService {
           DownloadProgress(
             state: DownloadState.checking,
             downloadedBytes: _resumePosition,
-            totalBytes: expectedModelSize,
-            progress: _resumePosition / expectedModelSize,
+            totalBytes: _model.expectedSizeBytes,
+            progress: _resumePosition / _model.expectedSizeBytes,
             networkType: networkType,
           ),
         );
@@ -364,7 +348,7 @@ class ModelDownloadService {
 
     try {
       // Follow redirects and get final URL
-      var url = Uri.parse(modelUrl);
+      var url = Uri.parse(_model.url);
 
       // Validate initial URL
       if (!_isAllowedUrl(url)) {
@@ -423,7 +407,7 @@ class ModelDownloadService {
         }
 
         // Calculate total size
-        int totalBytes = expectedModelSize;
+        int totalBytes = _model.expectedSizeBytes;
         if (response.contentLength != null) {
           totalBytes = _resumePosition + response.contentLength!;
         }
@@ -594,14 +578,14 @@ class ModelDownloadService {
     if (!await file.exists()) return false;
 
     final size = await file.length();
-    if (size < 500000000) return false; // At least 500MB for Q4_K_M GGUF
+    if (size < _model.minimumValidSizeBytes) return false;
 
     // If we have a SHA256 checksum, verify it
-    if (expectedSha256 != null) {
+    if (_model.sha256 != null) {
       try {
         // Stream-based SHA256 for large files (memory efficient)
         final hash = await _computeSha256(file);
-        if (hash != expectedSha256) {
+        if (hash != _model.sha256) {
           return false;
         }
       } catch (e) {

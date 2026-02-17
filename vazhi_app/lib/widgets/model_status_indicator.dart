@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme.dart';
 import '../providers/chat_provider.dart';
+import '../providers/model_provider.dart';
 
 class ModelStatusIndicator extends ConsumerWidget {
   final bool compact;
@@ -18,12 +19,13 @@ class ModelStatusIndicator extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final status = ref.watch(modelManagerProvider);
     final progress = ref.watch(downloadProgressProvider);
+    final model = ref.watch(selectedModelProvider);
 
     return GestureDetector(
       onTap: onTap,
       child: compact
           ? _buildCompactIndicator(status, progress)
-          : _buildFullIndicator(status, progress),
+          : _buildFullIndicator(status, progress, model.displaySize),
     );
   }
 
@@ -55,7 +57,11 @@ class ModelStatusIndicator extends ConsumerWidget {
     );
   }
 
-  Widget _buildFullIndicator(ModelStatus status, double progress) {
+  Widget _buildFullIndicator(
+    ModelStatus status,
+    double progress,
+    String displaySize,
+  ) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -88,7 +94,7 @@ class ModelStatusIndicator extends ConsumerWidget {
                   _buildProgressBar(progress)
                 else
                   Text(
-                    _getDescription(status),
+                    _getDescription(status, displaySize),
                     style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
               ],
@@ -223,10 +229,10 @@ class ModelStatusIndicator extends ConsumerWidget {
     }
   }
 
-  String _getDescription(ModelStatus status) {
+  String _getDescription(ModelStatus status, String displaySize) {
     switch (status) {
       case ModelStatus.notDownloaded:
-        return 'ஆழமான AI விளக்கங்களுக்கு பதிவிறக்கவும் (806 MB)';
+        return 'ஆழமான AI விளக்கங்களுக்கு பதிவிறக்கவும் ($displaySize)';
       case ModelStatus.downloading:
         return 'சிறிது நேரம் ஆகும்...';
       case ModelStatus.downloaded:
@@ -272,6 +278,7 @@ class DownloadPromptBanner extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final status = ref.watch(modelManagerProvider);
+    final model = ref.watch(selectedModelProvider);
 
     // Only show for not downloaded state
     if (status != ModelStatus.notDownloaded) {
@@ -338,7 +345,7 @@ class DownloadPromptBanner extends ConsumerWidget {
             children: [
               Expanded(
                 child: Text(
-                  '📦 806 MB  •  📱 ஆஃப்லைன் வேலை செய்யும்',
+                  '📦 ${model.displaySize}  •  📱 ஆஃப்லைன் வேலை செய்யும்',
                   style: TextStyle(fontSize: 11, color: Colors.grey[600]),
                 ),
               ),

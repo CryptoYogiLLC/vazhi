@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/message.dart';
 import '../services/vazhi_api_service.dart';
 import '../services/vazhi_local_service.dart';
+import 'model_provider.dart';
 
 /// Inference mode enum
 enum InferenceMode {
@@ -25,9 +26,10 @@ final vazhiApiServiceProvider = Provider<VazhiApiService>((ref) {
   return VazhiApiService();
 });
 
-/// Local service provider (singleton)
+/// Local service provider — rebuilds when the selected model changes.
 final vazhiLocalServiceProvider = Provider<VazhiLocalService>((ref) {
-  final service = VazhiLocalService();
+  final model = ref.watch(selectedModelProvider);
+  final service = VazhiLocalService(model);
   ref.onDispose(() => service.dispose());
   return service;
 });
@@ -149,6 +151,9 @@ final chatProvider = StateNotifierProvider<ChatNotifier, List<Message>>((ref) {
   return ChatNotifier(apiService, localService, ref);
 });
 
+/// Last crash diagnostic info (readable from UI)
+final lastCrashDiagnosticProvider = StateProvider<String?>((ref) => null);
+
 /// Model manager notifier for download and initialization
 class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   final VazhiLocalService _localService;
@@ -159,11 +164,28 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
     _checkModelStatus();
   }
 
-  Future<void> _checkModelStatus() async {
+  Future<void> _checkModelStatus({bool forceRetry = false}) async {
     try {
+      if (forceRetry) {
+        // Retry: clear diagnostic file so we attempt a fresh load
+        await _localService.clearDiagnostic();
+        _ref.read(lastCrashDiagnosticProvider.notifier).state = null;
+      } else {
+        // Startup: check for crash diagnostic from previous session
+        final diagnostic = await _localService.readLastDiagnostic();
+        if (diagnostic != null) {
+          _ref.read(lastCrashDiagnosticProvider.notifier).state = diagnostic;
+          // Previous load crashed — don't auto-load, show error with diagnostic
+          if (await _localService.isModelDownloaded()) {
+            state = ModelStatus.error;
+            return;
+          }
+        }
+      }
+
       if (await _localService.isModelDownloaded()) {
         state = ModelStatus.downloaded;
-        // Auto-load on startup so users don't have to manually tap "Load"
+        // Load the model (auto on startup, explicit on retry)
         await loadModel();
       } else {
         state = ModelStatus.notDownloaded;
@@ -222,6 +244,10 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
       // Automatically switch to local mode when model is ready
       _ref.read(inferenceModeProvider.notifier).state = InferenceMode.local;
     } catch (e) {
+      // Store the error in the diagnostic provider for UI display
+      final diagnostic = await _localService.readLastDiagnostic();
+      _ref.read(lastCrashDiagnosticProvider.notifier).state =
+          diagnostic ?? e.toString();
       state = ModelStatus.error;
       // Don't rethrow — state is set, callers check modelManagerProvider.
       // Rethrowing from fire-and-forget _checkModelStatus causes unhandled
@@ -238,9 +264,10 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
     _ref.read(inferenceModeProvider.notifier).state = InferenceMode.cloud;
   }
 
-  /// Check model status
-  Future<void> checkStatus() async {
-    await _checkModelStatus();
+  /// Check model status. Set [forceRetry] to clear old diagnostic and
+  /// attempt a fresh load (used by the Retry button).
+  Future<void> checkStatus({bool forceRetry = false}) async {
+    await _checkModelStatus(forceRetry: forceRetry);
   }
 }
 

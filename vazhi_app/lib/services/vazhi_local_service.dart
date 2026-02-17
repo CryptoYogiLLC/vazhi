@@ -4,27 +4,22 @@
 library;
 
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:llamadart/llamadart.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
+import '../models/model_variant.dart';
 
 /// Service for running VAZHI model locally on device
 class VazhiLocalService {
+  final ModelVariant _model;
+
   LlamaEngine? _engine;
   ChatSession? _session;
   String? _currentPack;
   bool _isModelLoaded = false;
 
-  /// Model download URL from HuggingFace
-  /// Gemma 3 1B-it SFT v7.1, Q4_K_M quantization (~806MB)
-  static const String modelUrl =
-      'https://huggingface.co/CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF/resolve/main/vazhi-v7_1-q4_k_m.gguf';
-
-  /// Model filename
-  static const String modelFilename = 'vazhi-v7_1-q4_k_m.gguf';
-
-  /// Expected model size in bytes (~806MB)
-  static const int expectedModelSize = 806000000;
+  VazhiLocalService(this._model);
 
   /// System prompts for each pack
   static const Map<String, String> packSystemPrompts = {
@@ -54,7 +49,7 @@ class VazhiLocalService {
   /// automatically. Adding them as explicit text-based stop sequences conflicts
   /// with native EOG detection and causes empty responses.
   static const _generationParams = GenerationParams(
-    maxTokens: 1024,
+    maxTokens: 256, // Reduced from 1024 to fit in 512-token context window
     temp: 0.7,
     stopSequences: ['<|im_start|>', '<|im_end|>', '\nuser\n', '\nUser:'],
   );
@@ -87,7 +82,7 @@ class VazhiLocalService {
   /// Get the local model file path
   Future<String> get modelPath async {
     final dir = await getApplicationDocumentsDirectory();
-    return '${dir.path}/$modelFilename';
+    return '${dir.path}/${_model.filename}';
   }
 
   /// Check if model file exists locally
@@ -96,8 +91,7 @@ class VazhiLocalService {
     final file = File(path);
     if (await file.exists()) {
       final size = await file.length();
-      // Check if file size is reasonable (at least 500MB for Q4_K_M GGUF)
-      return size > 500000000;
+      return size > _model.minimumValidSizeBytes;
     }
     return false;
   }
@@ -113,7 +107,7 @@ class VazhiLocalService {
     final client = http.Client();
     try {
       // First, resolve any redirects to get the final URL
-      var url = Uri.parse(modelUrl);
+      var url = Uri.parse(_model.url);
       http.StreamedResponse response;
 
       // Follow redirects manually (up to 5 redirects)
@@ -132,7 +126,7 @@ class VazhiLocalService {
           // Handle relative and absolute URLs
           url = Uri.parse(location);
           if (!url.hasScheme) {
-            url = Uri.parse(modelUrl).resolve(location);
+            url = Uri.parse(_model.url).resolve(location);
           }
           // Drain the response body before following redirect
           await response.stream.drain();
@@ -146,7 +140,7 @@ class VazhiLocalService {
         }
 
         // Success - download the file
-        final totalBytes = response.contentLength ?? expectedModelSize;
+        final totalBytes = response.contentLength ?? _model.expectedSizeBytes;
         var receivedBytes = 0;
 
         final sink = file.openWrite();
@@ -189,7 +183,102 @@ class VazhiLocalService {
     }
   }
 
-  /// Initialize the engine and load the model
+  /// Path to the diagnostic file that tracks model load progress.
+  /// Written synchronously before each native call so it survives crashes.
+  Future<String> get _diagnosticPath async {
+    final dir = await getApplicationDocumentsDirectory();
+    return '${dir.path}/model_load_diagnostic.txt';
+  }
+
+  /// Append a diagnostic step marker. Uses sync I/O to ensure the write
+  /// completes before the next (potentially crashing) native FFI call.
+  /// Appends (not overwrites) so all steps are visible after a crash.
+  Future<void> _writeDiagnostic(String step) async {
+    try {
+      final path = await _diagnosticPath;
+      File(path).writeAsStringSync(
+        '${DateTime.now().toIso8601String()}|$step\n',
+        mode: FileMode.append,
+      );
+    } catch (_) {
+      // Diagnostic write failure is non-fatal
+    }
+  }
+
+  /// Read diagnostics. Combines the main diagnostic log with the
+  /// worker-isolate load diagnostic (if present). Returns null if none exist.
+  Future<String?> readLastDiagnostic() async {
+    final parts = <String>[];
+    try {
+      final path = await _diagnosticPath;
+      final file = File(path);
+      if (await file.exists()) {
+        parts.add(await file.readAsString());
+      }
+    } catch (_) {}
+    // Also read worker-isolate diagnostic
+    final workerDiag = await _readWorkerDiagnostic();
+    if (workerDiag != null) {
+      parts.add('--- worker isolate ---');
+      parts.add(workerDiag);
+    }
+    // Also read captured llama.cpp stderr
+    final stderrLog = await _readStderrLog();
+    if (stderrLog != null) {
+      parts.add('--- llama.cpp stderr ---');
+      parts.add(stderrLog);
+    }
+    return parts.isEmpty ? null : parts.join('\n');
+  }
+
+  /// Clear the diagnostic file. Called after successful load,
+  /// or by the UI retry handler to allow a fresh load attempt.
+  Future<void> clearDiagnostic() async {
+    try {
+      final path = await _diagnosticPath;
+      final file = File(path);
+      if (await file.exists()) {
+        await file.delete();
+      }
+    } catch (_) {
+      // Ignore delete errors
+    }
+  }
+
+  /// Read the worker-isolate load diagnostic (written by llama_cpp_service
+  /// next to the model file as `$modelPath.loaddiag.txt`).
+  Future<String?> _readWorkerDiagnostic() async {
+    try {
+      final path = await modelPath;
+      final file = File('$path.loaddiag.txt');
+      if (await file.exists()) {
+        return file.readAsString();
+      }
+    } catch (_) {}
+    return null;
+  }
+
+  /// Read the captured llama.cpp stderr log (written during model load).
+  Future<String?> _readStderrLog() async {
+    try {
+      final path = await modelPath;
+      final file = File('$path.stderr.txt');
+      if (await file.exists()) {
+        final content = await file.readAsString();
+        if (content.isNotEmpty) return content;
+      }
+    } catch (_) {}
+    return null;
+  }
+
+  /// Initialize the engine and load the model.
+  /// Writes diagnostic markers before each native call so crashes can
+  /// be diagnosed without adb — check readLastDiagnostic() on restart.
+  ///
+  /// The llamadart service tries mmap first (low RAM), then malloc fallback.
+  /// When malloc is used (entire model in physical RAM), context is
+  /// aggressively clamped to n_ctx=64/n_batch=1 to avoid OOM.
+  /// Step markers written to `$modelPath.loaddiag.txt` survive crashes.
   Future<void> initialize() async {
     if (_isModelLoaded) return;
 
@@ -200,24 +289,48 @@ class VazhiLocalService {
       );
     }
 
+    // Clear previous diagnostic before new attempt
+    await clearDiagnostic();
+
     // Validate GGUF header before native load to prevent SIGSEGV on corrupt files
+    await _writeDiagnostic('step:gguf_validate');
     await _validateGgufHeader(path);
 
+    // Check model file size for diagnostic
+    final fileSize = await File(path).length();
+    final fileSizeMB = (fileSize / (1024 * 1024)).toStringAsFixed(1);
+    debugPrint('VAZHI: Model file size: ${fileSizeMB}MB');
+
+    await _writeDiagnostic('step:engine_create|size:${fileSizeMB}MB');
     _engine = LlamaEngine(LlamaBackend());
+
     try {
+      await _writeDiagnostic('step:set_log_level');
       await _engine!.setLogLevel(LlamaLogLevel.info);
+
+      await _writeDiagnostic('step:load_start');
       await _engine!.loadModel(
         path,
         modelParams: const ModelParams(
           gpuLayers: 0, // CPU-only — avoids Vulkan issues on phones
-          contextSize: 2048,
+          contextSize:
+              512, // Conservative for 4GB devices; llama_cpp_service clamps further if needed
         ),
       );
+      await _writeDiagnostic('step:load_ok');
     } catch (e) {
+      // Merge worker-isolate diagnostic into main diagnostic
+      final workerDiag = await _readWorkerDiagnostic();
+      if (workerDiag != null) {
+        await _writeDiagnostic('worker_diag:\n$workerDiag');
+      }
+      await _writeDiagnostic('step:error|msg:$e');
       _engine = null;
-      throw VazhiLocalException('Model load failed: $e');
+      throw VazhiLocalException('$e');
     }
     _isModelLoaded = true;
+    await _writeDiagnostic('step:complete');
+    await clearDiagnostic();
   }
 
   /// Ensure a session exists with the correct pack's system prompt.

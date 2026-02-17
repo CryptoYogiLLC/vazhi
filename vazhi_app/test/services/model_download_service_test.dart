@@ -3,6 +3,7 @@
 /// Tests for security features and download functionality.
 
 import 'package:flutter_test/flutter_test.dart';
+import 'package:vazhi_app/models/model_variant.dart';
 import 'package:vazhi_app/services/model_download_service.dart';
 
 void main() {
@@ -174,25 +175,24 @@ void main() {
     });
   });
 
-  group('ModelDownloadService - Constants', () {
-    test('modelUrl is HuggingFace URL', () {
-      expect(ModelDownloadService.modelUrl, contains('huggingface.co'));
+  group('ModelDownloadService - ModelVariant integration', () {
+    final model = ModelRegistry.defaultVariant;
+
+    test('model url is HuggingFace URL', () {
+      expect(model.url, contains('huggingface.co'));
     });
 
-    test('modelFilename has .gguf extension', () {
-      expect(ModelDownloadService.modelFilename, endsWith('.gguf'));
+    test('model filename has .gguf extension', () {
+      expect(model.filename, endsWith('.gguf'));
     });
 
-    test('expectedModelSize is approximately 806MB', () {
-      expect(ModelDownloadService.expectedModelSize, greaterThan(500000000));
-      expect(ModelDownloadService.expectedModelSize, lessThan(1000000000));
+    test('model expectedSizeBytes is reasonable', () {
+      expect(model.expectedSizeBytes, greaterThan(500000000));
+      expect(model.expectedSizeBytes, lessThan(1000000000));
     });
 
-    test('requiredSpace includes buffer', () {
-      expect(
-        ModelDownloadService.requiredSpace,
-        greaterThan(ModelDownloadService.expectedModelSize),
-      );
+    test('model requiredSpaceBytes includes buffer', () {
+      expect(model.requiredSpaceBytes, greaterThan(model.expectedSizeBytes));
     });
   });
 
@@ -217,7 +217,7 @@ void main() {
     late ModelDownloadService service;
 
     setUp(() {
-      service = ModelDownloadService();
+      service = ModelDownloadService(ModelRegistry.defaultVariant);
     });
 
     tearDown(() {

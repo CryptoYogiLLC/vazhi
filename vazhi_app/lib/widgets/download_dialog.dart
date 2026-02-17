@@ -10,11 +10,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../config/theme.dart';
 import '../services/model_download_service.dart';
 import '../providers/chat_provider.dart';
+import '../providers/model_provider.dart';
+import 'model_selector_sheet.dart';
 import 'settings_drawer.dart' show languageProvider;
 
-/// Download dialog provider
+/// Download dialog provider — rebuilds when the selected model changes.
 final downloadServiceProvider = Provider<ModelDownloadService>((ref) {
-  final service = ModelDownloadService();
+  final model = ref.watch(selectedModelProvider);
+  final service = ModelDownloadService(model);
   ref.onDispose(() => service.dispose());
   return service;
 });
@@ -143,20 +146,20 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
                 Text('மொபைல் டேட்டா'),
               ],
             ),
-            content: const Column(
+            content: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'நீங்கள் மொபைல் டேட்டாவில் உள்ளீர்கள்.',
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Text(
-                  'AI Brain பதிவிறக்கம் ~806 MB. WiFi பயன்படுத்த பரிந்துரைக்கப்படுகிறது.',
+                  'AI Brain பதிவிறக்கம் ${ref.read(selectedModelProvider).displaySize}. WiFi பயன்படுத்த பரிந்துரைக்கப்படுகிறது.',
                 ),
-                SizedBox(height: 8),
-                Text(
+                const SizedBox(height: 8),
+                const Text(
                   'தொடர வேண்டுமா?',
                   style: TextStyle(fontWeight: FontWeight.w500),
                 ),
@@ -382,6 +385,12 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
   }
 
   Widget _buildInfoCard() {
+    final model = ref.watch(selectedModelProvider);
+    final modelStatus = ref.watch(modelManagerProvider);
+    final isbusy =
+        modelStatus == ModelStatus.downloading ||
+        modelStatus == ModelStatus.loading;
+
     return Container(
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
@@ -390,7 +399,48 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
       ),
       child: Column(
         children: [
-          _buildInfoRow(Icons.storage, 'கோப்பு அளவு', '~806 MB'),
+          // Model selector row
+          Row(
+            children: [
+              Icon(Icons.memory, size: 20, color: VazhiTheme.primaryColor),
+              const SizedBox(width: 12),
+              Text(
+                'Model',
+                style: TextStyle(color: Colors.grey[600], fontSize: 13),
+              ),
+              const Spacer(),
+              Text(
+                model.quantization,
+                style: const TextStyle(fontWeight: FontWeight.w500),
+              ),
+              const SizedBox(width: 8),
+              GestureDetector(
+                onTap: isbusy
+                    ? null
+                    : () async {
+                        final picked = await ModelSelectorSheet.show(
+                          context,
+                          ref,
+                        );
+                        if (picked != null) {
+                          ref
+                              .read(selectedModelProvider.notifier)
+                              .select(picked);
+                        }
+                      },
+                child: Text(
+                  'Change',
+                  style: TextStyle(
+                    color: isbusy ? Colors.grey : VazhiTheme.primaryColor,
+                    fontSize: 13,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const Divider(height: 16),
+          _buildInfoRow(Icons.storage, 'கோப்பு அளவு', model.displaySize),
           const Divider(height: 16),
           _buildInfoRow(Icons.offline_bolt, 'ஆஃப்லைன் பயன்', 'ஆம்'),
           const Divider(height: 16),
