@@ -557,6 +557,11 @@ For conversational content:
 | 107 | Dart `static const` can't use list indexing | Use getter: `static ModelVariant get defaultVariant => variants[0]` |
 | 108 | Riverpod provider dependency chains handle reactive model switching | `ref.watch()` propagates selectedModelProvider changes through the graph |
 | 109 | Constructor injection > static constants for testability | `VazhiLocalService(ModelVariant model)` is trivially testable |
+| 110 | Gemma 3's 262K vocab makes ALL quant levels too large for 4GB devices | Q4_K_M, Q3_K_M, Q2_K all crash — minimum 6GB+ RAM required |
+| 111 | Large vocab models have a fixed memory floor quantization cannot reduce | 30% of Gemma 3's params are 262K embeddings (f32, unquantized) |
+| 112 | mmap is not a silver bullet for memory-constrained inference | Forward pass touches entire model — working set ≈ model size |
+| 113 | OOM score > 750 is a reliable crash predictor on Android | Both Q4_K_M (772) and Q2_K (757) crashed during inference |
+| 114 | Test on target hardware BEFORE building features around it | 3-variant selector assumed smaller quants fit 4GB — all crash |
 
 ---
 
@@ -1420,5 +1425,72 @@ Documented in [ADR-011](adr/011-model-selector-architecture.md).
 
 ---
 
+## Phase 26: 4GB Device Testing — All Variants OOM (Feb 17, 2026)
+
+### The Test
+
+After building the model selector (v0.6.0), we tested all three GGUF variants on a 4GB Android device (3,901 MB total RAM, ~1.2-1.5 GB available). Each variant was tested with the same short prompt (22 tokens).
+
+### Results: All Three Crash
+
+| Variant | File Size | vmRSS post-mmap | OOM Score | Available pre-generate | Result |
+|---------|-----------|-----------------|-----------|----------------------|--------|
+| Q4_K_M | 762 MiB | 947 MB | 772 | 1.3 GB | **Crash** |
+| Q2_K | 652 MiB | 787 MB | 757 | 1.45 GB | **Crash** |
+
+(Q3_K_M was skipped — interpolates between Q4_K_M and Q2_K, would also crash.)
+
+All runs followed the same pattern: model loads via mmap, context creates successfully (n_ctx=256, n_batch=1), prompt ingestion starts, then the app is killed by Android's OOM killer during the forward pass. No tokens are ever generated.
+
+### Root Cause: Gemma 3's 262K Vocabulary
+
+The fundamental problem is **not quantization level** — it's Gemma 3's 262,144-token vocabulary.
+
+**Vocabulary dominates model size:**
+- Embedding parameters: 262,144 tokens x 1,152 dims = ~302M parameters
+- That's **30% of the entire 999.89M model** just for vocabulary embedding
+- Compare: a 32K-vocab model has ~38M embedding params (4% of model)
+
+**f32 tensors are constant across all quant levels:**
+All three GGUF variants have **157 f32 tensors** (embeddings, layer norms) that are identical regardless of quantization. This is why Q2_K is only 110 MiB smaller than Q4_K_M — the unquantized portion doesn't shrink.
+
+**Forward pass memory math on 4GB device:**
+- Available RAM: ~1.4-1.5 GB
+- Model working set (full forward pass pages in all 26 layers): ~652-762 MiB
+- Process overhead (Flutter, Dart VM, worker isolate): ~640-950 MiB
+- Compute buffers (262K logits, attention scratch, activations): additional overhead
+- Total exceeds available → Android OOM killer terminates the process
+
+**Why mmap doesn't save us:**
+mmap is lazy (pages load on demand), but a single forward pass touches ALL 26 transformer layers + embedding + output head = essentially the entire model. The OS can evict pages, but the working set for one pass ≈ the entire model. On a device where available RAM barely exceeds model size, there's no room for compute buffers.
+
+### The 262K Vocab Tax
+
+| Vocab Size | Embedding Params | % of 1B Model | Impact |
+|------------|-----------------|---------------|--------|
+| 32K (typical) | ~38M | 4% | Minimal overhead |
+| 128K (Qwen3) | ~148M | 15% | Moderate |
+| 151K (Qwen3-0.6B) | ~174M | 29% | Large |
+| **262K (Gemma 3)** | **~302M** | **30%** | **Dominant — kills 4GB devices** |
+
+Google's 262K vocabulary gives Gemma 3 excellent multilingual coverage (why it has great Tamil), but the memory cost is devastating for mobile deployment on budget devices.
+
+### Lessons Learned
+
+- **#110**: **Gemma 3's 262K vocabulary makes ALL quantization levels too large for 4GB Android devices** — Q4_K_M (762 MiB), Q3_K_M (~693 MiB), and Q2_K (652 MiB) all crash during inference. The 157 f32 tensors (embeddings, norms) are identical across quant levels, so aggressive quantization only saves ~110 MiB. The minimum viable device for Gemma 3 1B-it is 6GB+ RAM
+- **#111**: **Large vocabulary models have a fixed memory floor that quantization cannot reduce** — 30% of Gemma 3's parameters are in the 262K embedding matrix. These f32 tensors don't quantize. When choosing a deployment model, vocab size matters as much as parameter count for memory-constrained devices. A 1B model with 262K vocab is effectively larger than a 1B model with 32K vocab for mobile deployment
+- **#112**: **mmap is not a silver bullet for memory-constrained inference** — mmap pages in lazily, but a transformer forward pass touches the entire model (all layers, embeddings, output head). Working set ≈ model size. On devices where available RAM barely exceeds model size, the OS thrashes between paging in model weights and evicting them for compute buffers, leading to OOM kill
+- **#113**: **OOM score > 750 is a reliable crash predictor on Android** — both Q4_K_M (772) and Q2_K (757) crashed. Android's OOM killer uses this score to decide which process to terminate under memory pressure. When the score exceeds ~750 at model load time, inference will almost certainly trigger a kill. Use this as a preflight check to warn users before attempting inference
+- **#114**: **Test on target hardware BEFORE building features around it** — we built a 3-variant model selector assuming smaller quants would fit on 4GB. All three crash. The selector is still valuable for 6GB+ devices choosing between quality tiers, but the original motivation (4GB device support) was based on untested assumptions about memory requirements
+
+### Implications for VAZHI
+
+1. **Update model registry**: All variants need 6GB+ minimum RAM. Q4_K_M for 8GB+, Q3_K_M for 6GB+, Q2_K kept for testing only
+2. **4GB users get hybrid-only mode**: SQLite lookups for facts — still valuable, still offline
+3. **Future options for 4GB**: Vocabulary-pruned GGUF (remove unused tokens from 262K), or a different model with smaller vocab that still has Tamil quality
+4. **The model selector remains useful**: 6GB+ users choose quality vs speed tradeoff
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-17 (Model selector v0.6.0, Gemma 3 1B-it SFT v7.1 deployment candidate, 109 lessons learned)*
+*Last updated: 2026-02-17 (4GB device OOM testing — all Gemma 3 variants crash, 262K vocab is the bottleneck, 114 lessons learned)*

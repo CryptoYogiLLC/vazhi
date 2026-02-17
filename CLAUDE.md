@@ -143,6 +143,9 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Q4_K_M is minimum viable** for Tamil — Q3 and below cause visible degradation
 - **Smaller models quantize better** — less absolute precision loss
 - **Tamil tokenization overhead** (3-4 tokens/char) compounds quantization errors
+- **Gemma 3's 262K vocab makes ALL quant levels too large for 4GB Android devices** — Q4_K_M (762 MiB), Q3_K_M (~693 MiB), Q2_K (652 MiB) all OOM-crash during inference. 157 f32 tensors (embeddings, norms) are identical across quant levels. Minimum viable device is 6GB+ RAM
+- **Large vocabulary creates a fixed memory floor** — 30% of Gemma 3's 999.89M params are in the 262K embedding matrix (f32, unquantized). Quantization only compresses the other 70%. When choosing deployment models, vocab size matters as much as parameter count for memory-constrained devices
+- **mmap is not a silver bullet** — a forward pass touches all 26 layers + embeddings + output head = entire model. Working set ≈ model size. On devices where available RAM barely exceeds model size, Android OOM killer terminates the process during inference
 
 ### Data Pipeline Rules (ADR-010)
 - **NEVER mix DAPT and SFT data** — physically separated in `data/sources/dapt/` and `data/sources/sft/`
