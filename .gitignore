@@ -50,6 +50,15 @@ dist/
 build/
 *.egg-info/
 
+# Harness test build artifacts (llama.cpp clone)
+tools/.harness_build/
+
+# GGUF test workspace (model files already caught by *.gguf)
+tools/gguf_test/
+
+# Vendored Flutter packages (local dependency, too large for git)
+vazhi_app/packages/
+
 # Logs
 logs/
 *.log
