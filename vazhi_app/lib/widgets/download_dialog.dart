@@ -52,6 +52,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
   String? _storageError;
   bool _isLoadingModel = false;
   String? _loadError;
+  String? _lastModelId;
 
   @override
   void initState() {
@@ -186,6 +187,25 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
 
   @override
   Widget build(BuildContext context) {
+    // React to model changes: reset dialog state and re-check prerequisites
+    final currentModel = ref.watch(selectedModelProvider);
+    if (_lastModelId != null && _lastModelId != currentModel.id) {
+      // Model changed — schedule a state reset + re-check after this frame
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        setState(() {
+          _hasStarted = false;
+          _storageInfo = null;
+          _storageError = null;
+          _acceptedCellular = false;
+          _showCellularWarning = false;
+          _loadError = null;
+        });
+        _checkPrerequisites();
+      });
+    }
+    _lastModelId = currentModel.id;
+
     // If we're in the model loading phase, show load UI independent of stream
     if (_isLoadingModel || _loadError != null) {
       return Dialog(
