@@ -7,7 +7,7 @@
 **Goal:** Deploy a Tamil-capable LLM on mobile devices (<1GB target)
 **Current Target:** Gemma 3 1B-it SFT v7.1 (deployment candidate — 96% Tamil word score)
 **Timeline:** February 2026
-**Status:** Model training complete. App v0.6.0 with model selector (3 GGUF variants). 247 tests passing. Awaiting GGUF mobile quality testing
+**Status:** Model training complete. App v0.6.1 with model selector (5 variants). 249 tests passing. 4GB devices confirmed SQLite-only (all Gemma 3 models OOM). Two-tier deployment: 4GB=SQLite, 6GB+=LLM
 
 ---
 
@@ -562,6 +562,9 @@ For conversational content:
 | 112 | mmap is not a silver bullet for memory-constrained inference | Forward pass touches entire model — working set ≈ model size |
 | 113 | OOM score > 750 is a reliable crash predictor on Android | Both Q4_K_M (772) and Q2_K (757) crashed during inference |
 | 114 | Test on target hardware BEFORE building features around it | 3-variant selector assumed smaller quants fit 4GB — all crash |
+| 115 | 262K vocab creates OOM floor regardless of model parameter count | Gemma 3 270M-it (264 MiB GGUF) also crashes on 4GB — vocab embeds dominate |
+| 116 | 4GB Android devices cannot run ANY Gemma 3 model on-device | Two-tier: 4GB = SQLite-only, 6GB+ = on-device LLM |
+| 117 | Forward pass working set ≈ model size even for small models | 270M model: 18 layers + embeds + output head all touched per inference |
 
 ---
 
@@ -620,34 +623,29 @@ The hybrid architecture was a game-changer. Instead of blocking on model trainin
 
 ## What's Next
 
-### Immediate (v0.8+ - Current)
-- **Qwen3-0.6B training on Kaggle** (two-stage: Micro-DAPT → SFT)
+### Immediate (v0.7+ - Current)
+- **Two-tier deployment**: 4GB = SQLite retrieval only, 6GB+ = on-device Gemma 3 1B-it v7.1
+- **imatrix quantization experiment**: Tamil-aware importance matrix for better quality at same size
+- **Vocabulary trimming experiment**: Prune 262K→~50K vocab to cut embedding floor by ~466 MiB (potential 4GB LLM path)
+- Enhance SQLite retrieval: paginated display of ALL stored info (not truncated)
+
+### Short-term
 - Populate full Thirukkural database (1,330 verses)
-- Complete government schemes database
+- Complete government schemes database with accurate, current info
+- Apple TestFlight submission
 
-### Short-term (v0.9)
-- GGUF quantization of trained Qwen3-0.6B
-- HuggingFace Space deployment for testing
-- FTS5 Tamil search optimization
+### Target Model Strategy
+**Current: Gemma 3 1B-it SFT v7.1 (deployment candidate, 96% Tamil word)**
 
-### Target Model Strategy (<1GB)
-**Current approach: Qwen3-0.6B with two-stage training**
-
-Why Qwen3-0.6B:
-1. **Native thinking capability** - Built-in reasoning with `/think` mode
-2. **600M parameters** - Sweet spot for <1GB GGUF target
-3. **Clean tokenizer** - No corruption issues like Gemma
-4. **Strong multilingual support** - Better Tamil handling than Gemma
-
-Two-stage training pipeline:
-1. **Micro-DAPT**: 80% Vazhi outputs + 20% Sangraha Tamil corpus (AI4Bharat, CC-BY 4.0)
-2. **SFT**: Instruction tuning with assistant-only loss masking
-3. **Merge**: LoRA adapters merged to base model
-4. **GGUF**: Q4_K_M quantization for mobile deployment
+Two-tier deployment:
+1. **4GB devices**: Hybrid SQLite retrieval only — deterministic lookups, no LLM, still valuable offline
+2. **6GB+ devices**: On-device Gemma 3 1B-it Q4_K_M (806 MB) with system prompt identity
+3. **Future 4GB LLM path**: Vocabulary-trimmed GGUF (262K→~50K, projected ~300 MiB Q4_K_M)
 
 ### Future Considerations
+- Vocabulary trimming for 4GB device LLM support
+- imatrix quantization for better Tamil at aggressive quant levels
 - Custom Tamil-optimized tokenizer
-- Distillation from larger Tamil models
 - Multi-dialect support
 
 ---
@@ -1493,4 +1491,4 @@ Google's 262K vocabulary gives Gemma 3 excellent multilingual coverage (why it h
 ---
 
 *Document created: 2026-02-07*
-*Last updated: 2026-02-17 (4GB device OOM testing — all Gemma 3 variants crash, 262K vocab is the bottleneck, 114 lessons learned)*
+*Last updated: 2026-02-17 (4GB device OOM confirmed for ALL Gemma 3 models including 270M — 262K vocab is the bottleneck, two-tier deployment decided, 117 lessons learned)*

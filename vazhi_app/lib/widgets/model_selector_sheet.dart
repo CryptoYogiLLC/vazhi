@@ -60,15 +60,7 @@ class ModelSelectorSheet extends StatelessWidget {
                   Expanded(
                     child: ListView(
                       controller: scrollController,
-                      children: variants
-                          .map(
-                            (v) => _VariantCard(
-                              variant: v,
-                              isSelected: v.id == selected.id,
-                              onTap: () => Navigator.pop(context, v),
-                            ),
-                          )
-                          .toList(),
+                      children: _buildGroupedList(variants, selected, context),
                     ),
                   ),
                 ],
@@ -77,6 +69,73 @@ class ModelSelectorSheet extends StatelessWidget {
           },
         );
       },
+    );
+  }
+}
+
+List<Widget> _buildGroupedList(
+  List<ModelVariant> variants,
+  ModelVariant selected,
+  BuildContext context,
+) {
+  final vazhi = variants.where((v) => v.isVazhi).toList();
+  final other = variants.where((v) => !v.isVazhi).toList();
+
+  return [
+    if (vazhi.isNotEmpty) ...[
+      _SectionHeader(label: 'VAZHI Models', subtitle: 'Fine-tuned for Tamil'),
+      ...vazhi.map(
+        (v) => _VariantCard(
+          variant: v,
+          isSelected: v.id == selected.id,
+          onTap: () => Navigator.pop(context, v),
+        ),
+      ),
+    ],
+    if (other.isNotEmpty) ...[
+      const SizedBox(height: 8),
+      _SectionHeader(
+        label: 'Community Models',
+        subtitle: 'Vanilla / untrained',
+      ),
+      ...other.map(
+        (v) => _VariantCard(
+          variant: v,
+          isSelected: v.id == selected.id,
+          onTap: () => Navigator.pop(context, v),
+        ),
+      ),
+    ],
+  ];
+}
+
+class _SectionHeader extends StatelessWidget {
+  final String label;
+  final String subtitle;
+
+  const _SectionHeader({required this.label, required this.subtitle});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8, left: 4),
+      child: Row(
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.w700,
+              color: Colors.grey[700],
+            ),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            subtitle,
+            style: TextStyle(fontSize: 11, color: Colors.grey[500]),
+          ),
+        ],
+      ),
     );
   }
 }

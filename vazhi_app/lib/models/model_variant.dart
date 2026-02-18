@@ -43,6 +43,9 @@ class ModelVariant {
   /// Optional SHA256 checksum for integrity verification
   final String? sha256;
 
+  /// Whether this model was fine-tuned by the VAZHI project
+  final bool isVazhi;
+
   const ModelVariant({
     required this.id,
     required this.quantization,
@@ -55,6 +58,7 @@ class ModelVariant {
     required this.qualityLabelTamil,
     required this.recommendedRamMB,
     this.sha256,
+    this.isVazhi = true,
   });
 
   /// Partial download filename (for resume support)
@@ -124,6 +128,7 @@ class ModelRegistry {
       qualityLabel: 'Good',
       qualityLabelTamil: 'நல்லது',
       recommendedRamMB: 4096,
+      isVazhi: false,
     ),
     ModelVariant(
       id: 'gemma_270m_q6_k_l',
@@ -137,6 +142,7 @@ class ModelRegistry {
       qualityLabel: 'Lite',
       qualityLabelTamil: 'லைட்',
       recommendedRamMB: 2048,
+      isVazhi: false,
     ),
   ];
 

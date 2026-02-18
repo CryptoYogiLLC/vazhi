@@ -29,6 +29,10 @@ void main() {
     test('requiredSpaceBytes includes 200MB buffer', () {
       expect(variant.requiredSpaceBytes, 800000000 + 200 * 1024 * 1024);
     });
+
+    test('isVazhi defaults to true', () {
+      expect(variant.isVazhi, isTrue);
+    });
   });
 
   group('ModelRegistry', () {
@@ -70,6 +74,25 @@ void main() {
         expect(v.expectedSizeBytes, greaterThan(200000000));
         expect(v.expectedSizeBytes, lessThan(1000000000));
       }
+    });
+
+    test('VAZHI models come before non-VAZHI models', () {
+      final vazhi = ModelRegistry.variants.where((v) => v.isVazhi).toList();
+      final other = ModelRegistry.variants.where((v) => !v.isVazhi).toList();
+      expect(vazhi.length, 3);
+      expect(other.length, 2);
+      // VAZHI models are first 3 entries
+      for (var i = 0; i < vazhi.length; i++) {
+        expect(ModelRegistry.variants[i].isVazhi, isTrue);
+      }
+      // Non-VAZHI models are last 2 entries
+      for (var i = vazhi.length; i < ModelRegistry.variants.length; i++) {
+        expect(ModelRegistry.variants[i].isVazhi, isFalse);
+      }
+    });
+
+    test('defaultVariant is a VAZHI model', () {
+      expect(ModelRegistry.defaultVariant.isVazhi, isTrue);
     });
   });
 

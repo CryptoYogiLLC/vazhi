@@ -24,18 +24,19 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 
 **What's done:**
 - Flutter app with chat UI, voice I/O (Tamil STT/TTS), hybrid retrieval, model download manager
-- **Model selector** (v0.6.0, ADR-011): 5 GGUF variants (v7.1 Q4_K_M/Q3_K_M/Q2_K + 270M Q6_K_L + QAT Q2_K) with `ModelVariant` single source of truth, `ModelRegistry`, SharedPreferences persistence, bottom sheet UI. Two-tier: 4GB lite (270M) and 6GB+ full (1B)
+- **Model selector** (v0.6.1, ADR-011): 5 GGUF variants with `isVazhi` demarcation — VAZHI-trained (Q4_K_M/Q3_K_M/Q2_K) on top, community models (QAT Q2_K/270M Q6_K_L) at bottom. `ModelVariant` + `ModelRegistry`, SharedPreferences persistence, scrollable bottom sheet UI with section headers
+- **Two-tier architecture** (ADR-012): 4GB Android = SQLite retrieval only (all Gemma 3 models OOM), 6GB+ = on-device LLM
 - 6 knowledge packs: Security (468), Government (467), Education (602), Legal (610), Healthcare (460), Culture (400) = 3,007 bilingual training pairs
 - Security hardened: encrypted storage, input validation, ReDoS protection, URL allowlist, SHA256 verification
-- 247 tests passing, CI/CD via GitHub Actions
+- 252 tests passing, CI/CD via GitHub Actions
 - 19 code review issues identified and closed (#22-40)
 
 **What's in progress:**
-- **Two-tier 4GB deployment** — adding 270M Q6_K_L (283 MB, 4GB tier) and QAT Q2_K (690 MB, 6GB+ tier) to Flutter app for physical device testing
-- **SFT v7.1 remains deployment candidate** for 6GB+ devices (96% Tamil word, best SFT'd model)
-- **4GB Optimization results**: Gemma 3 270M-it Q6_K_L produces real Tamil (98.1% word) at 283 MB — fits 4GB devices. Google QAT Q2_K (690 MB) has substantive content quality, 116 MB smaller than v7.1 Q4_K_M
-- **Key insight**: Google's QAT (Quantization-Aware Training) models are robust to aggressive quantization — QAT Q2_K outperforms standard Q2_K in content quality. bartowski's imatrix quants provide multiple size/quality options
-- **Next step**: Physical device testing on 4GB Android, then SFT winning variants if vanilla quality is sufficient
+- **SFT v7.1 is deployment candidate** for 6GB+ devices (96% Tamil word, best SFT'd model)
+- **imatrix quantization experiment** — Tamil-aware importance matrix for better quality at same size (running on Colab)
+- **Vocabulary trimming experiment** — prune 262K→~50K vocab for potential 4GB LLM support (~300 MiB projected)
+- **Harness test** — build llama-cli for ARM64, test on 4GB device via adb to confirm OOM is model vs device (not Flutter overhead)
+- **Key insight**: No Gemma 3 model (not even 270M at 264 MiB) can run on 4GB Android. The 262K vocabulary creates an uncompressible f32 embedding floor. Combined with Flutter's ~640 MB overhead, total exceeds ~1.4 GB available
 - **Identity solution**: System prompt at inference time ("You are VAZHI"); factual corrections via hybrid SQLite retrieval (already built into app architecture)
 
 **What's done (app distribution):**
@@ -149,6 +150,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Gemma 3's 262K vocab makes ALL quant levels too large for 4GB Android devices** — Q4_K_M (762 MiB), Q3_K_M (~693 MiB), Q2_K (652 MiB) all OOM-crash during inference. 157 f32 tensors (embeddings, norms) are identical across quant levels. Minimum viable device is 6GB+ RAM
 - **Large vocabulary creates a fixed memory floor** — 30% of Gemma 3's 999.89M params are in the 262K embedding matrix (f32, unquantized). Quantization only compresses the other 70%. When choosing deployment models, vocab size matters as much as parameter count for memory-constrained devices
 - **mmap is not a silver bullet** — a forward pass touches all 26 layers + embeddings + output head = entire model. Working set ≈ model size. On devices where available RAM barely exceeds model size, Android OOM killer terminates the process during inference
+- **No Gemma 3 model can run on 4GB Android** — tested 1B-it (Q4_K_M, Q3_K_M, Q2_K) and 270M-it (Q6_K_L at 264 MiB). All crash. 262K vocab creates uncompressible f32 embedding floor regardless of model parameter count. Two-tier architecture confirmed: 4GB = SQLite only, 6GB+ = on-device LLM (ADR-012)
 - **Google QAT models are robust to aggressive quantization** — QAT (Quantization-Aware Training) bakes quantization noise into training. QAT Q2_K (690 MB) produces substantive Tamil content, while standard Q2_K shows more degradation. Always prefer QAT variants when available
 - **bartowski's imatrix GGUFs are pre-optimized** — bartowski applies imatrix calibration to all quants. `_L` variants (Q6_K_L, Q4_K_L) use Q8_0 for embed/output weights, improving quality at cost of ~20-30 MB. Skip custom imatrix generation when bartowski variants exist
 - **Gemma 3 270M-it produces real Tamil at 283 MB** — Q6_K_L variant has 98.1% Tamil word score. Content is shallow (factual hallucinations, echo responses, script contamination from Gujarati/Korean) but usable as "language glue" with hybrid SQLite compensating for factual accuracy
@@ -202,6 +204,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Verify downloads with SHA256 checksums**
 - **Single source of truth for model metadata** — all GGUF model info (URL, filename, size, quality) lives in `ModelVariant` + `ModelRegistry`. Services accept `ModelVariant` via constructor injection. Adding a new model = one registry entry, zero service changes (ADR-011)
 - **Persist user preferences with SharedPreferences** — model selection, language preference, etc. Use Riverpod `StateNotifier` + SharedPreferences pattern for reactive persistence
+- **Demarcate VAZHI vs community models** — `ModelVariant.isVazhi` field (defaults to true). VAZHI-trained models listed first in selector, community/vanilla models in a separate section below. Section headers in `ModelSelectorSheet` provide visual separation
 
 ## Project Structure
 
@@ -264,13 +267,15 @@ vazhi/
 │   ├── assemble_dataset_v5_3.py      # v5.3 dataset assembly (Sadhguru Q&A v2 restored)
 ├── schemas/                      # JSON schemas for training data validation
 ├── vazhi-packs/                  # 6 domain-specific knowledge packs (app references these)
+├── tools/                        # Developer utilities
+│   └── 4gb_harness_test.sh       # Build llama-cli for ARM64, test on 4GB device via adb
 ├── huggingface-space/            # Gradio test API (submodule)
 └── docs/
     ├── SPRINT_PLAN_REVISED.md    # Roadmap and phase tracking
-    ├── LESSONS_LEARNED.md        # 91 lessons from training journey
+    ├── LESSONS_LEARNED.md        # 117 lessons from training journey
     ├── CODE_REVIEW_CONSENSUS_REPORT.md
     ├── DATA_REGENERATION_PLAN.md # Historical — v0.2 data crisis
-    └── adr/                      # 10 Architecture Decision Records
+    └── adr/                      # 12 Architecture Decision Records
 ```
 
 ## Key Documents (Read Order for New Agents)

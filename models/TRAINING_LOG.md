@@ -50,6 +50,7 @@ This log captures all training runs, decisions, and rationale to prevent repeati
 | GGUF v7.1 | 2026-02-16 | ✅ Complete | Converted v7.1 to 3 GGUF variants: Q4_K_M (762 MiB), Q3_K_M (~693 MiB), Q2_K (652 MiB). Uploaded to HuggingFace: `CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF`, `CryptoYogi/vazhi-v7_1-Q3_K_M-GGUF`, `CryptoYogi/vazhi-v7_1-Q2_K-GGUF` |
 | 4GB Test | 2026-02-17 | ❌ Failed | Tested Q4_K_M and Q2_K on 4GB Android device (3.9 GB total, ~1.2-1.5 GB available). Both crash during inference — OOM killed. Model loads via mmap, context creates, prompt ingestion starts, then Android kills the process. Root cause: 262K vocab creates 157 f32 tensors (30% of model) that don't shrink with quantization. Working set ≈ model size, exceeds available RAM. **Minimum viable device: 6GB+ RAM** |
 | 4GB Optimization | 2026-02-17 | ✅ **GO** | Two alternative model families tested on Colab T4 (llama-cpp-python GPU). **Test 0 — Gemma 3 270M-it (bartowski GGUF):** Q6_K_L (283 MB) = 98.1% Tamil word, Q4_K_M (253 MB) = 93.5%, IQ4_NL (242 MB) = 95.0%. Real Tamil output but shallow content: factual hallucinations (ration card="Visa Card"), echo responses, script contamination (Gujarati/Korean). Usable as "language glue" for 4GB tier with hybrid SQLite. **Test 1 — Gemma 3 1B-it QAT (bartowski/Google QAT GGUF):** QAT Q2_K (690 MB) = 94.9% Tamil word (star performer), Q4_K_M (806 MB) = 94.0%, Q3_K_M (722 MB) = 93.2%, IQ3_M (697 MB) = 93.1%. Dramatically better content than 270M: correct ration card info, structured answers, VAZHI identity via system prompt, actual medical/legal content. Minor script contamination (Russian). **Strategy: two-tier deployment** — 4GB: 270M Q6_K_L (283 MB), 6GB+: QAT Q2_K (690 MB, 116 MB smaller than v7.1 Q4_K_M). No SFT needed for device testing — test vanilla first. Notebook: `Vazhi_4GB_Optimization.ipynb` |
+| 270M Device Test | 2026-02-17 | ❌ Failed | Tested Gemma 3 270M-it Q6_K_L (283 MB, 263.64 MiB mmap) on 4GB Android device (3.9 GB total, 1.4 GB available, 242 MB free). Model loads via mmap (268.1M params, 18 layers, 236 tensors — 109 f32), context creates (n_ctx=256, n_batch=1), prompt ingestion starts (prompt_len:21), then app killed by OOM (score 718/1000). Even the smallest Gemma 3 model crashes — 262K vocabulary creates uncompressible f32 embedding floor regardless of parameter count. **Conclusion: No Gemma 3 model can run on 4GB Android. Two-tier deployment confirmed: 4GB=SQLite only, 6GB+=on-device LLM** |
 
 ---
 
@@ -2835,38 +2836,62 @@ This has critical implications for mobile deployment — see 4GB Device Testing 
 
 Q3_K_M was skipped (similar size to Q2_K, same outcome expected).
 
-### Observed Behavior
+### 270M-it Test (Smallest Available Gemma 3)
+
+After confirming all 1B-it variants crash, we tested the smallest Gemma 3 model (270M-it, bartowski's Q6_K_L quant):
+
+| Variant | File Size | Params | Layers | Tensors (f32) | Load | Context | Ingest | Result |
+|---------|-----------|--------|--------|---------------|------|---------|--------|--------|
+| 270M Q6_K_L | 263.64 MiB | 268.1M | 18 | 109 of 236 | ✅ (mmap) | ✅ (n_ctx=256) | Started (21 tokens) | **OOM crash** |
+
+**Device state at load time:**
+- Total RAM: 3,901 MB (3.9 GB)
+- Available: 1,444 MB (1.4 GB)
+- Free: 242 MB
+- OOM score: 718/1000
+- App process: ~640 MB overhead (Flutter + Dart VM + worker isolate)
+
+**Crash sequence:** Model loads via mmap → context creates → prompt ingestion starts → forward pass touches all 18 layers + embeddings + output head → Android OOM killer terminates process.
+
+**Key finding:** Even at 264 MiB (vs 652-762 MiB for 1B-it), the 262K vocabulary creates 109 f32 tensors that cannot be compressed. The forward pass working set plus Flutter app overhead (~640 MB) exceeds the ~1.4 GB available.
+
+### Observed Behavior (All Tests)
 
 1. Model file downloads and loads via mmap (kernel handles paging)
 2. Context creates successfully with minimal settings (n_ctx=256, n_batch=1)
 3. Prompt ingestion begins (llama.cpp `ingest:start` event)
-4. During forward pass, model touches all 26 layers + embeddings + output head
+4. During forward pass, model touches all layers + embeddings + output head
 5. Working set ≈ entire model size in physical RAM
-6. Android OOM killer activates (OOM score 750-772)
+6. Android OOM killer activates (OOM score 718-772)
 7. App process terminated — thinking indicator stops, app crashes
 
 ### Root Cause Analysis
 
 **Gemma 3's 262K vocabulary creates a fixed memory floor that quantization cannot reduce.**
 
-| Model | Vocab | Embedding Params | Tensor Count | Q4_K_M | Q2_K | Delta |
-|-------|-------|-----------------|--------------|--------|------|-------|
-| Gemma 3 1B-it | 262K | ~302M (30%) | 157 f32 | 762 MiB | 652 MiB | 110 MiB (14%) |
-| Qwen3-0.6B | 151K | ~91M (12%) | 121 f32 | 450 MiB | ~380 MiB | ~70 MiB (16%) |
+| Model | Vocab | Params | Tensor Count (f32) | GGUF Size | Available RAM | Result |
+|-------|-------|--------|-------------------|-----------|---------------|--------|
+| Gemma 3 1B-it Q4_K_M | 262K | 999.89M | 157 | 762 MiB | ~1.3 GB | **OOM (772)** |
+| Gemma 3 1B-it Q2_K | 262K | 999.89M | 157 | 652 MiB | ~1.45 GB | **OOM (757)** |
+| Gemma 3 270M-it Q6_K_L | 262K | 268.1M | 109 | 264 MiB | ~1.4 GB | **OOM (718)** |
 
-The 157 f32 tensors (embeddings + layer norms) are identical across all quant levels. Even Q2_K (652 MiB) exceeds available RAM on a 4GB device with ~1.2-1.5 GB free.
+The f32 tensors (embeddings + layer norms) are identical across all quant levels for a given architecture. The 262K vocabulary creates an uncompressible embedding matrix that dominates memory regardless of model parameter count.
 
-mmap doesn't solve this because the forward pass touches the entire model (all 26 transformer layers + embedding lookup + output head projection). The working set during inference ≈ the full model file size.
+mmap doesn't solve this because the forward pass touches the entire model (all transformer layers + embedding lookup + output head projection). The working set during inference ≈ the full model file size. Combined with Flutter app overhead (~640 MB), total memory demand exceeds the ~1.4 GB available on 4GB devices.
 
 ### Implications for VAZHI
 
-1. **Minimum viable device for Gemma 3 1B-it is 6GB+ RAM** — regardless of quantization level
-2. **4GB devices need a fundamentally smaller model** — not a more aggressive quantization of the same model
-3. **Model selector correctly includes RAM recommendations** — Q4_K_M shows "6GB+ RAM recommended" (ADR-011)
-4. **Future options for 4GB support:**
-   - Wait for Gemma 3 0.5B-it (if released) — smaller architecture = smaller embedding floor
-   - Investigate Qwen3-0.5B-it with better multilingual pretraining (if available)
-   - Accept that AI features require 6GB+ and keep hybrid SQLite retrieval for 4GB devices
+1. **No Gemma 3 model can run on 4GB Android devices** — tested 1B-it (3 variants) and 270M-it, all crash
+2. **4GB devices = SQLite retrieval only** — architectural decision recorded in ADR-012
+3. **6GB+ devices = on-device LLM** — VAZHI v7.1 Q4_K_M (762 MiB) as primary, smaller quants as options
+4. **Two-tier deployment confirmed:**
+   - 4GB: Hybrid SQLite retrieval (deterministic lookups, offline, no LLM) — still provides immediate value
+   - 6GB+: On-device Gemma 3 1B-it with system prompt identity + hybrid SQLite for facts
+5. **Future 4GB LLM options:**
+   - Vocabulary trimming (262K→~50K) — projected ~300 MiB Q4_K_M, well within 4GB capability
+   - imatrix quantization — better Tamil quality at same size, not smaller files
+   - Different model architecture with smaller vocabulary
+6. **Harness test needed** — to confirm OOM is model size vs device RAM, not Flutter app overhead
 
 ---
 
