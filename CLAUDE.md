@@ -24,20 +24,21 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 
 **What's done:**
 - Flutter app with chat UI, voice I/O (Tamil STT/TTS), hybrid retrieval, model download manager
-- **Model selector** (v0.6.1, ADR-011): 5 GGUF variants with `isVazhi` demarcation — VAZHI-trained (Q4_K_M/Q3_K_M/Q2_K) on top, community models (QAT Q2_K/270M Q6_K_L) at bottom. `ModelVariant` + `ModelRegistry`, SharedPreferences persistence, scrollable bottom sheet UI with section headers
+- **Smart model selector** (ADR-013): 3 GGUF variants with RAM-based device tier filtering, user-friendly labels (High Quality/Balanced/Compact), pre-inference RAM checks, MediaStore Downloads persistence
 - **Two-tier architecture** (ADR-012): 4GB Android = SQLite retrieval only (all Gemma 3 models OOM), 6GB+ = on-device LLM
+- **4GB device crash fixes** (v0.7.0): ARM baseline `armv8.2-a+fp16+dotprod` (Cortex-A55+), GPU offload disabled, n_ctx=256, Vulkan removed (APK 130→100 MB)
+- **Model file persistence**: MediaStore Downloads/VAZHI/ via platform channel — survives app uninstall/reinstall
 - 6 knowledge packs: Security (468), Government (467), Education (602), Legal (610), Healthcare (460), Culture (400) = 3,007 bilingual training pairs
 - Security hardened: encrypted storage, input validation, ReDoS protection, URL allowlist, SHA256 verification
-- 252 tests passing, CI/CD via GitHub Actions
+- 289 tests passing, CI/CD via GitHub Actions
 - 19 code review issues identified and closed (#22-40)
 
 **What's in progress:**
 - **SFT v7.1 is deployment candidate** for 6GB+ devices (96% Tamil word, best SFT'd model)
-- **imatrix quantization experiment** — Tamil-aware importance matrix for better quality at same size (running on Colab)
-- **Vocabulary trimming experiment** — prune 262K→~50K vocab for potential 4GB LLM support (~300 MiB projected)
-- **Harness test** — build llama-cli for ARM64, test on 4GB device via adb to confirm OOM is model vs device (not Flutter overhead)
-- **Key insight**: No Gemma 3 model (not even 270M at 264 MiB) can run on 4GB Android. The 262K vocabulary creates an uncompressible f32 embedding floor. Combined with Flutter's ~640 MB overhead, total exceeds ~1.4 GB available
+- **On-device inference testing** — trimmed Q3_K_M (421 MB) loads and runs on 4GB Android (Vortex JK68, Cortex-A55, 3810 MB RAM). Tamil grammar correct but response quality limited (echoes "how can I help?" instead of answering). Testing larger trimmed Q4_K_M (505 MB) for better quality
+- **Vocabulary trimming COMPLETE** — 262K→~21K vocab trimmed GGUFs confirmed working on 4GB device. Harness tests passed for Q4_K_M (505 MB), Q3_K_M (421 MB), Q2_K (389 MB)
 - **Identity solution**: System prompt at inference time ("You are VAZHI"); factual corrections via hybrid SQLite retrieval (already built into app architecture)
+- **Key insight**: No untrimmed Gemma 3 model (not even 270M at 264 MiB) can run on 4GB Android. Vocabulary trimming (262K→21K) is the only viable path — confirmed working
 
 **What's done (app distribution):**
 - Google Play: App icon (peacock logo), display name ("VAZHI - வழி"), application ID (`com.cryptoyogillc.vazhi`), AAB uploaded — awaiting developer account verification (needs Android phone) before internal testing can go live
@@ -152,9 +153,11 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **mmap is not a silver bullet** — a forward pass touches all 26 layers + embeddings + output head = entire model. Working set ≈ model size. On devices where available RAM barely exceeds model size, Android OOM killer terminates the process during inference
 - **No Gemma 3 model can run on 4GB Android** — tested 1B-it (Q4_K_M, Q3_K_M, Q2_K) and 270M-it (Q6_K_L at 264 MiB). All crash. 262K vocab creates uncompressible f32 embedding floor regardless of model parameter count. Two-tier architecture confirmed: 4GB = SQLite only, 6GB+ = on-device LLM (ADR-012)
 - **Google QAT models are robust to aggressive quantization** — QAT (Quantization-Aware Training) bakes quantization noise into training. QAT Q2_K (690 MB) produces substantive Tamil content, while standard Q2_K shows more degradation. Always prefer QAT variants when available
-- **bartowski's imatrix GGUFs are pre-optimized** — bartowski applies imatrix calibration to all quants. `_L` variants (Q6_K_L, Q4_K_L) use Q8_0 for embed/output weights, improving quality at cost of ~20-30 MB. Skip custom imatrix generation when bartowski variants exist
+- **imatrix does NOT reduce GGUF file size and can hurt Tamil quality** — tested Tamil-aware imatrix on v7.1: Q2_K stays 689.8 MB (zero savings), Tamil word drops 97.5%→95.1% (-2.4%). IQ2_M with imatrix: 669.8 MB, 93.8% word — 20 MB smaller but 3.7% quality loss. Don't use custom imatrix for VAZHI models
+- **Embed/output Q8_0 quantization has zero effect on Gemma 3** — `--output-tensor-type q8_0` produces identical file sizes and outputs. The 262K vocab tensors are already stored optimally
+- **The 262K vocab floor is non-compressible via ANY quantization method** — tested standard quant, imatrix, embed Q8_0, and combined. All produce identical 690-806 MB files. Only vocabulary trimming can reduce the embedding floor
 - **Gemma 3 270M-it produces real Tamil at 283 MB** — Q6_K_L variant has 98.1% Tamil word score. Content is shallow (factual hallucinations, echo responses, script contamination from Gujarati/Korean) but usable as "language glue" with hybrid SQLite compensating for factual accuracy
-- **Two-tier deployment solves 4GB problem without vocab trimming** — 270M Q6_K_L (283 MB) for 4GB devices, QAT Q2_K (690 MB) or v7.1 Q4_K_M (806 MB) for 6GB+. Simpler than vocabulary trimming and avoids tokenizer rebuilding risks
+- **Vocabulary trimming is the only path to 4GB LLM support** — 262K→~21K vocab cuts embedding from ~576 MiB to ~46 MiB. Projected Q4_K_M: ~300 MiB. In progress
 
 ### Data Pipeline Rules (ADR-010)
 - **NEVER mix DAPT and SFT data** — physically separated in `data/sources/dapt/` and `data/sources/sft/`
@@ -205,6 +208,12 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Single source of truth for model metadata** — all GGUF model info (URL, filename, size, quality) lives in `ModelVariant` + `ModelRegistry`. Services accept `ModelVariant` via constructor injection. Adding a new model = one registry entry, zero service changes (ADR-011)
 - **Persist user preferences with SharedPreferences** — model selection, language preference, etc. Use Riverpod `StateNotifier` + SharedPreferences pattern for reactive persistence
 - **Demarcate VAZHI vs community models** — `ModelVariant.isVazhi` field (defaults to true). VAZHI-trained models listed first in selector, community/vanilla models in a separate section below. Section headers in `ModelSelectorSheet` provide visual separation
+- **Persist model files in MediaStore Downloads** — use `Downloads/VAZHI/` via Android MediaStore API (platform channel). Files survive app uninstall/reinstall. Download to internal storage first (staging), then copy to Downloads, then delete staging copy. No special permissions needed on Android 10+
+- **Explicitly disable GPU offload when no GPU backend** — set `offload_kqv=false`, `op_offload=false`, `flash_attn_typeAsInt=0` in llama.cpp context params. Leaving defaults causes SIGABRT in `ggml_backend_sched_new` when Vulkan is not loaded
+- **Build native libraries for ARMv8.2-A baseline** — use `GGML_CPU_ARM_ARCH=armv8.2-a+fp16+dotprod`. Do NOT use `i8mm` (requires ARMv8.6-A/A78+) or `sve` — these cause SIGILL on Cortex-A55, the dominant budget core (2018+ phones). Check `/proc/cpuinfo` features on target device before setting compile flags
+- **Cap llama.cpp n_ctx for memory-constrained devices** — Tamil system prompts consume ~80-100 tokens with Gemma 3's tokenizer. n_ctx=128 leaves insufficient room for generation (causes content-free response loops). Use n_ctx=256 as minimum for Tamil inference
+- **Remove unused native backends from APK** — disabling Vulkan (`VULKAN_ENABLED=OFF`) when `gpuLayers=0` saved 30 MB (35→4.9 MB .so, APK 130→100 MB). Only include backends the app actually uses
+- **Diagnose native crashes by signal type** — SIGABRT (signal 6) = assertion/parameter error, SIGSEGV (signal 11) = null pointer/memory access, SIGILL (signal 4) = illegal CPU instruction. Each requires a different fix approach
 
 ## Project Structure
 

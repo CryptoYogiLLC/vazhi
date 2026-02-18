@@ -5,6 +5,8 @@
 /// removed variant IDs from older app versions.
 library;
 
+import 'dart:async';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/model_variant.dart';
@@ -61,41 +63,60 @@ final availableModelsProvider = Provider<List<ModelVariant>>(
 
 /// Notifier that loads/saves the selected model to SharedPreferences.
 /// Auto-migrates removed variant IDs from older app versions.
+///
+/// Exposes [ready] to let downstream consumers (e.g. ModelManagerNotifier)
+/// wait until model selection + migration is finalized before autoloading.
 class SelectedModelNotifier extends StateNotifier<ModelVariant> {
   final Ref _ref;
+  final Completer<void> _readyCompleter = Completer<void>();
+
+  /// Completes when initial load + migration is done.
+  /// Downstream consumers should await this before acting on [state].
+  Future<void> get ready => _readyCompleter.future;
 
   SelectedModelNotifier(this._ref) : super(ModelRegistry.defaultVariant) {
     _load();
   }
 
   Future<void> _load() async {
-    final prefs = await SharedPreferences.getInstance();
-    final id = prefs.getString(_prefsKey);
+    try {
+      // Run SharedPreferences and RAM detection in parallel
+      final results = await Future.wait([
+        SharedPreferences.getInstance(),
+        _ref.read(deviceMemoryInfoProvider.future),
+      ]);
+      final prefs = results[0] as SharedPreferences;
+      final memInfo = results[1] as DeviceMemoryInfo;
+      final id = prefs.getString(_prefsKey);
+      final totalRamMB = memInfo.totalRamMB;
 
-    // Get device RAM for migration decisions
-    final memInfo = await _ref.read(deviceInfoServiceProvider).getMemoryInfo();
-    final totalRamMB = memInfo.totalRamMB;
-
-    if (id != null) {
-      final variant = ModelRegistry.findById(id, totalRamMB: totalRamMB);
-      // If the ID was migrated (different from what was stored), persist the new ID
-      if (variant.id != id) {
-        await prefs.setString(_prefsKey, variant.id);
-      }
-      state = variant;
-    } else {
-      // First launch: auto-select best model for device
-      final recommended = totalRamMB > 0
-          ? ModelRegistry.recommendedForDevice(totalRamMB)
-          : null;
-      if (recommended != null) {
-        state = recommended;
-        await prefs.setString(_prefsKey, recommended.id);
+      if (id != null) {
+        final variant = ModelRegistry.findById(id, totalRamMB: totalRamMB);
+        // If the ID was migrated (different from what was stored), persist the new ID
+        if (variant.id != id) {
+          await prefs.setString(_prefsKey, variant.id);
+        }
+        state = variant;
       } else {
-        // sqliteOnly or unknown — use smallest trimmed variant
-        final fallback = ModelRegistry.variants.where((v) => v.isTrimmed).last;
-        state = fallback;
-        await prefs.setString(_prefsKey, fallback.id);
+        // First launch: auto-select best model for device
+        final recommended = totalRamMB > 0
+            ? ModelRegistry.recommendedForDevice(totalRamMB)
+            : null;
+        if (recommended != null) {
+          state = recommended;
+          await prefs.setString(_prefsKey, recommended.id);
+        } else {
+          // sqliteOnly or unknown — use smallest trimmed variant
+          final fallback = ModelRegistry.variants
+              .where((v) => v.isTrimmed)
+              .last;
+          state = fallback;
+          await prefs.setString(_prefsKey, fallback.id);
+        }
+      }
+    } finally {
+      if (!_readyCompleter.isCompleted) {
+        _readyCompleter.complete();
       }
     }
   }
@@ -112,3 +133,11 @@ final selectedModelProvider =
     StateNotifierProvider<SelectedModelNotifier, ModelVariant>(
       (ref) => SelectedModelNotifier(ref),
     );
+
+/// Completes when model selection + migration is finalized.
+/// ModelManagerNotifier awaits this before autoloading to prevent
+/// the startup race where the wrong (pre-migration) model gets loaded.
+final modelSelectionReadyProvider = FutureProvider<void>((ref) async {
+  final notifier = ref.read(selectedModelProvider.notifier);
+  await notifier.ready;
+});

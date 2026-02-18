@@ -12,23 +12,33 @@
 
 VAZHI targets rural Tamil Nadu users with mid-range smartphones. Many budget Android devices ship with 4GB RAM (3.9 GB usable). After extensive testing, **no Gemma 3 model can run on 4GB Android devices** — including the smallest available (270M-it at 264 MiB).
 
-### Models Tested on 4GB Android (3.9 GB total, ~1.4 GB available)
+### Models Tested on 4GB Android (3.9 GB total, ~1.3 GB available)
 
-| Model | GGUF Size | Params | OOM Score | Result |
-|-------|-----------|--------|-----------|--------|
-| Gemma 3 1B-it Q4_K_M | 762 MiB | 999.89M | 772 | **Crash** |
-| Gemma 3 1B-it Q2_K | 652 MiB | 999.89M | 757 | **Crash** |
-| Gemma 3 270M-it Q6_K_L | 264 MiB | 268.1M | 718 | **Crash** |
+| Model | GGUF Size | Context | Result |
+|-------|-----------|---------|--------|
+| Gemma 3 1B-it Q4_K_M | 762 MiB | Flutter app | **Crash** (OOM during forward pass) |
+| Gemma 3 1B-it Q2_K | 652 MiB | Flutter app | **Crash** (OOM during forward pass) |
+| Gemma 3 270M-it Q6_K_L | 264 MiB | Flutter app | **Crash** (OOM during forward pass) |
+| Gemma 3 270M-it Q6_K_L | 264 MiB | llama-simple (no Flutter) | **SUCCESS** — 12.3 tok/s, 5.1s for 32 tokens |
+| **VAZHI v7.1 Trimmed Q2_K** | **389 MB** | **llama-simple (no Flutter)** | **SUCCESS** — 3.25 tok/s, 10.1s for 32 tokens, only 12 MB RAM consumed |
+| **VAZHI v7.1 Trimmed Q3_K_M** | **421 MB** | **llama-simple (no Flutter)** | **SUCCESS** — 4.03 tok/s, 5.7s for 23 tokens, only 16 MB RAM consumed |
+| **VAZHI v7.1 Trimmed Q4_K_M** | **505 MB** | **llama-simple (no Flutter)** | **SUCCESS** — 3.42 tok/s, 6.8s for 32 tokens, only 25 MB RAM consumed |
 
-All tests follow the same pattern: model loads via mmap, context creates, prompt ingestion starts, then Android OOM killer terminates the process during the forward pass.
+Flutter app tests crash during forward pass. Harness tests (llama-simple without Flutter) prove the 270M-it, **trimmed 1B-it v7.1 Q2_K**, and **trimmed 1B-it v7.1 Q3_K_M** all fit in memory. Flutter's ~640 MB overhead is the bottleneck, but with only 12-16 MB consumed by the trimmed models via mmap, the **combined trimmed model + Flutter may fit**. **Q3_K_M is the recommended 4GB variant** — 32 MB larger than Q2_K but dramatically better Tamil quality (recovers 3 domain answers Q2_K loses).
 
-### Root Cause
+### Root Cause — UPDATED (Harness Test 2026-02-17)
 
-Gemma 3's 262K vocabulary creates an uncompressible memory floor:
-- **262K embedding matrix** stored as f32 tensors — does not shrink with quantization
+**Flutter app overhead (~640 MB) is the primary cause, NOT model size alone.**
+
+Harness test (llama-simple via adb, no Flutter) on JK68 (3.9 GB total, 1.3 GB available):
+- **Gemma 3 270M-it Q6_K_L (264 MiB) runs successfully** — 12.3 tok/s, no OOM, 5.1s for 32 tokens
+- Memory used: ~264 MiB model + ~19 MiB compute = ~283 MiB (well within 1.3 GB available)
+- The **same model crashes inside the Flutter app** — Flutter overhead (~640 MB) pushes total to ~923 MB, competing with ~1.3 GB available and triggering Android OOM killer
+
+Contributing factors:
+- **Flutter app overhead** (~640 MB for Dart VM, widgets, worker isolate) is the dominant memory consumer
+- **262K embedding matrix** stored as f32 tensors — does not shrink with quantization (but is not the OOM cause alone)
 - **Forward pass working set ≈ entire model** — mmap pages in lazily but every layer is touched
-- **Flutter app overhead** (~640 MB for Dart VM, widgets, worker isolate) competes for the same ~1.4 GB available
-- **Even 264 MiB (270M-it) + 640 MB Flutter = ~900 MB**, leaving only ~500 MB for compute buffers, OS, and other processes — insufficient for inference
 
 ### Why Not a Different Model?
 
@@ -88,15 +98,17 @@ Currently, the app shows all model variants with RAM recommendations. A future e
 - **User expectations** — "AI assistant" marketing may disappoint 4GB users who can't access AI features
 
 ### Risks
-- **Flutter app overhead unverified** — a harness test (llama.cpp CLI via adb) should confirm whether the crash is purely model vs RAM, or if Flutter's ~640 MB overhead is a significant factor. If Flutter overhead is the dominant factor, a lighter native wrapper could enable 270M on 4GB
+- **Flutter app overhead is CONFIRMED as the bottleneck** — harness test (2026-02-17) proved 270M-it runs fine without Flutter (12.3 tok/s). This means reducing Flutter overhead (lighter native wrapper, memory-optimized Flutter build, or background isolate approach) could enable LLM on 4GB devices
 - **SQLite data completeness** — the deterministic path must provide comprehensive, paginated answers (not truncated "and more details" stubs) to be a viable standalone experience
 
 ## Future Options for 4GB LLM Support
 
 | Option | Projected Size | Feasibility | Status |
 |--------|---------------|-------------|--------|
-| Vocabulary trimming (262K→~50K) | ~300 MiB Q4_K_M | High — SqueezeBits (2025) tested on Gemma 3 1B-it | Planned experiment |
-| imatrix quantization | Same size, better quality | Medium — helps quality not size | In progress |
+| Vocabulary trimming (262K→~21K) | Q4_K_M 505 MB, Q3_K_M 421 MB, Q2_K 389 MB | High — weights trimmed, tokenizer rebuilt | **All 3 variants run on 4GB device.** Q4_K_M (505 MB, 3.42 tok/s, 25 MB RAM) = best quality. Q3_K_M (421 MB, 4.03 tok/s, 16 MB RAM) = best speed/quality tradeoff. Q2_K (389 MB, 3.25 tok/s) loses 3 domain answers |
+| Reduce Flutter overhead | N/A (app optimization) | Medium — requires profiling Dart VM memory | **Key path** — harness test proved model fits, Flutter overhead is the only remaining blocker |
+| imatrix quantization | Same size, no quality gain | Dead end | **Tested** — zero size reduction, -2.4% Tamil quality at Q2_K |
+| Embed/output Q8_0 quantization | Same size | Dead end | **Tested** — identical files, 262K tensors already stored optimally |
 | Wait for smaller Gemma variant | Unknown | Depends on Google | Speculative |
 | Alternative model with smaller vocab | Varies | Quality tradeoff | Researching |
 

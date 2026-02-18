@@ -22,6 +22,19 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 BUILD_DIR="$SCRIPT_DIR/.harness_build"
 LLAMA_DIR="$BUILD_DIR/llama.cpp"
 
+# --- Find adb ---
+ADB="${ADB:-}"
+if [ -z "$ADB" ]; then
+    if command -v adb &>/dev/null; then
+        ADB="adb"
+    elif [ -f "$HOME/Library/Android/sdk/platform-tools/adb" ]; then
+        ADB="$HOME/Library/Android/sdk/platform-tools/adb"
+    else
+        echo "ERROR: adb not found. Install Android SDK platform-tools or set ADB=/path/to/adb."
+        exit 1
+    fi
+fi
+
 echo "================================================"
 echo "VAZHI 4GB Harness Test (No Flutter)"
 echo "================================================"
@@ -30,32 +43,27 @@ echo ""
 
 # --- Step 1: Find Android NDK ---
 if [ -z "$ANDROID_NDK_HOME" ]; then
-    POSSIBLE_NDKS=(
-        "$HOME/Library/Android/sdk/ndk/26.3.11579264"
-        "$HOME/Library/Android/sdk/ndk/27.0.12077973"
-        "$HOME/Library/Android/sdk/ndk/25.1.8937393"
-    )
-    for ndk in "${POSSIBLE_NDKS[@]}"; do
-        if [ -d "$ndk" ]; then
-            export ANDROID_NDK_HOME="$ndk"
-            break
-        fi
-    done
+    # Auto-detect: pick the latest NDK version available
+    NDK_BASE="$HOME/Library/Android/sdk/ndk"
+    if [ -d "$NDK_BASE" ]; then
+        ANDROID_NDK_HOME=$(ls -d "$NDK_BASE"/* 2>/dev/null | sort -V | tail -1)
+        export ANDROID_NDK_HOME
+    fi
 fi
 
-if [ -z "$ANDROID_NDK_HOME" ]; then
+if [ -z "$ANDROID_NDK_HOME" ] || [ ! -d "$ANDROID_NDK_HOME" ]; then
     echo "ERROR: Android NDK not found. Set ANDROID_NDK_HOME."
     exit 1
 fi
 echo "NDK: $ANDROID_NDK_HOME"
 
 # --- Step 2: Check adb connection ---
-if ! adb get-state 1>/dev/null 2>&1; then
+if ! "$ADB" get-state 1>/dev/null 2>&1; then
     echo "ERROR: No Android device connected via adb."
     exit 1
 fi
-DEVICE_MODEL=$(adb shell getprop ro.product.model 2>/dev/null | tr -d '\r')
-DEVICE_RAM=$(adb shell cat /proc/meminfo 2>/dev/null | grep MemTotal | awk '{print $2}')
+DEVICE_MODEL=$("$ADB" shell getprop ro.product.model 2>/dev/null | tr -d '\r')
+DEVICE_RAM=$("$ADB" shell cat /proc/meminfo 2>/dev/null | grep MemTotal | awk '{print $2}')
 echo "Device: $DEVICE_MODEL (${DEVICE_RAM} kB total RAM)"
 
 # --- Step 3: Clone/update llama.cpp ---
@@ -75,8 +83,13 @@ echo "Building llama-cli for Android ARM64..."
 CMAKE_BUILD="$LLAMA_DIR/build-android-arm64"
 mkdir -p "$CMAKE_BUILD"
 
+CMAKE_GENERATOR="Unix Makefiles"
+if command -v ninja &>/dev/null; then
+    CMAKE_GENERATOR="Ninja"
+fi
+
 cmake -S "$LLAMA_DIR" -B "$CMAKE_BUILD" \
-    -G Ninja \
+    -G "$CMAKE_GENERATOR" \
     -DCMAKE_TOOLCHAIN_FILE="$ANDROID_NDK_HOME/build/cmake/android.toolchain.cmake" \
     -DANDROID_ABI=arm64-v8a \
     -DANDROID_PLATFORM=android-26 \
@@ -100,42 +113,32 @@ echo "Size: $(du -h "$LLAMA_CLI" | cut -f1)"
 # --- Step 5: Push binary to device ---
 echo ""
 echo "Pushing llama-cli to device..."
-adb push "$LLAMA_CLI" /data/local/tmp/llama-cli
-adb shell chmod 755 /data/local/tmp/llama-cli
+"$ADB" push "$LLAMA_CLI" /data/local/tmp/llama-cli
+"$ADB" shell chmod 755 /data/local/tmp/llama-cli
 
 # --- Step 6: Check if model exists on device ---
-MODEL_PATH="/sdcard/Download/$MODEL_FILE"
-if ! adb shell "[ -f '$MODEL_PATH' ]" 2>/dev/null; then
+# Check /data/local/tmp/ first (pushed via adb), then /sdcard/Download/
+MODEL_PATH="/data/local/tmp/$MODEL_FILE"
+if ! "$ADB" shell "[ -f '$MODEL_PATH' ]" 2>/dev/null; then
+    MODEL_PATH="/sdcard/Download/$MODEL_FILE"
+fi
+if ! "$ADB" shell "[ -f '$MODEL_PATH' ]" 2>/dev/null; then
     echo ""
-    echo "WARNING: Model not found at $MODEL_PATH on device."
-    echo "Please download the model to the device first, or specify the correct path."
+    echo "WARNING: Model not found on device."
+    echo "Searched: /data/local/tmp/$MODEL_FILE"
+    echo "Searched: /sdcard/Download/$MODEL_FILE"
     echo ""
-    echo "The model may be in the app's internal storage instead."
-    echo "Trying app data directory..."
-
-    # Try VAZHI app data directory
-    APP_MODEL_PATH="/data/data/com.cryptoyogillc.vazhi/app_flutter/$MODEL_FILE"
-    if adb shell "run-as com.cryptoyogillc.vazhi test -f '$MODEL_FILE'" 2>/dev/null; then
-        echo "Found model in app data. Copying to /data/local/tmp/ ..."
-        adb shell "run-as com.cryptoyogillc.vazhi cat '$MODEL_FILE'" > /tmp/model_copy.gguf
-        adb push /tmp/model_copy.gguf "/data/local/tmp/$MODEL_FILE"
-        MODEL_PATH="/data/local/tmp/$MODEL_FILE"
-    else
-        echo "Model not found in app data either."
-        echo ""
-        echo "To proceed, push the model manually:"
-        echo "  adb push /path/to/$MODEL_FILE /data/local/tmp/"
-        MODEL_PATH="/data/local/tmp/$MODEL_FILE"
-        echo ""
-        echo "Then re-run this script."
-        exit 1
-    fi
+    echo "To proceed, push the model manually:"
+    echo "  $ADB push /path/to/$MODEL_FILE /data/local/tmp/"
+    echo ""
+    echo "Then re-run this script."
+    exit 1
 fi
 
 # --- Step 7: Capture pre-inference memory state ---
 echo ""
 echo "=== Pre-Inference Memory State ==="
-adb shell cat /proc/meminfo | head -5
+"$ADB" shell cat /proc/meminfo | head -5
 echo ""
 
 # --- Step 8: Run inference ---
@@ -146,7 +149,7 @@ echo "n_ctx=256, n_batch=1, n_predict=32"
 echo ""
 
 # Run with timeout and capture output + memory
-adb shell "
+"$ADB" shell "
     echo '--- Memory before inference ---'
     cat /proc/meminfo | head -5
     echo ''
@@ -169,7 +172,7 @@ adb shell "
 
 echo ""
 echo "=== Post-Inference Memory State ==="
-adb shell cat /proc/meminfo | head -5
+"$ADB" shell cat /proc/meminfo | head -5
 
 echo ""
 echo "================================================"

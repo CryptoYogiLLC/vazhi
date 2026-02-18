@@ -9,6 +9,7 @@ import 'package:llamadart/llamadart.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
 import '../models/model_variant.dart';
+import 'device_info_service.dart';
 
 /// Service for running VAZHI model locally on device
 class VazhiLocalService {
@@ -18,6 +19,8 @@ class VazhiLocalService {
   ChatSession? _session;
   String? _currentPack;
   bool _isModelLoaded = false;
+
+  static const _deviceInfoService = DeviceInfoService();
 
   VazhiLocalService(this._model);
 
@@ -79,27 +82,54 @@ class VazhiLocalService {
     }
   }
 
-  /// Get the local model file path
-  Future<String> get modelPath async {
+  /// Internal storage path (used as download staging area).
+  Future<String> get _internalPath async {
     final dir = await getApplicationDocumentsDirectory();
     return '${dir.path}/${_model.filename}';
   }
 
-  /// Check if model file exists locally
+  /// Get the model file path, checking Downloads/VAZHI/ first (persists
+  /// across reinstalls), then falling back to internal app storage.
+  Future<String> get modelPath async {
+    // Check Downloads/VAZHI/ first — survives app reinstall
+    final downloadsPath = await _deviceInfoService.findModelInDownloads(
+      _model.filename,
+    );
+    if (downloadsPath != null) return downloadsPath;
+
+    // Fallback: internal storage (will be lost on reinstall)
+    return _internalPath;
+  }
+
+  /// Check if model file exists in Downloads or internal storage.
   Future<bool> isModelDownloaded() async {
-    final path = await modelPath;
-    final file = File(path);
-    if (await file.exists()) {
-      final size = await file.length();
+    // Check Downloads/VAZHI/ first
+    final downloadsPath = await _deviceInfoService.findModelInDownloads(
+      _model.filename,
+    );
+    if (downloadsPath != null) {
+      final file = File(downloadsPath);
+      if (await file.exists()) {
+        final size = await file.length();
+        if (size > _model.minimumValidSizeBytes) return true;
+      }
+    }
+
+    // Fallback: internal storage
+    final internalFile = File(await _internalPath);
+    if (await internalFile.exists()) {
+      final size = await internalFile.length();
       return size > _model.minimumValidSizeBytes;
     }
     return false;
   }
 
-  /// Download the model with progress callback
+  /// Download the model with progress callback.
+  /// Downloads to internal storage first, then copies to Downloads/VAZHI/
+  /// for persistence across app reinstalls.
   Future<void> downloadModel({Function(double progress)? onProgress}) async {
-    final path = await modelPath;
-    final file = File(path);
+    final internalPath = await _internalPath;
+    final file = File(internalPath);
 
     // Create parent directory if needed
     await file.parent.create(recursive: true);
@@ -139,7 +169,7 @@ class VazhiLocalService {
           );
         }
 
-        // Success - download the file
+        // Success - download the file to internal storage
         final totalBytes = response.contentLength ?? _model.expectedSizeBytes;
         var receivedBytes = 0;
 
@@ -150,12 +180,39 @@ class VazhiLocalService {
           onProgress?.call(receivedBytes / totalBytes);
         }
         await sink.close();
+
+        // Copy to Downloads/VAZHI/ for persistence across reinstalls
+        await _persistToDownloads(internalPath);
+
         return;
       }
 
       throw VazhiLocalException('Too many redirects');
     } finally {
       client.close();
+    }
+  }
+
+  /// Copy the model from internal storage to Downloads/VAZHI/.
+  /// Non-fatal — if this fails the model still works from internal storage.
+  Future<void> _persistToDownloads(String sourcePath) async {
+    try {
+      final downloadsPath = await _deviceInfoService.saveModelToDownloads(
+        _model.filename,
+        sourcePath,
+      );
+      debugPrint('VAZHI: Model persisted to Downloads: $downloadsPath');
+
+      // Delete internal copy — Downloads is now the primary location
+      try {
+        await File(sourcePath).delete();
+        debugPrint('VAZHI: Internal staging copy deleted');
+      } catch (_) {
+        // Non-fatal — internal copy will be cleaned up on next reinstall anyway
+      }
+    } catch (e) {
+      // Non-fatal — model remains usable from internal storage
+      debugPrint('VAZHI: Failed to persist model to Downloads: $e');
     }
   }
 
@@ -313,8 +370,9 @@ class VazhiLocalService {
         path,
         modelParams: const ModelParams(
           gpuLayers: 0, // CPU-only — avoids Vulkan issues on phones
-          contextSize:
-              512, // Conservative for 4GB devices; llama_cpp_service clamps further if needed
+          contextSize: 256, // Matches harness-tested context size
+          numberOfThreads: 2, // Limit threads to reduce scratch buffer memory
+          numberOfThreadsBatch: 2,
         ),
       );
       await _writeDiagnostic('step:load_ok');
@@ -381,13 +439,17 @@ class VazhiLocalService {
     _isModelLoaded = false;
   }
 
-  /// Delete the downloaded model file
+  /// Delete the downloaded model file from all locations.
   Future<void> deleteModel() async {
     await dispose();
-    final path = await modelPath;
-    final file = File(path);
-    if (await file.exists()) {
-      await file.delete();
+
+    // Delete from Downloads/VAZHI/
+    await _deviceInfoService.deleteModelFromDownloads(_model.filename);
+
+    // Delete from internal storage
+    final internal = File(await _internalPath);
+    if (await internal.exists()) {
+      await internal.delete();
     }
   }
 }

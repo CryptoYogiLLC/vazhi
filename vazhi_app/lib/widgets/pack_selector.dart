@@ -23,7 +23,7 @@ class PackSelector extends ConsumerWidget {
     final packs = ref.watch(availablePacksProvider);
 
     return Container(
-      height: 50,
+      height: 52,
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border(

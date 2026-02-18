@@ -1,9 +1,10 @@
 /// Device Info Service
 ///
-/// Queries device memory information via platform channels.
-/// Used for smart model selection and pre-inference RAM checks.
+/// Queries device memory information and manages model file persistence
+/// in Downloads/VAZHI/ via platform channels.
 library;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
 /// Device memory information from the OS.
@@ -38,7 +39,7 @@ class DeviceMemoryInfo {
   bool get isUnknown => totalRamMB == 0;
 }
 
-/// Service to query device memory info via platform channels.
+/// Service to query device info and manage model file persistence.
 class DeviceInfoService {
   static const _channel = MethodChannel('com.cryptoyogillc.vazhi/device_info');
 
@@ -61,6 +62,52 @@ class DeviceInfoService {
       return const DeviceMemoryInfo.unknown();
     } on PlatformException {
       return const DeviceMemoryInfo.unknown();
+    }
+  }
+
+  /// Check if a model file exists in Downloads/VAZHI/ and return its path.
+  /// Returns null if not found or on non-Android platforms.
+  Future<String?> findModelInDownloads(String filename) async {
+    try {
+      final result = await _channel.invokeMethod<String>(
+        'findModelInDownloads',
+        {'filename': filename},
+      );
+      return result;
+    } on MissingPluginException {
+      return null;
+    } on PlatformException catch (e) {
+      debugPrint('VAZHI: findModelInDownloads failed: $e');
+      return null;
+    }
+  }
+
+  /// Copy a model file from sourcePath to Downloads/VAZHI/.
+  /// Returns the real file path in Downloads.
+  /// Throws on failure. Non-fatal — caller should catch.
+  Future<String> saveModelToDownloads(
+    String filename,
+    String sourcePath,
+  ) async {
+    final result = await _channel.invokeMethod<String>('saveModelToDownloads', {
+      'filename': filename,
+      'sourcePath': sourcePath,
+    });
+    return result!;
+  }
+
+  /// Delete a model file from Downloads/VAZHI/.
+  Future<bool> deleteModelFromDownloads(String filename) async {
+    try {
+      final result = await _channel.invokeMethod<bool>(
+        'deleteModelFromDownloads',
+        {'filename': filename},
+      );
+      return result ?? false;
+    } on MissingPluginException {
+      return false;
+    } on PlatformException {
+      return false;
     }
   }
 }

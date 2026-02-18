@@ -120,20 +120,32 @@ class ChatNotifier extends StateNotifier<List<Message>> {
   }
 
   /// Check device RAM before inference. Returns error message if blocked, null if OK.
+  /// Uses headroom above system threshold (availMem - threshold) instead of
+  /// raw availMem, which adapts across devices with different lmkd thresholds.
   Future<String?> _checkRamBeforeInference() async {
     final deviceInfoService = _ref.read(deviceInfoServiceProvider);
     final memInfo = await deviceInfoService.getMemoryInfo();
     if (memInfo.isUnknown) return null; // Can't check — proceed
 
+    // Block on OS low-memory signal (Android's own "we're in trouble" flag)
+    if (memInfo.lowMemory) {
+      return 'உங்கள் சாதனத்தில் நினைவகம் குறைவாக உள்ளது. '
+          'சில ஆப்களை மூடிவிட்டு மீண்டும் முயற்சிக்கவும்.';
+    }
+
     final model = _ref.read(selectedModelProvider);
 
-    if (memInfo.lowMemory || memInfo.availableRamMB < model.minFreeRamMB) {
+    // Headroom = available RAM above the system's kill threshold.
+    // This is the actual usable memory before lmkd starts killing processes.
+    final headroom = memInfo.availableRamMB - memInfo.thresholdMB;
+
+    if (headroom < model.minFreeRamMB) {
       return 'உங்கள் சாதனத்தில் நினைவகம் குறைவாக உள்ளது. '
           'சில ஆப்களை மூடிவிட்டு மீண்டும் முயற்சிக்கவும்.';
     }
 
     // Tight but not critical — set warning flag
-    if (memInfo.availableRamMB < model.minFreeRamMB * 2) {
+    if (headroom < model.minFreeRamMB * 2) {
       _ref.read(ramWarningProvider.notifier).state = true;
     }
 
@@ -196,6 +208,14 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   }
 
   Future<void> _checkModelStatus({bool forceRetry = false}) async {
+    // Wait for model selection + migration to finalize before autoloading.
+    // Prevents startup race where the wrong (pre-migration) model is loaded.
+    try {
+      await _ref.read(modelSelectionReadyProvider.future);
+    } catch (_) {
+      // Selection failed — proceed with whatever model state exists
+    }
+
     try {
       if (forceRetry) {
         // Retry: clear diagnostic file so we attempt a fresh load
@@ -268,13 +288,14 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   Future<void> loadModel() async {
     if (state == ModelStatus.loading || state == ModelStatus.ready) return;
 
-    // Pre-load RAM check using Android's memory pressure signals
+    // Pre-load RAM check using headroom above system kill threshold.
     try {
       final deviceInfoService = _ref.read(deviceInfoServiceProvider);
       final memInfo = await deviceInfoService.getMemoryInfo();
       if (!memInfo.isUnknown) {
         final model = _ref.read(selectedModelProvider);
-        if (memInfo.lowMemory || memInfo.availableRamMB < model.minFreeRamMB) {
+        final headroom = memInfo.availableRamMB - memInfo.thresholdMB;
+        if (memInfo.lowMemory || headroom < model.minFreeRamMB) {
           _ref.read(lastCrashDiagnosticProvider.notifier).state =
               'உங்கள் சாதனத்தில் நினைவகம் குறைவாக உள்ளது. '
               'சில ஆப்களை மூடிவிட்டு மீண்டும் முயற்சிக்கவும்.';

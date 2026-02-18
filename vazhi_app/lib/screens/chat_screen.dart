@@ -579,7 +579,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
             crossAxisCount: 2,
             mainAxisSpacing: 12,
             crossAxisSpacing: 12,
-            childAspectRatio: 1.4,
+            childAspectRatio: 1.25,
             children: _buildShuffledCategoryCards(),
           ),
 
@@ -990,7 +990,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
 
     return Container(
       margin: const EdgeInsets.fromLTRB(12, 4, 12, 8),
-      height: 70,
+      height: 74,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(16),

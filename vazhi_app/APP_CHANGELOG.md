@@ -17,20 +17,87 @@ For model training history, see [`models/TRAINING_LOG.md`](../models/TRAINING_LO
 | v0.5.0 | 2026-02-11 | `82a15bc` | Expandable content, bilingual UI, smart routing |
 | v0.5.1 | 2026-02-11 | `82a52c0` | Lint cleanup, pre-commit hooks |
 | v0.6.0 | 2026-02-17 | `fefaf2b` | Model selector, single source of truth (ADR-011) |
+| v0.7.0 | 2026-02-18 | — | 4GB device crash fixes, ARM baseline, Downloads persistence, smart model selection |
 
 ---
 
-## Current State (v0.6.0)
+## Current State (v0.7.0)
 
-- **247 tests** passing (unit, integration, widget, security)
+- **289 tests** passing (unit, integration, widget, security)
 - **0 dart analyze issues** (fatal-infos clean)
 - **6 knowledge packs** fully populated in SQLite
 - **10 knowledge categories** routed (Thirukkural, schemes, emergency, health, safety, education, legal, siddha medicine, festivals, siddhars)
 - **Bilingual UI** (English + Tamil) across all result cards and chat bubbles
-- **Model selector**: 3 GGUF variants (Q4_K_M, Q3_K_M, Q2_K) with persisted selection
+- **Smart model selector** (ADR-013): 3 GGUF variants with RAM-based filtering, user-friendly labels, pre-inference RAM checks
+- **Model file persistence**: MediaStore Downloads/VAZHI/ survives reinstalls
+- **Native library**: ARMv8.2-A baseline (Cortex-A55+), no Vulkan, 4.9 MB .so
 - **Pre-commit hooks**: dart format, dart analyze, flutter test, secret detection
 - **CI/CD**: GitHub Actions for build, lint, security scan
-- **AI model**: Gemma 3 1B-it SFT v7.1 — 3 quantization variants available for download
+- **AI model**: Gemma 3 1B-it SFT v7.1 — vocab-trimmed variants for 4GB devices
+- **APK size**: ~100 MB (down from 130 MB after Vulkan removal)
+
+---
+
+## v0.7.0 — 4GB Device Crash Fixes, ARM Baseline, Downloads Persistence
+
+**Date:** 2026-02-18
+**Tests:** 289 passing (up from 247)
+
+### Critical Fixes
+
+1. **SIGABRT crash — GPU offload params** (`llama_cpp_service.dart`)
+   - Root cause: GPU offload parameters (`offload_kqv`, `op_offload`, `flash_attn`) left at defaults after Vulkan backend unloaded
+   - Fix: Explicitly set `offload_kqv=false`, `op_offload=false`, `flash_attn_typeAsInt=0` in context params
+   - Also set `n_seq_max=1` to minimize backend scheduler allocation
+
+2. **SIGILL crash — ARM instruction set mismatch** (`build_android.sh`)
+   - Root cause: Native library compiled with `armv8.5-a+fp16+i8mm` but target device (Cortex-A55) is ARMv8.2-A without `i8mm` support
+   - Fix: Changed to `armv8.2-a+fp16+dotprod` — covers Cortex-A55+ (2018+ budget/mid phones, 95%+ of market)
+   - Rebuilt `libllamadart.so` from llama.cpp tag `b8011` with Vulkan disabled
+
+3. **Content-free response loop** (`llama_cpp_service.dart`, `vazhi_local_service.dart`)
+   - Root cause: `n_ctx=128` too small — Tamil system prompt consumed ~80-100 tokens, leaving no room for meaningful generation
+   - Fix: Increased n_ctx cap to 256 in both mmap path and ModelParams
+
+### Features
+
+4. **MediaStore Downloads persistence** (`device_info_service.dart`, `MainActivity.kt`, `vazhi_local_service.dart`)
+   - Model files now stored in `Downloads/VAZHI/` via Android MediaStore API
+   - Survives app uninstall/reinstall — users don't re-download 400-800 MB models
+   - Platform channel: `findModelInDownloads`, `saveModelToDownloads`, `deleteModelFromDownloads`
+   - Download flow: internal storage (staging) → copy to Downloads → delete staging
+   - No special permissions needed on Android 10+
+
+5. **Smart model selection** (ADR-013, `model_variant.dart`, `model_provider.dart`, `model_selector_sheet.dart`)
+   - Device RAM detection via platform channel (`ActivityManager.getMemoryInfo()`)
+   - 4 device tiers: premium (8GB+), standard (6GB), compact (4GB), sqliteOnly (<4GB)
+   - Tolerant RAM thresholds to handle Android `totalMem` reporting (e.g., "4GB" phone reports ~3700 MB)
+   - Model list filtered to device-compatible variants only
+   - User-friendly labels: "High Quality / உயர் தரம்", "Balanced / சமநிலை", "Compact / சிறியது"
+   - Pre-inference RAM check using Android's `lowMemory` signal + per-model `minFreeRamMB`
+   - Reduced from 5 variants to 3 (all VAZHI-trained)
+
+6. **APK size reduction**
+   - Removed Vulkan from native build (`VULKAN_ENABLED=OFF`) since `gpuLayers=0`
+   - Native library: 35 MB → 4.9 MB
+   - APK: ~130 MB → ~100 MB
+
+### Test Device Profile
+
+- **Device**: Vortex JK68 (budget Android)
+- **SoC**: Unisoc Tiger T606 (2× Cortex-A75 + 6× Cortex-A55)
+- **RAM**: 3810 MB total (~3.7 GB, marketed as 4GB)
+- **Android**: 14 (API 34)
+- **CPU features**: fp asimd evtstrm aes pmull sha1 sha2 crc32 atomics fphp asimdhp asimdrdm lrcpc dcpop asimddp
+- **Missing**: i8mm, sve, sve2, bf16
+
+### Architecture Decisions
+- Documented in [ADR-013](../docs/adr/013-smart-model-selection.md)
+- Native ARM baseline documented in Lessons Learned #123
+
+### Reason for Change
+
+Model loading and inference crashed on 4GB Android devices with three distinct native signal types (SIGABRT, SIGSEGV, SIGILL). Each required a different fix. Additionally, users would lose their 400-800 MB model download on app update/reinstall — unacceptable for rural users with limited bandwidth.
 
 ---
 
@@ -338,8 +405,10 @@ This phase focused primarily on training data creation and model training experi
 | Encrypted Storage | Hive + flutter_secure_storage |
 | Voice Input | speech_to_text (Tamil STT) |
 | Voice Output | flutter_tts (Tamil TTS) |
-| AI Model | Gemma 3 1B-it SFT v7.1 GGUF (3 variants: Q4_K_M, Q3_K_M, Q2_K) |
-| Model Selection | SharedPreferences-persisted user choice |
+| AI Model | Gemma 3 1B-it SFT v7.1 GGUF (3 trimmed variants: Q4_K_M, Q3_K_M, Q2_K) |
+| Model Selection | RAM-based device tier filtering + SharedPreferences persistence |
+| Model Storage | MediaStore Downloads/VAZHI/ (survives reinstall) |
+| Native Library | llama.cpp b8011, ARMv8.2-A baseline (Cortex-A55+), no Vulkan |
 
 ### File Structure (Key Files)
 

@@ -184,18 +184,13 @@ class ModelRegistry {
     return variants.where((v) => totalRamMB >= v.minDeviceRamMB).toList();
   }
 
-  /// Recommend the best model for a device tier.
-  /// Returns null for sqliteOnly (no model is appropriate).
+  /// Recommend the best model for a device's RAM.
+  /// Returns the highest-quality model from the filtered (compatible) list,
+  /// or null if no model fits (sqliteOnly tier).
+  /// Derived from filterForDevice() to avoid tier/threshold mismatch bugs.
   static ModelVariant? recommendedForDevice(int totalRamMB) {
-    final tier = classifyDevice(totalRamMB);
-    switch (tier) {
-      case DeviceTier.premium:
-      case DeviceTier.standard:
-        return variants[0]; // q4_k_m (High Quality)
-      case DeviceTier.compact:
-        return variants[1]; // q4_k_m_trimmed (Balanced)
-      case DeviceTier.sqliteOnly:
-        return null;
-    }
+    final compatible = filterForDevice(totalRamMB);
+    if (compatible.isEmpty) return null;
+    return compatible.first; // Already sorted by quality (best first)
   }
 }

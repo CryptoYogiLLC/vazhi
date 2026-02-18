@@ -268,6 +268,15 @@ void main() {
       expect(model!.id, 'q4_k_m');
     });
 
+    test('5300 MB → q4_k_m_trimmed (6GB phone with low reported RAM)', () {
+      // A "6GB" phone may report ~5300 MB. This is classified as "standard"
+      // tier but q4_k_m requires 5500 MB. The recommended model must come
+      // from the filtered list, not hard-coded tier mapping.
+      final model = ModelRegistry.recommendedForDevice(5300);
+      expect(model, isNotNull);
+      expect(model!.id, 'q4_k_m_trimmed');
+    });
+
     test('7800 MB → q4_k_m (High Quality)', () {
       final model = ModelRegistry.recommendedForDevice(7800);
       expect(model, isNotNull);
@@ -277,6 +286,28 @@ void main() {
     test('3000 MB → null (sqliteOnly)', () {
       final model = ModelRegistry.recommendedForDevice(3000);
       expect(model, isNull);
+    });
+
+    test('recommended is always in filtered list', () {
+      // Verify the invariant that recommendation never disagrees with filtering
+      for (final ram in [3000, 3500, 3700, 5200, 5300, 5600, 7500, 7800]) {
+        final recommended = ModelRegistry.recommendedForDevice(ram);
+        final filtered = ModelRegistry.filterForDevice(ram);
+        if (recommended != null) {
+          expect(
+            filtered.any((v) => v.id == recommended.id),
+            isTrue,
+            reason:
+                'At $ram MB: recommended ${recommended.id} not in filtered list',
+          );
+        } else {
+          expect(
+            filtered,
+            isEmpty,
+            reason: 'At $ram MB: null recommended but filtered is non-empty',
+          );
+        }
+      }
     });
   });
 
