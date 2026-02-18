@@ -609,12 +609,36 @@ class SettingsDrawer extends ConsumerWidget {
                 : VazhiTheme.primaryColor,
           ),
           title: Text(isTamil ? 'VAZHI மாடல்' : 'VAZHI Model'),
-          subtitle: Text(
-            '${model.displayName} • $statusText',
-            style: TextStyle(
-              fontSize: 14,
-              color: status == ModelStatus.error ? Colors.red : null,
-            ),
+          subtitle: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                '${model.displayName} • $statusText',
+                style: TextStyle(
+                  fontSize: 14,
+                  color: status == ModelStatus.error ? Colors.red : null,
+                ),
+              ),
+              if (model.isExperimental)
+                Padding(
+                  padding: const EdgeInsets.only(top: 4),
+                  child: Row(
+                    children: [
+                      Icon(Icons.science, size: 14, color: Colors.amber[800]),
+                      const SizedBox(width: 4),
+                      Text(
+                        isTamil
+                            ? 'சோதனை — வெளியீடு சரியாக இல்லாமல் போகலாம்'
+                            : 'Experimental — output may not work correctly',
+                        style: TextStyle(
+                          fontSize: 11,
+                          color: Colors.amber[800],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+            ],
           ),
           trailing: trailing,
           onTap: onTap,

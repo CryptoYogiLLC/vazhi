@@ -469,6 +469,15 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
             'பரிந்துரை',
             'WiFi பயன்படுத்தவும்',
           ),
+          if (model.isExperimental) ...[
+            const Divider(height: 16),
+            _buildInfoRow(
+              Icons.science,
+              'நிலை',
+              'Experimental',
+              iconColor: Colors.amber,
+            ),
+          ],
           if (_storageInfo != null && _storageInfo!.isLowSpace) ...[
             const Divider(height: 16),
             _buildInfoRow(

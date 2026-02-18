@@ -381,6 +381,27 @@ class _VariantCard extends StatelessWidget {
                           ),
                         ),
                       ],
+                      if (variant.isExperimental) ...[
+                        const SizedBox(width: 8),
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 6,
+                            vertical: 1,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.amber.withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Text(
+                            'Experimental',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.amber[800],
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ],
                       const Spacer(),
                       // Quantization in small grey text for advanced users
                       Text(

@@ -38,6 +38,10 @@ void main() {
     test('isTrimmed defaults to false', () {
       expect(variant.isTrimmed, isFalse);
     });
+
+    test('isExperimental defaults to false', () {
+      expect(variant.isExperimental, isFalse);
+    });
   });
 
   group('ModelVariant - new fields', () {
@@ -69,6 +73,20 @@ void main() {
       final trimmed = ModelRegistry.variants.where((v) => v.isTrimmed);
       expect(trimmed.length, 2);
       expect(trimmed.every((v) => v.id.contains('trimmed')), isTrue);
+    });
+
+    test('experimental variants match trimmed variants', () {
+      final experimental = ModelRegistry.variants.where(
+        (v) => v.isExperimental,
+      );
+      final trimmed = ModelRegistry.variants.where((v) => v.isTrimmed);
+      expect(experimental.length, trimmed.length);
+      expect(experimental.every((v) => v.isTrimmed), isTrue);
+    });
+
+    test('untrimmed variant is not experimental', () {
+      final untrimmed = ModelRegistry.variants.where((v) => !v.isTrimmed);
+      expect(untrimmed.every((v) => !v.isExperimental), isTrue);
     });
   });
 

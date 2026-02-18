@@ -65,6 +65,10 @@ class ModelVariant {
   /// Whether this model was fine-tuned by the VAZHI project
   final bool isVazhi;
 
+  /// Whether this variant is experimental (e.g., vocab-trimmed models
+  /// pending GGUF conversion validation). Shown as a warning badge in UI.
+  final bool isExperimental;
+
   const ModelVariant({
     required this.id,
     required this.quantization,
@@ -80,6 +84,7 @@ class ModelVariant {
     this.isTrimmed = false,
     this.sha256,
     this.isVazhi = true,
+    this.isExperimental = false,
   });
 
   /// Partial download filename (for resume support)
@@ -134,6 +139,7 @@ class ModelRegistry {
       minDeviceRamMB: 3500,
       minFreeRamMB: 100,
       isTrimmed: true,
+      isExperimental: true,
     ),
     ModelVariant(
       id: 'q3_k_m_trimmed',
@@ -149,6 +155,7 @@ class ModelRegistry {
       minDeviceRamMB: 3500,
       minFreeRamMB: 80,
       isTrimmed: true,
+      isExperimental: true,
     ),
   ];
 
