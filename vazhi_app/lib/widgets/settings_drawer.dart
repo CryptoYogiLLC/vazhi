@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../config/app_config.dart';
 import '../config/theme.dart';
+import '../models/model_variant.dart';
 import '../providers/voice_provider.dart';
 import '../providers/chat_provider.dart';
 import '../providers/model_provider.dart';
@@ -27,6 +28,8 @@ class SettingsDrawer extends ConsumerWidget {
     final downloadProgress = ref.watch(downloadProgressProvider);
     final voiceOutput = ref.watch(voiceOutputStateProvider);
     final isTamil = ref.watch(languageProvider);
+    final deviceTier = ref.watch(deviceTierProvider);
+    final isSqliteOnly = deviceTier == DeviceTier.sqliteOnly;
 
     // Bilingual text helper
     String t(String en, String ta) => isTamil ? ta : en;
@@ -219,29 +222,31 @@ class SettingsDrawer extends ConsumerWidget {
                     ),
                   ),
 
-                  const Divider(height: 32),
+                  if (!isSqliteOnly) ...[
+                    const Divider(height: 32),
 
-                  // Inference Mode Section
-                  _buildSectionHeader(t('Inference Mode', 'செயல்முறை')),
-                  _buildInferenceModeTile(
-                    context,
-                    ref,
-                    inferenceMode,
-                    modelStatus,
-                    isTamil,
-                  ),
+                    // Inference Mode Section
+                    _buildSectionHeader(t('Inference Mode', 'செயல்முறை')),
+                    _buildInferenceModeTile(
+                      context,
+                      ref,
+                      inferenceMode,
+                      modelStatus,
+                      isTamil,
+                    ),
 
-                  const Divider(height: 32),
+                    const Divider(height: 32),
 
-                  // Model Management Section (always show)
-                  _buildSectionHeader(t('Model', 'மாடல்')),
-                  _buildModelManagementTile(
-                    context,
-                    ref,
-                    modelStatus,
-                    downloadProgress,
-                    isTamil,
-                  ),
+                    // Model Management Section
+                    _buildSectionHeader(t('Model', 'மாடல்')),
+                    _buildModelManagementTile(
+                      context,
+                      ref,
+                      modelStatus,
+                      downloadProgress,
+                      isTamil,
+                    ),
+                  ],
 
                   const Divider(height: 32),
 
@@ -605,7 +610,7 @@ class SettingsDrawer extends ConsumerWidget {
           ),
           title: Text(isTamil ? 'VAZHI மாடல்' : 'VAZHI Model'),
           subtitle: Text(
-            '${model.quantization} • $statusText',
+            '${model.displayName} • $statusText',
             style: TextStyle(
               fontSize: 14,
               color: status == ModelStatus.error ? Colors.red : null,
@@ -643,7 +648,7 @@ class SettingsDrawer extends ConsumerWidget {
             leading: const Icon(Icons.swap_horiz),
             title: Text(isTamil ? 'மாடல் மாற்று' : 'Change Model'),
             subtitle: Text(
-              '${model.quantization} (${model.displaySize})',
+              '${model.displayName} (${model.displaySize})',
               style: const TextStyle(fontSize: 12),
             ),
             onTap: () async {

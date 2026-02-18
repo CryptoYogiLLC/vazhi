@@ -1,6 +1,8 @@
 /// Model Selector Bottom Sheet
 ///
-/// Radio-style card list for choosing a GGUF model variant.
+/// RAM-aware card list for choosing a GGUF model variant.
+/// Filters models by device RAM, shows user-friendly names,
+/// and recommends the best model for the device.
 library;
 
 import 'package:flutter/material.dart';
@@ -28,8 +30,11 @@ class ModelSelectorSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer(
       builder: (context, ref, _) {
-        final variants = ref.watch(availableModelsProvider);
+        final variants = ref.watch(compatibleModelsProvider);
         final selected = ref.watch(selectedModelProvider);
+        final memInfo = ref.watch(deviceMemoryInfoProvider).valueOrNull;
+        final tier = ref.watch(deviceTierProvider);
+        final ramUnknown = ref.watch(ramUnknownProvider);
 
         return DraggableScrollableSheet(
           initialChildSize: 0.55,
@@ -56,11 +61,24 @@ class ModelSelectorSheet extends StatelessWidget {
                     'Select Model',
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
+                  // RAM banner
+                  _RamBanner(
+                    memInfo: memInfo,
+                    tier: tier,
+                    ramUnknown: ramUnknown,
+                  ),
+                  const SizedBox(height: 12),
                   Expanded(
                     child: ListView(
                       controller: scrollController,
-                      children: _buildGroupedList(variants, selected, context),
+                      children: _buildModelList(
+                        variants,
+                        selected,
+                        memInfo?.totalRamMB ?? 0,
+                        tier,
+                        context,
+                      ),
                     ),
                   ),
                 ],
@@ -73,66 +91,152 @@ class ModelSelectorSheet extends StatelessWidget {
   }
 }
 
-List<Widget> _buildGroupedList(
+List<Widget> _buildModelList(
   List<ModelVariant> variants,
   ModelVariant selected,
+  int totalRamMB,
+  DeviceTier tier,
   BuildContext context,
 ) {
-  final vazhi = variants.where((v) => v.isVazhi).toList();
-  final other = variants.where((v) => !v.isVazhi).toList();
+  // sqliteOnly: show informational card instead of model list
+  if (tier == DeviceTier.sqliteOnly) {
+    return [_SqliteOnlyCard()];
+  }
 
-  return [
-    if (vazhi.isNotEmpty) ...[
-      _SectionHeader(label: 'VAZHI Models', subtitle: 'Fine-tuned for Tamil'),
-      ...vazhi.map(
-        (v) => _VariantCard(
-          variant: v,
-          isSelected: v.id == selected.id,
-          onTap: () => Navigator.pop(context, v),
-        ),
-      ),
-    ],
-    if (other.isNotEmpty) ...[
-      const SizedBox(height: 8),
-      _SectionHeader(
-        label: 'Community Models',
-        subtitle: 'Vanilla / untrained',
-      ),
-      ...other.map(
-        (v) => _VariantCard(
-          variant: v,
-          isSelected: v.id == selected.id,
-          onTap: () => Navigator.pop(context, v),
-        ),
-      ),
-    ],
-  ];
+  final recommended = totalRamMB > 0
+      ? ModelRegistry.recommendedForDevice(totalRamMB)
+      : null;
+
+  return variants.map((v) {
+    return _VariantCard(
+      variant: v,
+      isSelected: v.id == selected.id,
+      isRecommended: recommended != null && v.id == recommended.id,
+      onTap: () => Navigator.pop(context, v),
+    );
+  }).toList();
 }
 
-class _SectionHeader extends StatelessWidget {
-  final String label;
-  final String subtitle;
+class _RamBanner extends StatelessWidget {
+  final dynamic memInfo;
+  final DeviceTier tier;
+  final bool ramUnknown;
 
-  const _SectionHeader({required this.label, required this.subtitle});
+  const _RamBanner({
+    required this.memInfo,
+    required this.tier,
+    required this.ramUnknown,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 8, left: 4),
+    if (ramUnknown) {
+      return Container(
+        padding: const EdgeInsets.all(10),
+        decoration: BoxDecoration(
+          color: Colors.orange.withValues(alpha: 0.1),
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: Colors.orange.withValues(alpha: 0.3)),
+        ),
+        child: Row(
+          children: [
+            Icon(Icons.info_outline, size: 18, color: Colors.orange[700]),
+            const SizedBox(width: 8),
+            const Expanded(
+              child: Text(
+                'Unable to detect device memory — showing safe models',
+                style: TextStyle(fontSize: 12, color: Colors.orange),
+              ),
+            ),
+          ],
+        ),
+      );
+    }
+
+    final totalGB = memInfo != null
+        ? (memInfo.totalRamMB / 1024).toStringAsFixed(1)
+        : '?';
+    final tierLabel = _tierLabel(tier);
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      decoration: BoxDecoration(
+        color: VazhiTheme.primaryColor.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(8),
+      ),
       child: Row(
         children: [
-          Text(
-            label,
-            style: TextStyle(
-              fontSize: 13,
-              fontWeight: FontWeight.w700,
-              color: Colors.grey[700],
-            ),
-          ),
+          Icon(Icons.memory, size: 18, color: VazhiTheme.primaryColor),
           const SizedBox(width: 8),
           Text(
-            subtitle,
-            style: TextStyle(fontSize: 11, color: Colors.grey[500]),
+            'Your device: $totalGB GB',
+            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w500),
+          ),
+          const Spacer(),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+            decoration: BoxDecoration(
+              color: VazhiTheme.primaryColor.withValues(alpha: 0.15),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Text(
+              tierLabel,
+              style: TextStyle(
+                fontSize: 11,
+                fontWeight: FontWeight.w600,
+                color: VazhiTheme.primaryColor,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  String _tierLabel(DeviceTier tier) {
+    switch (tier) {
+      case DeviceTier.premium:
+        return 'Premium';
+      case DeviceTier.standard:
+        return 'Standard';
+      case DeviceTier.compact:
+        return 'Compact';
+      case DeviceTier.sqliteOnly:
+        return 'Basic';
+    }
+  }
+}
+
+class _SqliteOnlyCard extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: Colors.blue.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: Colors.blue.withValues(alpha: 0.2)),
+      ),
+      child: Column(
+        children: [
+          const Icon(Icons.info_outline, size: 32, color: Colors.blue),
+          const SizedBox(height: 12),
+          const Text(
+            'AI model not available for this device',
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              color: Colors.blue,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 8),
+          Text(
+            'You can still use knowledge lookups for Thirukkural, '
+            'government schemes, emergency numbers, and more.',
+            style: TextStyle(fontSize: 13, color: Colors.grey[600]),
+            textAlign: TextAlign.center,
           ),
         ],
       ),
@@ -143,30 +247,24 @@ class _SectionHeader extends StatelessWidget {
 class _VariantCard extends StatelessWidget {
   final ModelVariant variant;
   final bool isSelected;
+  final bool isRecommended;
   final VoidCallback onTap;
 
   const _VariantCard({
     required this.variant,
     required this.isSelected,
+    required this.isRecommended,
     required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    final isDefault = variant.id == ModelRegistry.defaultVariant.id;
-    final isLow = variant.quality == ModelQuality.low;
-    final isLite = variant.quality == ModelQuality.lite;
-
     final Color badgeColor;
     switch (variant.quality) {
       case ModelQuality.high:
         badgeColor = Colors.green;
       case ModelQuality.medium:
         badgeColor = Colors.orange;
-      case ModelQuality.low:
-        badgeColor = Colors.red;
-      case ModelQuality.lite:
-        badgeColor = Colors.blue;
     }
 
     return GestureDetector(
@@ -203,7 +301,7 @@ class _VariantCard extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        variant.quantization,
+                        '${variant.displayName} / ${variant.displayNameTamil}',
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
@@ -220,7 +318,9 @@ class _VariantCard extends StatelessWidget {
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Text(
-                          '${variant.qualityLabel} / ${variant.qualityLabelTamil}',
+                          variant.quality == ModelQuality.high
+                              ? 'High'
+                              : 'Medium',
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
@@ -228,7 +328,7 @@ class _VariantCard extends StatelessWidget {
                           ),
                         ),
                       ),
-                      if (isDefault) ...[
+                      if (isRecommended) ...[
                         const SizedBox(width: 6),
                         Container(
                           padding: const EdgeInsets.symmetric(
@@ -260,19 +360,33 @@ class _VariantCard extends StatelessWidget {
                         variant.displaySize,
                         style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                       ),
-                      const SizedBox(width: 12),
-                      Text(
-                        'RAM ${(variant.recommendedRamMB / 1024).toStringAsFixed(0)} GB+',
-                        style: TextStyle(fontSize: 12, color: Colors.grey[600]),
-                      ),
-                      if (isLow || isLite) ...[
+                      if (variant.isTrimmed) ...[
                         const SizedBox(width: 8),
-                        Icon(
-                          Icons.warning_amber_rounded,
-                          size: 14,
-                          color: Colors.orange[700],
+                        Container(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 6,
+                            vertical: 1,
+                          ),
+                          decoration: BoxDecoration(
+                            color: Colors.teal.withValues(alpha: 0.1),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: const Text(
+                            'Trimmed',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Colors.teal,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
                         ),
                       ],
+                      const Spacer(),
+                      // Quantization in small grey text for advanced users
+                      Text(
+                        variant.quantization,
+                        style: TextStyle(fontSize: 10, color: Colors.grey[400]),
+                      ),
                     ],
                   ),
                 ],

@@ -13,9 +13,10 @@ void main() {
       expectedSizeBytes: 800000000,
       displaySize: '~800 MB',
       quality: ModelQuality.high,
-      qualityLabel: 'Best',
-      qualityLabelTamil: 'சிறந்தது',
-      recommendedRamMB: 6144,
+      displayName: 'Test Model',
+      displayNameTamil: 'சோதனை',
+      minDeviceRamMB: 5500,
+      minFreeRamMB: 200,
     );
 
     test('partialFilename appends .partial', () {
@@ -33,19 +34,53 @@ void main() {
     test('isVazhi defaults to true', () {
       expect(variant.isVazhi, isTrue);
     });
+
+    test('isTrimmed defaults to false', () {
+      expect(variant.isTrimmed, isFalse);
+    });
+  });
+
+  group('ModelVariant - new fields', () {
+    test('all registry variants have displayName', () {
+      for (final v in ModelRegistry.variants) {
+        expect(v.displayName.isNotEmpty, isTrue);
+      }
+    });
+
+    test('all registry variants have displayNameTamil', () {
+      for (final v in ModelRegistry.variants) {
+        expect(v.displayNameTamil.isNotEmpty, isTrue);
+      }
+    });
+
+    test('all registry variants have minDeviceRamMB > 0', () {
+      for (final v in ModelRegistry.variants) {
+        expect(v.minDeviceRamMB, greaterThan(0));
+      }
+    });
+
+    test('all registry variants have minFreeRamMB > 0', () {
+      for (final v in ModelRegistry.variants) {
+        expect(v.minFreeRamMB, greaterThan(0));
+      }
+    });
+
+    test('trimmed variants are marked isTrimmed', () {
+      final trimmed = ModelRegistry.variants.where((v) => v.isTrimmed);
+      expect(trimmed.length, 2);
+      expect(trimmed.every((v) => v.id.contains('trimmed')), isTrue);
+    });
   });
 
   group('ModelRegistry', () {
-    test('has 5 variants', () {
-      expect(ModelRegistry.variants.length, 5);
+    test('has 3 variants', () {
+      expect(ModelRegistry.variants.length, 3);
     });
 
     test('variants are ordered by quality (best first)', () {
       expect(ModelRegistry.variants[0].quality, ModelQuality.high);
-      expect(ModelRegistry.variants[1].quality, ModelQuality.medium);
-      expect(ModelRegistry.variants[2].quality, ModelQuality.low);
-      expect(ModelRegistry.variants[3].quality, ModelQuality.medium);
-      expect(ModelRegistry.variants[4].quality, ModelQuality.lite);
+      expect(ModelRegistry.variants[1].quality, ModelQuality.high);
+      expect(ModelRegistry.variants[2].quality, ModelQuality.medium);
     });
 
     test('defaultVariant is Q4_K_M', () {
@@ -76,18 +111,9 @@ void main() {
       }
     });
 
-    test('VAZHI models come before non-VAZHI models', () {
-      final vazhi = ModelRegistry.variants.where((v) => v.isVazhi).toList();
-      final other = ModelRegistry.variants.where((v) => !v.isVazhi).toList();
-      expect(vazhi.length, 3);
-      expect(other.length, 2);
-      // VAZHI models are first 3 entries
-      for (var i = 0; i < vazhi.length; i++) {
-        expect(ModelRegistry.variants[i].isVazhi, isTrue);
-      }
-      // Non-VAZHI models are last 2 entries
-      for (var i = vazhi.length; i < ModelRegistry.variants.length; i++) {
-        expect(ModelRegistry.variants[i].isVazhi, isFalse);
+    test('all variants are VAZHI-trained', () {
+      for (final v in ModelRegistry.variants) {
+        expect(v.isVazhi, isTrue);
       }
     });
 
@@ -97,47 +123,171 @@ void main() {
   });
 
   group('ModelRegistry.findById', () {
-    test('finds Q4_K_M by id', () {
+    test('finds q4_k_m by id', () {
       final v = ModelRegistry.findById('q4_k_m');
-      expect(v.quantization, 'Q4_K_M');
+      expect(v.id, 'q4_k_m');
+      expect(v.displayName, 'High Quality');
     });
 
-    test('finds Q3_K_M by id', () {
-      final v = ModelRegistry.findById('q3_k_m');
-      expect(v.quantization, 'Q3_K_M');
+    test('finds q4_k_m_trimmed by id', () {
+      final v = ModelRegistry.findById('q4_k_m_trimmed');
+      expect(v.id, 'q4_k_m_trimmed');
+      expect(v.displayName, 'Balanced');
     });
 
-    test('finds Q2_K by id', () {
-      final v = ModelRegistry.findById('q2_k');
-      expect(v.quantization, 'Q2_K');
-    });
-
-    test('finds QAT Q2_K by id', () {
-      final v = ModelRegistry.findById('qat_q2_k');
-      expect(v.quantization, 'QAT Q2_K');
-    });
-
-    test('finds 270M Q6_K_L by id', () {
-      final v = ModelRegistry.findById('gemma_270m_q6_k_l');
-      expect(v.quantization, '270M Q6_K_L');
+    test('finds q3_k_m_trimmed by id', () {
+      final v = ModelRegistry.findById('q3_k_m_trimmed');
+      expect(v.id, 'q3_k_m_trimmed');
+      expect(v.displayName, 'Compact');
     });
 
     test('returns default for unknown id', () {
       final v = ModelRegistry.findById('nonexistent');
       expect(v.id, ModelRegistry.defaultVariant.id);
     });
+
+    test('migrates removed q2_k to recommended for 6GB device', () {
+      final v = ModelRegistry.findById('q2_k', totalRamMB: 5600);
+      expect(v.id, 'q4_k_m'); // standard tier → High Quality
+    });
+
+    test('migrates removed qat_q2_k to recommended for 4GB device', () {
+      final v = ModelRegistry.findById('qat_q2_k', totalRamMB: 3700);
+      expect(v.id, 'q4_k_m_trimmed'); // compact tier → Balanced
+    });
+
+    test('migrates removed gemma_270m_q6_k_l to recommended', () {
+      final v = ModelRegistry.findById('gemma_270m_q6_k_l', totalRamMB: 7800);
+      expect(v.id, 'q4_k_m'); // premium tier → High Quality
+    });
+
+    test('migrates removed q3_k_m to fallback for sqliteOnly device', () {
+      final v = ModelRegistry.findById('q3_k_m', totalRamMB: 3000);
+      // sqliteOnly → recommendedForDevice returns null → falls back to last variant
+      expect(v.id, 'q3_k_m_trimmed');
+    });
+
+    test('removed variant without totalRamMB returns default', () {
+      final v = ModelRegistry.findById('q2_k');
+      expect(v.id, ModelRegistry.defaultVariant.id);
+    });
+  });
+
+  group('DeviceTier', () {
+    test('has 4 values', () {
+      expect(DeviceTier.values.length, 4);
+    });
+
+    test('contains premium, standard, compact, sqliteOnly', () {
+      expect(DeviceTier.values, contains(DeviceTier.premium));
+      expect(DeviceTier.values, contains(DeviceTier.standard));
+      expect(DeviceTier.values, contains(DeviceTier.compact));
+      expect(DeviceTier.values, contains(DeviceTier.sqliteOnly));
+    });
+  });
+
+  group('ModelRegistry.classifyDevice', () {
+    test('3000 MB → sqliteOnly', () {
+      expect(ModelRegistry.classifyDevice(3000), DeviceTier.sqliteOnly);
+    });
+
+    test('3499 MB → sqliteOnly (just under threshold)', () {
+      expect(ModelRegistry.classifyDevice(3499), DeviceTier.sqliteOnly);
+    });
+
+    test('3500 MB → compact (threshold)', () {
+      expect(ModelRegistry.classifyDevice(3500), DeviceTier.compact);
+    });
+
+    test('3700 MB → compact (real "4GB" phone)', () {
+      expect(ModelRegistry.classifyDevice(3700), DeviceTier.compact);
+    });
+
+    test('5199 MB → compact (just under standard)', () {
+      expect(ModelRegistry.classifyDevice(5199), DeviceTier.compact);
+    });
+
+    test('5200 MB → standard (threshold)', () {
+      expect(ModelRegistry.classifyDevice(5200), DeviceTier.standard);
+    });
+
+    test('5600 MB → standard (real "6GB" phone)', () {
+      expect(ModelRegistry.classifyDevice(5600), DeviceTier.standard);
+    });
+
+    test('7499 MB → standard (just under premium)', () {
+      expect(ModelRegistry.classifyDevice(7499), DeviceTier.standard);
+    });
+
+    test('7500 MB → premium (threshold)', () {
+      expect(ModelRegistry.classifyDevice(7500), DeviceTier.premium);
+    });
+
+    test('7800 MB → premium (real "8GB" phone)', () {
+      expect(ModelRegistry.classifyDevice(7800), DeviceTier.premium);
+    });
+
+    test('16000 MB → premium (high-end phone)', () {
+      expect(ModelRegistry.classifyDevice(16000), DeviceTier.premium);
+    });
+  });
+
+  group('ModelRegistry.filterForDevice', () {
+    test('3700 MB returns only trimmed variants', () {
+      final models = ModelRegistry.filterForDevice(3700);
+      expect(models.length, 2);
+      expect(models.every((v) => v.isTrimmed), isTrue);
+    });
+
+    test('5600 MB returns all 3 variants', () {
+      final models = ModelRegistry.filterForDevice(5600);
+      expect(models.length, 3);
+    });
+
+    test('3000 MB returns empty list', () {
+      final models = ModelRegistry.filterForDevice(3000);
+      expect(models, isEmpty);
+    });
+
+    test('7800 MB returns all 3 variants', () {
+      final models = ModelRegistry.filterForDevice(7800);
+      expect(models.length, 3);
+    });
+  });
+
+  group('ModelRegistry.recommendedForDevice', () {
+    test('3700 MB → q4_k_m_trimmed (Balanced)', () {
+      final model = ModelRegistry.recommendedForDevice(3700);
+      expect(model, isNotNull);
+      expect(model!.id, 'q4_k_m_trimmed');
+    });
+
+    test('5600 MB → q4_k_m (High Quality)', () {
+      final model = ModelRegistry.recommendedForDevice(5600);
+      expect(model, isNotNull);
+      expect(model!.id, 'q4_k_m');
+    });
+
+    test('7800 MB → q4_k_m (High Quality)', () {
+      final model = ModelRegistry.recommendedForDevice(7800);
+      expect(model, isNotNull);
+      expect(model!.id, 'q4_k_m');
+    });
+
+    test('3000 MB → null (sqliteOnly)', () {
+      final model = ModelRegistry.recommendedForDevice(3000);
+      expect(model, isNull);
+    });
   });
 
   group('ModelQuality', () {
-    test('has 4 values', () {
-      expect(ModelQuality.values.length, 4);
+    test('has 2 values', () {
+      expect(ModelQuality.values.length, 2);
     });
 
-    test('contains high, medium, low, lite', () {
+    test('contains high, medium', () {
       expect(ModelQuality.values, contains(ModelQuality.high));
       expect(ModelQuality.values, contains(ModelQuality.medium));
-      expect(ModelQuality.values, contains(ModelQuality.low));
-      expect(ModelQuality.values, contains(ModelQuality.lite));
     });
   });
 }

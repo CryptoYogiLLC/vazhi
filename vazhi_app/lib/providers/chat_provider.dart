@@ -83,6 +83,13 @@ class ChatNotifier extends StateNotifier<List<Message>> {
             'மாடல் ஏற்றப்படவில்லை. முதலில் மாடலை பதிவிறக்கவும்.',
           );
         }
+
+        // Pre-inference RAM check
+        final ramError = await _checkRamBeforeInference();
+        if (ramError != null) {
+          throw VazhiLocalException(ramError);
+        }
+
         response = await _localService.chat(text, pack: pack);
       } else {
         // Cloud API
@@ -110,6 +117,27 @@ class ChatNotifier extends StateNotifier<List<Message>> {
         Message.error('எதிர்பாராத பிழை: $e'),
       ];
     }
+  }
+
+  /// Check device RAM before inference. Returns error message if blocked, null if OK.
+  Future<String?> _checkRamBeforeInference() async {
+    final deviceInfoService = _ref.read(deviceInfoServiceProvider);
+    final memInfo = await deviceInfoService.getMemoryInfo();
+    if (memInfo.isUnknown) return null; // Can't check — proceed
+
+    final model = _ref.read(selectedModelProvider);
+
+    if (memInfo.lowMemory || memInfo.availableRamMB < model.minFreeRamMB) {
+      return 'உங்கள் சாதனத்தில் நினைவகம் குறைவாக உள்ளது. '
+          'சில ஆப்களை மூடிவிட்டு மீண்டும் முயற்சிக்கவும்.';
+    }
+
+    // Tight but not critical — set warning flag
+    if (memInfo.availableRamMB < model.minFreeRamMB * 2) {
+      _ref.read(ramWarningProvider.notifier).state = true;
+    }
+
+    return null;
   }
 
   /// Clear chat history
@@ -153,6 +181,9 @@ final chatProvider = StateNotifierProvider<ChatNotifier, List<Message>>((ref) {
 
 /// Last crash diagnostic info (readable from UI)
 final lastCrashDiagnosticProvider = StateProvider<String?>((ref) => null);
+
+/// RAM warning flag — set when available RAM is tight but not critical.
+final ramWarningProvider = StateProvider<bool>((ref) => false);
 
 /// Model manager notifier for download and initialization
 class ModelManagerNotifier extends StateNotifier<ModelStatus> {
@@ -236,6 +267,24 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   /// Initialize/load the model
   Future<void> loadModel() async {
     if (state == ModelStatus.loading || state == ModelStatus.ready) return;
+
+    // Pre-load RAM check using Android's memory pressure signals
+    try {
+      final deviceInfoService = _ref.read(deviceInfoServiceProvider);
+      final memInfo = await deviceInfoService.getMemoryInfo();
+      if (!memInfo.isUnknown) {
+        final model = _ref.read(selectedModelProvider);
+        if (memInfo.lowMemory || memInfo.availableRamMB < model.minFreeRamMB) {
+          _ref.read(lastCrashDiagnosticProvider.notifier).state =
+              'உங்கள் சாதனத்தில் நினைவகம் குறைவாக உள்ளது. '
+              'சில ஆப்களை மூடிவிட்டு மீண்டும் முயற்சிக்கவும்.';
+          state = ModelStatus.error;
+          return;
+        }
+      }
+    } catch (_) {
+      // RAM check failed — proceed with load attempt
+    }
 
     state = ModelStatus.loading;
     try {

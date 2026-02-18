@@ -430,7 +430,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
               ),
               const Spacer(),
               Text(
-                model.quantization,
+                model.displayName,
                 style: const TextStyle(fontWeight: FontWeight.w500),
               ),
               const SizedBox(width: 8),
