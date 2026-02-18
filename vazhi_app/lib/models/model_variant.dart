@@ -6,7 +6,7 @@
 library;
 
 /// Quality tier of a model variant
-enum ModelQuality { high, medium, low }
+enum ModelQuality { high, medium, low, lite }
 
 /// A GGUF model variant with all metadata needed for download and inference.
 class ModelVariant {
@@ -111,6 +111,32 @@ class ModelRegistry {
       qualityLabel: 'Low',
       qualityLabelTamil: 'குறைவு',
       recommendedRamMB: 3072,
+    ),
+    ModelVariant(
+      id: 'qat_q2_k',
+      quantization: 'QAT Q2_K',
+      filename: 'google_gemma-3-1b-it-qat-Q2_K.gguf',
+      url:
+          'https://huggingface.co/bartowski/google_gemma-3-1b-it-qat-GGUF/resolve/main/google_gemma-3-1b-it-qat-Q2_K.gguf',
+      expectedSizeBytes: 690000000,
+      displaySize: '~690 MB',
+      quality: ModelQuality.medium,
+      qualityLabel: 'Good',
+      qualityLabelTamil: 'நல்லது',
+      recommendedRamMB: 4096,
+    ),
+    ModelVariant(
+      id: 'gemma_270m_q6_k_l',
+      quantization: '270M Q6_K_L',
+      filename: 'google_gemma-3-270m-it-Q6_K_L.gguf',
+      url:
+          'https://huggingface.co/bartowski/google_gemma-3-270m-it-GGUF/resolve/main/google_gemma-3-270m-it-Q6_K_L.gguf',
+      expectedSizeBytes: 283000000,
+      displaySize: '~283 MB',
+      quality: ModelQuality.lite,
+      qualityLabel: 'Lite',
+      qualityLabelTamil: 'லைட்',
+      recommendedRamMB: 2048,
     ),
   ];
 

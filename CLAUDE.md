@@ -24,17 +24,18 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 
 **What's done:**
 - Flutter app with chat UI, voice I/O (Tamil STT/TTS), hybrid retrieval, model download manager
-- **Model selector** (v0.6.0, ADR-011): 3 GGUF variants (Q4_K_M/Q3_K_M/Q2_K) with `ModelVariant` single source of truth, `ModelRegistry`, SharedPreferences persistence, bottom sheet UI
+- **Model selector** (v0.6.0, ADR-011): 5 GGUF variants (v7.1 Q4_K_M/Q3_K_M/Q2_K + 270M Q6_K_L + QAT Q2_K) with `ModelVariant` single source of truth, `ModelRegistry`, SharedPreferences persistence, bottom sheet UI. Two-tier: 4GB lite (270M) and 6GB+ full (1B)
 - 6 knowledge packs: Security (468), Government (467), Education (602), Legal (610), Healthcare (460), Culture (400) = 3,007 bilingual training pairs
 - Security hardened: encrypted storage, input validation, ReDoS protection, URL allowlist, SHA256 verification
 - 247 tests passing, CI/CD via GitHub Actions
 - 19 code review issues identified and closed (#22-40)
 
 **What's in progress:**
-- AI model training — **Gemma 3 1B-it SFT v7.1 is the deployment candidate** (96% Tamil word score, best ever)
-- **SFT v7.0→v7.1→v7.2 completed**: v7.1 (incremental LoRA r=16) achieved best Tamil quality. v7.2 identity-only training failed — Gemma's Google identity is unhackable via LoRA SFT
-- **Key insight**: Model architecture > training data. Gemma 3 1B-it with zero fine-tuning outperforms 20 training attempts on Qwen3-0.6B. Google's 2T-token pretraining provides genuine Tamil; identity must be handled via system prompt at inference time, not training
-- **Next step**: GGUF conversion of v7.1 (Q4_K_M = 0.60GB) for mobile deployment
+- **Two-tier 4GB deployment** — adding 270M Q6_K_L (283 MB, 4GB tier) and QAT Q2_K (690 MB, 6GB+ tier) to Flutter app for physical device testing
+- **SFT v7.1 remains deployment candidate** for 6GB+ devices (96% Tamil word, best SFT'd model)
+- **4GB Optimization results**: Gemma 3 270M-it Q6_K_L produces real Tamil (98.1% word) at 283 MB — fits 4GB devices. Google QAT Q2_K (690 MB) has substantive content quality, 116 MB smaller than v7.1 Q4_K_M
+- **Key insight**: Google's QAT (Quantization-Aware Training) models are robust to aggressive quantization — QAT Q2_K outperforms standard Q2_K in content quality. bartowski's imatrix quants provide multiple size/quality options
+- **Next step**: Physical device testing on 4GB Android, then SFT winning variants if vanilla quality is sufficient
 - **Identity solution**: System prompt at inference time ("You are VAZHI"); factual corrections via hybrid SQLite retrieval (already built into app architecture)
 
 **What's done (app distribution):**
@@ -85,6 +86,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 | SFT v7.0 | Gemma 3 1B-it + LoRA | ⚠️ Partial | 1 epoch (211 steps), LoRA r=8 q_proj+v_proj, LR 1e-5, L4-24GB. Loss 5.35→4.73. Tamil preserved: 93%→92% char, 95%→94% word. 16/16 eval passed. BUT: identity NOT learned (still says Google LLM), factual corrections not taken (capital still Coimbatore). Conservative LoRA too weak to override Gemma's strong pretrained priors. Model: `CryptoYogi/vazhi-v7_0` |
 | SFT v7.1 | v7.0 + LoRA r=16 | ✅ **Best model** | Incremental on v7.0 merged. 1 epoch (234 steps), LoRA r=16 q_proj+v_proj, LR 1e-5, A100-80GB. Loss 4.89→4.18 (14.4% drop). Tamil IMPROVED: 89%→95% char, 90%→96% word (best ever). 16/16 eval passed. Identity still says Google, Chennai correct in A/B test. **Deployment candidate** — identity handled via system prompt. Model: `CryptoYogi/vazhi-v7_1` |
 | SFT v7.2 | v7.1 + identity-only | ❌ Failed | Identity reinforcement: 90 samples (61 mission + 29 corrections) x 10 epochs (~60 steps), LoRA r=16, LR 1e-5, A100-80GB. Identity NOT learned (0/4 say VAZHI, 2/4 still say Google). Chennai correct (2/2). Tamil preserved (99% word). BUT domain knowledge REGRESSED — model says "சாரி" (sorry) to most domain questions (Thirukkural, ration card, health, legal). Gemma's Google identity is unhackable via LoRA SFT — 2T tokens of pretraining > any fine-tuning. Adapter saved to `CryptoYogi/vazhi-v7_2-lora`, merged NOT uploaded |
+| 4GB Optimization | Gemma 3 270M-it + QAT 1B | ✅ **GO** | Two-tier deployment confirmed. **270M Q6_K_L** (283 MB, bartowski): 98.1% Tamil word, real Tamil but shallow content/hallucinations — viable as 4GB "lite" tier with hybrid SQLite. **QAT Q2_K** (690 MB, bartowski/Google QAT): 94.9% Tamil word, substantive answers, correct facts, VAZHI identity via system prompt — 6GB+ alternative, 116 MB smaller than v7.1 Q4_K_M. Notebook: `notebooks/Vazhi_4GB_Optimization.ipynb` |
 
 **Current strategy — Gemma 3 1B-it pivot (Feb 2026):**
 - **Step 1 (DONE):** Qwen3-0.6B exhausted after 20 training attempts (v0.1→v6.0). DAPT+SFT pipeline completed but model can't learn Tamil semantics at 0.6B scale with 151K vocab
@@ -92,9 +94,10 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Step 3 (DONE):** SFT v7.0 — 1 epoch, LoRA r=8, Tamil preserved (94% word). Identity/factual corrections NOT learned — conservative LoRA too weak
 - **Step 4 (DONE):** SFT v7.1 — incremental r=16 on v7.0, Tamil improved to 96% word (best ever). Identity/factual STILL not overridden — Gemma's 2T-token pretrained priors too deep for LoRA
 - **Step 5 (DONE):** SFT v7.2 — identity-only reinforcement (90 samples x 10 epochs). FAILED — identity still Google, domain knowledge regressed. Proves Gemma's identity is unhackable via LoRA SFT
-- **Step 6 (NEXT):** GGUF conversion of v7.1 (Q4_K_M = 0.60GB) for mobile deployment — identity handled via system prompt at inference time; factual corrections via hybrid SQLite retrieval
-- **Step 7:** Test GGUF output quality (Tamil coherence after quantization)
-- **Step 8:** Integrate with Flutter app and test on mobile device
+- **Step 6 (DONE):** GGUF conversion of v7.1 — Q4_K_M (806 MB), Q3_K_M (722 MB), Q2_K (690 MB) uploaded to HuggingFace. All OOM on 4GB devices
+- **Step 7 (DONE):** 4GB Optimization — tested bartowski's Gemma 3 270M-it GGUFs and Google QAT 1B GGUFs. Two-tier deployment confirmed: 270M Q6_K_L (283 MB) for 4GB, QAT Q2_K (690 MB) for 6GB+
+- **Step 8 (NEXT):** Physical device testing — add 270M Q6_K_L and QAT Q2_K to Flutter app ModelRegistry, test on 4GB Android device
+- **Step 9:** If 4GB device test passes, SFT the winning variant(s) for VAZHI-specific content quality
 
 **Why Gemma 3 1B-it instead of continuing Qwen3:**
 - Google's 2T-token pretraining on 140+ languages with 262K vocab gives genuine Tamil capability out-of-the-box
@@ -146,6 +149,10 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Gemma 3's 262K vocab makes ALL quant levels too large for 4GB Android devices** — Q4_K_M (762 MiB), Q3_K_M (~693 MiB), Q2_K (652 MiB) all OOM-crash during inference. 157 f32 tensors (embeddings, norms) are identical across quant levels. Minimum viable device is 6GB+ RAM
 - **Large vocabulary creates a fixed memory floor** — 30% of Gemma 3's 999.89M params are in the 262K embedding matrix (f32, unquantized). Quantization only compresses the other 70%. When choosing deployment models, vocab size matters as much as parameter count for memory-constrained devices
 - **mmap is not a silver bullet** — a forward pass touches all 26 layers + embeddings + output head = entire model. Working set ≈ model size. On devices where available RAM barely exceeds model size, Android OOM killer terminates the process during inference
+- **Google QAT models are robust to aggressive quantization** — QAT (Quantization-Aware Training) bakes quantization noise into training. QAT Q2_K (690 MB) produces substantive Tamil content, while standard Q2_K shows more degradation. Always prefer QAT variants when available
+- **bartowski's imatrix GGUFs are pre-optimized** — bartowski applies imatrix calibration to all quants. `_L` variants (Q6_K_L, Q4_K_L) use Q8_0 for embed/output weights, improving quality at cost of ~20-30 MB. Skip custom imatrix generation when bartowski variants exist
+- **Gemma 3 270M-it produces real Tamil at 283 MB** — Q6_K_L variant has 98.1% Tamil word score. Content is shallow (factual hallucinations, echo responses, script contamination from Gujarati/Korean) but usable as "language glue" with hybrid SQLite compensating for factual accuracy
+- **Two-tier deployment solves 4GB problem without vocab trimming** — 270M Q6_K_L (283 MB) for 4GB devices, QAT Q2_K (690 MB) or v7.1 Q4_K_M (806 MB) for 6GB+. Simpler than vocabulary trimming and avoids tokenizer rebuilding risks
 
 ### Data Pipeline Rules (ADR-010)
 - **NEVER mix DAPT and SFT data** — physically separated in `data/sources/dapt/` and `data/sources/sft/`
@@ -344,3 +351,5 @@ gh workflow run ci.yml            # Trigger GitHub Actions
 - Legacy dataset: `CryptoYogi/vazhi-tamil-v05` (11,696 items)
 - Forked base model: `CryptoYogi/gemma-2b-tamil-base` (historical, corrupted tokenizer)
 - Space: `CryptoYogi/vazhi` (Gradio test API)
+- **External — 270M GGUF (bartowski):** `bartowski/google_gemma-3-270m-it-GGUF` (Q6_K_L = 283 MB for 4GB tier, Q4_K_M = 253 MB, IQ4_NL = 242 MB)
+- **External — QAT 1B GGUF (bartowski):** `bartowski/google_gemma-3-1b-it-qat-GGUF` (QAT Q2_K = 690 MB for 6GB+ tier, Q4_K_M = 806 MB, Q3_K_M = 722 MB, IQ3_M = 697 MB)

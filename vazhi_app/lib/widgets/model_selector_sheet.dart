@@ -80,6 +80,7 @@ class _VariantCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDefault = variant.id == ModelRegistry.defaultVariant.id;
     final isLow = variant.quality == ModelQuality.low;
+    final isLite = variant.quality == ModelQuality.lite;
 
     final Color badgeColor;
     switch (variant.quality) {
@@ -89,6 +90,8 @@ class _VariantCard extends StatelessWidget {
         badgeColor = Colors.orange;
       case ModelQuality.low:
         badgeColor = Colors.red;
+      case ModelQuality.lite:
+        badgeColor = Colors.blue;
     }
 
     return GestureDetector(
@@ -187,7 +190,7 @@ class _VariantCard extends StatelessWidget {
                         'RAM ${(variant.recommendedRamMB / 1024).toStringAsFixed(0)} GB+',
                         style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                       ),
-                      if (isLow) ...[
+                      if (isLow || isLite) ...[
                         const SizedBox(width: 8),
                         Icon(
                           Icons.warning_amber_rounded,

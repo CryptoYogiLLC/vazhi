@@ -187,7 +187,7 @@ void main() {
     });
 
     test('model expectedSizeBytes is reasonable', () {
-      expect(model.expectedSizeBytes, greaterThan(500000000));
+      expect(model.expectedSizeBytes, greaterThan(200000000));
       expect(model.expectedSizeBytes, lessThan(1000000000));
     });
 

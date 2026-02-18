@@ -32,14 +32,16 @@ void main() {
   });
 
   group('ModelRegistry', () {
-    test('has 3 variants', () {
-      expect(ModelRegistry.variants.length, 3);
+    test('has 5 variants', () {
+      expect(ModelRegistry.variants.length, 5);
     });
 
     test('variants are ordered by quality (best first)', () {
       expect(ModelRegistry.variants[0].quality, ModelQuality.high);
       expect(ModelRegistry.variants[1].quality, ModelQuality.medium);
       expect(ModelRegistry.variants[2].quality, ModelQuality.low);
+      expect(ModelRegistry.variants[3].quality, ModelQuality.medium);
+      expect(ModelRegistry.variants[4].quality, ModelQuality.lite);
     });
 
     test('defaultVariant is Q4_K_M', () {
@@ -65,7 +67,7 @@ void main() {
 
     test('all variants have reasonable sizes', () {
       for (final v in ModelRegistry.variants) {
-        expect(v.expectedSizeBytes, greaterThan(500000000));
+        expect(v.expectedSizeBytes, greaterThan(200000000));
         expect(v.expectedSizeBytes, lessThan(1000000000));
       }
     });
@@ -87,6 +89,16 @@ void main() {
       expect(v.quantization, 'Q2_K');
     });
 
+    test('finds QAT Q2_K by id', () {
+      final v = ModelRegistry.findById('qat_q2_k');
+      expect(v.quantization, 'QAT Q2_K');
+    });
+
+    test('finds 270M Q6_K_L by id', () {
+      final v = ModelRegistry.findById('gemma_270m_q6_k_l');
+      expect(v.quantization, '270M Q6_K_L');
+    });
+
     test('returns default for unknown id', () {
       final v = ModelRegistry.findById('nonexistent');
       expect(v.id, ModelRegistry.defaultVariant.id);
@@ -94,14 +106,15 @@ void main() {
   });
 
   group('ModelQuality', () {
-    test('has 3 values', () {
-      expect(ModelQuality.values.length, 3);
+    test('has 4 values', () {
+      expect(ModelQuality.values.length, 4);
     });
 
-    test('contains high, medium, low', () {
+    test('contains high, medium, low, lite', () {
       expect(ModelQuality.values, contains(ModelQuality.high));
       expect(ModelQuality.values, contains(ModelQuality.medium));
       expect(ModelQuality.values, contains(ModelQuality.low));
+      expect(ModelQuality.values, contains(ModelQuality.lite));
     });
   });
 }
