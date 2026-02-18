@@ -16,6 +16,7 @@ class ModelSelectorSheet extends StatelessWidget {
   static Future<ModelVariant?> show(BuildContext context, WidgetRef ref) {
     return showModalBottomSheet<ModelVariant>(
       context: context,
+      isScrollControlled: true,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
@@ -30,35 +31,50 @@ class ModelSelectorSheet extends StatelessWidget {
         final variants = ref.watch(availableModelsProvider);
         final selected = ref.watch(selectedModelProvider);
 
-        return Padding(
-          padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              // Drag handle
-              Container(
-                width: 40,
-                height: 4,
-                margin: const EdgeInsets.only(bottom: 16),
-                decoration: BoxDecoration(
-                  color: Colors.grey[300],
-                  borderRadius: BorderRadius.circular(2),
-                ),
+        return DraggableScrollableSheet(
+          initialChildSize: 0.55,
+          minChildSize: 0.3,
+          maxChildSize: 0.85,
+          expand: false,
+          builder: (context, scrollController) {
+            return Padding(
+              padding: const EdgeInsets.fromLTRB(16, 8, 16, 24),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Drag handle
+                  Container(
+                    width: 40,
+                    height: 4,
+                    margin: const EdgeInsets.only(bottom: 16),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(2),
+                    ),
+                  ),
+                  const Text(
+                    'Select Model',
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 16),
+                  Expanded(
+                    child: ListView(
+                      controller: scrollController,
+                      children: variants
+                          .map(
+                            (v) => _VariantCard(
+                              variant: v,
+                              isSelected: v.id == selected.id,
+                              onTap: () => Navigator.pop(context, v),
+                            ),
+                          )
+                          .toList(),
+                    ),
+                  ),
+                ],
               ),
-              const Text(
-                'Select Model',
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 16),
-              ...variants.map(
-                (v) => _VariantCard(
-                  variant: v,
-                  isSelected: v.id == selected.id,
-                  onTap: () => Navigator.pop(context, v),
-                ),
-              ),
-            ],
-          ),
+            );
+          },
         );
       },
     );
