@@ -117,7 +117,7 @@ class ModelRegistry {
       filename: 'vazhi-v7_1-q4_k_m.gguf',
       url:
           'https://huggingface.co/CryptoYogi/vazhi-v7_1-Q4_K_M-GGUF/resolve/main/vazhi-v7_1-q4_k_m.gguf',
-      expectedSizeBytes: 806000000,
+      expectedSizeBytes: 806057920,
       displaySize: '~806 MB',
       quality: ModelQuality.high,
       displayName: 'High Quality',
@@ -131,7 +131,7 @@ class ModelRegistry {
       filename: 'vazhi-v7.1-trimmed-q4_k_m.gguf',
       url:
           'https://huggingface.co/CryptoYogi/vazhi-v7_1-trimmed/resolve/main/vazhi-v7.1-trimmed-q4_k_m.gguf',
-      expectedSizeBytes: 505000000,
+      expectedSizeBytes: 505020704,
       displaySize: '~505 MB',
       quality: ModelQuality.high,
       displayName: 'Balanced',
@@ -139,7 +139,6 @@ class ModelRegistry {
       minDeviceRamMB: 3500,
       minFreeRamMB: 100,
       isTrimmed: true,
-      isExperimental: true,
     ),
     ModelVariant(
       id: 'q3_k_m_trimmed',
@@ -147,7 +146,7 @@ class ModelRegistry {
       filename: 'vazhi-v7.1-trimmed-q3_k_m.gguf',
       url:
           'https://huggingface.co/CryptoYogi/vazhi-v7_1-trimmed/resolve/main/vazhi-v7.1-trimmed-q3_k_m.gguf',
-      expectedSizeBytes: 421000000,
+      expectedSizeBytes: 421378592,
       displaySize: '~421 MB',
       quality: ModelQuality.medium,
       displayName: 'Compact',
@@ -155,7 +154,6 @@ class ModelRegistry {
       minDeviceRamMB: 3500,
       minFreeRamMB: 80,
       isTrimmed: true,
-      isExperimental: true,
     ),
   ];
 

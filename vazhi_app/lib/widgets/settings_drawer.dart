@@ -16,7 +16,8 @@ import 'download_dialog.dart';
 import 'model_selector_sheet.dart';
 
 // Language provider (true = Tamil, false = English)
-final languageProvider = StateProvider<bool>((ref) => false);
+// Defaults to Tamil — target audience is rural Tamil Nadu users
+final languageProvider = StateProvider<bool>((ref) => true);
 
 class SettingsDrawer extends ConsumerWidget {
   const SettingsDrawer({super.key});
@@ -619,25 +620,6 @@ class SettingsDrawer extends ConsumerWidget {
                   color: status == ModelStatus.error ? Colors.red : null,
                 ),
               ),
-              if (model.isExperimental)
-                Padding(
-                  padding: const EdgeInsets.only(top: 4),
-                  child: Row(
-                    children: [
-                      Icon(Icons.science, size: 14, color: Colors.amber[800]),
-                      const SizedBox(width: 4),
-                      Text(
-                        isTamil
-                            ? 'சோதனை — வெளியீடு சரியாக இல்லாமல் போகலாம்'
-                            : 'Experimental — output may not work correctly',
-                        style: TextStyle(
-                          fontSize: 11,
-                          color: Colors.amber[800],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
             ],
           ),
           trailing: trailing,

@@ -22,6 +22,26 @@ class VazhiLocalService {
 
   static const _deviceInfoService = DeviceInfoService();
 
+  /// Gemma 3 chat template (Jinja2).
+  /// Many Gemma 3 GGUFs (including vocab-trimmed ones) lack the
+  /// `tokenizer.chat_template` metadata. Without it, llamadart falls back to
+  /// ChatML which Gemma 3 doesn't understand → English gibberish.
+  /// This template is registered as a fallback override for Gemma 3 models.
+  static const _gemma3ChatTemplate =
+      "{{ bos_token }}"
+      "{% for message in messages %}"
+      "{% if message['role'] == 'user' %}"
+      "<start_of_turn>user\n"
+      "{{ message['content'] }}<end_of_turn>\n"
+      "{% elif message['role'] == 'assistant' %}"
+      "<start_of_turn>model\n"
+      "{{ message['content'] }}<end_of_turn>\n"
+      "{% endif %}"
+      "{% endfor %}"
+      "{% if add_generation_prompt %}"
+      "<start_of_turn>model\n"
+      "{% endif %}";
+
   VazhiLocalService(this._model);
 
   /// System prompts for each pack
@@ -67,8 +87,9 @@ class VazhiLocalService {
     r'|<end_of_turn>',
   );
 
-  /// Clean model output by stripping leaked chat tokens
-  static String _cleanOutput(String text) {
+  /// Clean model output by stripping leaked chat tokens.
+  /// Public so hybrid_chat_provider can clean streaming output.
+  static String cleanOutput(String text) {
     return text.replaceAll(_chatTokenPattern, '').trim();
   }
 
@@ -262,6 +283,18 @@ class VazhiLocalService {
     }
   }
 
+  /// Check if the main diagnostic file exists (crash indicator).
+  /// Only this file signals an incomplete/crashed load — worker-isolate
+  /// and stderr logs are informational and persist after successful loads.
+  Future<bool> hasCrashDiagnostic() async {
+    try {
+      final path = await _diagnosticPath;
+      return File(path).existsSync();
+    } catch (_) {
+      return false;
+    }
+  }
+
   /// Read diagnostics. Combines the main diagnostic log with the
   /// worker-isolate load diagnostic (if present). Returns null if none exist.
   Future<String?> readLastDiagnostic() async {
@@ -288,8 +321,11 @@ class VazhiLocalService {
     return parts.isEmpty ? null : parts.join('\n');
   }
 
-  /// Clear the diagnostic file. Called after successful load,
+  /// Clear all diagnostic files. Called after successful load,
   /// or by the UI retry handler to allow a fresh load attempt.
+  /// Must delete worker-isolate and stderr logs too — otherwise
+  /// readLastDiagnostic() finds stale files from a successful session
+  /// and _checkModelStatus() assumes the previous load crashed.
   Future<void> clearDiagnostic() async {
     try {
       final path = await _diagnosticPath;
@@ -297,9 +333,17 @@ class VazhiLocalService {
       if (await file.exists()) {
         await file.delete();
       }
-    } catch (_) {
-      // Ignore delete errors
-    }
+    } catch (_) {}
+    // Also clear worker-isolate diagnostic and stderr log
+    try {
+      final mPath = await modelPath;
+      for (final suffix in ['.loaddiag.txt', '.stderr.txt']) {
+        final file = File('$mPath$suffix');
+        if (await file.exists()) {
+          await file.delete();
+        }
+      }
+    } catch (_) {}
   }
 
   /// Read the worker-isolate load diagnostic (written by llama_cpp_service
@@ -387,19 +431,41 @@ class VazhiLocalService {
       throw VazhiLocalException('$e');
     }
     _isModelLoaded = true;
+
+    // Register Gemma 3 chat template fallback.
+    // Many GGUFs (especially vocab-trimmed) lack tokenizer.chat_template.
+    // Without it llamadart uses ChatML → Gemma 3 produces English gibberish.
+    ChatTemplateEngine.registerTemplateOverride(
+      id: 'gemma3-fallback',
+      templateSource: _gemma3ChatTemplate,
+      matcher: (context) =>
+          context.templateSource == null &&
+          (context.metadata['general.architecture'] == 'gemma3' ||
+              context.metadata['general.architecture'] == 'gemma2'),
+    );
+
     await _writeDiagnostic('step:complete');
     await clearDiagnostic();
   }
 
   /// Ensure a session exists with the correct pack's system prompt.
   /// Recreates the session when the pack changes so the system prompt
-  /// matches the selected knowledge domain. Preserves session within
-  /// the same pack for multi-turn RAG continuity.
+  /// matches the selected knowledge domain.
+  ///
+  /// Disables llamadart's _enforceContextLimit (maxContextTokens: 0) because
+  /// at n_ctx=256 its aggressive trimming removes even the current user
+  /// message. Instead, llama.cpp's built-in context shifting (b7970+)
+  /// maintains a sliding window over the conversation when KV cache fills.
+  /// This preserves multi-turn history for context correlation.
   void _ensureSession(String pack) {
     if (_session == null || _currentPack != pack) {
       final systemPrompt =
           packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
-      _session = ChatSession(_engine!, systemPrompt: systemPrompt);
+      _session = ChatSession(
+        _engine!,
+        systemPrompt: systemPrompt,
+        maxContextTokens: 0,
+      );
       _currentPack = pack;
     }
   }
@@ -421,7 +487,25 @@ class VazhiLocalService {
       }
     }
 
-    return _cleanOutput(buffer.toString());
+    return cleanOutput(buffer.toString());
+  }
+
+  /// Stream chat response tokens for real-time UI updates.
+  /// Each yield is a raw token string — caller should accumulate and clean.
+  Stream<String> chatStream(String message, {String pack = 'culture'}) async* {
+    _assertReady();
+
+    _ensureSession(pack);
+
+    await for (final chunk in _session!.create([
+      LlamaTextContent(message),
+    ], params: _generationParams)) {
+      if (chunk.choices.isEmpty) continue;
+      final content = chunk.choices.first.delta.content;
+      if (content != null) {
+        yield content;
+      }
+    }
   }
 
   /// Clear the chat session (start fresh conversation)

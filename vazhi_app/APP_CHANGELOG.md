@@ -18,23 +18,83 @@ For model training history, see [`models/TRAINING_LOG.md`](../models/TRAINING_LO
 | v0.5.1 | 2026-02-11 | `82a52c0` | Lint cleanup, pre-commit hooks |
 | v0.6.0 | 2026-02-17 | `fefaf2b` | Model selector, single source of truth (ADR-011) |
 | v0.7.0 | 2026-02-18 | — | 4GB device crash fixes, ARM baseline, Downloads persistence, smart model selection |
+| v0.8.0 | 2026-02-19 | — | On-device AI working: chat template fix, streaming, multi-turn context, diagnostic cleanup |
 
 ---
 
-## Current State (v0.7.0)
+## Current State (v0.8.0)
 
-- **289 tests** passing (unit, integration, widget, security)
+- **293 tests** passing (unit, integration, widget, security)
 - **0 dart analyze issues** (fatal-infos clean)
 - **6 knowledge packs** fully populated in SQLite
 - **10 knowledge categories** routed (Thirukkural, schemes, emergency, health, safety, education, legal, siddha medicine, festivals, siddhars)
-- **Bilingual UI** (English + Tamil) across all result cards and chat bubbles
+- **Bilingual UI** (Tamil default) across all result cards and chat bubbles
 - **Smart model selector** (ADR-013): 3 GGUF variants with RAM-based filtering, user-friendly labels, pre-inference RAM checks
 - **Model file persistence**: MediaStore Downloads/VAZHI/ survives reinstalls
 - **Native library**: ARMv8.2-A baseline (Cortex-A55+), no Vulkan, 4.9 MB .so
+- **On-device AI working**: Gemma 3 1B-it vocab-trimmed Q4_K_M on 4GB Android — Tamil responses, streaming output, multi-turn context
 - **Pre-commit hooks**: dart format, dart analyze, flutter test, secret detection
 - **CI/CD**: GitHub Actions for build, lint, security scan
-- **AI model**: Gemma 3 1B-it SFT v7.1 — vocab-trimmed variants for 4GB devices
 - **APK size**: ~100 MB (down from 130 MB after Vulkan removal)
+- **Android 12+ splash screen**: Peacock logo during startup
+
+---
+
+## v0.8.0 — On-Device AI Working: Chat Template, Streaming, Multi-Turn Context
+
+**Date:** 2026-02-19
+**Tests:** 293 passing (up from 289)
+
+### Critical Fixes
+
+1. **English gibberish from AI model** (`vazhi_local_service.dart`)
+   - Root cause: Gemma 3 GGUFs (including vocab-trimmed) lack `tokenizer.chat_template` metadata. llamadart falls back to ChatML format, which Gemma 3 was never trained on → English/German gibberish
+   - Fix: Register Gemma 3 Jinja2 chat template as fallback override via `ChatTemplateEngine.registerTemplateOverride()` with architecture-based matcher (gemma3/gemma2)
+   - Result: Tamil responses from first message onward
+
+2. **Follow-up messages produce gibberish** (`vazhi_local_service.dart`)
+   - Root cause: llamadart's `_enforceContextLimit` with n_ctx=256 uses `reserve = (256 * 0.1).clamp(128, 512) = 128`, leaving only 128 tokens for entire prompt. System prompt (~80 tokens) + prior history overflows → algorithm removes even the CURRENT user message → model generates from just system prompt → gibberish
+   - Fix: Set `maxContextTokens: 0` on ChatSession to disable llamadart's aggressive trimming. llama.cpp's built-in context shifting (b7970+) maintains a sliding window over the conversation when KV cache fills
+   - Result: Multi-turn conversations work with context preserved
+
+3. **Model always errors on startup, requires manual reload** (`chat_provider.dart`, `vazhi_local_service.dart`)
+   - Root cause: `clearDiagnostic()` only deleted the main `model_load_diagnostic.txt` but NOT `$modelPath.loaddiag.txt` (worker isolate) and `$modelPath.stderr.txt` (llama.cpp logs). These informational files persisted from successful sessions. On next startup, `readLastDiagnostic()` found them → assumed crash → set `ModelStatus.error` without attempting load
+   - Fix (two-part):
+     1. `clearDiagnostic()` now deletes all three diagnostic files
+     2. `_checkModelStatus()` uses new `hasCrashDiagnostic()` that checks ONLY the main diagnostic file (the actual crash indicator), not informational worker/stderr logs
+   - Result: Model auto-loads on startup without manual intervention
+
+### Features
+
+4. **Streaming LLM responses** (`vazhi_local_service.dart`, `hybrid_chat_provider.dart`)
+   - `chatStream()` method yields tokens as they generate from local model
+   - `_streamLocalAi()` in HybridChatNotifier updates UI progressively via `HybridMessage.aiStreaming()`
+   - `VazhiLocalService.cleanOutput()` strips leaked chat tokens on each streaming update
+
+5. **RAG context truncation** (`hybrid_chat_provider.dart`)
+   - `_maxRagContextChars = 150` limits SQLite context injected into AI prompts
+   - With n_ctx=256, token budget is tight: ~90 system + ~50 query + ~80 generation + ~30-80 RAG context
+   - Prevents prompt overflow that would degrade response quality
+
+6. **Language default to Tamil** (`settings_drawer.dart`)
+   - Changed `languageProvider` default from `false` (English) to `true` (Tamil)
+   - Target audience is rural Tamil Nadu — Tamil should be the default experience
+
+7. **"AI Brain" → "AI சக்தி" rename** (5 files)
+   - All user-facing references renamed to Tamil: model status labels, download prompts, error messages
+
+8. **Android 12+ splash screen** (`values-v31/styles.xml`, `launch_background.xml`)
+   - Added `windowSplashScreenAnimatedIcon` with peacock app icon for API 31+
+   - Legacy splash drawables also updated with centered `@mipmap/ic_launcher`
+
+9. **UI overflow fixes** (multiple widget files)
+   - Fixed "RIGHT OVERFLOWED BY X PIXELS" warnings in model selector and download dialog
+
+### Architecture Lessons
+
+- **llamadart's context limit algorithm is broken for small n_ctx** — the 128-token minimum reserve means n_ctx=256 only has 128 tokens for prompts. Disabling it and relying on llama.cpp's native context shifting is correct for constrained devices
+- **Diagnostic files need clear crash vs. informational semantics** — worker isolate logs and stderr captures are useful for debugging but should NOT be used as crash indicators. Only the main step-tracking diagnostic file (written during load, cleared after success) signals an incomplete load
+- **GGUF chat template is NOT optional** — even when llama.cpp has built-in architecture handlers, the Dart/Flutter runtime (llamadart) needs the template in GGUF metadata. Always verify `tokenizer.chat_template` exists after GGUF conversion
 
 ---
 

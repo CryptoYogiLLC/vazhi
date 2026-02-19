@@ -157,7 +157,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'AI Brain பதிவிறக்கம் ${ref.read(selectedModelProvider).displaySize}. WiFi பயன்படுத்த பரிந்துரைக்கப்படுகிறது.',
+                  'AI சக்தி பதிவிறக்கம் ${ref.read(selectedModelProvider).displaySize}. WiFi பயன்படுத்த பரிந்துரைக்கப்படுகிறது.',
                 ),
                 const SizedBox(height: 8),
                 const Text(
@@ -249,7 +249,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
           ),
           const SizedBox(height: 16),
           Text(
-            t('Loading AI Brain...', 'AI Brain ஏற்றுகிறது...'),
+            t('Loading AI Shakthi...', 'AI சக்தி ஏற்றுகிறது...'),
             style: const TextStyle(fontWeight: FontWeight.w500),
           ),
           const SizedBox(height: 8),
@@ -382,7 +382,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
             gradient: VazhiTheme.primaryGradient,
             borderRadius: BorderRadius.circular(12),
           ),
-          child: const Text('🧠', style: TextStyle(fontSize: 28)),
+          child: const Text('⚡', style: TextStyle(fontSize: 28)),
         ),
         const SizedBox(width: 16),
         const Expanded(
@@ -390,7 +390,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'AI Brain பதிவிறக்கம்',
+                'AI சக்தி பதிவிறக்கம்',
                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Text(
@@ -469,15 +469,6 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
             'பரிந்துரை',
             'WiFi பயன்படுத்தவும்',
           ),
-          if (model.isExperimental) ...[
-            const Divider(height: 16),
-            _buildInfoRow(
-              Icons.science,
-              'நிலை',
-              'Experimental',
-              iconColor: Colors.amber,
-            ),
-          ],
           if (_storageInfo != null && _storageInfo!.isLowSpace) ...[
             const Divider(height: 16),
             _buildInfoRow(
@@ -503,8 +494,15 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
         Icon(icon, size: 20, color: iconColor ?? VazhiTheme.primaryColor),
         const SizedBox(width: 12),
         Text(label, style: TextStyle(color: Colors.grey[600], fontSize: 13)),
-        const Spacer(),
-        Text(value, style: const TextStyle(fontWeight: FontWeight.w500)),
+        const SizedBox(width: 8),
+        Expanded(
+          child: Text(
+            value,
+            style: const TextStyle(fontWeight: FontWeight.w500),
+            textAlign: TextAlign.end,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
       ],
     );
   }
@@ -644,7 +642,7 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
             Icon(Icons.check_circle, color: Colors.green, size: 20),
             SizedBox(width: 8),
             Text(
-              'AI Brain தயாராக உள்ளது!',
+              'AI சக்தி தயாராக உள்ளது!',
               style: TextStyle(
                 color: Colors.green,
                 fontWeight: FontWeight.w500,
@@ -671,14 +669,15 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
         borderRadius: BorderRadius.circular(8),
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _buildDetailItem(
-            Icons.download,
-            '${progress.downloadedSize} / ${progress.totalSize}',
+          Expanded(
+            child: _buildDetailItem(
+              Icons.download,
+              '${progress.downloadedSize} / ${progress.totalSize}',
+            ),
           ),
-          _buildDetailItem(Icons.speed, progress.speed),
-          _buildDetailItem(Icons.timer, progress.eta),
+          Expanded(child: _buildDetailItem(Icons.speed, progress.speed)),
+          Expanded(child: _buildDetailItem(Icons.timer, progress.eta)),
         ],
       ),
     );
@@ -696,6 +695,8 @@ class _DownloadDialogState extends ConsumerState<DownloadDialog> {
             color: Colors.grey[700],
             fontWeight: FontWeight.w500,
           ),
+          textAlign: TextAlign.center,
+          overflow: TextOverflow.ellipsis,
         ),
       ],
     );

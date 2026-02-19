@@ -264,10 +264,11 @@ See `models/TRAINING_LOG.md` for full details and lessons learned.
 
 ---
 
-*Last updated: February 17, 2026*
-*Code Review: 19 issues closed, 247 tests passing*
+*Last updated: February 19, 2026*
+*Code Review: 19 issues closed, 293 tests passing*
 *Training: SFT v7.1 on Gemma 3 1B-it — DEPLOYMENT CANDIDATE (96% Tamil word)*
-*Current milestone: Phase 3 - GGUF mobile testing + app store submission*
+*Current milestone: Phase 3 - On-device AI working on 4GB Android, app store submission pending*
 *Architecture: Hybrid Retrieval (Deterministic + Optional AI) + Model Selector (ADR-011)*
-*Target Model: Gemma 3 1B-it SFT v7.1 — 3 GGUF variants (Q4_K_M, Q3_K_M, Q2_K)*
-*Training attempts: 20 Qwen3 failed → Gemma 3 pivot → v7.1 succeeded*
+*Target Model: Gemma 3 1B-it SFT v7.1 — vocab-trimmed Q4_K_M (481 MB) confirmed working on 4GB device*
+*Training attempts: 20 Qwen3 failed → Gemma 3 pivot → v7.1 succeeded → on-device verified*
+*App: v0.8.0 — Tamil chat working, streaming responses, multi-turn context, auto model load*

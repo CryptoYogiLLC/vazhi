@@ -300,11 +300,14 @@ class _VariantCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Text(
-                        '${variant.displayName} / ${variant.displayNameTamil}',
-                        style: const TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
+                      Flexible(
+                        child: Text(
+                          '${variant.displayName} / ${variant.displayNameTamil}',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
                       ),
                       const SizedBox(width: 8),
@@ -376,27 +379,6 @@ class _VariantCard extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 10,
                               color: Colors.teal,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ),
-                      ],
-                      if (variant.isExperimental) ...[
-                        const SizedBox(width: 8),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 6,
-                            vertical: 1,
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.amber.withValues(alpha: 0.15),
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          child: Text(
-                            'Experimental',
-                            style: TextStyle(
-                              fontSize: 10,
-                              color: Colors.amber[800],
                               fontWeight: FontWeight.w500,
                             ),
                           ),

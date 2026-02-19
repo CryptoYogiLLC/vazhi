@@ -7,7 +7,7 @@
 **Goal:** Deploy a Tamil-capable LLM on mobile devices (<1GB target)
 **Current Target:** Gemma 3 1B-it SFT v7.1 (deployment candidate — 96% Tamil word score)
 **Timeline:** February 2026
-**Status:** DOUBLE BREAKTHROUGH: (1) Harness test proves Flutter overhead is 4GB OOM cause, not model size. (2) Trimmed v7.1 Q2_K (389 MB) runs on 4GB Android at 3.25 tok/s via llama-simple — only 12 MB RAM consumed via mmap. Flutter optimization is the sole remaining blocker for 4GB LLM. 128 lessons learned
+**Status:** GGUF chat template fix complete (ADR-014). Root cause of Android gibberish: missing `tokenizer.chat_template` → ChatML fallback. Fix: embed Gemma 3 Jinja2 template in GGUF metadata. All trimmed models produce correct Tamil on 4GB Android. 134 lessons learned
 
 ---
 
@@ -1584,5 +1584,96 @@ Added MediaStore-based model file storage so GGUF files persist across app reins
 
 ---
 
+## Phase 10: GGUF Chat Template Fix (ADR-014)
+
+### The Problem
+
+Vocabulary-trimmed GGUFs (262K→21K tokens) produced English gibberish ("Aki") on Android instead of Tamil. The HuggingFace model passed all quality checks — this was NOT a model or tokenizer issue.
+
+### Root Cause: Missing `tokenizer.chat_template` in GGUF
+
+`convert_hf_to_gguf.py` did not include `tokenizer.chat_template` for Gemma 3 models. Without this metadata key, two separate failures occurred:
+
+1. **llamadart (Flutter app on Android)**: `ChatTemplateEngine.render()` detected null template → fell back to `ChatFormat.generic` → used ChatML format (`<|im_start|>role\nmessage<|im_end|>`). Gemma 3 was never trained on ChatML → gibberish output
+2. **llama-cli conversation mode (Mac)**: Built-in Gemma 3 handler tokenized template text as literal characters instead of special tokens → trimmed model got 33 prompt tokens instead of 26 → immediate `<end_of_turn>` (0 output tokens)
+
+Key evidence: `llama-completion --special` (manual Gemma 3 template) produced **identical Tamil** from both trimmed and untrimmed models. The GGUF conversion was perfect — only the metadata was missing.
+
+### The Fix
+
+Embedded the official Gemma 3 Jinja2 chat template (1,532 chars) in all GGUFs using `gguf-new-metadata --chat-template-config tokenizer_config.json`. Each file grew by +1.5 KB (metadata only, tensors unchanged).
+
+### Diagnostic Process (ADR-014 Phase 0)
+
+Built `tools/gguf_diagnostic.py` using GGUFReader Python library (not `gguf-dump --json` which truncates arrays). Ran 4 automated tests:
+- **Test 1 (Metadata)**: All critical keys matched between trimmed and untrimmed — PASS
+- **Test 2 (Special Tokens)**: `<start_of_turn>` (id=105, type=control) and `<end_of_turn>` (id=106, type=control) preserved correctly — PASS
+- **Test 3 (Decode)**: Completion mode = identical Tamil (PASS). Conversation mode = 0 tokens from trimmed (FAIL → root cause)
+- **Test 4 (Tokenization)**: Token IDs identical in both models — PASS
+
+### Lessons Learned
+
+- **#129**: **Always verify `tokenizer.chat_template` exists in GGUF after conversion** — `convert_hf_to_gguf.py` may omit it. Without it, inference runtimes fall back to wrong chat format. Completion mode works fine (manual template), only conversation/chat mode breaks. Use `gguf-new-metadata --chat-template-config` to patch. This is a metadata issue, not a weights issue
+- **#130**: **Test GGUF in BOTH completion mode and conversation mode** — completion mode (`llama-completion --special`) bypasses the chat template entirely. Conversation mode (`llama-cli -cnv`) uses the template from GGUF metadata. A model can pass completion tests perfectly while being completely broken in conversation mode
+- **#131**: **`gguf-dump --json` truncates large arrays (tokens, token_type)** — use GGUFReader Python library for programmatic access to full GGUF contents. The `--json` output may show metadata but omit the actual token lists needed for diagnosis
+- **#132**: **llamadart ChatML fallback is silent and destructive** — when `tokenizer.chat_template` is null, llamadart detects `ChatFormat.contentOnly` → falls back to `ChatFormat.generic` (ChatML). No warning, no error. The model receives `<|im_start|>` tokens it was never trained on and produces gibberish. Always ensure GGUF files have explicit chat templates for the target model architecture
+- **#133**: **HARD GATE before training saved GPU hours** — ADR-014's "no training until GGUF matches HF" rule prevented wasting compute on a non-training problem. The fix was one metadata key, zero retraining. Always diagnose the full pipeline before assuming model quality is the issue
+- **#134**: **Log the embedded llama.cpp version on Android for diagnostics** — when Mac tests pass but Android fails, version skew between the Mac llama.cpp and the vendored Android llama.cpp is a first-class suspect. Always capture both versions in diagnostic artifacts
+
+### Files Created
+
+- `tools/gguf_diagnostic.py` — Phase 0 automated metadata + token comparison
+- `tools/patch_gguf_chat_template.py` — Phase 1 chat template injection via gguf-new-metadata
+
+---
+
+## Phase 11: On-Device AI Integration (App v0.8.0)
+
+### The Problem
+
+Three separate issues prevented working on-device AI on 4GB Android:
+1. First message: English/German gibberish instead of Tamil
+2. Follow-up messages: degenerate output (repeated German text, characters)
+3. Every app restart: model shows error, requires manual "reload" tap
+
+### Root Causes and Fixes
+
+**1. Missing chat template in llamadart runtime**
+
+The GGUF files had `tokenizer.chat_template` metadata added (Phase 10), but llamadart's `ChatTemplateEngine` wasn't picking it up for all cases. Registered a Gemma 3 Jinja2 template as a runtime fallback override using `ChatTemplateEngine.registerTemplateOverride()` with an architecture-based matcher. First messages immediately started producing Tamil.
+
+**2. llamadart's `_enforceContextLimit` destroys messages at n_ctx=256**
+
+With n_ctx=256, the algorithm uses `reserve = (256 * 0.1).clamp(128, 512) = 128`, leaving only 128 tokens for the entire prompt. System prompt alone is ~80 tokens. On follow-up messages, accumulated history pushes past the limit and the algorithm removes ALL messages including the current user message. The model then generates from just the system prompt → gibberish.
+
+Fix: Set `maxContextTokens: 0` on ChatSession, which disables llamadart's aggressive trimming entirely. llama.cpp (b7970+) has built-in context shifting that maintains a sliding window when KV cache fills. This preserves multi-turn conversation history naturally.
+
+Initial wrong fix: `_session.reset()` before each message cleared all history — prevented gibberish but broke multi-turn context correlation. Reverted in favor of `maxContextTokens: 0`.
+
+**3. Diagnostic file cleanup incomplete → false crash detection**
+
+`clearDiagnostic()` only deleted the main `model_load_diagnostic.txt` but left `$modelPath.loaddiag.txt` (worker isolate) and `$modelPath.stderr.txt` (llama.cpp stderr). These informational files persisted from successful loads. On next startup, `readLastDiagnostic()` found them, assumed the previous session had crashed, and set `ModelStatus.error` without attempting to load.
+
+Two-part fix: (a) `clearDiagnostic()` now deletes all three files, (b) crash detection uses new `hasCrashDiagnostic()` that checks ONLY the main diagnostic file — the only reliable crash indicator.
+
+### Additional Improvements
+
+- **Streaming LLM responses**: `chatStream()` yields tokens progressively for real-time UI updates
+- **RAG context truncation**: Capped at 150 chars to fit n_ctx=256 token budget
+- **Tamil default**: Language toggle defaults to Tamil (target audience: rural Tamil Nadu)
+- **"AI Brain" → "AI சக்தி"**: All user-facing strings renamed to Tamil
+- **Android 12+ splash screen**: Peacock logo via `windowSplashScreenAnimatedIcon` (API 31+ requires new SplashScreen API, legacy `windowBackground` is ignored)
+
+### Lessons Learned
+
+- **#135**: **llamadart's `_enforceContextLimit` is broken for n_ctx < 512** — the `(limit * 0.1).clamp(128, 512)` formula reserves 128 tokens minimum, which at n_ctx=256 leaves only 128 tokens for the entire prompt (system + history + user). Disable it (`maxContextTokens: 0`) and rely on llama.cpp's native context shifting instead
+- **#136**: **Don't clear session history as a "fix" for context overflow** — `session.reset()` prevents gibberish but destroys multi-turn context. The LLM needs prior history to correlate follow-up questions. Let the inference engine's sliding window handle overflow naturally
+- **#137**: **Diagnostic files need clear crash vs. informational semantics** — worker isolate logs and stderr captures are useful for debugging but MUST NOT be used as crash indicators. Only the main step-tracking file (written during load, cleared after success) signals an incomplete/crashed load. Mixing informational logs with crash detection causes false positives on every restart
+- **#138**: **Android 12+ (API 31) ignores legacy `windowBackground` splash screen** — the new SplashScreen API requires `windowSplashScreenAnimatedIcon` in `values-v31/styles.xml`. Without it, users see a blank screen during Flutter engine initialization (8-10 seconds on debug builds, less on release)
+- **#139**: **Register chat template overrides in the runtime, not just in GGUF metadata** — even when GGUF has `tokenizer.chat_template`, the runtime (llamadart) may not use it in all code paths. A runtime fallback override with architecture-based matching ensures correct template usage regardless of GGUF metadata state
+- **#140**: **RAG context must be truncated for small n_ctx** — at n_ctx=256, the token budget is ~90 system + ~50 query + ~80 generation = ~30-80 for RAG context. Without truncation, SQLite context can consume the entire generation budget, causing empty or degenerate responses
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-18 (On-device inference working on 4GB Android — 3 crash types fixed: GPU offload SIGABRT, null deref SIGSEGV, ARM i8mm SIGILL. Model persistence in Downloads. 128 lessons learned)*
+*Last updated: 2026-02-19 (On-device AI integration complete — chat template runtime fix, context overflow fix, diagnostic cleanup, streaming, Android 12+ splash. 140 lessons learned)*

@@ -388,7 +388,7 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
                 ),
               ),
               Text(
-                t('Download AI Brain', 'AI Brain பதிவிறக்கம் செய்யுங்கள்'),
+                t('Download AI Shakthi', 'AI சக்தி பதிவிறக்கம் செய்யுங்கள்'),
                 style: TextStyle(fontSize: 12, color: Colors.grey[600]),
               ),
             ],

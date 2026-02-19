@@ -20,7 +20,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 
 ## Current Status (Feb 2026)
 
-**Phase:** 3 — Data Population & AI Model Training
+**Phase:** 3 — On-Device AI Working, App Store Submission Pending
 
 **What's done:**
 - Flutter app with chat UI, voice I/O (Tamil STT/TTS), hybrid retrieval, model download manager
@@ -30,13 +30,21 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Model file persistence**: MediaStore Downloads/VAZHI/ via platform channel — survives app uninstall/reinstall
 - 6 knowledge packs: Security (468), Government (467), Education (602), Legal (610), Healthcare (460), Culture (400) = 3,007 bilingual training pairs
 - Security hardened: encrypted storage, input validation, ReDoS protection, URL allowlist, SHA256 verification
-- 289 tests passing, CI/CD via GitHub Actions
+- 293 tests passing, CI/CD via GitHub Actions
 - 19 code review issues identified and closed (#22-40)
+
+**What's done (on-device AI — app v0.8.0):**
+- **On-device AI fully working on 4GB Android** — vocab-trimmed Q4_K_M (481 MB) loads, streams Tamil responses, handles multi-turn conversations on Vortex JK68 (Cortex-A55, 3901 MB RAM)
+- **Chat template runtime fix** — Gemma 3 template registered as fallback override in llamadart via `ChatTemplateEngine.registerTemplateOverride()` with architecture matcher. Fixes English gibberish from missing GGUF `tokenizer.chat_template`
+- **Streaming LLM responses** — `chatStream()` yields tokens progressively for real-time UI updates
+- **Multi-turn context** — disabled llamadart's broken `_enforceContextLimit` (maxContextTokens: 0), llama.cpp context shifting handles overflow naturally
+- **Model auto-loads on startup** — fixed false crash detection from stale diagnostic files. `hasCrashDiagnostic()` checks only the main diagnostic file, not informational worker/stderr logs
+- **RAG context truncation** — 150 char limit for SQLite context injected into AI prompts (n_ctx=256 token budget)
+- **Tamil default UI** — language toggle defaults to Tamil, "AI Brain" → "AI சக்தி"
+- **Android 12+ splash screen** — peacock logo via `windowSplashScreenAnimatedIcon` (API 31+)
 
 **What's in progress:**
 - **SFT v7.1 is deployment candidate** for 6GB+ devices (96% Tamil word, best SFT'd model)
-- **On-device inference testing** — trimmed Q3_K_M (421 MB) loads and runs on 4GB Android (Vortex JK68, Cortex-A55, 3810 MB RAM). Tamil grammar correct but response quality limited (echoes "how can I help?" instead of answering). Testing larger trimmed Q4_K_M (505 MB) for better quality
-- **Vocabulary trimming COMPLETE** — 262K→~21K vocab trimmed GGUFs confirmed working on 4GB device. Harness tests passed for Q4_K_M (505 MB), Q3_K_M (421 MB), Q2_K (389 MB)
 - **Identity solution**: System prompt at inference time ("You are VAZHI"); factual corrections via hybrid SQLite retrieval (already built into app architecture)
 - **Key insight**: No untrimmed Gemma 3 model (not even 270M at 264 MiB) can run on 4GB Android. Vocabulary trimming (262K→21K) is the only viable path — confirmed working
 
@@ -89,6 +97,7 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 | SFT v7.1 | v7.0 + LoRA r=16 | ✅ **Best model** | Incremental on v7.0 merged. 1 epoch (234 steps), LoRA r=16 q_proj+v_proj, LR 1e-5, A100-80GB. Loss 4.89→4.18 (14.4% drop). Tamil IMPROVED: 89%→95% char, 90%→96% word (best ever). 16/16 eval passed. Identity still says Google, Chennai correct in A/B test. **Deployment candidate** — identity handled via system prompt. Model: `CryptoYogi/vazhi-v7_1` |
 | SFT v7.2 | v7.1 + identity-only | ❌ Failed | Identity reinforcement: 90 samples (61 mission + 29 corrections) x 10 epochs (~60 steps), LoRA r=16, LR 1e-5, A100-80GB. Identity NOT learned (0/4 say VAZHI, 2/4 still say Google). Chennai correct (2/2). Tamil preserved (99% word). BUT domain knowledge REGRESSED — model says "சாரி" (sorry) to most domain questions (Thirukkural, ration card, health, legal). Gemma's Google identity is unhackable via LoRA SFT — 2T tokens of pretraining > any fine-tuning. Adapter saved to `CryptoYogi/vazhi-v7_2-lora`, merged NOT uploaded |
 | 4GB Optimization | Gemma 3 270M-it + QAT 1B | ✅ **GO** | Two-tier deployment confirmed. **270M Q6_K_L** (283 MB, bartowski): 98.1% Tamil word, real Tamil but shallow content/hallucinations — viable as 4GB "lite" tier with hybrid SQLite. **QAT Q2_K** (690 MB, bartowski/Google QAT): 94.9% Tamil word, substantive answers, correct facts, VAZHI identity via system prompt — 6GB+ alternative, 116 MB smaller than v7.1 Q4_K_M. Notebook: `notebooks/Vazhi_4GB_Optimization.ipynb` |
+| GGUF Diagnostic | v7.1 trimmed GGUFs | ✅ **FIXED** | ADR-014 Phase 0+1. Root cause: `tokenizer.chat_template` missing from all GGUFs → llamadart fell back to ChatML → gibberish on Android. Fix: embedded Gemma 3 Jinja2 template (+1.5 KB) via `gguf-new-metadata`. All 4 GGUFs (untrimmed Q4_K_M + trimmed Q4/Q3/Q2) patched, uploaded, verified on Mac + 4GB Android. Trimmed models produce correct Tamil in conversation mode. `isExperimental` removed. Tools: `tools/gguf_diagnostic.py`, `tools/patch_gguf_chat_template.py` |
 
 **Current strategy — Gemma 3 1B-it pivot (Feb 2026):**
 - **Step 1 (DONE):** Qwen3-0.6B exhausted after 20 training attempts (v0.1→v6.0). DAPT+SFT pipeline completed but model can't learn Tamil semantics at 0.6B scale with 151K vocab
@@ -98,8 +107,9 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Step 5 (DONE):** SFT v7.2 — identity-only reinforcement (90 samples x 10 epochs). FAILED — identity still Google, domain knowledge regressed. Proves Gemma's identity is unhackable via LoRA SFT
 - **Step 6 (DONE):** GGUF conversion of v7.1 — Q4_K_M (806 MB), Q3_K_M (722 MB), Q2_K (690 MB) uploaded to HuggingFace. All OOM on 4GB devices
 - **Step 7 (DONE):** 4GB Optimization — tested bartowski's Gemma 3 270M-it GGUFs and Google QAT 1B GGUFs. Two-tier deployment confirmed: 270M Q6_K_L (283 MB) for 4GB, QAT Q2_K (690 MB) for 6GB+
-- **Step 8 (NEXT):** Physical device testing — add 270M Q6_K_L and QAT Q2_K to Flutter app ModelRegistry, test on 4GB Android device
-- **Step 9:** If 4GB device test passes, SFT the winning variant(s) for VAZHI-specific content quality
+- **Step 8 (DONE):** GGUF diagnostic + fix (ADR-014) — root cause: missing `tokenizer.chat_template` caused llamadart to use ChatML instead of Gemma 3 format → gibberish. Fixed by embedding template in GGUF metadata. All 4 GGUFs patched, uploaded, verified on 4GB Android. `isExperimental` removed from ModelRegistry
+- **Step 9 (DONE):** Flutter app integration (v0.8.0) — fixed 3 runtime issues: (1) chat template runtime override for llamadart, (2) `_enforceContextLimit` bypass via `maxContextTokens: 0` for multi-turn context, (3) diagnostic file cleanup for reliable auto-load. Added streaming responses, RAG truncation, Tamil default, Android 12+ splash. Confirmed working on 4GB Android with multi-turn Tamil conversations
+- **Step 10 (NEXT):** If quality is sufficient, prepare for release. If not, SFT the trimmed model for VAZHI-specific content
 
 **Why Gemma 3 1B-it instead of continuing Qwen3:**
 - Google's 2T-token pretraining on 140+ languages with 262K vocab gives genuine Tamil capability out-of-the-box
@@ -157,7 +167,9 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Embed/output Q8_0 quantization has zero effect on Gemma 3** — `--output-tensor-type q8_0` produces identical file sizes and outputs. The 262K vocab tensors are already stored optimally
 - **The 262K vocab floor is non-compressible via ANY quantization method** — tested standard quant, imatrix, embed Q8_0, and combined. All produce identical 690-806 MB files. Only vocabulary trimming can reduce the embedding floor
 - **Gemma 3 270M-it produces real Tamil at 283 MB** — Q6_K_L variant has 98.1% Tamil word score. Content is shallow (factual hallucinations, echo responses, script contamination from Gujarati/Korean) but usable as "language glue" with hybrid SQLite compensating for factual accuracy
-- **Vocabulary trimming is the only path to 4GB LLM support** — 262K→~21K vocab cuts embedding from ~576 MiB to ~46 MiB. Projected Q4_K_M: ~300 MiB. In progress
+- **Vocabulary trimming is the only path to 4GB LLM support** — 262K→~21K vocab cuts embedding from ~576 MiB to ~46 MiB. Trimmed Q4_K_M = 505 MB, Q3_K_M = 421 MB, Q2_K = 389 MB. All verified working on 4GB Android
+- **Always verify `tokenizer.chat_template` exists in GGUF after conversion** — `convert_hf_to_gguf.py` may omit it for some models (including Gemma 3). Without it, inference runtimes fall back to wrong chat format (ChatML instead of Gemma 3) → gibberish output. Fix: `gguf-new-metadata --chat-template-config tokenizer_config.json`. This is a GGUF metadata issue, not a model weights issue — completion mode works fine, only conversation/chat mode breaks
+- **GGUF conversion preserves model quality perfectly** — vocab-trimmed GGUF produces identical Tamil output to untrimmed in completion mode (`llama-completion --special`). The GGUF conversion pipeline (embeddings, weights, tokenizer mapping) is correct. Always test in BOTH completion mode and conversation mode when debugging GGUF issues
 
 ### Data Pipeline Rules (ADR-010)
 - **NEVER mix DAPT and SFT data** — physically separated in `data/sources/dapt/` and `data/sources/sft/`
@@ -214,6 +226,12 @@ VAZHI (வழி) is a free, offline Tamil AI assistant for mobile (Android + iO
 - **Cap llama.cpp n_ctx for memory-constrained devices** — Tamil system prompts consume ~80-100 tokens with Gemma 3's tokenizer. n_ctx=128 leaves insufficient room for generation (causes content-free response loops). Use n_ctx=256 as minimum for Tamil inference
 - **Remove unused native backends from APK** — disabling Vulkan (`VULKAN_ENABLED=OFF`) when `gpuLayers=0` saved 30 MB (35→4.9 MB .so, APK 130→100 MB). Only include backends the app actually uses
 - **Diagnose native crashes by signal type** — SIGABRT (signal 6) = assertion/parameter error, SIGSEGV (signal 11) = null pointer/memory access, SIGILL (signal 4) = illegal CPU instruction. Each requires a different fix approach
+- **llamadart's `_enforceContextLimit` is broken for n_ctx < 512** — the `(limit * 0.1).clamp(128, 512)` formula reserves 128 tokens minimum. At n_ctx=256 this leaves only 128 tokens for the entire prompt. Disable it (`maxContextTokens: 0`) and rely on llama.cpp's native context shifting instead
+- **Don't clear chat session history as a "fix" for context overflow** — `session.reset()` prevents gibberish but destroys multi-turn context. The LLM needs prior history. Let llama.cpp's sliding window handle overflow naturally
+- **Diagnostic files need clear crash vs. informational semantics** — worker isolate logs and stderr captures must NOT be used as crash indicators. Only the main step-tracking diagnostic file (written during load, cleared after success) signals an incomplete/crashed load
+- **Register chat template overrides at runtime, not just in GGUF metadata** — llamadart may not use GGUF `tokenizer.chat_template` in all code paths. A runtime fallback override via `ChatTemplateEngine.registerTemplateOverride()` with architecture-based matching is the reliable approach
+- **Android 12+ (API 31) ignores legacy `windowBackground` splash screen** — requires `windowSplashScreenAnimatedIcon` in `values-v31/styles.xml`
+- **RAG context must be truncated for small n_ctx** — at n_ctx=256, cap SQLite context at 150 chars (~75-150 tokens) to leave room for system prompt, user query, and generation
 
 ## Project Structure
 

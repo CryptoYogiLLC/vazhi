@@ -252,7 +252,7 @@ class HybridMessageBubble extends ConsumerWidget {
       child: ElevatedButton.icon(
         onPressed: onDownloadAi,
         icon: const Icon(Icons.download, size: 18),
-        label: const Text('AI Brain பதிவிறக்கம்'),
+        label: const Text('AI சக்தி பதிவிறக்கம்'),
         style: ElevatedButton.styleFrom(
           backgroundColor: VazhiTheme.primaryColor,
           foregroundColor: Colors.white,

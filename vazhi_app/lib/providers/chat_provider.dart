@@ -222,11 +222,13 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
         await _localService.clearDiagnostic();
         _ref.read(lastCrashDiagnosticProvider.notifier).state = null;
       } else {
-        // Startup: check for crash diagnostic from previous session
-        final diagnostic = await _localService.readLastDiagnostic();
-        if (diagnostic != null) {
+        // Startup: check if the MAIN diagnostic file exists — this is the
+        // only reliable crash indicator (written during load, cleared after
+        // success). Worker-isolate and stderr logs are informational and
+        // persist after successful loads — don't use them as crash signals.
+        if (await _localService.hasCrashDiagnostic()) {
+          final diagnostic = await _localService.readLastDiagnostic();
           _ref.read(lastCrashDiagnosticProvider.notifier).state = diagnostic;
-          // Previous load crashed — don't auto-load, show error with diagnostic
           if (await _localService.isModelDownloaded()) {
             state = ModelStatus.error;
             return;

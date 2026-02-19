@@ -215,15 +215,15 @@ class ModelStatusIndicator extends ConsumerWidget {
   String _getLabel(ModelStatus status) {
     switch (status) {
       case ModelStatus.notDownloaded:
-        return 'AI Brain பதிவிறக்கவில்லை';
+        return 'AI சக்தி பதிவிறக்கவில்லை';
       case ModelStatus.downloading:
-        return 'AI Brain பதிவிறக்குகிறது...';
+        return 'AI சக்தி பதிவிறக்குகிறது...';
       case ModelStatus.downloaded:
-        return 'AI Brain தயாராக உள்ளது';
+        return 'AI சக்தி தயாராக உள்ளது';
       case ModelStatus.loading:
-        return 'AI Brain ஏற்றுகிறது...';
+        return 'AI சக்தி ஏற்றுகிறது...';
       case ModelStatus.ready:
-        return 'AI Brain செயலில் உள்ளது';
+        return 'AI சக்தி செயலில் உள்ளது';
       case ModelStatus.error:
         return 'பிழை ஏற்பட்டது';
     }
@@ -311,7 +311,7 @@ class DownloadPromptBanner extends ConsumerWidget {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12),
                 ),
-                child: const Text('🧠', style: TextStyle(fontSize: 28)),
+                child: const Text('⚡', style: TextStyle(fontSize: 28)),
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -319,7 +319,7 @@ class DownloadPromptBanner extends ConsumerWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text(
-                      'AI Brain பதிவிறக்கவும்',
+                      'AI சக்தி பதிவிறக்கவும்',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 16,

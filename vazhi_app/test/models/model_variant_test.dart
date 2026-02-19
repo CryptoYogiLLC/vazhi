@@ -75,18 +75,11 @@ void main() {
       expect(trimmed.every((v) => v.id.contains('trimmed')), isTrue);
     });
 
-    test('experimental variants match trimmed variants', () {
+    test('no variants are experimental after ADR-014 Phase 1 fix', () {
       final experimental = ModelRegistry.variants.where(
         (v) => v.isExperimental,
       );
-      final trimmed = ModelRegistry.variants.where((v) => v.isTrimmed);
-      expect(experimental.length, trimmed.length);
-      expect(experimental.every((v) => v.isTrimmed), isTrue);
-    });
-
-    test('untrimmed variant is not experimental', () {
-      final untrimmed = ModelRegistry.variants.where((v) => !v.isTrimmed);
-      expect(untrimmed.every((v) => !v.isExperimental), isTrue);
+      expect(experimental.length, 0);
     });
   });
 
