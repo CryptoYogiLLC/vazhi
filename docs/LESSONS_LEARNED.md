@@ -1675,5 +1675,71 @@ Two-part fix: (a) `clearDiagnostic()` now deletes all three files, (b) crash det
 
 ---
 
+---
+
+## Qwen3/DAPT-Era Rules (Relocated from CLAUDE.md, Feb 2026)
+
+> These rules were removed from CLAUDE.md during optimization because they are Qwen3-specific
+> and no longer actionable for the current Gemma 3 pipeline. Preserved here for reference
+> if Qwen3 training resumes or for general ML training knowledge.
+
+### Data Rules (Qwen3-specific)
+- **Safety data < 5% for 0.6B models** — 30.6% caused mode collapse, 1% is sufficient for refusal learning
+- **Verify 100% ChatML format** before any SFT run: `is_chatml_formatted()` check on all samples
+- **NEVER mix data formats in SFT** — raw text belongs in DAPT, ChatML in SFT. Mixing causes garbage
+
+### Training Rules (Qwen3-specific)
+- **SFT without DAPT is insufficient for low-resource languages on small-vocab models** — SFT teaches task behavior (format, structure) NOT language. Proven on Qwen3-0.6B (v5.0-v5.3). Does NOT apply to models with native multilingual capability (Gemma 3)
+- **Don't blame DAPT methodology — blame data quality** — DAPT v1.1 failed because Sangraha corpus was contaminated (English/Tanglish at 70% threshold), not because DAPT is wrong
+- **Two-stage training** (Clean DAPT then SFT) is non-negotiable for Qwen3 — DAPT teaches Tamil language, SFT teaches Tamil task behavior. Both layers are necessary
+- **Suppress conflicting tokens instead of pivoting to base model** — instruct models have language capability; base models with SFT-only produce garbage
+- **Iterate on what works** — fix specific issues (token suppression, LR) rather than pivoting to untested approaches
+- **Strict ChatML validation** (regex) before training — reject samples missing user/assistant segments
+- **SFT can catastrophically forget Tamil on small models** — vanilla Qwen3-0.6B produces coherent short Tamil, but LR 5e-5 LoRA SFT (r=8, 2 epochs, 13K samples) destroyed it
+- **NEVER modify tokenizer special tokens** — `pad_token = eos_token` causes OrderedVocab holes and corrupts GGUF
+- **NEVER ignore tokenizer warnings** — "OrderedVocab contains holes" is FATAL, stop immediately
+- **LoRA r=16 on 7 modules is too aggressive for ~1K samples** — overparameterized, overfits to surface patterns. Use r=8 targeting q_proj+v_proj for small datasets
+
+### DAPT Rules (Qwen3-specific — DAPT not needed for Gemma 3)
+- **DAPT on instruct model needs instruction-preservation** — v1.1 (LR 5e-5, full epoch 55M tokens, LoRA r=16) destroyed instruction-following. Fix: lower LR (1-2e-5), smaller token budget (5-15M), and 5-15% chat data replay
+- **Use Instruct model for DAPT** — v1.0 used Base, showed -2% vs vanilla. v1.1 used Instruct, showed +55%
+- **NFKC normalize all corpus text** — prevents \ufffd corruption and zero-width char issues
+- **Tamil threshold >= 90% for Clean DAPT** — v1.1 used 70% and corpus was still contaminated
+- **Separate data prep from training** — data prep (CPU) uploads to HF; training (GPU) loads from HF
+- **Token budget, not epochs** — control by target tokens and max_steps, cap at 2 epochs max
+- **Verify corpus schema before coding** — inspect actual HF dataset columns and samples
+- **Pack sequences** — concatenate docs into continuous token stream, split into fixed 1024-token blocks (no padding waste)
+- **Filter Sangraha** — Tamil% >= 90%, 200-8000 chars, dedup by MD5, repetition ratio < 0.5
+- **5-15% chat data replay during DAPT** — prevents instruction-following catastrophe
+- **30-50M+ tokens needed for language acquisition on 0.6B models** — 4.8M insufficient, 55M showed +55%
+- **Qwen3 tokenizer is ~1 token/char for Tamil** — NOT 3.5 as estimated. Plan token budgets based on actual tokenizer efficiency
+- **Multi-epoch DAPT with interim eval gates** — train 1 epoch → eval → decide if another epoch helps
+- **Fresh cosine LR cycle per epoch** — create new Trainer for each epoch to get fresh warmup→decay
+- **Host DAPT source files on HuggingFace** — eliminates manual file uploads, makes reproducible
+- **tamil_char_pct denominator must exclude whitespace and digits** — including spaces artificially deflates Tamil %
+- **Never run heavy data pipelines locally** — Sangraha filtering, embedding computation must run on Colab/Kaggle
+- **Investigate skipped sources before acquiring new ones** — evaluate existing sources first
+- **No device_map for training** — `device_map={"":0}` prevents Trainer's DataParallel wrapping. Use `.to("cuda:0")`
+
+### Data Pipeline Rules (Qwen3-specific)
+- **Qwen3 151K vocab needs VRAM-aware batch sizing** — batch × seq × 151K × dtype = massive logits tensor
+- **max_seq_length=2048 for SFT** — using 1024 caused 74% domain pack rejection due to system prompt overhead
+- **3-stage data pipeline** (v4.1+): Retrieve → Curate with ML → Compose with absolute count targets. Each stage uploads to HF
+- **Checkpoint after expensive GPU steps** — save PPL scores to local JSON; enables resume on Colab disconnect
+- **Store raw and curated datasets separately on HF** — enables flexible reuse without re-running expensive retrieval/curation
+- **Two-pass curation** — cheap CPU filters first (lang-id, heuristics, dedup), GPU scoring on candidates only
+- **Route safety by subset name** — Toxic_Matrix/HHRLHF_T → safety bucket by subset field, not by narrow toxicity wordlist
+- **Toxic_Matrix is safety training data** — toxic prompt + safe refusal = route to safety bucket, don't filter
+- **Dataset Factory notebooks** (`notebooks/Vazhi_Dataset_Factory_v4_1*.ipynb`) construct curated datasets on Colab Pro
+
+### Quantization Rules (Historical — already resolved)
+- **Tamil tokenization overhead** (3-4 tokens/char) compounds quantization errors (Qwen3 tokenizer stat)
+- **mmap is not a silver bullet** — a forward pass touches entire model. Working set ≈ model size. Android OOM killer terminates during inference
+- **imatrix does NOT reduce GGUF file size and can hurt Tamil quality** — Tamil word drops 97.5%→95.1% (-2.4%). Don't use custom imatrix for VAZHI models
+- **Embed/output Q8_0 quantization has zero effect on Gemma 3** — `--output-tensor-type q8_0` produces identical file sizes and outputs
+- **The 262K vocab floor is non-compressible via ANY quantization method** — tested standard quant, imatrix, embed Q8_0, and combined. Only vocabulary trimming can reduce the embedding floor
+
+---
+
 *Document created: 2026-02-07*
-*Last updated: 2026-02-19 (On-device AI integration complete — chat template runtime fix, context overflow fix, diagnostic cleanup, streaming, Android 12+ splash. 140 lessons learned)*
+*Last updated: 2026-02-20 (Qwen3/DAPT-era rules relocated from CLAUDE.md during optimization. 140 numbered lessons + relocated rule sets)*
