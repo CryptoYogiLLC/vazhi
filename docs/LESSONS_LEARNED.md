@@ -7,7 +7,7 @@
 **Goal:** Deploy a Tamil-capable LLM on mobile devices (<1GB target)
 **Current Target:** Gemma 3 1B-it SFT v7.1 (deployment candidate — 96% Tamil word score)
 **Timeline:** February 2026
-**Status:** GGUF chat template fix complete (ADR-014). Root cause of Android gibberish: missing `tokenizer.chat_template` → ChatML fallback. Fix: embed Gemma 3 Jinja2 template in GGUF metadata. All trimmed models produce correct Tamil on 4GB Android. 134 lessons learned
+**Status:** On-device AI working on 4GB Android (app v0.8.0). SFT v7.1 deployed, vocab-trimmed GGUFs patched (ADR-014). 140 lessons learned + relocated Qwen3/DAPT-era rule sets
 
 ---
 

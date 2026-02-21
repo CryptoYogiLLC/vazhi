@@ -181,8 +181,8 @@ VAZHI now uses a **Hybrid Retrieval Architecture** that works immediately after 
 | Component | Status |
 |-----------|--------|
 | Hybrid Architecture | Deterministic SQLite + Optional AI |
-| AI Model (Target) | **Qwen3-0.6B (<1GB GGUF)** |
-| Training Approach | Two-stage: Micro-DAPT → SFT |
+| AI Model | **Gemma 3 1B-it SFT v7.1** (vocab-trimmed Q4_K_M = 481 MB) |
+| Training Approach | SFT-only on Gemma 3 (no DAPT needed — native multilingual) |
 | Deterministic Data | ~2,500 records (~2MB) |
 | Mobile App | Flutter + Riverpod |
 
@@ -197,10 +197,13 @@ VAZHI now uses a **Hybrid Retrieval Architecture** that works immediately after 
 - [x] Voice input/output: Tamil STT/TTS
 - [x] Feedback system: In-app with WhatsApp integration
 - [x] **Security hardening: Encrypted storage, input validation** ✅
-- [x] **Code quality: 228 tests passing, 19 issues closed** ✅
-- [ ] AI model training: **Qwen3-0.6B (v0.8) in progress on Kaggle**
+- [x] **Code quality: 293 tests passing, 19 issues closed** ✅
+- [x] **AI model: Gemma 3 1B-it SFT v7.1 (96% Tamil word) — on-device AI working on 4GB Android** ✅
+- [x] **Vocab trimming (ADR-014): 262K→21K tokens, 481 MB GGUF verified on 4GB device** ✅
+- [x] **App v0.8.0: Streaming responses, multi-turn context, Tamil default UI** ✅
+- [x] **Google Play: AAB uploaded, awaiting developer account verification** ✅
 - [ ] Full database population: Pending
-- [ ] App store release: Planned
+- [ ] Apple App Store: TestFlight submission planned
 
 ### Security & Privacy Features
 
@@ -369,7 +372,7 @@ vazhi/
 │   │   ├── l10n/                  # i18n ARB files (en/ta)
 │   │   ├── services/              # Query router, API, voice
 │   │   └── widgets/               # Accessible UI components
-│   └── test/                      # 228 tests
+│   └── test/                      # 293 tests
 ├── huggingface-space/       # Test API
 └── docs/                    # Documentation
     ├── LESSONS_LEARNED.md   # What we learned
@@ -381,9 +384,9 @@ vazhi/
 
 | Source | Items | Content |
 |--------|-------|---------|
-| VAZHI Knowledge Packs | 11,112 | Domain-specific Tamil Q&A |
-| IndicAlign Anudesh (Tamil) | 1,966 | Native Tamil instructions |
-| **Total** | **13,078** | High-quality Tamil training data |
+| VAZHI Knowledge Packs | 3,007 | Domain-specific bilingual Q&A (6 packs) |
+| SFT Dataset v7.0 | 4,172 | Gemma 3 format (spiritual 39%, domain 52%, identity 6%, safety 1%) |
+| **Current Model** | **Gemma 3 1B-it** | SFT v7.1 — 96% Tamil word score, deployment candidate |
 
 ---
 
@@ -397,7 +400,8 @@ This is a community project. No corporation owns it. You own it.
 
 ## Acknowledgments | நன்றி
 
-- **Sarvam AI** — For Tamil-optimized base models
+- **Google** — For Gemma 3 1B-it (the model that made VAZHI possible)
+- **Sarvam AI** — For Tamil-optimized base models (early exploration)
 - **AI4Bharat** — For IndicAlign dataset
 - **Hugging Face** — For model hosting and tools
 - **The Tamil open-source community** — For inspiration and support
@@ -417,4 +421,4 @@ This is a community project. No corporation owns it. You own it.
 
 ---
 
-*Last updated: February 10, 2026*
+*Last updated: February 21, 2026*

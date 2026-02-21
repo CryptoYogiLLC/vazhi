@@ -137,7 +137,7 @@ vazhi_app/
 - [x] Storage validation ✅
 - [x] Voice input/output (STT/TTS) ✅
 - [x] Feedback system ✅
-- [x] Integration tests (232 passing) ✅
+- [x] Integration tests (293 passing) ✅
 
 ### Phase 2.5: Code Quality & Security ✅ COMPLETE (Feb 10, 2026)
 
@@ -160,7 +160,7 @@ Multi-agent code review completed with 19 GitHub issues closed.
 - [x] Preflight validation script for training runs
 
 #### Code Quality ✅
-- [x] Test coverage: 232 tests passing
+- [x] Test coverage: 293 tests passing
 - [x] Training data rebalancer (Thirukkural 71%→25% target)
 - [x] Comprehensive error handling throughout
 - [x] Deprecated API cleanup (provider namespacing)
@@ -199,16 +199,20 @@ After 20 failed Qwen3-0.6B training attempts (v0.1→v6.0), Model Comparison v1 
 - [x] **SFT v7.2** — identity-only reinforcement — FAILED (Gemma's Google identity unhackable via LoRA) ✅
 - [x] **GGUF conversion** — Q4_K_M, Q3_K_M, Q2_K uploaded to HuggingFace ✅
 - [x] **App integration** — model selector wired to all 3 variants, download/load working ✅
-- [ ] **Step 7: Test GGUF output quality** on mobile device (Tamil coherence after quantization)
+- [x] **GGUF diagnostic fix (ADR-014)** — missing `tokenizer.chat_template` caused ChatML fallback → gibberish. Fixed by embedding Gemma 3 template in GGUF metadata. All 4 GGUFs patched and verified ✅
+- [x] **Vocab trimming** — 262K→21K tokens, trimmed Q4_K_M = 481 MB. Verified working on 4GB Android ✅
+- [x] **App v0.7.0** — 4GB crash fixes (ARM baseline, GPU offload disabled, Vulkan removed), model persistence (MediaStore Downloads), smart selector (ADR-013) ✅
+- [x] **App v0.8.0** — chat template runtime override, streaming responses, multi-turn context fix, diagnostic cleanup, Tamil default UI, Android 12+ splash ✅
+- [x] **On-device AI verified** — Tamil conversations working on 4GB Android (Vortex JK68, Cortex-A55, 3901 MB RAM) ✅
 
-See `models/TRAINING_LOG.md` for full details and lessons learned.
+See `models/TRAINING_LOG.md` for training details, `vazhi_app/APP_CHANGELOG.md` for app evolution.
 
-### Phase 3.5: App Store Prep 🔄 PARTIAL
-- [x] App icon updated (VAZHI peacock logo, replaces Flutter default)
-- [x] Display name set to "VAZHI - வழி"
-- [x] Application ID changed to `com.cryptoyogillc.vazhi`
-- [x] Release AAB built and uploaded to Google Play
-- [ ] Google Play developer account verification (requires Android phone)
+### Phase 3.5: App Store Prep 🔄 IN PROGRESS
+- [x] App icon updated (VAZHI peacock logo, replaces Flutter default) ✅
+- [x] Display name set to "VAZHI - வழி" ✅
+- [x] Application ID changed to `com.cryptoyogillc.vazhi` ✅
+- [x] Release AAB built and uploaded to Google Play ✅
+- [ ] Google Play developer account verification (requires Android phone) — awaiting verification
 - [ ] Publish internal testing link for testers
 - [ ] Apple App Store: TestFlight submission (icon/name/bundle ID already set)
 
@@ -257,14 +261,15 @@ See `models/TRAINING_LOG.md` for full details and lessons learned.
 
 | Risk | Status | Mitigation |
 |------|--------|------------|
-| Training fails | 🟡 Partial | DAPT v1.0 succeeded (Tamil base model); SFT pending as final step |
-| Model too slow | 🔄 Active | Using CPU bfloat16, consider Pro for GPU |
-| HuggingFace bugs | 🔄 Active | Pinned pydantic <2.11.0 |
-| App store rejection | ⏳ Future | Prepare documentation |
+| Training fails | ✅ Resolved | Gemma 3 1B-it SFT v7.1 — deployment candidate (96% Tamil word) |
+| Model too large for 4GB | ✅ Resolved | Vocab trimming (262K→21K) reduces Q4_K_M to 481 MB, verified on 4GB Android |
+| GGUF output gibberish | ✅ Resolved | Chat template missing from GGUF metadata — patched via `gguf-new-metadata` (ADR-014) |
+| Flutter OOM on 4GB | ✅ Resolved | ARM baseline, Vulkan removed, GPU offload disabled, n_ctx=256 (app v0.7.0) |
+| App store rejection | ⏳ Future | AAB uploaded, awaiting developer account verification |
 
 ---
 
-*Last updated: February 19, 2026*
+*Last updated: February 21, 2026*
 *Code Review: 19 issues closed, 293 tests passing*
 *Training: SFT v7.1 on Gemma 3 1B-it — DEPLOYMENT CANDIDATE (96% Tamil word)*
 *Current milestone: Phase 3 - On-device AI working on 4GB Android, app store submission pending*
