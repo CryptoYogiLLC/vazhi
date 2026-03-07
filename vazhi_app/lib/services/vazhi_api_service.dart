@@ -69,12 +69,16 @@ class VazhiApiService {
         throw VazhiApiException(
           'இணைய இணைப்பு இல்லை. நெட்வொர்க் சரிபார்க்கவும்.',
         );
+      } else if (e.type == DioExceptionType.badResponse) {
+        throw VazhiApiException(
+          'சர்வர் பிழை. பின்னர் மீண்டும் முயற்சிக்கவும்.',
+        );
       } else {
-        throw VazhiApiException('பிணைய பிழை: ${e.message}');
+        throw VazhiApiException('பிணைய பிழை. பின்னர் மீண்டும் முயற்சிக்கவும்.');
       }
     } catch (e) {
       if (e is VazhiApiException) rethrow;
-      throw VazhiApiException('எதிர்பாராத பிழை: $e');
+      throw VazhiApiException('பிணைய பிழை. பின்னர் மீண்டும் முயற்சிக்கவும்.');
     }
   }
 

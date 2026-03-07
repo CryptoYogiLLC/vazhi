@@ -543,11 +543,20 @@ class ModelDownloadService {
           networkType: networkType,
         ),
       );
-    } catch (e) {
+    } on http.ClientException {
       _emitProgress(
         DownloadProgress(
           state: DownloadState.error,
-          errorMessage: 'பிழை: $e',
+          errorMessage:
+              'பதிவிறக்கம் தோல்வி. இணைய இணைப்பை சரிபார்த்து மீண்டும் முயற்சிக்கவும்.',
+          networkType: networkType,
+        ),
+      );
+    } catch (_) {
+      _emitProgress(
+        DownloadProgress(
+          state: DownloadState.error,
+          errorMessage: 'எதிர்பாராத பிழை. மீண்டும் முயற்சிக்கவும்.',
           networkType: networkType,
         ),
       );

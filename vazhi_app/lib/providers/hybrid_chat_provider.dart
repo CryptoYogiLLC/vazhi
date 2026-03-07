@@ -283,7 +283,18 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
         }
       }
     } catch (e) {
-      _replaceById(loadingMessage.id, HybridMessage.error('பிழை: $e'));
+      if (e is VazhiApiException) {
+        _replaceById(loadingMessage.id, HybridMessage.error(e.message));
+      } else if (e is VazhiLocalException) {
+        _replaceById(loadingMessage.id, HybridMessage.error(e.message));
+      } else {
+        _replaceById(
+          loadingMessage.id,
+          HybridMessage.error(
+            'எதிர்பாராத பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.',
+          ),
+        );
+      }
     }
   }
 
@@ -395,7 +406,10 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
         );
       }
     } catch (e) {
-      _replaceById(currentReplaceId, HybridMessage.error('AI பிழை: $e'));
+      final msg = e is VazhiLocalException
+          ? e.message
+          : 'AI பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.';
+      _replaceById(currentReplaceId, HybridMessage.error(msg));
     }
   }
 
@@ -443,7 +457,12 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
         }
       }
     } catch (e) {
-      _replaceById(loadingMessage.id, HybridMessage.error('AI பிழை: $e'));
+      final msg = e is VazhiLocalException
+          ? e.message
+          : e is VazhiApiException
+          ? e.message
+          : 'AI பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.';
+      _replaceById(loadingMessage.id, HybridMessage.error(msg));
     }
   }
 

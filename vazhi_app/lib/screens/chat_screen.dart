@@ -172,13 +172,28 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     final messages = _useHybridChat ? hybridMessages : regularMessages;
     final voiceInputState = ref.watch(voiceInputStateProvider);
 
+    // Auto-scroll when a new message is added OR when a loading placeholder
+    // is resolved into a real response. Don't scroll on every state change
+    // (e.g. streaming token updates) — that prevents the user from scrolling up.
     if (_useHybridChat) {
-      ref.listen(hybridChatProvider, (_, _) {
-        Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
+      ref.listen(hybridChatProvider, (previous, current) {
+        final grew = current.length > (previous?.length ?? 0);
+        final loadingResolved =
+            (previous?.any((m) => m.isLoading) ?? false) &&
+            !current.any((m) => m.isLoading);
+        if (grew || loadingResolved) {
+          Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
+        }
       });
     } else {
-      ref.listen(chatProvider, (_, _) {
-        Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
+      ref.listen(chatProvider, (previous, current) {
+        final grew = current.length > (previous?.length ?? 0);
+        final loadingResolved =
+            (previous?.any((m) => m.isLoading) ?? false) &&
+            !current.any((m) => m.isLoading);
+        if (grew || loadingResolved) {
+          Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
+        }
       });
     }
 

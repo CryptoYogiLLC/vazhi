@@ -44,13 +44,13 @@ class AppConfig {
   // App Info
   static const String appName = 'VAZHI';
   static const String appNameTamil = 'வழி';
-  static const String appVersion = '1.0.0';
+  static const String appVersion = '1.0.1';
   static const String appTagline =
       'Voluntary AI with Zero-cost Helpful Intelligence';
   static const String appTaglineTamil = 'தமிழ் AI உதவியாளர்';
 
   // Support
-  static const String whatsappSupportNumber = '+91XXXXXXXXXX';
+  static const String whatsappSupportNumber = '+14752188441';
   static const String donationUrl = 'https://ko-fi.com/vazhi';
   static const String githubUrl = 'https://github.com/CryptoYogiLLC/vazhi';
 }

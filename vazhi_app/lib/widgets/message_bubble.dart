@@ -5,6 +5,7 @@ library;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../config/theme.dart';
 import '../models/message.dart';
 import '../models/feedback.dart';
@@ -108,6 +109,8 @@ class MessageBubble extends StatelessWidget {
                         )
                       : MarkdownBody(
                           data: message.content,
+                          onTapLink: (text, href, title) =>
+                              _handleLinkTap(context, href),
                           styleSheet: MarkdownStyleSheet(
                             p: const TextStyle(
                               color: VazhiTheme.assistantBubbleText,
@@ -179,6 +182,21 @@ class MessageBubble extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _handleLinkTap(BuildContext context, String? href) {
+    if (href == null || href.isEmpty) return;
+    final uri = Uri.tryParse(href);
+    if (uri == null) return;
+    if (uri.scheme != 'https' && uri.scheme != 'http') return;
+    launchUrl(uri, mode: LaunchMode.externalApplication).catchError((_) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('இணைப்பைத் திறக்க முடியவில்லை')),
+        );
+      }
+      return false;
+    });
   }
 
   Widget _buildAvatar(bool isUser) {

@@ -5,10 +5,16 @@
 library;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/message.dart';
 import '../services/vazhi_api_service.dart';
 import '../services/vazhi_local_service.dart';
 import 'model_provider.dart';
+
+/// SharedPreferences key: true when this installation has successfully
+/// downloaded or loaded a model. Gates auto-load on startup to prevent
+/// crash loops after reinstall (model persists in MediaStore but prefs are wiped).
+const _autoloadKey = 'model_autoload_ok';
 
 /// Inference mode enum
 enum InferenceMode {
@@ -111,10 +117,10 @@ class ChatNotifier extends StateNotifier<List<Message>> {
         ...state.where((m) => m.id != loadingMessage.id),
         Message.error(e.message),
       ];
-    } catch (e) {
+    } catch (_) {
       state = [
         ...state.where((m) => m.id != loadingMessage.id),
-        Message.error('எதிர்பாராத பிழை: $e'),
+        Message.error('எதிர்பாராத பிழை ஏற்பட்டது. மீண்டும் முயற்சிக்கவும்.'),
       ];
     }
   }
@@ -234,12 +240,35 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
             return;
           }
         }
+
+        // Check if inference crashed (OOM/SIGKILL during token generation).
+        // The inference diagnostic file is written before inference and
+        // cleared after — if it survives a restart, inference crashed.
+        if (await _localService.hasInferenceCrashDiagnostic()) {
+          final diag = await _localService.readInferenceDiagnostic();
+          final loadDiag = await _localService.readLastDiagnostic();
+          final combined = [
+            if (diag != null) 'inference crash:\n$diag',
+            if (loadDiag != null) 'load context:\n$loadDiag',
+          ].join('\n');
+          _ref.read(lastCrashDiagnosticProvider.notifier).state = combined;
+          await _localService.clearInferenceDiagnostic();
+          if (await _localService.isModelDownloaded()) {
+            state = ModelStatus.error;
+            return;
+          }
+        }
       }
 
       if (await _localService.isModelDownloaded()) {
         state = ModelStatus.downloaded;
-        // Load the model (auto on startup, explicit on retry)
-        await loadModel();
+        final prefs = await SharedPreferences.getInstance();
+        if (prefs.getBool(_autoloadKey) ?? false) {
+          // Only auto-load if this installation has previously succeeded
+          await loadModel();
+        }
+        // Otherwise: model file exists but no record of successful load
+        // (e.g. reinstall with MediaStore file persisting) — don't auto-load
       } else {
         state = ModelStatus.notDownloaded;
       }
@@ -264,6 +293,10 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
         },
       );
       state = ModelStatus.downloaded;
+      // Mark this installation as having a successful download
+      SharedPreferences.getInstance().then(
+        (p) => p.setBool(_autoloadKey, true),
+      );
     } catch (e) {
       state = ModelStatus.error;
     }
@@ -279,6 +312,7 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
   void setDownloaded() {
     state = ModelStatus.downloaded;
     _ref.read(downloadProgressProvider.notifier).state = 1.0;
+    SharedPreferences.getInstance().then((p) => p.setBool(_autoloadKey, true));
   }
 
   /// Set error status
@@ -315,6 +349,10 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
       state = ModelStatus.ready;
       // Automatically switch to local mode when model is ready
       _ref.read(inferenceModeProvider.notifier).state = InferenceMode.local;
+      // Mark this installation as having a successful load
+      SharedPreferences.getInstance().then(
+        (p) => p.setBool(_autoloadKey, true),
+      );
     } catch (e) {
       // Store the error in the diagnostic provider for UI display
       final diagnostic = await _localService.readLastDiagnostic();
@@ -332,8 +370,23 @@ class ModelManagerNotifier extends StateNotifier<ModelStatus> {
     await _localService.deleteModel();
     state = ModelStatus.notDownloaded;
     _ref.read(downloadProgressProvider.notifier).state = 0.0;
-    // Switch back to cloud mode when model is deleted
-    _ref.read(inferenceModeProvider.notifier).state = InferenceMode.cloud;
+    SharedPreferences.getInstance().then((p) => p.remove(_autoloadKey));
+    // Stay in local mode — cloud (HF Space) is dev-only, not production.
+    // User will be prompted to download a model when they send a query.
+  }
+
+  /// Verify the model file still exists on disk. If the file was deleted
+  /// externally (e.g. via file manager) while the app was running, downgrade
+  /// the in-memory state so the UI reflects reality.
+  Future<void> verifyModelFile() async {
+    if (state != ModelStatus.ready && state != ModelStatus.downloaded) return;
+    if (!await _localService.isModelDownloaded()) {
+      // Unload engine from memory — file is gone, can't infer anymore.
+      await _localService.dispose();
+      state = ModelStatus.notDownloaded;
+      _ref.read(downloadProgressProvider.notifier).state = 0.0;
+      SharedPreferences.getInstance().then((p) => p.remove(_autoloadKey));
+    }
   }
 
   /// Check model status. Set [forceRetry] to clear old diagnostic and

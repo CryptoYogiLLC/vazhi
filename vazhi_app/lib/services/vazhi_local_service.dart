@@ -268,6 +268,57 @@ class VazhiLocalService {
     return '${dir.path}/model_load_diagnostic.txt';
   }
 
+  /// Path to the inference diagnostic file. Written before inference starts,
+  /// cleared after completion. If it survives a restart, inference crashed.
+  Future<String> get _inferenceDiagPath async {
+    final dir = await getApplicationDocumentsDirectory();
+    return '${dir.path}/inference_diagnostic.txt';
+  }
+
+  /// Write inference diagnostic marker (sync I/O to survive crashes).
+  Future<void> _writeInferenceDiag(String step) async {
+    try {
+      final path = await _inferenceDiagPath;
+      File(path).writeAsStringSync(
+        '${DateTime.now().toIso8601String()}|$step\n',
+        mode: FileMode.append,
+      );
+    } catch (_) {}
+  }
+
+  /// Check if inference crashed (diagnostic file survived a restart).
+  Future<bool> hasInferenceCrashDiagnostic() async {
+    try {
+      final path = await _inferenceDiagPath;
+      return File(path).existsSync();
+    } catch (_) {
+      return false;
+    }
+  }
+
+  /// Read inference diagnostic content.
+  Future<String?> readInferenceDiagnostic() async {
+    try {
+      final path = await _inferenceDiagPath;
+      final file = File(path);
+      if (await file.exists()) {
+        return file.readAsString();
+      }
+    } catch (_) {}
+    return null;
+  }
+
+  /// Clear inference diagnostic (called after successful inference).
+  Future<void> clearInferenceDiagnostic() async {
+    try {
+      final path = await _inferenceDiagPath;
+      final file = File(path);
+      if (await file.exists()) {
+        await file.delete();
+      }
+    } catch (_) {}
+  }
+
   /// Append a diagnostic step marker. Uses sync I/O to ensure the write
   /// completes before the next (potentially crashing) native FFI call.
   /// Appends (not overwrites) so all steps are visible after a crash.
@@ -470,41 +521,53 @@ class VazhiLocalService {
     }
   }
 
-  /// Send a chat message and get a response
+  /// Send a chat message and get a response.
+  /// Writes inference diagnostic markers so crashes (OOM/SIGKILL) during
+  /// native token generation can be detected on the next app startup.
   Future<String> chat(String message, {String pack = 'culture'}) async {
     _assertReady();
 
     _ensureSession(pack);
 
-    final buffer = StringBuffer();
-    await for (final chunk in _session!.create([
-      LlamaTextContent(message),
-    ], params: _generationParams)) {
-      if (chunk.choices.isEmpty) continue;
-      final content = chunk.choices.first.delta.content;
-      if (content != null) {
-        buffer.write(content);
+    await _writeInferenceDiag('step:inference_start|model:${_model.id}');
+    try {
+      final buffer = StringBuffer();
+      await for (final chunk in _session!.create([
+        LlamaTextContent(message),
+      ], params: _generationParams)) {
+        if (chunk.choices.isEmpty) continue;
+        final content = chunk.choices.first.delta.content;
+        if (content != null) {
+          buffer.write(content);
+        }
       }
+      return cleanOutput(buffer.toString());
+    } finally {
+      await clearInferenceDiagnostic();
     }
-
-    return cleanOutput(buffer.toString());
   }
 
   /// Stream chat response tokens for real-time UI updates.
   /// Each yield is a raw token string — caller should accumulate and clean.
+  /// Writes inference diagnostic markers so crashes can be detected on restart.
   Stream<String> chatStream(String message, {String pack = 'culture'}) async* {
     _assertReady();
 
     _ensureSession(pack);
 
-    await for (final chunk in _session!.create([
-      LlamaTextContent(message),
-    ], params: _generationParams)) {
-      if (chunk.choices.isEmpty) continue;
-      final content = chunk.choices.first.delta.content;
-      if (content != null) {
-        yield content;
+    await _writeInferenceDiag('step:inference_start|model:${_model.id}');
+    try {
+      await for (final chunk in _session!.create([
+        LlamaTextContent(message),
+      ], params: _generationParams)) {
+        if (chunk.choices.isEmpty) continue;
+        final content = chunk.choices.first.delta.content;
+        if (content != null) {
+          yield content;
+        }
       }
+    } finally {
+      await clearInferenceDiagnostic();
     }
   }
 

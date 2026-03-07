@@ -9,6 +9,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../config/theme.dart';
 import '../models/query_result.dart';
 import '../services/retrieval/knowledge_service.dart';
@@ -129,6 +130,7 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
             child: MarkdownBody(
               data: formattedResponse,
               styleSheet: _markdownStyleSheet(context),
+              onTapLink: (text, href, title) => _handleLinkTap(context, href),
             ),
           ),
         ),
@@ -150,6 +152,8 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
                   data: formattedResponse,
                   styleSheet: _markdownStyleSheet(context),
                   selectable: !isCollapsed,
+                  onTapLink: (text, href, title) =>
+                      _handleLinkTap(context, href),
                 ),
               ),
             ),
@@ -442,6 +446,21 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
         ),
       ],
     );
+  }
+
+  void _handleLinkTap(BuildContext context, String? href) {
+    if (href == null || href.isEmpty) return;
+    final uri = Uri.tryParse(href);
+    if (uri == null) return;
+    if (uri.scheme != 'https' && uri.scheme != 'http') return;
+    launchUrl(uri, mode: LaunchMode.externalApplication).catchError((_) {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('இணைப்பைத் திறக்க முடியவில்லை')),
+        );
+      }
+      return false;
+    });
   }
 
   String _getCategoryNameEnglish(KnowledgeCategory category) {

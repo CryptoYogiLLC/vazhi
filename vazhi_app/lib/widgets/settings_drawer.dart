@@ -5,6 +5,7 @@ library;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../config/app_config.dart';
 import '../config/theme.dart';
@@ -12,6 +13,7 @@ import '../models/model_variant.dart';
 import '../providers/voice_provider.dart';
 import '../providers/chat_provider.dart';
 import '../providers/model_provider.dart';
+import '../services/device_info_service.dart';
 import 'download_dialog.dart';
 import 'model_selector_sheet.dart';
 
@@ -19,11 +21,25 @@ import 'model_selector_sheet.dart';
 // Defaults to Tamil — target audience is rural Tamil Nadu users
 final languageProvider = StateProvider<bool>((ref) => true);
 
-class SettingsDrawer extends ConsumerWidget {
+class SettingsDrawer extends ConsumerStatefulWidget {
   const SettingsDrawer({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<SettingsDrawer> createState() => _SettingsDrawerState();
+}
+
+class _SettingsDrawerState extends ConsumerState<SettingsDrawer> {
+  @override
+  void initState() {
+    super.initState();
+    // Verify model file still exists on disk — catches external deletion
+    // (e.g. user deleted GGUF from Downloads via file manager).
+    ref.read(modelManagerProvider.notifier).verifyModelFile();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final ref = this.ref;
     final inferenceMode = ref.watch(inferenceModeProvider);
     final modelStatus = ref.watch(modelManagerProvider);
     final downloadProgress = ref.watch(downloadProgressProvider);
@@ -316,7 +332,7 @@ class SettingsDrawer extends ConsumerWidget {
                       ),
                     ),
                     trailing: const Icon(Icons.open_in_new, size: 18),
-                    onTap: () => _openGitHub(context),
+                    onTap: () => _openWhatsApp(context),
                   ),
 
                   const Divider(height: 32),
@@ -586,6 +602,16 @@ class SettingsDrawer extends ConsumerWidget {
                 ref.read(modelManagerProvider.notifier).deleteModel();
               },
             ),
+            const SizedBox(height: 4),
+            ElevatedButton.icon(
+              icon: const Icon(Icons.share, size: 18),
+              label: Text(isTamil ? 'பிழை அனுப்பு' : 'Share Report'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () => _shareCrashReport(ref, isTamil),
+            ),
           ],
         );
         break;
@@ -689,9 +715,6 @@ class SettingsDrawer extends ConsumerWidget {
             onPressed: () {
               Navigator.pop(context);
               ref.read(modelManagerProvider.notifier).deleteModel();
-              // Switch back to cloud mode when model is deleted
-              ref.read(inferenceModeProvider.notifier).state =
-                  InferenceMode.cloud;
             },
             child: Text(
               isTamil ? 'நீக்கு' : 'Delete',
@@ -703,18 +726,40 @@ class SettingsDrawer extends ConsumerWidget {
     );
   }
 
-  Future<void> _openWhatsApp(BuildContext context) async {
-    // WhatsApp community link
-    final url = Uri.parse('https://chat.whatsapp.com/your-group-link');
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url, mode: LaunchMode.externalApplication);
+  Future<void> _shareCrashReport(WidgetRef ref, bool isTamil) async {
+    try {
+      final model = ref.read(selectedModelProvider);
+      final diagnostic = ref.read(lastCrashDiagnosticProvider);
+      final deviceInfoService = const DeviceInfoService();
+      final memInfo = await deviceInfoService.getMemoryInfo();
+
+      final report = StringBuffer()
+        ..writeln('VAZHI Crash Report')
+        ..writeln('Version: ${AppConfig.appVersion}')
+        ..writeln('Model: ${model.displayName} (${model.displaySize})')
+        ..writeln(
+          'Device RAM: ${memInfo.totalRamMB} MB total, '
+          '${memInfo.availableRamMB} MB available',
+        )
+        ..writeln('Low memory: ${memInfo.lowMemory}')
+        ..writeln('Threshold: ${memInfo.thresholdMB} MB')
+        ..writeln('---')
+        ..writeln(diagnostic ?? 'No diagnostic data');
+
+      await Share.share(report.toString());
+    } catch (_) {
+      // Share unavailable — ignore
     }
   }
 
-  Future<void> _openGitHub(BuildContext context) async {
-    final url = Uri.parse(AppConfig.githubUrl);
+  Future<void> _openWhatsApp(BuildContext context) async {
+    final url = Uri.parse('https://chat.whatsapp.com/KV8siiWyEKqHSq8aiK2o1z');
     if (await canLaunchUrl(url)) {
       await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('இணைப்பைத் திறக்க முடியவில்லை')),
+      );
     }
   }
 
@@ -722,6 +767,10 @@ class SettingsDrawer extends ConsumerWidget {
     final url = Uri.parse(AppConfig.donationUrl);
     if (await canLaunchUrl(url)) {
       await launchUrl(url, mode: LaunchMode.externalApplication);
+    } else if (context.mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('இணைப்பைத் திறக்க முடியவில்லை')),
+      );
     }
   }
 
