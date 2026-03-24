@@ -157,10 +157,17 @@ class QueryRouter {
     String? entityType;
 
     if (category == KnowledgeCategory.thirukkural) {
-      final extracted = _extractKuralNumber(normalizedQuery);
-      if (extracted != null) {
-        entityId = extracted.toString();
-        entityType = 'kural_number';
+      // Check athikaram number first (more specific), then kural number
+      final athikaramNum = _extractAthikaramNumber(normalizedQuery);
+      if (athikaramNum != null) {
+        entityId = athikaramNum.toString();
+        entityType = 'athikaram_number';
+      } else {
+        final kuralNum = _extractKuralNumber(normalizedQuery);
+        if (kuralNum != null) {
+          entityId = kuralNum.toString();
+          entityType = 'kural_number';
+        }
       }
     }
 
@@ -180,10 +187,22 @@ class QueryRouter {
     String query,
     String normalizedQuery,
   ) {
-    // Check for Thirukkural patterns
+    // Check for athikaram (chapter) number first — "அதிகாரம் 5", "athikaram 5"
+    final athikaramNum = _extractAthikaramNumber(normalizedQuery);
+    if (athikaramNum != null) {
+      return QueryClassification(
+        type: QueryType.deterministic,
+        category: KnowledgeCategory.thirukkural,
+        confidence: 0.95,
+        query: query,
+        entityId: athikaramNum.toString(),
+        entityType: 'athikaram_number',
+      );
+    }
+
+    // Check for kural number — "குறள் 42", "kural 42"
     final kuralNum = _extractKuralNumber(normalizedQuery);
     if (kuralNum != null) {
-      // Check if asking for explanation (hybrid) or just the kural (deterministic)
       final needsExplanation = _needsExplanation(normalizedQuery);
       return QueryClassification(
         type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
@@ -192,6 +211,14 @@ class QueryRouter {
         query: query,
         entityId: kuralNum.toString(),
         entityType: 'kural_number',
+      );
+    }
+    if (_isThirukkuralQuery(normalizedQuery)) {
+      return QueryClassification(
+        type: QueryType.deterministic,
+        category: KnowledgeCategory.thirukkural,
+        confidence: 0.85,
+        query: query,
       );
     }
 
@@ -205,105 +232,88 @@ class QueryRouter {
       );
     }
 
-    // Check for scheme patterns
-    if (_isSchemeQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
-      return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
-        category: KnowledgeCategory.schemes,
-        confidence: 0.8,
-        query: query,
-      );
-    }
+    // All knowledge category matches route to deterministic (SQLite-first).
+    // Order matters: more specific categories first to avoid misclassification
+    // (e.g., "IIT eligibility" should match education, not schemes).
 
-    // Check for hospital/health patterns
-    if (_isHealthQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
-      return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
-        category: KnowledgeCategory.health,
-        confidence: 0.8,
-        query: query,
-      );
-    }
-
-    // Check for scam/safety patterns
-    if (_isSafetyQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
-      return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
-        category: KnowledgeCategory.safety,
-        confidence: 0.85,
-        query: query,
-      );
-    }
-
-    // Check for education patterns (scholarships, exams)
+    // Education before schemes — "eligibility" is in both, but IIT/NEET/etc.
+    // are specific to education and should take priority.
     if (_isEducationQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
       return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        type: QueryType.deterministic,
         category: KnowledgeCategory.education,
         confidence: 0.85,
         query: query,
       );
     }
 
-    // Check for legal patterns
-    if (_isLegalQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
+    if (_isSafetyQuery(normalizedQuery)) {
       return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        type: QueryType.deterministic,
+        category: KnowledgeCategory.safety,
+        confidence: 0.85,
+        query: query,
+      );
+    }
+
+    if (_isHealthQuery(normalizedQuery)) {
+      return QueryClassification(
+        type: QueryType.deterministic,
+        category: KnowledgeCategory.health,
+        confidence: 0.8,
+        query: query,
+      );
+    }
+
+    if (_isSchemeQuery(normalizedQuery)) {
+      return QueryClassification(
+        type: QueryType.deterministic,
+        category: KnowledgeCategory.schemes,
+        confidence: 0.8,
+        query: query,
+      );
+    }
+
+    if (_isLegalQuery(normalizedQuery)) {
+      return QueryClassification(
+        type: QueryType.deterministic,
         category: KnowledgeCategory.legal,
         confidence: 0.85,
         query: query,
       );
     }
 
-    // Check for siddha medicine patterns
     if (_isSiddhaMedicineQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
       return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        type: QueryType.deterministic,
         category: KnowledgeCategory.siddhaMedicine,
         confidence: 0.85,
         query: query,
       );
     }
 
-    // Check for festival patterns
     if (_isFestivalQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
       return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        type: QueryType.deterministic,
         category: KnowledgeCategory.festivals,
         confidence: 0.85,
         query: query,
       );
     }
 
-    // Check for siddhar patterns
     if (_isSiddharQuery(normalizedQuery)) {
-      final needsExplanation = _needsExplanation(normalizedQuery);
       return QueryClassification(
-        type: needsExplanation ? QueryType.hybrid : QueryType.deterministic,
+        type: QueryType.deterministic,
         category: KnowledgeCategory.siddhars,
         confidence: 0.85,
         query: query,
       );
     }
 
-    // Check for general AI-required patterns
-    if (_requiresAiResponse(normalizedQuery)) {
-      return QueryClassification(
-        type: QueryType.aiRequired,
-        category: KnowledgeCategory.general,
-        confidence: 0.6,
-        query: query,
-      );
-    }
-
-    // Default: try hybrid approach
+    // Default: try hybrid approach — SQLite FTS5 may still find results.
+    // Don't classify as aiRequired just because the query contains "how"/"why"
+    // — the hybrid_chat_provider will show SQLite results if found,
+    // and only fall back to AI if SQLite has nothing.
     return QueryClassification(
       type: QueryType.hybrid,
       category: KnowledgeCategory.general,
@@ -363,6 +373,40 @@ class QueryRouter {
       }
     }
     return null;
+  }
+
+  /// Extract athikaram (chapter) number from query
+  int? _extractAthikaramNumber(String query) {
+    final patterns = [
+      RegExp(r'அதிகாரம்\s*(\d+)'),
+      RegExp(r'athikaram\s*(\d+)', caseSensitive: false),
+      RegExp(r'chapter\s*(\d+)', caseSensitive: false),
+    ];
+    for (final pattern in patterns) {
+      final match = pattern.firstMatch(query);
+      if (match != null) {
+        final num = int.tryParse(match.group(1)!);
+        if (num != null && num >= 1 && num <= 133) {
+          return num;
+        }
+      }
+    }
+    return null;
+  }
+
+  /// Check if this is a general Thirukkural query (without a specific number)
+  bool _isThirukkuralQuery(String query) {
+    final patterns = [
+      'thirukkural',
+      'thirukural',
+      'tirukkural',
+      'திருக்குறள்',
+      'குறள்',
+      'kural',
+      'valluvar',
+      'வள்ளுவர்',
+    ];
+    return patterns.any((p) => query.contains(p));
   }
 
   /// Check if query needs explanation (AI enhancement)
@@ -428,10 +472,39 @@ class QueryRouter {
       'subsidy',
       'அரசு உதவி',
       'welfare',
-      'eligibility',
-      'தகுதி',
       'documents',
       'ஆவணங்கள்',
+      'ration card',
+      'ரேஷன்',
+      'free treatment',
+      'இலவச',
+      'pm kisan',
+      'government',
+      'அரசு',
+      'benefit',
+      'பயன்',
+      'apply',
+      'விண்ணப்பம்',
+      'birth certificate',
+      'பிறப்பு சான்றிதழ்',
+      'death certificate',
+      'community certificate',
+      'சாதி சான்றிதழ்',
+      'income certificate',
+      'வருமான சான்றிதழ்',
+      'certificate',
+      'சான்றிதழ்',
+      'aadhar',
+      'aadhaar',
+      'ஆதார்',
+      'voter id',
+      'வாக்காளர்',
+      'pan card',
+      'passport',
+      'பாஸ்போர்ட்',
+      'driving license',
+      'ration',
+      'ரேஷன்',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -449,6 +522,8 @@ class QueryRouter {
       'அரசு மருத்துவமனை',
       'health center',
       'medical',
+      'health',
+      'சுகாதாரம்',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -468,6 +543,18 @@ class QueryRouter {
       'fake',
       'போலி',
       'cheating',
+      'phishing',
+      'ஃபிஷிங்',
+      'hacking',
+      'cyber',
+      'சைபர்',
+      'password',
+      'கடவுச்சொல்',
+      'spam',
+      'virus',
+      'malware',
+      'identity theft',
+      'online safety',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -491,6 +578,46 @@ class QueryRouter {
       'ssc',
       'gate',
       'cat',
+      'engineering',
+      'பொறியியல்',
+      'medical',
+      'mbbs',
+      'college',
+      'கல்லூரி',
+      'education',
+      'கல்வி',
+      'study',
+      'படிப்பு',
+      'course',
+      'career',
+      'options',
+      'iit',
+      'nit',
+      'anna university',
+      'அண்ணா பல்கலை',
+      'eligibility',
+      'தகுதி',
+      'plus two',
+      'plus-2',
+      'plus 2',
+      '+2',
+      '12th',
+      'பன்னிரண்டாம்',
+      '10th',
+      'பத்தாம்',
+      'sslc',
+      'hsc',
+      'degree',
+      'பட்டம்',
+      'diploma',
+      'polytechnic',
+      'university',
+      'பல்கலை',
+      'school',
+      'பள்ளி',
+      'coaching',
+      'tuition',
+      'after',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -551,6 +678,21 @@ class QueryRouter {
       'விநாயகர்',
       'celebration',
       'கொண்டாட்டம்',
+      'new year',
+      'புத்தாண்டு',
+      'puthandu',
+      'thai pongal',
+      'தைப்பொங்கல்',
+      'கார்த்திகை',
+      'karthigai',
+      'thai pusam',
+      'தைப்பூசம்',
+      'chithirai',
+      'சித்திரை',
+      'aadi',
+      'ஆடி',
+      'panguni',
+      'பங்குனி',
     ];
     return patterns.any((p) => query.contains(p));
   }
@@ -570,40 +712,19 @@ class QueryRouter {
       'கொரக்கர்',
       '18 siddhar',
       'பதினெண் சித்தர்',
+      'yoga',
+      'யோகா',
+      'யோகம்',
+      'patanjali',
+      'பதஞ்சலி',
+      'pranayama',
+      'பிராணாயாமம்',
+      'meditation',
+      'தியானம்',
+      'kundalini',
+      'குண்டலினி',
     ];
     return patterns.any((p) => query.contains(p));
-  }
-
-  /// Check if query requires AI response
-  bool _requiresAiResponse(String query) {
-    final aiPatterns = [
-      'எப்படி',
-      'how to',
-      'how do',
-      'ஏன்',
-      'why',
-      'what if',
-      'என்றால்',
-      'suggest',
-      'பரிந்துரை',
-      'recommend',
-      'compare',
-      'ஒப்பிடு',
-      'difference',
-      'வேறுபாடு',
-      'best',
-      'சிறந்த',
-      'should i',
-      'help me',
-      'உதவி',
-      'advice',
-      'ஆலோசனை',
-      'opinion',
-      'கருத்து',
-      'think',
-      'நினை',
-    ];
-    return aiPatterns.any((p) => query.contains(p));
   }
 
   /// Clear cached patterns (call when patterns are updated)

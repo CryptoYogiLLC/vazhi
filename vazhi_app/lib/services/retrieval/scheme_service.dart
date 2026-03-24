@@ -9,6 +9,34 @@ import '../../models/query_result.dart';
 import 'retrieval_service.dart';
 
 class SchemeService extends RetrievalService {
+  /// Common words to skip during search tokenization
+  static const _stopWords = {
+    'the',
+    'is',
+    'at',
+    'which',
+    'on',
+    'for',
+    'and',
+    'how',
+    'what',
+    'when',
+    'where',
+    'why',
+    'who',
+    'about',
+    'scheme',
+    'explain',
+    'details',
+    'tell',
+    'more',
+    'என்ன',
+    'எப்படி',
+    'ஏன்',
+    'பற்றி',
+    'விளக்கம்',
+    'திட்டம்',
+  };
   @override
   KnowledgeCategory get category => KnowledgeCategory.schemes;
 
@@ -114,6 +142,14 @@ class SchemeService extends RetrievalService {
       // Get all schemes and filter locally (since we don't have a specific search method)
       final results = await KnowledgeDatabase.getAllSchemes();
       final queryLower = query.toLowerCase();
+      // Tokenize query for word-level matching — "PM Kisan scheme" should
+      // match "PM Kisan Samman Nidhi" even though the full phrase doesn't
+      // appear as a substring. Match if ANY significant query word hits.
+      final queryWords = queryLower
+          .split(RegExp(r'\s+'))
+          .where((w) => w.length > 2) // Skip tiny words
+          .where((w) => !_stopWords.contains(w))
+          .toList();
 
       final filtered = results.where((m) {
         final nameTamil = (m['name_tamil'] as String?)?.toLowerCase() ?? '';
@@ -122,11 +158,9 @@ class SchemeService extends RetrievalService {
             (m['description_tamil'] as String?)?.toLowerCase() ?? '';
         final descEnglish =
             (m['description_english'] as String?)?.toLowerCase() ?? '';
+        final combined = '$nameTamil $nameEnglish $descTamil $descEnglish';
 
-        return nameTamil.contains(queryLower) ||
-            nameEnglish.contains(queryLower) ||
-            descTamil.contains(queryLower) ||
-            descEnglish.contains(queryLower);
+        return queryWords.any((word) => combined.contains(word));
       }).toList();
 
       if (filtered.isEmpty) {

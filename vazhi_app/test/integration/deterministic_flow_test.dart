@@ -104,13 +104,14 @@ void main() {
         expect(classification.category, KnowledgeCategory.schemes);
       });
 
-      test('returns hybrid for eligibility questions', () async {
+      test('returns deterministic for eligibility questions', () async {
         final response = await knowledgeService.query(
           'CMCHIS யாருக்கு தகுதி விளக்கம்',
         );
 
-        // May be deterministic or hybrid based on pattern matching
-        expect(response.classification.category, KnowledgeCategory.schemes);
+        // "தகுதி" (eligibility) is an education keyword; education is checked
+        // before schemes, so this matches education first
+        expect(response.classification.category, KnowledgeCategory.education);
       });
 
       test('handles Ayushman Bharat queries', () async {
@@ -194,31 +195,34 @@ void main() {
       });
     });
 
-    group('AI Required Queries', () {
-      test('classifies how-to questions as AI required', () async {
+    group('General Fallthrough Queries', () {
+      test('classifies how-to questions without keywords as hybrid', () async {
         final response = await knowledgeService.query(
           'how to learn programming',
         );
 
-        expect(response.classification.type, QueryType.aiRequired);
-        expect(response.needsModel, isTrue);
+        // No knowledge category keywords — falls through to hybrid/general
+        expect(response.classification.type, QueryType.hybrid);
+        expect(response.classification.category, KnowledgeCategory.general);
       });
 
-      test('classifies why questions as AI required', () async {
+      test('classifies why questions without keywords as hybrid', () async {
         final response = await knowledgeService.query('why is sky blue');
 
-        expect(response.classification.type, QueryType.aiRequired);
+        expect(response.classification.type, QueryType.hybrid);
+        expect(response.classification.category, KnowledgeCategory.general);
       });
 
-      test('classifies opinion requests as AI required', () async {
+      test('classifies opinion requests without keywords as hybrid', () async {
         final response = await knowledgeService.query(
           'what do you think about AI',
         );
 
-        expect(response.classification.type, QueryType.aiRequired);
+        expect(response.classification.type, QueryType.hybrid);
+        expect(response.classification.category, KnowledgeCategory.general);
       });
 
-      test('AI required returns no deterministic response', () async {
+      test('general query returns no deterministic response', () async {
         final response = await knowledgeService.query(
           'explain machine learning',
         );

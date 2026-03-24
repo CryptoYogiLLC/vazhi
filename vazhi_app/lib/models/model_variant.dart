@@ -21,6 +21,57 @@ enum DeviceTier {
   sqliteOnly, // <4GB — no LLM, hybrid SQLite only
 }
 
+/// Device-adaptive inference parameters scaled by RAM tier.
+/// Compact devices get minimal context to avoid OOM.
+/// Standard/premium devices get larger context for better responses.
+class InferenceConfig {
+  final int contextSize;
+  final int maxTokens;
+  final int maxRagContextChars;
+  final int maxHistoryTurns;
+
+  const InferenceConfig({
+    required this.contextSize,
+    required this.maxTokens,
+    required this.maxRagContextChars,
+    required this.maxHistoryTurns,
+  });
+
+  static const compact = InferenceConfig(
+    contextSize: 256,
+    maxTokens: 256,
+    maxRagContextChars: 150,
+    maxHistoryTurns: 0, // No multi-turn on 4GB devices
+  );
+
+  static const standard = InferenceConfig(
+    contextSize: 1024,
+    maxTokens: 512,
+    maxRagContextChars: 500,
+    maxHistoryTurns: 3,
+  );
+
+  static const premium = InferenceConfig(
+    contextSize: 2048,
+    maxTokens: 1024,
+    maxRagContextChars: 1000,
+    maxHistoryTurns: 5,
+  );
+
+  static InferenceConfig forTier(DeviceTier tier) {
+    switch (tier) {
+      case DeviceTier.premium:
+        return premium;
+      case DeviceTier.standard:
+        return standard;
+      case DeviceTier.compact:
+        return compact;
+      case DeviceTier.sqliteOnly:
+        return compact; // Won't be used, but safe default
+    }
+  }
+}
+
 /// A GGUF model variant with all metadata needed for download and inference.
 class ModelVariant {
   /// Unique identifier for persistence (e.g., 'q4_k_m')

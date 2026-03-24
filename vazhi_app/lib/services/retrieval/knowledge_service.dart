@@ -4,6 +4,7 @@
 /// Routes queries to appropriate services based on classification.
 library;
 
+import 'package:flutter/foundation.dart';
 import '../../models/query_result.dart';
 import '../../database/knowledge_database.dart';
 import '../query_router.dart';
@@ -119,6 +120,11 @@ class KnowledgeService {
   Future<KnowledgeResponse> query(String userQuery) async {
     // Classify the query
     final classification = await _router.classify(userQuery);
+    debugPrint(
+      'VAZHI: classify("$userQuery") → type=${classification.type}, '
+      'category=${classification.category}, entityType=${classification.entityType}, '
+      'entityId=${classification.entityId}',
+    );
 
     // Route based on classification
     switch (classification.type) {
@@ -227,7 +233,23 @@ class KnowledgeService {
   Future<RetrievalResult<dynamic>> _handleThirukkural(
     QueryClassification classification,
   ) async {
-    // If we have an entity ID, get specific kural
+    // Athikaram (chapter) lookup — show all kurals in that chapter
+    if (classification.entityId != null &&
+        classification.entityType == 'athikaram_number') {
+      final athikaramNumber = int.tryParse(classification.entityId!);
+      if (athikaramNumber != null) {
+        final result = await _thirukkuralService.getByAthikaram(
+          athikaramNumber,
+        );
+        debugPrint(
+          'VAZHI: Athikaram $athikaramNumber lookup: success=${result.success}, '
+          'formattedResponse=${result.formattedResponse?.length ?? 0} chars',
+        );
+        return result;
+      }
+    }
+
+    // Specific kural number lookup
     if (classification.entityId != null &&
         classification.entityType == 'kural_number') {
       final kuralNumber = int.tryParse(classification.entityId!);
@@ -236,8 +258,35 @@ class KnowledgeService {
       }
     }
 
-    // Otherwise search
+    // Bare "thirukkural"/"குறள்" without a number → show all athikarams
+    final queryLower = classification.query.toLowerCase();
+    if (_isBareThirukkuralQuery(queryLower)) {
+      return _thirukkuralService.getAllAthikarams();
+    }
+
+    // Otherwise search by text
     return _thirukkuralService.search(classification.query);
+  }
+
+  /// Check if this is a bare Thirukkural query (just the word, no specific topic)
+  bool _isBareThirukkuralQuery(String query) {
+    final barePatterns = [
+      'thirukkural',
+      'thirukural',
+      'tirukkural',
+      'திருக்குறள்',
+      'குறள்',
+      'kural',
+      'valluvar',
+      'வள்ளுவர்',
+    ];
+    // Strip the keyword and check if anything meaningful remains
+    var stripped = query;
+    for (final p in barePatterns) {
+      stripped = stripped.replaceAll(p, '').trim();
+    }
+    // If nothing meaningful left (or just common words), it's a bare query
+    return stripped.isEmpty || stripped.length < 3;
   }
 
   /// Handle scheme queries

@@ -18,6 +18,7 @@ class HybridMessageBubble extends ConsumerWidget {
   final VoidCallback? onSpeak;
   final VoidCallback? onDownloadAi;
   final Function(HybridMessage)? onEnhanceWithAi;
+  final void Function(String query)? onSendQuery;
 
   const HybridMessageBubble({
     super.key,
@@ -25,6 +26,7 @@ class HybridMessageBubble extends ConsumerWidget {
     this.onSpeak,
     this.onDownloadAi,
     this.onEnhanceWithAi,
+    this.onSendQuery,
   });
 
   @override
@@ -178,6 +180,7 @@ class HybridMessageBubble extends ConsumerWidget {
       onSpeakTap: onSpeak,
       onDownloadAiTap: onDownloadAi,
       onAskMoreTap: () => onEnhanceWithAi?.call(message),
+      onInternalLink: onSendQuery,
     );
   }
 

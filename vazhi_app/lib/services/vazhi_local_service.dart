@@ -14,6 +14,7 @@ import 'device_info_service.dart';
 /// Service for running VAZHI model locally on device
 class VazhiLocalService {
   final ModelVariant _model;
+  InferenceConfig _inferenceConfig;
 
   LlamaEngine? _engine;
   ChatSession? _session;
@@ -42,7 +43,16 @@ class VazhiLocalService {
       "<start_of_turn>model\n"
       "{% endif %}";
 
-  VazhiLocalService(this._model);
+  VazhiLocalService(this._model, {DeviceTier deviceTier = DeviceTier.compact})
+    : _inferenceConfig = InferenceConfig.forTier(deviceTier);
+
+  /// Update inference config when device tier changes.
+  void updateInferenceConfig(DeviceTier tier) {
+    _inferenceConfig = InferenceConfig.forTier(tier);
+  }
+
+  /// Expose current inference config for providers.
+  InferenceConfig get inferenceConfig => _inferenceConfig;
 
   /// System prompts for each pack
   static const Map<String, String> packSystemPrompts = {
@@ -66,15 +76,23 @@ class VazhiLocalService {
 தமிழில் தெளிவாகவும் உதவியாகவும் பதிலளியுங்கள்.''',
   };
 
-  /// Generation params with stop sequences to prevent hallucinated multi-turn chat.
+  /// Stop sequences to prevent hallucinated multi-turn chat.
   /// NOTE: Do NOT include `<start_of_turn>` or `<end_of_turn>` here — those are
   /// Gemma 3's native EOG tokens (token 106) and llama.cpp handles them
   /// automatically. Adding them as explicit text-based stop sequences conflicts
   /// with native EOG detection and causes empty responses.
-  static const _generationParams = GenerationParams(
-    maxTokens: 256, // Reduced from 1024 to fit in 512-token context window
+  static const _stopSequences = [
+    '<|im_start|>',
+    '<|im_end|>',
+    '\nuser\n',
+    '\nUser:',
+  ];
+
+  /// Build generation params scaled by device tier.
+  GenerationParams get _generationParams => GenerationParams(
+    maxTokens: _inferenceConfig.maxTokens,
     temp: 0.7,
-    stopSequences: ['<|im_start|>', '<|im_end|>', '\nuser\n', '\nUser:'],
+    stopSequences: _stopSequences,
   );
 
   /// Regex to strip any leaked chat format tokens from output
@@ -460,12 +478,14 @@ class VazhiLocalService {
       await _writeDiagnostic('step:set_log_level');
       await _engine!.setLogLevel(LlamaLogLevel.info);
 
-      await _writeDiagnostic('step:load_start');
+      final ctxSize = _inferenceConfig.contextSize;
+      debugPrint('VAZHI: Loading with n_ctx=$ctxSize (tier-adaptive)');
+      await _writeDiagnostic('step:load_start|n_ctx:$ctxSize');
       await _engine!.loadModel(
         path,
-        modelParams: const ModelParams(
+        modelParams: ModelParams(
           gpuLayers: 0, // CPU-only — avoids Vulkan issues on phones
-          contextSize: 256, // Matches harness-tested context size
+          contextSize: ctxSize,
           numberOfThreads: 2, // Limit threads to reduce scratch buffer memory
           numberOfThreadsBatch: 2,
         ),
@@ -503,19 +523,34 @@ class VazhiLocalService {
   /// Recreates the session when the pack changes so the system prompt
   /// matches the selected knowledge domain.
   ///
-  /// Disables llamadart's _enforceContextLimit (maxContextTokens: 0) because
-  /// at n_ctx=256 its aggressive trimming removes even the current user
-  /// message. Instead, llama.cpp's built-in context shifting (b7970+)
-  /// maintains a sliding window over the conversation when KV cache fills.
-  /// This preserves multi-turn history for context correlation.
+  /// Multi-turn behavior is device-adaptive:
+  /// - Compact (4GB, n_ctx=256): maxContextTokens=0 disables history trimming,
+  ///   effectively single-turn since context overflow errors on turn 2.
+  /// - Standard (6GB, n_ctx=1024): allows ~3 turns of history.
+  /// - Premium (8GB+, n_ctx=2048): allows ~5 turns of history.
+  ///
+  /// For standard/premium, maxContextTokens is set to ~70% of n_ctx,
+  /// reserving 30% for the new prompt + generation.
   void _ensureSession(String pack) {
     if (_session == null || _currentPack != pack) {
       final systemPrompt =
           packSystemPrompts[pack] ?? packSystemPrompts['culture']!;
+
+      // Device-adaptive: allow multi-turn history only on devices with
+      // enough context window. On compact (n_ctx=256), disable trimming
+      // (single-turn only). On standard/premium, set a token budget
+      // that allows retaining history while reserving room for generation.
+      final ctxSize = _inferenceConfig.contextSize;
+      final maxHistoryTurns = _inferenceConfig.maxHistoryTurns;
+      final maxContextTokens = maxHistoryTurns > 0
+          ? (ctxSize * 0.7)
+                .toInt() // 70% for history, 30% for new prompt+gen
+          : 0; // Disable trimming on compact — single-turn only
+
       _session = ChatSession(
         _engine!,
         systemPrompt: systemPrompt,
-        maxContextTokens: 0,
+        maxContextTokens: maxContextTokens,
       );
       _currentPack = pack;
     }

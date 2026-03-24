@@ -20,11 +20,9 @@ class KnowledgeResultCard extends ConsumerStatefulWidget {
   final VoidCallback? onDownloadAiTap;
   final VoidCallback? onAskMoreTap;
   final VoidCallback? onSpeakTap;
+  final void Function(String query)? onInternalLink;
   final bool showAiPrompt;
   final bool modelReady;
-
-  /// Max collapsed height for content area before "Show more" appears.
-  static const double _collapsedMaxHeight = 180.0;
 
   const KnowledgeResultCard({
     super.key,
@@ -32,6 +30,7 @@ class KnowledgeResultCard extends ConsumerStatefulWidget {
     this.onDownloadAiTap,
     this.onAskMoreTap,
     this.onSpeakTap,
+    this.onInternalLink,
     this.showAiPrompt = true,
     this.modelReady = false,
   });
@@ -42,33 +41,6 @@ class KnowledgeResultCard extends ConsumerStatefulWidget {
 }
 
 class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
-  bool _isExpanded = false;
-  bool _needsExpansion = false;
-  final GlobalKey _contentKey = GlobalKey();
-
-  @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _checkContentOverflow();
-    });
-  }
-
-  void _checkContentOverflow() {
-    final renderBox =
-        _contentKey.currentContext?.findRenderObject() as RenderBox?;
-    if (renderBox != null && mounted) {
-      final contentHeight = renderBox.size.height;
-      final needsExpansion =
-          contentHeight > KnowledgeResultCard._collapsedMaxHeight;
-      if (needsExpansion != _needsExpansion) {
-        setState(() {
-          _needsExpansion = needsExpansion;
-        });
-      }
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final isTamil = ref.watch(languageProvider);
@@ -114,101 +86,14 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
     String formattedResponse,
     String Function(String, String) t,
   ) {
-    final color = _getCategoryColor(widget.response.classification.category);
-    final isCollapsed = _needsExpansion && !_isExpanded;
-
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        // Offstage widget for measuring unconstrained content height.
-        // Offstage lays out its child but reports zero size to parent.
-        Offstage(
-          offstage: true,
-          child: Padding(
-            key: _contentKey,
-            padding: const EdgeInsets.all(16),
-            child: MarkdownBody(
-              data: formattedResponse,
-              styleSheet: _markdownStyleSheet(context),
-              onTapLink: (text, href, title) => _handleLinkTap(context, href),
-            ),
-          ),
-        ),
-
-        // Visible content — clipped when collapsed
-        Stack(
-          children: [
-            Container(
-              constraints: isCollapsed
-                  ? BoxConstraints(
-                      maxHeight: KnowledgeResultCard._collapsedMaxHeight,
-                    )
-                  : const BoxConstraints(),
-              clipBehavior: isCollapsed ? Clip.hardEdge : Clip.none,
-              decoration: const BoxDecoration(),
-              child: Padding(
-                padding: const EdgeInsets.all(16),
-                child: MarkdownBody(
-                  data: formattedResponse,
-                  styleSheet: _markdownStyleSheet(context),
-                  selectable: !isCollapsed,
-                  onTapLink: (text, href, title) =>
-                      _handleLinkTap(context, href),
-                ),
-              ),
-            ),
-            // Gradient fade at bottom when collapsed
-            if (isCollapsed)
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: 0,
-                height: 48,
-                child: Container(
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [Color(0x00FFFFFF), Color(0xFFFFFFFF)],
-                    ),
-                  ),
-                ),
-              ),
-          ],
-        ),
-
-        // Show more / Show less button
-        if (_needsExpansion)
-          InkWell(
-            onTap: () => setState(() => _isExpanded = !_isExpanded),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    _isExpanded
-                        ? Icons.keyboard_arrow_up
-                        : Icons.keyboard_arrow_down,
-                    size: 18,
-                    color: color,
-                  ),
-                  const SizedBox(width: 4),
-                  Text(
-                    _isExpanded
-                        ? t('Show less', 'குறைவாகக் காட்டு')
-                        : t('Show more', 'மேலும் காட்டு'),
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
-                      color: color,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(16),
+      child: MarkdownBody(
+        data: formattedResponse,
+        styleSheet: _markdownStyleSheet(context),
+        selectable: false,
+        onTapLink: (text, href, title) => _handleLinkTap(context, href),
+      ),
     );
   }
 
@@ -450,6 +335,29 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
 
   void _handleLinkTap(BuildContext context, String? href) {
     if (href == null || href.isEmpty) return;
+
+    // Internal navigation links — "vazhi:type/id"
+    if (href.startsWith('vazhi:')) {
+      final path = href.substring(6); // Strip "vazhi:" prefix
+      // Convert URL paths to queries: "athikaram/5" → "அதிகாரம் 5"
+      //                                "kural/42" → "குறள் 42"
+      //                                "thirukkural" → "Thirukkural"
+      String query;
+      if (path.startsWith('athikaram/')) {
+        query = 'அதிகாரம் ${path.substring(10)}';
+      } else if (path.startsWith('kural/')) {
+        query = 'குறள் ${path.substring(6)}';
+      } else if (path == 'thirukkural') {
+        query = 'Thirukkural';
+      } else {
+        query = path;
+      }
+      if (query.isNotEmpty) {
+        widget.onInternalLink?.call(query);
+      }
+      return;
+    }
+
     final uri = Uri.tryParse(href);
     if (uri == null) return;
     if (uri.scheme != 'https' && uri.scheme != 'http') return;
@@ -551,6 +459,11 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
       h2: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
       h3: const TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
       strong: const TextStyle(fontWeight: FontWeight.bold),
+      a: const TextStyle(
+        color: Color(0xFF1565C0),
+        fontSize: 15,
+        decoration: TextDecoration.underline,
+      ),
       blockquote: TextStyle(
         color: Colors.grey[700],
         fontStyle: FontStyle.italic,
@@ -560,6 +473,8 @@ class _KnowledgeResultCardState extends ConsumerState<KnowledgeResultCard> {
         fontFamily: 'monospace',
       ),
       listBullet: const TextStyle(fontSize: 14),
+      listBulletPadding: const EdgeInsets.only(top: 4),
+      listIndent: 16,
     );
   }
 

@@ -180,23 +180,25 @@ class ThirukkuralService extends RetrievalService {
   String _formatKuralResponse(Thirukkural kural) {
     final buffer = StringBuffer();
 
-    buffer.writeln('📜 **குறள் ${kural.kuralNumber}**');
-    buffer.writeln();
-    buffer.writeln(kural.verseLine1);
-    buffer.writeln(kural.verseLine2);
-    buffer.writeln();
-    buffer.writeln('**பொருள்:** ${kural.meaningTamil}');
-    buffer.writeln();
-    buffer.writeln('---');
+    buffer.writeln('📜 **குறள் ${kural.kuralNumber}**\n');
+    buffer.writeln('${kural.verseLine1}\n');
+    buffer.writeln('${kural.verseLine2}\n');
+    buffer.writeln('**பொருள்:** ${kural.meaningTamil}\n');
+    buffer.writeln('---\n');
     buffer.writeln(
-      '📚 **அதிகாரம்:** ${kural.athikaram} (${kural.athikaramNumber})',
+      '📚 **அதிகாரம்:** [${kural.athikaram}](vazhi:athikaram/${kural.athikaramNumber})\n',
     );
-    buffer.writeln('📖 **பால்:** ${kural.paal}');
+    buffer.writeln('📖 **பால்:** ${kural.paal}\n');
+    buffer.writeln('---\n');
+    buffer.writeln(
+      '[← அதிகாரங்கள் பட்டியல் (All chapters)](vazhi:thirukkural)\n',
+    );
 
     return buffer.toString();
   }
 
-  /// Format athikaram response (list of kurals in a chapter)
+  /// Format athikaram response (list of kurals in a chapter).
+  /// Each kural is a tappable link that shows full details when tapped.
   String _formatAthikaramResponse(List<Thirukkural> kurals) {
     if (kurals.isEmpty) return 'குறள்கள் இல்லை';
 
@@ -204,39 +206,45 @@ class ThirukkuralService extends RetrievalService {
     final buffer = StringBuffer();
 
     buffer.writeln(
-      '📚 **அதிகாரம் ${first.athikaramNumber}: ${first.athikaram}**',
+      '📚 **அதிகாரம் ${first.athikaramNumber}: ${first.athikaram}**\n',
     );
-    buffer.writeln('📖 ${first.paal} | ${first.paalEnglish}');
-    buffer.writeln();
-    buffer.writeln('---');
-    buffer.writeln();
+    buffer.writeln('📖 ${first.paal} | ${first.paalEnglish}\n');
+    buffer.writeln(
+      '[← அதிகாரங்கள் பட்டியல் (Back to chapters)](vazhi:thirukkural)\n',
+    );
+    buffer.writeln('---\n');
 
     for (final kural in kurals) {
-      buffer.writeln('**குறள் ${kural.kuralNumber}:**');
-      buffer.writeln(kural.verseLine1);
-      buffer.writeln(kural.verseLine2);
-      buffer.writeln();
+      buffer.writeln(
+        '📜 [குறள் ${kural.kuralNumber} — தட்டவும்](vazhi:kural/${kural.kuralNumber})\n',
+      );
+      buffer.writeln('*${kural.verseLine1}*\n');
+      buffer.writeln('*${kural.verseLine2}*\n');
     }
 
     return buffer.toString();
   }
 
-  /// Format list of athikarams
+  /// Format list of athikarams as tappable links.
+  /// Each athikaram is a markdown link with vazhi:// URI that triggers
+  /// a new query to show the kurals in that chapter.
   String _formatAthikaramsListResponse(List<Athikaram> athikarams) {
     final buffer = StringBuffer();
 
-    buffer.writeln('📜 **திருக்குறள் - 133 அதிகாரங்கள்**');
-    buffer.writeln();
+    buffer.writeln('📜 **திருக்குறள் - 133 அதிகாரங்கள்**\n');
+    buffer.writeln('👆 அதிகாரத்தை தட்டவும்\n');
 
     String? currentPaal;
     for (final ath in athikarams) {
       if (currentPaal != ath.paal) {
         currentPaal = ath.paal;
-        buffer.writeln();
-        buffer.writeln('### ${ath.paal} (${ath.paalEnglish})');
-        buffer.writeln();
+        buffer.writeln('\n### ${ath.paal} (${ath.paalEnglish})\n');
       }
-      buffer.writeln('${ath.number}. ${ath.nameTamil}');
+      // Use vazhi:athikaram/<number> (no spaces — spaces break markdown links).
+      // Use dash list prefix to prevent markdown ordered list interpretation.
+      buffer.writeln(
+        '📖 [${ath.number}. ${ath.nameTamil}](vazhi:athikaram/${ath.number})\n',
+      );
     }
 
     return buffer.toString();
@@ -249,15 +257,11 @@ class ThirukkuralService extends RetrievalService {
     buffer.writeln('🔍 **"$query" - ${kurals.length} குறள்கள்**');
     buffer.writeln();
 
-    for (final kural in kurals.take(5)) {
+    for (final kural in kurals) {
       buffer.writeln('**குறள் ${kural.kuralNumber}** (${kural.athikaram}):');
       buffer.writeln(kural.verseLine1);
       buffer.writeln(kural.verseLine2);
       buffer.writeln();
-    }
-
-    if (kurals.length > 5) {
-      buffer.writeln('_...மேலும் ${kurals.length - 5} குறள்கள்_');
     }
 
     return buffer.toString();

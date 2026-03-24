@@ -4,7 +4,8 @@
         android:label="VAZHI - வழி"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:largeHeap="true">
+        android:largeHeap="true"
+        android:pageSizeCompat="16384">
         <activity
             android:name=".MainActivity"
             android:exported="true"

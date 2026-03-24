@@ -32,10 +32,11 @@ final vazhiApiServiceProvider = Provider<VazhiApiService>((ref) {
   return VazhiApiService();
 });
 
-/// Local service provider — rebuilds when the selected model changes.
+/// Local service provider — rebuilds when the selected model or device tier changes.
 final vazhiLocalServiceProvider = Provider<VazhiLocalService>((ref) {
   final model = ref.watch(selectedModelProvider);
-  final service = VazhiLocalService(model);
+  final deviceTier = ref.watch(deviceTierProvider);
+  final service = VazhiLocalService(model, deviceTier: deviceTier);
   ref.onDispose(() => service.dispose());
   return service;
 });

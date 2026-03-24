@@ -7,12 +7,14 @@ library;
 import 'dart:async';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../models/message.dart';
+import '../models/model_variant.dart';
 import '../models/query_result.dart';
 import '../services/retrieval/knowledge_service.dart';
 import '../services/vazhi_api_service.dart';
 import '../services/vazhi_local_service.dart';
 import 'chat_provider.dart';
 import 'knowledge_service_provider.dart';
+import 'model_provider.dart';
 
 /// Extended message with knowledge response
 class HybridMessage extends Message {
@@ -107,16 +109,6 @@ class HybridMessage extends Message {
     );
   }
 }
-
-/// Max RAG context characters to inject into prompt.
-/// With n_ctx=256, the budget is tight:
-///   ~90 tokens for system prompt + chat template
-///   ~30-50 tokens for user query
-///   ~60-80 tokens for generation
-///   ~30-80 tokens for RAG context
-/// At ~1-2 tokens/char for Tamil, 150 chars ≈ 75-150 tokens.
-/// Keep conservative to avoid prompt overflow.
-const _maxRagContextChars = 150;
 
 /// Hybrid chat state notifier
 class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
@@ -231,33 +223,30 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
       }
       final matchedPack = _ref.read(currentPackProvider);
 
-      // RAG flow: SQLite provides factual context, AI generates response.
-      // Exact lookups (Thirukkural by number, emergency contacts) bypass AI.
+      // SQLite-first: ALWAYS show SQLite results when available,
+      // regardless of classification type. The LLM doesn't know scheme
+      // details, scam patterns, or contact info — SQLite does.
+      // Only fall through to AI when SQLite has nothing.
+      if (knowledgeResponse.hasResponse) {
+        _replaceById(
+          loadingMessage.id,
+          HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
+        );
+        return;
+      }
+
+      // No SQLite answer — try AI if available.
       if (aiReady) {
-        final isExactLookup =
-            knowledgeResponse.answeredDeterministically &&
-            knowledgeResponse.hasResponse &&
-            !knowledgeResponse.suggestAiEnhancement &&
-            (knowledgeResponse.classification.category ==
-                    KnowledgeCategory.thirukkural ||
-                knowledgeResponse.classification.category ==
-                    KnowledgeCategory.emergency);
+        // Scale RAG context by device tier.
+        final deviceTier = _ref.read(deviceTierProvider);
+        final inferenceConfig = InferenceConfig.forTier(deviceTier);
+        final maxRagChars = inferenceConfig.maxRagContextChars;
 
-        if (isExactLookup) {
-          _replaceById(
-            loadingMessage.id,
-            HybridMessage.knowledge(knowledgeResponse, pack: matchedPack),
-          );
-          return;
-        }
-
-        // RAG: if SQLite has relevant context, inject it into the AI prompt.
-        // Truncate context to fit within n_ctx token budget.
         String? context = knowledgeResponse.hasResponse
             ? knowledgeResponse.formattedResponse
             : null;
-        if (context != null && context.length > _maxRagContextChars) {
-          context = context.substring(0, _maxRagContextChars);
+        if (context != null && context.length > maxRagChars) {
+          context = context.substring(0, maxRagChars);
         }
         await _tryAiWithContext(text, matchedPack, loadingMessage, context);
       } else {
@@ -421,11 +410,16 @@ class HybridChatNotifier extends StateNotifier<List<HybridMessage>> {
     final context = message.knowledgeResponse!.formattedResponse;
     final userQuery = message.knowledgeResponse!.classification.query;
 
-    // Truncate context for token budget
+    // Truncate context for token budget (device-adaptive)
+    final deviceTier = _ref.read(deviceTierProvider);
+    final inferenceConfig = InferenceConfig.forTier(deviceTier);
     String? truncatedContext = context;
     if (truncatedContext != null &&
-        truncatedContext.length > _maxRagContextChars) {
-      truncatedContext = truncatedContext.substring(0, _maxRagContextChars);
+        truncatedContext.length > inferenceConfig.maxRagContextChars) {
+      truncatedContext = truncatedContext.substring(
+        0,
+        inferenceConfig.maxRagContextChars,
+      );
     }
 
     final prompt = _buildRagPrompt(

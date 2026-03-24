@@ -275,7 +275,7 @@ class GenericDataService {
       '🛡️ **மோசடி எச்சரிக்கைகள் / Scam Alerts** (${items.length})',
     );
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final type = item['type'] ?? '';
       buffer.writeln('⚠️ **$name**  ');
@@ -285,9 +285,6 @@ class GenericDataService {
       if (desc.isNotEmpty) buffer.writeln('$desc');
       buffer.writeln();
     }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} முடிவுகள்');
-    }
     return buffer.toString();
   }
 
@@ -295,15 +292,12 @@ class GenericDataService {
     final buffer = StringBuffer();
     buffer.writeln('🔒 **இணைய பாதுகாப்பு குறிப்புகள்** (${items.length})');
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final title = item['title_tamil'] ?? item['title_english'] ?? '';
       final desc = item['tip_tamil'] ?? item['tip_english'] ?? '';
       buffer.writeln('• **$title**  ');
       if (desc.isNotEmpty) buffer.writeln('$desc');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} குறிப்புகள்');
     }
     return buffer.toString();
   }
@@ -312,7 +306,7 @@ class GenericDataService {
     final buffer = StringBuffer();
     buffer.writeln('🎓 **உதவித்தொகைகள் / Scholarships** (${items.length})');
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final provider = item['provider'] ?? '';
       final amount = item['amount'] ?? '';
@@ -320,9 +314,6 @@ class GenericDataService {
       if (provider.isNotEmpty) buffer.writeln('வழங்குபவர்: $provider  ');
       if (amount.isNotEmpty) buffer.writeln('தொகை: $amount');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} உதவித்தொகைகள்');
     }
     return buffer.toString();
   }
@@ -333,15 +324,12 @@ class GenericDataService {
       '📝 **போட்டித் தேர்வுகள் / Competitive Exams** (${items.length})',
     );
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final conductor = item['conducting_body'] ?? '';
       buffer.writeln('📋 **$name**  ');
       if (conductor.isNotEmpty) buffer.writeln('நடத்துபவர்: $conductor');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} தேர்வுகள்');
     }
     return buffer.toString();
   }
@@ -350,15 +338,12 @@ class GenericDataService {
     final buffer = StringBuffer();
     buffer.writeln('⚖️ **சட்ட உரிமைகள் / Legal Rights** (${items.length})');
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['title_tamil'] ?? item['title_english'] ?? '';
       final category = item['category'] ?? '';
       buffer.writeln('📜 **$name**  ');
       if (category.isNotEmpty) buffer.writeln('பிரிவு: $category');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} உரிமைகள்');
     }
     return buffer.toString();
   }
@@ -367,15 +352,12 @@ class GenericDataService {
     final buffer = StringBuffer();
     buffer.writeln('📄 **சட்ட மாதிரிகள் / Legal Templates** (${items.length})');
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final type = item['category'] ?? '';
       buffer.writeln('📋 **$name**  ');
       if (type.isNotEmpty) buffer.writeln('வகை: $type');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} மாதிரிகள்');
     }
     return buffer.toString();
   }
@@ -386,15 +368,12 @@ class GenericDataService {
       '🌿 **சித்த மருத்துவம் / Siddha Medicine** (${items.length})',
     );
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final use = item['traditional_use'] ?? '';
       buffer.writeln('🍃 **$name**  ');
       if (use.isNotEmpty) buffer.writeln('பயன்: $use');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} மருந்துகள்');
     }
     return buffer.toString();
   }
@@ -403,15 +382,12 @@ class GenericDataService {
     final buffer = StringBuffer();
     buffer.writeln('🎉 **திருவிழாக்கள் / Tamil Festivals** (${items.length})');
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final month = item['tamil_month'] ?? '';
       buffer.writeln('🪔 **$name**  ');
       if (month.isNotEmpty) buffer.writeln('மாதம்: $month');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} திருவிழாக்கள்');
     }
     return buffer.toString();
   }
@@ -420,15 +396,12 @@ class GenericDataService {
     final buffer = StringBuffer();
     buffer.writeln('🙏 **சித்தர்கள் / Siddhars** (${items.length})');
     buffer.writeln();
-    for (final item in items.take(5)) {
+    for (final item in items) {
       final name = item['name_tamil'] ?? item['name_english'] ?? '';
       final period = item['period'] ?? '';
       buffer.writeln('🔱 **$name**  ');
       if (period.isNotEmpty) buffer.writeln('காலம்: $period');
       buffer.writeln();
-    }
-    if (items.length > 5) {
-      buffer.writeln('...மேலும் ${items.length - 5} சித்தர்கள்');
     }
     return buffer.toString();
   }

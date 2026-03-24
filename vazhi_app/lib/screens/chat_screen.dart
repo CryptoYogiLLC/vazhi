@@ -31,6 +31,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
   bool _showCategoryView = false;
+  bool _userSentMessage = false; // True when user just sent a message
   final bool _useHybridChat = true; // Feature flag for hybrid chat
   late List<String> _shuffledCategoryIds;
 
@@ -111,14 +112,18 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     super.dispose();
   }
 
+  /// Scroll to bottom once after user action.
+  /// Uses jumpTo (instant) to avoid animation fighting user scroll gestures.
+  /// Waits for layout then scrolls once and clears the flag.
   void _scrollToBottom() {
-    if (_scrollController.hasClients) {
-      _scrollController.animateTo(
-        _scrollController.position.maxScrollExtent,
-        duration: const Duration(milliseconds: 300),
-        curve: Curves.easeOut,
-      );
-    }
+    if (!_userSentMessage) return;
+    _userSentMessage = false; // Clear immediately to prevent re-entry
+    if (!_scrollController.hasClients) return;
+    // Wait for the new message to be laid out, then jump
+    Future.delayed(const Duration(milliseconds: 200), () {
+      if (!_scrollController.hasClients || !mounted) return;
+      _scrollController.jumpTo(_scrollController.position.maxScrollExtent);
+    });
   }
 
   void _sendMessage(String text) {
@@ -131,6 +136,21 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     }
     _textController.clear();
 
+    // Mark that user typed a message — scroll to show response
+    _userSentMessage = true;
+    Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
+  }
+
+  /// Send a query from an internal link tap (e.g., Thirukkural navigation).
+  /// Scrolls to show the result once it loads.
+  void _sendInternalQuery(String text) {
+    if (text.trim().isEmpty) return;
+    if (_useHybridChat) {
+      ref.read(hybridChatProvider.notifier).sendMessage(text);
+    } else {
+      ref.read(chatProvider.notifier).sendMessage(text);
+    }
+    _userSentMessage = true;
     Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
   }
 
@@ -172,30 +192,9 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
     final messages = _useHybridChat ? hybridMessages : regularMessages;
     final voiceInputState = ref.watch(voiceInputStateProvider);
 
-    // Auto-scroll when a new message is added OR when a loading placeholder
-    // is resolved into a real response. Don't scroll on every state change
-    // (e.g. streaming token updates) — that prevents the user from scrolling up.
-    if (_useHybridChat) {
-      ref.listen(hybridChatProvider, (previous, current) {
-        final grew = current.length > (previous?.length ?? 0);
-        final loadingResolved =
-            (previous?.any((m) => m.isLoading) ?? false) &&
-            !current.any((m) => m.isLoading);
-        if (grew || loadingResolved) {
-          Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
-        }
-      });
-    } else {
-      ref.listen(chatProvider, (previous, current) {
-        final grew = current.length > (previous?.length ?? 0);
-        final loadingResolved =
-            (previous?.any((m) => m.isLoading) ?? false) &&
-            !current.any((m) => m.isLoading);
-        if (grew || loadingResolved) {
-          Future.delayed(const Duration(milliseconds: 100), _scrollToBottom);
-        }
-      });
-    }
+    // Scroll is now handled by _userSentMessage flag in _sendMessage
+    // and _sendInternalQuery — no ref.listen auto-scroll needed.
+    // This prevents doom-scrolling when the user is browsing previous results.
 
     ref.listen(voiceInputStateProvider, (previous, current) {
       if (current.recognizedText.isNotEmpty &&
@@ -853,6 +852,7 @@ class _ChatScreenState extends ConsumerState<ChatScreen> {
                     : null,
                 onDownloadAi: _handleDownloadAi,
                 onEnhanceWithAi: _handleEnhanceWithAi,
+                onSendQuery: _sendInternalQuery,
               );
             },
           ),

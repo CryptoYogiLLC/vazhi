@@ -97,15 +97,20 @@ void main() {
       expect(result.category, KnowledgeCategory.schemes);
     });
 
-    test('classifies scheme with eligibility question as hybrid', () async {
-      final result = await router.classify('CMCHIS எப்படி apply பண்றது?');
+    test(
+      'classifies scheme with eligibility question as deterministic',
+      () async {
+        // SQLite-first: all knowledge categories route to deterministic
+        // so SQLite results are shown directly (AI offered as follow-up)
+        final result = await router.classify('CMCHIS எப்படி apply பண்றது?');
 
-      expect(result.type, QueryType.hybrid);
-      expect(result.category, KnowledgeCategory.schemes);
-    });
+        expect(result.type, QueryType.deterministic);
+        expect(result.category, KnowledgeCategory.schemes);
+      },
+    );
 
     test('classifies "ayushman bharat" as scheme', () async {
-      final result = await router.classify('ayushman bharat eligibility');
+      final result = await router.classify('ayushman bharat');
 
       expect(result.category, KnowledgeCategory.schemes);
     });
@@ -142,27 +147,30 @@ void main() {
     });
   });
 
-  group('QueryRouter - Conversational queries route as hybrid', () {
-    test('classifies "how to file RTI" as hybrid legal', () async {
+  group('QueryRouter - Knowledge queries always route deterministic', () {
+    // SQLite-first: all knowledge category matches route to deterministic.
+    // The hybrid_chat_provider shows SQLite results directly and offers
+    // "Ask AI" as a follow-up button.
+    test('classifies "how to file RTI" as deterministic legal', () async {
       final result = await router.classify('how to file RTI?');
 
-      expect(result.type, QueryType.hybrid);
+      expect(result.type, QueryType.deterministic);
       expect(result.category, KnowledgeCategory.legal);
     });
 
-    test('classifies "how to report scam" as hybrid safety', () async {
+    test('classifies "how to report scam" as deterministic safety', () async {
       final result = await router.classify('how to report a scam?');
 
-      expect(result.type, QueryType.hybrid);
+      expect(result.type, QueryType.deterministic);
       expect(result.category, KnowledgeCategory.safety);
     });
 
     test(
-      'classifies "why scholarship important" as hybrid education',
+      'classifies "why scholarship important" as deterministic education',
       () async {
         final result = await router.classify('why is scholarship important?');
 
-        expect(result.type, QueryType.hybrid);
+        expect(result.type, QueryType.deterministic);
         expect(result.category, KnowledgeCategory.education);
       },
     );
@@ -175,25 +183,38 @@ void main() {
     });
   });
 
-  group('QueryRouter - AI-required patterns', () {
-    test('classifies "how to" questions as AI-required', () async {
-      // Query with no deterministic keywords falls through to AI-required
-      final result = await router.classify('how to improve my skills?');
+  group('QueryRouter - General fallthrough patterns', () {
+    test(
+      'classifies "how to" questions without keywords as hybrid general',
+      () async {
+        // Queries with no deterministic keywords fall through to hybrid/general
+        // so SQLite FTS5 can still attempt a match before falling back to AI
+        final result = await router.classify('how to improve my skills?');
 
-      expect(result.type, QueryType.aiRequired);
-    });
+        expect(result.type, QueryType.hybrid);
+        expect(result.category, KnowledgeCategory.general);
+      },
+    );
 
-    test('classifies "why" questions as AI-required', () async {
-      final result = await router.classify('why is this important?');
+    test(
+      'classifies "why" questions without keywords as hybrid general',
+      () async {
+        final result = await router.classify('why is this important?');
 
-      expect(result.type, QueryType.aiRequired);
-    });
+        expect(result.type, QueryType.hybrid);
+        expect(result.category, KnowledgeCategory.general);
+      },
+    );
 
-    test('classifies opinion requests as AI-required', () async {
-      final result = await router.classify('what do you think about this?');
+    test(
+      'classifies opinion requests without keywords as hybrid general',
+      () async {
+        final result = await router.classify('what do you think about this?');
 
-      expect(result.type, QueryType.aiRequired);
-    });
+        expect(result.type, QueryType.hybrid);
+        expect(result.category, KnowledgeCategory.general);
+      },
+    );
   });
 
   group('QueryRouter - Edge cases', () {
@@ -238,12 +259,14 @@ void main() {
       expect(result.requiresModel, isFalse);
     });
 
-    test('requiresModel returns true for AI queries', () async {
-      // Pure AI query with no deterministic patterns
+    test('hybrid queries are neither deterministic nor aiRequired', () async {
+      // Queries with no deterministic keywords fall through to hybrid/general
       final result = await router.classify('why should I be kind to others?');
 
-      expect(result.requiresModel, isTrue);
+      expect(result.type, QueryType.hybrid);
+      expect(result.isHybrid, isTrue);
       expect(result.canAnswerWithoutModel, isFalse);
+      expect(result.requiresModel, isFalse);
     });
 
     test('isHybrid returns true for hybrid queries', () async {
