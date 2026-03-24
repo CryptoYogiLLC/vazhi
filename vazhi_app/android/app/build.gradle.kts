@@ -42,6 +42,15 @@ android {
         }
     }
 
+    // Exclude x86_64 native libs from the AAB — they have 4KB page alignment
+    // which fails Google Play's 16KB page size requirement. VAZHI targets
+    // ARM phones only; x86_64 is only used for emulators.
+    packagingOptions {
+        jniLibs {
+            excludes += listOf("lib/x86_64/**", "lib/x86/**")
+        }
+    }
+
     signingConfigs {
         create("release") {
             keyAlias = keystoreProperties["keyAlias"] as String?
